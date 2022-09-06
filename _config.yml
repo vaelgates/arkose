@@ -1,0 +1,38 @@
+# site settings
+title: AI Risk Discussions
+subtitle: 
+email: youremailaddress@gmail.com
+description: AI Risk Discussions (AIRD) facilitates discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources and Q&A for key stakeholders.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author:
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings (key must match name of font awesome icon)
+# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
+# Icons are not shown if value is empty
+# You need to restart jekyll for changes to have an effect
+socials:
+  GitHub: https://github.com/andrewbanchich
+  GitLab:
+  Google-Plus: https://plus.google.com/u/0/+AndrewBanchich
+  Instagram:
+  LinkedIn: https://www.linkedin.com/in/andrew-banchich-a4ba1195
+  Twitter: https://twitter.com/andrewbanchich
+  Facebook:
+  Slack:
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+- "*.gemspec"
+- LICENSE.md
+- CONTRIBUTING.md
+- README.md 
