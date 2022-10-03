@@ -10,14 +10,6 @@
 		banner:				2.5s
 	);
 
-// Size.
-	$size: (
-		border-radius:		4px,
-		element-height:		2.75em,
-		element-margin:		2em,
-		inner:				65em
-	);
-
 // Font.
 	$font: (
 		family:				('Source Sans Pro', Helvetica, sans-serif),
@@ -58,7 +50,8 @@
 		navPanel:			275px,
 		border-radius:		6px,
 		element-height:		3em,
-		element-margin:		2em
+		element-margin:		1.5em,
+		inner:						50em
 	);
 
 	// $palette: (

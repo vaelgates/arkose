@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Researcher Argument Evaluation
+title: Arguments
 image: assets/images/pic01.jpg
 nav-menu: true
 order: 1

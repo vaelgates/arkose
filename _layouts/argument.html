@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+  <script type="text/javascript">document.body.classList.add("is-loading");</script>
+
+  {% include header.html %}
+      
+  <!-- Main -->
+  <div id="main" class="alt argument">
+
+    <!-- One -->
+    <section>
+      <div class="inner">
+        You are here:
+        {% assign breadcrumb_list = page.breadcrumbs | split: ',' %}
+        {% for breadcrumb in breadcrumb_list %}
+          {% assign text = breadcrumb | split: ':' | first %}
+          {% assign url = breadcrumb | split: ':' | last %}
+          <a href="{{url}}">{{ text }}</a>
+          <span class="breadcrumb-delimiter">/</span>
+        {% endfor %}
+        <header class="major">
+          <h1>{{ page.title }}</h1>
+        </header>
+    
+      {{ content }}
+      </div>
+    </section>
+    <section id="feedback">
+      <div class="inner" style="text-align: center">
+        <script src="https://www.cognitoforms.com/f/seamless.js" data-key="n-MxRzQ7okuhyer9lfH0mw" data-form="2"></script>
+      </div>
+    </section>
+  </div>
+  {% include footer.html %}
+</body>
+
+<script>
+  $('a[href="#feedback"]').on('click', () => {
+    $('#feedback').show();
+    window.setTimeout(() => {
+      window.history.replaceState({}, '', '{{url}}');
+    },1)
+  })
+  Cognito.prefill({
+    "CurrentURL": window.location.pathname,
+    "NodeHistory": "Not implemented yet"
+  });
+</script>
+</html>

@@ -1,0 +1,10 @@
+# start rewrite rules
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# remove html from filename anything else
+RewriteRule ^(.*)\.html$ /$1
+
+# end rewrite rules
+</IfModule>

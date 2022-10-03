@@ -4,8 +4,10 @@ subtitle:
 email: youremailaddress@gmail.com
 description: AI Risk Discussions (AIRD) facilitates discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources and Q&A for key stakeholders.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: http://aird.michaelkeenan.net # the base hostname & protocol for your site
 author:
+
+permalink: /:title
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
