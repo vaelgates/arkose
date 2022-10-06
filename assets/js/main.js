@@ -27,8 +27,6 @@
 	)
 		.appendTo($body);
 
-	console.log('here')
-
 // Navigation Panel.
 	$(
 		'<div id="navPanel">' +
