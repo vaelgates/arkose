@@ -59,9 +59,6 @@
 		.cog-heading, .cog-label, .cog-confirmation__message {
 			color: #fff;
 		}
-		textarea {
-			height: 400px;
-		}
 		.cog-button--primary {
 			transition: background-color .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
 			background-color: transparent;
@@ -84,4 +81,8 @@
 		.cog-abuse {
 			display: none;
 		}
+	}
+
+	html {
+		scroll-behavior: smooth;
 	}

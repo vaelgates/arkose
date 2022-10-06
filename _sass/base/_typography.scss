@@ -6,7 +6,7 @@
 
 /* Type */
 
-	body, input, select, textarea {
+	body, input, select, textarea, #feedback .cog-label, #feedback .cog-2 {
 		color: _palette(fg);
 		font-family: _font(family);
 		font-size: 17pt;
@@ -25,6 +25,10 @@
 		@include breakpoint(xxsmall) {
 			font-size: 11pt;
 		}
+	}
+
+	#feedback .cog-button {
+		font-family: _font(family);
 	}
 
 	#nav {
@@ -101,7 +105,7 @@
 		margin: 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6, #feedback .cog-heading {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		line-height: 1.65;
@@ -117,7 +121,7 @@
 		font-size: 2.5em;
 	}
 
-	h2 {
+	h2, #feedback .cog-heading {
 		font-size: 1.75em;
 	}
 
