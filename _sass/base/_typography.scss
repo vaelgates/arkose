@@ -66,7 +66,7 @@
 		}
 	}
 
-	.argument a:visited {
+	.argument a:visited, .argument-tree a:visited {
 		color: var(--color-visited);
 		border-bottom: var(--color-visited) dotted 1px;
 	}
@@ -74,6 +74,7 @@
 	.argument .breadcrumb-delimiter:last-of-type {
 		display: none;
 	}
+
 
 	figure {
 		margin: 0 0 _size(element-margin) 0;

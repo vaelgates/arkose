@@ -17,16 +17,22 @@
   <div id="main" class="alt argument">
 
     <!-- One -->
-    <section>
+    <section class="argument-section">
+      <div class="argument-tree">
+        {% assign arguments = site.data.arguments %}
+        {% include argument_item.html %}
+      </div>
       <div class="inner">
-        You are here:
-        {% assign breadcrumb_list = page.breadcrumbs | split: ',' %}
-        {% for breadcrumb in breadcrumb_list %}
-          {% assign text = breadcrumb | split: ':' | first %}
-          {% assign url = breadcrumb | split: ':' | last %}
-          <a href="{{url}}">{{ text }}</a>
-          <span class="breadcrumb-delimiter">/</span>
-        {% endfor %}
+        <div class="breadcrumbs">
+          You are here:
+          {% assign breadcrumb_list = page.breadcrumbs | split: ',' %}
+          {% for breadcrumb in breadcrumb_list %}
+            {% assign text = breadcrumb | split: ':' | first %}
+            {% assign url = breadcrumb | split: ':' | last %}
+            <a href="{{url}}">{{ text }}</a>
+            <span class="breadcrumb-delimiter">/</span>
+          {% endfor %}
+        </div>
         <header class="major">
           <h1>{{ page.title }}</h1>
         </header>
@@ -40,6 +46,7 @@
       </div>
     </section>
   </div>
+
   {% include footer.html %}
 </body>
 

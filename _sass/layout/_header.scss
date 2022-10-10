@@ -63,6 +63,10 @@
 			}
 		}
 
+		#theme-toggle {
+			cursor: pointer;
+		}
+
 		// nav {
 		// 	@include vendor('display', 'flex');
 		// 	@include vendor('justify-content', 'flex-end');
