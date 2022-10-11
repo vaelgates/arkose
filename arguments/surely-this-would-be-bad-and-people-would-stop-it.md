@@ -1,0 +1,14 @@
+---
+layout: argument
+title: "Surely this would be bad and people would stop it"
+breadcrumbs: When will we get generally capable AI systems?:when-agi,Never:never,Surely this would be bad and people would stop it:surely-this-would-be-bad-and-people-would-stop-it
+---
+<ul><li>It is difficult to stop something that would is incredibly financially successful, decentralized on an international level, has economic momentum, and for which some subsets of the population would oppose you, like AI. Consider the difficulty of transitioning to new energy sources, for example.</li>
+<li>How would we stop Bitcoin?</li>
+<li>How would we get the world to stop all nuclear weapons? Surely this is an easier problem because they are obviously harmful - unlike AI which can have incredible benefits.</li>
+<li>How successful have we been in stopping the last pandemic?</li>
+<li>These are all difficult collective action problems, and some of them are easier than stopping AI development that occurs in several countries simultaneously.</li>
+<li>[textblock:policymakers]Policymakers are very busy, and they know much less about AI than you.</li>
+<ul><li>Do you expect them to do something? If yes, what?</li>
+<li>Also, would they be able to react quickly enough? What if AGI is being developed in secret, or breakthroughs occur suddenly?</li>
+<li>International coordination might be required to avoid an arms race towards AGI - do you think this can be done in time?<br/>[/textblock]</li>

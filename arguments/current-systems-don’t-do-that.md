@@ -1,0 +1,13 @@
+---
+layout: argument
+title: "Current systems don’t do that"
+breadcrumbs: Instrumental Incentives:instrumental--incentives,Current systems don’t do that:current-systems-don’t-do-that
+---
+<blockquote>
+I feel like I don't see why this would ever happen or how this would ever happen in a model, simply because it's not what it was intended to do, and I feel like going out of that scope of initial tasks rarely happens. (19ra9_VaelLabel, Pos. 29)
+</blockquote>
+<ul><li>Current AI systems won’t act in that way, but future systems might.</li>
+<li>In fact, given certain assumptions, we would expect that systems act in accordance with certain instrumental incentives. [textblock:AllThatIsRequiredForSelfPreservation]</li>
+<li>Recent systems like Google PaLM have demonstrated sudden capability gain upon increases in model size. It is difficult to say which additional capabilities could arise in the future as a result</li>
+<li>TODO: mention theories on emergence of agency</li>
+<li>(waiting for response from an expert I contacted)</li>

@@ -1,0 +1,7 @@
+---
+layout: argument
+title: "Lets build AI and then worry about safety later"
+breadcrumbs: The importance of more safety work:the-importance-of-more-safety-work,Lets build AI and then worry about safety later:lets-build--ai-and-then-worry-about-safety-later
+---
+<ul><li>If our concerns about instrumental incentives and alignment have any substance, then we might only have one shot to get this right</li>
+<li>Considering how few people work on something that could be a catastrophic risk, it makes sense to be prudent and not wait with working on safety</li>

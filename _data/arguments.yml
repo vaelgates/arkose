@@ -1,26 +1,13 @@
-- name: Chapter 1
-  url: /chapter-1
+- page:
+  name: Start here
+  url: /arguments/test-level1
   pages:
     - page:
-      name: Subpage with no leaves
-      url: /subpage-with-no-leaves
+      name: Level 2, article one
+      url: /arguments/test-level2a
     - page:
-      name: Subpage with leaves
-      url: /subpage-with-leaves
-      pages:
-        - page:
-          name: Subpage with no leaves 2
-          url: /subpage-with-no-leaves-2
-- name: "Chapter 2: The Alignment Problem"
-  url: /the-alignment-problem
-  pages:
-    - page:
-      name: We test before deploying
-      url: /test-before-deploying
-    - page:
-      name: Subpage with leaves 2
-      url: /subpage-with-leaves-2
-      pages:
-        - page:
-          name: Subpage with no leaves 4
-          url: /subpage-with-no-leaves-4
+      name: Level 2, article two
+      url: /arguments/test-level2b
+- page:
+  name: Level 1, article two
+  url: /arguments/test-level1b

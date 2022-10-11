@@ -1,0 +1,12 @@
+---
+layout: argument
+title: "But as we build more capable systems, surely our understanding of how to align them will advance equally well"
+breadcrumbs: The Alignment Problem:the--alignment--problem,But as we build more capable systems surely our understanding of how to align them will advance equally well:alignment-advances-equally
+---
+<blockquote>0:48:07.8 Interviewee: I'm actually far less worried about the technical side of this. I just finished reading this book about von Neumann, that's a little cute biography of him, and there's a part where he says, supposedly, that people who think mathematics is complicated only say that because they don't know how complicated life is. And I'm totally messing with the phrasing, but something like that. I actually think any technical problems in this area will be solved relatively easily compared to the problem of figuring out what human values we want to insert into these. (extra_92iem_Sam (governance heavy), Pos. 69)</blockquote>
+<ul><li>Maybe this will be the case, and alignment will be solved during the normal cause of AI research.</li>
+<li>But maybe not!</li>
+<li>Alignment and Capabilities are not the same. You can have very advanced systems with bad alignment, for example a GPT-style text generator that seems really smart - but constructs elaborate falsehood that seem true at first glance.</li>
+<li>Even if it seems likely that alignment will advance alongside capabilities, we don’t have any guarantee about that. The danger from a badly aligned system seems really high - so it’s probably worth worrying about that.</li>
+<li>In other domains, there are many examples of safety lagging behind capabilities:</li>
+<ul><li>TODO research this</li>

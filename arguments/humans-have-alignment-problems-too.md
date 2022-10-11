@@ -1,0 +1,18 @@
+---
+layout: argument
+title: "Humans have alignment problems too"
+breadcrumbs: The Alignment Problem:the--alignment--problem,Humans have alignment problems too:humans-have-alignment-problems-too
+---
+<blockquote>Let's say we are so worried that autonomous cars today can lead to some crashes or something, but today on record, the human error or human misjudgment causes much more fatal issues on the road than potentially any AI driven car today. (drm4h_Sam, Pos. 27)
+Humans fail at their tasks all the time, humans make errors all the time, so if we have a system that has an error threshold that's still better than humans, can we be angry? We can't do any better. Keeping everything else the same, if the decision system that we have fails less than humans, then sure, we don't want to be failing, we want to be perfect, but we can't really complain. It is a situation that we'll have to work at, but that's like everything. There's always room for improvement. (nlb02_Sam, Pos. 17)</blockquote>
+<ul><li>Humans have a shared evolutionary prior, which AI does not. Therefore, if an AI is optimizing over reality in some sense, it might end up in a really alien part of that space - alien to humans, because it’s optimizing over a really large space.</li>
+<li>Present-day AIs sometimes find solutions to problems that humans would never think of. So it’s plausible that what an AI does will seem pretty alien and uncommon - which makes it more difficult to reason about it.</li>
+<li>AI can duplicate quickly</li>
+<li>AI can duplicate perfectly and structure itself for ideal collaboration</li>
+<li>AI could be much more powerful than any one human</li>
+<li>It’s fine if your child isn’t perfectly aligned with you, because they’re their own person and they have autonomy. Also people are just pretty easy to control overall - as we understand human psychology, and we all have very roughly the same limitations and boundaries in society. If the AI isn’t aligned with you and gets out of control, it could be quite dangerous.</li>
+<li>We’ve got institutions to regulate human conflicts. But governance takes a really long time to develop and won’t keep up with tech progress.</li>
+<li>AI could act much quicker than humans</li>
+<li>If we acknowledge that far-greater-than-human-intelligence is possible, then it would be much more powerful than humans and could circumvent the usual checks&balances that mostly prevent misaligned humans from doing very bad things</li>
+<li>AGI could be so useful that humans give it great power and responsibility, more than the usual human has.</li>
+<li>Human misuse can be a big problem - but at some point, we might have an AI agent trying to optimize the world which is smarter than you. And that would be dangerous above and beyond the misuse scenarios.</li>

@@ -1,0 +1,23 @@
+---
+layout: argument
+title: "The importance of more safety work"
+breadcrumbs: The importance of more safety work:the-importance-of-more-safety-work
+---
+<ul><li>[textblock:HowManyPeopleWorkInSafety]<br/>At the moment, very few people work on the safety of future general AI systems (as opposed to improving ethical alignment of current narrow systems). It might be only around 300, while 10-100x as many people work on speeding up the progress towards general AI:<br/>see [one estimate](</li>
+<li>https://twitter.com/ben_j_todd/status/1489985966714544134?lang=en</li>
+<li>), [another one](</li>
+<li>https://80000hours.org/problem-profiles/artificial-intelligence/</li>
+<li>) Obviously, there is no proof that TAI will cause catastrophe. We are not dealing with certainties here. But there are arguments from multiple directions indicating that there is at least some level of risk, and the consequences might be catastrophic. For a technology with such impacts, it seems like safety is grossly neglected. There is no reason to expect the safety community to suddenly grow by itself.<br/>[/textblock]</li>
+<li>While AI might come in 100 years or later, there is some chance it will come much sooner. There is some chance we will be surprised and suddenly faced with potentially disastrous unaligned AGI.</li>
+<li>Even if it takes 100-200 years, it is not at all clear that alignment will be good enough by then.</li>
+</ul>Further Reading:
+[textblock:prosaic_further_reading]“Prosaic AI Alignment” by AI safety researcher Paul Cristiano
+https://ai-alignment.com/prosaic-ai-control-b959644d79c2
+[/textblock]
+V: The "difficulty of the alignment problem" has a bunch of subtopics-- difficulty of the technical problem, whether it'll be solved by default,  "who will work on this" (which is what the "economic incentives, work on AI safety version – safety community is growing less quickly than the capabilities community" argument is aimed at), difficulty of the governance / implementation.)
+<div><a href='/arguments/regulators-will-take-care-of-this.html'>Regulators will take care of this</a></div>
+<div><a href='/arguments/not-useful-currently.html'>Work on AGI safety is not useful because there is nothing we can do at the moment</a></div>
+<div><a href='/arguments/not-urgent-currently.html'>I’m not convinced this is urgent now</a></div>
+<div><a href='/arguments/lets-build--ai-and-then-worry-about-safety-later.html'>Lets build AI and then worry about safety later</a></div>
+<div><a href='/arguments/alignment-is-easy----this-will-definitely-be-solved-in-time.html'>Alignment is easy - This will definitely be solved in time</a></div>
+<div><a href='/arguments/not-currently-tractable.html'>Yeah there are people working on this but I don’t understand why their work would be useful</a></div>

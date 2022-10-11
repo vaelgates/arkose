@@ -1,0 +1,14 @@
+---
+layout: argument
+title: "This problem would be inevitably solved in order to even develop AGI"
+breadcrumbs: The Alignment Problem:the--alignment--problem,This problem would be inevitably solved in order to even develop AGI:this-problem-would-be-inevitably-solved-in-order-to-even-develop--agi
+---
+<ul><li>Economic incentives mean things are often deployed without being perfectly safe, especially if people don’t think it needs to be super carefully checked.</li>
+<ul><li>[copy:technology-misuse]</li>
+</ul><li>Before the first test of the atomic bomb, there were some concerns that an energy release of this magnitude might cause a chain reaction within the atmosphere - turning the surface of earth into a barren wasteland. Further calculations were done and showed that this is not possible. However, the calculation was only checked by a small number of researchers and it could have been possible, though unlikely, that there was a mistake in the calculation or the underlying assumptions.</li>
+<li>https://blogs.scientificamerican.com/cross-check/bethe-teller-trinity-and-the-end-of-earth/</li>
+<li>Current AI systems have significant ethical problems.</li>
+<li>Some of these problems are only discovered in production.</li>
+<li>Often, it is not possible to fix all these problems (for example, GPT-3 can be instructed to write toxic material despite efforts at preventing that)</li>
+<li>It is possible that an AGI system would behave reasonably well in testing but then produce catastrophic results in the real world.</li>
+<li>[copy:TrainingDeception]</li>

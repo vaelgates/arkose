@@ -8,14 +8,28 @@
   <Namespace>Google.Apis.Docs.v1.Data</Namespace>
 </Query>
 
+static string folderInWebsite = "arguments";
 void Main()
 {
+
+	// TODO:
+	// keenan:
+		// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
+		// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
+	// Lukas:
+		// goto folding
+		// abort if an url contains "," or "'"
+		
+		
 
 
 
 	string documentsId = File.ReadLines("c:\\temp\\aird_documents_id.txt").First();
 	string baseDir = Path.GetDirectoryName(Util.CurrentQueryPath) + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
-	string outputDir = baseDir + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
+	string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
+	string argumentsYamlFile = baseDir + Path.DirectorySeparatorChar + "_data" + Path.DirectorySeparatorChar + "arguments.yml";
+
+	Regex markdownLinkRgx = new Regex(@"\[(.*?)\]\((.*?)\)");
 
 	Directory.CreateDirectory(outputDir);
 
@@ -56,12 +70,12 @@ void Main()
 	{
 		if (element.Paragraph == null)
 			continue;
-		int? headlineLevel = null;
+
 		string style = element.Paragraph.ParagraphStyle.NamedStyleType;
 		//style.Dump();
 		string gdocGlyph = "";
 		int? bulletLevel = null;
-		ListTypeEnum? bulletType=null;
+		ListTypeEnum? bulletType = null;
 		string firstLinePrefix = "";
 		// TODO bullet point should only generate one line, not several.
 		if (encounteredStartMarker)
@@ -102,6 +116,7 @@ void Main()
 				firstLinePrefix = bulletLevel == null ? "" : (new string('\t', bulletLevel.Value) + markdownBulletSymbol + " ");
 			}
 
+#region starting a new document
 			if (style.StartsWith("HEADING_") && int.TryParse(style.Substring("HEADING_".Length, 1), out var x))
 			{
 				if (element.Paragraph.Elements.Count > 1)
@@ -111,8 +126,11 @@ void Main()
 				{
 					"brk".Dump();
 				}
+				if (txt.Trim()=="")
+					continue;
 				$"Starting new document {txt}".Dump();
 				currentDocument = new Document();
+				currentDocument.HierarchyLevel = x - 2;
 				outputFiles.Add(currentDocument);
 				currentDocument.InternalID = Between(txt, "[", "]").Trim();
 
@@ -129,25 +147,29 @@ void Main()
 					throw new InvalidOperationException("Cannot determine headline for " + txt);
 
 				currentDocument.FilenameWithoutPathOrExtension = CamelToDash(currentDocument.InternalID).Replace(" ", "-");
+				
+				if (currentDocument.FilenameWithoutPathOrExtension.Contains(",")||currentDocument.FilenameWithoutPathOrExtension.Contains("'"))
+					throw new InvalidOperationException("Make sure you specify a shorthand here: "+currentDocument.FilenameWithoutPathOrExtension); // we could simply replace it, but these characters are indications of a text thats too complex to be an URL.
+				
 				if (currentDocument.FilenameWithoutPathOrExtension.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
 					throw new InvalidOperationException("This ID is not a valid filename: " + currentDocument.FilenameWithoutPathOrExtension);
 
+				// syntax sample breadcrumbs: breadcrumbs: The Alignment Problem:the-alignment-problem,Test Before Deploying:test-before-deploying
 
-				outputFiles.Add(currentDocument);
-				headlineLevel = x;
-				var breadcrumbs = "todo";
+				var breadcrumbs = GetBreadcrumbs(outputFiles, currentDocument);
 				currentDocument.Content.Add(
 				 new ContentParagraph(
 				$@"---
 layout: argument
-title: {currentDocument.Headline}
+title: {"\""+currentDocument.Headline+"\""}
 breadcrumbs: {breadcrumbs}
 ---"));
 
-	continue;
+				continue;
 
 
 			}
+#endregion
 		}
 
 		// when we encounter an image, the very next element must be the image caption and start with a "(".
@@ -193,7 +215,12 @@ breadcrumbs: {breadcrumbs}
 					imageCaptionBracketCounter += txt.Count(f => f == '(') - txt.Count(f => f == ')');
 				}
 				else
-					currentDocument.Content.Add(new ContentParagraph(txt) { BulletLevel = bulletLevel, BulletType=bulletType });
+				{
+					if (!first) // adding to previous elements of the same paragraph. for example, if you have text and then a link and then some more text, this will be 3 elements
+						currentDocument.Content.Last().HtmlText += " "+txt;
+					else
+						currentDocument.Content.Add(new ContentParagraph(txt) { BulletLevel = bulletLevel, BulletType = bulletType });
+				}
 				first = false;
 
 			}
@@ -202,7 +229,7 @@ breadcrumbs: {breadcrumbs}
 				var ilo = doc.InlineObjects[el.InlineObjectElement.InlineObjectId];
 				var imageProps = ilo.InlineObjectProperties.EmbeddedObject.ImageProperties;
 				if (!currentlyBuildingAnImage)
-					currentDocument.Content.Add(new ContentParagraph("") { BulletLevel = bulletLevel, BulletType=bulletType });
+					currentDocument.Content.Add(new ContentParagraph("") { BulletLevel = bulletLevel, BulletType = bulletType });
 				// we are constructing an image block consisting of several images
 				currentDocument.Content.Last().ImageUrls.Add(imageProps.ContentUri);
 				("Image at " + imageProps.ContentUri + ", waiting for caption or additional images...").Dump();
@@ -216,54 +243,65 @@ breadcrumbs: {breadcrumbs}
 
 	}
 quit:
-	//// resolve text blocks ( step 1)
-	//foreach (var of in outputFiles)
-	//{
-	//	foreach (var line in of.Content.
-	//}
-	//// resolve text blocks ( step 2
-	//if (txt.Contains("[textblock:"))
-	//{
-	//	string id = Between(txt, "[textblock:", "]");
-	//	currentTextblock = id;
-	//	textblocks[id] = EverythingAfter(currentTextblock, "[textblock:" + id + "]");
-	//}
-	//else if (currentTextblock != null)
-	//{
-	//	textblocks[currentTextblock]
-	//}
 
 
+	string ConvertMarkdownLinksToHtml(string input)
+	{
+		return markdownLinkRgx.Replace(input, "<a href='$1'>$2</a>");
+	}
+
+	#region output
 	foreach (var of in outputFiles)
 	{
 		StringBuilder outText = new StringBuilder();
-bool insideBullet = false;
+
+		int? previousBulletLevel = null;
+		Stack<string> listTags = new Stack<string>();
 		for (int i = 0; i < of.Content.Count; i++)
 		{
 			var thisParagraph = of.Content[i];
 
 			thisParagraph.Dump();
-			
 
-			thisParagraph.MarkdownText = thisParagraph.MarkdownText.Replace(new string(new[] { (char)0x0B }), "<br/>"); // 0x0b (line tabulation) is used to make line breaks without creating a new paragraph
-			
-			if (thisParagraph.MarkdownText.Contains("Item 3"))
+
+			thisParagraph.HtmlText = thisParagraph.HtmlText.Replace(new string(new[] { (char)0x0B }), "<br/>"); // 0x0b (line tabulation) is used to make line breaks without creating a new paragraph
+
+
+			void CloseList()
 			{
-				
+
+				outText.Append(listTags.Pop().Replace("<", "</"));
 			}
+
+			if (thisParagraph.BulletLevel == null && previousBulletLevel != null) // close all lists
+				while (listTags.Any())
+					CloseList();
+			string prefix = "";
+			string postfix = "";
 
 			if (thisParagraph.BulletLevel != null)
 			{
-				insideBullet=true;
-				outText.Append('\t', thisParagraph.BulletLevel.Value);
-				outText.Append(thisParagraph.BulletType.Value== ListTypeEnum.Bullet?"* ":"1. ");
+				if (previousBulletLevel != thisParagraph.BulletLevel)
+				{
+					if (previousBulletLevel == null || previousBulletLevel < thisParagraph.BulletLevel) // open new list
+					{
+						listTags.Push(thisParagraph.BulletType == ListTypeEnum.Bullet ? "<ul>" : "<ol>");
+						outText.Append(listTags.Peek());
+					}
+					else while (previousBulletLevel > thisParagraph.BulletLevel)
+						{
+							CloseList();
+							previousBulletLevel--;
+						}
+				}
+
+				previousBulletLevel = thisParagraph.BulletLevel;
+				prefix = "<li>";
+				postfix = "</li>";
 			}
-			else if (insideBullet)
-			{
-				insideBullet=false;
-				outText.AppendLine(); // markdown requires an additionl empty line after a bullet list to indicate that the list is finished.
-			}
-			
+			else
+				previousBulletLevel = null;
+
 
 
 			if (of.Content[i].ImageUrls.Count > 0) // write an image block
@@ -277,11 +315,12 @@ bool insideBullet = false;
 				img.Append(@"<figure>");
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 					img.Append("<img src='" + imageUrl + "' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
-				var capt=thisParagraph.ImageCaption;
-				
+				var capt = thisParagraph.ImageCaption;
+
 				// remove open and closed brackets:
-				capt=capt.Remove(0, 1);
-				capt=capt.Remove(capt.Length-1,1);
+				capt = capt.Remove(0, 1);
+				capt = capt.Remove(capt.Length - 1, 1);
+				capt = ConvertMarkdownLinksToHtml(capt);
 				img.Append("<figcaption markdown='1'>" + capt + "\n</figcaption></figure>"); // gotta add \n before </figcaption> otherwise "figcaption" is taken as a code block.
 
 				outText.AppendLine(img.ToString());
@@ -290,17 +329,69 @@ bool insideBullet = false;
 
 			}
 			else // write a text block
-				outText.AppendLine(thisParagraph.MarkdownText);
-
-
-
+				outText.AppendLine(prefix + ConvertMarkdownLinksToHtml(thisParagraph.HtmlText) + postfix); 
 		}
-			("Writing file " + of.FilenameWithoutPathOrExtension).Dump();
-		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".md", outText.ToString());
 
+		#region navigation to the children and the next sibling
+		string MakeNav(string text, string url)
+		{
+		return $"<div><a href='{url}'>{text}</a></div>";
+			
+		}
+		
+		foreach (var child in GetChildren(outputFiles, of))
+			outText.AppendLine(MakeNav(child.Headline, MakeUrl(child)));
+
+		if (of.HierarchyLevel == 0)
+		{
+			var next = GetNextSiblingOrNull(outputFiles, of);
+			if (next != null)
+				outText.AppendLine(MakeNav(next.Headline, MakeUrl(next)));
+		}
+		MakeNav("I don't agree with this - Send Feedback", "#feedback");
+		#endregion
+
+
+
+		of.OutLines = outText.ToString();
 
 
 	}
+
+	#region resolving text blocks
+	var textblockRegex=new Regex(@"\([textblock:(.*?)\])([\s\S]*?)\([\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
+	// part 1: capture
+	foreach (var of in outputFiles)
+	{
+		foreach (Match match in textblockRegex.Matches(of.OutLines))
+		{
+			// remember the block
+			textblocks[match.Groups[2].Value] = textblocks[match.Groups[3].Value];
+			// remove beginning and end tags
+			of.OutLines = of.OutLines.Replace(match.Groups[1].Value,"");
+			of.OutLines = of.OutLines.Replace(match.Groups[4].Value,"");
+			
+		}
+	}
+	// part 2: replace
+	var copyRgx=new Regex(@"\[copy:(.*?)]");
+	foreach (var of in outputFiles)
+		of.OutLines = copyRgx.Replace(of.OutLines, m=>textblocks[m.Groups[1].Value]);
+	#endregion
+
+
+	foreach (var of in outputFiles)
+	{
+
+		("Writing file " + of.FilenameWithoutPathOrExtension).Dump();
+		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".md", of.OutLines);
+
+	}
+
+	File.WriteAllText(argumentsYamlFile, GetYamlDataForTOC(outputFiles));
+
+
+	#endregion
 
 	// the following is not required if you use "bundle eec jekyll serve --watch"
 	//"Triggering Jekyll rebuild...".Dump();
@@ -308,6 +399,58 @@ bool insideBullet = false;
 	//proc.WaitForExit();
 	//if (proc.ExitCode!=0)
 	//	throw new InvalidOperationException("Jekyll build failed");
+}
+
+string MakeUrl(Document child)
+{
+	return "/"+folderInWebsite+"/"+child.FilenameWithoutPathOrExtension+".html";
+}
+
+List<Document> GetChildren(List<Document> outputFiles, Document x)
+{
+	var res = new List<Document>();
+	for (int i = outputFiles.IndexOf(x) + 1; i < outputFiles.Count; i++)
+	{
+		if (outputFiles[i].HierarchyLevel == x.HierarchyLevel + 1)
+			res.Add(outputFiles[i]);
+		if (outputFiles[i].HierarchyLevel <= x.HierarchyLevel)
+			break;
+	}
+	return res;
+}
+
+Document GetNextSiblingOrNull(List<Document> outputFiles, Document x)
+{
+	return outputFiles.Skip(outputFiles.IndexOf(x)+1)
+	.FirstOrDefault(y=>y.HierarchyLevel==x.HierarchyLevel);
+}
+
+string GetBreadcrumbs(List<Document> allDocs, Document currentDocument)
+{
+	// syntax sample: "The Alignment Problem:the-alignment-problem,Test Before Deploying:test-before-deploying"
+	System.Collections.Generic.List<Document> trail = new List<UserQuery.Document>();
+	trail.Add(currentDocument);
+	for (int i = allDocs.IndexOf(currentDocument); i >= 0; i--)
+	{
+		if (allDocs[i].HierarchyLevel == trail.Last().HierarchyLevel - 1)
+			trail.Add(allDocs[i]);
+	}
+	trail.Reverse();
+	return string.Join(",", trail.Select(t => t.Headline.Replace(",","").Replace(":", " - ") + ":" + t.FilenameWithoutPathOrExtension));
+}
+string GetYamlDataForTOC(List<Document> allDocs)
+{
+	var sb = new StringBuilder();
+	for (int i = 0; i < allDocs.Count; i++)
+	{
+		string prefix = new string(' ', allDocs[i].HierarchyLevel * 4);
+		sb.AppendLine(prefix+ "- page:");
+		sb.AppendLine(prefix + "  name: " + allDocs[i].Headline.Replace(": ", ". "));
+		sb.AppendLine(prefix + "  url: /" + folderInWebsite + "/" + allDocs[i].FilenameWithoutPathOrExtension);
+		if (i + 1 < allDocs.Count && allDocs[i + 1].HierarchyLevel > allDocs[i].HierarchyLevel)
+			sb.AppendLine(prefix + "  pages:");
+	}
+	return sb.ToString();
 }
 
 string GetEntireFile(List<string> lines)
@@ -334,22 +477,24 @@ class ContentParagraph
 
 	public List<string> ImageUrls = new List<string>();
 	public string ImageCaption = "";
-	public string MarkdownText;
+	public string HtmlText;
 	public int? BulletLevel;
 	public ListTypeEnum? BulletType;
 	public ContentParagraph(string text)
 	{
 
-		MarkdownText = text;
+		HtmlText = text;
 	}
 	public override string ToString()
 	{
-		return MarkdownText + " at bullet level " + BulletLevel;
+		return HtmlText + " at bullet level " + BulletLevel;
 	}
 }
 
 class Document
 {
+	public string OutLines;
+	public int HierarchyLevel;
 	public string FilenameWithoutPathOrExtension, Headline, InternalID;
 	public List<ContentParagraph> Content = new List<ContentParagraph>();
 }

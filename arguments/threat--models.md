@@ -1,0 +1,49 @@
+---
+layout: argument
+title: "Threat Models - how might AGI be dangerous?"
+breadcrumbs: Threat Models - how might AGI be dangerous?:threat--models
+---
+<ul><li>We’ve argued that it’s possible that advanced AI systems (with self-knowledge, and advanced planning capabilities) will not be aligned with the whole of human values, and moreover might pursue instrumental goals like self-preservation in the pursuit of whatever original goals they were programmed with. These instrumental goals may include self-preservation (preventing being turned off or the goals being changed), and acquisition of resources and power. But how does this actually threaten humans?</li>
+<ul><li>Most immediately, humans consume resources, or might be actively trying to stop the AI from achieving its goals, in which case humans should be stopped or killed. There are plenty of ways to differentially kill humans as opposed to machines, via using technology differentially effective against humans (e.g. superpandemics), or advanced technology (e.g. lethal autonomous weapons), or any other way a superintelligent system could develop / employ.</li>
+<li>[insert the thing earlier about the solution not being to “shore up” the space, but to prevent it ever developing incentives against humans in the first place]</li>
+</ul><li>That’s the mainline response. Let’s flesh some possibilities out, however…</li>
+<li>We have seen that AGI might not be aligned with the goals of humanity. Next, we have considered the Alignment Problem and the Instrumental Convergence Hypothesis: Regardless of specific goals, the AI might</li>
+<li>acquire</li>
+<li>aim for instrumental goals that are harmful.</li>
+<li>Suppose AI wanted to gain more resources, prevent itself being switched off and get more powerful. People are going to stand in the way of the AI, and the question arises: How could AI be directly dangerous to humans?</li>
+<li>TODO reference</li>
+<li>https://www.lesswrong.com/posts/LpM3EAakwYdS6aRKf/what-multipolar-failure-looks-like-and-robust-agent-agnostic</li>
+<li>TODO reference the survey on threat scenarios</li>
+<li>If an AGI never exceeds human level intelligence, it could still have tremendous advantages over humans that would make it a serious danger:</li>
+<ul><li>AI has the advantage that it can instantiate perfect copies of itself, and optimize for perfect collaboration.</li>
+<li>A human level AI could potentially run 10, 100 or even 1000 times faster than a human brain - thus outmaneuvering human thinking. (The speed difference in communication might be much higher than that)</li>
+<li>A human level AI could use any kind of software that we can use… but they could do it much faster, as they are not bound to keyboard, mouse and visual output.</li>
+<li>An AI that is on the average human-like will still be significantly better than humans in some areas, for example arithmetic and data mining.</li>
+<li>A human level AI could improve itself by rewriting its source code and copying itself to newer & faster computers. Humans, on the other hand, only have relatively mild forms of self-improvement available.</li>
+<li>A human level AI could do human-level economic work and use the money earned to buy more hardware.</li>
+<li>A huge population of AIs, each one potentially being quite skilled in some area, could earn huge amounts of money. After some time, their virtual economy might be as big as the human one.</li>
+</ul><li>Even if the AI remains at the level of human intelligence and never becomes significantly smarter, it could be a tremendous risk:</li>
+<ul><li>With current AI training methods, the training process is much more expensive than running the model. That means, after training is finished, there might be a lot of unused hardware sitting around that could be used to spin up many copies.</li>
+<li>This would be a workforce of potentially millions of copies of a human-level generally intelligent agent, which are perfectly aligned with each other and can collaborate instantly on any plan.</li>
+<li>This workforce could eventually end up with a “virtual economy” larger than the human one.</li>
+<li>If something has human-like skills, with a population similar to the human population, then we have a big problem.</li>
+</ul><li>If we assume the AI could become more intelligent than humans, it could try a wide variety of strategies to defeat us:</li>
+<ul><li>Hack into human-built software everywhere (even hackers of human level intelligence are able to hack software some of the time)</li>
+<li>Manipulate human psychology (even humans can do that now, see for example the social media manipulation campaigns funded by state actors)</li>
+<li>Quickly generate vast wealth through providing services, starting digital companies, the stock market or fraud.</li>
+<li>Come up with better plans than humans and thus, make sure that human plans to stop the AI would fail</li>
+<li>Develop advanced weaponry that can be quickly deployed and is powerful enough to defeat human militaries.</li>
+</ul><li>Here are some stories on how this might play out:</li>
+<ul><li>People might have given the AGI broad control over industrial systems, cities, cars, etc. The AGI might appear as if it is aligned with humanities intentions, when in actuality something has gone wrong in the specification of its utility function, and it’s trying to deceive humanity into trusting it. The AI might behave as intended by its operators until some point in time, when it judges to have amassed enough power and changes its behaviour.</li>
+<li>There could be a collaboration between many different AI-operated companies, building an economy that is far more efficient than the human one, and which humans will grow to depend on. This network of companies could gain more and more power until humans are completely dependent on it. We may then realize that these companies follow their own incentives and do not have humanities best interests in mind. By that time they might be so entrenched, intertwined with our basic needs and well-defended that we cannot stop them. Eventually, resources necessary for human survival might become depleted. [This article](</li>
+<li>https://www.lesswrong.com/posts/LpM3EAakwYdS6aRKf/what-multipolar-failure-looks-like-and-robust-agent-agnostic</li>
+<li>) outlines this scenario and others along similar lines.</li>
+</ul></ul>V:
+<ul><li>Here’s Holden on it:</li>
+<li>https://www.cold-takes.com/ai-could-defeat-all-of-us-combined/</li>
+<li>Here’s the main survey I reference:</li>
+<li>https://www.alignmentforum.org/posts/WiXePTj7KeEycbiwK/survey-on-ai-existential-risk-scenario</li>
+<li>(But Vael is happy to help out on this since it’s sensitive. Perhaps write the major points out, and expect Vael to mess around with the wording and content a fair amount.)\</li>
+</ul>Here are my notes:
+<ul><li>Scenarios here are about loss of control + correlated failures… can also think about misuse, or AI-assisted war. Also a scenario where the AI does recursive-self-improvement, and ends up actually able to kill humans via e.g. synthetic biology or nanotechnology or whatever, pollution.</li>
+<div><a href='/arguments/the-importance-of-more-safety-work.html'>The importance of more safety work</a></div>

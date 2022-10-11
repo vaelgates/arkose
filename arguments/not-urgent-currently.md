@@ -1,0 +1,9 @@
+---
+layout: argument
+title: "I’m not convinced this is urgent now"
+breadcrumbs: The importance of more safety work:the-importance-of-more-safety-work,I’m not convinced this is urgent now:not-urgent-currently
+---
+<ul><li>Even if our timelines are 50+ years, who knows how long this is going to take?</li>
+<li>If there is something reasonably useful we can do now, why not do it now?</li>
+<li>It is unclear how much we would gain by waiting for different AI approaches and doing alignment THEN.</li>
+<li>Likely present-day alignment work will inform future alignment work even in new paradigms</li>
