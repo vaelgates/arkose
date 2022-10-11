@@ -1,4 +1,5 @@
 <Query Kind="Program">
+  <Reference>&lt;RuntimeDirectory&gt;\System.Web.dll</Reference>
   <NuGetReference>Google.Apis.Docs.v1</NuGetReference>
   <Namespace>Google.Apis.Docs.v1</Namespace>
   <Namespace>Google.Apis.Services</Namespace>
@@ -6,6 +7,7 @@
   <Namespace>Google.Apis.Util.Store</Namespace>
   <Namespace>Newtonsoft.Json</Namespace>
   <Namespace>Google.Apis.Docs.v1.Data</Namespace>
+  <Namespace>System.Web</Namespace>
 </Query>
 
 static string folderInWebsite = "arguments";
@@ -157,13 +159,11 @@ void Main()
 				// syntax sample breadcrumbs: breadcrumbs: The Alignment Problem:the-alignment-problem,Test Before Deploying:test-before-deploying
 
 				var breadcrumbs = GetBreadcrumbs(outputFiles, currentDocument);
-				currentDocument.Content.Add(
-				 new ContentParagraph(
-				$@"---
+				currentDocument.JekyllFrontmatter=$@"---
 layout: argument
 title: {"\""+currentDocument.Headline+"\""}
 breadcrumbs: {breadcrumbs}
----"));
+---";
 
 				continue;
 
@@ -211,7 +211,7 @@ breadcrumbs: {breadcrumbs}
 				if (currentlyBuildingAnImage) // currently building an image --> this text is the caption for one or several preceeding images
 				{
 					$"adding to caption: {txt}".Dump();
-					currentDocument.Content.Last().ImageCaption += txt;
+					currentDocument.Content.Last().ImageCaption += HttpUtility.HtmlEncode(txt);
 					imageCaptionBracketCounter += txt.Count(f => f == '(') - txt.Count(f => f == ')');
 				}
 				else
@@ -247,7 +247,7 @@ quit:
 
 	string ConvertMarkdownLinksToHtml(string input)
 	{
-		return markdownLinkRgx.Replace(input, "<a href='$1'>$2</a>");
+		return markdownLinkRgx.Replace(input, "<a href='$2'>$1</a>");
 	}
 
 	#region output
@@ -300,7 +300,20 @@ quit:
 				postfix = "</li>";
 			}
 			else
-				previousBulletLevel = null;
+			{
+				// have everything enclosed in DIVs that
+				// 	> is not a bulletpoint
+				//  > is not a beginmarker or endmarker of a textblock
+
+				var trim = thisParagraph.HtmlText;
+				if (!trim.StartsWith("[") && !trim.EndsWith("]"))
+				{
+					prefix = "<div>";
+					postfix = "</div>";
+					previousBulletLevel = null;
+				}
+			}
+				
 
 
 
@@ -359,14 +372,14 @@ quit:
 	}
 
 	#region resolving text blocks
-	var textblockRegex=new Regex(@"\([textblock:(.*?)\])([\s\S]*?)\([\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
+	var textblockRegex=new Regex(@"(\[textblock:(.*?)\])([\s\S]*?)(\[\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
 	// part 1: capture
 	foreach (var of in outputFiles)
 	{
 		foreach (Match match in textblockRegex.Matches(of.OutLines))
 		{
 			// remember the block
-			textblocks[match.Groups[2].Value] = textblocks[match.Groups[3].Value];
+			textblocks[match.Groups[2].Value] = match.Groups[3].Value;
 			// remove beginning and end tags
 			of.OutLines = of.OutLines.Replace(match.Groups[1].Value,"");
 			of.OutLines = of.OutLines.Replace(match.Groups[4].Value,"");
@@ -374,9 +387,16 @@ quit:
 		}
 	}
 	// part 2: replace
-	var copyRgx=new Regex(@"\[copy:(.*?)]");
+	var copyRgx=new Regex(@"\[copy:(.*?)\]");
 	foreach (var of in outputFiles)
-		of.OutLines = copyRgx.Replace(of.OutLines, m=>textblocks[m.Groups[1].Value]);
+		of.OutLines = copyRgx.Replace(of.OutLines, m =>
+		{
+			if (!textblocks.ContainsKey(m.Groups[1].Value))
+				throw new InvalidOperationException("Textblock not found: "+m.Groups[1].Value);
+			return textblocks[m.Groups[1].Value];
+
+
+		});
 	#endregion
 
 
@@ -384,7 +404,7 @@ quit:
 	{
 
 		("Writing file " + of.FilenameWithoutPathOrExtension).Dump();
-		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".md", of.OutLines);
+		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".html", of.JekyllFrontmatter+"\n"+of.OutLines);
 
 	}
 
@@ -493,6 +513,7 @@ class ContentParagraph
 
 class Document
 {
+	public string JekyllFrontmatter;
 	public string OutLines;
 	public int HierarchyLevel;
 	public string FilenameWithoutPathOrExtension, Headline, InternalID;

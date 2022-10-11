@@ -1,13 +1,139 @@
 - page:
-  name: Start here
-  url: /arguments/test-level1
+  name: When will we get generally capable AI systems?
+  url: /arguments/when-agi
   pages:
     - page:
-      name: Level 2, article one
-      url: /arguments/test-level2a
+      name: Within 50 Years
+      url: /arguments/within-50--years
     - page:
-      name: Level 2, article two
-      url: /arguments/test-level2b
+      name: More than 50 years
+      url: /arguments/more-than-50-years
+      pages:
+        - page:
+          name: Yes, I would like to hear these arguments for why AGI might come soon
+          url: /arguments/agisooner
+        - page:
+          name: No, let’s move on - I want to learn about arguments for potential risk from AI
+          url: /arguments/goto-potential-risk
+    - page:
+      name: Never
+      url: /arguments/never
+      pages:
+        - page:
+          name: There is something special about biology which we will never be able to put into machines
+          url: /arguments/biology-special
+        - page:
+          name: I don’t know, but truly intelligent machines - that seems really weird
+          url: /arguments/seems-weird
+          pages:
+            - page:
+              name: If we actually had a “scientist AI”, it would be a massive change in the world - and the world simply doesn’t change that fast
+              url: /arguments/fast-changes
+        - page:
+          name: AI will never be able to have true creativity
+          url: /arguments/creativity
+        - page:
+          name: We would need to understand the brain first, and this is a big obstacle
+          url: /arguments/understand-brain-first
+        - page:
+          name: I don’t see a reason for us to even want that
+          url: /arguments/i-don’t-see-a-reason-for-us-to-even-want-that
+        - page:
+          name: I can’t see it based on current progress
+          url: /arguments/i-can’t-see-it-based-on-current-progress
+        - page:
+          name: An AI paradigm shift will be required
+          url: /arguments/an--ai-paradigm-shift-will-be-required
+        - page:
+          name: Surely this would be bad and people would stop it
+          url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
+        - page:
+          name: We need embodiment - the AI needs a body and actuators, and sensors
+          url: /arguments/embodiment-is-necessary
+        - page:
+          name: AI cannot be conscious in the way a human is
+          url: /arguments/consciousness
 - page:
-  name: Level 1, article two
-  url: /arguments/test-level1b
+  name: The Alignment Problem
+  url: /arguments/the--alignment--problem
+  pages:
+    - page:
+      name: It’s no problem, we would test it before deploying
+      url: /arguments/test-before-deploying
+    - page:
+      name: It’s no problem. if it misbehaves, we shut it down
+      url: /arguments/we-shut-it-down
+    - page:
+      name: It’s no problem, we would just be careful with our reward function
+      url: /arguments/careful-with-that-reward-function
+    - page:
+      name: It’s probably impossible to develop AGI without solving this problem - so nothing bad will happen
+      url: /arguments/it’s-probably-impossible-to-develop--agi-without-solving-this-problem---so-nothing-bad-will-happen
+    - page:
+      name: This problem would be inevitably solved in order to even develop AGI
+      url: /arguments/this-problem-would-be-inevitably-solved-in-order-to-even-develop--agi
+    - page:
+      name: But as we build more capable systems, surely our understanding of how to align them will advance equally well
+      url: /arguments/alignment-advances-equally
+    - page:
+      name: Need to know what type of AGI before we can talk about safety
+      url: /arguments/need-to-know-what-type-of--agi-before-we-can-talk-about-safety
+    - page:
+      name: Misuse is a bigger problem
+      url: /arguments/misuse-is-a-bigger-problem
+    - page:
+      name: This is not as dangerous as other global risks
+      url: /arguments/this-is-not-as-dangerous-as-other-global-risks
+    - page:
+      name: Humans have alignment problems too
+      url: /arguments/humans-have-alignment-problems-too
+- page:
+  name: Instrumental Incentives
+  url: /arguments/instrumental--incentives
+  pages:
+    - page:
+      name: It would be simple to instruct the AI to try less hard
+      url: /arguments/it-would-be-simple-to-instruct-the--ai-to-try-less-hard
+    - page:
+      name: Consciousness won’t happen (and is required for self-preservation)
+      url: /arguments/consciousness-won’t-happen-(and-is-required-for-self-preservation)
+    - page:
+      name: We could stop that physically
+      url: /arguments/we-could-stop-that-physically
+    - page:
+      name: Current systems don’t do that
+      url: /arguments/current-systems-don’t-do-that
+    - page:
+      name: We wouldn’t design it that way
+      url: /arguments/we-wouldn’t-design-it-that-way
+    - page:
+      name: This won’t be a problem, we will have human oversight
+      url: /arguments/human--oversight
+- page:
+  name: AI could be a big deal
+  url: /arguments/ai-could-be-a-big-deal
+- page:
+  name: Threat Models - how might AGI be dangerous?
+  url: /arguments/threat--models
+- page:
+  name: The importance of more safety work
+  url: /arguments/the-importance-of-more-safety-work
+  pages:
+    - page:
+      name: Regulators will take care of this
+      url: /arguments/regulators-will-take-care-of-this
+    - page:
+      name: Work on AGI safety is not useful because there is nothing we can do at the moment
+      url: /arguments/not-useful-currently
+    - page:
+      name: I’m not convinced this is urgent now
+      url: /arguments/not-urgent-currently
+    - page:
+      name: Lets build AI and then worry about safety later
+      url: /arguments/lets-build--ai-and-then-worry-about-safety-later
+    - page:
+      name: Alignment is easy - This will definitely be solved in time
+      url: /arguments/alignment-is-easy----this-will-definitely-be-solved-in-time
+    - page:
+      name: Yeah there are people working on this but I don’t understand why their work would be useful
+      url: /arguments/not-currently-tractable
