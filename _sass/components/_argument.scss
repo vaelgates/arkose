@@ -1,0 +1,39 @@
+.breadcrumbs {
+  margin-bottom: 10px;
+}
+
+.argument-section {
+  display: flex;
+}
+
+.argument-tree {
+  margin-top: 220px;
+  li {
+    list-style-type: none;
+    &.active {
+      font-weight: bold;
+      color: #000;
+      ::after {
+        top: 1px;
+        content: "•";
+        position: relative;
+        margin-left: 3px;
+      }
+    }
+    a {
+      border-bottom: none;
+    }
+  }
+}
+
+@include breakpoint(medium) {
+  .argument-section {
+    flex-direction: column-reverse;
+  }
+  .argument-tree {
+    margin-top: 20px;
+    margin: 0 auto;
+    max-width: 682px;
+    width: calc(100% - 6em);
+  }
+}

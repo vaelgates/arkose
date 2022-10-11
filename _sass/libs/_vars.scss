@@ -21,7 +21,7 @@
 	);
 
 // Palette.
-	$palette: (
+	$dark_palette: (
 		bg:					#242943,
 		bg-alt:				#2a2f4a,
 		fg:					#ffffff,
@@ -37,6 +37,8 @@
 		accent5:			#8ea9e8,
 		accent6:			#87c5a4,
 
+		visited: #8d7,
+
 		header: (
 			bg:				#444,
 			fg:				#bbb,
@@ -46,12 +48,39 @@
 
 	);
 
+// Palette.
+	$palette: (
+		bg:					#f0f0f0,
+		bg-alt:				#fdfdfd,
+		fg:					#333,
+		fg-bold:			#333,
+		fg-light:			rgba(11,11,32,0.8),
+		border:				rgba(64,64,96,0.1),
+		border-bg:			rgba(64,64,96,0.035),
+		highlight:			#00778a,
+		accent1:			#6fc3df,
+		accent2:			#8d82c4,
+		accent3:			#ec8d81,
+		accent4:			#e7b788,
+		accent5:			#8ea9e8,
+		accent6:			#87c5a4,
+
+		visited: #3da329,
+
+		header: (
+			bg:				#bbb,
+			fg:				#444,
+			fg-bold:		#333,
+			fg-light:		#aaa
+		),
+	);
+
 	$size: (
 		navPanel:			275px,
 		border-radius:		6px,
 		element-height:		3em,
 		element-margin:		1.5em,
-		inner:						50em
+		inner:						682px
 	);
 
 	// $palette: (

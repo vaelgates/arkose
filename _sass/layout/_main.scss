@@ -7,10 +7,10 @@
 /* Main */
 
 	#main {
-		background-color: _palette(bg-alt);
+		background-color: var(--color-bg-alt);
 
 		> * {
-			border-top: solid 1px _palette(border);
+			border-top: solid 1px var(--color-border);
 
 			&:first-child {
 				border-top: 0;

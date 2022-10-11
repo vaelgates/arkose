@@ -1,5 +1,6 @@
 ---
 ---
+@import 'libs/colors';
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -69,6 +70,8 @@
 	@import 'components/tiles';
 	@import 'components/contact-method';
 	@import 'components/spotlights';
+	@import 'components/cog_form';
+	@import 'components/argument';
 
 // Layout.
 

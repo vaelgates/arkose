@@ -1,0 +1,9 @@
+<ul>
+  {% for argument in arguments %}
+    <li {% if argument.url == page.url %}class="active"{% endif %}><a href="{{argument.url}}">{{ argument.name }}</a></li>
+    {% if argument.pages.size > 0 %}
+      {% assign arguments = argument.pages %}
+      {% include argument_item.html %}
+    {% endif %}
+  {% endfor %}
+</ul>
