@@ -10,30 +10,27 @@
       url: /arguments/more-than-50-years
       pages:
         - page:
-          name: Yes, I would like to hear these arguments for why AGI might come soon
+          name: Why these systems might come soon
           url: /arguments/agisooner
-        - page:
-          name: No, let’s move on - I want to learn about arguments for potential risk from AI
-          url: /arguments/goto-potential-risk
     - page:
       name: Never
       url: /arguments/never
       pages:
         - page:
-          name: There is something special about biology which we will never be able to put into machines
+          name: There is something special about biology
           url: /arguments/biology-special
         - page:
-          name: I don’t know, but truly intelligent machines - that seems really weird
+          name: Intelligent Machines - seems weird
           url: /arguments/seems-weird
           pages:
             - page:
-              name: If we actually had a “scientist AI”, it would be a massive change in the world - and the world simply doesn’t change that fast
+              name: The world doesn’t change that fast
               url: /arguments/fast-changes
         - page:
           name: AI will never be able to have true creativity
           url: /arguments/creativity
         - page:
-          name: We would need to understand the brain first, and this is a big obstacle
+          name: Would need to understand the brain first
           url: /arguments/understand-brain-first
         - page:
           name: I don’t see a reason for us to even want that
@@ -45,39 +42,39 @@
           name: An AI paradigm shift will be required
           url: /arguments/an--ai-paradigm-shift-will-be-required
         - page:
-          name: Surely this would be bad and people would stop it
+          name: People would stop this
           url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
         - page:
-          name: We need embodiment - the AI needs a body and actuators, and sensors
+          name: We need embodiment
           url: /arguments/embodiment-is-necessary
         - page:
-          name: AI cannot be conscious in the way a human is
+          name: AI cannot be conscious
           url: /arguments/consciousness
 - page:
   name: The Alignment Problem
   url: /arguments/the--alignment--problem
   pages:
     - page:
-      name: It’s no problem, we would test it before deploying
+      name: We would test before deploying
       url: /arguments/test-before-deploying
     - page:
-      name: It’s no problem. if it misbehaves, we shut it down
+      name: We can just shut it down
       url: /arguments/we-shut-it-down
     - page:
-      name: It’s no problem, we would just be careful with our reward function
+      name: We would just be careful with our reward function
       url: /arguments/careful-with-that-reward-function
     - page:
-      name: It’s probably impossible to develop AGI without solving this problem - so nothing bad will happen
-      url: /arguments/it’s-probably-impossible-to-develop--agi-without-solving-this-problem---so-nothing-bad-will-happen
+      name: AGI wouldn’t be functional unless this problem is solved
+      url: /arguments/wouldnt-be-functional
     - page:
-      name: This problem would be inevitably solved in order to even develop AGI
-      url: /arguments/this-problem-would-be-inevitably-solved-in-order-to-even-develop--agi
+      name: This will probably be solved in the course of building these systems
+      url: /arguments/would-inevitably-be-solved
     - page:
-      name: But as we build more capable systems, surely our understanding of how to align them will advance equally well
+      name: Our understanding of how to align systems will advance
       url: /arguments/alignment-advances-equally
     - page:
       name: Need to know what type of AGI before we can talk about safety
-      url: /arguments/need-to-know-what-type-of--agi-before-we-can-talk-about-safety
+      url: /arguments/need-to-know-what-type
     - page:
       name: Misuse is a bigger problem
       url: /arguments/misuse-is-a-bigger-problem
@@ -93,10 +90,10 @@
   pages:
     - page:
       name: It would be simple to instruct the AI to try less hard
-      url: /arguments/it-would-be-simple-to-instruct-the--ai-to-try-less-hard
+      url: /arguments/aishould-try-less-hard
     - page:
-      name: Consciousness won’t happen (and is required for self-preservation)
-      url: /arguments/consciousness-won’t-happen-(and-is-required-for-self-preservation)
+      name: Consciousness won’t happen
+      url: /arguments/no-self-preservation-without-consciousness
     - page:
       name: We could stop that physically
       url: /arguments/we-could-stop-that-physically
@@ -123,7 +120,7 @@
       name: Regulators will take care of this
       url: /arguments/regulators-will-take-care-of-this
     - page:
-      name: Work on AGI safety is not useful because there is nothing we can do at the moment
+      name: Nothing we can do at the moment
       url: /arguments/not-useful-currently
     - page:
       name: I’m not convinced this is urgent now
@@ -135,5 +132,5 @@
       name: Alignment is easy - This will definitely be solved in time
       url: /arguments/alignment-is-easy----this-will-definitely-be-solved-in-time
     - page:
-      name: Yeah there are people working on this but I don’t understand why their work would be useful
+      name: I don’t see how current safety work is useful
       url: /arguments/not-currently-tractable

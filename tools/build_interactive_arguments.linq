@@ -25,7 +25,12 @@ void Main()
 
 	// TODO:
 	// keenan:
-	// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
+				
+				// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
+	// mobile usability
+	// can we have chapters on bottom?
+	// blinking on link navigation
+	// can we have some kind of box for the quotes?
 
 			// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
 	// Lukas:
@@ -143,19 +148,26 @@ void Main()
 				currentDocument = new Document();
 				currentDocument.HierarchyLevel = x - 2;
 				outputFiles.Add(currentDocument);
-				currentDocument.InternalID = Between(txt, "[", "]").Trim();
+				var internalIdAndShortHeadline = Between(txt, "[", "]").Trim();
+				currentDocument.InternalID = EverythingBefore(internalIdAndShortHeadline,"|");
+				currentDocument.ShorterHeadline=EverythingAfter(internalIdAndShortHeadline, "|");
 
 				currentDocument.Headline = EverythingAfter(txt, "]").Trim();
 
 				if (currentDocument.InternalID == "")
 					currentDocument.InternalID = currentDocument.Headline;
 				else if (currentDocument.Headline == "")
+				{
 					currentDocument.Headline = currentDocument.InternalID;
+				}
 
 				if (currentDocument.InternalID == "")
 					throw new InvalidOperationException("Cannot determine internal ID for headline: " + txt);
 				if (currentDocument.Headline == "")
 					throw new InvalidOperationException("Cannot determine headline for " + txt);
+					
+					if (currentDocument.ShorterHeadline.Trim()=="")
+						currentDocument.ShorterHeadline=currentDocument.Headline;
 
 				currentDocument.FilenameWithoutPathOrExtension = CamelToDash(currentDocument.InternalID).Replace(" ", "-");
 
@@ -341,7 +353,7 @@ quit:
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 				{
 					var fn = assetsDirRelative+DownloadImageAndReturnFilename(imageUrl);
-					img.Append("<img src='{% link " + fn + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
+					img.Append("<img src='{% link " + fn.Replace("\\","/") + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
 				}
 				var capt = thisParagraph.ImageCaption;
 
@@ -516,16 +528,18 @@ string GetBreadcrumbs(List<Document> allDocs, Document currentDocument)
 			trail.Add(allDocs[i]);
 	}
 	trail.Reverse();
-	return string.Join(",", trail.Select(t => t.Headline.Replace(",", "").Replace(":", " - ") + ":" + t.FilenameWithoutPathOrExtension));
+	return string.Join(",", trail.Select(t => t.ShorterHeadline.Replace(",", "").Replace(":", " - ") + ":" + t.FilenameWithoutPathOrExtension));
 }
 string GetYamlDataForTOC(List<Document> allDocs)
 {
 	var sb = new StringBuilder();
 	for (int i = 0; i < allDocs.Count; i++)
 	{
+		if (allDocs[i].ShorterHeadline=="hide")
+			continue;
 		string prefix = new string(' ', allDocs[i].HierarchyLevel * 4);
 		sb.AppendLine(prefix + "- page:");
-		sb.AppendLine(prefix + "  name: " + allDocs[i].Headline.Replace(": ", ". "));
+		sb.AppendLine(prefix + "  name: " + allDocs[i].ShorterHeadline.Replace(": ", ". "));
 		sb.AppendLine(prefix + "  url: /" + folderInWebsite + "/" + allDocs[i].FilenameWithoutPathOrExtension);
 		if (i + 1 < allDocs.Count && allDocs[i + 1].HierarchyLevel > allDocs[i].HierarchyLevel)
 			sb.AppendLine(prefix + "  pages:");
@@ -588,10 +602,19 @@ class Document
 	public string JekyllFrontmatter;
 	public string OutLines;
 	public int HierarchyLevel;
-	public string FilenameWithoutPathOrExtension, Headline, InternalID;
+	public string FilenameWithoutPathOrExtension, Headline, ShorterHeadline, InternalID;
 	public List<ContentParagraph> Content = new List<ContentParagraph>();
 }
 
+
+static string EverythingBefore(string s, string findStr)
+{
+	int index = s.IndexOf(findStr);
+	if (index == -1)
+		return s;
+	else
+		return s.Substring(0, index);
+}
 
 static string EverythingAfter(string s, string findCh)
 {
