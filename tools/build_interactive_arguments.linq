@@ -8,30 +8,39 @@
   <Namespace>Newtonsoft.Json</Namespace>
   <Namespace>Google.Apis.Docs.v1.Data</Namespace>
   <Namespace>System.Web</Namespace>
+  <Namespace>System.Net</Namespace>
+  <Namespace>System.Security.Cryptography</Namespace>
 </Query>
 
 static string folderInWebsite = "arguments";
+static string documentsId = File.ReadLines("c:\\temp\\aird_documents_id.txt").First();
+static string baseDir = Path.GetDirectoryName(Util.CurrentQueryPath) + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
+static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
+
+static string assetsDirRelative="assets"+Path.DirectorySeparatorChar+"images"+Path.DirectorySeparatorChar+"arguments"+Path.DirectorySeparatorChar;
+static string assetsDir=baseDir+assetsDirRelative;
+static string imageCacheFile = assetsDir + "images.txt";
 void Main()
 {
 
 	// TODO:
 	// keenan:
-		// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
-		// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
+	// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
+
+			// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
 	// Lukas:
-		// goto folding
-		// abort if an url contains "," or "'"
-		
-		
+	// goto folding
+	// abort if an url contains "," or "'"
 
 
 
-	string documentsId = File.ReadLines("c:\\temp\\aird_documents_id.txt").First();
-	string baseDir = Path.GetDirectoryName(Util.CurrentQueryPath) + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
-	string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
+
+
+
+
 	string argumentsYamlFile = baseDir + Path.DirectorySeparatorChar + "_data" + Path.DirectorySeparatorChar + "arguments.yml";
 
-	Regex markdownLinkRgx = new Regex(@"\[(.*?)\]\((.*?)\)");
+	Regex markdownLinkRgx = new Regex(@"\[([^\]]*?)\]\((.*?)\)");
 
 	Directory.CreateDirectory(outputDir);
 
@@ -118,7 +127,7 @@ void Main()
 				firstLinePrefix = bulletLevel == null ? "" : (new string('\t', bulletLevel.Value) + markdownBulletSymbol + " ");
 			}
 
-#region starting a new document
+			#region starting a new document
 			if (style.StartsWith("HEADING_") && int.TryParse(style.Substring("HEADING_".Length, 1), out var x))
 			{
 				if (element.Paragraph.Elements.Count > 1)
@@ -128,7 +137,7 @@ void Main()
 				{
 					"brk".Dump();
 				}
-				if (txt.Trim()=="")
+				if (txt.Trim() == "")
 					continue;
 				$"Starting new document {txt}".Dump();
 				currentDocument = new Document();
@@ -149,19 +158,19 @@ void Main()
 					throw new InvalidOperationException("Cannot determine headline for " + txt);
 
 				currentDocument.FilenameWithoutPathOrExtension = CamelToDash(currentDocument.InternalID).Replace(" ", "-");
-				
-				if (currentDocument.FilenameWithoutPathOrExtension.Contains(",")||currentDocument.FilenameWithoutPathOrExtension.Contains("'"))
-					throw new InvalidOperationException("Make sure you specify a shorthand here: "+currentDocument.FilenameWithoutPathOrExtension); // we could simply replace it, but these characters are indications of a text thats too complex to be an URL.
-				
+
+				if (currentDocument.FilenameWithoutPathOrExtension.Contains(",") || currentDocument.FilenameWithoutPathOrExtension.Contains("'"))
+					throw new InvalidOperationException("Make sure you specify a shorthand here: " + currentDocument.FilenameWithoutPathOrExtension); // we could simply replace it, but these characters are indications of a text thats too complex to be an URL.
+
 				if (currentDocument.FilenameWithoutPathOrExtension.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
 					throw new InvalidOperationException("This ID is not a valid filename: " + currentDocument.FilenameWithoutPathOrExtension);
 
 				// syntax sample breadcrumbs: breadcrumbs: The Alignment Problem:the-alignment-problem,Test Before Deploying:test-before-deploying
 
 				var breadcrumbs = GetBreadcrumbs(outputFiles, currentDocument);
-				currentDocument.JekyllFrontmatter=$@"---
+				currentDocument.JekyllFrontmatter = $@"---
 layout: argument
-title: {"\""+currentDocument.Headline+"\""}
+title: {"\"" + currentDocument.Headline + "\""}
 breadcrumbs: {breadcrumbs}
 ---";
 
@@ -169,7 +178,7 @@ breadcrumbs: {breadcrumbs}
 
 
 			}
-#endregion
+			#endregion
 		}
 
 		// when we encounter an image, the very next element must be the image caption and start with a "(".
@@ -197,6 +206,8 @@ breadcrumbs: {breadcrumbs}
 			if (el.TextRun != null)
 			{
 				var txt = el.TextRun.Content.Trim();
+				if (txt.Contains(":ResearcherSurvey"))
+					"dbg".Dump();
 
 				if (txt == "")
 					continue;
@@ -217,7 +228,7 @@ breadcrumbs: {breadcrumbs}
 				else
 				{
 					if (!first) // adding to previous elements of the same paragraph. for example, if you have text and then a link and then some more text, this will be 3 elements
-						currentDocument.Content.Last().HtmlText += " "+txt;
+						currentDocument.Content.Last().HtmlText += " " + txt;
 					else
 						currentDocument.Content.Add(new ContentParagraph(txt) { BulletLevel = bulletLevel, BulletType = bulletType });
 				}
@@ -231,7 +242,8 @@ breadcrumbs: {breadcrumbs}
 				if (!currentlyBuildingAnImage)
 					currentDocument.Content.Add(new ContentParagraph("") { BulletLevel = bulletLevel, BulletType = bulletType });
 				// we are constructing an image block consisting of several images
-				currentDocument.Content.Last().ImageUrls.Add(imageProps.ContentUri);
+				currentDocument.Content.Last().ImageUrls.Add(new GDocsImage() { ContentUrl = imageProps.ContentUri, EmbeddedObjectId = el.InlineObjectElement.InlineObjectId});
+				
 				("Image at " + imageProps.ContentUri + ", waiting for caption or additional images...").Dump();
 				continue;
 
@@ -313,7 +325,7 @@ quit:
 					previousBulletLevel = null;
 				}
 			}
-				
+
 
 
 
@@ -327,7 +339,10 @@ quit:
 					ExitAndComplainAboutImageCaption(thisParagraph.ImageUrls);
 				img.Append(@"<figure>");
 				foreach (var imageUrl in thisParagraph.ImageUrls)
-					img.Append("<img src='" + imageUrl + "' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
+				{
+					var fn = assetsDirRelative+DownloadImageAndReturnFilename(imageUrl);
+					img.Append("<img src='{% link " + fn + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
+				}
 				var capt = thisParagraph.ImageCaption;
 
 				// remove open and closed brackets:
@@ -342,16 +357,21 @@ quit:
 
 			}
 			else // write a text block
-				outText.AppendLine(prefix + ConvertMarkdownLinksToHtml(thisParagraph.HtmlText) + postfix); 
+			{
+				if (thisParagraph.HtmlText.Contains("ResearcherSurvey"))
+					"dbg".Dump();
+				var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
+				outText.AppendLine(prefix + conv + postfix);
+			}
 		}
 
 		#region navigation to the children and the next sibling
 		string MakeNav(string text, string url)
 		{
-		return $"<div><a href='{url}'>{text}</a></div>";
-			
+			return $"<div><a href='{url}'>{text}</a></div>";
+
 		}
-		
+
 		foreach (var child in GetChildren(outputFiles, of))
 			outText.AppendLine(MakeNav(child.Headline, MakeUrl(child)));
 
@@ -372,27 +392,31 @@ quit:
 	}
 
 	#region resolving text blocks
-	var textblockRegex=new Regex(@"(\[textblock:(.*?)\])([\s\S]*?)(\[\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
-	// part 1: capture
+	var textblockRegex = new Regex(@"(\[textblock:(.*?)\])([\s\S]*?)(\[\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
+																						// part 1: capture
 	foreach (var of in outputFiles)
 	{
+		if (of.FilenameWithoutPathOrExtension.Contains("ooner"))
+			"dbg break".Dump();
 		foreach (Match match in textblockRegex.Matches(of.OutLines))
 		{
+			if (match.Groups[2].Value == "ResearcherSurvey")
+				"dbg break".Dump();
 			// remember the block
 			textblocks[match.Groups[2].Value] = match.Groups[3].Value;
 			// remove beginning and end tags
-			of.OutLines = of.OutLines.Replace(match.Groups[1].Value,"");
-			of.OutLines = of.OutLines.Replace(match.Groups[4].Value,"");
-			
+			of.OutLines = of.OutLines.Replace(match.Groups[1].Value, "");
+			of.OutLines = of.OutLines.Replace(match.Groups[4].Value, "");
+
 		}
 	}
 	// part 2: replace
-	var copyRgx=new Regex(@"\[copy:(.*?)\]");
+	var copyRgx = new Regex(@"\[copy:(.*?)\]");
 	foreach (var of in outputFiles)
 		of.OutLines = copyRgx.Replace(of.OutLines, m =>
 		{
 			if (!textblocks.ContainsKey(m.Groups[1].Value))
-				throw new InvalidOperationException("Textblock not found: "+m.Groups[1].Value);
+				throw new InvalidOperationException("Textblock not found: " + m.Groups[1].Value);
 			return textblocks[m.Groups[1].Value];
 
 
@@ -404,7 +428,7 @@ quit:
 	{
 
 		("Writing file " + of.FilenameWithoutPathOrExtension).Dump();
-		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".html", of.JekyllFrontmatter+"\n"+of.OutLines);
+		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".html", of.JekyllFrontmatter + "\n" + of.OutLines);
 
 	}
 
@@ -421,9 +445,45 @@ quit:
 	//	throw new InvalidOperationException("Jekyll build failed");
 }
 
+string DownloadImageAndReturnFilename(GDocsImage gdi)
+{
+	if (gdi.ContentUrl.Contains("|"))
+		throw new InvalidOperationException("Cannot reference images that contain the | character: "+gdi);
+	if (!File.Exists(imageCacheFile))
+		File.WriteAllText(imageCacheFile,"");
+
+	var imgCacheLines = File.ReadLines(imageCacheFile).Select(l => l.Split('|'));
+	var match = imgCacheLines.FirstOrDefault(l => l[0] == gdi.EmbeddedObjectId);
+	if (match != null) // we already got it
+	{
+		return match[1];
+	}
+
+	using (var wc = new WebClient())
+	{
+		var bytes = wc.DownloadData(gdi.ContentUrl);
+		var filename = GetMD5(bytes) + (GetFileExtensionFromUrl(gdi.ContentUrl)??".png");
+		File.AppendAllLines(imageCacheFile, new[] { gdi.EmbeddedObjectId+"|"+ filename });
+		File.WriteAllBytes(assetsDir+filename, bytes);
+		return filename;
+	}
+
+}
+
+static string GetFileExtensionFromUrl(string url)
+{
+	url = url.Split('?')[0];
+	url = url.Split('/').Last();
+	return url.Contains('.') ? url.Substring(url.LastIndexOf('.')) : null;
+}
+string GetMD5(byte[] data)
+{
+	return BitConverter.ToString(new MD5CryptoServiceProvider().ComputeHash(data)).Replace("-", "");
+}
+
 string MakeUrl(Document child)
 {
-	return "/"+folderInWebsite+"/"+child.FilenameWithoutPathOrExtension+".html";
+	return "/" + folderInWebsite + "/" + child.FilenameWithoutPathOrExtension + ".html";
 }
 
 List<Document> GetChildren(List<Document> outputFiles, Document x)
@@ -441,8 +501,8 @@ List<Document> GetChildren(List<Document> outputFiles, Document x)
 
 Document GetNextSiblingOrNull(List<Document> outputFiles, Document x)
 {
-	return outputFiles.Skip(outputFiles.IndexOf(x)+1)
-	.FirstOrDefault(y=>y.HierarchyLevel==x.HierarchyLevel);
+	return outputFiles.Skip(outputFiles.IndexOf(x) + 1)
+	.FirstOrDefault(y => y.HierarchyLevel == x.HierarchyLevel);
 }
 
 string GetBreadcrumbs(List<Document> allDocs, Document currentDocument)
@@ -456,7 +516,7 @@ string GetBreadcrumbs(List<Document> allDocs, Document currentDocument)
 			trail.Add(allDocs[i]);
 	}
 	trail.Reverse();
-	return string.Join(",", trail.Select(t => t.Headline.Replace(",","").Replace(":", " - ") + ":" + t.FilenameWithoutPathOrExtension));
+	return string.Join(",", trail.Select(t => t.Headline.Replace(",", "").Replace(":", " - ") + ":" + t.FilenameWithoutPathOrExtension));
 }
 string GetYamlDataForTOC(List<Document> allDocs)
 {
@@ -464,7 +524,7 @@ string GetYamlDataForTOC(List<Document> allDocs)
 	for (int i = 0; i < allDocs.Count; i++)
 	{
 		string prefix = new string(' ', allDocs[i].HierarchyLevel * 4);
-		sb.AppendLine(prefix+ "- page:");
+		sb.AppendLine(prefix + "- page:");
 		sb.AppendLine(prefix + "  name: " + allDocs[i].Headline.Replace(": ", ". "));
 		sb.AppendLine(prefix + "  url: /" + folderInWebsite + "/" + allDocs[i].FilenameWithoutPathOrExtension);
 		if (i + 1 < allDocs.Count && allDocs[i + 1].HierarchyLevel > allDocs[i].HierarchyLevel)
@@ -483,7 +543,7 @@ string StripHtml(string caption)
 	throw new NotImplementedException();
 }
 
-void ExitAndComplainAboutImageCaption(List<string> imageUrls)
+void ExitAndComplainAboutImageCaption(List<GDocsImage> imageUrls)
 {
 	throw new InvalidOperationException($"Couldnt find caption for images {string.Join(" ", imageUrls)}. Every image must have a caption, that is written right next to it, and starts & ends with a bracket. You can also have several images next to each other and then one caption.");
 }
@@ -492,10 +552,22 @@ void ExitAndComplainAboutImageCaption(List<string> imageUrls)
 
 enum ListTypeEnum { Bullet, Number };
 
+
+class GDocsImage
+{
+	/// warning - this might be different each time you fetch the document
+	public string ContentUrl { get; set; }
+	public string EmbeddedObjectId{get;set;}
+	public override string ToString()
+	{
+		return ContentUrl;
+	}
+}
+
 class ContentParagraph
 {
 
-	public List<string> ImageUrls = new List<string>();
+	public List<GDocsImage> ImageUrls = new List<GDocsImage>();
 	public string ImageCaption = "";
 	public string HtmlText;
 	public int? BulletLevel;
