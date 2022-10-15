@@ -1,3 +1,24 @@
+.site-section-header {
+  background-color: var(--color-accent1);
+  @include inner;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+#main.argument {
+  .inner {
+    padding-top: 2em;
+  }
+  .major h1 {
+    line-height: 1.25;
+  }
+}
+
+.ptb0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .breadcrumbs {
   margin-bottom: 10px;
 }
@@ -35,7 +56,7 @@
   .argument-tree {
     margin-top: 20px;
     margin: 0 auto;
-    max-width: 682px;
+    max-width: 50rem;
     width: calc(100% - 6em);
   }
 }
@@ -45,10 +66,11 @@
   flex-direction: column-reverse;
 }
 .argument-tree {
-  margin-top: 20px;
+  padding-top: 20px;
   margin: 0 auto;
-  max-width: 682px;
+  max-width: 50rem;
   width: calc(100% - 6em);
+  border-top: solid 1px var(--color-border);
 }
 li {
   list-style-type: none;
