@@ -5,3 +5,4 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 build_on_windows.bat
+.DS_Store
