@@ -1,6 +1,7 @@
 <ul>
   {% for argument in arguments %}
-    <li {% if argument.url == page.url %}class="active"{% endif %}><a href="{{argument.url}}">{{ argument.name }}</a></li>
+    {% assign decoded_page_url = page.url | url_decode %}
+    <li {% if argument.url == decoded_page_url %}class="active"{% endif %}><a href="{{argument.url}}">{{ argument.name }}</a></li>
     {% if argument.pages.size > 0 %}
       {% assign arguments = argument.pages %}
       {% include argument_item.html %}
