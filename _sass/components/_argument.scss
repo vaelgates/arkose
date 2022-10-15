@@ -6,6 +6,8 @@
   display: flex;
 }
 
+/* Left sidebar argument tree code, disabled for now */
+/*
 .argument-tree {
   margin-top: 220px;
   li {
@@ -35,5 +37,32 @@
     margin: 0 auto;
     max-width: 682px;
     width: calc(100% - 6em);
+  }
+}
+*/
+
+.argument-section {
+  flex-direction: column-reverse;
+}
+.argument-tree {
+  margin-top: 20px;
+  margin: 0 auto;
+  max-width: 682px;
+  width: calc(100% - 6em);
+}
+li {
+  list-style-type: none;
+  &.active {
+    font-weight: bold;
+    color: #000;
+    ::after {
+      top: 1px;
+      content: "•";
+      position: relative;
+      margin-left: 3px;
+    }
+  }
+  a {
+    border-bottom: none;
   }
 }
