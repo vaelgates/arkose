@@ -62,15 +62,16 @@
     },1)
   })
 
-  let argNodeHistory = localStorage.getItem('ArgNodeHistory')?.split(', ') ?? []
-  if (argNodeHistory[argNodeHistory.length - 1] !== window.location.pathname) {
-    argNodeHistory.push(window.location.pathname)
+  if (window.location.host === 'localhost:4000' || window.location.host === '127.0.0.1:4000') {
+    console.log(argNodeHistory);
   }
-  localStorage.setItem('ArgNodeHistory', argNodeHistory.join(', '))
-  console.log(argNodeHistory)
+
   Cognito.prefill({
     "CurrentURL": window.location.pathname,
-    "NodeHistory": argNodeHistory.join(', ')
+    "NodeHistory": argNodeHistory.join(', '),
+    "LandingPath": localStorage.getItem('LandingPath'),
+    "sParam": localStorage.getItem('sParam'),
+    "Referrer": localStorage.getItem('Referrer')
   });
 
 </script>

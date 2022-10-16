@@ -445,3 +445,21 @@ if (theme === "dark") {
 	sessionStorage.setItem('theme', 'light');
 	document.getElementById("theme-toggle").innerHTML = "Dark Mode";
 }
+
+// Add this page to the list of visited URLs on this site so it can be
+// included in the argument feedback form
+let argNodeHistory = localStorage.getItem('ArgNodeHistory')?.split(', ') ?? []
+if (argNodeHistory[argNodeHistory.length - 1] !== window.location.pathname) {
+	argNodeHistory.push(window.location.pathname)
+}
+localStorage.setItem('ArgNodeHistory', argNodeHistory.join(', '))
+
+// If this is the first landing on the site, also record the referrer
+// and the value of the 's' parameter
+if (argNodeHistory.length <= 1) {
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	localStorage.setItem('LandingPath', window.location.pathname)
+	localStorage.setItem('sParam', urlParams.get('s'))
+	localStorage.setItem('Referrer', document.referrer)
+}
