@@ -385,9 +385,10 @@
 
 // this checks whether system dark mode is set 
 let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)"); 
-// this checks for session storage telling to override
-// the system preferences 
-let theme = sessionStorage.getItem('theme');
+// Commented out this line because it's set in <head> because
+// we're attempting to set the light/dark mode earlier, to prevent
+// the wrong theme flashing
+// let theme = sessionStorage.getItem('theme');
 
 if (systemInitiatedDark.matches) {
 	document.getElementById("theme-toggle").innerHTML = "Light Mode";
