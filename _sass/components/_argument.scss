@@ -71,20 +71,20 @@
   max-width: 50rem;
   width: calc(100% - 6em);
   border-top: solid 1px var(--color-border);
-}
-li {
-  list-style-type: none;
-  &.active {
-    font-weight: bold;
-    color: #000;
-    ::after {
-      top: 1px;
-      content: "•";
-      position: relative;
-      margin-left: 3px;
+  li {
+    list-style-type: none;
+    &.active {
+      font-weight: bold;
+      color: #000;
+      ::after {
+        top: 1px;
+        content: "•";
+        position: relative;
+        margin-left: 3px;
+      }
     }
-  }
-  a {
-    border-bottom: none;
+    a {
+      border-bottom: none;
+    }
   }
 }
