@@ -34,10 +34,10 @@
           url: /arguments/understand-brain-first
         - page:
           name: I don’t see a reason for us to even want that
-          url: /arguments/i-don’t-see-a-reason-for-us-to-even-want-that
+          url: /arguments/we-dont-want-that
         - page:
           name: I can’t see it based on current progress
-          url: /arguments/i-can’t-see-it-based-on-current-progress
+          url: /arguments/cant-see-it-based-on-current-progress
         - page:
           name: An AI paradigm shift will be required
           url: /arguments/an--ai-paradigm-shift-will-be-required
