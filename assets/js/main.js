@@ -457,8 +457,8 @@ localStorage.setItem('ArgNodeHistory', argNodeHistory.join(', '))
 // If this is the first landing on the site, also record the referrer
 // and the value of the 's' parameter
 if (argNodeHistory.length <= 1) {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
+	let queryString = window.location.search;
+	let urlParams = new URLSearchParams(queryString);
 	localStorage.setItem('LandingPath', window.location.pathname)
 	localStorage.setItem('sParam', urlParams.get('s'))
 	localStorage.setItem('Referrer', document.referrer)

@@ -23,6 +23,8 @@
     <!-- One -->
     <section class="argument-section">
       <div class="argument-tree">
+        {% assign argument_index = 0 %}
+        {% assign page_argument_index = -1 %}
         {% assign arguments = site.data.arguments %}
         {% include argument_item.html %}
       </div>
@@ -73,6 +75,18 @@
     "sParam": localStorage.getItem('sParam'),
     "Referrer": localStorage.getItem('Referrer')
   });
+
+  let queryString = window.location.search;
+  let urlParams = new URLSearchParams(queryString);
+
+  if (urlParams.get('override')) {
+    document.querySelectorAll('.inaccessible-argument').forEach((el) => {
+      el.style.display = 'none';
+    })
+    document.querySelectorAll('.hidden-inaccessible-argument-link').forEach((el) => {
+      el.style.display = 'inline';
+    })
+  }
 
 </script>
 </html>

@@ -27,6 +27,14 @@
   display: flex;
 }
 
+.inaccessible-argument {
+  color: #888;
+}
+
+.hidden-inaccessible-argument-link {
+  display: none;
+}
+
 /* Left sidebar argument tree code, disabled for now */
 /*
 .argument-tree {
