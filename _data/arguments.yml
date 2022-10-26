@@ -1,5 +1,5 @@
 - page:
-  name: When will we get generally capable AI systems?
+  name: WhenAGI
   url: /arguments/when-agi
   pages:
     - page:
@@ -27,16 +27,16 @@
               name: The world doesn’t change that fast
               url: /arguments/fast-changes
         - page:
-          name: AI will never be able to have true creativity
+          name: Creativity
           url: /arguments/creativity
         - page:
           name: Would need to understand the brain first
           url: /arguments/understand-brain-first
         - page:
-          name: I don’t see a reason for us to even want that
+          name: WeDontWantThat
           url: /arguments/we-dont-want-that
         - page:
-          name: I can’t see it based on current progress
+          name: CantSeeItBasedOnCurrentProgress
           url: /arguments/cant-see-it-based-on-current-progress
         - page:
           name: An AI paradigm shift will be required
@@ -58,9 +58,6 @@
       name: We would test before deploying
       url: /arguments/test-before-deploying
     - page:
-      name: We can just shut it down
-      url: /arguments/we-shut-it-down
-    - page:
       name: We would just be careful with our reward function
       url: /arguments/careful-with-that-reward-function
     - page:
@@ -73,7 +70,7 @@
       name: Our understanding of how to align systems will advance
       url: /arguments/alignment-advances-equally
     - page:
-      name: Need to know what type of AGI before we can talk about safety
+      name: NeedToKnowWhatType
       url: /arguments/need-to-know-what-type
     - page:
       name: Misuse is a bigger problem
@@ -89,7 +86,7 @@
   url: /arguments/instrumental--incentives
   pages:
     - page:
-      name: It would be simple to instruct the AI to try less hard
+      name: AIShouldTryLessHard
       url: /arguments/aishould-try-less-hard
     - page:
       name: Consciousness won’t happen
@@ -98,19 +95,19 @@
       name: We could stop that physically
       url: /arguments/we-could-stop-that-physically
     - page:
-      name: Current systems don’t do that
-      url: /arguments/current-systems-don’t-do-that
+      name: CurrentSystemsDontDoThat
+      url: /arguments/current-systems-dont-do-that
     - page:
       name: We wouldn’t design it that way
-      url: /arguments/we-wouldn’t-design-it-that-way
+      url: /arguments/wouldnt-design-that-way
     - page:
-      name: This won’t be a problem, we will have human oversight
+      name: Human Oversight
       url: /arguments/human--oversight
 - page:
   name: AI could be a big deal
   url: /arguments/ai-could-be-a-big-deal
 - page:
-  name: Threat Models - how might AGI be dangerous?
+  name: Threat Models
   url: /arguments/threat--models
 - page:
   name: The importance of more safety work
@@ -123,7 +120,7 @@
       name: Nothing we can do at the moment
       url: /arguments/not-useful-currently
     - page:
-      name: I’m not convinced this is urgent now
+      name: NotUrgentCurrently
       url: /arguments/not-urgent-currently
     - page:
       name: Lets build AI and then worry about safety later
