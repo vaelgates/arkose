@@ -3,10 +3,10 @@
     {% assign decoded_page_url = page.url | url_decode %}
     <li {% if argument.url == decoded_page_url %}class="active"{% endif %}>
       {% if page_argument_index == -1 or argument_index <= page_argument_index %}
-        <a href="{{argument.url}}">{{ argument.name }}</a>
+        <a href="{{site.baseurl}}{{argument.url}}">{{ argument.name }}</a>
       {% else %}
         <span class="inaccessible-argument">{{ argument.name }}</span>
-        <a class="hidden-inaccessible-argument-link" href="{{argument.url}}">{{ argument.name }}</a>
+        <a class="hidden-inaccessible-argument-link" href="{{site.baseurl}}{{argument.url}}">{{ argument.name }}</a>
       {% endif %}
     </li>
     {% assign argument_index = argument_index | plus:1 %}
