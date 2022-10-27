@@ -5,7 +5,7 @@
       {% if page_argument_index == -1 or argument_index <= page_argument_index %}
         <a href="{{site.baseurl}}{{argument.url}}">{{ argument.name }}</a>
       {% else %}
-        <span class="inaccessible-argument">{{ argument.name }}</span>
+        <span class="inaccessible-argument" data-href="{{site.baseurl}}{{argument.url}}">{{ argument.name }}</span>
         <a class="hidden-inaccessible-argument-link" href="{{site.baseurl}}{{argument.url}}">{{ argument.name }}</a>
       {% endif %}
     </li>

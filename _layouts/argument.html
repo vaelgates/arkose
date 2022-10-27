@@ -86,6 +86,14 @@
     document.querySelectorAll('.hidden-inaccessible-argument-link').forEach((el) => {
       el.style.display = 'inline';
     })
+  } else {
+    document.querySelectorAll('.inaccessible-argument').forEach((el) => {
+      if (argNodeHistory.includes(el.attributes['data-href'].value)) {
+        el.style.display = 'none';
+        const linkEl = document.querySelector(`a[href='${el.attributes['data-href'].value}']`);
+        if (linkEl) linkEl.style.display = 'inline';
+      }
+    })
   }
 
 </script>
