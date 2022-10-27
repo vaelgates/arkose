@@ -150,9 +150,15 @@ void Main()
 				outputFiles.Add(currentDocument);
 				var internalIdAndShortHeadline = Between(txt, "[", "]").Trim();
 				currentDocument.InternalID = EverythingBefore(internalIdAndShortHeadline,"|");
-				currentDocument.ShorterHeadline=EverythingAfter(internalIdAndShortHeadline, "|");
+				
+
 
 				currentDocument.Headline = EverythingAfter(txt, "]").Trim();
+
+				if (internalIdAndShortHeadline.Contains("|"))
+					currentDocument.ShorterHeadline = EverythingAfter(internalIdAndShortHeadline, "|");
+					else
+					currentDocument.ShorterHeadline=currentDocument.Headline;
 
 				if (currentDocument.InternalID == "")
 					currentDocument.InternalID = currentDocument.Headline;
@@ -169,9 +175,11 @@ void Main()
 					if (currentDocument.ShorterHeadline.Trim()=="")
 						currentDocument.ShorterHeadline=currentDocument.Headline;
 
-				currentDocument.FilenameWithoutPathOrExtension = CamelToDash(currentDocument.InternalID).Replace(" ", "-");
+				currentDocument.FilenameWithoutPathOrExtension = 
+				RemoveDoubleOccurences('-',
+				CamelToDash(currentDocument.InternalID).Replace(" ", "-"));
 
-				if (currentDocument.FilenameWithoutPathOrExtension.Contains(",") || currentDocument.FilenameWithoutPathOrExtension.Contains("'"))
+				if (currentDocument.FilenameWithoutPathOrExtension.Contains(",") || currentDocument.FilenameWithoutPathOrExtension.Contains("'") || currentDocument.FilenameWithoutPathOrExtension.Contains("’"))
 					throw new InvalidOperationException("Make sure you specify a shorthand here: " + currentDocument.FilenameWithoutPathOrExtension); // we could simply replace it, but these characters are indications of a text thats too complex to be an URL.
 
 				if (currentDocument.FilenameWithoutPathOrExtension.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
@@ -353,7 +361,7 @@ quit:
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 				{
 					var fn = assetsDirRelative+DownloadImageAndReturnFilename(imageUrl);
-					img.Append("<img src='{% link " + fn.Replace("\\","/") + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
+					img.Append("<img src='{{site.baseurl}}{% link " + fn.Replace("\\","/") + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
 				}
 				var capt = thisParagraph.ImageCaption;
 
@@ -377,7 +385,7 @@ quit:
 			}
 		}
 
-		#region navigation to the children and the next sibling
+		#region navigation to the children
 		string MakeNav(string text, string url)
 		{
 			return $"<div><a href='{url}'>{text}</a></div>";
@@ -387,12 +395,13 @@ quit:
 		foreach (var child in GetChildren(outputFiles, of))
 			outText.AppendLine(MakeNav(child.Headline, MakeUrl(child)));
 
-		if (of.HierarchyLevel == 0)
-		{
-			var next = GetNextSiblingOrNull(outputFiles, of);
-			if (next != null)
-				outText.AppendLine(MakeNav(next.Headline, MakeUrl(next)));
-		}
+		
+		//if (of.HierarchyLevel == 0)
+		//{
+		//	var next = GetNextSiblingOrNull(outputFiles, of);
+		//	if (next != null)
+		//		outText.AppendLine(MakeNav(next.Headline, MakeUrl(next)));
+		//}
 		MakeNav("I don't agree with this - Send Feedback", "#feedback");
 		#endregion
 
@@ -455,6 +464,17 @@ quit:
 	//proc.WaitForExit();
 	//if (proc.ExitCode!=0)
 	//	throw new InvalidOperationException("Jekyll build failed");
+}
+
+string RemoveDoubleOccurences(char thingThatmustNotOccurDoubly, string sentence)
+{
+	var sb=new StringBuilder();
+	for (int i=0; i<sentence.Length;i++)
+	{
+		if (i==0 || sentence[i-1]!=sentence[i] || sentence[i]!=thingThatmustNotOccurDoubly)
+		sb.Append(sentence[i]);
+	}
+	return sb.ToString();
 }
 
 string DownloadImageAndReturnFilename(GDocsImage gdi)

@@ -1,10 +1,10 @@
 - page:
-  name: WhenAGI
+  name: Generally capable AI systems
   url: /arguments/when-agi
   pages:
     - page:
       name: Within 50 Years
-      url: /arguments/within-50--years
+      url: /arguments/within-50-years
     - page:
       name: More than 50 years
       url: /arguments/more-than-50-years
@@ -27,20 +27,20 @@
               name: The world doesn’t change that fast
               url: /arguments/fast-changes
         - page:
-          name: Creativity
+          name: AI will never be able to have true creativity
           url: /arguments/creativity
         - page:
           name: Would need to understand the brain first
           url: /arguments/understand-brain-first
         - page:
-          name: WeDontWantThat
+          name: I don’t see a reason for us to even want that
           url: /arguments/we-dont-want-that
         - page:
-          name: CantSeeItBasedOnCurrentProgress
+          name: Can’t see it based on current progress
           url: /arguments/cant-see-it-based-on-current-progress
         - page:
           name: An AI paradigm shift will be required
-          url: /arguments/an--ai-paradigm-shift-will-be-required
+          url: /arguments/an-ai-paradigm-shift-will-be-required
         - page:
           name: People would stop this
           url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
@@ -52,7 +52,7 @@
           url: /arguments/consciousness
 - page:
   name: The Alignment Problem
-  url: /arguments/the--alignment--problem
+  url: /arguments/the-alignment-problem
   pages:
     - page:
       name: We would test before deploying
@@ -70,7 +70,7 @@
       name: Our understanding of how to align systems will advance
       url: /arguments/alignment-advances-equally
     - page:
-      name: NeedToKnowWhatType
+      name: Need to know what type of AGI before we can talk about safety
       url: /arguments/need-to-know-what-type
     - page:
       name: Misuse is a bigger problem
@@ -83,10 +83,10 @@
       url: /arguments/humans-have-alignment-problems-too
 - page:
   name: Instrumental Incentives
-  url: /arguments/instrumental--incentives
+  url: /arguments/instrumental-incentives
   pages:
     - page:
-      name: AIShouldTryLessHard
+      name: It would be simple to instruct the AI to try less hard
       url: /arguments/aishould-try-less-hard
     - page:
       name: Consciousness won’t happen
@@ -95,20 +95,20 @@
       name: We could stop that physically
       url: /arguments/we-could-stop-that-physically
     - page:
-      name: CurrentSystemsDontDoThat
+      name: Current systems don’t do that
       url: /arguments/current-systems-dont-do-that
     - page:
       name: We wouldn’t design it that way
       url: /arguments/wouldnt-design-that-way
     - page:
-      name: Human Oversight
-      url: /arguments/human--oversight
+      name: This won’t be a problem, we will have human oversight
+      url: /arguments/human-oversight
 - page:
   name: AI could be a big deal
   url: /arguments/ai-could-be-a-big-deal
 - page:
-  name: Threat Models
-  url: /arguments/threat--models
+  name: Threat Models - how might AGI be dangerous?
+  url: /arguments/threat-models
 - page:
   name: The importance of more safety work
   url: /arguments/the-importance-of-more-safety-work
@@ -120,14 +120,14 @@
       name: Nothing we can do at the moment
       url: /arguments/not-useful-currently
     - page:
-      name: NotUrgentCurrently
+      name: I’m not convinced this is urgent now
       url: /arguments/not-urgent-currently
     - page:
       name: Lets build AI and then worry about safety later
-      url: /arguments/lets-build--ai-and-then-worry-about-safety-later
+      url: /arguments/lets-build-ai-and-then-worry-about-safety-later
     - page:
       name: Alignment is easy - This will definitely be solved in time
-      url: /arguments/alignment-is-easy----this-will-definitely-be-solved-in-time
+      url: /arguments/alignment-is-easy-this-will-definitely-be-solved-in-time
     - page:
       name: I don’t see how current safety work is useful
       url: /arguments/not-currently-tractable
