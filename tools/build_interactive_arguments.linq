@@ -17,22 +17,22 @@ static string documentsId = File.ReadLines("c:\\temp\\aird_documents_id.txt").Fi
 static string baseDir = Path.GetDirectoryName(Util.CurrentQueryPath) + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
 static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 
-static string assetsDirRelative="assets"+Path.DirectorySeparatorChar+"images"+Path.DirectorySeparatorChar+"arguments"+Path.DirectorySeparatorChar;
-static string assetsDir=baseDir+assetsDirRelative;
+static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
+static string assetsDir = baseDir + assetsDirRelative;
 static string imageCacheFile = assetsDir + "images.txt";
 void Main()
 {
 
 	// TODO:
 	// keenan:
-				
-				// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
+
+	// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
 	// mobile usability
 	// can we have chapters on bottom?
 	// blinking on link navigation
 	// can we have some kind of box for the quotes?
 
-			// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
+	// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
 	// Lukas:
 	// goto folding
 	// abort if an url contains "," or "'"
@@ -149,16 +149,16 @@ void Main()
 				currentDocument.HierarchyLevel = x - 2;
 				outputFiles.Add(currentDocument);
 				var internalIdAndShortHeadline = Between(txt, "[", "]").Trim();
-				currentDocument.InternalID = EverythingBefore(internalIdAndShortHeadline,"|");
-				
+				currentDocument.InternalID = EverythingBefore(internalIdAndShortHeadline, "|");
+
 
 
 				currentDocument.Headline = EverythingAfter(txt, "]").Trim();
 
 				if (internalIdAndShortHeadline.Contains("|"))
 					currentDocument.ShorterHeadline = EverythingAfter(internalIdAndShortHeadline, "|");
-					else
-					currentDocument.ShorterHeadline=currentDocument.Headline;
+				else
+					currentDocument.ShorterHeadline = currentDocument.Headline;
 
 				if (currentDocument.InternalID == "")
 					currentDocument.InternalID = currentDocument.Headline;
@@ -171,11 +171,11 @@ void Main()
 					throw new InvalidOperationException("Cannot determine internal ID for headline: " + txt);
 				if (currentDocument.Headline == "")
 					throw new InvalidOperationException("Cannot determine headline for " + txt);
-					
-					if (currentDocument.ShorterHeadline.Trim()=="")
-						currentDocument.ShorterHeadline=currentDocument.Headline;
 
-				currentDocument.FilenameWithoutPathOrExtension = 
+				if (currentDocument.ShorterHeadline.Trim() == "")
+					currentDocument.ShorterHeadline = currentDocument.Headline;
+
+				currentDocument.FilenameWithoutPathOrExtension =
 				RemoveDoubleOccurences('-',
 				CamelToDash(currentDocument.InternalID).Replace(" ", "-"));
 
@@ -262,8 +262,8 @@ breadcrumbs: {breadcrumbs}
 				if (!currentlyBuildingAnImage)
 					currentDocument.Content.Add(new ContentParagraph("") { BulletLevel = bulletLevel, BulletType = bulletType });
 				// we are constructing an image block consisting of several images
-				currentDocument.Content.Last().ImageUrls.Add(new GDocsImage() { ContentUrl = imageProps.ContentUri, EmbeddedObjectId = el.InlineObjectElement.InlineObjectId});
-				
+				currentDocument.Content.Last().ImageUrls.Add(new GDocsImage() { ContentUrl = imageProps.ContentUri, EmbeddedObjectId = el.InlineObjectElement.InlineObjectId });
+
 				("Image at " + imageProps.ContentUri + ", waiting for caption or additional images...").Dump();
 				continue;
 
@@ -336,6 +336,10 @@ quit:
 				// have everything enclosed in DIVs that
 				// 	> is not a bulletpoint
 				//  > is not a beginmarker or endmarker of a textblock
+				
+		
+
+
 
 				var trim = thisParagraph.HtmlText;
 				if (!trim.StartsWith("[") && !trim.EndsWith("]"))
@@ -360,8 +364,8 @@ quit:
 				img.Append(@"<figure>");
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 				{
-					var fn = assetsDirRelative+DownloadImageAndReturnFilename(imageUrl);
-					img.Append("<img src='{{site.baseurl}}{% link " + fn.Replace("\\","/") + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
+					var fn = assetsDirRelative + DownloadImageAndReturnFilename(imageUrl);
+					img.Append("<img src='{{site.baseurl}}{% link " + fn.Replace("\\", "/") + " %}' referrerpolicy='no-referrer'/>"); // referrerpolicy is required to make images from googleusercontent.com work
 				}
 				var capt = thisParagraph.ImageCaption;
 
@@ -381,21 +385,46 @@ quit:
 				if (thisParagraph.HtmlText.Contains("ResearcherSurvey"))
 					"dbg".Dump();
 				var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
-				outText.AppendLine(prefix + conv + postfix);
+				
+				
+				// prefix must come after other html tags that might be used to start the line.
+				// find the first character thats not whitespace or a html tag:
+				int firstCharacterThatsNotTags=0;
+				bool inTag=false;
+				for (int j = 0; j < conv.Length; j++)
+				{
+					if (conv[j]==' ')
+						continue;
+					if (conv[j]=='<' || conv[j]=='[')
+						inTag=true;
+					if (conv[j]=='>' || conv[j]=='>')
+						inTag = false;
+					if (!inTag)
+					{
+						firstCharacterThatsNotTags = j+1;
+						break;
+					}
+				}
+				conv=conv.Insert(firstCharacterThatsNotTags, prefix);
+				if (conv.Contains("technology-mishaps"))
+				{
+					
+				}
+				outText.AppendLine(conv + postfix);
 			}
 		}
 
 		#region navigation to the children
 		string MakeNav(string text, string url)
 		{
-			return $"<div><a href='{url}'>{text}</a></div>";
+			return $"<div><a href='{{site.baseurl}}{url}'>{text}</a></div>";
 
 		}
 
 		foreach (var child in GetChildren(outputFiles, of))
 			outText.AppendLine(MakeNav(child.Headline, MakeUrl(child)));
 
-		
+
 		//if (of.HierarchyLevel == 0)
 		//{
 		//	var next = GetNextSiblingOrNull(outputFiles, of);
@@ -445,6 +474,16 @@ quit:
 	#endregion
 
 
+	#region removing attributions from quotes
+	foreach (var of in outputFiles)
+	{
+		if (of.OutLines.Contains("<blockquote>"))
+			of.OutLines = Regex.Replace(of.OutLines, @"<blockquote>([^<]*?)\</blockquote>", 
+			x=>Regex.Replace(x.Value, @"\(.*\)", ""));
+	}
+
+	#endregion
+
 	foreach (var of in outputFiles)
 	{
 
@@ -468,11 +507,11 @@ quit:
 
 string RemoveDoubleOccurences(char thingThatmustNotOccurDoubly, string sentence)
 {
-	var sb=new StringBuilder();
-	for (int i=0; i<sentence.Length;i++)
+	var sb = new StringBuilder();
+	for (int i = 0; i < sentence.Length; i++)
 	{
-		if (i==0 || sentence[i-1]!=sentence[i] || sentence[i]!=thingThatmustNotOccurDoubly)
-		sb.Append(sentence[i]);
+		if (i == 0 || sentence[i - 1] != sentence[i] || sentence[i] != thingThatmustNotOccurDoubly)
+			sb.Append(sentence[i]);
 	}
 	return sb.ToString();
 }
@@ -480,9 +519,9 @@ string RemoveDoubleOccurences(char thingThatmustNotOccurDoubly, string sentence)
 string DownloadImageAndReturnFilename(GDocsImage gdi)
 {
 	if (gdi.ContentUrl.Contains("|"))
-		throw new InvalidOperationException("Cannot reference images that contain the | character: "+gdi);
+		throw new InvalidOperationException("Cannot reference images that contain the | character: " + gdi);
 	if (!File.Exists(imageCacheFile))
-		File.WriteAllText(imageCacheFile,"");
+		File.WriteAllText(imageCacheFile, "");
 
 	var imgCacheLines = File.ReadLines(imageCacheFile).Select(l => l.Split('|'));
 	var match = imgCacheLines.FirstOrDefault(l => l[0] == gdi.EmbeddedObjectId);
@@ -494,9 +533,9 @@ string DownloadImageAndReturnFilename(GDocsImage gdi)
 	using (var wc = new WebClient())
 	{
 		var bytes = wc.DownloadData(gdi.ContentUrl);
-		var filename = GetMD5(bytes) + (GetFileExtensionFromUrl(gdi.ContentUrl)??".png");
-		File.AppendAllLines(imageCacheFile, new[] { gdi.EmbeddedObjectId+"|"+ filename });
-		File.WriteAllBytes(assetsDir+filename, bytes);
+		var filename = GetMD5(bytes) + (GetFileExtensionFromUrl(gdi.ContentUrl) ?? ".png");
+		File.AppendAllLines(imageCacheFile, new[] { gdi.EmbeddedObjectId + "|" + filename });
+		File.WriteAllBytes(assetsDir + filename, bytes);
 		return filename;
 	}
 
@@ -555,7 +594,7 @@ string GetYamlDataForTOC(List<Document> allDocs)
 	var sb = new StringBuilder();
 	for (int i = 0; i < allDocs.Count; i++)
 	{
-		if (allDocs[i].ShorterHeadline=="hide")
+		if (allDocs[i].ShorterHeadline == "hide")
 			continue;
 		string prefix = new string(' ', allDocs[i].HierarchyLevel * 4);
 		sb.AppendLine(prefix + "- page:");
@@ -591,7 +630,7 @@ class GDocsImage
 {
 	/// warning - this might be different each time you fetch the document
 	public string ContentUrl { get; set; }
-	public string EmbeddedObjectId{get;set;}
+	public string EmbeddedObjectId { get; set; }
 	public override string ToString()
 	{
 		return ContentUrl;
