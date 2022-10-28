@@ -25,10 +25,9 @@
         - page:
           name: Intelligent Machines - seems weird
           url: /arguments/seems-weird
-          pages:
-            - page:
-              name: The world doesn’t change that fast
-              url: /arguments/fast-changes
+        - page:
+          name: The world doesn’t change that fast
+          url: /arguments/fast-changes
         - page:
           name: AI will never be able to have true creativity
           url: /arguments/creativity

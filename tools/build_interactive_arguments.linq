@@ -500,10 +500,12 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			outText.AppendLine($"<div>&#10149; <a href='{prefix}{url}'>{text}</a></div>");
 			nrNavLinksCreated++;
 		}
-		void MakeNavFromDoc(string text, UserQuery.Document dc)
+		void MakeNavFromDoc(string text, UserQuery.Document dc, string urlAppendix="")
 		{
-			MakeNav(text, GetDocumentLink(dc));
+			MakeNav(text, GetDocumentLink(dc)+urlAppendix);
 		}
+
+		outText.AppendLine("<a name='argnav'/>");
 
 		// there are several ways to get links.
 
@@ -540,7 +542,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			var parent = GetParent(outputFiles, of);
 			if (parent == null)
 				throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): " + of.InternalID);
-			MakeNavFromDoc("Go back", parent);
+			MakeNavFromDoc("Go back", parent, "#argnav");
 		}
 
 		MakeNav("Send Feedback", "#feedback");
