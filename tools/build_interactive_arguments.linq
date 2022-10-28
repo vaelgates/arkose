@@ -505,7 +505,10 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			MakeNav(text, GetDocumentLink(dc)+urlAppendix);
 		}
 
+
+
 		outText.AppendLine("<a name='argnav'/>");
+		outText.AppendLine("<br/><br/><br/><!-- temporary fix for issue 19 -->");
 
 		// there are several ways to get links.
 
