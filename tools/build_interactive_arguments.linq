@@ -20,6 +20,10 @@ static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsit
 static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
 static string assetsDir = baseDir + assetsDirRelative;
 static string imageCacheFile = assetsDir + "images.txt";
+static string pageFileExtension = ".html";
+
+static bool VerboseDebugOutput = false;
+
 void Main()
 {
 
@@ -45,7 +49,9 @@ void Main()
 
 	string argumentsYamlFile = baseDir + Path.DirectorySeparatorChar + "_data" + Path.DirectorySeparatorChar + "arguments.yml";
 
-	Regex markdownLinkRgx = new Regex(@"\[([^\]]*?)\]\((.*?)\)");
+	var rgxml = @"\[([^\]]*?)\]\((.*?)\)";
+	Regex markdownLinkNav = new Regex("nav:" + rgxml);
+	Regex markdownLinkRgxWithoutNav = new Regex("(?<!nav:)" + rgxml);
 
 	Directory.CreateDirectory(outputDir);
 
@@ -144,7 +150,8 @@ void Main()
 				}
 				if (txt.Trim() == "")
 					continue;
-				$"Starting new document {txt}".Dump();
+				if (VerboseDebugOutput)
+					$"Starting new document {txt}".Dump();
 				currentDocument = new Document();
 				currentDocument.HierarchyLevel = x - 2;
 				outputFiles.Add(currentDocument);
@@ -190,7 +197,7 @@ void Main()
 				var breadcrumbs = GetBreadcrumbs(outputFiles, currentDocument);
 				currentDocument.JekyllFrontmatter = $@"---
 layout: argument
-title: {"\"" + currentDocument.Headline + "\""}
+title: {"\"" + currentDocument.ShorterHeadline + "\""}
 breadcrumbs: {breadcrumbs}
 ---";
 
@@ -232,16 +239,19 @@ breadcrumbs: {breadcrumbs}
 				if (txt == "")
 					continue;
 
-				txt = txt.Replace("[quote]", "<blockquote>");
 
-				txt = txt.Replace("[/quote]", "</blockquote>");
+				// make sure beginning and ending blockquotes are always on a separate line
+				txt = txt.Replace("[quote]", "\n<blockquote>\n");
+
+				txt = txt.Replace("[/quote]", "\n</blockquote>\n");
 
 				if (currentDocument == null)
 					throw new InvalidOperationException("Error: after #content_begin, there immediately must be the headline");
 
 				if (currentlyBuildingAnImage) // currently building an image --> this text is the caption for one or several preceeding images
 				{
-					$"adding to caption: {txt}".Dump();
+					if (VerboseDebugOutput)
+						$"adding to caption: {txt}".Dump();
 					currentDocument.Content.Last().ImageCaption += HttpUtility.HtmlEncode(txt);
 					imageCaptionBracketCounter += txt.Count(f => f == '(') - txt.Count(f => f == ')');
 				}
@@ -264,7 +274,8 @@ breadcrumbs: {breadcrumbs}
 				// we are constructing an image block consisting of several images
 				currentDocument.Content.Last().ImageUrls.Add(new GDocsImage() { ContentUrl = imageProps.ContentUri, EmbeddedObjectId = el.InlineObjectElement.InlineObjectId });
 
-				("Image at " + imageProps.ContentUri + ", waiting for caption or additional images...").Dump();
+				if (VerboseDebugOutput)
+					("Image at " + imageProps.ContentUri + ", waiting for caption or additional images...").Dump();
 				continue;
 
 
@@ -276,10 +287,54 @@ breadcrumbs: {breadcrumbs}
 	}
 quit:
 
+	(string, string) ProcessMarkdownLink(string title, string url)
+	{
+		if (url.StartsWith("http"))
+		{
+			// external link5
+		}
+		else if (url.StartsWith("/") || url.StartsWith("."))
+		{
+		} // link to a page address
+		else // link to a page title.
+		{
+			var matchingPage = outputFiles.SingleOrDefault(o => o.InternalID.Equals(url, StringComparison.InvariantCultureIgnoreCase));
+			if (matchingPage == null)
+				throw new InvalidOperationException("This page was mentioned in a link but not found: " + url);
+			url = "./" + matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
+			if (title == "")
+				title = matchingPage.Headline;
+		}
 
+		if (title == "")
+			throw new InvalidOperationException("This link has an empty title. Empty titles are only okay when you link to a page title.");
+		return (title, url);
+
+	}
+	string MakeMarkdownLink(string title, string url)
+	{
+		url = url.Trim();
+		title = title.Trim();
+		var attributes = "";
+		if (url.StartsWith("http")) //--> external link
+			attributes = "target='_blank'";
+
+		(title, url) = ProcessMarkdownLink(title, url);
+
+
+		return $"<a href='{url}' {attributes}>{title}</a>";
+	}
 	string ConvertMarkdownLinksToHtml(string input)
 	{
-		return markdownLinkRgx.Replace(input, "<a href='$2'>$1</a>");
+
+		return (markdownLinkRgxWithoutNav).Replace(input, match =>
+	   {
+		   string attributes = "";
+
+		   return MakeMarkdownLink(match.Groups[1].Value, match.Groups[2].Value);
+
+	   }
+		);
 	}
 
 	#region output
@@ -293,6 +348,7 @@ quit:
 		{
 			var thisParagraph = of.Content[i];
 
+if (VerboseDebugOutput)
 			thisParagraph.Dump();
 
 
@@ -336,17 +392,23 @@ quit:
 				// have everything enclosed in DIVs that
 				// 	> is not a bulletpoint
 				//  > is not a beginmarker or endmarker of a textblock
-				
-		
+
+
 
 
 
 				var trim = thisParagraph.HtmlText;
-				if (!trim.StartsWith("[") && !trim.EndsWith("]"))
+				if (!trim.StartsWith("[") && !trim.EndsWith("]") && !trim.Contains("blockquote>"))
 				{
 					prefix = "<div>";
 					postfix = "</div>";
 					previousBulletLevel = null;
+				}
+				if (trim.StartsWith("q:")) // a question to the reader
+				{
+					prefix = "<div><em>";
+					postfix = "</em></div>";
+					thisParagraph.HtmlText = EverythingAfter(thisParagraph.HtmlText, "q:");
 				}
 			}
 
@@ -381,62 +443,98 @@ quit:
 
 			}
 			else // write a text block
-			{
-				if (thisParagraph.HtmlText.Contains("ResearcherSurvey"))
-					"dbg".Dump();
-				var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
-				
-				
+			{var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
+
+
 				// prefix must come after other html tags that might be used to start the line.
 				// find the first character thats not whitespace or a html tag:
-				int firstCharacterThatsNotTags=0;
-				bool inTag=false;
+				int firstCharacterThatsNotTags = 0;
+				bool inTag = false;
 				for (int j = 0; j < conv.Length; j++)
 				{
-					if (conv[j]==' ')
+					if (conv[j] == ' ')
 						continue;
-					if (conv[j]=='<' || conv[j]=='[')
-						inTag=true;
-					if (conv[j]=='>' || conv[j]=='>')
+					if (conv[j] == '<' || conv[j] == '[')
+						inTag = true;
+					if (conv[j] == '>' || conv[j] == ']')
+					{
 						inTag = false;
+						continue;
+					}
 					if (!inTag)
 					{
-						firstCharacterThatsNotTags = j+1;
+						firstCharacterThatsNotTags = j;
 						break;
 					}
 				}
-				conv=conv.Insert(firstCharacterThatsNotTags, prefix);
-				if (conv.Contains("technology-mishaps"))
-				{
-					
-				}
+				conv = conv.Insert(firstCharacterThatsNotTags, prefix);
 				outText.AppendLine(conv + postfix);
 			}
 		}
 
 		#region navigation to the children
-		string MakeNav(string text, string url)
+		int nrNavLinksCreated = 0;
+		bool weAlreadyHadAFeedbackLink = false;
+		void MakeNav(string text, string url)
 		{
-			return $"<div><a href='{{site.baseurl}}{url}'>{text}</a></div>";
-
+			if (url == "#feedback")
+			{
+				if (weAlreadyHadAFeedbackLink)
+					return;
+				weAlreadyHadAFeedbackLink = true;
+			}
+			string prefix="";
+			if (!url.StartsWith("#"))
+			prefix="{{site.baseurl}}"; 
+			outText.AppendLine($"<div>&#10149; <a href='{prefix}{url}'>{text}</a></div>");
+			nrNavLinksCreated++;
 		}
 
+		// there are several ways to get links.
+
+		// Option 1: Children get a link automatically.
 		foreach (var child in GetChildren(outputFiles, of))
-			outText.AppendLine(MakeNav(child.Headline, MakeUrl(child)));
+			MakeNav(child.Headline, MakeUrl(child));
 
-
+		// Option 2: linking to the next major-level argument. This is not useful.
 		//if (of.HierarchyLevel == 0)
 		//{
 		//	var next = GetNextSiblingOrNull(outputFiles, of);
 		//	if (next != null)
 		//		outText.AppendLine(MakeNav(next.Headline, MakeUrl(next)));
 		//}
-		MakeNav("I don't agree with this - Send Feedback", "#feedback");
+
+
+		// Option 3: Make a normal markdown link but prepend it with "nav:"
+
+		List<Match> navMatches = markdownLinkNav.Matches(outText.ToString()).Cast<Match>().ToList();
+
+		foreach (var nm in navMatches)
+		{
+			string title, url;
+			(title, url) = ProcessMarkdownLink(nm.Groups[1].Value, nm.Groups[2].Value);
+			MakeNav(title, url);
+		}
+
+
+
+
+		if (nrNavLinksCreated == 0)
+		{
+			("No outgoing links at " + of.FilenameWithoutPathOrExtension + " - creating link back to parent").Dump();
+			var parent = GetParent(outputFiles, of);
+			if (parent==null)
+				throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): "+of.InternalID);
+			MakeNav("Go back",parent.InternalID); 
+		}
+
+
+		MakeNav("Send Feedback", "#feedback");
 		#endregion
 
 
 
-		of.OutLines = outText.ToString();
+		of.OutLines = markdownLinkNav.Replace(outText.ToString(), "");
 
 
 	}
@@ -446,8 +544,6 @@ quit:
 																						// part 1: capture
 	foreach (var of in outputFiles)
 	{
-		if (of.FilenameWithoutPathOrExtension.Contains("ooner"))
-			"dbg break".Dump();
 		foreach (Match match in textblockRegex.Matches(of.OutLines))
 		{
 			if (match.Groups[2].Value == "ResearcherSurvey")
@@ -478,8 +574,8 @@ quit:
 	foreach (var of in outputFiles)
 	{
 		if (of.OutLines.Contains("<blockquote>"))
-			of.OutLines = Regex.Replace(of.OutLines, @"<blockquote>([^<]*?)\</blockquote>", 
-			x=>Regex.Replace(x.Value, @"\(.*\)", ""));
+			of.OutLines = Regex.Replace(of.OutLines, @"<blockquote>([\S\s]*?)\<\/blockquote>",
+			x => Regex.Replace(x.Value, @"\(.*\)", ""));
 	}
 
 	#endregion
@@ -488,7 +584,7 @@ quit:
 	{
 
 		("Writing file " + of.FilenameWithoutPathOrExtension).Dump();
-		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + ".html", of.JekyllFrontmatter + "\n" + of.OutLines);
+		File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + pageFileExtension, of.JekyllFrontmatter + "\n" + of.OutLines);
 
 	}
 
@@ -503,6 +599,14 @@ quit:
 	//proc.WaitForExit();
 	//if (proc.ExitCode!=0)
 	//	throw new InvalidOperationException("Jekyll build failed");
+}
+
+Document GetParent(List<Document> outputFiles, Document of)
+{
+	for (int i=outputFiles.IndexOf(of); i>=0; i--)
+	if (outputFiles[i].HierarchyLevel==of.HierarchyLevel-1)
+		return outputFiles[i];
+		return null;
 }
 
 string RemoveDoubleOccurences(char thingThatmustNotOccurDoubly, string sentence)
