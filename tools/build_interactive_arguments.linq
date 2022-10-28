@@ -349,6 +349,13 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 
 		int? previousBulletLevel = null;
 		Stack<string> listTags = new Stack<string>();
+
+		void CloseList()
+		{
+
+			outText.Append(listTags.Pop().Replace("<", "</"));
+		}
+		#region loop over paragraphs
 		for (int i = 0; i < of.Content.Count; i++)
 		{
 			var thisParagraph = of.Content[i];
@@ -360,11 +367,6 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			thisParagraph.HtmlText = thisParagraph.HtmlText.Replace(new string(new[] { (char)0x0B }), "<br/>"); // 0x0b (line tabulation) is used to make line breaks without creating a new paragraph
 
 
-			void CloseList()
-			{
-
-				outText.Append(listTags.Pop().Replace("<", "</"));
-			}
 
 			if (thisParagraph.BulletLevel == null && previousBulletLevel != null) // close all lists
 				while (listTags.Any())
@@ -428,6 +430,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 
 				if (!thisParagraph.ImageCaption.StartsWith("(") || !thisParagraph.ImageCaption.EndsWith(")"))
 					ExitAndComplainAboutImageCaption(thisParagraph.ImageUrls);
+					img.Append(prefix);
 				img.Append(@"<figure>");
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 				{
@@ -441,7 +444,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 				capt = capt.Remove(capt.Length - 1, 1);
 				capt = ConvertMarkdownLinksToHtml(capt);
 				img.Append("<figcaption markdown='1'>" + capt + "\n</figcaption></figure>"); // gotta add \n before </figcaption> otherwise "figcaption" is taken as a code block.
-
+				img.Append(postfix);
 				outText.AppendLine(img.ToString());
 				// to reference local, use {% link assets/images/palm.png %}
 				// known deficiency: we dont generate alt texts
@@ -477,6 +480,10 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 				outText.AppendLine(conv + postfix);
 			}
 		}
+		#endregion
+		
+		while (listTags.Any())
+			CloseList();
 
 		#region navigation to the children
 		int nrNavLinksCreated = 0;

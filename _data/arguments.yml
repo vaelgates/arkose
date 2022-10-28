@@ -12,6 +12,9 @@
         - page:
           name: Why these systems might come soon
           url: /arguments/agisooner
+        - page:
+          name: Moving on to potential risks
+          url: /arguments/goto-potential-risk
     - page:
       name: Never
       url: /arguments/never
