@@ -287,6 +287,11 @@ breadcrumbs: {breadcrumbs}
 	}
 quit:
 
+
+	string GetDocumentLink(Document matchingPage)
+	{
+return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
+	}
 	(string, string) ProcessMarkdownLink(string title, string url)
 	{
 		if (url.StartsWith("http"))
@@ -301,7 +306,7 @@ quit:
 			var matchingPage = outputFiles.SingleOrDefault(o => o.InternalID.Equals(url, StringComparison.InvariantCultureIgnoreCase));
 			if (matchingPage == null)
 				throw new InvalidOperationException("This page was mentioned in a link but not found: " + url);
-			url = "./" + matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
+			url = GetDocumentLink(matchingPage);
 			if (title == "")
 				title = matchingPage.Headline;
 		}
@@ -348,8 +353,8 @@ quit:
 		{
 			var thisParagraph = of.Content[i];
 
-if (VerboseDebugOutput)
-			thisParagraph.Dump();
+			if (VerboseDebugOutput)
+				thisParagraph.Dump();
 
 
 			thisParagraph.HtmlText = thisParagraph.HtmlText.Replace(new string(new[] { (char)0x0B }), "<br/>"); // 0x0b (line tabulation) is used to make line breaks without creating a new paragraph
@@ -443,7 +448,8 @@ if (VerboseDebugOutput)
 
 			}
 			else // write a text block
-			{var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
+			{
+				var conv = ConvertMarkdownLinksToHtml(thisParagraph.HtmlText);
 
 
 				// prefix must come after other html tags that might be used to start the line.
@@ -483,11 +489,13 @@ if (VerboseDebugOutput)
 					return;
 				weAlreadyHadAFeedbackLink = true;
 			}
-			string prefix="";
-			if (!url.StartsWith("#"))
-			prefix="{{site.baseurl}}"; 
+			string prefix = "";
 			outText.AppendLine($"<div>&#10149; <a href='{prefix}{url}'>{text}</a></div>");
 			nrNavLinksCreated++;
+		}
+		void MakeNavFromDoc(string text, UserQuery.Document dc)
+		{
+			MakeNav(text, GetDocumentLink(dc));
 		}
 
 		// there are several ways to get links.
@@ -523,11 +531,10 @@ if (VerboseDebugOutput)
 		{
 			("No outgoing links at " + of.FilenameWithoutPathOrExtension + " - creating link back to parent").Dump();
 			var parent = GetParent(outputFiles, of);
-			if (parent==null)
-				throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): "+of.InternalID);
-			MakeNav("Go back",parent.InternalID); 
+			if (parent == null)
+				throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): " + of.InternalID);
+			MakeNavFromDoc("Go back", parent);
 		}
-
 
 		MakeNav("Send Feedback", "#feedback");
 		#endregion
@@ -603,10 +610,10 @@ if (VerboseDebugOutput)
 
 Document GetParent(List<Document> outputFiles, Document of)
 {
-	for (int i=outputFiles.IndexOf(of); i>=0; i--)
-	if (outputFiles[i].HierarchyLevel==of.HierarchyLevel-1)
-		return outputFiles[i];
-		return null;
+	for (int i = outputFiles.IndexOf(of); i >= 0; i--)
+		if (outputFiles[i].HierarchyLevel == of.HierarchyLevel - 1)
+			return outputFiles[i];
+	return null;
 }
 
 string RemoveDoubleOccurences(char thingThatmustNotOccurDoubly, string sentence)
@@ -658,7 +665,7 @@ string GetMD5(byte[] data)
 
 string MakeUrl(Document child)
 {
-	return "/" + folderInWebsite + "/" + child.FilenameWithoutPathOrExtension + ".html";
+	return child.FilenameWithoutPathOrExtension + pageFileExtension;
 }
 
 List<Document> GetChildren(List<Document> outputFiles, Document x)
