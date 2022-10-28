@@ -290,7 +290,7 @@ quit:
 
 	string GetDocumentLink(Document matchingPage)
 	{
-return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
+		return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 	}
 	(string, string) ProcessMarkdownLink(string title, string url)
 	{
@@ -355,6 +355,16 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 
 			outText.Append(listTags.Pop().Replace("<", "</"));
 		}
+		bool argnavWritten = false;
+		void WriteNavAnchor()
+		{
+			if (!argnavWritten)
+			{
+				outText.AppendLine("<a name='argnav'/>");
+				outText.AppendLine("<br/><br/><br/><!-- temporary fix for issue 19 -->")
+				argnavWritten = true;
+			}
+		}
 		#region loop over paragraphs
 		for (int i = 0; i < of.Content.Count; i++)
 		{
@@ -413,6 +423,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 				}
 				if (trim.StartsWith("q:")) // a question to the reader
 				{
+					WriteNavAnchor();
 					prefix = "<div><em>";
 					postfix = "</em></div>";
 					thisParagraph.HtmlText = EverythingAfter(thisParagraph.HtmlText, "q:");
@@ -430,7 +441,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 
 				if (!thisParagraph.ImageCaption.StartsWith("(") || !thisParagraph.ImageCaption.EndsWith(")"))
 					ExitAndComplainAboutImageCaption(thisParagraph.ImageUrls);
-					img.Append(prefix);
+				img.Append(prefix);
 				img.Append(@"<figure>");
 				foreach (var imageUrl in thisParagraph.ImageUrls)
 				{
@@ -481,14 +492,14 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			}
 		}
 		#endregion
-		
+
 		while (listTags.Any())
 			CloseList();
 
 		#region navigation to the children
 		int nrNavLinksCreated = 0;
 		bool weAlreadyHadAFeedbackLink = false;
-		void MakeNav(string text, string url)
+		void MakeNav(string text, string url, string icon = "&#10149;")
 		{
 			if (url == "#feedback")
 			{
@@ -497,18 +508,16 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 				weAlreadyHadAFeedbackLink = true;
 			}
 			string prefix = "";
-			outText.AppendLine($"<div>&#10149; <a href='{prefix}{url}'>{text}</a></div>");
+			outText.AppendLine($"<div>{icon} <a href='{prefix}{url}'>{text}</a></div>");
 			nrNavLinksCreated++;
 		}
-		void MakeNavFromDoc(string text, UserQuery.Document dc, string urlAppendix="")
+		void MakeNavFromDoc(string text, UserQuery.Document dc, string urlAppendix = "")
 		{
-			MakeNav(text, GetDocumentLink(dc)+urlAppendix);
+			MakeNav(text, GetDocumentLink(dc) + urlAppendix);
 		}
 
 
-
-		outText.AppendLine("<a name='argnav'/>");
-		outText.AppendLine("<br/><br/><br/><!-- temporary fix for issue 19 -->");
+		WriteNavAnchor();
 
 		// there are several ways to get links.
 
@@ -548,7 +557,7 @@ return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
 			MakeNavFromDoc("Go back", parent, "#argnav");
 		}
 
-		MakeNav("Send Feedback", "#feedback");
+		MakeNav("Send Feedback", "#feedback", "&#9993;");
 		#endregion
 
 
