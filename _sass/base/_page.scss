@@ -16,6 +16,10 @@
 			-ms-overflow-style: scrollbar;
 		}
 
+		html {
+			scroll-padding-top: 3.5em;
+		}
+
 	// Ensures page width is always >=320px.
 		@include breakpoint(xsmall) {
 			html, body {
