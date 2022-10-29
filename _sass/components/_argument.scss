@@ -35,6 +35,13 @@
   display: none;
 }
 
+.allow-forward-argument-links-controls {
+  display: none;
+  background-color: #faa;
+  font-weight: bold;
+  text-align: center;
+}
+
 /* Left sidebar argument tree code, disabled for now */
 /*
 .argument-tree {

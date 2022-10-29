@@ -24,8 +24,11 @@
     <section class="argument-section">
 		
       <div class="argument-tree">
-		<h2>Table of Contents</h2>
-		<p>Please note: This guide is meant to be read from the beginning. You can only navigate backwards, not forwards.</p>
+        <h2>Table of Contents</h2>
+        <p>Please note: This guide is meant to be read from the beginning. You can only navigate backwards, not forwards.</p>
+        <p class="allow-forward-argument-links-controls">
+          OVERRIDE: all links are enabled for testing. <a href="?unoverride=1">Click to disable link override</a>.
+        </p>
         {% assign argument_index = 0 %}
         {% assign page_argument_index = -1 %}
         {% assign arguments = site.data.arguments %}
@@ -89,13 +92,19 @@
   let queryString = window.location.search;
   let urlParams = new URLSearchParams(queryString);
 
-  if (urlParams.get('override')) {
+  if (urlParams.get('unoverride')) {
+    localStorage.setItem('allowForwardArgumentLinks', false)
+  }
+
+  if (urlParams.get('override') || localStorage.getItem('allowForwardArgumentLinks') === 'true') {
     document.querySelectorAll('.inaccessible-argument').forEach((el) => {
       el.style.display = 'none';
     })
     document.querySelectorAll('.hidden-inaccessible-argument-link').forEach((el) => {
       el.style.display = 'inline';
     })
+    localStorage.setItem('allowForwardArgumentLinks', true)
+    document.querySelector('.allow-forward-argument-links-controls').style.display = 'block';
   } else {
     document.querySelectorAll('.inaccessible-argument').forEach((el) => {
       if (argNodeHistory.includes(el.attributes['data-href'].value)) {
