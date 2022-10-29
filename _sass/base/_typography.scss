@@ -217,3 +217,11 @@
 	.align-right {
 		text-align: right;
 	}
+
+	ul {
+		list-style-type: square;
+	}
+
+	ul ul {
+		list-style-type: circle;
+	}
