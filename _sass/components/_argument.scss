@@ -78,7 +78,15 @@
   margin: 0 auto;
   max-width: 50rem;
   width: calc(100% - 6em);
-  border-top: solid 1px var(--color-border);
+  border: solid 1px var(--color-border);
+  background-color: var(--color-border-bg);
+  padding: 1em;
+  > ul {
+    padding-left: 0;
+    > li {
+      padding-left: 0;
+    }
+  }
   li {
     list-style-type: none;
     &.active {
