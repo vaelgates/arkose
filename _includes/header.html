@@ -17,7 +17,9 @@
 							<li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
 					{% endif %}
 			{% endfor %}
-			<a id="theme-toggle" onclick="modeSwitcher()"></a>
+			<li class="theme-toggle-container">
+				<a id="theme-toggle" onclick="modeSwitcher()">&nbsp;</a>
+			</li>
 		</ul>
 	</nav>	
 </header>
