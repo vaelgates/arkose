@@ -125,11 +125,14 @@
       name: I’m not convinced this is urgent now
       url: /arguments/not-urgent-currently
     - page:
-      name: Lets build AI and then worry about safety later
-      url: /arguments/lets-build-ai-and-then-worry-about-safety-later
+      name: Lets build AI, worry about safety later
+      url: /arguments/lets-build-worry-later
     - page:
       name: Alignment is easy - This will definitely be solved in time
       url: /arguments/alignment-is-easy-this-will-definitely-be-solved-in-time
     - page:
       name: I don’t see how current safety work is useful
       url: /arguments/not-currently-tractable
+- page:
+  name: Conclusion
+  url: /arguments/conclusion
