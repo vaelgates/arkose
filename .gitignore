@@ -1,5 +1,7 @@
 _site/
 .sass-cache/
+.vscode/
+tools/.byebug_history
 .jekyll-metadata
 Gemfile.lock
 *.gem

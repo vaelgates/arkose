@@ -1,0 +1,27 @@
+<div class="page-data" data-page-title="Index"></div>
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html data-theme="light">
+
+{% include head.html %}
+
+<body>
+  <script type="text/javascript">document.body.classList.add("is-loading");</script>
+
+  {% include header.html %}
+
+  <!-- Main -->
+  <div id="main" class="alt argument">
+    <div class="site-section-header">
+      <div class="inner ptb0">
+        <h2>ARGUMENTS</h2>
+      </div>
+    </div>
+    <section class="top-map">
+      {% for argument in site.data.arguments %}
+        {% assign decoded_page_url = page.url | url_decode %}
+        <div class="top-argument-container {% if argument.url == decoded_page_url %}active{% endif %}">

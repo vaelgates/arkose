@@ -1,0 +1,15 @@
+<div class="argument-container">
+  <a class="argument-shape-link {% if sub_argument.url == decoded_page_url %}active{% endif %}" href="{{site.baseurl}}{{sub_argument.url}}" data-url="{{site.baseurl}}{{sub_argument.url}}">
+    <i class="icon fa-square argument-shape"></i>
+    <span class="argument-title">{{sub_argument.name}}</span>
+  </a>
+  {% if sub_argument.pages.size > 0 %}
+    <div class="sub-sub-argument">
+      {% for sub_argument in sub_argument.pages %}
+        {% unless sub_argument.listInTree == false %}
+          {% include argument_symbol.html %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

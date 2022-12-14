@@ -1,119 +1,82 @@
 <!DOCTYPE html>
 <!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html data-theme="light">
+Forty by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><html data-theme="light">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
-  <script type="text/javascript">document.body.classList.add("is-loading");</script>
+    <body>
+    <script type="text/javascript">
+      document.body.classList.add("is-loading");
+    </script>
 
-  {% include header.html %}
-      
-  <!-- Main -->
-  <div id="main" class="alt argument">
-    <div class="site-section-header">
-      <div class="inner ptb0">
-        <h2>ARGUMENTS</h2>
+    {% include header.html %}
+
+    <!-- Main -->
+    <div id="main" class="alt argument">
+      <div class="site-section-header">
+        <div class="inner ptb0">
+          <h2>ARGUMENTS</h2>
+        </div>
+      </div>
+      <div class="argument-content">
+        <section class="top-map">
+          {% for argument in site.data.arguments %}
+            {% assign decoded_page_url = page.url | url_decode %}
+            <div class="top-argument-container {% if argument.url == decoded_page_url %}active{% endif %}">
+              <a class="top-argument" href="{{site.baseurl}}{{argument.url}}" data-url="{{site.baseurl}}{{argument.url}}">
+                {{ argument.name }}
+              </a>
+              <div class="argument-list">
+                {% assign argument_index = argument_index | plus:1 %}
+                {% if decoded_page_url == argument.url %}
+                  {% assign page_argument_index = argument_index %}
+                {% endif %}
+                {% assign sub_argument_index = 0 %}
+                {% if argument.pages.size > 0 %}
+                  {% assign arguments = argument.pages %}
+                  {% for sub_argument in arguments %}
+                    {% include argument_symbol.html %}
+                    {% assign sub_argument_index = sub_argument_index | plus:1 %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </section>
+        <!-- One -->
+        <section class="argument-section" id="argument_section">
+          <div class="inner">
+            <header class="major">
+              <h1 class="page-title"></h1>
+            </header>
+            <div class="page-content"></div>
+          </div>
+        </section>
+        <section id="feedbackContainer">
+          <div class="inner">
+            &#9993; <a id="feedback_button" class="feedback-button" href='#feedback'>Send Feedback</a>
+            <div id="feedback">
+              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="n-MxRzQ7okuhyer9lfH0mw" data-form="2"></script>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-    <!-- One -->
-    <section class="argument-section">
-		
-      <div class="argument-tree">
-        <h2>Table of Contents</h2>
-        <p>Please note: This guide is meant to be read from the beginning. You can only navigate backwards, not forwards.</p>
-        <p class="allow-forward-argument-links-controls">
-          OVERRIDE: all links are enabled for testing. <a href="?unoverride=1">Click to disable link override</a>.
-        </p>
-        {% assign argument_index = 0 %}
-        {% assign page_argument_index = -1 %}
-        {% assign arguments = site.data.arguments %}
-        {% include argument_item.html %}
-      </div>
-      <div class="inner">
-        <div class="breadcrumbs">
-          You are here:
-          {% assign breadcrumb_list = page.breadcrumbs | split: ',' %}
-          {% for breadcrumb in breadcrumb_list %}
-            {% assign text = breadcrumb | split: ':' | first %}
-            {% assign url = breadcrumb | split: ':' | last %}
-            <a href="{{url}}">{{ text }}</a>
-            <span class="breadcrumb-delimiter">/</span>
-          {% endfor %}
-        </div>
-        <header class="major">
-          <h1>{{ page.title }}</h1>
-        </header>
-    
-      {{ content }}
-      </div>
-    </section>
-    <section id="feedback">
-		<h2>Send Feedback</h2>
-      <div class="inner" style="text-align: center">
-        
-		<em>Please <a href="mailto:lukas+aird@fwsim.com">send feedback to Lukas@fwsim.com</a></em>. <!-- waiting for cognito forms email redirect to my address, so putting this here in the meantime so that betatester feedback will reach me -->
-		<div style="display:none;">
-		<script src="https://www.cognitoforms.com/f/seamless.js" data-key="n-MxRzQ7okuhyer9lfH0mw" data-form="2"></script>
-		</div>
-      </div>
-	  
-	  
-    </section>
-  </div>
 
-  {% include footer.html %}
-</body>
+    {% include footer.html %}
+    <script src="{{ "assets/js/arguments.js" | absolute_url }}"></script>
+  </body>
 
 <script>
-  $('a[href="#feedback"]').on('click', () => {
-    $('#feedback').show();
-    window.setTimeout(() => {
-      window.history.replaceState({}, '', '{{url}}');
-    },1)
-  })
+  window.site_baseurl = '{{site.baseurl}}'
+  window.url = '{{page.url}}'
+  window.argumentPages = [{% for argument in site.data.arguments %}
+    {% include argument_page.js %}
+  {% endfor %}]
 
-  if (window.location.host === 'localhost:4000' || window.location.host === '127.0.0.1:4000') {
-    console.log(argNodeHistory);
-  }
-
-  Cognito.prefill({
-    "CurrentURL": window.location.pathname,
-    "NodeHistory": argNodeHistory.join(', '),
-    "LandingPath": localStorage.getItem('LandingPath'),
-    "sParam": localStorage.getItem('sParam'),
-    "Referrer": localStorage.getItem('Referrer')
-  });
-
-  let queryString = window.location.search;
-  let urlParams = new URLSearchParams(queryString);
-
-  if (urlParams.get('unoverride')) {
-    localStorage.setItem('allowForwardArgumentLinks', false)
-  }
-
-  if (urlParams.get('override') || localStorage.getItem('allowForwardArgumentLinks') === 'true') {
-    document.querySelectorAll('.inaccessible-argument').forEach((el) => {
-      el.style.display = 'none';
-    })
-    document.querySelectorAll('.hidden-inaccessible-argument-link').forEach((el) => {
-      el.style.display = 'inline';
-    })
-    localStorage.setItem('allowForwardArgumentLinks', true)
-    document.querySelector('.allow-forward-argument-links-controls').style.display = 'block';
-  } else {
-    document.querySelectorAll('.inaccessible-argument').forEach((el) => {
-      if (argNodeHistory.includes(el.attributes['data-href'].value)) {
-        el.style.display = 'none';
-        const linkEl = document.querySelector(`a[href='${el.attributes['data-href'].value}']`);
-        if (linkEl) linkEl.style.display = 'inline';
-      }
-    })
-  }
-
+  initPage()
 </script>
 </html>

@@ -391,20 +391,24 @@ let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
 // let theme = sessionStorage.getItem('theme');
 
 if (systemInitiatedDark.matches) {
-	document.getElementById("theme-toggle").innerHTML = "Light Mode";
+	$(".theme-toggle").addClass("dark");
+	$(".theme-toggle").removeClass("light");
 } else {
-	document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+	$(".theme-toggle").addClass("light");
+	$(".theme-toggle").removeClass("dark");
 }
 
 function prefersColorTest(systemInitiatedDark) {
 	if (systemInitiatedDark.matches) {
 		document.documentElement.setAttribute('data-theme', 'dark');		
-		document.getElementById("theme-toggle").innerHTML = "Light Mode";
+		$(".theme-toggle").addClass("dark");
+		$(".theme-toggle").removeClass("light");
 		// this clears the session storage 
 		sessionStorage.setItem('theme', '');
 	} else {
 		document.documentElement.setAttribute('data-theme', 'light');
-		document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+		$(".theme-toggle").addClass("light");
+	$(".theme-toggle").removeClass("dark");
 		sessionStorage.setItem('theme', '');
 	}
 }
@@ -417,33 +421,39 @@ function modeSwitcher() {
 	if (theme === "dark") {
 		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
-		document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+		$(".theme-toggle").addClass("light");
+	$(".theme-toggle").removeClass("dark");
 		// checks if reader selected light mode 
 	}	else if (theme === "light") {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('theme', 'dark');
-		document.getElementById("theme-toggle").innerHTML = "Light Mode";
+		$(".theme-toggle").addClass("dark");
+		$(".theme-toggle").removeClass("light");
 		// checks if system set dark mode 
 	} else if (systemInitiatedDark.matches) {	
 		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
-		document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+		$(".theme-toggle").addClass("light");
+	$(".theme-toggle").removeClass("dark");
 		// the only option left is system set light mode
 	} else {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('theme', 'dark');
-		document.getElementById("theme-toggle").innerHTML = "Light Mode";
+		$(".theme-toggle").addClass("dark");
+		$(".theme-toggle").removeClass("light");
 	}
 }
 
 if (theme === "dark") {
 	document.documentElement.setAttribute('data-theme', 'dark');
 	sessionStorage.setItem('theme', 'dark');
-	document.getElementById("theme-toggle").innerHTML = "Light Mode";
+	$(".theme-toggle").addClass("dark");
+	$(".theme-toggle").removeClass("light");
 } else if (theme === "light") {
 	document.documentElement.setAttribute('data-theme', 'light');
 	sessionStorage.setItem('theme', 'light');
-	document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+	$(".theme-toggle").addClass("light");
+	$(".theme-toggle").removeClass("dark");
 }
 
 // Add this page to the list of visited URLs on this site so it can be
