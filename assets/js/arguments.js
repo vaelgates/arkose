@@ -432,7 +432,7 @@ function initPage() {
   $('.top-argument, .argument-shape-link').on('click', (event) => {
     event.preventDefault();
     const path = $(event.currentTarget).data('url');
-    getHtml(path);
+    getHtml(path, true, true);
   })
 
   // Because we're messing with the address with window.history.pushState, when the user clicks the Back

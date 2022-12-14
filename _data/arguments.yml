@@ -79,7 +79,6 @@
           text: Yes, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
           url: /arguments/the-alignment-problem
           listInTree: false
-          agreeTargetUrl: /arguments/within-50-years
 - page:
   name: The Alignment Problem
   url: /arguments/the-alignment-problem
