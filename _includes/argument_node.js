@@ -10,7 +10,7 @@
   {% if argument.answerLinkUrl != nil %}answerLinkUrl : `{{argument.answerLinkUrl}}`,{% endif -%}
   {% if argument.nodeLinkUrl != nil %}nodeLinkUrl : `{{argument.nodeLinkUrl}}`,{% endif -%}
   {% if argument.agreeTargetUrl != nil %}agreeTargetUrl : `{{argument.agreeTargetUrl}}`,{% endif -%}
-  {% if argument.askQuestion != nil %}askQuestion : `{{argument.askQuestion}}`,{% endif -%}
+  {% if argument.askQuestion != nil %}askQuestion : {{argument.askQuestion}},{% endif -%}
   {% if argument.overridesSiblings != nil %}overridesSiblings : {{argument.overridesSiblings}},{% endif -%}
   {% if argument.listInTree != nil %}listInTree : {{argument.listInTree}},{% endif -%}
   {% if argument.question != nil %}question : `{{argument.question}}`,{% endif -%}
