@@ -20,6 +20,7 @@
         - node:
           name: Why these systems might come soon
           text: Yes, I would like to hear these arguments for why AGI might come soon
+          effect: none
           url: /arguments/agisooner
           overridesSiblings: true
         - node:

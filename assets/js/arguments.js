@@ -320,8 +320,9 @@ function getArgumentRoot(argumentToFind) {
 
 function updateSubSubArgumentVisibility() {
   for (const subSection of $('.sub-sub-argument')) {
-    const subNodesDisagreed = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
-    if (subNodesDisagreed > 0) {
+    let subNodesNotable = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
+    subNodesNotable += $(subSection).siblings('.argument-shape-link.agree, .argument-shape-link.disagree').length
+    if (subNodesNotable > 0) {
       $(subSection).show()
     } else {
       $(subSection).hide()

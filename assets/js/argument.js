@@ -61,8 +61,8 @@ class Argument {
     this.colorSelfNode()
     
     if (propagateFurther) {
-      this.overrideSiblingsIfNeeded(agreement)
-      if (agreement !== 'none') this.propagateUp()
+      if (agreement !== 'undecided') this.overrideSiblingsIfNeeded(agreement)
+      if (this.effect !== 'none') this.propagateUp(agreement)
     }
     const checkboxes = $(`input[data-url='${this.url}']`)
     for (const checkbox of checkboxes) {
@@ -82,7 +82,6 @@ class Argument {
     Argument.updateLinkSectionVisibility()
   }
 
-  
   getAgreement() {
     if (this.agreeTargetUrl) {
       const canonicalArgument = Argument.findArgumentByPath(this.args, this.agreeTargetUrl)
@@ -139,9 +138,9 @@ class Argument {
     const argNodes = $(`a[data-url='${fullUrl}']`)
 
     for (const node of argNodes) {
-      if (!$(node).data('effect') || $(node).data('effect') == this.agreement) {
+      if (!$(node).data('effect') || $(node).data('effect') == this.getAgreement()) {
         $(node).removeClass(['agree', 'disagree', 'none'])
-        $(node).addClass(this.agreement)
+        $(node).addClass(this.getAgreement())
       } else {
         $(node).removeClass(['agree', 'disagree', 'none'])
       }
@@ -149,21 +148,29 @@ class Argument {
   }
 
   siblingsAgreement() {
-    return this.parent.subArguments.reduce(
+    let siblingArguments
+    if (this.parent.delegateCheckboxes) {
+      siblingArguments = this.parent.parent.checkboxArguments()
+    } else {
+      siblingArguments = this.parent.checkboxArguments()
+    }
+    return siblingArguments.reduce(
       (agreement, argument) => {
         if (agreement === 'conflict') return 'conflict'
-        if (agreement === 'agree' && argument.agreement === 'disagree') return 'conflict'
-        if (agreement === 'disagree' && argument.agreement === 'agree') return 'conflict'
-        return argument.agreement || agreement
+        if (agreement === 'agree' && argument.getAgreement() === 'disagree') return 'conflict'
+        if (agreement === 'disagree' && argument.getAgreement() === 'agree') return 'conflict'
+        return argument.getAgreement() || agreement
       }, 'undecided')
   }
 
-  propagateUp() {
+  propagateUp(agreement) {
     if (!this.parent) return
 
     const siblingsAgreement = this.siblingsAgreement()
+    if (agreement === 'undecided' && this.parent?.parent?.effect === 'calculated' && siblingsAgreement === 'conflict') return
     if (this.parent.effect === 'calculated' || this.parent.effect === siblingsAgreement) {
-      this.parent.setAgreement(siblingsAgreement)
+      const parentAgreement = siblingsAgreement === 'conflict' ? 'undecided' : siblingsAgreement
+      this.parent.setAgreement(parentAgreement)
     } else if (this.parent.effect === 'disagree' && siblingsAgreement === 'conflict') {
       this.parent.setAgreement('disagree')
     } else {
