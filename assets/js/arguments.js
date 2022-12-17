@@ -368,7 +368,7 @@ function initPage() {
 
   $(window).on('scroll resize', () => {
     const y = window.scrollY;
-    if (y > $('.argument-section')[0].offsetTop) {
+    if (y + $('#header')[0].clientHeight > $('.argument-section')[0].offsetTop) {
       $('.argument-branch-sidebar').fadeIn()
     } else {
       $('.argument-branch-sidebar').fadeOut()
