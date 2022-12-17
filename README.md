@@ -12,64 +12,110 @@ Metadata about the arguments is stored in `_data/arguments.yml`, which is explai
 
 The content for arguments is stored as Jekyll pages in `/arguments/`. The argument system actually loads the arguments with AJAX calls, not requiring a page load when new arguments are loaded, and for this reason the HTML of the arguments is *also* kept as files in `/assets/html/arguments/`. Arguments in the latter place should not be edited directly! The Jekyll pages in `/arguments/` are the canonical versions of the argument pages, so update them there, then run the Ruby script `/tools/move_arguments.rb`, which copies the HTML (also interpreting some Jekyll variables) to the /assets/html/arguments/ directory.
 
-(Why this complicated system? It's primarily to keep the argument tree visualization from flickering between page loads. Because we're using Jekyll, not a server, the user's agreements/disagreements with the arguments are kept in the browser. When the page is initially loaded, the argument tree can't already be colored correctly to indicate the user's choices, because the server sending the HTML doesn't know what the user chose. So we fill out the choices immediately after the page loads the first time, and all subsequent navigation only reloads the content of the page, without reloading the argument tree section. This is weird and complicated, but it solves the flickering and incidentally makes pages load faster.)
+(Why this complicated system? It's primarily to keep the argument tree visualization from flickering between page loads. Because we're using Jekyll, not a server, the user's agreements/disagreements are kept in the browser. When the page is initially loaded, the argument tree can't already be colored correctly to indicate the user's choices, because the server sending the HTML doesn't know what the user chose. So we fill out the choices immediately after the page loads the first time, and all subsequent navigation only reloads the content of the page, without reloading the argument tree section. This solves the flickering and incidentally makes pages load faster.)
 
 ## The arguments YAML format
 
- This argument system relies on _data/arguments.yml, which lists arguments as follows:
+This argument system relies on _data/arguments.yml, which provides the data structure for *argument nodes*.
 
-**name**: string (required). The title that will display as the heading of the page, and in the listing in the argument tree, e.g. "AI cannot be conscious".
-**text**: string (optional? but we probably want it for every argument because the default is to duplicate the **name**). The text that should display in the checkbox item for this argument, which will be similar to the title, but phrased as the answer to a question about whether the user agrees, e.g. "No – AI cannot be conscious in the way a human is". If it's not supplied, the name will be used instead.
-**url**: string (required). The URL of the argument, e.g. "/arguments/consciousness" (note that it shouldn't end with ".html")
-**effect**: 'agree'|'disagree' (optional, default 'disagree'). This sets whether clicking the checkbox represents disagreement or agreement, which affects, among other things, the visualization color (red or green).
-**question**: string (optional? but we probably want it for every argument because the default is probably worse). The question that should be asked at the bottom of the page, above the checkboxes, e.g. 'Do you agree that biology is probably not essential for general intelligence?'. If it's not supplied, it defaults to "Do you find the above arguments convincing?".
-**noQuestion**: boolean (optional, default false). Set this to true if this page shouldn't ask a question at the bottom (like the 'Within 50 Years' page, which exists to briefly acknowledge the user's agreement and redirect them to the next section).
-**overrideSiblings**: boolean (optional, default false). Set this to true if agreeing with this argument should automatically un-set its sibling arguments. This is used for the question about when AGI will exist, where the three options ("Within 50 years", "More than 50 years", and "Never") are mutually exclusive.
-**listInTree**: boolean (optional, default true). Set this to false if the argument should appear in the checkbox list under a parent argument, but *shouldn't* be listed in the argument tree visualization. This is used for the final checkbox on the "Never" page, where we want to list a checkbox the user can click, but it doesn't lead to a page of counter-arguments.
-**subArguments**: a list of argument pages that descend from this one (optional). If supplied, they'll be displayed as checkbox options at the bottom of the argument page content. If they're not supplied, Yes/No checkboxes will be shown instead.
+Argument nodes can represent one or more of:
+* A page you can navigate to,
+* An item in the argument tree visualization that displays at the top of the page,
+* A checkbox you can select at the bottom of a page to record your agreement/disagreement with an argument.
+
+Most nodes are all three. However, some nodes just represent an item of the argument tree (e.g. Alignment Problem/Agree, which is an item in the argument tree but doesn't have a corresponding page), and some nodes just represent a checkbox option but not a page nor an item in the argument tree (e.g. Generally Capable AI systems/Never/Yes, I agree).
+
+The following options are complicated. It might help to first list the main cases, and which options are needed for each.
+
+**Top-level page**: name, url, effect (set to 'calculated'), question, nodes.
+**Regular leaf page arguing against an objection**: name, url, text, question (optional).
+**A checkbox option that shouldn't be listed in the argument tree**: name, text, effect, answerLinkUrl, agreeTargetUrl, listInTree
+**A 'Disagree' node that 'delegates' its checkbox sub-nodes to its parent**: name, effect, nodeLinkUrl, isCheckboxOption, delegateCheckboxes
+**An 'Agree' node that leads you to the next top-level argument**: name, linkName, text, effect, nodeLinkUrl, agreeTargetUrl, answerLinkUrl
+
+These are all the available options:
+
+**name**: string (required). The title that will display as the heading of the page, and in the listing in the argument tree, e.g. "AI cannot be conscious", and as the text of the link to that page that appears when you select its corresponding checkbox.
+
+**url**: string (optional). The URL of the argument, e.g. "/arguments/consciousness" (note that it shouldn't end with ".html"). This should be specified when the node represents a page that you can navigate to.
+
+**text**: string (optional). The text that should display in the checkbox item for this argument, which will be similar to the title, but phrased as the answer to a question about whether the user agrees, e.g. "No – AI cannot be conscious in the way a human is". If it's not supplied, the name will be used instead.
+
+**effect**: 'agree'|'disagree'|'calculated'|'none'|'undecidedOverride' (optional, default 'disagree'). This determines what it means to agree with this node, when clicked as a checkbox ('agree'|'disagree'). Agree/Disagree effects might be propagated to parent nodes, depending on other options. Top-level arguments (Generally Capable AI Systems, The Alignment Problem, etc.) should be set to 'calculated', which will cause the node's agreement state to be determined by its sub-nodes. 'none' is a special case currently used only for the "Let's move on" option in Generally Capable AI Systems/More Than 50 Years, which causes the answer to be recorded and the node to be colored but doesn't propagate to parent nodes. There's also one 'undecidedOverride' special case (possibly to be renamed later), for setting the agreement state back to 'undecided' (i.e. default gray), currently used only for the agreement checkbox on the Generally Capable AI Systems/Never page, which sets its parent 'Never' node to undecided.
+
+**question**: string (optional). The question that should be asked at the bottom of the page, above the checkboxes, e.g. 'Do you agree that biology is probably not essential for general intelligence?'. If it's not supplied, it defaults to "Do you find the above arguments convincing?".
+
+**askQuestion**: boolean (optional, default true). Set this to false if this page shouldn't ask a question at the bottom (like the 'Within 50 Years' page, which exists to briefly acknowledge the user's agreement and redirect them to the next section).
+
+**overridesSiblings**: boolean (optional, default false). Set this to true if agreeing with this argument should automatically un-set its sibling arguments. One place this is used is for the question about when AGI will exist, where the three options ("Within 50 years", "More than 50 years", and "Never") are mutually exclusive.
+
+**listInTree**: boolean (optional, default true). Set this to false if the argument shouldn't be listed in the argument tree visualization. This is used for the 'Agree' checkbox on the "Never" page, where we want to list a checkbox the user can click, but it doesn't lead to a page of counter-arguments.
+
+**nodes**: (list, optional). A list of nodes that descend from this one (optional). If supplied, they'll be displayed as checkbox options at the bottom of the argument page content (unless their `isCheckboxOption` parameter is set to false). If no nodes are supplied, Yes/No checkboxes will be shown instead (unless `askQuestion` is set to false).
+
+**linkName**: (string, optional). When you check a checkbox, a link usually appears below so you can learn more about the topic. The text of the link is usually the `name` of the node, but you can override that by setting `linkName`. This is used for 'Agree' checkboxes under top-level arguments that display links to the next top-level argument page.
+
+**delegateCheckboxes**: boolean (optional, default false). Usually, a node's sub-nodes are listed as checkboxes on the node's page. On most top-level argument pages (The Alignment Problem, Instrumental Incentives, etc.), the argument map shows two subnodes (Agree and Disagree), but we want to list all the disagreement options on the main page. Set delegateCheckboxes to true to make the sub-node's sub-nodes be listed on the parent's page. (Currently, this is always used with the `isCheckboxOption` setting, and should possibly be combined with it.)
+
+**isCheckboxOption**: boolean (optional, default true). Usually a node's sub-nodes should be listed as checkboxes on the node's page. On most top-level argument pages (The Alignment Problem, Instrumental Incentives, etc.), the argument map shows two subnodes (Agree and Disagree), but the Disagree node isn't actually a selectable checkbox node (its sub-nodes are delegated as checkboxes instead with the `delegateCheckboxes`). So set `isCheckboxOption` to false to make a node not be listed as a checkbox on its parent page.
+
+**nodeLinkUrl**: (string, optional). What URL to navigate to if the user clicks on this node in the argument map. (Use this when the node has no `url` because it doesn't correspond to a page.)
+
+**agreeTargetUrl**: (string, optional). Usually, a node's checkbox affects the agreement state of its URL, whether you click it on its parent page (e.g. clicking "We would test it before deploying" on "The Alignment Problem" main page) or on its own page (e.g. clicking "Yes" or "No" on the checkboxes at the end of the "We would test before deploying" page). When a node doesn't directly represent a page (e.g. the Agree node under The Alignment Problem, which represents a checkbox and an item node but isn't a page you can navigate to), set the `agreeTargetUrl` to the `url` of the node the agreement effect should be applied to.
+
+**answerLinkUrl**: (string, optional). In most cases, a page's sub-nodes represent pages you can navigate to when you select their corresponding checkbox. When a node doesn't directly represent a page (e.g. the Agree node under The Alignment Problem, which represents a checkbox and an item node but isn't a page you can navigate to), set the `answerLinkUrl` to the URL that should be listed as a link for the user to navigate to when the checkbox is selected.
 
 It should look a bit like this:
 ```
-- page:
+- node:
   name: Generally capable AI systems
   url: /arguments/when-agi
+  effect: calculated
   question: When do you think these generally capable systems will exist?
-  pages:
-    - page:
+  nodes:
+    - node:
       name: Within 50 Years
       url: /arguments/within-50-years
       effect: agree
-      overrideSiblings: true
-      noQuestion: true
-    - page:
+      overridesSiblings: true
+      askQuestion: false
+    - node:
       name: More than 50 years
       url: /arguments/more-than-50-years
+      effect: agree
       question: Would you like to hear these arguments?
-      overrideSiblings: true
-      pages:
-        - page:
-          text: Yes, I would like to hear these arguments for why AGI might come soon
+      overridesSiblings: true
+      nodes:
+        - node:
           name: Why these systems might come soon
+          text: Yes, I would like to hear these arguments for why AGI might come soon
           url: /arguments/agisooner
-        - page:
-          text: No, let’s move on - I want to learn about potential risks
+          overridesSiblings: true
+        - node:
           name: Moving on to potential risks
+          text: No, let’s move on - I want to learn about potential risks
           url: /arguments/goto-potential-risk
-    - page:
+          effect: none
+          overridesSiblings: true
+          askQuestion: false
+    - node:
       name: Never
       url: /arguments/never
       question: Would you agree that there might be such generally capable systems at some time in the future?
-      overrideSiblings: true
-      pages:
-        - page:
+      overridesSiblings: true
+      nodes:
+        - node:
+          name: The Alignment Problem
+          text: Yes, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
+          effect: undecidedOverride
+          answerLinkUrl: /arguments/the-alignment-problem
+          agreeTargetUrl: /arguments/never
+          listInTree: false
+        - node:
           name: There is something special about biology
           text: No – there is something special about biology which we will never be able to put into machines
           url: /arguments/biology-special
           question: Do you agree that biology is probably not essential for general intelligence?
-        - page:
-          name: Intelligent Machines - seems weird
-          text: No – truly intelligent machines - that seems really weird
-          url: /arguments/seems-weird
 ...
 ```
 

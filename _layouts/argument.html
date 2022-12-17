@@ -22,11 +22,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </div>
       </div>
       <div class="argument-content">
-        <section class="top-map">
+        <section class="argument-map">
           {% for argument in site.data.arguments %}
             {% assign decoded_page_url = page.url | url_decode %}
-            <div class="top-argument-container {% if argument.url == decoded_page_url %}active{% endif %}">
-              <a class="top-argument" href="{{site.baseurl}}{{argument.url}}" data-url="{{site.baseurl}}{{argument.url}}">
+            <div class="root-argument-container {% if argument.url == decoded_page_url %}active{% endif %}">
+              <a class="root-argument" href="{{site.baseurl}}{{argument.url}}" data-url="{{site.baseurl}}{{argument.url}}">
                 {{ argument.name }}
               </a>
               <div class="argument-list">
@@ -35,10 +35,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                   {% assign page_argument_index = argument_index %}
                 {% endif %}
                 {% assign sub_argument_index = 0 %}
-                {% if argument.pages.size > 0 %}
-                  {% assign arguments = argument.pages %}
+                {% if argument.nodes.size > 0 %}
+                  {% assign arguments = argument.nodes %}
                   {% for sub_argument in arguments %}
-                    {% include argument_symbol.html %}
+                    {% unless sub_argument.listInTree == false %}
+                      {% include argument_symbol.html %}
+                    {% endunless %}
                     {% assign sub_argument_index = sub_argument_index | plus:1 %}
                   {% endfor %}
                 {% endif %}
@@ -48,6 +50,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </section>
         <!-- One -->
         <section class="argument-section" id="argument_section">
+          <div class="argument-branch-sidebar"></div>
           <div class="inner">
             <header class="major">
               <h1 class="page-title"></h1>
@@ -57,7 +60,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </section>
         <section id="feedbackContainer">
           <div class="inner">
-            &#9993; <a id="feedback_button" class="feedback-button" href='#feedback'>Send Feedback</a>
+            <a id="feedback_button" class="feedback-button" href='#feedback'>&#9993; Send Feedback</a>
             <div id="feedback">
               <script src="https://www.cognitoforms.com/f/seamless.js" data-key="n-MxRzQ7okuhyer9lfH0mw" data-form="2"></script>
             </div>
@@ -67,16 +70,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </div>
 
     {% include footer.html %}
-    <script src="{{ "assets/js/arguments.js" | absolute_url }}"></script>
+    <script src="{{ "assets/js/arguments.js" | absolute_url }}" type="module"></script>
   </body>
 
 <script>
   window.site_baseurl = '{{site.baseurl}}'
   window.url = '{{page.url}}'
   window.argumentPages = [{% for argument in site.data.arguments %}
-    {% include argument_page.js %}
+    {% include argument_node.js %}
   {% endfor %}]
-
-  initPage()
 </script>
 </html>

@@ -1,11 +1,11 @@
 <div class="argument-container">
-  <a class="argument-shape-link {% if sub_argument.url == decoded_page_url %}active{% endif %}" href="{{site.baseurl}}{{sub_argument.url}}" data-url="{{site.baseurl}}{{sub_argument.url}}">
+  <a class="argument-shape-link {% if sub_argument.url == decoded_page_url %}active{% endif %}" href="{{site.baseurl}}{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-url="{{site.baseurl}}{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-effect="{{sub_argument.effect}}">
     <i class="icon fa-square argument-shape"></i>
     <span class="argument-title">{{sub_argument.name}}</span>
   </a>
-  {% if sub_argument.pages.size > 0 %}
+  {% if sub_argument.nodes.size > 0 %}
     <div class="sub-sub-argument">
-      {% for sub_argument in sub_argument.pages %}
+      {% for sub_argument in sub_argument.nodes %}
         {% unless sub_argument.listInTree == false %}
           {% include argument_symbol.html %}
         {% endunless %}

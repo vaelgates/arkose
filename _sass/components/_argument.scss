@@ -2,7 +2,7 @@
   @include inner;
 }
 
-.top-map {
+.argument-map {
   padding: 10px;
   display: flex;
   gap: 10px;
@@ -10,82 +10,100 @@
     margin-left: 10px;
     margin-top: 4px;
   }
-  .top-argument {
-    display: block;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    background-color: var(--color-header-bg);
-    padding: 6px;
-    cursor: pointer;
-    &:hover {
-      filter: brightness(1.05);
-      color: var(--color-fg) !important;
-    }
-    &:visited {
-      color: var(--color-fg) !important;
-      border-bottom: #d0d0d0;
-    }
-    &.agree {
-      background-color: #8d8;
-      border: #53ce53
-    }
-    &.disagree {
-      background-color: #d88;
-      border: #ce5353;
-    }
+}
+
+.argument-branch-sidebar {
+  max-width: 200px;
+  position: fixed;
+  top: 70px;
+  left: 8px;
+  display: none;
+}
+
+.root-argument {
+  display: block;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  background-color: var(--color-header-bg);
+  padding: 6px;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.05);
+    color: var(--color-fg) !important;
   }
-  .argument-container {
-    padding-left: 1em;
+  &:visited {
+    color: var(--color-fg) !important;
+    border-bottom: #d0d0d0;
   }
-  .argument-shape-link {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    border-bottom: none;
-    &.agree .argument-shape {
-      color: #8d8;
-    }
-    &.disagree .argument-shape {
-      color: #d88;
-    }
-    &:visited {
-      color: var(--color-fg) !important;
-    }
-    &:hover {
-      color: var(--color-fg) !important;
-      .argument-shape {
-        filter: brightness(1.15);
-      }
-      .argument-title {
-        width: fit-content;
-        max-width: fit-content;
-        z-index: 10;
-        font-weight: bold;
-        background-color:var(--color-bg);
-        padding-right: 10px;
-      }
-    }
+  &.agree {
+    background-color: #8d8;
+    border: #53ce53
+  }
+  &.disagree {
+    background-color: #d88;
+    border: #ce5353;
+  }
+}
+.argument-container {
+  padding-left: 1em;
+}
+.argument-shape-link {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  border-bottom: none;
+  &.agree .argument-shape {
+    color: #8d8;
+  }
+  &.disagree .argument-shape {
+    color: #d88;
+  }
+  &:visited {
+    color: var(--color-fg) !important;
+  }
+  &:hover {
+    color: var(--color-fg) !important;
     .argument-shape {
-      display: inline-block;
-      transform: scaleX(1.5) rotate(45deg);
-      transition: color 0.3s;
-      color: #bbc;
+      filter: brightness(1.15);
     }
     .argument-title {
-      max-width: 100px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: inline-block;
-      font-size: 0.7em;
-      vertical-align: middle;
-      position: absolute;
-      top: 4px;
-      left: 28px;
+      width: fit-content;
+      max-width: fit-content;
+      z-index: 10;
+      font-weight: bold;
+      background-color:var(--color-bg);
+      padding-right: 10px;
     }
-    .sub-sub-argument {
-      margin-left: 30px;
-    }
+  }
+  .argument-shape {
+    display: inline-block;
+    transform: scaleX(1.5) rotate(45deg);
+    transition: color 0.3s;
+    color: #bbc;
+  }
+  .argument-title {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    font-size: 0.7em;
+    vertical-align: middle;
+    position: absolute;
+    top: 4px;
+    left: 28px;
+  }
+  .sub-sub-argument {
+    margin-left: 30px;
+  }
+}
+
+.root-argument-container .argument-container .argument-container .argument-shape-link {
+  &.agree .argument-shape {
+    color: #bbc;
+  }
+  &.disagree .argument-shape, &.none .argument-shape {
+    color: var(--color-accent1);;
   }
 }
 
@@ -143,6 +161,7 @@
 
 .nav-answers {
   padding-left: 0;
+  list-style-type: none;
   .icon {
     margin: 0 1ch;
   }
@@ -153,7 +172,7 @@
     width: 13px;
     display: inline-block;
   }
-  div label {
+  li label {
     display: block;
     background-color: #def;
     padding-bottom: 0.1em;
@@ -238,27 +257,34 @@ em {
   max-width: 80px;
 }
 
-@include breakpoint(medium) {
+@include breakpoint(large) {
   #main.argument .inner {
-    margin: 0 auto;
-  }
-  .top-map .argument-shape-link .argument-title {
-    max-width: 80px;
+    padding-left: 110px;
   }
 }
 
-@include breakpoint(small) {
+@include breakpoint(medium) {
+  .argument-branch-sidebar {
+    display: none !important;
+  }
+  #main.argument .inner {
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .argument-map .argument-shape-link .argument-title {
+    max-width: 80px;
+  }
   .argument-content {
     display: flex;
     flex-direction: column;
-    .top-map {
+    .argument-map {
       order: 5;
     }
   }
-  .top-map {
+  .argument-map {
     display: block;
   }
-  .top-map .argument-shape-link .argument-title {
+  .argument-map .argument-shape-link .argument-title {
     max-width: fit-content;
   }
   .site-section-header {

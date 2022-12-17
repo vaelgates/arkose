@@ -458,15 +458,15 @@ if (theme === "dark") {
 
 // Add this page to the list of visited URLs on this site so it can be
 // included in the argument feedback form
-let argNodeHistory = localStorage.getItem('ArgNodeHistory')?.split(', ') ?? []
-if (argNodeHistory[argNodeHistory.length - 1] !== window.location.pathname) {
-	argNodeHistory.push(window.location.pathname)
+window.argNodeHistory = localStorage.getItem('ArgNodeHistory')?.split(', ') ?? []
+if (window.argNodeHistory[window.argNodeHistory.length - 1] !== window.location.pathname) {
+	window.argNodeHistory.push(window.location.pathname)
 }
-localStorage.setItem('ArgNodeHistory', argNodeHistory.join(', '))
+localStorage.setItem('ArgNodeHistory', window.argNodeHistory.join(', '))
 
 // If this is the first landing on the site, also record the referrer
 // and the value of the 's' parameter
-if (argNodeHistory.length <= 1) {
+if (window.argNodeHistory.length <= 1) {
 	let queryString = window.location.search;
 	let urlParams = new URLSearchParams(queryString);
 	localStorage.setItem('LandingPath', window.location.pathname)

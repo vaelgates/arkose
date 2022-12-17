@@ -13,8 +13,8 @@
     {% if decoded_page_url == argument.url %}
       {% assign page_argument_index = argument_index %}
     {% endif %}
-    {% if argument.pages.size > 0 %}
-      {% assign arguments = argument.pages %}
+    {% if argument.nodes.size > 0 %}
+      {% assign arguments = argument.nodes %}
       {% include argument_item.html %}
     {% endif %}
   {% endfor %}
