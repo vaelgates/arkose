@@ -44,6 +44,13 @@
     border: #ce5353;
   }
 }
+.nav-answer-links .answer-link.root-argument, .page-content .root-argument {
+  width: fit-content;
+  span {
+    border-bottom: none;
+  }
+}
+
 .argument-container {
   padding-left: 1em;
 }

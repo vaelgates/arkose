@@ -243,6 +243,7 @@ function getHtml(path, saveAddress = true, scrollIntoView = false, scrollTop = f
     const title = $('.page-content .page-data').data('page-title');
     $('.page-title').html(title);
     insertAnswerSection(path);
+    transformRootArgumentLinks();
     updateSidebar(path);
     if (saveAddress)
       window.history.pushState({}, "", path);
@@ -339,6 +340,19 @@ function updateSubSubArgumentVisibility() {
       $(subSection).show()
     } else {
       $(subSection).hide()
+    }
+  }
+}
+
+function transformRootArgumentLinks() {
+  for (const a of $('.nav-answer-links a, .page-content a')) {
+    const hrefEnd = $(a).prop('href').match(/\/([^/]*$)/)?.[1]
+    const rootArgument = args.find(a => a.url.match(/\/([^/]*$)/)?.[1] === hrefEnd)
+
+    if (rootArgument) {
+      $(a).addClass('root-argument')
+      $(a).addClass(rootArgument.agreement)
+      $(a).data('url', `${window.site_baseurl}` + rootArgument.url)
     }
   }
 }
