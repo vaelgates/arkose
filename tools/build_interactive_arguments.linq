@@ -444,7 +444,7 @@ quit:
 					WriteNavAnchor();
 					prefix = "<div><em>";
 					postfix = "</em></div>";
-					thisParagraph.HtmlText = EverythingAfter(thisParagraph.HtmlText, "q:");
+					thisParagraph.HtmlText = ""; // TODO move to new system // EverythingAfter(thisParagraph.HtmlText, "q:");
 				}
 			}
 
@@ -526,7 +526,9 @@ quit:
 				weAlreadyHadAFeedbackLink = true;
 			}
 			string prefix = "";
-			outText.AppendLine($"<div>{icon} <a href='{prefix}{url}'>{text}</a></div>");
+			
+			
+			//outText.AppendLine($"<div>{icon} <a href='{prefix}{url}'>{text}</a></div>"); // TODO move to new system
 			nrNavLinksCreated++;
 		}
 		void MakeNavFromDoc(string text, UserQuery.Document dc, string urlAppendix = "")
