@@ -26,6 +26,18 @@ class Argument {
     return null
   }
 
+  static updateSubSubArgumentVisibility() {
+    for (const subSection of $('.sub-sub-argument')) {
+      let subNodesNotable = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
+      subNodesNotable += $(subSection).siblings('.argument-shape-link.agree, .argument-shape-link.disagree').length
+      if (subNodesNotable > 0) {
+        $(subSection).show()
+      } else {
+        $(subSection).hide()
+      }
+    }
+  }
+
   constructor(args, params, parent = undefined) {
     this.args = args
     this.parent = parent
@@ -93,10 +105,24 @@ class Argument {
     }
   }
 
+  rootArgument() {
+    let ancestor = this
+    let nextAncestor = true
+    while (nextAncestor) {
+      nextAncestor = ancestor.parent
+      if (nextAncestor) ancestor = nextAncestor
+    }
+    return ancestor
+  }
+
   siblings() {
     if (!this.parent) return []
 
     return this.parent.subArguments.filter(child => child !== this)
+  }
+
+  nameAsId() {
+    return this.name.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '_')
   }
 
   overrideSiblingsIfNeeded(agreement) {
