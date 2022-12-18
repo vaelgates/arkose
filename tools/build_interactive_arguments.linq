@@ -243,8 +243,8 @@ breadcrumbs: {breadcrumbs}
 			if (el.TextRun != null)
 			{
 				var txt = el.TextRun.Content.Trim();
-				if (txt.Contains(":ResearcherSurvey"))
-					"dbg".Dump();
+				if (txt.Contains("GPT-3"))
+					"set a breakpoint here".Dump();
 
 				if (txt == "")
 					continue;
@@ -388,7 +388,11 @@ quit:
 				thisParagraph.Dump();
 
 
-			thisParagraph.HtmlText = thisParagraph.HtmlText.Replace(new string(new[] { (char)0x0B }), "<br/>"); // 0x0b (line tabulation) is used to make line breaks without creating a new paragraph
+			thisParagraph.HtmlText = thisParagraph.HtmlText.Replace(new string(new[] { (char)0x0B }), "<br/>");
+			 // 0x0b (line tabulation) is returned from the google docs API to make line breaks without creating a new paragraph
+			if (thisParagraph.Bold==true)
+				thisParagraph.HtmlText = "<em>"+thisParagraph.HtmlText+"</em>";
+			
 
 
 
@@ -795,6 +799,8 @@ class ContentParagraph
 	public string ImageCaption = "";
 	public string HtmlText;
 	public int? BulletLevel;
+	public bool? Bold;
+	
 	public ListTypeEnum? BulletType;
 	public ContentParagraph(string text)
 	{
