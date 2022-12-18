@@ -2,14 +2,15 @@
   name: Generally capable AI systems
   url: /arguments/when-agi
   effect: calculated
+  text: Introduction - Generally capable API systems
   question: When do you think these generally capable systems will exist?
   nodes:
     - node:
       name: Within 50 Years
       url: /arguments/within-50-years
       effect: agree
-      overridesSiblings: true
       askQuestion: false
+      overridesSiblings: true
     - node:
       name: More than 50 years
       url: /arguments/more-than-50-years
@@ -20,73 +21,69 @@
         - node:
           name: Why these systems might come soon
           url: /arguments/agisooner
-          text: Yes, I would like to hear these arguments for why AGI might come soon
           propagateAgreement: false
+          text: Yes, I would like to hear these arguments for why AGI might come soon
           parentListingType: button
         - node:
           name: Moving on to potential risks
           url: /arguments/goto-potential-risk
+          askQuestion: false
           text: No, let’s move on - I want to learn about potential risks
           parentListingType: button
-          askQuestion: false
     - node:
       name: Never
       url: /arguments/never
-      question: Would you agree that there might be such generally capable systems at some time in the future?
+      question: Would you agree with this?
       overridesSiblings: true
       nodes:
         - node:
           name: The Alignment Problem
           text: Yes, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
-          effect: undecidedOverride
+          effect: undecidedOverride # this sets its parent node to "undecided". This is because the question is phrased in such a way that it basically indicates "I now changed my mind on the parent".
           answerLinkUrl: /arguments/the-alignment-problem
           agreeTargetUrl: /arguments/never
-          listInTree: false
+          listInTree: false # same justification as above
         - node:
           name: There is something special about biology
-          text: No – there is something special about biology which we will never be able to put into machines
           url: /arguments/biology-special
-          question: Do you agree that biology is probably not essential for general intelligence?
+          text: There is something special about biology which we will never be able to put into machines
         - node:
           name: Intelligent Machines - seems weird
-          text: No – truly intelligent machines - that seems really weird
           url: /arguments/seems-weird
+          text: I don’t know, but truly intelligent machines - that seems really weird
         - node:
           name: The world doesn’t change that fast
-          text: No – if we actually had a “scientist AI”, it would be a massive change in the world - and the world simply doesn’t change that fast
           url: /arguments/fast-changes
+          text: If we actually had a “scientist AI”, it would be a massive change in the world - and the world simply doesn’t change that fast
         - node:
           name: AI will never be able to have true creativity
-          text: No – AI will never be able to have true creativity
           url: /arguments/creativity
         - node:
           name: Would need to understand the brain first
-          text: No – we would need to understand the brain first, and this is a big obstacle
           url: /arguments/understand-brain-first
+          text: We would need to understand the brain first, and this is a big obstacle
         - node:
           name: I don’t see a reason for us to even want that
-          text: No – I don’t see a reason for us to even want that
           url: /arguments/we-dont-want-that
         - node:
           name: Can’t see it based on current progress
-          text: No – I can’t see it based on current progress
           url: /arguments/cant-see-it-based-on-current-progress
+          text: I can’t see it based on current progress
         - node:
           name: An AI paradigm shift will be required
-          text: No – an AI paradigm shift will be required
           url: /arguments/an-ai-paradigm-shift-will-be-required
         - node:
           name: People would stop this
-          text: No – surely this would be bad and people would stop it
           url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
+          text: Surely this would be bad and people would stop it
         - node:
           name: We need embodiment
-          text: No – we need embodiment - the AI needs a body and actuators, and sensors
           url: /arguments/embodiment-is-necessary
+          text: We need embodiment - the AI needs a body and actuators, and sensors
         - node:
           name: AI cannot be conscious
-          text: No – AI cannot be conscious in the way a human is
           url: /arguments/consciousness
+          text: AI cannot be conscious in the way a human is
 - node:
   name: The Alignment Problem
   url: /arguments/the-alignment-problem
@@ -107,42 +104,32 @@
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
-      - node:
-        name: We would test before deploying
-        text: No – we would test it before deploying
-        url: /arguments/test-before-deploying
-      - node:
-        name: We would just be careful with our reward function
-        text: No – we would just be careful with our reward function
-        url: /arguments/careful-with-that-reward-function
-      - node:
-        name: AGI wouldn’t be functional unless this problem is solved
-        text: No – AGI wouldn’t be functional unless this problem is solved
-        url: /arguments/wouldnt-be-functional
-      - node:
-        name: This will probably be solved in the course of building these systems
-        text: No – this will probably be solved in the course of building these systems
-        url: /arguments/would-inevitably-be-solved
-      - node:
-        name: Our understanding of how to align systems will advance
-        text: No – our understanding of how to align systems will advance
-        url: /arguments/alignment-advances-equally
-      - node:
-        name: Need to know what type of AGI before we can talk about safety
-        text: No – we need to know what type of AGI before we can talk about safety
-        url: /arguments/need-to-know-what-type
-      - node:
-        name: Misuse is a bigger problem
-        text: No – misuse is a bigger problem
-        url: /arguments/misuse-is-a-bigger-problem
-      - node:
-        name: This is not as dangerous as other global risks
-        text: No – this is not as dangerous as other global risks
-        url: /arguments/this-is-not-as-dangerous-as-other-global-risks
-      - node:
-        name: Humans have alignment problems too
-        text: No - humans have alignment problems too
-        url: /arguments/humans-have-alignment-problems-too
+        - node:
+          name: We would test before deploying
+          url: /arguments/test-before-deploying
+          text: No - we would test it before deploying
+        - node:
+          name: We would just be careful with our reward function
+          url: /arguments/careful-with-that-reward-function
+          text: No - we would just be careful with our reward function
+        - node:
+          name: Our understanding of how to align systems will advance
+          url: /arguments/alignment-advances-equally
+          text: No -  as we build more capable systems, surely our understanding of how to align them will advance equally well
+        - node:
+          name: We would need to know what type of AGI before talking about safety
+          url: /arguments/need-to-know-what-type
+          text: No – we need to know what type of AGI before we can talk about safety
+        - node:
+          name: Misuse is a bigger problem
+          url: /arguments/misuse-is-a-bigger-problem
+          text: No – misuse is a bigger problem
+        - node:
+          name: No – this is not as dangerous as other global risks
+          url: /arguments/this-is-not-as-dangerous-as-other-global-risks
+        - node:
+          name: No – humans have alignment problems too
+          url: /arguments/humans-have-alignment-problems-too
 - node:
   name: Instrumental Incentives
   url: /arguments/instrumental-incentives
@@ -163,28 +150,28 @@
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
-      - node:
-        name: It would be simple to instruct the AI to try less hard
-        text: No – it would be simple to instruct the AI to try less hard
-        url: /arguments/aishould-try-less-hard
-      - node:
-        name: Consciousness won’t happen
-        url: /arguments/no-self-preservation-without-consciousness
-      - node:
-        name: We could stop that physically
-        url: /arguments/we-could-stop-that-physically
-      - node:
-        name: Current systems don’t do that
-        url: /arguments/current-systems-dont-do-that
-      - node:
-        name: We wouldn’t design it that way
-        url: /arguments/wouldnt-design-that-way
-      - node:
-        name: This won’t be a problem, we will have human oversight
-        url: /arguments/human-oversight
-      - node:
-        name: AI could be a big deal
-        url: /arguments/ai-could-be-a-big-deal
+        - node:
+          name: It would be simple to instruct the AI to try less hard
+          url: /arguments/aishould-try-less-hard
+        - node:
+          name: Consciousness won’t happen
+          url: /arguments/no-self-preservation-without-consciousness
+          text: Consciousness won’t happen (and is required for self-preservation)
+        - node:
+          name: We could stop that physically
+          url: /arguments/we-could-stop-that-physically
+        - node:
+          name: Current systems don’t do that
+          url: /arguments/current-systems-dont-do-that
+        - node:
+          name: We wouldn’t design it that way
+          url: /arguments/wouldnt-design-that-way
+        - node:
+          name: This won’t be a problem, we will have human oversight
+          url: /arguments/human-oversight
+        - node:
+          name: AI could be a big deal
+          url: /arguments/ai-could-be-a-big-deal
 - node:
   name: Threat Models - how might AGI be dangerous?
   url: /arguments/threat-models
@@ -209,25 +196,27 @@
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
-      - node:
-        name: Regulators will take care of this
-        url: /arguments/regulators-will-take-care-of-this
-      - node:
-        name: Nothing we can do at the moment
-        url: /arguments/not-useful-currently
-      - node:
-        name: I’m not convinced this is urgent now
-        url: /arguments/not-urgent-currently
-      - node:
-        name: Lets build AI, worry about safety later
-        url: /arguments/lets-build-worry-later
-      - node:
-        name: Alignment is easy - This will definitely be solved in time
-        url: /arguments/alignment-is-easy-this-will-definitely-be-solved-in-time
-      - node:
-        name: I don’t see how current safety work is useful
-        url: /arguments/not-currently-tractable
+        - node:
+          name: Regulators will take care of this
+          url: /arguments/regulators-will-take-care-of-this
+        - node:
+          name: Nothing we can do at the moment
+          url: /arguments/not-useful-currently
+          text: Work on AGI safety is not useful because there is nothing we can do at the moment
+        - node:
+          name: I’m not convinced this is urgent now
+          url: /arguments/not-urgent-currently
+        - node:
+          name: Let’s build AI, worry about safety later
+          url: /arguments/lets-build-worry-later
+        - node:
+          name: Alignment is easy - This will definitely be solved in time
+          url: /arguments/alignment-is-easy-this-will-definitely-be-solved-in-time
+        - node:
+          name: I don’t see how current safety work is useful
+          url: /arguments/not-currently-tractable
+          text: Yeah there are people working on this but I don’t understand why their work would be useful
 - node:
   name: Conclusion
-  effect: calculated
   url: /arguments/conclusion
+  effect: calculated
