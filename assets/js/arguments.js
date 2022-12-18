@@ -346,6 +346,7 @@ function updateSubSubArgumentVisibility() {
 
 function transformRootArgumentLinks() {
   for (const a of $('.nav-answer-links a, .page-content a')) {
+    if (a.innerText.toLowerCase().match('go back')) continue
     const hrefEnd = $(a).prop('href').match(/\/([^/]*$)/)?.[1]
     const rootArgument = args.find(a => a.url.match(/\/([^/]*$)/)?.[1] === hrefEnd)
 

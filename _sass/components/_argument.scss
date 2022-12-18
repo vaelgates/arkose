@@ -31,10 +31,6 @@
     filter: brightness(1.05);
     color: var(--color-fg) !important;
   }
-  &:visited {
-    color: var(--color-fg) !important;
-    border-bottom: #d0d0d0;
-  }
   &.agree {
     background-color: #8d8;
     border: #53ce53
@@ -64,9 +60,6 @@
   }
   &.disagree .argument-shape {
     color: #d88;
-  }
-  &:visited {
-    color: var(--color-fg) !important;
   }
   &:hover {
     color: var(--color-fg) !important;
@@ -212,10 +205,6 @@
   li a {
     text-decoration: none;
     border: 1px solid #bcd;
-    &:visited {
-      color: var(--color-fg) !important;
-      border-bottom: #bcd;
-    }
     &:after {
       content: '▶';
       float: right;
