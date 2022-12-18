@@ -19,16 +19,15 @@
       nodes:
         - node:
           name: Why these systems might come soon
-          text: Yes, I would like to hear these arguments for why AGI might come soon
-          effect: none
           url: /arguments/agisooner
-          overridesSiblings: true
+          text: Yes, I would like to hear these arguments for why AGI might come soon
+          propagateAgreement: false
+          parentListingType: button
         - node:
           name: Moving on to potential risks
-          text: No, let’s move on - I want to learn about potential risks
           url: /arguments/goto-potential-risk
-          effect: none
-          overridesSiblings: true
+          text: No, let’s move on - I want to learn about potential risks
+          parentListingType: button
           askQuestion: false
     - node:
       name: Never

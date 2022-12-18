@@ -32,6 +32,7 @@ The following options are complicated. It might help to first list the main case
 **A checkbox option that shouldn't be listed in the argument tree**: name, text, effect, answerLinkUrl, agreeTargetUrl, listInTree
 **A 'Disagree' node that 'delegates' its checkbox sub-nodes to its parent**: name, effect, nodeLinkUrl, isCheckboxOption, delegateCheckboxes
 **An 'Agree' node that leads you to the next top-level argument**: name, linkName, text, effect, nodeLinkUrl, agreeTargetUrl, answerLinkUrl
+**Nodes that should be shown as buttons rather than checkboxes**: name, url, text, propagateAgreement, parentListingType
 
 These are all the available options:
 
@@ -41,7 +42,7 @@ These are all the available options:
 
 **text**: string (optional). The text that should display in the checkbox item for this argument, which will be similar to the title, but phrased as the answer to a question about whether the user agrees, e.g. "No – AI cannot be conscious in the way a human is". If it's not supplied, the name will be used instead.
 
-**effect**: 'agree'|'disagree'|'calculated'|'none'|'undecidedOverride' (optional, default 'disagree'). This determines what it means to agree with this node, when clicked as a checkbox ('agree'|'disagree'). Agree/Disagree effects might be propagated to parent nodes, depending on other options. Top-level arguments (Generally Capable AI Systems, The Alignment Problem, etc.) should be set to 'calculated', which will cause the node's agreement state to be determined by its sub-nodes. Use 'none' when the answer to this node should have no impact on its parent node (used for the "Why these systems might come soon" and "Let's move on" options in Generally Capable AI Systems/More Than 50 Years). There's also one 'undecidedOverride' special case (possibly to be renamed later), for setting the agreement state back to 'undecided' (i.e. default gray), currently used only for the agreement checkbox on the Generally Capable AI Systems/Never page, which sets its parent 'Never' node to undecided.
+**effect**: 'agree'|'disagree'|'calculated'|'undecidedOverride' (optional, default 'disagree'). This determines what it means to agree with this node, when clicked as a checkbox ('agree'|'disagree'). Agree/Disagree effects might be propagated to parent nodes, depending on other options. Top-level arguments (Generally Capable AI Systems, The Alignment Problem, etc.) should be set to 'calculated', which will cause the node's agreement state to be determined by its sub-nodes. There's also one 'undecidedOverride' special case (possibly to be renamed later), for setting the agreement state back to 'undecided' (i.e. default gray), currently used only for the agreement checkbox on the Generally Capable AI Systems/Never page, which sets its parent 'Never' node to undecided.
 
 **question**: string (optional). The question that should be asked at the bottom of the page, above the checkboxes, e.g. 'Do you agree that biology is probably not essential for general intelligence?'. If it's not supplied, it defaults to "Do you find the above arguments convincing?".
 
@@ -53,13 +54,17 @@ These are all the available options:
 
 **nodes**: (list, optional). A list of nodes that descend from this one (optional). If supplied, they'll be displayed as checkbox options at the bottom of the argument page content (unless their `isCheckboxOption` parameter is set to false). If no nodes are supplied, Yes/No checkboxes will be shown instead (unless `askQuestion` is set to false).
 
+**propagateAgreement**: boolean (optional, default true). Determines whether selecting this node's checkbox affects the parent's agreement state. Usually this is desirable, but not for Generally Capable AI Systems/More Than 50 Years/Why These Systems Might Come Soon, where disagreeing with that shouldn't affect agreement with More Than 50 Years.
+
+**parentListingType**: 'checkbox'|'button' (optional, default 'checkbox'). Determines whether the parent node displays this nodes as a checkbox or a button. Currently, only the nodes under Generally Capable AI Systems/More Than 50 Years are buttons.
+
 **linkName**: (string, optional). When you check a checkbox, a link usually appears below so you can learn more about the topic. The text of the link is usually the `name` of the node, but you can override that by setting `linkName`. This is used for 'Agree' checkboxes under top-level arguments that display links to the next top-level argument page.
 
 **delegateCheckboxes**: boolean (optional, default false). Usually, a node's sub-nodes are listed as checkboxes on the node's page. On most top-level argument pages (The Alignment Problem, Instrumental Incentives, etc.), the argument map shows two subnodes (Agree and Disagree), but we want to list all the disagreement options on the main page. Set delegateCheckboxes to true to make the sub-node's sub-nodes be listed on the parent's page. (Currently, this is always used with the `isCheckboxOption` setting, and should possibly be combined with it.)
 
 **isCheckboxOption**: boolean (optional, default true). Usually a node's sub-nodes should be listed as checkboxes on the node's page. On most top-level argument pages (The Alignment Problem, Instrumental Incentives, etc.), the argument map shows two subnodes (Agree and Disagree), but the Disagree node isn't actually a selectable checkbox node (its sub-nodes are delegated as checkboxes instead with the `delegateCheckboxes`). So set `isCheckboxOption` to false to make a node not be listed as a checkbox on its parent page.
 
-**nodeLinkUrl**: (string, optional). What URL to navigate to if the user clicks on this node in the argument map. (Use this when the node has no `url` because it doesn't correspond to a page.)
+**nodeLinkUrl**: string (optional). What URL to navigate to if the user clicks on this node in the argument map. (Use this when the node has no `url` because it doesn't correspond to a page.)
 
 **agreeTargetUrl**: (string, optional). Usually, a node's checkbox affects the agreement state of its URL, whether you click it on its parent page (e.g. clicking "We would test it before deploying" on "The Alignment Problem" main page) or on its own page (e.g. clicking "Yes" or "No" on the checkboxes at the end of the "We would test before deploying" page). When a node doesn't directly represent a page (e.g. the Agree node under The Alignment Problem, which represents a checkbox and an item node but isn't a page you can navigate to), set the `agreeTargetUrl` to the `url` of the node the agreement effect should be applied to.
 
@@ -89,14 +94,14 @@ It should look a bit like this:
         - node:
           name: Why these systems might come soon
           text: Yes, I would like to hear these arguments for why AGI might come soon
+          propagateAgreement: false
           url: /arguments/agisooner
-          overridesSiblings: true
+          parentListingType: button
         - node:
           name: Moving on to potential risks
           text: No, let’s move on - I want to learn about potential risks
           url: /arguments/goto-potential-risk
-          effect: none
-          overridesSiblings: true
+          parentListingType: button
           askQuestion: false
     - node:
       name: Never

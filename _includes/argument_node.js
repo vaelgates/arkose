@@ -11,7 +11,10 @@
   {% if argument.nodeLinkUrl != nil %}nodeLinkUrl : `{{argument.nodeLinkUrl}}`,{% endif -%}
   {% if argument.agreeTargetUrl != nil %}agreeTargetUrl : `{{argument.agreeTargetUrl}}`,{% endif -%}
   {% if argument.askQuestion != nil %}askQuestion : {{argument.askQuestion}},{% endif -%}
-  {% if argument.overridesSiblings != nil %}overridesSiblings : {{argument.overridesSiblings}},{% endif -%}
+  {% if argument.parentListingType != nil %}parentListingType : `{{argument.parentListingType}}`,{% endif -%}
+  {% if argument.overridesSiblings != nil %}overridesSiblings : `{{argument.overridesSiblings}}`,{% endif -%}
+  {% if argument.propagateAgreement != nil %}propagateAgreement : {{argument.propagateAgreement}},{% endif -%}
+  {% if argument.linkName != nil %}linkName : `{{argument.linkName}}`,{% endif -%}
   {% if argument.listInTree != nil %}listInTree : {{argument.listInTree}},{% endif -%}
   {% if argument.question != nil %}question : `{{argument.question}}`,{% endif -%}
   {% if argument.isCheckboxOption != nil %}isCheckboxOption : {{argument.isCheckboxOption}},{% endif -%}

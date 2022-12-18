@@ -39,7 +39,9 @@ class Argument {
     this.agreeTargetUrl = params.agreeTargetUrl
     this.question = params.question
     this.askQuestion = params.askQuestion ?? true
-    this.overridesSiblings = params.overridesSiblings
+    this.overridesSiblings = params.overridesSiblings ?? false
+    this.parentListingType = params.parentListingType ?? 'checkbox'
+    this.propagateAgreement = params.propagateAgreement ?? true
     this.listInTree = params.listInTree ?? true
     this.isCheckboxOption = params.isCheckboxOption ?? true
     this.delegateCheckboxes = params.delegateCheckboxes
@@ -59,7 +61,7 @@ class Argument {
     }
 
     this.colorSelfNode()
-    
+
     if (propagateFurther) {
       if (agreement !== 'undecided') this.overrideSiblingsIfNeeded(agreement)
       if (this.effect !== 'none') this.propagateUp(agreement)
@@ -165,6 +167,7 @@ class Argument {
 
   propagateUp(agreement) {
     if (!this.parent) return
+    if (!this.propagateAgreement) return
 
     const siblingsAgreement = this.siblingsAgreement()
     if (agreement === 'undecided' && this.parent?.parent?.effect === 'calculated' && siblingsAgreement === 'conflict') return

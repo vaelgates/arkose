@@ -55,18 +55,30 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
     const checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
     const effect = subArgument.effect || 'disagree'
     const checked = subArgument.getAgreement() === effect
-    $('<input />', {
-      type: 'checkbox',
-      id: `cb_${id}`,
-      'data-url': subArgument.url || subArgument.agreeTargetUrl,
-      'data-effect': subArgument.effect || 'disagree',
-      value: id,
-      checked
-    }).appendTo(checkboxes);
-    $('<label />', {
-      'for': `cb_${id}`,
-      text: subArgument.text || subArgument.name,
-    }).appendTo(checkboxes);
+    if (subArgument.parentListingType === 'checkbox') {
+      $('<input />', {
+        type: 'checkbox',
+        id: `cb_${id}`,
+        'data-url': subArgument.agreeTargetUrl || subArgument.url,
+        'data-effect': subArgument.effect || 'disagree',
+        value: id,
+        checked
+      }).appendTo(checkboxes);
+      $('<label />', {
+        'for': `cb_${id}`,
+        text: subArgument.text || subArgument.name,
+      }).appendTo(checkboxes);
+    } else if (subArgument.parentListingType === 'button') {
+      $('<a />', {
+        id: `button_${id}`,
+        class: 'answer-button-link',
+        'href': `${window.site_baseurl}` + subArgument.url,
+        'data-url': subArgument.url,
+        'data-effect': subArgument.effect || 'disagree',
+        value: id,
+        text: subArgument.text || subArgument.name,
+      }).appendTo(checkboxes);
+    }
   }
 }
 
@@ -77,7 +89,7 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
     id: `cb_yes`,
     value: 'yes',
     'data-effect': 'agree',
-    'data-url': argument.url || argument.agreeTargetUrl,
+    'data-url': argument.agreeTargetUrl || argument.url,
     checked: argument.agreement === 'agree'
   }).appendTo(checkboxes);
   $('<label />', {
@@ -91,7 +103,7 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
     id: `cb_no`,
     value: 'no',
     'data-effect': 'disagree',
-    'data-url': argument.url || argument.agreeTargetUrl,
+    'data-url': argument.agreeTargetUrl || argument.url,
     checked: argument.agreement === 'disagree'
   }).appendTo(checkboxes);
   $('<label />', {
@@ -114,6 +126,7 @@ function insertSubargumentLinks(argument) {
   if (argument.checkboxArguments().length > 0) {
     $('<h2>Want to read more on these topics?</h2>').appendTo(links);
     for (const subArgument of argument.checkboxArguments()) {
+      if (subArgument.type === 'button') continue
       const id = toId(subArgument.name)
       const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
       const displayStyle = visibility ? 'block' : 'none'
@@ -201,7 +214,7 @@ function insertAnswerSection(path) {
     const checkbox = $(event.currentTarget).find('input')
     checkbox.prop('checked', !checkbox.prop('checked')).change()
   })
-  $('.answer-link').on('click', linkClick)
+  $('.answer-link, .answer-button-link').on('click', linkClick)
 }
 
 function toggleFeedback() {
@@ -354,9 +367,6 @@ function initPage() {
 
   $('a[href="#feedback"]').on('click', () => {
     toggleFeedback();
-    window.setTimeout(() => {
-      window.history.replaceState({}, '', window.url);
-    },1)
   })
 
   Cognito.prefill({
