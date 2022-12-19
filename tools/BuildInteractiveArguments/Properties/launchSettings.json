@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BuildInteractiveArguments": {
+      "commandName": "Project",
+      "workingDirectory": "J:\\EA\\AIRD\\aird\\tools\\BuildInteractiveArguments"
+    }
+  }
+}
