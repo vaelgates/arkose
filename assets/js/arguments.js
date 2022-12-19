@@ -17,10 +17,6 @@ function html_asset_path(path) {
   }`
 }
 
-function toId(s) {
-  return s.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '_')
-}
-
 /* hideOldStuff can be removed after updating the script to not include the questions at the end of each page,
     but to instead include them in arguments.yml */
 function hideOldStuff(argument) {
@@ -51,31 +47,30 @@ function insertTitleQuestion(argument) {
 
 function insertSubargumentCheckboxes(checkboxesSection, argument) {
   for (const subArgument of argument.checkboxArguments()) {
-    const id = toId(subArgument.name)
     const checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
     const effect = subArgument.effect || 'disagree'
     const checked = subArgument.getAgreement() === effect
     if (subArgument.parentListingType === 'checkbox') {
       $('<input />', {
         type: 'checkbox',
-        id: `cb_${id}`,
+        id: `cb_${subArgument.nameAsId()}`,
         'data-url': subArgument.agreeTargetUrl || subArgument.url,
         'data-effect': subArgument.effect || 'disagree',
-        value: id,
+        value: subArgument.nameAsId(),
         checked
       }).appendTo(checkboxes);
       $('<label />', {
-        'for': `cb_${id}`,
+        'for': `cb_${subArgument.nameAsId()}`,
         text: subArgument.text || subArgument.name,
       }).appendTo(checkboxes);
     } else if (subArgument.parentListingType === 'button') {
       $('<a />', {
-        id: `button_${id}`,
+        id: `button_${subArgument.nameAsId()}`,
         class: 'answer-button-link',
         'href': `${window.site_baseurl}` + subArgument.url,
         'data-url': subArgument.url,
         'data-effect': subArgument.effect || 'disagree',
-        value: id,
+        value: subArgument.nameAsId(),
         text: subArgument.text || subArgument.name,
       }).appendTo(checkboxes);
     }
@@ -127,13 +122,12 @@ function insertSubargumentLinks(argument) {
     $('<h2>Want to read more on these topics?</h2>').appendTo(links);
     for (const subArgument of argument.checkboxArguments()) {
       if (subArgument.type === 'button') continue
-      const id = toId(subArgument.name)
       const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
       const displayStyle = visibility ? 'block' : 'none'
       const link = $(`<a />`, {
         class: 'answer-link',
         style: `display: ${displayStyle}`,
-        id: `link_${id}`,
+        id: `link_${subArgument.nameAsId()}`,
         href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
         'data-url': subArgument.answerLinkUrl || subArgument.url
       }).appendTo(links);
@@ -144,14 +138,13 @@ function insertSubargumentLinks(argument) {
 }
 
 function insertGoBackLink(argument) {
-  const argParent = getArgumentParent(args, argument)
-  if (!argParent) return
+  if (!argument.parent) return
   
   const link = $(`<a />`, {
     class: 'go-back-link',
-    href: `${window.site_baseurl}` + argParent.url,
-    'data-url': argParent.url,
-    title: argParent.name
+    href: `${window.site_baseurl}` + argument.parent.url,
+    'data-url': argument.parent.url,
+    title: argument.parent.name
   }).appendTo($('.page-content'));
   $('<span />', {html: '➥ Go back'}).appendTo(link)
 }
@@ -230,8 +223,7 @@ function pulseFeedbackButton() {
 
 function updateSidebar(path) {
   const argument = Argument.findArgumentByPath(args, path);
-  const rootArgument = getArgumentRoot(argument);
-  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${window.site_baseurl}${rootArgument.url}']`).parent()
+  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${window.site_baseurl}${argument.rootArgument().url}']`).parent()
   $('.argument-branch-sidebar').empty()
   argumentSection.clone().appendTo($('.argument-branch-sidebar'))
 }
@@ -260,7 +252,7 @@ function recordAnswer(url, agreement) {
   const argument = Argument.findArgumentByPath(args, url)
   argument.setAgreement(agreement)
   saveAnswers()
-  updateSubSubArgumentVisibility()
+  Argument.updateSubSubArgumentVisibility()
 }
 
 function saveAnswers() {
@@ -306,43 +298,6 @@ function recursiveAttachAnswers(currentArguments, answers) {
 }
 
 
-function getArgumentParent(currentArguments, argumentToFind) {
-  for (const argument of currentArguments) {
-    if (argument.subArguments?.length > 0) {
-      if (argument.subArguments.find((arg) => arg.url === argumentToFind.url))
-        return argument
-
-      const argParent = getArgumentParent(argument.subArguments, argumentToFind)
-      if (argParent) return argParent;
-    }
-  }
-  return null
-}
-
-function getArgumentRoot(argumentToFind) {
-  let argAncestor = argumentToFind
-  while (true) {
-    const nextAncestor = getArgumentParent(args, argAncestor)
-    if (nextAncestor) {
-      argAncestor = nextAncestor
-    } else {
-      break
-    }
-  }
-  return argAncestor
-}
-
-function updateSubSubArgumentVisibility() {
-  for (const subSection of $('.sub-sub-argument')) {
-    let subNodesNotable = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
-    subNodesNotable += $(subSection).siblings('.argument-shape-link.agree, .argument-shape-link.disagree').length
-    if (subNodesNotable > 0) {
-      $(subSection).show()
-    } else {
-      $(subSection).hide()
-    }
-  }
-}
 
 function transformRootArgumentLinks() {
   for (const a of $('.nav-answer-links a, .page-content a')) {
@@ -364,7 +319,7 @@ function initPage() {
   }
 
   loadAnswers()
-  updateSubSubArgumentVisibility()
+  Argument.updateSubSubArgumentVisibility()
 
   $('body').on('click', '.root-argument, .argument-shape-link', (event) => {
     event.preventDefault();
