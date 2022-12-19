@@ -1,4 +1,8 @@
-require 'byebug'
+begin
+  require 'byebug'
+rescue LoadError
+  # The 'byebug' gem is not strictly necessary for running this
+end
 
 files = Dir.entries('../arguments').select { |f| f.index('.html') }
 
