@@ -15,14 +15,25 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/aird/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-<script>
-	// this checks for session storage telling to override
-	// the system preferences
-	let theme = sessionStorage.getItem('theme');
-	if (theme === "dark") {
-		document.documentElement.setAttribute('data-theme', 'dark');
-	} else if (theme === "light") {
-		document.documentElement.setAttribute('data-theme', 'light');
-	}
-</script>
+	<script>
+		// this checks for session storage telling to override
+		// the system preferences
+		let theme = sessionStorage.getItem('theme');
+		if (theme === "dark") {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		} else if (theme === "light") {
+			document.documentElement.setAttribute('data-theme', 'light');
+		}
+	</script>
+	<!-- Hotjar Tracking Code for https://michaelkeenan.github.io/aird/ -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 3294690, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
 </head>
