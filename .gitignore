@@ -8,3 +8,6 @@ Gemfile.lock
 .jekyll-cache
 build_on_windows.bat
 .DS_Store
+.vs/
+tools/BuildInteractiveArguments/bin/
+tools/BuildInteractiveArguments/obj/

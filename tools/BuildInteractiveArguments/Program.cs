@@ -34,21 +34,6 @@ class Program
 	{
 
 
-		// TODO:
-		// keenan:
-
-		// sub-list has too much margin beneath it (see test-level1.html wha thappens after the item "A33" in the test list)
-		// mobile usability
-		// can we have chapters on bottom?
-		// blinking on link navigation
-		// can we have some kind of box for the quotes?
-
-		// I removed float from figures, but now the figures fill the entire screen which isnt nice. What is your recommended html code for images, and how should I scale them?
-		// Lukas:
-		// goto folding
-		// abort if an url contains "," or "'"
-
-
 
 
 
