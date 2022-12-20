@@ -1,8 +1,8 @@
 - node:
   name: Generally capable AI systems
   url: /arguments/when-agi
-  effect: calculated
   text: Introduction - Generally capable API systems
+  effect: calculated
   question: When do you think these generally capable systems will exist?
   nodes:
     - node:
