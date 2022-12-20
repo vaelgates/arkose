@@ -48,7 +48,7 @@
 }
 
 .argument-container {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 .argument-shape-link {
   display: block;
@@ -75,6 +75,9 @@
       padding-right: 10px;
     }
   }
+  &:visited {
+    color: var(--color-visited);
+  }
   .argument-shape {
     display: inline-block;
     transform: scaleX(1.5) rotate(45deg);
@@ -82,16 +85,17 @@
     color: #bbc;
   }
   .argument-title {
-    max-width: 100px;
+    max-width: 75%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
-    font-size: 0.7em;
+    font-size: 0.8em;
     vertical-align: middle;
     position: absolute;
-    top: 4px;
-    left: 28px;
+    top: 2px;
+    left: 2em;
+    letter-spacing: .01em;
   }
   .sub-sub-argument {
     margin-left: 30px;
