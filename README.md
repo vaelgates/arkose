@@ -6,7 +6,7 @@ A Jekyll-based website based on the Forty Jekyll theme by HTML5 UP. To run it, c
 
 # Arguments
 
-In the arguments section, people are asked their views on arguments for AI x-risk Each page ends with checkboxes whether they agree or they disagree with that page's claims, and for what reasons. When they check a box, they're shown a link to further arguments addressing their concerns.
+In the arguments section, people are asked their views on arguments for AI x-risk. Each page ends with checkboxes for choosing whether they agree or they disagree with that page's claims, and for what reasons. When they check a box, they're shown a link to further arguments addressing their concerns.
 
 Metadata about the arguments is stored in `_data/arguments.yml`, which is explained further below.
 
@@ -28,10 +28,15 @@ Most nodes are all three. However, some nodes just represent an item of the argu
 The following options are complicated. It might help to first list the main cases, and which options are needed for each.
 
 **Top-level page**: name, url, effect (set to 'calculated'), question, nodes.
+
 **Regular leaf page arguing against an objection**: name, url, text, question (optional).
+
 **A checkbox option that shouldn't be listed in the argument tree**: name, text, effect, answerLinkUrl, agreeTargetUrl, listInTree
+
 **A 'Disagree' node that 'delegates' its checkbox sub-nodes to its parent**: name, effect, nodeLinkUrl, isCheckboxOption, delegateCheckboxes
+
 **An 'Agree' node that leads you to the next top-level argument**: name, linkName, text, effect, nodeLinkUrl, agreeTargetUrl, answerLinkUrl
+
 **Nodes that should be shown as buttons rather than checkboxes**: name, url, text, propagateAgreement, parentListingType
 
 These are all the available options:
