@@ -7,7 +7,7 @@ let args = []
 
 function html_asset_path(path) {
   const path_parts = path.match(/(\/aird\/)(.*)/);
-  if (!path_parts || path_parts.length < 3) 
+  if (!path_parts || path_parts.length < 3)
     throw `path mismatch for ${path}`
 
   return `${
@@ -139,14 +139,15 @@ function insertSubargumentLinks(argument) {
 
 function insertGoBackLink(argument) {
   if (!argument.parent) return
-  
+  const url = argument.parent.nodeLinkUrl || argument.parent.url
   const link = $(`<a />`, {
     class: 'go-back-link',
-    href: `${window.site_baseurl}` + argument.parent.url,
+    href: window.site_baseurl + url,
     'data-url': argument.parent.url,
     title: argument.parent.name
   }).appendTo($('.page-content'));
   $('<span />', {html: '➥ Go back'}).appendTo(link)
+  $(link).data('url', url)
 }
 
 function checkboxChange(event) {
@@ -172,17 +173,9 @@ function checkboxChange(event) {
 
 function isRootArgumentUrl(url) {
   for (const arg of args) {
-    if (arg.url === url) return true
+    if (arg.url === url || (`${window.site_baseurl}` + arg.url) === url) return true
   }
   return false
-}
-
-function linkClick(event) {
-  event.preventDefault();
-  const link = $(event.currentTarget)
-  const path = `${window.site_baseurl}` + link.data('url')
-  const scrollTop = isRootArgumentUrl(link.data('url'))
-  getHtml(path, true, true, scrollTop)
 }
 
 function insertAnswerSection(path) {
@@ -207,7 +200,6 @@ function insertAnswerSection(path) {
     const checkbox = $(event.currentTarget).find('input')
     checkbox.prop('checked', !checkbox.prop('checked')).change()
   })
-  $('.answer-link, .answer-button-link').on('click', linkClick)
 }
 
 function toggleFeedback() {
@@ -228,7 +220,16 @@ function updateSidebar(path) {
   argumentSection.clone().appendTo($('.argument-branch-sidebar'))
 }
 
-function getHtml(path, saveAddress = true, scrollIntoView = false, scrollTop = false) {
+function recordScrollPosition() {
+  localStorage.setItem(`scrollPos ${window.location.pathname}`, document.documentElement.scrollTop)
+}
+
+// scroll parameter can be 'into_view', 'top', 'history' or undefined.
+// into_view (used by most links to content pages) scrolls down to the content
+// top (used by links to root level arguments) scrolls to the top
+// history (used by Go Back links) scrolls to where they were last time they were on the page
+function getHtml(path, saveAddress = true, scrollParam) {
+  if (path !== window.location.href) recordScrollPosition()
   const html_path = html_asset_path(path)
   $.get(html_path).done(data => {
     $('.page-content').html(data);
@@ -240,10 +241,16 @@ function getHtml(path, saveAddress = true, scrollIntoView = false, scrollTop = f
     if (saveAddress)
       window.history.pushState({}, "", path);
 
-    if (scrollTop) {
-      $(document).scrollTop(0)
-    } else if (scrollIntoView) {
-      $('#argument_section')[0].scrollIntoView();
+    switch (scrollParam) {
+      case 'top':
+        $(document).scrollTop(0)
+        break;
+      case 'into_view':
+        $('#argument_section')[0].scrollIntoView();
+        break;
+      case 'history':
+        const scrollPos = localStorage.getItem(`scrollPos ${window.location.pathname}`) // eslint-disable-line
+        $(document).scrollTop(scrollPos)
     }
   })
 }
@@ -279,7 +286,7 @@ function loadAnswers() {
   recursiveAttachAnswers(args, answers)
   for (const [url, agreement] of Object.entries(answers)) {
     const argument = Argument.findArgumentByPath(args, url)
-    if (!argument) debugger
+    if (!argument) console.warn(`Couldn't find argument '${url}'`)
 
     const checkbox = $(`input[data-url='${url}']`)
     checkbox.prop('checked', true)
@@ -297,8 +304,6 @@ function recursiveAttachAnswers(currentArguments, answers) {
   }
 }
 
-
-
 function transformRootArgumentLinks() {
   for (const a of $('.nav-answer-links a, .page-content a')) {
     if (a.innerText.toLowerCase().match('go back')) continue
@@ -308,7 +313,7 @@ function transformRootArgumentLinks() {
     if (rootArgument) {
       $(a).addClass('root-argument')
       $(a).addClass(rootArgument.agreement)
-      $(a).data('url', `${window.site_baseurl}` + rootArgument.url)
+      $(a).data('url', rootArgument.url)
     }
   }
 }
@@ -321,10 +326,23 @@ function initPage() {
   loadAnswers()
   Argument.updateSubSubArgumentVisibility()
 
-  $('body').on('click', '.root-argument, .argument-shape-link', (event) => {
+  $('body').on('click', '.root-argument, .argument-shape-link, .answer-link, .answer-button-link', (event) => {
     event.preventDefault();
-    const path = $(event.currentTarget).data('url');
-    getHtml(path, true, true);
+    const link = $(event.currentTarget)
+    const path = `${window.site_baseurl}` + $(link).data('url');
+    let scrollParam
+    if (isRootArgumentUrl(link.data('url'))) {
+      scrollParam = 'top'
+    } else if (link.hasClass('answer-link') || link.hasClass('.answer-button-link')) {
+      scrollParam = 'into_view'
+    }
+    getHtml(path, true, scrollParam);
+  })
+  $('body').on('click', '.go-back-link', (event) => {
+    event.preventDefault();
+    const link = $(event.currentTarget)
+    const path = `${window.site_baseurl}` + $(link).data('url');
+    getHtml(path, true, 'history');
   })
 
   // Because we're messing with the address with window.history.pushState, when the user clicks the Back

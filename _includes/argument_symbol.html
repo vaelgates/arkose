@@ -1,5 +1,5 @@
 <div class="argument-container">
-  <a class="argument-shape-link {% if sub_argument.url == decoded_page_url %}active{% endif %}" href="{{site.baseurl}}{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-url="{{site.baseurl}}{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-effect="{{sub_argument.effect}}">
+  <a class="argument-shape-link {% if sub_argument.url == decoded_page_url %}active{% endif %}" href="{{site.baseurl}}{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-url="{{ sub_argument.url | default: sub_argument.nodeLinkUrl }}" data-effect="{{sub_argument.effect}}">
     <i class="icon fa-square argument-shape"></i>
     <span class="argument-title">{{sub_argument.name}}</span>
   </a>

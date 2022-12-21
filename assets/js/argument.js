@@ -162,8 +162,7 @@ class Argument {
   }
 
   colorSelfNode() {
-    const fullUrl = `${window.site_baseurl}${this.url}`
-    const argNodes = $(`a[data-url='${fullUrl}']`)
+    const argNodes = $(`a[data-url='${this.url}']`)
 
     for (const node of argNodes) {
       if (!$(node).data('effect') || $(node).data('effect') == this.getAgreement()) {
