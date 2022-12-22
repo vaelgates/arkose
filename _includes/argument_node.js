@@ -2,9 +2,9 @@
 
 {% assign decoded_page_url = argument.url | url_decode %}
 {
-  name: `{{argument.name}}`,
-  text: `{{argument.text}}`,
-  url: `{{decoded_page_url}}`,
+  {% if argument.name != nil %}name : `{{argument.name}}`,{% endif -%}
+  {% if argument.text != nil %}text : `{{argument.text}}`,{% endif -%}
+  {% if decoded_page_url != '' %}url: `{{decoded_page_url}}`,{% endif -%}
   {% if argument.linkName != nil %}linkName : `{{argument.linkName}}`,{% endif -%}
   {% if argument.effect != nil %}effect : `{{argument.effect}}`,{% endif -%}
   {% if argument.answerLinkUrl != nil %}answerLinkUrl : `{{argument.answerLinkUrl}}`,{% endif -%}

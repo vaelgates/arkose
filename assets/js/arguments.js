@@ -7,7 +7,7 @@ let args = []
 
 function html_asset_path(path) {
   const path_parts = path.match(/(\/aird\/)(.*)/);
-  if (!path_parts || path_parts.length < 3) 
+  if (!path_parts || path_parts.length < 3)
     throw `path mismatch for ${path}`
 
   return `${
@@ -46,11 +46,13 @@ function insertTitleQuestion(argument) {
 }
 
 function insertSubargumentCheckboxes(checkboxesSection, argument) {
+  const links = $('.nav-answer-links');
   for (const subArgument of argument.checkboxArguments()) {
     const checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
     const effect = subArgument.effect || 'disagree'
     const checked = subArgument.getAgreement() === effect
     if (subArgument.parentListingType === 'checkbox') {
+      // checkbox
       $('<input />', {
         type: 'checkbox',
         id: `cb_${subArgument.nameAsId()}`,
@@ -63,6 +65,18 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
         'for': `cb_${subArgument.nameAsId()}`,
         text: subArgument.text || subArgument.name,
       }).appendTo(checkboxes);
+
+      // answer link
+      const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
+      const visibilityClass = visibility ? 'visible' : ''
+      const link = $(`<a />`, {
+        class: `answer-link ${visibilityClass} link-${subArgument.nameAsId()}`,
+        href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
+        'data-url': subArgument.answerLinkUrl || subArgument.url
+      })
+      link.appendTo(checkboxes)
+      $('<span />', {html: subArgument.linkName}).appendTo(link)
+      link.clone().appendTo(links)
     } else if (subArgument.parentListingType === 'button') {
       $('<a />', {
         id: `button_${subArgument.nameAsId()}`,
@@ -108,45 +122,27 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
 }
 
 function insertCheckboxes(argument) {
+  $('.nav-answer-links').empty();
   const checkboxesSection = $('<ul />', {class: 'nav-answers'}).appendTo($('.page-content'));
   if (argument.checkboxArguments().length > 0) {
     insertSubargumentCheckboxes(checkboxesSection, argument)
   } else {
     insertYesNoCheckboxes(checkboxesSection, argument)
   }
-}
-
-function insertSubargumentLinks(argument) {
-  const links = $('<ul />', {class: 'nav-answer-links'}).appendTo($('.page-content'));
-  if (argument.checkboxArguments().length > 0) {
-    $('<h2>Want to read more on these topics?</h2>').appendTo(links);
-    for (const subArgument of argument.checkboxArguments()) {
-      if (subArgument.type === 'button') continue
-      const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
-      const displayStyle = visibility ? 'block' : 'none'
-      const link = $(`<a />`, {
-        class: 'answer-link',
-        style: `display: ${displayStyle}`,
-        id: `link_${subArgument.nameAsId()}`,
-        href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
-        'data-url': subArgument.answerLinkUrl || subArgument.url
-      }).appendTo(links);
-      $('<span />', {html: subArgument.linkName}).appendTo(link)
-    }
-    Argument.updateLinkSectionVisibility()
-  }
+  Argument.updateLinkSectionVisibility()
 }
 
 function insertGoBackLink(argument) {
   if (!argument.parent) return
-  
+  const url = argument.parent.nodeLinkUrl || argument.parent.url
   const link = $(`<a />`, {
     class: 'go-back-link',
-    href: `${window.site_baseurl}` + argument.parent.url,
+    href: window.site_baseurl + url,
     'data-url': argument.parent.url,
     title: argument.parent.name
   }).appendTo($('.page-content'));
   $('<span />', {html: '➥ Go back'}).appendTo(link)
+  $(link).data('url', url)
 }
 
 function checkboxChange(event) {
@@ -172,17 +168,9 @@ function checkboxChange(event) {
 
 function isRootArgumentUrl(url) {
   for (const arg of args) {
-    if (arg.url === url) return true
+    if (arg.url === url || (`${window.site_baseurl}` + arg.url) === url) return true
   }
   return false
-}
-
-function linkClick(event) {
-  event.preventDefault();
-  const link = $(event.currentTarget)
-  const path = `${window.site_baseurl}` + link.data('url')
-  const scrollTop = isRootArgumentUrl(link.data('url'))
-  getHtml(path, true, true, scrollTop)
 }
 
 function insertAnswerSection(path) {
@@ -195,7 +183,6 @@ function insertAnswerSection(path) {
 
   insertTitleQuestion(argument)
   insertCheckboxes(argument)
-  insertSubargumentLinks(argument)
   insertGoBackLink(argument)
 
   $('.nav-answers input').on('change', checkboxChange)
@@ -207,7 +194,6 @@ function insertAnswerSection(path) {
     const checkbox = $(event.currentTarget).find('input')
     checkbox.prop('checked', !checkbox.prop('checked')).change()
   })
-  $('.answer-link, .answer-button-link').on('click', linkClick)
 }
 
 function toggleFeedback() {
@@ -221,14 +207,23 @@ function pulseFeedbackButton() {
   }, 300)
 }
 
-function updateSidebar(path) {
+function updateBranchSidebar(path) {
   const argument = Argument.findArgumentByPath(args, path);
-  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${window.site_baseurl}${argument.rootArgument().url}']`).parent()
+  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${argument.rootArgument().url}']`).parent()
   $('.argument-branch-sidebar').empty()
   argumentSection.clone().appendTo($('.argument-branch-sidebar'))
 }
 
-function getHtml(path, saveAddress = true, scrollIntoView = false, scrollTop = false) {
+function recordScrollPosition() {
+  localStorage.setItem(`scrollPos ${window.location.pathname}`, document.documentElement.scrollTop)
+}
+
+// scroll parameter can be 'into_view', 'top', 'history' or undefined.
+// into_view (used by most links to content pages) scrolls down to the content
+// top (used by links to root level arguments) scrolls to the top
+// history (used by Go Back links) scrolls to where they were last time they were on the page
+function getHtml(path, saveAddress = true, scrollParam) {
+  if (path !== window.location.href) recordScrollPosition()
   const html_path = html_asset_path(path)
   $.get(html_path).done(data => {
     $('.page-content').html(data);
@@ -236,14 +231,20 @@ function getHtml(path, saveAddress = true, scrollIntoView = false, scrollTop = f
     $('.page-title').html(title);
     insertAnswerSection(path);
     transformRootArgumentLinks();
-    updateSidebar(path);
+    updateBranchSidebar(path);
     if (saveAddress)
       window.history.pushState({}, "", path);
 
-    if (scrollTop) {
-      $(document).scrollTop(0)
-    } else if (scrollIntoView) {
-      $('#argument_section')[0].scrollIntoView();
+    switch (scrollParam) {
+      case 'top':
+        $(document).scrollTop(0)
+        break;
+      case 'into_view':
+        $('#argument_section')[0].scrollIntoView();
+        break;
+      case 'history':
+        const scrollPos = localStorage.getItem(`scrollPos ${window.location.pathname}`) // eslint-disable-line
+        $(document).scrollTop(scrollPos)
     }
   })
 }
@@ -279,7 +280,7 @@ function loadAnswers() {
   recursiveAttachAnswers(args, answers)
   for (const [url, agreement] of Object.entries(answers)) {
     const argument = Argument.findArgumentByPath(args, url)
-    if (!argument) debugger
+    if (!argument) console.warn(`Couldn't find argument '${url}'`)
 
     const checkbox = $(`input[data-url='${url}']`)
     checkbox.prop('checked', true)
@@ -289,15 +290,13 @@ function loadAnswers() {
 function recursiveAttachAnswers(currentArguments, answers) {
   for (const argument of currentArguments) {
     if (answers[argument.url]) {
-      argument.setAgreement(answers[argument.url], false)
+      argument.setAgreement(answers[argument.url], false, false)
     }
     if (argument.subArguments?.length > 0) {
       recursiveAttachAnswers(argument.subArguments, answers)
     }
   }
 }
-
-
 
 function transformRootArgumentLinks() {
   for (const a of $('.nav-answer-links a, .page-content a')) {
@@ -308,7 +307,7 @@ function transformRootArgumentLinks() {
     if (rootArgument) {
       $(a).addClass('root-argument')
       $(a).addClass(rootArgument.agreement)
-      $(a).data('url', `${window.site_baseurl}` + rootArgument.url)
+      $(a).data('url', rootArgument.url)
     }
   }
 }
@@ -321,10 +320,23 @@ function initPage() {
   loadAnswers()
   Argument.updateSubSubArgumentVisibility()
 
-  $('body').on('click', '.root-argument, .argument-shape-link', (event) => {
+  $('body').on('click', '.root-argument, .argument-shape-link, .answer-link, .answer-button-link', (event) => {
     event.preventDefault();
-    const path = $(event.currentTarget).data('url');
-    getHtml(path, true, true);
+    const link = $(event.currentTarget)
+    const path = `${window.site_baseurl}` + $(link).data('url');
+    let scrollParam
+    if (isRootArgumentUrl(link.data('url'))) {
+      scrollParam = 'top'
+    } else if (link.hasClass('answer-link') || link.hasClass('.answer-button-link')) {
+      scrollParam = 'into_view'
+    }
+    getHtml(path, true, scrollParam);
+  })
+  $('body').on('click', '.go-back-link', (event) => {
+    event.preventDefault();
+    const link = $(event.currentTarget)
+    const path = `${window.site_baseurl}` + $(link).data('url');
+    getHtml(path, true, 'history');
   })
 
   // Because we're messing with the address with window.history.pushState, when the user clicks the Back
@@ -351,8 +363,11 @@ function initPage() {
     const y = window.scrollY;
     if (y + $('#header')[0].clientHeight > $('.argument-section')[0].offsetTop) {
       $('.argument-branch-sidebar').fadeIn()
+      $('.answer-links-sidebar').addClass('scrolled-into-view')
+      $('.answer-links-sidebar.has-links.scrolled-into-view').fadeIn()
     } else {
-      $('.argument-branch-sidebar').fadeOut()
+      $('.answer-links-sidebar').removeClass('scrolled-into-view')
+      $('.argument-branch-sidebar, .answer-links-sidebar').fadeOut()
     }
   });
 }
