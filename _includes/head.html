@@ -36,6 +36,7 @@
 			a.appendChild(r);
 		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 	</script>
+	{% if enable_tawk %}
 	<!--Start of Tawk.to Script-->
 		<script type="text/javascript">
 		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -49,4 +50,11 @@
 		})();
 		</script>
 	<!--End of Tawk.to Script-->
+	
+	window.Tawk_API = window.Tawk_API || {};
+window.Tawk_API.onStatusChange = function(status){
+
+	};
+	
+	{% endif %}
 </head>

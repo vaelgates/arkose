@@ -1,7 +1,11 @@
 - node:
+  name: Introduction
+  url: /arguments/introduction
+  effect: calculated
+- node:
   name: Generally capable AI systems
   url: /arguments/when-agi
-  text: Introduction - Generally capable API systems
+  text: Generally capable API systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
   nodes:
@@ -150,9 +154,6 @@
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
-        - node:
-          name: It would be simple to instruct the AI to try less hard
-          url: /arguments/aishould-try-less-hard
         - node:
           name: Consciousness won’t happen
           url: /arguments/no-self-preservation-without-consciousness
