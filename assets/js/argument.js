@@ -2,11 +2,13 @@
 
 class Argument {
   static updateLinkSectionVisibility() {
-    const visibleLinks = $('a.answer-link').filter((i, a) => $(a).css('display') !== 'none')
+    const visibleLinks = $('a.answer-link').filter((i, a) => $(a).hasClass('visible'))
     if (visibleLinks.length > 0) {
-      $('.nav-answer-links').show()
+      $('.answer-links-sidebar').addClass('has-links')
+      $('.answer-links-sidebar.has-links.scrolled-into-view').fadeIn()
     } else {
-      $('.nav-answer-links').hide()
+      $('.answer-links-sidebar').removeClass('has-links')
+      $('.answer-links-sidebar').fadeOut()
     }
   }
 
@@ -65,14 +67,14 @@ class Argument {
     }
   }
 
-  setAgreement(agreement, propagateFurther = true) {
+  setAgreement(agreement, propagateFurther = true, pulse = true) {
     if (agreement == 'undecided') {
       this.agreement = null
     } else {
       this.agreement = agreement
     }
 
-    this.colorSelfNode()
+    this.colorSelfNode(pulse)
 
     if (propagateFurther) {
       if (agreement !== 'undecided') this.overrideSiblingsIfNeeded(agreement)
@@ -85,12 +87,12 @@ class Argument {
       } else {
         $(checkbox).prop('checked', false)
       }
-      const linkId = `link_${checkbox.id.substr(3)}`;
-      const linkEl = $(`#${linkId}`)
+      const linkId = checkbox.id.substr(3);
+      const linkEl = $(`.link-${linkId}`)
       if ($(checkbox).prop('checked')) {
-        linkEl.css('display', 'block')
+        linkEl.addClass('visible')
       } else {
-        linkEl.hide()
+        linkEl.removeClass('visible')
       }
     }
     Argument.updateLinkSectionVisibility()
@@ -140,7 +142,6 @@ class Argument {
   }
 
   overrideYesNoSibling(agreement) {
-    // const yesNo = agreement === 'agree' ? 'no' : 'yes'
     const yesNo = agreement === 'undecided' ? 'no' : 'yes'
     const checkbox = $(`input[data-url='${this.url}'][value=${yesNo}]`)
     if (checkbox.prop('checked')) checkbox.prop('checked', false)
@@ -161,15 +162,22 @@ class Argument {
     return checkboxArgs.flat()
   }
 
-  colorSelfNode() {
+  colorSelfNode(pulse) {
     const argNodes = $(`a[data-url='${this.url}']`)
 
     for (const node of argNodes) {
+      const originalNodeClasses = node.classList.length
       if (!$(node).data('effect') || $(node).data('effect') == this.getAgreement()) {
         $(node).removeClass(['agree', 'disagree', 'none'])
         $(node).addClass(this.getAgreement())
       } else {
         $(node).removeClass(['agree', 'disagree', 'none'])
+      }
+      if (pulse && originalNodeClasses !== node.classList.length) {
+        $(node).addClass('pulse')
+        window.setTimeout(() => {
+          $(node).removeClass('pulse')
+        }, 100)
       }
     }
   }
@@ -190,11 +198,17 @@ class Argument {
       }, 'undecided')
   }
 
+  noNewDisagreementInConflict(agreement, siblingsAgreement) {
+    return (agreement !== 'disagree' && this.parent?.parent?.effect === 'calculated' && siblingsAgreement === 'conflict')
+  }
+
   propagateUp(agreement) {
     if (!this.parent) return
     if (!this.propagateAgreement) return
 
     const siblingsAgreement = this.siblingsAgreement()
+    if (this.noNewDisagreementInConflict(agreement, siblingsAgreement)) return
+
     if (agreement === 'undecided' && this.parent?.parent?.effect === 'calculated' && siblingsAgreement === 'conflict') return
     if (this.parent.effect === 'calculated' || this.parent.effect === siblingsAgreement) {
       const parentAgreement = siblingsAgreement === 'conflict' ? 'undecided' : siblingsAgreement

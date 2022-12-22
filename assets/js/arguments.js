@@ -46,11 +46,13 @@ function insertTitleQuestion(argument) {
 }
 
 function insertSubargumentCheckboxes(checkboxesSection, argument) {
+  const links = $('.nav-answer-links');
   for (const subArgument of argument.checkboxArguments()) {
     const checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
     const effect = subArgument.effect || 'disagree'
     const checked = subArgument.getAgreement() === effect
     if (subArgument.parentListingType === 'checkbox') {
+      // checkbox
       $('<input />', {
         type: 'checkbox',
         id: `cb_${subArgument.nameAsId()}`,
@@ -63,6 +65,18 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
         'for': `cb_${subArgument.nameAsId()}`,
         text: subArgument.text || subArgument.name,
       }).appendTo(checkboxes);
+
+      // answer link
+      const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
+      const visibilityClass = visibility ? 'visible' : ''
+      const link = $(`<a />`, {
+        class: `answer-link ${visibilityClass} link-${subArgument.nameAsId()}`,
+        href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
+        'data-url': subArgument.answerLinkUrl || subArgument.url
+      })
+      link.appendTo(checkboxes)
+      $('<span />', {html: subArgument.linkName}).appendTo(link)
+      link.clone().appendTo(links)
     } else if (subArgument.parentListingType === 'button') {
       $('<a />', {
         id: `button_${subArgument.nameAsId()}`,
@@ -108,33 +122,14 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
 }
 
 function insertCheckboxes(argument) {
+  $('.nav-answer-links').empty();
   const checkboxesSection = $('<ul />', {class: 'nav-answers'}).appendTo($('.page-content'));
   if (argument.checkboxArguments().length > 0) {
     insertSubargumentCheckboxes(checkboxesSection, argument)
   } else {
     insertYesNoCheckboxes(checkboxesSection, argument)
   }
-}
-
-function insertSubargumentLinks(argument) {
-  const links = $('<ul />', {class: 'nav-answer-links'}).appendTo($('.page-content'));
-  if (argument.checkboxArguments().length > 0) {
-    $('<h2>Want to read more on these topics?</h2>').appendTo(links);
-    for (const subArgument of argument.checkboxArguments()) {
-      if (subArgument.type === 'button') continue
-      const visibility = subArgument.getAgreement() === (subArgument.effect || 'disagree')
-      const displayStyle = visibility ? 'block' : 'none'
-      const link = $(`<a />`, {
-        class: 'answer-link',
-        style: `display: ${displayStyle}`,
-        id: `link_${subArgument.nameAsId()}`,
-        href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
-        'data-url': subArgument.answerLinkUrl || subArgument.url
-      }).appendTo(links);
-      $('<span />', {html: subArgument.linkName}).appendTo(link)
-    }
-    Argument.updateLinkSectionVisibility()
-  }
+  Argument.updateLinkSectionVisibility()
 }
 
 function insertGoBackLink(argument) {
@@ -188,7 +183,6 @@ function insertAnswerSection(path) {
 
   insertTitleQuestion(argument)
   insertCheckboxes(argument)
-  insertSubargumentLinks(argument)
   insertGoBackLink(argument)
 
   $('.nav-answers input').on('change', checkboxChange)
@@ -213,9 +207,9 @@ function pulseFeedbackButton() {
   }, 300)
 }
 
-function updateSidebar(path) {
+function updateBranchSidebar(path) {
   const argument = Argument.findArgumentByPath(args, path);
-  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${window.site_baseurl}${argument.rootArgument().url}']`).parent()
+  const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${argument.rootArgument().url}']`).parent()
   $('.argument-branch-sidebar').empty()
   argumentSection.clone().appendTo($('.argument-branch-sidebar'))
 }
@@ -237,7 +231,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
     $('.page-title').html(title);
     insertAnswerSection(path);
     transformRootArgumentLinks();
-    updateSidebar(path);
+    updateBranchSidebar(path);
     if (saveAddress)
       window.history.pushState({}, "", path);
 
@@ -296,7 +290,7 @@ function loadAnswers() {
 function recursiveAttachAnswers(currentArguments, answers) {
   for (const argument of currentArguments) {
     if (answers[argument.url]) {
-      argument.setAgreement(answers[argument.url], false)
+      argument.setAgreement(answers[argument.url], false, false)
     }
     if (argument.subArguments?.length > 0) {
       recursiveAttachAnswers(argument.subArguments, answers)
@@ -369,8 +363,11 @@ function initPage() {
     const y = window.scrollY;
     if (y + $('#header')[0].clientHeight > $('.argument-section')[0].offsetTop) {
       $('.argument-branch-sidebar').fadeIn()
+      $('.answer-links-sidebar').addClass('scrolled-into-view')
+      $('.answer-links-sidebar.has-links.scrolled-into-view').fadeIn()
     } else {
-      $('.argument-branch-sidebar').fadeOut()
+      $('.answer-links-sidebar').removeClass('scrolled-into-view')
+      $('.argument-branch-sidebar, .answer-links-sidebar').fadeOut()
     }
   });
 }
