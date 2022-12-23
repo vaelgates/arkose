@@ -196,7 +196,6 @@
   nodes:
     - node:
       name: Agree
-      linkName: Instrumental Incentives
       text: Yes, safety work is important
       effect: agree
       nodeLinkUrl: /arguments/the-importance-of-more-safety-work
