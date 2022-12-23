@@ -170,9 +170,6 @@
         - node:
           name: This won’t be a problem, we will have human oversight
           url: /arguments/human-oversight
-        - node:
-          name: AI could be a big deal
-          url: /arguments/ai-could-be-a-big-deal
 - node:
   name: Threat Models - how might AGI be dangerous?
   url: /arguments/threat-models
