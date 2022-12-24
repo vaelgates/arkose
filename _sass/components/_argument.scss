@@ -13,10 +13,10 @@
 }
 
 .argument-branch-sidebar {
-  max-width: 200px;
+  max-width: 280px;
   position: fixed;
-  top: 70px;
-  left: 8px;
+  top: 90px;
+  left: calc(50% - 770px);
   display: none;
 }
 
@@ -126,7 +126,7 @@
 #main.argument {
   .inner {
     padding-top: 2em;
-    margin: 0 12em;
+    margin: 0 auto;
   }
   .major h1 {
     line-height: 1.25;
@@ -250,7 +250,7 @@
   width: 220px;
   position: fixed;
   top: 70px;
-  right: 8px;
+  right: calc(50% - 700px);
   h2 {
     margin-bottom: 0.25em;
   }
@@ -288,9 +288,29 @@ em {
   max-width: 80px;
 }
 
+@include breakpoint(xlarge) {
+  #main.argument .inner {
+    margin: 0 calc(25%);
+    width: calc(55%);
+  }
+  .argument-branch-sidebar {
+    max-width: 280px;
+    left: 28px;
+  }
+  .answer-links-sidebar {
+    width: 200px;
+    right: calc(35% - 430px);
+  }
+}
+
 @include breakpoint(large) {
   #main.argument .inner {
     padding-left: 110px;
+    margin: 0 12em;
+  }
+  .argument-branch-sidebar {
+    max-width: 200px;
+    left: 8px
   }
   .answer-links-sidebar {
     display: none !important;
