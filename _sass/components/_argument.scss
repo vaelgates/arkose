@@ -32,12 +32,12 @@
     color: var(--color-fg) !important;
   }
   &.agree {
-    background-color: #8d8;
-    border: #53ce53
+    background-color: var(--color-agree);
+    border: 1px solid var(--color-agree-border);
   }
   &.disagree {
-    background-color: #d88;
-    border: #ce5353;
+    background-color: var(--color-disagree);
+    border: 1px solid var(--color-disagree-border);
   }
 }
 .nav-answer-links .answer-link.root-argument, .page-content .root-argument {
@@ -60,10 +60,10 @@
     opacity: 0.5;
   }
   &.agree .argument-shape {
-    color: #8d8;
+    color: var(--color-agree);
   }
   &.disagree .argument-shape {
-    color: #d88;
+    color: var(--color-disagree);
   }
   &:hover {
     color: var(--color-fg) !important;
@@ -100,6 +100,10 @@
     top: 2px;
     left: 2em;
     letter-spacing: .01em;
+  }
+  &.active .argument-title {
+    color: var(--color-active-link);
+    font-weight: bold;
   }
   .sub-sub-argument {
     margin-left: 30px;
@@ -180,19 +184,47 @@
     width: 13px;
     display: inline-block;
   }
-  li label, li a.answer-button-link {
-    display: block;
-    background-color: #def;
+  li {
+    margin-bottom: 0.5em;
+  }
+  li a.answer-button-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-accent1);
     padding-bottom: 0.1em;
     padding-left: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     border-radius: 5px;
+    opacity: 0.8;
+    text-transform: none;
+    letter-spacing: .025em;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  li label {
+    width: 100%;
+    background-color: var(--color-answer);
+    margin-bottom: 0;
+    padding-bottom: 0.1em;
+    padding-left: 0.5em;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     text-transform: none;
     letter-spacing: .025em;
     font-size: 1rem;
     cursor: pointer;
     &:hover {
       filter: brightness(0.95);
+    }
+    &.yes-no {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
   }
   li label {
@@ -213,23 +245,48 @@
   li a.answer-button-link {
     text-decoration: none;
     border: 1px solid #bcd;
-    &:after {
-      content: '▶';
-      float: right;
-      margin-top: 2px;
-      margin-right: 5px;
+  }
+  input[type="checkbox"]+label {
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: 0.3s padding;
+  }
+  input[type="checkbox"]:checked+label.has-link {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  input[type="checkbox"]:checked+label+.answer-link, .answer-button-link+.answer-link {
+    width: 39px;
+    i {
+      display: inline;
     }
   }
 }
 
+.answer-label-link-container {
+  display: flex;
+  align-items: stretch;
+}
 .answer-link {
-  display: none;
+  width: 0;
   cursor: pointer;
   border-bottom: none;
-  margin-bottom: 0.6em;
   line-height: 1.4em;
-  span {
-    border-bottom: 1px dotted var(--color-fg);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--color-accent1);
+  color: var(--color-fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: 0.3s width;
+  i {
+    display: none;
+    font-size: 80%;
+  }
+  &:hover {
+    opacity: 1;
   }
 }
 .answer-link-button {
@@ -242,24 +299,6 @@
   span {
     padding: 0 1ch;
     border: none;
-  }
-}
-
-.answer-links-sidebar {
-  display: none;
-  width: 220px;
-  position: fixed;
-  top: 70px;
-  right: calc(50% - 700px);
-  h2 {
-    margin-bottom: 0.25em;
-  }
-  .nav-answer-links {
-    padding-left: 0;
-    font-size: 1rem;
-  }
-  .answer-link.visible {
-    display: block;
   }
 }
 
@@ -297,10 +336,6 @@ em {
     max-width: 280px;
     left: 28px;
   }
-  .answer-links-sidebar {
-    width: 200px;
-    right: calc(35% - 430px);
-  }
 }
 
 @include breakpoint(large) {
@@ -312,16 +347,13 @@ em {
     max-width: 200px;
     left: 8px
   }
-  .answer-links-sidebar {
-    display: none !important;
-  }
   .nav-answers .answer-link.visible {
-    display: block;
+    display: flex;
   }
 }
 
 @include breakpoint(medium) {
-  .argument-branch-sidebar, .answer-links-sidebar {
+  .argument-branch-sidebar {
     display: none !important;
   }
   #main.argument .inner {
@@ -346,5 +378,11 @@ em {
   }
   .site-section-header {
     text-align: right;
+  }
+}
+@include breakpoint(small) {
+  #main.argument .inner {
+    padding: 3em 0 1.5em 0;
+    width: calc(100% - 3em);
   }
 }

@@ -1,17 +1,6 @@
 /* eslint-env jquery */
 
 class Argument {
-  static updateLinkSectionVisibility() {
-    const visibleLinks = $('a.answer-link').filter((i, a) => $(a).hasClass('visible'))
-    if (visibleLinks.length > 0) {
-      $('.answer-links-sidebar').addClass('has-links')
-      $('.answer-links-sidebar.has-links.scrolled-into-view').fadeIn()
-    } else {
-      $('.answer-links-sidebar').removeClass('has-links')
-      $('.answer-links-sidebar').fadeOut()
-    }
-  }
-
   static findArgumentByPath(currentArguments, path) {
     for (const argument of currentArguments) {
       if (argument.url === path || `${window.site_baseurl}${argument.url}` === path) {
@@ -95,7 +84,6 @@ class Argument {
         linkEl.removeClass('visible')
       }
     }
-    Argument.updateLinkSectionVisibility()
   }
 
   getAgreement() {
