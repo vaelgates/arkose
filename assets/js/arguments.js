@@ -40,7 +40,7 @@ function insertTitleQuestion(argument) {
     if (argument.subArguments?.length > 0) {
       $('<h2>Do you agree?</h2>').appendTo($('.page-content'));
     } else {
-      $('<h2>Do you find the above arguments convincing?</h2>').appendTo($('.page-content'));
+      $('<h2>Do you find the arguments in this section convincing?</h2>').appendTo($('.page-content'));
     }
   }
 }
