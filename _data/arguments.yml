@@ -56,10 +56,6 @@
           url: /arguments/seems-weird
           text: I don’t know, but truly intelligent machines - that seems really weird
         - node:
-          name: The world doesn’t change that fast
-          url: /arguments/fast-changes
-          text: If we actually had a “scientist AI”, it would be a massive change in the world - and the world simply doesn’t change that fast
-        - node:
           name: AI will never be able to have true creativity
           url: /arguments/creativity
         - node:
@@ -117,6 +113,10 @@
           url: /arguments/careful-with-that-reward-function
           text: No - we would just be careful with our reward function
         - node:
+          name: Alignment is easy
+          url: /arguments/alignment-is-easy
+          text: No - Alignment is easy
+        - node:
           name: Our understanding of how to align systems will advance
           url: /arguments/alignment-advances-equally
           text: No -  as we build more capable systems, surely our understanding of how to align them will advance equally well
@@ -129,11 +129,13 @@
           url: /arguments/misuse-is-a-bigger-problem
           text: No – misuse is a bigger problem
         - node:
-          name: No – this is not as dangerous as other global risks
-          url: /arguments/this-is-not-as-dangerous-as-other-global-risks
+          name: This is not as dangerous as other global risks
+          url: /arguments/not-as-dangerous-as-other-global-risks
+          text: No – this is not as dangerous as other global risks
         - node:
-          name: No – humans have alignment problems too
+          name: Humans have alignment problems too
           url: /arguments/humans-have-alignment-problems-too
+          text: No – humans have alignment problems too
 - node:
   name: Instrumental Incentives
   url: /arguments/instrumental-incentives
@@ -181,7 +183,6 @@
   nodes:
     - node:
       name: Agree
-      linkName: Instrumental Incentives
       text: Yes, safety work is important
       effect: agree
       nodeLinkUrl: /arguments/the-importance-of-more-safety-work
@@ -207,9 +208,6 @@
         - node:
           name: Let’s build AI, worry about safety later
           url: /arguments/lets-build-worry-later
-        - node:
-          name: Alignment is easy - This will definitely be solved in time
-          url: /arguments/alignment-is-easy-this-will-definitely-be-solved-in-time
         - node:
           name: I don’t see how current safety work is useful
           url: /arguments/not-currently-tractable

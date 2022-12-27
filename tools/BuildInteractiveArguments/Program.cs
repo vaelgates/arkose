@@ -6,6 +6,7 @@ using Google.Apis.Docs.v1;
 using Google.Apis.Auth.OAuth2;
 using System.Security.Cryptography;
 using Google.Apis.Services;
+using System.Diagnostics;
 
 class Program
 {
@@ -16,7 +17,7 @@ class Program
 	/// <summary>
 	/// this is assuming that the folder tools\BuldInteractiveArguments is used as the scripts working directory
 	/// </summary>
-	static string baseDir = ".."+ Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
+	static string baseDir = Directory.GetCurrentDirectory()+"\\.."+ Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
 	static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 
 	static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
@@ -684,11 +685,19 @@ breadcrumbs: {breadcrumbs}
 		#endregion
 
 		// the following is not required if you use "bundle eec jekyll serve --watch"
-		//"Triggering Jekyll rebuild...".Dump();
-		//var proc=Process.Start("bundle", "exec jekyll build");
-		//proc.WaitForExit();
-		//if (proc.ExitCode!=0)
-		//	throw new InvalidOperationException("Jekyll build failed");
+		Console.WriteLine("Triggering Jekyll rebuild...");
+		var jekyll = Process.Start(new ProcessStartInfo("bundle", "exec jekyll build")
+		{
+			UseShellExecute = true
+		});
+		jekyll.WaitForExit();
+		if (jekyll.ExitCode != 0)
+			throw new InvalidOperationException("Jekyll build failed");
+
+		var moveArguments = Process.Start(new ProcessStartInfo("ruby", "move_arguments.rb") { UseShellExecute = true, WorkingDirectory=baseDir+"tools\\" });
+		moveArguments.WaitForExit();
+		if (moveArguments.ExitCode != 0)
+			throw new InvalidOperationException("move_arguments.rb failed");
 	}
 
 	Document GetParent(List<Document> outputFiles, Document of)
