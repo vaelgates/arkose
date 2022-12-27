@@ -111,6 +111,11 @@ class Argument {
     return this.parent.subArguments.filter(child => child !== this)
   }
 
+  nextSectionArgument() {
+    const thisSectionIndex = this.args.indexOf(this.rootArgument())
+    if (this.args[thisSectionIndex + 1]) return this.args[thisSectionIndex + 1]
+  }
+
   nameAsId() {
     return this.name.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '_')
   }

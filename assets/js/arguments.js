@@ -130,6 +130,20 @@ function insertCheckboxes(argument) {
   }
 }
 
+function insertNextSectionButton(argument) {
+  if (!argument.nextSectionArgument()) return
+  $(`<h3 />`, {
+    text: "I'm done with this section. Let's move on to the next section!"
+  }).appendTo($('.page-content'));
+  $(`<a />`, {
+    class: 'root-argument',
+    href: window.site_baseurl + argument.nextSectionArgument().url,
+    'data-url': argument.nextSectionArgument().url,
+    title: argument.nextSectionArgument().name,
+    text: argument.nextSectionArgument().name
+  }).appendTo($('.page-content'));
+}
+
 function insertGoBackLink(argument) {
   if (!argument.parent) return
   const url = argument.parent.nodeLinkUrl || argument.parent.url
@@ -177,10 +191,14 @@ function insertAnswerSection(path) {
     throw `Couldn't find argument for ${path}`;
 
   hideOldStuff(argument)
-  if (!argument.askQuestion) return
+  if (!argument.askQuestion) {
+    insertNextSectionButton(argument)
+    return
+  }
 
   insertTitleQuestion(argument)
   insertCheckboxes(argument)
+  insertNextSectionButton(argument)
   insertGoBackLink(argument)
 
   $('.nav-answers input').on('change', checkboxChange)
