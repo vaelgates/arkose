@@ -17,22 +17,6 @@ function html_asset_path(path) {
   }`
 }
 
-/* hideOldStuff can be removed after updating the script to not include the questions at the end of each page,
-    but to instead include them in arguments.yml */
-function hideOldStuff(argument) {
-  $('.nav-answers-old').hide();
-  $('.question').hide();
-
-  // Don't remove the links section if the page has no questions
-  if (!argument.askQuestion) return
-
-  for (let a of $('div a')) {
-    if (a.id === 'feedback_button') continue
-    if (a.childNodes.length <= 1 && a.parentNode.innerText.match(/➥|✉/))
-      $(a.parentNode).hide()
-  }
-}
-
 function insertTitleQuestion(argument) {
   if (argument.question) {
     $(`<h2>${argument.question}</h2>`).appendTo($('.page-content'));
@@ -132,8 +116,13 @@ function insertCheckboxes(argument) {
 
 function insertNextSectionButton(argument) {
   if (!argument.nextSectionArgument()) return
+  let text = "I'm done with this section. Let's move on to the next section!"
+  if (argument.name === 'Introduction') {
+    // unprincipled special case just for Introduction
+    text = "Let's begin!"
+  }
   $(`<h3 />`, {
-    text: "I'm done with this section. Let's move on to the next section!"
+    text
   }).appendTo($('.page-content'));
   $(`<a />`, {
     class: 'root-argument',
@@ -190,7 +179,6 @@ function insertAnswerSection(path) {
   if (!argument) 
     throw `Couldn't find argument for ${path}`;
 
-  hideOldStuff(argument)
   if (!argument.askQuestion) {
     insertNextSectionButton(argument)
     return
