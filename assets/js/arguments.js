@@ -250,6 +250,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
   $.get(html_path).done(data => {
     $('.page-content').html(data);
     const title = $('.page-content .page-data').data('page-title');
+    document.title = title
     $('.page-title').html(title);
     insertAnswerSection(path);
     transformRootArgumentLinks();
