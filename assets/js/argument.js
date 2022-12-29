@@ -18,6 +18,7 @@ class Argument {
   }
 
   static updateSubSubArgumentVisibility() {
+    const originalArgMapBottom = $('.argument-map')[0].offsetTop + $('.argument-map')[0].offsetHeight
     for (const subSection of $('.sub-sub-argument')) {
       let subNodesNotable = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
       subNodesNotable += $(subSection).siblings('.argument-shape-link.agree, .argument-shape-link.disagree').length
@@ -26,6 +27,15 @@ class Argument {
       } else {
         $(subSection).hide()
       }
+    }
+    const newArgMapBottom = $('.argument-map')[0].offsetTop + $('.argument-map')[0].offsetHeight
+
+    // if the argument map increased in height, and the argument map is within the current scroll view,
+    // scroll down by the amount the argument map's height increased, so the content stays in the same
+    // position.
+    if (newArgMapBottom > originalArgMapBottom && $(document).scrollTop() < newArgMapBottom) {
+      const argMapHeightIncrease = newArgMapBottom - originalArgMapBottom
+      window.scrollTo({ top: $(document).scrollTop() + argMapHeightIncrease, behavior: 'instant' })
     }
   }
 
@@ -109,6 +119,11 @@ class Argument {
     if (!this.parent) return []
 
     return this.parent.subArguments.filter(child => child !== this)
+  }
+
+  nextSectionArgument() {
+    const thisSectionIndex = this.args.indexOf(this.rootArgument())
+    if (this.args[thisSectionIndex + 1]) return this.args[thisSectionIndex + 1]
   }
 
   nameAsId() {
