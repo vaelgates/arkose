@@ -6,6 +6,10 @@
   padding: 10px;
   display: flex;
   gap: 10px;
+  justify-content: space-around;
+  font-size: 90%;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
   .argument-list {
     margin-left: 10px;
     margin-top: 4px;
@@ -25,7 +29,7 @@
   border: 1px solid #d0d0d0;
   border-radius: 5px;
   background-color: var(--color-header-bg);
-  padding: 6px;
+  padding: 2px 8px;
   cursor: pointer;
   &:hover {
     filter: brightness(1.05);
@@ -80,7 +84,9 @@
       z-index: 10;
       font-weight: bold;
       background-color:var(--color-bg);
-      padding-right: 10px;
+      padding-right: 4px;
+      padding-left: 4px;
+      margin-left: -4px;
     }
   }
   &:visited {
@@ -148,10 +154,6 @@
 
 .breadcrumbs {
   margin-bottom: 10px;
-}
-
-.argument-section {
-  // display: flex;
 }
 
 .inaccessible-argument {
@@ -319,6 +321,10 @@
 
 .feedback-button-pulsed {
   background-color: var(--color-accent1);
+}
+
+.page-content li {
+  margin-bottom: 0.6em;
 }
 
 em {

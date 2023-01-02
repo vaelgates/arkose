@@ -65,6 +65,7 @@
 
 		.theme-toggle-container {
 			width: 2em;
+			text-align: right;
 		}
 
 		// nav {
@@ -319,6 +320,9 @@
 		&.light {
 			opacity: 0.5;
 		}
+	}
+	#header nav>ul>li a.theme-toggle {
+		padding: 0;
 	}
 
 	#navPanel, #navButton {
