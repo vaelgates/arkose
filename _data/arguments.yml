@@ -6,6 +6,7 @@
 - node:
   name: Generally capable AI systems
   url: /arguments/when-agi
+  text: Timeline for development of generally capable AI systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
   nodes:
@@ -48,7 +49,7 @@
           agreeTargetUrl: /arguments/never
           listInTree: false # same justification as above
         - node:
-          name: There is something special about biology
+          name: Biology is special
           url: /arguments/biology-special
           text: There is something special about biology which we will never be able to put into machines
         - node:
@@ -56,22 +57,25 @@
           url: /arguments/seems-weird
           text: I don’t know, but truly intelligent machines—that seems really weird
         - node:
-          name: AI will never be able to have true creativity
+          name: No true creativity
           url: /arguments/creativity
+          text: AI will never be able to have true creativity
         - node:
           name: Would need to understand the brain first
           url: /arguments/understand-brain-first
           text: We would need to understand the brain first, and this is a big obstacle
         - node:
-          name: I don’t see a reason for us to even want that
+          name: We wouldn’t want that
           url: /arguments/we-dont-want-that
+          text: I don’t see a reason for us to even want that
         - node:
           name: Can’t see it based on current progress
           url: /arguments/cant-see-it-based-on-current-progress
           text: I can’t see it based on current progress
         - node:
-          name: An AI paradigm shift will be required
-          url: /arguments/an-ai-paradigm-shift-will-be-required
+          name: Need AI paradigm shift
+          url: /arguments/aiparadigm-shift-required
+          text: An AI paradigm shift will be required
         - node:
           name: People would stop this
           url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
@@ -105,11 +109,11 @@
       delegateCheckboxes: true
       nodes:
         - node:
-          name: We would test before deploying
+          name: Let’s test before deploying
           url: /arguments/test-before-deploying
           text: No - we would test it before deploying
         - node:
-          name: We would just be careful with our reward function
+          name: Just be careful with reward function
           url: /arguments/careful-with-that-reward-function
           text: No - we would just be careful with our reward function
         - node:
@@ -117,11 +121,11 @@
           url: /arguments/alignment-is-easy
           text: No - Alignment is easy
         - node:
-          name: Our understanding of how to align systems will advance
+          name: Alignment will progress automatically
           url: /arguments/alignment-advances-equally
           text: No -  as we build more capable systems, surely our understanding of how to align them will advance equally well
         - node:
-          name: Need to know what type of AGI before talking about safety
+          name: Need to know what type of AGI
           url: /arguments/need-to-know-what-type
           text: No – we need to know what type of AGI we will develop before we can talk about safety
         - node:
@@ -129,7 +133,7 @@
           url: /arguments/misuse-is-a-bigger-problem
           text: No – misuse is a bigger problem than accidental misalignment
         - node:
-          name: This is not as dangerous as other global risks
+          name: Other global risks are more dangerous
           url: /arguments/not-as-dangerous-as-other-global-risks
           text: No – this is not as dangerous as other global risks
         - node:
@@ -157,7 +161,7 @@
       delegateCheckboxes: true
       nodes:
         - node:
-          name: Consciousness won’t happen
+          name: Consciousness required
           url: /arguments/no-self-preservation-without-consciousness
           text: Consciousness won’t happen (and is required for self-preservation)
         - node:
@@ -167,11 +171,13 @@
           name: Current systems don’t do that
           url: /arguments/current-systems-dont-do-that
         - node:
-          name: We wouldn’t design it that way
+          name: Wouldn’t design it that way
           url: /arguments/wouldnt-design-that-way
+          text: We wouldn’t design it that way
         - node:
-          name: This won’t be a problem, we will have human oversight
+          name: Human Oversight
           url: /arguments/human-oversight
+          text: This won’t be a problem, we will have human oversight
 - node:
   name: Threat Models - how might AGI be dangerous?
   url: /arguments/threat-models
@@ -203,13 +209,15 @@
           url: /arguments/not-useful-currently
           text: Work on AGI safety is not useful because there is nothing we can do at the moment
         - node:
-          name: I’m not convinced this is urgent now
+          name: This is not urgent
           url: /arguments/not-urgent-currently
+          text: I’m not convinced this is urgent now
         - node:
-          name: Let’s build AI, worry about safety later
+          name: Worry about safety later
           url: /arguments/lets-build-worry-later
+          text: Let’s build AI, worry about safety later
         - node:
-          name: I don’t see how current safety work is useful
+          name: Current safety work isn’t useful
           url: /arguments/not-currently-tractable
           text: Yeah there are people working on this but I don’t understand why their work would be useful
 - node:
