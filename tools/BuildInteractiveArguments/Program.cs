@@ -68,7 +68,11 @@ class Program
 
 		var service = new DocsService(new BaseClientService.Initializer() { HttpClientInitializer = credential, ApplicationName = "AIRD Build Script" });
 
-		var doc = service.Documents.Get(documentsId).Execute();
+		var docReq = service.Documents.Get(documentsId);
+		docReq.SuggestionsViewMode = DocumentsResource.GetRequest.SuggestionsViewModeEnum.PREVIEWWITHOUTSUGGESTIONS;
+
+
+		var doc=docReq	.Execute();
 
 
 		bool encounteredStartMarker = false;
@@ -678,7 +682,7 @@ breadcrumbs: {breadcrumbs}
 			File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + pageFileExtension, of.JekyllFrontmatter + "\n" + of.OutLines);
 
 		}
-
+		
 		File.WriteAllText(argumentsYamlFile, GetYamlDataForTOC(outputFiles));
 
 
