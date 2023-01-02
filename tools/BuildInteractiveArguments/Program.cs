@@ -465,8 +465,8 @@ breadcrumbs: {breadcrumbs}
 					var trim = thisParagraph.HtmlText;
 					if (!trim.StartsWith("[") && !trim.EndsWith("]") && !trim.Contains("blockquote>"))
 					{
-						prefix = "<div>";
-						postfix = "</div>";
+						prefix = "<p>";
+						postfix = "</p>";
 						previousBulletLevel = null;
 					}
 					if (trim.StartsWith("q:")) // a question to the reader
@@ -480,8 +480,8 @@ breadcrumbs: {breadcrumbs}
 						of.Question = EverythingAfter(thisParagraph.HtmlText, "q:").Replace("single-choice:", "").Replace("multiple-choice", "").Replace("buttons:", "");
 
 
-						prefix = "<div><em>";
-						postfix = "</em></div>";
+						prefix = "<p><em>";
+						postfix = "</em></p>";
 						thisParagraph.HtmlText = "";
 					}
 				}
@@ -694,6 +694,7 @@ breadcrumbs: {breadcrumbs}
 		if (jekyll.ExitCode != 0)
 			throw new InvalidOperationException("Jekyll build failed");
 
+		Console.WriteLine("calling move_arguments.rb");
 		var moveArguments = Process.Start(new ProcessStartInfo("ruby", "move_arguments.rb") { UseShellExecute = true, WorkingDirectory=baseDir+"tools\\" });
 		moveArguments.WaitForExit();
 		if (moveArguments.ExitCode != 0)

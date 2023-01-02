@@ -1,16 +1,16 @@
 - node:
   name: Introduction
   url: /arguments/introduction
+  askQuestion: false
   effect: calculated
 - node:
   name: Generally capable AI systems
   url: /arguments/when-agi
-  text: Generally capable API systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
   nodes:
     - node:
-      name: Within 50 Years
+      name: Within 50 years
       url: /arguments/within-50-years
       effect: agree
       askQuestion: false
@@ -52,9 +52,9 @@
           url: /arguments/biology-special
           text: There is something special about biology which we will never be able to put into machines
         - node:
-          name: Intelligent Machines - seems weird
+          name: Intelligent machines ‘just seem weird’
           url: /arguments/seems-weird
-          text: I don’t know, but truly intelligent machines - that seems really weird
+          text: I don’t know, but truly intelligent machines—that seems really weird
         - node:
           name: AI will never be able to have true creativity
           url: /arguments/creativity
@@ -121,13 +121,13 @@
           url: /arguments/alignment-advances-equally
           text: No -  as we build more capable systems, surely our understanding of how to align them will advance equally well
         - node:
-          name: We would need to know what type of AGI before talking about safety
+          name: Need to know what type of AGI before talking about safety
           url: /arguments/need-to-know-what-type
-          text: No – we need to know what type of AGI before we can talk about safety
+          text: No – we need to know what type of AGI we will develop before we can talk about safety
         - node:
           name: Misuse is a bigger problem
           url: /arguments/misuse-is-a-bigger-problem
-          text: No – misuse is a bigger problem
+          text: No – misuse is a bigger problem than accidental misalignment
         - node:
           name: This is not as dangerous as other global risks
           url: /arguments/not-as-dangerous-as-other-global-risks
