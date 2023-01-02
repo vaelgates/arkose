@@ -221,7 +221,7 @@ function updateBranchSidebar(path) {
 function updateActiveLink(path) {
   const url = path.substr(5)
   $('.argument-shape-link').removeClass('active')
-  $(`.argument-shape-link[data-url='${url}']`).addClass('active')
+  $(`.argument-shape-link[data-url='${url}']:not(.indirect-node)`).addClass('active')
 }
 
 function recordScrollPosition() {
