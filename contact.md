@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 image: assets/images/pic01.jpg
-nav-menu: true
+nav-menu: false
 order: 5
 ---
 
