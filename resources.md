@@ -3,7 +3,7 @@ layout: page
 title: Resources
 image: assets/images/pic01.jpg
 nav-menu: true
-order: 5
+order: 3
 ---
 
 <!-- Main -->

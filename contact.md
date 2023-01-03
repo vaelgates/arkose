@@ -3,7 +3,7 @@ layout: page
 title: Contact
 image: assets/images/pic01.jpg
 nav-menu: true
-order: 7
+order: 5
 ---
 
 <!-- Main -->
