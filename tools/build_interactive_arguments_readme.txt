@@ -1,12 +1,4 @@
-This script takes a google docs file as input and outputs the "interactive arguments" part of the website as markdown.
-
-It is written in C# and developed on Windows. It should be able to run on other platforms with only minor changes (described below).
-
-The code is written to be used with Visual Studio, which is a C# development environment with a free version available. MonoDevelop would also work.
-
-To run this script, you need two files, which must not be pushed to Github because they contain secrets. Lukas can provide you with these files.
-"aird_documents_id.txt" contains the document ID of the google docs file
-"aird_service_account.json" is the authentication JSON file associated with a "service worker" account in the Google admin console. Since our document is publicly readable with the link, it doesn't matter which account you use - you could use my .json file or create your own.
+This program is written in platform-independent C#. It takes a google docs file as input and outputs the "interactive arguments" part of the website as markdown.
 
 
 STEP BY STEP INSTRUCTIONS FOR GETTING THIS TO RUN
