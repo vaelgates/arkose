@@ -11,13 +11,33 @@ using System.Diagnostics;
 class Program
 {
 
+
+	#region Configuration that needs to be adjusted when running on different platforms
+	static string privateConfigDir
+	{
+		get
+
+		{
+			if (Environment.MachineName == "LTLAP")
+				return "c:\\temp\\";
+			else
+				throw new NotImplementedException("Under privateConfigDir, please add a branch referencing a private directory on your computer");
+		}
+	}
+	#endregion
+
+
+
+
+
+
+	#region Configuration that does NOT need to be adjusted when running on different platforms.
 	static string folderInWebsite = "arguments";
-	static string documentsId = File.ReadLines("c:\\temp\\aird_documents_id.txt").First();
 
 	/// <summary>
 	/// this is assuming that the folder tools\BuldInteractiveArguments is used as the scripts working directory
 	/// </summary>
-	static string baseDir = Directory.GetCurrentDirectory()+"\\.."+ Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
+	static string baseDir = Directory.GetCurrentDirectory() + "\\.." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
 	static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 
 	static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
@@ -27,13 +47,18 @@ class Program
 
 	static bool VerboseDebugOutput = false;
 
+	#endregion
+
+
+	static string documentsId => File.ReadLines(privateConfigDir + "aird_documents_id.txt").First();
+
 	public static void Main()
 	{
 		new Program().main();
 	}
 	void main()
 	{
-			
+
 
 
 
@@ -49,7 +74,9 @@ class Program
 		Directory.CreateDirectory(outputDir);
 
 		ServiceAccountCredential credential;
-		using (var stream = new FileStream("c:\\temp\\aird_service_account.json", FileMode.Open, FileAccess.Read))
+		var gSecretFilename = privateConfigDir + "aird_service_account.json";
+		// 
+		using (var stream = new FileStream(gSecretFilename, FileMode.Open, FileAccess.Read))
 		{
 			// https://stackoverflow.com/questions/41267813/authenticate-to-use-google-sheets-with-service-account-instead-of-personal-accou
 
@@ -58,7 +85,7 @@ class Program
 
 			var initializer = new ServiceAccountCredential.Initializer(credential.Id)
 			{
-				User = "aird-build-script@aird-364611.iam.gserviceaccount.com",
+				User = Between(File.ReadAllText(gSecretFilename), "\"client_email\": \"", "\""),
 				Key = credential.Key,
 				Scopes = new[] { DocsService.Scope.DocumentsReadonly }
 			};
@@ -72,7 +99,7 @@ class Program
 		docReq.SuggestionsViewMode = DocumentsResource.GetRequest.SuggestionsViewModeEnum.PREVIEWWITHOUTSUGGESTIONS;
 
 
-		var doc=docReq	.Execute();
+		var doc = docReq.Execute();
 
 
 		bool encounteredStartMarker = false;
@@ -682,27 +709,29 @@ breadcrumbs: {breadcrumbs}
 			File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + pageFileExtension, of.JekyllFrontmatter + "\n" + of.OutLines);
 
 		}
-		
+
 		File.WriteAllText(argumentsYamlFile, GetYamlDataForTOC(outputFiles));
 
 
 		#endregion
 
-		// the following is not required if you use "bundle eec jekyll serve --watch"
-		Console.WriteLine("Triggering Jekyll rebuild...");
-		var jekyll = Process.Start(new ProcessStartInfo("bundle", "exec jekyll build")
+		if (Environment.MachineName == "LTLAP")
 		{
-			UseShellExecute = true
-		});
-		jekyll.WaitForExit();
-		if (jekyll.ExitCode != 0)
-			throw new InvalidOperationException("Jekyll build failed");
+			Console.WriteLine("Triggering Jekyll rebuild...");
+			var jekyll = Process.Start(new ProcessStartInfo("bundle", "exec jekyll build")
+			{
+				UseShellExecute = true
+			});
+			jekyll.WaitForExit();
+			if (jekyll.ExitCode != 0)
+				throw new InvalidOperationException("Jekyll build failed");
 
-		Console.WriteLine("calling move_arguments.rb");
-		var moveArguments = Process.Start(new ProcessStartInfo("ruby", "move_arguments.rb") { UseShellExecute = true, WorkingDirectory=baseDir+"tools\\" });
-		moveArguments.WaitForExit();
-		if (moveArguments.ExitCode != 0)
-			throw new InvalidOperationException("move_arguments.rb failed");
+			Console.WriteLine("calling move_arguments.rb");
+			var moveArguments = Process.Start(new ProcessStartInfo("ruby", "move_arguments.rb") { UseShellExecute = true, WorkingDirectory = baseDir + "tools\\" });
+			moveArguments.WaitForExit();
+			if (moveArguments.ExitCode != 0)
+				throw new InvalidOperationException("move_arguments.rb failed");
+		}
 	}
 
 	Document GetParent(List<Document> outputFiles, Document of)

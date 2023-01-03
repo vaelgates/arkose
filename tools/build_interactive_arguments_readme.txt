@@ -1,15 +1,40 @@
 This script takes a google docs file as input and outputs the "interactive arguments" part of the website as markdown.
 
-It is written in C# and developed on Windows. It should be able to run without problems on other platforms - just make sure you change the path references.
+It is written in C# and developed on Windows. It should be able to run on other platforms with only minor changes (described below).
 
-The code is written to be used with LinqPad, which is a minimalist C# development environment with a free version available. Unfortunately, I believe the free version will not run this script out-of-the-box because the free version is not able to automatically download the required packages for the Google Docs library from the package source (which is Nuget).
-
-There are three solutions for that:
-1. buy a license to LinqPad
-2. download those libraries and reference them manually, I guess this would work
-3. Or simply copy the code and use any other C# development environment like Visual Studio.
-
+The code is written to be used with Visual Studio, which is a C# development environment with a free version available. MonoDevelop would also work.
 
 To run this script, you need two files, which must not be pushed to Github because they contain secrets. Lukas can provide you with these files.
 "aird_documents_id.txt" contains the document ID of the google docs file
-"aird_service_account.json" is the authentication JSON file associated with a "service worker" account in the Google admin console. Since our document is public, no specific account is required - you can get the credentials to mine or just create your own. (if you create your ownn, bear in mind to also update the user name "aird-build-script@aird-364611.iam.gserviceaccount.com" referenced a bit lower in the code.
+"aird_service_account.json" is the authentication JSON file associated with a "service worker" account in the Google admin console. Since our document is publicly readable with the link, it doesn't matter which account you use - you could use my .json file or create your own.
+
+
+STEP BY STEP INSTRUCTIONS FOR GETTING THIS TO RUN
+=================================================
+
+
+1. Install a C# development environment - I recommend Visual Studio. 
+Download here for Mac and Windows: https://visualstudio.microsoft.com/
+Please keep in mind that "Visual Studio Code" is not the same as "Visual Studio". MonoDevelop would also work.
+
+2. Open the Visual Studio project file at aird\tools\BuildInteractiveArguments\BuildInteractiveArguments.csproj
+
+3. Find the line that says "static string privateConfigDir"
+
+4. A few lines below that, please add a new branch with your machine name and referencing some private directory that's not part of the git repository. (similar to the existing branch referencing the machine name "LTLAP"). This directory will contain two secrets that should not be part of the git repository: "aird_documents_id.txt" containing the document ID of the google docs file, and "aird_service_account.json" which is explained below.
+
+5. Create that private directory (if it doesnt exist yet), and open it.
+
+6. In that directory, place a file called "aird_documents_id.txt" containing the document ID of the google docs file. For example, if the Google Docs URL is https://docs.google.com/document/d/1x45678901234567890/edit then the document ID would be "1x45678901234567890"
+
+7. Create a "service worker account" on Google and download the associated JSON file. You can do that at https://console.cloud.google.com/ . I made a short video demonstrating how to do that and included it as part of this repository with the filename "google_service_worker_account.mp4".
+
+8. Place that JSON file in the same private directory you placed the "aird_documents_id.txt" in.
+
+9. If you are not using Visual Studio, then make sure that the working directory of the script is set to tools\BuildInteractiveArguments . If you are using Visual Studio and have opened the included project file, then this should already be set up correctly.
+
+10. Run the program. It will build the arguments.
+
+11. Open a command line and run "bundle exec jekyll build" within the root folder of the website. (The arguments build script contains code to do this automatically, but this is only done on my machine conditionally on my machine name because I did not test it on other platforms.)
+
+12. In the command line, navigate to the tools folder and run "ruby move_arguments.rb" (Same comment as above applies: the script contains code to do this automatically but it is disabled on any machine except my own due to lack of testing)
