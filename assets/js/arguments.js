@@ -73,7 +73,7 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
 }
 
 function insertYesNoCheckboxes(checkboxesSection, argument) {
-  let checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
+  let checkboxes = $('<li />', {class: 'checkbox-hitbox answer-label-link-container'}).appendTo(checkboxesSection);
   $('<input />', {
     type: 'checkbox',
     id: `cb_yes`,
@@ -88,7 +88,7 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
     text: 'Yes',
   }).appendTo(checkboxes);
 
-  checkboxes = $('<li />', {class: 'checkbox-hitbox'}).appendTo(checkboxesSection);
+  checkboxes = $('<li />', {class: 'checkbox-hitbox answer-label-link-container'}).appendTo(checkboxesSection);
   $('<input />', {
     type: 'checkbox',
     id: `cb_no`,
