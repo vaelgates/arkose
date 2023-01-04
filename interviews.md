@@ -19,41 +19,44 @@ order: 2
 <!-- Content -->
 <p> In Feb and March 2022, Dr. Vael Gates conducted 97 interviews with AI researchers about their perceptions of AI and the future of the field, with a focus on risks from advanced AI systems. 92 interviewees were randomly selected from NeurIPS or ICML 2021 submissions; the remaining 5 were outside recommendations.</p>
 
-<div class="row">
-	<div class="4u 12u$(medium)">
-		<h3>Analysis</h3>
-		<ul class="actions vertical">
-			<li><a href="#main_report" class="button special fit">Main Report</a></li>
-			<li><a href="#" class="button fit small">Appendix</a></li>
-		</ul>
-		<div class="box">
-			<p>The common themes in the transcripts were tagged and tallied in this quantitative analysis of the transcripts. </p>
-		</div>
-	</div>
-	<div class="4u 12u$(medium)">
-		<h3>Transcripts</h3>
-		<ul class="actions vertical">
-			<li><a href="https://drive.google.com/drive/folders/1qNN6GpAl6a4KswxnJcdhN4fqnMQgZ9Vg?usp=sharing" class="button special fit">Transcripts</a></li>
-			<li><a href="https://docs.google.com/document/d/1q6-hUgIz-4H8AzejXqqtgX6uvw6w9EwMYtm9KRRYWro/edit?usp=sharing" class="button fit small">README</a></li>
-		</ul>
-		<div class="box">
-			<p>83 researchers agreed to share anonymized transcripts of their interviews.</p>
-		</div>	
-<!-- 		<h3>Talk</h3> -->
+<div class="row full-width">
+	<div class="interviews-grid">
+		<div>
+			<h3>Analysis</h3>
 			<ul class="actions vertical">
-			<li><a href="https://hai.stanford.edu/events/hai-weekly-seminar-vael-gates" class="button special fit">Talk</a></li>
-		</ul>
-		<div class="box">
-			<p>Preliminary results presented at Stanford.</p>
-		</div>	
-	</div>
-	<div class="4u$ 12u$(medium)">
-		<h3>Interactive Guide</h3>
-		<ul class="actions vertical">
-			<li><a href="arguments/introduction.html" class="button special fit">Arguments</a></li>
-		</ul>
-		<div class="box">
-			<p>Explore the questions from the interviews focusing on advanced AI, common responses from AI researchers, and potential counterarguments. </p>
+				<li><a href="#main_report" class="button special fit">Main Report</a></li>
+				<li><a href="#" class="button fit small">Appendix</a></li>
+			</ul>
+			<div class="box">
+				<p>The common themes in the transcripts were tagged and tallied in this quantitative analysis of the transcripts. </p>
+			</div>
+		</div>
+		<div>
+			<h3>Transcripts</h3>
+			<ul class="actions vertical">
+				<li><a href="https://drive.google.com/drive/folders/1qNN6GpAl6a4KswxnJcdhN4fqnMQgZ9Vg?usp=sharing" class="button special fit">Transcripts</a></li>
+				<li><a href="https://docs.google.com/document/d/1q6-hUgIz-4H8AzejXqqtgX6uvw6w9EwMYtm9KRRYWro/edit?usp=sharing" class="button fit small">README</a></li>
+			</ul>
+			<div class="box">
+				<p>83 researchers agreed to share anonymized transcripts of their interviews.</p>
+			</div>
+		</div>
+		<div>
+			<h3>Interactive Guide</h3>
+			<ul class="actions vertical">
+				<li><a href="arguments/introduction.html" class="button special fit">Arguments</a></li>
+			</ul>
+			<div class="box">
+				<p>Explore the questions from the interviews focusing on advanced AI, common responses from AI researchers, and potential counterarguments. </p>
+			</div>
+		</div>
+		<div>
+			<ul class="actions vertical">
+				<li><a href="https://hai.stanford.edu/events/hai-weekly-seminar-vael-gates" class="button special fit">Talk</a></li>
+			</ul>
+			<div class="box">
+				<p>Preliminary results presented at Stanford.</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -14,6 +14,7 @@
 	// MSIE: Prevents scrollbar from overlapping content.
 		body {
 			-ms-overflow-style: scrollbar;
+			overflow-x: hidden;
 		}
 
 		html {
@@ -57,4 +58,30 @@
 
 	html {
 		scroll-behavior: smooth;
+	}
+
+	.full-width {
+		width: 100vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.interviews-grid {
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: repeat(3, 1fr);
+		margin: 0 10%;
+	}
+
+
+	@include breakpoint(large) {
+		.interviews-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@include breakpoint(small) {
+		.interviews-grid {
+			grid-template-columns: 1fr;
+		}
 	}
