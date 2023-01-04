@@ -237,7 +237,7 @@
     margin-left: 40px;
     &:before {
       border: 1px solid var(--color-border);
-      left: -40px;
+      left: -44px;
       top: 50%;
       transform: translateY(-50%);
       transition: width 0.1s, height 0.1s, padding 0.1s;
@@ -253,9 +253,13 @@
     border: 1px solid #bcd;
   }
   input[type="checkbox"]+label {
-    padding-left: 25px;
-    padding-right: 25px;
+    font-size: 1.1rem;
+    padding: 4px 25px;
     transition: 0.3s padding;
+  }
+  input[type="checkbox"]:checked+label:before {
+    height: 2em;
+    width: 2em;
   }
   input[type="checkbox"]:checked+label.has-link {
     padding-left: 8px;
@@ -337,10 +341,16 @@ em {
   max-width: 80px;
 }
 
+.go-back-link {
+  display: inline-block;
+  line-height: 24px;
+  margin-bottom: 1.5em;
+}
+
 @include breakpoint(xlarge) {
   #main.argument .inner {
     margin: 0 calc(25%);
-    width: calc(55%);
+    width: 75ch;
   }
   .argument-branch-sidebar {
     max-width: 280px;
