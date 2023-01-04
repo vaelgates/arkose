@@ -49,7 +49,7 @@ These are all the available options:
 
 **effect**: 'agree'|'disagree'|'calculated'|'undecidedOverride' (optional, default 'disagree'). This determines what it means to agree with this node, when clicked as a checkbox ('agree'|'disagree'). Agree/Disagree effects might be propagated to parent nodes, depending on other options. Top-level arguments (Generally Capable AI Systems, The Alignment Problem, etc.) should be set to 'calculated', which will cause the node's agreement state to be determined by its sub-nodes. There's also one 'undecidedOverride' special case (possibly to be renamed later), for setting the agreement state back to 'undecided' (i.e. default gray), currently used only for the agreement checkbox on the Generally Capable AI Systems/Never page, which sets its parent 'Never' node to undecided.
 
-**question**: string (optional). The question that should be asked at the bottom of the page, above the checkboxes, e.g. 'Do you agree that biology is probably not essential for general intelligence?'. If it's not supplied, it defaults to "Do you find the above arguments convincing?".
+**question**: string (optional). The question that should be asked at the bottom of the page, above the checkboxes, e.g. 'Do you agree that biology is probably not essential for general intelligence?'. If it's not supplied, it defaults to "Do you think the reasoning above is valid?".
 
 **askQuestion**: boolean (optional, default true). Set this to false if this page shouldn't ask a question at the bottom (like the 'Within 50 Years' page, which exists to briefly acknowledge the user's agreement and redirect them to the next section).
 

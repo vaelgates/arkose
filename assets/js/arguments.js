@@ -22,9 +22,9 @@ function insertTitleQuestion(argument) {
     $(`<h2>${argument.question}</h2>`).appendTo($('.page-content'));
   } else {
     if (argument.subArguments?.length > 0) {
-      $('<h2>Do you agree?</h2>').appendTo($('.page-content'));
+      $('<h2>Do you agree or disagree?</h2>').appendTo($('.page-content'));
     } else {
-      $('<h2>Do you find the arguments in this section convincing?</h2>').appendTo($('.page-content'));
+      $('<h2>Do you think the reasoning above is valid?</h2>').appendTo($('.page-content'));
     }
   }
 }
@@ -116,7 +116,7 @@ function insertCheckboxes(argument) {
 
 function insertNextSectionButton(argument) {
   if (!argument.nextSectionArgument()) return
-  let text = "I'm done with this section. Let's move on to the next section!"
+  let text = "Progress to the next section:"
   if (argument.name === 'Introduction') {
     // unprincipled special case just for Introduction
     text = "Let's begin!"
@@ -142,7 +142,7 @@ function insertGoBackLink(argument) {
     'data-url': argument.parent.url,
     title: argument.parent.name
   }).appendTo($('.page-content'));
-  $('<span />', {html: '➥ Go back'}).appendTo(link)
+  $('<span />', {html: '↰ Return'}).appendTo(link)
   $(link).data('url', url)
 }
 
@@ -186,8 +186,8 @@ function insertAnswerSection(path) {
 
   insertTitleQuestion(argument)
   insertCheckboxes(argument)
-  insertNextSectionButton(argument)
   insertGoBackLink(argument)
+  insertNextSectionButton(argument)
 
   $('.nav-answers input').on('change', checkboxChange)
   $('.checkbox-hitbox').on('click', (event) => {
@@ -313,7 +313,7 @@ function recursiveAttachAnswers(currentArguments, answers) {
 function transformRootArgumentLinks() {
   for (const a of $('.page-content a')) {
     if ($(a).hasClass('answer-link')) continue
-    if (a.innerText.toLowerCase().match('go back')) continue
+    if (a.innerText.toLowerCase().match('return')) continue
 
     const hrefEnd = $(a).prop('href').match(/\/([^/]*$)/)?.[1]
     const rootArgument = args.find(a => a.url.match(/\/([^/]*$)/)?.[1] === hrefEnd)
