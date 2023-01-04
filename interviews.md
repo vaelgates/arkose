@@ -39,12 +39,12 @@ order: 2
 		<div class="box">
 			<p>83 researchers agreed to share anonymized transcripts of their interviews.</p>
 		</div>	
-		<h3>Talk</h3>
+<!-- 		<h3>Talk</h3> -->
 			<ul class="actions vertical">
 			<li><a href="https://hai.stanford.edu/events/hai-weekly-seminar-vael-gates" class="button special fit">Talk</a></li>
 		</ul>
 		<div class="box">
-			<p>Preliminary results were presented at Stanford University in June 2022.</p>
+			<p>Preliminary results presented at Stanford.</p>
 		</div>	
 	</div>
 	<div class="4u$ 12u$(medium)">
@@ -53,7 +53,7 @@ order: 2
 			<li><a href="arguments/introduction.html" class="button special fit">Arguments</a></li>
 		</ul>
 		<div class="box">
-			<p><sup>The interviews explored many topics, but focused on researchers' opinions of risks from advanced AI systems. The overall arc of these interviews is described: interviewee questions, the most common perspectives from AI researchers in response, and additional text describing potential counterarguments that the interviewer could have raised.</sup> </p>
+			<p>Explore the questions from the interviews focusing on advanced AI, common responses from AI researchers, and potential counterarguments. </p>
 		</div>
 	</div>
 </div>
@@ -68,11 +68,10 @@ order: 2
 			<h2>Main Report</h2>
 		</header>
 		</a>
-	<p>I WANT PART OF analyze_transcripts.html to be displayed here.</p>
+<p> Some introduction to the content </p>
+{% include_relative analyze_transcripts.html %} 
+
 	<p>I think ideally this part of the page would be a darker gray or something, something more of a line separator but that matches the rest of the website</p>
-	<p>Also there's still definitely a problem with sizing above-- change text size to actually small on the last one? I was hacking it with superscript</p>
-
-
 	</div>
 </section>
 
