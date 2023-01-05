@@ -71,7 +71,16 @@ class Program
 		Regex markdownLinkNav = new Regex("nav:" + rgxml);
 		Regex markdownLinkRgxWithoutNav = new Regex("(?<!nav:)" + rgxml);
 
+
 		Directory.CreateDirectory(outputDir);
+		System.IO.DirectoryInfo di = new DirectoryInfo(outputDir);
+
+		foreach (FileInfo file in di.GetFiles())
+		{
+			file.Delete();
+		}
+
+		
 
 		ServiceAccountCredential credential;
 		var gSecretFilename = privateConfigDir + "aird_service_account.json";
