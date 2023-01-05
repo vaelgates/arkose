@@ -458,8 +458,11 @@ breadcrumbs: {breadcrumbs}
 
 
 				if (thisParagraph.BulletLevel == null && previousBulletLevel != null) // close all lists
+				{
 					while (listTags.Any())
 						CloseList();
+					previousBulletLevel = null;
+				}
 				string prefix = "";
 				string postfix = "";
 

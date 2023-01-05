@@ -36,12 +36,6 @@
           propagateAgreement: false
           text: Yes, I would like to hear these arguments for why AGI might come soon
           parentListingType: button
-        - node:
-          name: Moving on to potential risks
-          url: /arguments/goto-potential-risk
-          askQuestion: false
-          text: No, let’s move on—I want to learn about potential risks
-          parentListingType: button
     - node:
       name: Never
       url: /arguments/never
@@ -90,7 +84,7 @@
         - node:
           name: We need embodiment
           url: /arguments/embodiment-is-necessary
-          text: We need embodiment—the AI needs a body and actuators, and sensors
+          text: We need embodiment for general intelligence
         - node:
           name: AI cannot be conscious
           url: /arguments/consciousness
