@@ -24,6 +24,13 @@
       overridesSiblings: true
       nodes:
         - node:
+          name: asdf
+          url: /arguments/the-alignment-problem
+          askQuestion: false
+          text: No, let’s move on - I want to learn about potential risks
+          parentListingType: button
+          listInTree: false
+        - node:
           name: Why these systems might come soon
           url: /arguments/agisooner
           propagateAgreement: false
@@ -33,17 +40,17 @@
           name: Moving on to potential risks
           url: /arguments/goto-potential-risk
           askQuestion: false
-          text: No, let’s move on - I want to learn about potential risks
+          text: No, let’s move on—I want to learn about potential risks
           parentListingType: button
     - node:
       name: Never
       url: /arguments/never
-      question: Would you agree with this?
+      question: Would you agree or disagree with this?
       overridesSiblings: true
       nodes:
         - node:
           name: The Alignment Problem
-          text: Yes, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
+          text: Agree, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
           effect: undecidedOverride # this sets its parent node to "undecided". This is because the question is phrased in such a way that it basically indicates "I now changed my mind on the parent".
           answerLinkUrl: /arguments/the-alignment-problem
           agreeTargetUrl: /arguments/never
@@ -83,7 +90,7 @@
         - node:
           name: We need embodiment
           url: /arguments/embodiment-is-necessary
-          text: We need embodiment - the AI needs a body and actuators, and sensors
+          text: We need embodiment—the AI needs a body and actuators, and sensors
         - node:
           name: AI cannot be conscious
           url: /arguments/consciousness
@@ -96,7 +103,7 @@
     - node:
       name: Agree
       linkName: Instrumental Incentives
-      text: Yes, aligning AI would be difficult
+      text: Agree, aligning AI would be difficult
       effect: agree
       nodeLinkUrl: /arguments/the-alignment-problem
       agreeTargetUrl: /arguments/the-alignment-problem
@@ -111,35 +118,35 @@
         - node:
           name: Let’s test before deploying
           url: /arguments/test-before-deploying
-          text: No - we would test it before deploying
+          text: No—we would test it before deploying
         - node:
           name: Just be careful with reward function
           url: /arguments/careful-with-that-reward-function
-          text: No - we would just be careful with our reward function
+          text: No—we would just be careful with our reward function
         - node:
           name: Alignment is easy
           url: /arguments/alignment-is-easy
-          text: No - Alignment is easy
+          text: No—alignment is easy
         - node:
           name: Alignment will progress automatically
           url: /arguments/alignment-advances-equally
-          text: No -  as we build more capable systems, surely our understanding of how to align them will advance equally well
+          text: No— as we build more capable systems, surely our understanding of how to align them will advance equally well
         - node:
           name: Need to know what type of AGI
           url: /arguments/need-to-know-what-type
-          text: No – we need to know what type of AGI we will develop before we can talk about safety
+          text: No—we need to know what type of AGI we will develop before we can talk about safety
         - node:
           name: Misuse is a bigger problem
           url: /arguments/misuse-is-a-bigger-problem
-          text: No – misuse is a bigger problem than accidental misalignment
+          text: No—misuse is a bigger problem than accidental misalignment
         - node:
           name: Other global risks are more dangerous
           url: /arguments/not-as-dangerous-as-other-global-risks
-          text: No – this is not as dangerous as other global risks
+          text: No—this is not as dangerous as other global risks
         - node:
           name: Humans have alignment problems too
           url: /arguments/humans-have-alignment-problems-too
-          text: No – humans have alignment problems too
+          text: No—humans have alignment problems too
 - node:
   name: Instrumental Incentives
   url: /arguments/instrumental-incentives
@@ -148,7 +155,7 @@
     - node:
       name: Agree
       linkName: Threat Models
-      text: Yes, the prospect of an AGI seizing power and resisting shutdown is a serious problem
+      text: Agree, the prospect of an AGI seizing power and resisting shutdown is a serious problem
       effect: agree
       nodeLinkUrl: /arguments/instrumental-incentives
       agreeTargetUrl: /arguments/instrumental-incentives
@@ -179,7 +186,7 @@
           url: /arguments/human-oversight
           text: This won’t be a problem, we will have human oversight
 - node:
-  name: Threat Models - how might AGI be dangerous?
+  name: Threat Models—how might AGI be dangerous?
   url: /arguments/threat-models
   effect: calculated
 - node:
@@ -189,7 +196,7 @@
   nodes:
     - node:
       name: Agree
-      text: Yes, safety work is important
+      text: Agree, safety work is important
       effect: agree
       nodeLinkUrl: /arguments/the-importance-of-more-safety-work
       agreeTargetUrl: /arguments/the-importance-of-more-safety-work
