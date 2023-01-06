@@ -1,17 +1,15 @@
 /* eslint-env jquery */
 
 class Argument {
-  static findArgumentByPath(currentArguments, path) {
-    for (const argument of currentArguments) {
+  static findArgumentByPath(searchArguments, path) {
+    let queue = [...searchArguments]
+    while (queue.length > 0) {
+      const argument = queue.shift()
       if (argument.url === path || `${window.site_baseurl}${argument.url}` === path) {
         return argument;
       }
-  
       if (argument.subArguments?.length > 0) {
-        const foundArg = Argument.findArgumentByPath(argument.subArguments, path)
-        if (foundArg) 
-          return foundArg;
-        
+        queue = queue.concat(argument.subArguments)
       }
     }
     return null
