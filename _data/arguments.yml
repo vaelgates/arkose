@@ -181,8 +181,9 @@
           url: /arguments/human-oversight
           text: This won’t be a problem, we will have human oversight
 - node:
-  name: Threat Models—how might AGI be dangerous?
+  name: Threat Models
   url: /arguments/threat-models
+  text: Threat Models—how might AGI be dangerous?
   effect: calculated
 - node:
   name: The importance of more safety work

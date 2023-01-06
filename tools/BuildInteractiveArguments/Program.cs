@@ -80,7 +80,7 @@ class Program
 			file.Delete();
 		}
 
-		
+
 
 		ServiceAccountCredential credential;
 		var gSecretFilename = privateConfigDir + "aird_service_account.json";
@@ -683,18 +683,49 @@ breadcrumbs: {breadcrumbs}
 
 		#region resolving text blocks
 		var textblockRegex = new Regex(@"(\[textblock:(.*?)\])([\s\S]*?)(\[\/textblock\])");// The dot matches all except newlines (\r\n). So use \s\S, which will match ALL characters
-																							// part 1: capture
+		string[] tagsThatNeedToBeBalanedWithinATextblock = new[] { "ul", "ol", "li" };
+		var tagsRegex = new Regex("</?(" + string.Join('|', tagsThatNeedToBeBalanedWithinATextblock) + ")>");
+		// part 1: capture
 		foreach (var of in outputFiles)
 		{
 			foreach (Match match in textblockRegex.Matches(of.OutLines))
 			{
-				if (match.Groups[2].Value == "ResearcherSurvey")
-					Console.WriteLine("dbg break");
+				// bugfix update 2023-01-06: Currently, we do not capture closing list tags after a textblock. What would be the right behaviour?
+				// --> let's simply count any open list-related tags and then close them properly at the end of a textblock.
+
+				#region make sure tags are properly closed after the end of a textblock
+				var txt = match.Groups[3].Value;
+				var tagStack = new Stack<string>();
+				foreach (Match tr in tagsRegex.Matches(txt))
+
+
+				{
+					if (tr.Groups[0].Value.StartsWith("</")) // closing tag
+					{
+						if (tagStack.Count == 0)
+							throw new InvalidOperationException("This textblock contains a closing HTML tag thats never opened");
+						else if (tagStack.Peek() != tr.Groups[1].Value)
+							throw new InvalidOperationException("This textblock contains a closing HTML tag without an opening tag at the right position");
+						else
+							tagStack.Pop();
+					}
+					else
+						tagStack.Push(tr.Groups[1].Value);
+
+				}
+
+				while (tagStack.Count > 0) // close any unclosed tags
+					txt = txt + "</" + tagStack.Pop() + ">";
+				#endregion
+
 				// remember the block
-				textblocks[match.Groups[2].Value] = match.Groups[3].Value;
-				// remove beginning and end tags
+				textblocks[match.Groups[2].Value] = txt;
+
+				// remove the [textblock:asdf] and [/textblock] tags from the output
 				of.OutLines = of.OutLines.Replace(match.Groups[1].Value, "");
 				of.OutLines = of.OutLines.Replace(match.Groups[4].Value, "");
+
+
 
 			}
 		}
