@@ -29,7 +29,7 @@
 		}
 
 	body {
-		background: var(--color-bg);
+		background: var(--color-bg-alt);
 
 		// Prevents animation/transition "flicker" on page load.
 		// Automatically added/removed by js/main.js.
@@ -54,6 +54,7 @@
 
 	footer {
 		border-top: solid 1px rgba(212,212,255,0.1);
+		background-color: var(--color-bg);
 	}
 
 	html {
