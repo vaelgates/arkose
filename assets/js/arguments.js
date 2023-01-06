@@ -20,6 +20,8 @@ function html_asset_path(path) {
 function insertTitleQuestion(argument) {
   if (argument.question) {
     $(`<h2>${argument.question}</h2>`).appendTo($('.page-content'));
+	if (argument.questionSubtext)
+		$(`<p style='font-style:italic'>${argument.questionSubtext}</p>`).appendTo($('.page-content'));
   } else {
     if (argument.subArguments?.length > 0) {
       $('<h2>Do you agree or disagree?</h2>').appendTo($('.page-content'));

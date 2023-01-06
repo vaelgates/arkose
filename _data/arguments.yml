@@ -9,6 +9,7 @@
   text: Timeline for development of generally capable AI systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
+  questionSubtext: Use the checkboxes and blue arrows to explore counterarguments or agreement (mirroring the original interviewer’s perspective).
   nodes:
     - node:
       name: Within 50 years
@@ -44,7 +45,7 @@
       nodes:
         - node:
           name: The Alignment Problem
-          text: Agree, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI).
+          text: Agree, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI)
           effect: undecidedOverride # this sets its parent node to "undecided". This is because the question is phrased in such a way that it basically indicates "I now changed my mind on the parent".
           answerLinkUrl: /arguments/the-alignment-problem
           agreeTargetUrl: /arguments/never

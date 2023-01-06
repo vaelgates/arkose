@@ -17,6 +17,7 @@
   {% if argument.linkName != nil %}linkName : `{{argument.linkName}}`,{% endif -%}
   {% if argument.listInTree != nil %}listInTree : {{argument.listInTree}},{% endif -%}
   {% if argument.question != nil %}question : `{{argument.question}}`,{% endif -%}
+  {% if argument.questionSubtext != nil %}questionSubtext : `{{argument.questionSubtext}}`,{% endif -%}
   {% if argument.isCheckboxOption != nil %}isCheckboxOption : {{argument.isCheckboxOption}},{% endif -%}
   {% if argument.delegateCheckboxes != nil %}delegateCheckboxes : {{argument.delegateCheckboxes}},{% endif -%}
   {% assign len = argument.nodes | size %}

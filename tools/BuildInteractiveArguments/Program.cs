@@ -512,6 +512,9 @@ breadcrumbs: {breadcrumbs}
 						postfix = "</p>";
 						previousBulletLevel = null;
 					}
+
+
+
 					if (trim.StartsWith("q:")) // a question to the reader
 					{
 						if (trim.StartsWith("q:single-choice:"))
@@ -523,8 +526,13 @@ breadcrumbs: {breadcrumbs}
 						of.Question = EverythingAfter(thisParagraph.HtmlText, "q:").Replace("single-choice:", "").Replace("multiple-choice", "").Replace("buttons:", "");
 
 
-						prefix = "<p><em>";
-						postfix = "</em></p>";
+						prefix = "<p><em>"; // TODO remove
+						postfix = "</em></p>"; // TODO remove
+						thisParagraph.HtmlText = "";
+					}
+					if (trim.StartsWith("q-subtext:"))
+					{
+						of.QuestionSubtext = EverythingAfter(trim, "q-subtext:");
 						thisParagraph.HtmlText = "";
 					}
 				}
@@ -888,9 +896,14 @@ breadcrumbs: {breadcrumbs}
 			foreach (var kvp in allDocs[i].extraYamlData)
 				writeIfNotNull(kvp.Key, kvp.Value);
 
+
+
+
 			writeIfNotNull("question", allDocs[i].Question);
 			if (allDocs[i].Question != null && allDocs[i].Question.Contains("highly intelligent"))
 				Console.WriteLine("asdf");
+
+			writeIfNotNull("questionSubtext", allDocs[i].QuestionSubtext);
 
 			if (parent != null && parent.QuestionIsSingleChoice)
 				writeIfNotNull("overridesSiblings", "true");
@@ -998,6 +1011,8 @@ breadcrumbs: {breadcrumbs}
 
 
 		public List<ContentParagraph> Content = new List<ContentParagraph>();
+
+		public string QuestionSubtext;
 	}
 
 

@@ -49,6 +49,7 @@ class Argument {
     this.answerLinkUrl = params.answerLinkUrl
     this.agreeTargetUrl = params.agreeTargetUrl
     this.question = params.question
+	this.questionSubtext=params.questionSubtext
     this.askQuestion = params.askQuestion ?? true
     this.overridesSiblings = params.overridesSiblings ?? false
     this.parentListingType = params.parentListingType ?? 'checkbox'
