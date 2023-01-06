@@ -62,6 +62,16 @@
 			font-size: 0.6em;
 		}
 
+		&.xsmall {
+			font-size: 0.6em;
+			padding: 0 0.5em;
+			height: 2em;
+			line-height: 2em;
+			margin-right: 0.1em;
+			position: relative;
+			top: -0.2em;
+		}
+
 		&.big {
 			font-size: 1.25em;
 			height: 3em;
