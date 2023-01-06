@@ -174,11 +174,7 @@ function isRootArgumentUrl(url) {
   return false
 }
 
-function insertAnswerSection(path) {
-  const argument = Argument.findArgumentByPath(args, path);
-  if (!argument) 
-    throw `Couldn't find argument for ${path}`;
-
+function insertAnswerSection(argument) {
   if (!argument.askQuestion) {
     insertNextSectionButton(argument)
     return
@@ -211,8 +207,7 @@ function pulseFeedbackButton() {
   }, 300)
 }
 
-function updateBranchSidebar(path) {
-  const argument = Argument.findArgumentByPath(args, path);
+function updateBranchSidebar(argument) {
   const argumentSection = $(`.argument-map .root-argument-container > a[data-url='${argument.rootArgument().url}']`).parent()
   $('.argument-branch-sidebar').empty()
   argumentSection.clone().appendTo($('.argument-branch-sidebar'))
@@ -237,12 +232,17 @@ function getHtml(path, saveAddress = true, scrollParam) {
   const html_path = html_asset_path(path)
   $.get(html_path).done(data => {
     $('.page-content').html(data);
+
+    const argument = Argument.findArgumentByPath(args, path);
+    if (!argument)
+      throw `Couldn't find argument for ${path}`;
+
     const title = $('.page-content .page-data').data('page-title');
     document.title = title
-    $('.page-title').html(title);
-    insertAnswerSection(path);
+    $('.page-title').html(argument.text || argument.name);
+    insertAnswerSection(argument);
     transformRootArgumentLinks();
-    updateBranchSidebar(path);
+    updateBranchSidebar(argument);
     updateActiveLink(path);
     if (saveAddress)
       window.history.pushState({}, "", path);
