@@ -26,7 +26,7 @@ show_tile: false
 
 <p>Interested in learning more? Our <a href="resources.html">Resources</a> page has further reading, both for ML researchers as well as for the general public.</p>
 
-<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed, and we would be happy to <a href="mailto:vaelgates@gmail.com">talk with you about these opportunities</a>.</p>
+<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed, and we would be happy to <a href="mailto:{{site.email}}">talk with you about these opportunities</a>.</p>
 
 <hr> 
 
