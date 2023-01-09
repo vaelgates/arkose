@@ -26,7 +26,7 @@ show_tile: false
 
 <p>Interested in learning more? Our <a href="resources.html">Resources</a> page has further reading, both for ML researchers as well as for the general public.</p>
 
-<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed, and we would be happy to <a href="mailto:vaelgates@gmail.com">talk with you about these opportunities</a>.</p>
+<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed, and we would be happy to <a href="mailto:{{site.email}}">talk with you about these opportunities</a>.</p>
 
 <hr> 
 
@@ -34,5 +34,5 @@ show_tile: false
 <div id="about_us" style='font-size: 18px'>
 <p>AI Risk Discussions (AIRD) was developed by Larchwood, a project of Players Philanthropy Fund, a Maryland
 charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3)
-of the Internal Revenue Code (Federal Tax ID: 27-6601178). AI Risk Discussions aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Lukas Trötzmüller (interactive guide) and Maheen Shermohammed (quantitative analysis).</p>
+of the Internal Revenue Code (Federal Tax ID: 27-6601178). AI Risk Discussions aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Zi Cheng Huang (interview coding and tagging), Lukas Trötzmüller (interactive guide) and Maheen Shermohammed (quantitative analysis).</p>
 </div>
