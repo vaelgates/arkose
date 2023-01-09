@@ -377,9 +377,9 @@ breadcrumbs: {breadcrumbs}
 		}
 		(string, string) ProcessMarkdownLink(string title, string url)
 		{
-			if (url.StartsWith("http"))
+			if (url.StartsWith("http") || url.StartsWith("mailto:"))
 			{
-				// external link
+				// external link or email, nothing to check here
 			}
 			else if (url.StartsWith("/") || url.StartsWith("."))// link to a page address
 			{
