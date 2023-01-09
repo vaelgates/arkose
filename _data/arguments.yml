@@ -4,12 +4,12 @@
   askQuestion: false
   effect: calculated
 - node:
-  name: Generally capable AI systems
-  url: /arguments/when-agi
+  name: Generally Capable AI
+  url: /arguments/when-generally-capable-ai
   text: Timeline for development of generally capable AI systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
-  questionSubtext: Use the checkboxes and blue arrows to explore counterarguments or agreement (mirroring the original interviewer’s perspective).
+  questionSubtext: Use the checkboxes and blue arrows to explore counterarguments or agreement (mirroring the original interviewer’s perspective)
   nodes:
     - node:
       name: Within 50 years
@@ -55,7 +55,7 @@
           url: /arguments/biology-special
           text: There is something special about biology which we will never be able to put into machines
         - node:
-          name: Intelligent machines ‘just seem weird’
+          name: Seems weird
           url: /arguments/seems-weird
           text: I don’t know, but truly intelligent machines—that seems really weird
         - node:
@@ -63,7 +63,7 @@
           url: /arguments/creativity
           text: AI will never be able to have true creativity
         - node:
-          name: Would need to understand the brain first
+          name: Understand the brain first
           url: /arguments/understand-brain-first
           text: We would need to understand the brain first, and this is a big obstacle
         - node:
@@ -111,11 +111,11 @@
       delegateCheckboxes: true
       nodes:
         - node:
-          name: Let’s test before deploying
+          name: Test before deploying
           url: /arguments/test-before-deploying
           text: No—we would test it before deploying
         - node:
-          name: Just be careful with reward function
+          name: Be careful with reward function
           url: /arguments/careful-with-that-reward-function
           text: No—we would just be careful with our reward function
         - node:
@@ -167,17 +167,19 @@
           url: /arguments/no-self-preservation-without-consciousness
           text: Consciousness won’t happen (and is required for self-preservation)
         - node:
-          name: We could stop that physically
-          url: /arguments/we-could-stop-that-physically
+          name: Stop it physically
+          url: /arguments/stop-it-physically
+          text: We could stop that physically
         - node:
           name: Current systems don’t do that
           url: /arguments/current-systems-dont-do-that
+          text: Current systems don’t do that (and neither will future systems)
         - node:
           name: Wouldn’t design it that way
           url: /arguments/wouldnt-design-that-way
           text: We wouldn’t design it that way
         - node:
-          name: Human Oversight
+          name: Human oversight
           url: /arguments/human-oversight
           text: This won’t be a problem, we will have human oversight
 - node:
@@ -186,8 +188,8 @@
   text: Threat Models—how might AGI be dangerous?
   effect: calculated
 - node:
-  name: The importance of more safety work
-  url: /arguments/the-importance-of-more-safety-work
+  name: Pursuing Safety Work
+  url: /arguments/pursuing-safety-work
   effect: calculated
   nodes:
     - node:
@@ -205,22 +207,22 @@
       delegateCheckboxes: true
       nodes:
         - node:
-          name: Regulators will take care of this
-          url: /arguments/regulators-will-take-care-of-this
+          name: Regulators will resolve this
+          url: /arguments/regulators-will-resolve-this
         - node:
-          name: Nothing we can do at the moment
+          name: Work not useful currently
           url: /arguments/not-useful-currently
           text: Work on AGI safety is not useful because there is nothing we can do at the moment
         - node:
-          name: This is not urgent
+          name: Work not urgent currently
           url: /arguments/not-urgent-currently
           text: I’m not convinced this is urgent now
         - node:
-          name: Worry about safety later
+          name: Build AI now, worry later
           url: /arguments/lets-build-worry-later
           text: Let’s build AI, worry about safety later
         - node:
-          name: Current safety work isn’t useful
+          name: Work not tractable currently
           url: /arguments/not-currently-tractable
           text: Yeah there are people working on this but I don’t understand why their work would be useful
 - node:

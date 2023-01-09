@@ -7,6 +7,8 @@ using Google.Apis.Auth.OAuth2;
 using System.Security.Cryptography;
 using Google.Apis.Services;
 using System.Diagnostics;
+using System;
+using HtmlAgilityPack;
 
 class Program
 {
@@ -37,8 +39,8 @@ class Program
 	/// <summary>
 	/// this is assuming that the folder tools\BuldInteractiveArguments is used as the scripts working directory
 	/// </summary>
-	static string baseDir = Directory.GetCurrentDirectory() + "\\.." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
-	static string outputDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
+	static string baseDir = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar+".." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
+	static string argumentsDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 
 	static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
 	static string assetsDir = baseDir + assetsDirRelative;
@@ -62,7 +64,8 @@ class Program
 
 
 
-
+		// We remember these links and check them after all processing, including jekyll, has finished.
+		List<string> localLinkstoCHeck = new List<string>();
 
 
 		string argumentsYamlFile = baseDir + Path.DirectorySeparatorChar + "_data" + Path.DirectorySeparatorChar + "arguments.yml";
@@ -72,8 +75,8 @@ class Program
 		Regex markdownLinkRgxWithoutNav = new Regex("(?<!nav:)" + rgxml);
 
 
-		Directory.CreateDirectory(outputDir);
-		System.IO.DirectoryInfo di = new DirectoryInfo(outputDir);
+		Directory.CreateDirectory(argumentsDir);
+		System.IO.DirectoryInfo di = new DirectoryInfo(argumentsDir);
 
 		foreach (FileInfo file in di.GetFiles())
 		{
@@ -376,23 +379,19 @@ breadcrumbs: {breadcrumbs}
 		{
 			if (url.StartsWith("http"))
 			{
-				// external link5
+				// external link
 			}
-			else if (url.StartsWith("/") || url.StartsWith("."))
+			else if (url.StartsWith("/") || url.StartsWith("."))// link to a page address
 			{
-			} // link to a page address
+				localLinkstoCHeck.Add(url);
+			} 
 			else // link to a page title.
 			{
-				var matchingPage = outputFiles.SingleOrDefault(o => o.InternalID.Equals(url, StringComparison.InvariantCultureIgnoreCase));
-				if (matchingPage == null)
-					throw new InvalidOperationException("This page was mentioned in a link but not found: " + url);
-				url = GetDocumentLink(matchingPage);
-				if (title == "")
-					title = matchingPage.Headline;
+				url = "###link:" + url + "###"; // to be handled at the very end
+				
 			}
 
-			if (title == "")
-				throw new InvalidOperationException("This link has an empty title. Empty titles are only okay when you link to a page title.");
+
 			return (title, url);
 
 		}
@@ -757,7 +756,7 @@ breadcrumbs: {breadcrumbs}
 		{
 
 			Console.WriteLine(("Writing file " + of.FilenameWithoutPathOrExtension));
-			File.WriteAllText(outputDir + of.FilenameWithoutPathOrExtension + pageFileExtension, of.JekyllFrontmatter + "\n" + of.OutLines);
+			File.WriteAllText(argumentsDir + of.FilenameWithoutPathOrExtension + pageFileExtension, of.JekyllFrontmatter + "\n" + of.OutLines);
 
 		}
 
@@ -776,6 +775,57 @@ breadcrumbs: {breadcrumbs}
 			jekyll.WaitForExit();
 			if (jekyll.ExitCode != 0)
 				throw new InvalidOperationException("Jekyll build failed");
+		}
+		else
+		{
+			Console.WriteLine("Please trigger jekyll rebuild, then press ENTER");
+			Console.ReadLine();
+		}
+
+		Console.WriteLine("Rewriting links to chapters...");
+		foreach (var outputFile in Directory.GetFiles(argumentsDir))
+		{
+			var txt = File.ReadAllText(outputFile);
+			// step 1: replace links to chapter IDs
+			txt=Regex.Replace(txt, "###link:(.*?)###", match =>
+			{
+				var url = match.Groups[1].Value;
+				var matchingPage = outputFiles.SingleOrDefault(o => o.InternalID.Equals(url, StringComparison.InvariantCultureIgnoreCase));
+				if (matchingPage == null)
+					throw new InvalidOperationException("This page ID was used in a link but not found: " + url);
+				return GetDocumentLink(matchingPage);
+				//if (title == "")
+				//	title = matchingPage.Headline;
+			}
+			);
+			File.WriteAllText(outputFile, txt);
+		}
+
+		Console.WriteLine("Checking local links...");
+		foreach (var url in localLinkstoCHeck)
+		{
+			Console.Write("  Checking: " + url + " ...");
+			var normalizedLinkTarget = url.Replace(".html", "")
+				.Replace('/', Path.DirectorySeparatorChar); // this does nothing on linux, and replaced / with \ on Windows
+			bool found = false;
+			foreach (var ending in new[] { ".md", ".html" }) // both of these get turned into .html
+			{
+				// the file could be on disk (this is the case if we are looking at stuff outside the "arguments" dir)
+				var fileOnDisk = Path.Combine(argumentsDir, normalizedLinkTarget + ending);
+				if (File.Exists(fileOnDisk))
+					found = true;
+
+				// or it could be a section within this 
+			}
+			if (!found)
+				throw new InvalidOperationException("Link target not found: " + url);
+
+			Console.WriteLine("OK");
+
+		}
+
+		if (Environment.MachineName=="LTLAP")
+		{
 
 			Console.WriteLine("calling move_arguments.rb");
 			var moveArguments = Process.Start(new ProcessStartInfo("ruby", "move_arguments.rb") { UseShellExecute = true, WorkingDirectory = baseDir + "tools\\" });
