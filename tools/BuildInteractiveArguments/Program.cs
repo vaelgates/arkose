@@ -262,10 +262,14 @@ breadcrumbs: {breadcrumbs}
 
 
 
+
 			foreach (var el in element.Paragraph.Elements)
 			{
+				bool bold = false;
 				if (el.TextRun?.TextStyle?.Strikethrough == true)
 					continue;
+				if (el.TextRun?.TextStyle?.Bold == true)
+					bold = true;
 				if (!encounteredStartMarker)
 				{
 					if (el.TextRun != null && el.TextRun.Content.Contains("#content_begin"))
@@ -505,10 +509,22 @@ breadcrumbs: {breadcrumbs}
 
 
 					var trim = thisParagraph.HtmlText;
-					if (!trim.StartsWith("[") && !trim.EndsWith("]") && !trim.Contains("blockquote>"))
+					if (!trim.StartsWith("[") && !trim.EndsWith("]"))
 					{
-						prefix = "<p>";
-						postfix = "</p>";
+						if (trim.Contains("<blockquote>"))
+						{
+							prefix = "";
+							thisParagraph.HtmlText = thisParagraph.HtmlText.Replace("<blockquote>", "<blockquote><p>");	
+						}
+						else
+							prefix = "<p>";
+						if (trim.Contains("</blockquote>"))
+						{
+							postfix = "";
+							thisParagraph.HtmlText = thisParagraph.HtmlText.Replace("</blockquote>", "</p></blockquote>");
+						}
+						else
+							postfix = "</p>";
 						previousBulletLevel = null;
 					}
 
@@ -742,15 +758,15 @@ breadcrumbs: {breadcrumbs}
 		#endregion
 
 
-		#region removing attributions from quotes
 		foreach (var of in outputFiles)
 		{
 			if (of.OutLines.Contains("<blockquote>"))
+			{
+				// removing attributions from quotes
 				of.OutLines = Regex.Replace(of.OutLines, @"<blockquote>([\S\s]*?)\<\/blockquote>",
 				x => Regex.Replace(x.Value, @"\(.*\)", ""));
+			}
 		}
-
-		#endregion
 
 		foreach (var of in outputFiles)
 		{
