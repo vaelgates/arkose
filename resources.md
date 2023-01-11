@@ -68,7 +68,7 @@ order: 3
 
 <h5> Interested in doing AI alignment research?</h5>
 <ul>
-<li> Learn about the organizations and researchers in the space, funding and job opportunities, and guides to get involved at <a href="what_can_i_do#technical" class="button xsmall">What can I do?</a></li>
+<li> Learn about the organizations and researchers in the space, funding and job opportunities, and guides to get involved at&nbsp; <a href="what_can_i_do#technical" class="button xsmall">What can I do?</a></li>
 </ul>
 
 </div>
