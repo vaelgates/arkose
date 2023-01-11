@@ -719,6 +719,9 @@ breadcrumbs: {breadcrumbs}
 
 				#region make sure tags are properly closed after the end of a textblock
 				var txt = match.Groups[3].Value;
+				bool thisTextblockIsJustOneBulletPoint = txt.StartsWith("<li>")&& txt.IndexOf("<li>", 4) == -1;
+				if (thisTextblockIsJustOneBulletPoint)
+					txt = txt.Replace("<li>", "").Replace("</li>", "");
 				var tagStack = new Stack<string>();
 				foreach (Match tr in tagsRegex.Matches(txt))
 
@@ -818,11 +821,11 @@ breadcrumbs: {breadcrumbs}
 			Console.ReadLine();
 		}
 
-		Console.WriteLine("Rewriting links to chapters...");
+
 		foreach (var outputFile in Directory.GetFiles(argumentsDir))
 		{
 			var txt = File.ReadAllText(outputFile);
-			// step 1: replace links to chapter IDs
+			// replace links to chapter IDs
 			txt=Regex.Replace(txt, "###link:(.*?)###", match =>
 			{
 				var url = match.Groups[1].Value;
@@ -834,6 +837,7 @@ breadcrumbs: {breadcrumbs}
 				//	title = matchingPage.Headline;
 			}
 			);
+
 			File.WriteAllText(outputFile, txt);
 		}
 
