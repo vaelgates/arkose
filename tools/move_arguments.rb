@@ -4,10 +4,19 @@ rescue LoadError
   # The 'byebug' gem is not necessary for running this, so made it optional
 end
 
+
+require 'yaml'
+$config_yaml = YAML.safe_load(File.read("../_config.yml"))
+puts $config_yaml
+
+
 files = Dir.entries('../arguments').select { |f| f.index('.html') }
 
+
+
 def convert_line(line)
-  line.gsub!('{{site.baseurl}}', '/aird')
+  line.gsub!('{{site.baseurl}}', $config_yaml["baseurl"])
+  line.gsub!('{{site.email}}', $config_yaml["email"])
   line.gsub!(/\{% link assets\/images\/arguments\/([^\.]*)\.png %\}/, '/assets/images/arguments/\1.png')
   raise "Unprocessed Jekyll markup in line: #{line}" if line.index('{{')
   line

@@ -66,7 +66,8 @@ order: 2
 		</header>
 		</a>
 <p> Some introduction to the content </p>
-{% include_relative analyze_transcripts_2.html %} 
+
+{% include_relative analyze_transcripts.html %} 
 <p>I think ideally this part of the page would be a darker gray or something, something more of a line separator but that matches the rest of the website</p>
 	</div>
 </section>
