@@ -25,7 +25,6 @@
       overridesSiblings: true
       nodes:
         - node:
-          name: asdf
           url: /arguments/the-alignment-problem
           askQuestion: false
           text: No, let’s move on - I want to learn about potential risks
@@ -196,13 +195,13 @@
       name: Agree
       text: Agree, safety work is important
       effect: agree
-      nodeLinkUrl: /arguments/the-importance-of-more-safety-work
-      agreeTargetUrl: /arguments/the-importance-of-more-safety-work
-      answerLinkUrl: /arguments/conclusion
+      nodeLinkUrl: /arguments/pursuing-safety-work
+      agreeTargetUrl: /arguments/pursuing-safety-work
+      answerLinkUrl: /arguments/pursuing-safety-work
     - node:
       name: Disagree
       effect: disagree
-      nodeLinkUrl: /arguments/the-importance-of-more-safety-work
+      nodeLinkUrl: /arguments/conclusion
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
