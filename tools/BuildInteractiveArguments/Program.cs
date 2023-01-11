@@ -9,6 +9,7 @@ using Google.Apis.Services;
 using System.Diagnostics;
 using System;
 using HtmlAgilityPack;
+using System.Collections.Immutable;
 
 class Program
 {
@@ -303,8 +304,10 @@ breadcrumbs: {breadcrumbs}
 					if (parseNavMode)
 					{
 						string key = Between(el.TextRun.Content, "  ", ":");
-						string val = EverythingAfter(el.TextRun.Content, ":");
-						currentDocument.ExtraYmlNavigation.Last()[key] = val.Trim();
+						string value = EverythingAfter(el.TextRun.Content, ":").Trim();
+
+
+						currentDocument.ExtraYmlNavigation.Last()[key] = value;
 						continue;
 					}
 
@@ -377,7 +380,7 @@ breadcrumbs: {breadcrumbs}
 
 		string GetDocumentLink(Document matchingPage)
 		{
-			return matchingPage.FilenameWithoutPathOrExtension + pageFileExtension;
+			return matchingPage.FilenameWithoutPathOrExtension ;
 		}
 		(string, string) ProcessMarkdownLink(string title, string url)
 		{
@@ -618,36 +621,39 @@ breadcrumbs: {breadcrumbs}
 			while (listTags.Any())
 				CloseList();
 
-			#region navigation to the children
-			int nrNavLinksCreated = 0;
-			bool weAlreadyHadAFeedbackLink = false;
-			void MakeNav(string text, string url, string icon = "&#10149;")
-			{
-				if (url == "#feedback")
-				{
-					if (weAlreadyHadAFeedbackLink)
-						return;
-					weAlreadyHadAFeedbackLink = true;
-				}
-				string prefix = "";
-
-
-				//outText.AppendLine($"<div>{icon} <a href='{prefix}{url}'>{text}</a></div>"); // TODO move to new system
-				nrNavLinksCreated++;
-			}
-			void MakeNavFromDoc(string text, Document dc, string urlAppendix = "")
-			{
-				MakeNav(text, GetDocumentLink(dc) + urlAppendix);
-			}
 
 
 			WriteNavAnchor();
 
+
+			#region navigation to the children - this is old code, these things are now handled via JavaScript.
+			//int nrNavLinksCreated = 0;
+			//bool weAlreadyHadAFeedbackLink = false;
+			//void MakeNav(string text, string url, string icon = "&#10149;")
+			//{
+			//	if (url == "#feedback")
+			//	{
+			//		if (weAlreadyHadAFeedbackLink)
+			//			return;
+			//		weAlreadyHadAFeedbackLink = true;
+			//	}
+			//	string prefix = "";
+
+
+			//	//outText.AppendLine($"<div>{icon} <a href='{prefix}{url}'>{text}</a></div>"); // TODO move to new system
+			//	nrNavLinksCreated++;
+			////}
+			//void MakeNavFromDoc(string text, Document dc, string urlAppendix = "")
+			//{
+			//	MakeNav(text, GetDocumentLink(dc) + urlAppendix);
+			//}
+
+
 			// there are several ways to get links.
 
 			// Option 1: Children get a link automatically.
-			foreach (var child in GetChildren(outputFiles, of))
-				MakeNav(child.Headline, MakeUrl(child));
+			//foreach (var child in GetChildren(outputFiles, of))
+			//	MakeNav(child.Headline, MakeUrl(child));
 
 			// Option 2: linking to the next major-level argument. This is not useful.
 			//if (of.HierarchyLevel == 0)
@@ -660,33 +666,33 @@ breadcrumbs: {breadcrumbs}
 
 			// Option 3: Make a normal markdown link but prepend it with "nav:"
 
-			List<Match> navMatches = markdownLinkNav.Matches(outText.ToString()).Cast<Match>().ToList();
+			//List<Match> navMatches = markdownLinkNav.Matches(outText.ToString()).Cast<Match>().ToList();
 
 
-			foreach (var nm in navMatches)
-			{
-				string title, url;
-				(title, url) = ProcessMarkdownLink(nm.Groups[1].Value, nm.Groups[2].Value);
-				MakeNav(title, url);
-			}
+			//foreach (var nm in navMatches)
+			//{
+			//	string title, url;
+			//	(title, url) = ProcessMarkdownLink(nm.Groups[1].Value, nm.Groups[2].Value);
+			//	MakeNav(title, url);
+			//}
 
 
 
 
-			if (nrNavLinksCreated == 0)
-			{
-				Console.WriteLine("No outgoing links at " + of.FilenameWithoutPathOrExtension + " - creating link back to parent");
-				var parent = GetParent(outputFiles, of);
-				if (parent == null)
-				{
-					//if (of!=lastHighlevelArticle)
-					//	throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): " + of.InternalID);
-				}
-				else
-					MakeNavFromDoc("Go back", parent, "#argnav");
-			}
+			//if (nrNavLinksCreated == 0)
+			//{
+			//	Console.WriteLine("No outgoing links at " + of.FilenameWithoutPathOrExtension + " - creating link back to parent");
+			//	var parent = GetParent(outputFiles, of);
+			//	if (parent == null)
+			//	{
+			//		//if (of!=lastHighlevelArticle)
+			//		//	throw new NotImplementedException("All high-level sections must have outgoing links (except the last one): " + of.InternalID);
+			//	}
+			//	else
+			//		MakeNavFromDoc("Go back", parent, "#argnav");
+			//}
 
-			MakeNav("Send Feedback", "#feedback", "&#9993;");
+			//MakeNav("Send Feedback", "#feedback", "&#9993;");
 			#endregion
 
 
@@ -777,6 +783,8 @@ breadcrumbs: {breadcrumbs}
 		}
 
 		File.WriteAllText(argumentsYamlFile, GetYamlDataForTOC(outputFiles));
+
+
 
 
 		#endregion
@@ -911,7 +919,7 @@ breadcrumbs: {breadcrumbs}
 
 	string MakeUrl(Document child)
 	{
-		return child.FilenameWithoutPathOrExtension + pageFileExtension;
+		return child.FilenameWithoutPathOrExtension; // DO NOT add .html to the links.
 	}
 
 	List<Document> GetChildren(List<Document> outputFiles, Document x)
@@ -1028,7 +1036,16 @@ breadcrumbs: {breadcrumbs}
 							startNodesListBelow = true;
 							continue;
 						}
-						writeIfNotNull(kvp.Key, kvp.Value);
+
+						string v = kvp.Value;
+						if (v.StartsWith("[") && v.EndsWith("]"))
+						{
+							var referringDocument = allDocs.FirstOrDefault(d => d.InternalID == v.Substring(1, v.Length - 2));
+							if (referringDocument == null)
+								throw new InvalidOperationException("Error: nav block refers to document ID of non-existent document - " + v);
+							v = "/"+folderInWebsite+"/"+MakeUrl(referringDocument);
+						}
+						writeIfNotNull(kvp.Key, v);
 					}
 				}
 			}
