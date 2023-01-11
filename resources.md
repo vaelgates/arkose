@@ -44,28 +44,73 @@ order: 3
 	</div>
 </div>
 <div class = "box">
-<h4>Research directions</h4>
+<h4>Technical Research</h4>
 <h5> Reviews </h5>
 <ul>
-	<li><a href="https://arxiv.org/pdf/2209.00626.pdf" class="button xsmall">∗</a> <a href="https://arxiv.org/pdf/2209.00626.pdf"> The Alignment Problem from a Deep Learning Perspective</a> by Richard Ngo et al. (2022)<!-- , 65m --></li>
-	<li><a href="https://arxiv.org/pdf/2109.13916.pdf"> Unsolved Problems in ML Safety</a> by Hendrycks et al. (2022)</li>
-    <li><a href="https://www.youtube.com/watch?v=-vsYtevJ2bc"> Current Work in AI Alignment</a> by Paul Christiano (2019)<!-- , 30m (<a href="https://forum.effectivealtruism.org/posts/63stBTw3WAW6k45dY/paul-christiano-current-work-in-ai-alignment">transcript</a>) --></li>
+	<li><a href="https://arxiv.org/pdf/2209.00626.pdf" class="button xsmall">∗</a> <a href="https://arxiv.org/pdf/2209.00626.pdf"> The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022)<!-- , 65m --></li>
+	<li> Agendas: <a href="https://arxiv.org/pdf/2109.13916.pdf"> Unsolved Problems in ML Safety</a> (Hendrycks et al., 2022),  <a href="https://arxiv.org/pdf/1606.06565.pdf">Concrete Problems in AI safety</a> (Amodei et al., 2016)</li>
+	<li><a href="https://vkrakovna.wordpress.com/ai-safety-resources/">AI Safety Resources</a> and <a href="https://www.alignmentforum.org/posts/JC7aJZjt2WvxxffGz/paradigms-of-ai-alignment-components-and-enablers">Overview</a> by Victoria Krakovna (DeepMind) </li>
 </ul>
 <h5> Primary </h5>
 <ul>
-    <li><a href="https://arxiv.org/pdf/2210.01790.pdf" class="button xsmall">∗</a> <a href="https://arxiv.org/pdf/2210.01790.pdf"> Goal Misgeneralization: Why correct Specifications Aren't Enough For Correct Goals</a> (Shah et al., 2022)</li>
+    <li><a href="https://arxiv.org/pdf/2210.01790.pdf" class="button xsmall">∗</a> <a href="https://arxiv.org/pdf/2210.01790.pdf"> Goal Misgeneralization: Why correct specifications aren't enough for correct goals</a> (Shah et al., 2022)</li>
     <li><a href="https://deepmindsafetyresearch.medium.com/specification-gaming-the-flip-side-of-ai-ingenuity-c85bdb0deeb4">Specification gaming: the flip side of AI ingenuity </a> (Krakovna et al., 2020)</li>
-    <li>Mechanistic interpretability <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">(Olsson et al., 2022)</a>, <a href="https://arxiv.org/abs/2202.05262">(Meng et al. 2022)</a></li> 
+    <li>Mechanistic interpretability: <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">In-context Learning and Induction Heads</a> (Olsson et al., 2022), <a href="https://arxiv.org/abs/2202.05262">Locating and Editing Factual Associations in GPT</a> (Meng et al., 2022)</li>
     <li><a href="https://proceedings.neurips.cc/paper/2021/file/c26820b8a4c1b3c2aa868d6d57e14a79-Paper.pdf">Optimal Policies Tend to Seek Power</a> (Turner et al., 2021)</li>
-    <!-- <li>Eliciting latent knowledge (<a href="https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/edit">ELK</a> </li>-->
 </ul>
-</div>
-<div class = "box">
-<h4> Further resources </h4>
-<p>More extensive, in-depth materials located in <a href="what_can_i_do#further_resources">What can I do?</a></p>
+
+<h5> Other </h5>
+
+<ul>
+	<li><a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum">AGI Safety Fundamentals Curriculum</a> (<b>best in-depth resource</b>) </li>
+	<li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> and <a href="https://newsletter.mlsafety.org/">ML Safety Newsletter</a></li>
+</ul>
+
+<h5> Interested in doing AI alignment research?</h5>
+<ul>
+<li> Learn about the organizations and researchers in the space, funding and job opportunities, and guides to get involved at <a href="what_can_i_do#technical" class="button xsmall">What can I do?</a></li>
+</ul>
+
 </div>
 
-<br>
+<!-- <h4> Further resources </h4> -->
+
+<!-- <h5> Reviews </h5> -->
+<!-- <ul> -->
+<!-- 	<li><a href="https://www.youtube.com/watch?v=-vsYtevJ2bc"> Current Work in AI Alignment</a> by Paul Christiano (2019), 30m (<a href="https://forum.effectivealtruism.org/posts/63stBTw3WAW6k45dY/paul-christiano-current-work-in-ai-alignment">transcript</a>)</li> -->
+<!-- 	<li><a href="https://www.alignmentforum.org/posts/3DFBbPFZyscrAiTKS/my-overview-of-the-ai-alignment-landscape-threat-models">My Overview of the AI Alignment Landscape: Threat Models</a> by Neel Nanda</li> -->
+<!-- 	<li>A provisionary list of alignment / safety organizations and examples of their work, as of Fall 2022: <a href="https://docs.google.com/document/d/1gimXyGj4nTU9TFJ6svlpmMtEWGbTrMoNYfzZMi8siAA/edit?usp=sharing">Shortform</a>, <a href="https://docs.google.com/document/d/1SXhls4pCFdJ6PbRnlmNiF3GhTSx3qq2SkDRsKGKb1O4/edit?usp=sharing">Longform</a></li> -->
+<!-- </ul> -->
+
+<!-- <h5> Primary </h5> -->
+<!-- <ul> -->
+<!--     <li><a href="https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/edit">Eliciting Latent Knowledge</a> (Alignment Research Center, 2022)</li> -->
+<!-- 	<li><a href="https://arxiv.org/pdf/1611.08219.pdf">The Off-Switch Game</a> (Menell et al., 2016)</li>
+	<li><a href="https://intelligence.org/files/Corrigibility.pdf">Corrigibility</a> (Soares et al., 2015)</li> -->
+<!-- </ul> -->
+
+<!-- <h5> Additional resources</h5> -->
+<!-- <ul> -->
+<!-- 	<li><a href="https://www.alignmentforum.org/posts/EFpQcBmfm2bFfM4zM/ai-safety-and-neighboring-communities-a-quick-start-guide-as">AI Safety and Neighboring Communities: A Quick-Start Guide, as of Summer 2022</a> by Sam Bowman (NYU)</li> -->
+<!-- 	<li><a href="https://docs.google.com/document/d/1zGxvxccxNap4KL70iqHiOBw8voB38Bhp-Z5WpvPQm-w/edit">Critiques of AI safety arguments</a>, see also "Disagree" arguments in <a href="arguments">Arguments</a></li> -->
+<!-- </ul> -->
+
+<!-- </div> -->
+
+
+
+
+
+
+<h3 id="governance readings">For interest in AI governance and policy</h3>
+<ul>
+	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
+</ul>
+
+
+
+
+
 
 <h3 id="publicreadings">For a general audience</h3>
 <ul>
