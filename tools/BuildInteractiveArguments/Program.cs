@@ -334,6 +334,9 @@ breadcrumbs: {breadcrumbs}
 
 					txt = txt.Replace("[/quote]", "\n</blockquote>\n");
 
+					if (bold)
+						txt = "<em>" + txt + "</em>";
+
 					if (currentDocument == null)
 						throw new InvalidOperationException("Error: after #content_begin, there immediately must be the headline");
 
