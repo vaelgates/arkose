@@ -784,7 +784,16 @@ breadcrumbs: {breadcrumbs}
 
 		File.WriteAllText(argumentsYamlFile, GetYamlDataForTOC(outputFiles));
 
-
+		string startingUrl = "./"+outputFiles.First().FilenameWithoutPathOrExtension;
+		File.WriteAllText(argumentsDir + "index.html", @$"<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=""refresh"" content=""0; url='{startingUrl}'"" />
+  </head>
+  <body>
+    <p>Please follow <a href=""{startingUrl}"">this link</a>.</p>
+  </body>
+</html>");
 
 
 		#endregion
