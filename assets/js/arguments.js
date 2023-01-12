@@ -108,12 +108,13 @@ function insertYesNoCheckboxes(checkboxesSection, argument) {
 
 function insertCheckboxes(argument) {
   $('.nav-answer-links').empty();
-  const checkboxesSection = $('<ul />', {class: 'nav-answers'}).appendTo($('.page-content'));
+  const checkboxesSection = $('<ul />', {class: 'nav-answers'});
   if (argument.checkboxArguments().length > 0) {
-    insertSubargumentCheckboxes(checkboxesSection, argument)
+    insertSubargumentCheckboxes(checkboxesSection, argument);
   } else {
-    insertYesNoCheckboxes(checkboxesSection, argument)
+    insertYesNoCheckboxes(checkboxesSection, argument);
   }
+  checkboxesSection.appendTo($('.page-content'));
 }
 
 function insertNextSectionButton(argument) {
@@ -221,8 +222,16 @@ function updateActiveLink(path) {
   $(`.argument-shape-link[data-url='${url}']:not(.indirect-node)`).addClass('active')
 }
 
+function pagePath(url) {
+  url = url || window.location.pathname;
+  const match = url.match(/.*\/([^/]*)/)
+  if (match) return match[1]
+  throw "Couldn't get pagePath from URL"
+}
+
 function recordScrollPosition() {
-  localStorage.setItem(`scrollPos ${window.location.pathname}`, document.documentElement.scrollTop)
+  if (document.documentElement.scrollTop === 0) return
+  localStorage.setItem(`scrollPos ${pagePath()}`, document.documentElement.scrollTop)
 }
 
 // scroll parameter can be 'into_view', 'top', 'history' or undefined.
@@ -257,7 +266,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
         $('#argument_section')[0].scrollIntoView();
         break;
       case 'history':
-        const scrollPos = localStorage.getItem(`scrollPos ${window.location.pathname}`) // eslint-disable-line
+        const scrollPos = localStorage.getItem(`scrollPos ${pagePath()}`) // eslint-disable-line
         $(document).scrollTop(scrollPos)
     }
   })
@@ -273,12 +282,24 @@ function recordAnswer(url, agreement) {
 function saveAnswers() {
   let answers = recursiveBuildAnswers(args, {})
   localStorage.setItem('answers', JSON.stringify(answers))
+
+  // aird.michaelkeenan.net
+  fetch('http://localhost:4567/answers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      uuid: window.uuid,
+      answers: JSON.stringify(answers)
+    })
+  })
 }
 
 function recursiveBuildAnswers(currentArguments, answers) {
   for (const argument of currentArguments) {
     if (argument.agreement && argument.url)
-      answers[argument.url] = argument.agreement
+      answers[pagePath(argument.url)] = argument.agreement
     
     if (argument.subArguments?.length > 0) {
       recursiveBuildAnswers(argument.subArguments, answers)
@@ -289,11 +310,12 @@ function recursiveBuildAnswers(currentArguments, answers) {
 
 function loadAnswers() {
   let answers = JSON.parse(localStorage.getItem('answers'))
+
   if (!answers) return
 
   recursiveAttachAnswers(args, answers)
   for (const [url, agreement] of Object.entries(answers)) {
-    const argument = Argument.findArgumentByPath(args, url)
+    const argument = Argument.findArgumentByPath(args, '/arguments/' + url)
     if (!argument) console.warn(`Couldn't find argument '${url}'`)
 
     const checkbox = $(`input[data-url='${url}']`)
@@ -303,8 +325,8 @@ function loadAnswers() {
 
 function recursiveAttachAnswers(currentArguments, answers) {
   for (const argument of currentArguments) {
-    if (answers[argument.url]) {
-      argument.setAgreement(answers[argument.url], false, false)
+    if (answers[pagePath(argument.url)]) {
+      argument.setAgreement(answers[pagePath(argument.url)], false, false)
     }
     if (argument.subArguments?.length > 0) {
       recursiveAttachAnswers(argument.subArguments, answers)
@@ -329,6 +351,10 @@ function transformRootArgumentLinks() {
 }
 
 function initPage() {
+  if (window.location.pathname.split('.')[1] === 'html') {
+    window.location = window.location.pathname.split('.')[0]
+  }
+
   for (const argument of window.argumentPages) {
     args.push(new Argument(args, argument))
   }
