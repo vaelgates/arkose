@@ -23,7 +23,7 @@ order: 2
 	<div class="interviews-grid"> -->
 <div class="row">
 	<div class="4u 12u$(medium)">
-			<h3>Analysis</h3>
+			<h3 class="h3-smaller">Analysis</h3>
 			<a href="https://hai.stanford.edu/events/hai-weekly-seminar-vael-gates" class="button special fit">Talk</a>
 			<div class="box">
 				<p>Preliminary results presented at Stanford.</p>
@@ -35,7 +35,7 @@ order: 2
 			</div>
 		</div>
 		<div class="4u 12u$(medium)">
-			<h3>Transcripts</h3>
+			<h3 class="h3-smaller">Transcripts</h3>
 			<a href="https://drive.google.com/drive/folders/81qNN6GpAl6a4KswxnJcdhN4fqnMQgZ9Vg?usp=sharing" class="button special fit">Transcripts</a>
 			<a href="https://docs.google.com/document/d/1q6-hUgIz-4H8AzejXqqtgX6uvw6w9EwMYtm9KRRYWro/edit?usp=sharing" class="button fit small">README</a>
 			<div class="box">
@@ -47,7 +47,7 @@ order: 2
 			</div>
 		</div>
 		<div class="4u$ 12u$(medium)">
-			<h3>Interactive Walkthrough</h3>
+			<h3 class="h3-smaller">Interactive Walkthrough</h3>
 			<a href="{{site.baseurl}}{% link arguments/introduction.html %}" class="button special fit">Perspectives</a>
 			<div class="box">
 				<p>Explore the questions from the interviews focusing on advanced AI, common responses from AI researchers, and potential counterarguments. </p>

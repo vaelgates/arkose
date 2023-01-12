@@ -249,3 +249,13 @@
 	ul ul {
 		list-style-type: circle;
 	}
+
+	.text-smaller {
+		font-size: 0.8em;
+	}
+
+	@media screen and (min-width: 1281px) {
+		.h3-smaller {
+			font-size: 1em;
+		}
+	}
