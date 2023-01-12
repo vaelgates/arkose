@@ -12,6 +12,7 @@ class Argument {
         queue = queue.concat(argument.subArguments)
       }
     }
+    console.error(`Couldn't find argument for path '${path}'`)
     return null
   }
 
