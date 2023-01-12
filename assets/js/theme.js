@@ -470,6 +470,6 @@ if (window.argNodeHistory.length <= 1) {
 	let queryString = window.location.search;
 	let urlParams = new URLSearchParams(queryString);
 	localStorage.setItem('LandingPath', window.location.pathname)
-	localStorage.setItem('sParam', urlParams.get('s'))
-	localStorage.setItem('Referrer', document.referrer)
+	if (urlParams.get('s')) localStorage.setItem('sParam', urlParams.get('s'))
+	if (document.referrer) localStorage.setItem('Referrer', document.referrer)
 }
