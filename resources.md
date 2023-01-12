@@ -92,7 +92,7 @@ order: 3
 <!-- <h5> Additional resources</h5> -->
 <!-- <ul> -->
 <!-- 	<li><a href="https://www.alignmentforum.org/posts/EFpQcBmfm2bFfM4zM/ai-safety-and-neighboring-communities-a-quick-start-guide-as">AI Safety and Neighboring Communities: A Quick-Start Guide, as of Summer 2022</a> by Sam Bowman (NYU)</li> -->
-<!-- 	<li><a href="https://docs.google.com/document/d/1zGxvxccxNap4KL70iqHiOBw8voB38Bhp-Z5WpvPQm-w/edit">Critiques of AI safety arguments</a>, see also "Disagree" arguments in <a href="arguments">Arguments</a></li> -->
+<!-- 	<li><a href="https://docs.google.com/document/d/1zGxvxccxNap4KL70iqHiOBw8voB38Bhp-Z5WpvPQm-w/edit">Critiques of AI safety arguments</a>, see also "Disagree" arguments in <a href="arguments">Perspectives</a></li> -->
 <!-- </ul> -->
 
 <!-- </div> -->

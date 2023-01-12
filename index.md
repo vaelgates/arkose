@@ -14,8 +14,8 @@ show_tile: false
 		<p>One of our main goals is to facilitate conversations between those concerned about potential risks from advanced AI systems and technical experts. To that end, we conducted 97 interviews with AI researchers on their perspectives on current AI and the future of AI, with a focus on risks from advanced systems. This collection of interviews includes anonymized transcripts, quantitative analysis of the most common perspectives, and an academic talk discussing preliminary findings.</p>
 	</div>
 	<div class="6u$ 12u$(small)">
-		<a href="{{site.baseurl}}{% link arguments/introduction.html %}" class="button fit">Interactive Guide</a>
-		<p>In our interviews with AI researchers, some of the core questions focused on risks from advanced AI systems. To explore the interview questions, common responses from AI researchers, and potential counterarguments, we created an interactive guide. As you agree or disagree with various arguments, these answers are logged and display at the end, alongside others' responses.</p> 
+		<a href="{{site.baseurl}}{% link arguments/introduction.html %}" class="button fit">Interactive Walkthrough</a>
+		<p>In our interviews with AI researchers, some of the core questions focused on risks from advanced AI systems. To explore the interview questions, common responses from AI researchers, and potential counterarguments, we created an interactive walkthrough. You are encouraged to explore your own perspectives, and at the conclusion your series of agreements or disagreements will be displayed, so that you can compare your perspectives to other users' of the site.</p> 
 	</div>
 </div>
 
@@ -34,5 +34,5 @@ show_tile: false
 <div id="about_us" style='font-size: 18px'>
 <p>AI Risk Discussions (AIRD) was developed by Larchwood, a project of Players Philanthropy Fund, a Maryland
 charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3)
-of the Internal Revenue Code (Federal Tax ID: 27-6601178). AI Risk Discussions aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Zi Cheng Huang (interview coding and tagging), Lukas Trötzmüller (interactive guide) and Maheen Shermohammed (quantitative analysis).</p>
+of the Internal Revenue Code (Federal Tax ID: 27-6601178). AI Risk Discussions aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Zi Cheng Huang (interview coding and tagging), Lukas Trötzmüller (interactive walkthrough) and Maheen Shermohammed (quantitative analysis).</p>
 </div>
