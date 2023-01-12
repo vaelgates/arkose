@@ -216,14 +216,6 @@
           name: Work not urgent currently
           url: /arguments/not-urgent-currently
           text: I’m not convinced this is urgent now
-        - node:
-          name: Build AI now, worry later
-          url: /arguments/lets-build-worry-later
-          text: Let’s build AI, worry about safety later
-        - node:
-          name: Work not tractable currently
-          url: /arguments/not-currently-tractable
-          text: Yeah there are people working on this but I don’t understand why their work would be useful
 - node:
   name: Conclusion
   url: /arguments/conclusion
