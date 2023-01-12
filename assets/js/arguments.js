@@ -283,7 +283,7 @@ function airddata_url() {
   if (window.location.host === 'localhost:4000') {
     return 'http://localhost:4567/answers'
   } else {
-    return 'http://aird.michaelkeenan.net/answers'
+    return 'https://aird.michaelkeenan.net/answers'
   }
 }
 
