@@ -845,8 +845,8 @@ breadcrumbs: {breadcrumbs}
 		foreach (var url in localLinkstoCHeck)
 		{
 			Console.Write("  Checking: " + url + " ...");
-			var normalizedLinkTarget = url.Replace(".html", "")
-				.Replace('/', Path.DirectorySeparatorChar); // this does nothing on linux, and replaced / with \ on Windows
+			var normalizedLinkTarget = EverythingBefore( url.Replace(".html", "")
+				.Replace('/', Path.DirectorySeparatorChar), "#"); // this does nothing on linux, and replaced / with \ on Windows
 			bool found = false;
 			foreach (var ending in new[] { ".md", ".html" }) // both of these get turned into .html
 			{

@@ -227,4 +227,5 @@
 - node:
   name: Conclusion
   url: /arguments/conclusion
+  askQuestion: false
   effect: calculated
