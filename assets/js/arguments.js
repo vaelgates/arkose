@@ -1,5 +1,6 @@
 /* eslint-env jquery */
 /* global Cognito */
+/* global Chart */
 
 import Argument from './argument.js'
 
@@ -53,7 +54,7 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
 
       const link = $(`<a />`, {
         class: `answer-link link-${subArgument.nameAsId()}`,
-        href: `${window.site_baseurl}` + (subArgument.answerLinkUrl || subArgument.url),
+        href: window.site_baseurl + (subArgument.answerLinkUrl || subArgument.url),
         'data-url': subArgument.answerLinkUrl || subArgument.url
       })
       link.appendTo(checkboxes)
@@ -63,7 +64,7 @@ function insertSubargumentCheckboxes(checkboxesSection, argument) {
       const buttonLink = $('<a />', {
         id: `button_${subArgument.nameAsId()}`,
         class: 'answer-button-link',
-        'href': `${window.site_baseurl}` + subArgument.url,
+        'href': window.site_baseurl + subArgument.url,
         'data-url': subArgument.url,
         'data-effect': subArgument.effect || 'disagree',
         value: subArgument.nameAsId()
@@ -114,7 +115,35 @@ function insertCheckboxes(argument) {
   } else {
     insertYesNoCheckboxes(checkboxesSection, argument);
   }
+  const feedbackContainer = $('<li class="answer-label-link-container" />').appendTo(checkboxesSection)
+  $('<textarea class="comment-textarea" placeholder="Further comments or responses, to be displayed in the Conclusion?" />').appendTo(feedbackContainer);
   checkboxesSection.appendTo($('.page-content'));
+  $('<li class="answer-label-link-container feedback-button-container"><button class="button small">Submit</button></li>').appendTo(checkboxesSection)
+  const feedbackButton = $('.feedback-button-container .button')
+  feedbackButton.on('click', () => {
+    const commentText = $('.comment-textarea').val()
+    if (commentText.length <= 2) return;
+    fetch(airddataUrl('comments', 'POST'), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        comment_uuid: generateUUID(),
+        uuid: window.uuid,
+        url: pagePath(),
+        comment: commentText
+      })
+    }).then(() => {
+      feedbackButton.addClass('pulse')
+      window.setTimeout(() => {
+        const originalWidth = feedbackButton.outerWidth()
+        feedbackButton.css('width', String(originalWidth) + 'px')
+        feedbackButton.html('Sent')
+        feedbackButton.removeClass('pulse')
+      }, 200)
+    })
+  })
 }
 
 function insertNextSectionButton(argument) {
@@ -161,8 +190,6 @@ function checkboxChange(event) {
 
   recordAnswer(checkbox.data('url'), agreement)
 
-  if (event.currentTarget.id === 'cb_no' && $(event.currentTarget).prop('checked')) pulseFeedbackButton()
-
   const label = checkbox.parent().find('label')
   label.addClass('pulse')
   window.setTimeout(() => {
@@ -201,13 +228,6 @@ function insertAnswerSection(argument) {
 
 function toggleFeedback() {
   $("#feedback").toggle()
-}
-
-function pulseFeedbackButton() {
-  $('a[href="#feedback"]').addClass('feedback-button-pulsed')
-  window.setTimeout(() => {
-    $('a[href="#feedback"]').removeClass('feedback-button-pulsed')
-  }, 300)
 }
 
 function updateBranchSidebar(argument) {
@@ -255,6 +275,8 @@ function getHtml(path, saveAddress = true, scrollParam) {
     transformRootArgumentLinks();
     updateBranchSidebar(argument);
     updateActiveLink(path);
+    addConclusionChartsAndCommentsLink(path);
+
     if (saveAddress)
       window.history.pushState({}, "", path);
 
@@ -279,11 +301,15 @@ function recordAnswer(url, agreement) {
   Argument.updateSubSubArgumentVisibility()
 }
 
-function airddata_url() {
+function airddataUrl(dataType, method) {
+  let suffix = ''
+  if (method === 'GET') {
+    suffix = '/json'
+  }
   if (window.location.host === 'localhost:4000') {
-    return 'http://localhost:4567/answers'
+    return `http://localhost:4567/${dataType}${suffix}`
   } else {
-    return 'https://aird.michaelkeenan.net/answers'
+    return `https://aird.michaelkeenan.net/${dataType}${suffix}`
   }
 }
 
@@ -291,7 +317,7 @@ function saveAnswers() {
   let answers = recursiveBuildAnswers(args, {})
   localStorage.setItem('answers', JSON.stringify(answers))
 
-  fetch(airddata_url(), {
+  fetch(airddataUrl('answers'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -444,6 +470,109 @@ function generateUUID() { // Public Domain/MIT
       }
       return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
   });
+}
+
+function chartOptionsWithTitle(title) {
+  return {
+    plugins: {
+      title: {
+        text: title,
+        display: true,
+        position: 'top',
+      },
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 1
+        }
+      },
+      x: {
+        grid: {
+          display: false
+        }
+      }
+    }
+  }
+}
+
+function addConclusionChartsAndCommentsLink(path) {
+  if (!path.match(/conclusion/)) return
+
+  fetch(airddataUrl('answers', 'GET'), {
+    method: 'GET',
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log({data})
+
+    let chart
+    let div
+
+    $('<div class="charts" />').appendTo('.page-content');
+    div = $('<div />').appendTo('.charts');
+    chart = $('<canvas />').appendTo(div);
+    new Chart(chart, {
+      type: 'bar',
+      data: {
+        labels: ['Within 50 Years', 'After 50 Years', 'Never'],
+        datasets: [{
+          label: 'When AGI?',
+          data: [
+            data['when-agi']['within-50-years'],
+            data['when-agi']['after-50-years'],
+            data['when-agi']['never']
+          ],
+          backgroundColor: ['#8d8', '#8d8', '#d88'],
+          borderWidth: 1
+        }]
+      },
+      options: chartOptionsWithTitle('When AGI?')
+    })
+
+    const chartKeys = [
+      'the-alignment-problem',
+      'instrumental-incentives',
+      'threat-models',
+      'pursuing-safety-work'
+    ]
+    const chartTitles = [
+      'The Alignment Problem',
+      'Instrumental Incentives',
+      'Threat Models',
+      'Pursuing Safety Work'
+    ]
+    chartKeys.forEach((chartKey, i) => {
+      div = $('<div />').appendTo('.charts');
+      chart = $('<canvas />').appendTo(div);
+
+      new Chart(chart, {
+        type: 'bar',
+        data: {
+          labels: ['Agree', 'Disagree'],
+          datasets: [{
+            label: chartTitles[i],
+            data: [data[chartKey]['agree'], data[chartKey]['disagree']],
+            backgroundColor: ['#8d8', '#d88'],
+            borderWidth: 1
+          }]
+        },
+        options: chartOptionsWithTitle(chartTitles[i])
+      })
+    })
+
+    addConclusionCommentsLink(path)
+  })
+}
+
+function addConclusionCommentsLink(path) {
+  if (!path.match(/conclusion/)) return
+
+  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments">Read the comments</a></p>`).appendTo('.page-content');
 }
 
 initPage()
