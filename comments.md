@@ -50,7 +50,6 @@ nav-menu: false
   })
   .then(response => response.json())
   .then(comments => {
-    console.log({comments})
 
     const commentsDiv = $('<div />')
     comments.forEach(comment => {

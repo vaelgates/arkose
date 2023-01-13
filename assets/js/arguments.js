@@ -1,5 +1,4 @@
 /* eslint-env jquery */
-/* global Cognito */
 /* global Chart */
 
 import Argument from './argument.js'
@@ -437,14 +436,6 @@ function initPage() {
     toggleFeedback();
   })
 
-  Cognito.prefill({
-    "CurrentURL": window.location.pathname,
-    "NodeHistory": window.argNodeHistory.join(', '),
-    "LandingPath": localStorage.getItem('LandingPath'),
-    "sParam": localStorage.getItem('sParam'),
-    "Referrer": localStorage.getItem('Referrer')
-  });
-
   $(window).on('scroll resize', () => {
     const y = window.scrollY;
     if (y + $('#header')[0].clientHeight > $('.argument-section')[0].offsetTop - 10) {
@@ -508,7 +499,6 @@ function addConclusionChartsAndCommentsLink(path) {
   })
   .then(response => response.json())
   .then(data => {
-    console.log({data})
 
     let chart
     let div
