@@ -473,6 +473,9 @@ function chartOptionsWithTitle(title) {
       },
       legend: {
         display: false
+      },
+      labels: {
+        render: 'image'
       }
     },
     scales: {
@@ -499,9 +502,35 @@ function addConclusionChartsAndCommentsLink(path) {
   })
   .then(response => response.json())
   .then(data => {
+    const within50 = Argument.findArgumentByPath(args, '/perspectives/within-50-years')
+    const moreThan50 = Argument.findArgumentByPath(args, '/perspectives/more-than-50-years')
+    const never = Argument.findArgumentByPath(args, '/perspectives/never')
+
+    const chosenOpt = {
+      src: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMiAwYzYuNjIzIDAgMTIgNS4zNzcgMTIgMTJzLTUuMzc3IDEyLTEyIDEyLTEyLTUuMzc3LTEyLTEyIDUuMzc3LTEyIDEyLTEyem0wIDFjNi4wNzEgMCAxMSA0LjkyOSAxMSAxMXMtNC45MjkgMTEtMTEgMTEtMTEtNC45MjktMTEtMTEgNC45MjktMTEgMTEtMTF6bTcgNy40NTdsLTkuMDA1IDkuNTY1LTQuOTk1LTUuODY1Ljc2MS0uNjQ5IDQuMjcxIDUuMDE2IDguMjQtOC43NTIuNzI4LjY4NXoiLz48L3N2Zz4=",
+      width: 16,
+      height: 16
+    }
 
     let chart
+    let imagesList
     let div
+
+    if (within50.agreement === 'agree') {
+      imagesList = [chosenOpt]
+    } else if (moreThan50.agreement === 'agree') {
+      imagesList = [null, chosenOpt]
+    } else if (never.agreement === 'disagree') {
+      imagesList = [null, null, chosenOpt]
+    } else {
+      imagesList = []
+    }
+
+    let chartOptions = chartOptionsWithTitle('When AGI?')
+    chartOptions.plugins.labels = {
+      render: 'image',
+      images: imagesList,
+    }
 
     $('<div class="charts" />').appendTo('.page-content');
     div = $('<div />').appendTo('.charts');
@@ -521,7 +550,7 @@ function addConclusionChartsAndCommentsLink(path) {
           borderWidth: 1
         }]
       },
-      options: chartOptionsWithTitle('When AGI?')
+      options: chartOptions
     })
 
     const chartKeys = [
@@ -537,6 +566,25 @@ function addConclusionChartsAndCommentsLink(path) {
       'Pursuing Safety Work'
     ]
     chartKeys.forEach((chartKey, i) => {
+      const currentArg = Argument.findArgumentByPath(args, `/perspectives/${chartKey}`)
+
+      switch (currentArg.agreement) {
+        case 'agree':
+          imagesList = [chosenOpt]
+          break;
+        case 'disagree':
+          imagesList = [null, chosenOpt]
+          break;
+        default:
+          imagesList = []
+      }
+
+      let chartOptions = chartOptionsWithTitle(chartTitles[i])
+      chartOptions.plugins.labels = {
+        render: 'image',
+        images: imagesList,
+      }
+
       div = $('<div />').appendTo('.charts');
       chart = $('<canvas />').appendTo(div);
 
@@ -551,7 +599,7 @@ function addConclusionChartsAndCommentsLink(path) {
             borderWidth: 1
           }]
         },
-        options: chartOptionsWithTitle(chartTitles[i])
+        options: chartOptions
       })
     })
 
