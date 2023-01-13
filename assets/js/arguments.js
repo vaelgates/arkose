@@ -494,6 +494,11 @@ function chartOptionsWithTitle(title) {
   }
 }
 
+function chartMax(arr) {
+  const maxVal = Math.max(...arr)
+  return Math.round(maxVal * 1.1) + 1
+}
+
 function addConclusionChartsAndCommentsLink(path) {
   if (!path.match(/conclusion/)) return
 
@@ -531,6 +536,12 @@ function addConclusionChartsAndCommentsLink(path) {
       render: 'image',
       images: imagesList,
     }
+
+    chartOptions.scales.y.max = chartMax([
+      data['when-agi']['within-50-years'],
+      data['when-agi']['after-50-years'],
+      data['when-agi']['never']
+    ])
 
     $('<div class="charts" />').appendTo('.page-content');
     div = $('<div />').appendTo('.charts');
@@ -584,6 +595,8 @@ function addConclusionChartsAndCommentsLink(path) {
         render: 'image',
         images: imagesList,
       }
+
+      chartOptions.scales.y.max = chartMax([data[chartKey]['agree'], data[chartKey]['disagree']])
 
       div = $('<div />').appendTo('.charts');
       chart = $('<canvas />').appendTo(div);
