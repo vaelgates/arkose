@@ -48,7 +48,7 @@ order: 2
 		</div>
 		<div class="4u$ 12u$(medium)">
 			<h3 class="h3-smaller">Interactive Walkthrough</h3>
-			<a href="{{site.baseurl}}{% link arguments/introduction.html %}" class="button special fit">Perspectives</a>
+			<a href="{{site.baseurl}}{% link perspectives/introduction.html %}" class="button special fit">Perspectives</a>
 			<div class="box">
 				<p>Explore the questions from the interviews focusing on advanced AI, common responses from AI researchers, and potential counterarguments. </p>
 			</div>

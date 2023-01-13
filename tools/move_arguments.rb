@@ -10,14 +10,14 @@ $config_yaml = YAML.safe_load(File.read("../_config.yml"))
 puts $config_yaml
 
 
-files = Dir.entries('../arguments').select { |f| f.index('.html') }
+files = Dir.entries('../perspectives').select { |f| f.index('.html') }
 
 
 
 def convert_line(line)
   line.gsub!('{{site.baseurl}}', $config_yaml["baseurl"])
   line.gsub!('{{site.email}}', $config_yaml["email"])
-  line.gsub!(/\{% link assets\/images\/arguments\/([^\.]*)\.png %\}/, '/assets/images/arguments/\1.png')
+  line.gsub!(/\{% link assets\/images\/perspectives\/([^\.]*)\.png %\}/, '/assets/images/perspectives/\1.png')
   raise "Unprocessed Jekyll markup in line: #{line}" if line.index('{{')
   line
 end
@@ -26,7 +26,7 @@ files.each do |file|
   next if file == 'index.html'
   puts "Analyzing #{file}"
   lines = []
-  File.open("../arguments/#{file}", 'r') do |f|
+  File.open("../perspectives/#{file}", 'r') do |f|
     lines.push(f.read)
   end
 
@@ -49,7 +49,7 @@ files.each do |file|
   raise "Didn't find HTML start line" if html_start_line == -1
   puts "HTML start line: #{html_start_line}"
 
-  File.open("../assets/html/arguments/#{file}", 'w') do |f|
+  File.open("../assets/html/perspectives/#{file}", 'w') do |f|
     f.write "<div class=\"page-data\" data-page-title=\"#{title}\"></div>"
     lines.each_with_index do |line, i|
       next unless i >= html_start_line

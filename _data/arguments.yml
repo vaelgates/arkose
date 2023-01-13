@@ -1,11 +1,11 @@
 - node:
   name: Introduction
-  url: /arguments/introduction
+  url: /perspectives/introduction
   askQuestion: false
   effect: calculated
 - node:
   name: Generally Capable AI
-  url: /arguments/when-generally-capable-ai
+  url: /perspectives/when-generally-capable-ai
   text: Timeline for development of generally capable AI systems
   effect: calculated
   question: When do you think these generally capable systems will exist?
@@ -13,32 +13,32 @@
   nodes:
     - node:
       name: Within 50 years
-      url: /arguments/within-50-years
+      url: /perspectives/within-50-years
       effect: agree
       askQuestion: false
       overridesSiblings: true
     - node:
       name: More than 50 years
-      url: /arguments/more-than-50-years
+      url: /perspectives/more-than-50-years
       effect: agree
       question: Would you like to hear these arguments?
       overridesSiblings: true
       nodes:
         - node:
-          url: /arguments/the-alignment-problem
+          url: /perspectives/the-alignment-problem
           askQuestion: false
           text: No, let’s move on - I want to learn about potential risks
           parentListingType: button
           listInTree: false
         - node:
           name: Why these systems might come soon
-          url: /arguments/agisooner
+          url: /perspectives/agisooner
           propagateAgreement: false
           text: Yes, I would like to hear these arguments for why AGI might come soon
           parentListingType: button
     - node:
       name: Never
-      url: /arguments/never
+      url: /perspectives/never
       question: Would you agree or disagree with this?
       overridesSiblings: true
       nodes:
@@ -46,52 +46,52 @@
           name: The Alignment Problem
           text: Agree, I agree there might be such generally capable systems at some time in the future (move on to potential risks from AI)
           effect: undecidedOverride # this sets its parent node to "undecided". This is because the question is phrased in such a way that it basically indicates "I now changed my mind on the parent".
-          answerLinkUrl: /arguments/the-alignment-problem
-          agreeTargetUrl: /arguments/never
+          answerLinkUrl: /perspectives/the-alignment-problem
+          agreeTargetUrl: /perspectives/never
           listInTree: false # same justification as above
         - node:
           name: Biology is special
-          url: /arguments/biology-special
+          url: /perspectives/biology-special
           text: There is something special about biology which we will never be able to put into machines
         - node:
           name: Seems weird
-          url: /arguments/seems-weird
+          url: /perspectives/seems-weird
           text: I don’t know, but truly intelligent machines—that seems really weird
         - node:
           name: No true creativity
-          url: /arguments/creativity
+          url: /perspectives/creativity
           text: AI will never be able to have true creativity
         - node:
           name: Understand the brain first
-          url: /arguments/understand-brain-first
+          url: /perspectives/understand-brain-first
           text: We would need to understand the brain first, and this is a big obstacle
         - node:
           name: We wouldn’t want that
-          url: /arguments/we-dont-want-that
+          url: /perspectives/we-dont-want-that
           text: I don’t see a reason for us to even want that
         - node:
           name: Can’t see it based on current progress
-          url: /arguments/cant-see-it-based-on-current-progress
+          url: /perspectives/cant-see-it-based-on-current-progress
           text: I can’t see it based on current progress
         - node:
           name: Need AI paradigm shift
-          url: /arguments/aiparadigm-shift-required
+          url: /perspectives/aiparadigm-shift-required
           text: An AI paradigm shift will be required
         - node:
           name: People would stop this
-          url: /arguments/surely-this-would-be-bad-and-people-would-stop-it
+          url: /perspectives/surely-this-would-be-bad-and-people-would-stop-it
           text: Surely this would be bad and people would stop it
         - node:
           name: We need embodiment
-          url: /arguments/embodiment-is-necessary
+          url: /perspectives/embodiment-is-necessary
           text: We need embodiment for general intelligence
         - node:
           name: AI cannot be conscious
-          url: /arguments/consciousness
+          url: /perspectives/consciousness
           text: AI cannot be conscious in the way a human is
 - node:
   name: The Alignment Problem
-  url: /arguments/the-alignment-problem
+  url: /perspectives/the-alignment-problem
   effect: calculated
   nodes:
     - node:
@@ -99,51 +99,51 @@
       linkName: Instrumental Incentives
       text: Agree, aligning AI would be difficult
       effect: agree
-      nodeLinkUrl: /arguments/the-alignment-problem
-      agreeTargetUrl: /arguments/the-alignment-problem
-      answerLinkUrl: /arguments/instrumental-incentives
+      nodeLinkUrl: /perspectives/the-alignment-problem
+      agreeTargetUrl: /perspectives/the-alignment-problem
+      answerLinkUrl: /perspectives/instrumental-incentives
     - node:
       name: Disagree
       effect: disagree
-      nodeLinkUrl: /arguments/the-alignment-problem
+      nodeLinkUrl: /perspectives/the-alignment-problem
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
         - node:
           name: Test before deploying
-          url: /arguments/test-before-deploying
+          url: /perspectives/test-before-deploying
           text: No—we would test it before deploying
         - node:
           name: Be careful with reward function
-          url: /arguments/careful-with-that-reward-function
+          url: /perspectives/careful-with-that-reward-function
           text: No—we would just be careful with our reward function
         - node:
           name: Alignment is easy
-          url: /arguments/alignment-is-easy
+          url: /perspectives/alignment-is-easy
           text: No—alignment is easy
         - node:
           name: Alignment will progress automatically
-          url: /arguments/alignment-advances-equally
+          url: /perspectives/alignment-advances-equally
           text: No— as we build more capable systems, surely our understanding of how to align them will advance equally well
         - node:
           name: Need to know what type of AGI
-          url: /arguments/need-to-know-what-type
+          url: /perspectives/need-to-know-what-type
           text: No—we need to know what type of AGI we will develop before we can talk about safety
         - node:
           name: Misuse is a bigger problem
-          url: /arguments/misuse-is-a-bigger-problem
+          url: /perspectives/misuse-is-a-bigger-problem
           text: No—misuse is a bigger problem than accidental misalignment
         - node:
           name: Other global risks are more dangerous
-          url: /arguments/not-as-dangerous-as-other-global-risks
+          url: /perspectives/not-as-dangerous-as-other-global-risks
           text: No—this is not as dangerous as other global risks
         - node:
           name: Humans have alignment problems too
-          url: /arguments/humans-have-alignment-problems-too
+          url: /perspectives/humans-have-alignment-problems-too
           text: No—humans have alignment problems too
 - node:
   name: Instrumental Incentives
-  url: /arguments/instrumental-incentives
+  url: /perspectives/instrumental-incentives
   effect: calculated
   nodes:
     - node:
@@ -151,73 +151,73 @@
       linkName: Threat Models
       text: Agree, the prospect of an AGI seizing power and resisting shutdown is a serious problem
       effect: agree
-      nodeLinkUrl: /arguments/instrumental-incentives
-      agreeTargetUrl: /arguments/instrumental-incentives
-      answerLinkUrl: /arguments/threat-models
+      nodeLinkUrl: /perspectives/instrumental-incentives
+      agreeTargetUrl: /perspectives/instrumental-incentives
+      answerLinkUrl: /perspectives/threat-models
     - node:
       name: Disagree
       effect: disagree
-      nodeLinkUrl: /arguments/instrumental-incentives
+      nodeLinkUrl: /perspectives/instrumental-incentives
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
         - node:
           name: Consciousness required
-          url: /arguments/no-self-preservation-without-consciousness
+          url: /perspectives/no-self-preservation-without-consciousness
           text: Consciousness won’t happen (and is required for self-preservation)
         - node:
           name: Stop it physically
-          url: /arguments/stop-it-physically
+          url: /perspectives/stop-it-physically
           text: We could stop that physically
         - node:
           name: Current systems don’t do that
-          url: /arguments/current-systems-dont-do-that
+          url: /perspectives/current-systems-dont-do-that
           text: Current systems don’t do that (and neither will future systems)
         - node:
           name: Wouldn’t design it that way
-          url: /arguments/wouldnt-design-that-way
+          url: /perspectives/wouldnt-design-that-way
           text: We wouldn’t design it that way
         - node:
           name: Human oversight
-          url: /arguments/human-oversight
+          url: /perspectives/human-oversight
           text: This won’t be a problem, we will have human oversight
 - node:
   name: Threat Models
-  url: /arguments/threat-models
+  url: /perspectives/threat-models
   text: Threat Models—how might AGI be dangerous?
   effect: calculated
 - node:
   name: Pursuing Safety Work
-  url: /arguments/pursuing-safety-work
+  url: /perspectives/pursuing-safety-work
   effect: calculated
   nodes:
     - node:
       name: Agree
       text: Agree, safety work is important
       effect: agree
-      nodeLinkUrl: /arguments/pursuing-safety-work
-      agreeTargetUrl: /arguments/pursuing-safety-work
-      answerLinkUrl: /arguments/pursuing-safety-work
+      nodeLinkUrl: /perspectives/pursuing-safety-work
+      agreeTargetUrl: /perspectives/pursuing-safety-work
+      answerLinkUrl: /perspectives/pursuing-safety-work
     - node:
       name: Disagree
       effect: disagree
-      nodeLinkUrl: /arguments/conclusion
+      nodeLinkUrl: /perspectives/conclusion
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:
         - node:
           name: Regulators will resolve this
-          url: /arguments/regulators-will-resolve-this
+          url: /perspectives/regulators-will-resolve-this
         - node:
           name: Work not useful currently
-          url: /arguments/not-useful-currently
+          url: /perspectives/not-useful-currently
           text: Work on AGI safety is not useful because there is nothing we can do at the moment
         - node:
           name: Work not urgent currently
-          url: /arguments/not-urgent-currently
+          url: /perspectives/not-urgent-currently
           text: I’m not convinced this is urgent now
 - node:
   name: Conclusion
-  url: /arguments/conclusion
+  url: /perspectives/conclusion
   askQuestion: false
   effect: calculated

@@ -14,7 +14,7 @@ show_tile: false
 		<p>One of our main goals is to facilitate conversations between those concerned about potential risks from advanced AI systems and technical experts. To that end, we conducted 97 interviews with AI researchers on their perspectives on current AI and the future of AI, with a focus on risks from advanced systems. This collection of interviews includes anonymized transcripts, quantitative analysis of the most common perspectives, and an academic talk discussing preliminary findings.</p>
 	</div>
 	<div class="6u$ 12u$(small)">
-		<a href="{{site.baseurl}}{% link arguments/introduction.html %}" class="button fit">Interactive Walkthrough</a>
+		<a href="{{site.baseurl}}{% link perspectives/introduction.html %}" class="button fit">Interactive Walkthrough</a>
 		<p>In our interviews with AI researchers, some of the core questions focused on risks from advanced AI systems. To explore the interview questions, common responses from AI researchers, and potential counterarguments, we created an interactive walkthrough. You are encouraged to explore your own perspectives, and at the conclusion your series of agreements or disagreements will be displayed, so that you can compare your perspectives to other users' of the site.</p> 
 	</div>
 </div>

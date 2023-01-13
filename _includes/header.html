@@ -12,7 +12,7 @@
 				{% endif %}
 			{% endfor %} -->
 			{% assign sorted_pages = site.html_pages | sort:"order" %}
-			<li><a href="/aird/arguments/introduction">Perspectives</a></li>
+			<li><a href="/aird/perspectives/introduction">Perspectives</a></li>
 			{% for page in sorted_pages %}
 					{% if page.layout != "home" and page.nav-menu == true %}
 							<li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>

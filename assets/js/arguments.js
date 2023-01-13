@@ -348,7 +348,7 @@ function loadAnswers() {
 
   recursiveAttachAnswers(args, answers)
   for (const [url, agreement] of Object.entries(answers)) {
-    const argument = Argument.findArgumentByPath(args, '/arguments/' + url)
+    const argument = Argument.findArgumentByPath(args, '/perspectives/' + url)
     if (!argument) console.warn(`Couldn't find argument '${url}'`)
 
     const checkbox = $(`input[data-url='${url}']`)
