@@ -25,6 +25,7 @@
       overridesSiblings: true
       nodes:
         - node:
+          name: x
           url: /perspectives/the-alignment-problem
           askQuestion: false
           text: No, let’s move on - I want to learn about potential risks
@@ -197,11 +198,11 @@
       effect: agree
       nodeLinkUrl: /perspectives/pursuing-safety-work
       agreeTargetUrl: /perspectives/pursuing-safety-work
-      answerLinkUrl: /perspectives/pursuing-safety-work
+      answerLinkUrl: /perspectives/conclusion
     - node:
       name: Disagree
       effect: disagree
-      nodeLinkUrl: /perspectives/conclusion
+      nodeLinkUrl: /perspectives/pursuing-safety-work
       isCheckboxOption: false
       delegateCheckboxes: true
       nodes:

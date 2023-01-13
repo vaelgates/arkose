@@ -28,14 +28,14 @@ class Program
 		}
 	}
 	#endregion
+	
 
 
 
 
 
-
-	#region Configuration that does NOT need to be adjusted when running on different platforms.
-	static string folderInWebsite = "arguments";
+	#region Configuration 
+	static string folderInWebsite = "perspectives";
 
 	/// <summary>
 	/// this is assuming that the folder tools\BuldInteractiveArguments is used as the scripts working directory
@@ -43,7 +43,7 @@ class Program
 	static string baseDir = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar+".." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar;
 	static string argumentsDir = baseDir + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 
-	static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + "arguments" + Path.DirectorySeparatorChar;
+	static string assetsDirRelative = "assets" + Path.DirectorySeparatorChar + "images" + Path.DirectorySeparatorChar + folderInWebsite + Path.DirectorySeparatorChar;
 	static string assetsDir = baseDir + assetsDirRelative;
 	static string imageCacheFile = assetsDir + "images.txt";
 	static string pageFileExtension = ".html";
