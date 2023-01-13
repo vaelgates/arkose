@@ -115,7 +115,7 @@ function insertCheckboxes(argument) {
     insertYesNoCheckboxes(checkboxesSection, argument);
   }
   const feedbackContainer = $('<li class="answer-label-link-container" />').appendTo(checkboxesSection)
-  $('<textarea class="comment-textarea" placeholder="Comments or responses? (to be displayed publicly at the end of the guide)" />').appendTo(feedbackContainer);
+  $('<textarea class="comment-textarea" placeholder="Comments or responses? (to be displayed publicly at the end of the walkthrough)" />').appendTo(feedbackContainer);
   checkboxesSection.appendTo($('.page-content'));
   $('<li class="answer-label-link-container feedback-button-container"><button class="button small">Submit</button></li>').appendTo(checkboxesSection)
   const feedbackButton = $('.feedback-button-container .button')
