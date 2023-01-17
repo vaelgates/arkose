@@ -108,13 +108,24 @@
     font-size: 0.8em;
     vertical-align: middle;
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 2em;
     letter-spacing: .01em;
   }
-  &.active .argument-title {
-    color: var(--color-active-link);
-    font-weight: bold;
+  &.active {
+    background-color: var(--color-answer);
+    border-radius: 5px;
+    position: relative;
+    left: -0.75em;
+    > .argument-shape {
+      position: relative;
+      left: 0.75em;
+    }
+    > .argument-title {
+      color: var(--color-active-link);
+      font-weight: bold;
+      left: 3em;
+    }
   }
   .sub-sub-argument {
     margin-left: 30px;
