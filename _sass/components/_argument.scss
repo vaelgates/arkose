@@ -212,9 +212,12 @@
     width: 100%;
     background-color: var(--color-accent1);
     padding: 0.1em 0 0.1em 0.5em;
+    margin-left: 1.25em;
     margin-bottom: 0;
+    border: 1px solid #bcd;
     border-radius: 5px;
     opacity: 0.8;
+    text-decoration: none;
     text-transform: none;
     letter-spacing: .025em;
     font-size: 1rem;
@@ -259,10 +262,6 @@
       padding: 0.05em;
     }
   }
-  li a.answer-button-link {
-    text-decoration: none;
-    border: 1px solid #bcd;
-  }
   input[type="checkbox"]+label {
     font-size: 1.1rem;
     padding: 4px 25px;
@@ -287,6 +286,7 @@
 .answer-label-link-container {
   display: flex;
   align-items: stretch;
+  margin-left: 1em;
   textarea {
     margin-left: 23px;
     font-size: 1.1rem;
