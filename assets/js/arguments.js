@@ -412,7 +412,7 @@ function initPage() {
     let scrollParam
     if (isRootArgumentUrl(link.data('url'))) {
       scrollParam = 'top'
-    } else if (link.hasClass('answer-link') || link.hasClass('.answer-button-link')) {
+    } else if (link.is('.answer-link, .answer-button-link, .argument-shape-link')) {
       scrollParam = 'into_view'
     }
     getHtml(path, true, scrollParam);
