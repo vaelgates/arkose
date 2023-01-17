@@ -56,7 +56,7 @@ nav-menu: false
       const div = $('<div class="comment" />')
       const title = titleize(comment['url'])
       $(`<p><strong>${title}</strong></p>`).appendTo(div)
-      $(`<p>${comment['text']}</p>`).appendTo(div)
+      $(`<p>${comment['text'].replace('\n', '<br />')}</p>`).appendTo(div)
       div.appendTo(commentsDiv)
     })
     commentsDiv.appendTo($('#main .inner'))
