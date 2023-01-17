@@ -207,8 +207,8 @@
       delegateCheckboxes: true
       nodes:
         - node:
-          name: Regulators will resolve this
-          url: /perspectives/regulators-will-resolve-this
+          name: Policymakers will resolve this
+          url: /perspectives/policymakers-will-resolve-this
         - node:
           name: Work not useful currently
           url: /perspectives/not-useful-currently

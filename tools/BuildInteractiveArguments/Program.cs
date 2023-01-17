@@ -330,9 +330,10 @@ breadcrumbs: {breadcrumbs}
 
 
 					// make sure beginning and ending blockquotes are always on a separate line
-					txt = txt.Replace("[quote]", "\n<blockquote>\n");
+					var attribution = "&#40;from: <a href='../interviews'>Interviews with AI Researchers</a>&#41;"; // we use the html code instad of the bracket, so it doesnt get removed by our bracket-remover later
+					txt = txt.Replace("[quote]", $"\n<blockquote>\n");
 
-					txt = txt.Replace("[/quote]", "\n</blockquote>\n");
+					txt = txt.Replace("[/quote]", $"\n<p class='interview-attribution'>{attribution}</p></blockquote>\n");
 
 					if (bold)
 						txt = "<em>" + txt + "</em>";
