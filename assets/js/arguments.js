@@ -368,7 +368,7 @@ function recursiveAttachAnswers(currentArguments, answers) {
 
 function transformRootArgumentLinks() {
   for (const a of $('.page-content a')) {
-    if ($(a).hasClass('answer-link')) continue
+    if ($(a).is('.answer-link, .answer-button-link')) continue
     if (a.innerText.toLowerCase().match('return')) continue
 
     const hrefEnd = $(a).prop('href').match(/\/([^/]*$)/)?.[1]
