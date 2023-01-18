@@ -70,7 +70,7 @@ $(() => {
       const div = $('<div class="comment" />')
       if (comment['url'] !== previousUrl) {
         const title = urlToTitle(comment['url'])
-        $(`<h3>${title}</h3>`).appendTo(div)
+        $(`<h3><a href="perspectives/${comment['url']}">${title}</a></h3>`).appendTo(div)
         previousUrl = comment['url']
       }
       $(`<p>${comment['text'].replace('\n', '<br />')}</p>`).appendTo(div)
