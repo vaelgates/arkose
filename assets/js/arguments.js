@@ -114,11 +114,20 @@ function insertCheckboxes(argument) {
   } else {
     insertYesNoCheckboxes(checkboxesSection, argument);
   }
-  const feedbackContainer = $('<li class="answer-label-link-container" />').appendTo(checkboxesSection)
+  const feedbackContainer = $('<li class="answer-label-link-container feedback-container" />').appendTo(checkboxesSection)
   $('<textarea class="comment-textarea" placeholder="Comments or responses? (to be displayed publicly at the end of the walkthrough)" />').appendTo(feedbackContainer);
   checkboxesSection.appendTo($('.page-content'));
-  $('<li class="answer-label-link-container feedback-button-container"><button class="button small">Submit</button></li>').appendTo(checkboxesSection)
-  const feedbackButton = $('.feedback-button-container .button')
+  $('<button class="button small"><div class="button-progress-bar"></div><div class="button-text">Save Comment</div></button>').appendTo(feedbackContainer)
+  const feedbackButton = $('.feedback-container .button')
+  $('.comment-textarea').on('input propertychange', () => {
+    feedbackButton.find('.button-text').html('Submit Comment')
+    feedbackButton.find('.button-progress-bar').removeClass('sent')
+    if ($('.comment-textarea').val().length > 0) {
+      feedbackButton.css('visibility', 'visible')
+    } else {
+      feedbackButton.css('visibility', 'hidden')
+    }
+  })
   feedbackButton.on('click', () => {
     const commentText = $('.comment-textarea').val()
     if (commentText.length <= 2) return;
@@ -134,13 +143,16 @@ function insertCheckboxes(argument) {
         comment: commentText
       })
     }).then(() => {
-      feedbackButton.addClass('pulse')
+      feedbackButton.find('.button-progress-bar').addClass('sent')
       window.setTimeout(() => {
         const originalWidth = feedbackButton.outerWidth()
         feedbackButton.css('width', String(originalWidth) + 'px')
-        feedbackButton.html('Sent')
-        feedbackButton.removeClass('pulse')
-      }, 200)
+        feedbackButton.find('.button-text').html('Saved')
+        feedbackButton.find('.button-progress-bar').addClass('pulse')
+        window.setTimeout(() => {
+          feedbackButton.find('.button-progress-bar').removeClass('pulse')
+        }, 250)
+      }, 700)
     })
   })
 }
