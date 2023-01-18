@@ -635,7 +635,7 @@ function addConclusionChartsAndCommentsLink(path) {
 function addConclusionCommentsLink(path) {
   if (!path.match(/conclusion/)) return
 
-  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments">Read the comments</a></p>`).appendTo('.page-content');
+  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments" class="button small">Read the comments</a></p>`).appendTo('.page-content');
 }
 
 initPage()
