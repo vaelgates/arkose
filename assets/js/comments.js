@@ -1,5 +1,19 @@
 /* eslint-env jquery */
 
+/* returns the argument URLs in a list, in order, for use when sorting comments by page */
+function listArgumentUrls() {
+  let argumentsList = []
+  let queue = [...window.argumentPages]
+  while (queue.length > 0) {
+    const argument = queue.shift()
+    argumentsList.push(argument.url.split('/')[2])
+    if (argument.subArguments?.length > 0) {
+      queue = argument.subArguments.concat(queue)
+    }
+  }
+  return argumentsList
+}
+
 function findArgumentByPath(searchArguments, path) {
   let queue = [...searchArguments]
   while (queue.length > 0) {
@@ -36,18 +50,29 @@ function urlToTitle(url) {
   }
 }
 
+function sortCommentsByPage(comments) {
+  const urlList = listArgumentUrls()
+  return comments.sort((c1, c2) => {
+    return (urlList.indexOf(c1.url) > urlList.indexOf(c2.url) ? 1 : -1)
+  })
+}
+
 $(() => {
   fetch(airddataUrl('comments', 'GET'), {
     method: 'GET',
   })
   .then(response => response.json())
   .then(comments => {
-  
+    comments = sortCommentsByPage(comments)
     const commentsDiv = $('<div />')
+    let previousUrl = ''
     comments.forEach(comment => {
       const div = $('<div class="comment" />')
-      const title = urlToTitle(comment['url'])
-      $(`<p><strong>${title}</strong></p>`).appendTo(div)
+      if (comment['url'] !== previousUrl) {
+        const title = urlToTitle(comment['url'])
+        $(`<h3>${title}</h3>`).appendTo(div)
+        previousUrl = comment['url']
+      }
       $(`<p>${comment['text'].replace('\n', '<br />')}</p>`).appendTo(div)
       div.appendTo(commentsDiv)
     })

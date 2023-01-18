@@ -10,12 +10,11 @@ nav-menu: false
 
 <!-- One -->
 <section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>Comments</h1>
-		</header>
-		
-	</div>
+  <div class="inner">
+    <header class="major">
+      <h1>Comments</h1>
+    </header>
+  </div>
 </section>
 </div>
 
