@@ -25,10 +25,10 @@
 	--color-active-link:			#18566a;
 	--color-answer:						#def;
 
-	--color-agree: 						#8d8;
-	--color-agree-border:			#53ce53;
-	--color-disagree: 				#d88;
-	--color-disagree-border:	#ce5353;
+	--color-agree: 						#95d095;
+	--color-agree-border:			#65bc65;
+	--color-disagree: 				#d09595;
+	--color-disagree-border:	#bc6565;
 }
 
 html[data-theme="dark"] {
@@ -40,7 +40,7 @@ html[data-theme="dark"] {
 	--color-border:						rgba(212,212,255,0.1);
 	--color-border-bg:				rgba(212,212,255,0.035);
 	--color-highlight:				#9bf1ff;
-	--color-accent1:					#217794;
+	--color-accent1:					#6fc3df;
 	--color-accent2:					#8d82c4;
 	--color-accent3:					#ec8d81;
 	--color-accent4:					#e7b788;
@@ -54,18 +54,18 @@ html[data-theme="dark"] {
 	--color-header-fg-bold:		#fff;
 	--color-header-fg-light:	#999;
 
-	--color-active-link:			#18566a;
-	--color-answer:						#def;
+	--color-active-link:			#6fc3df;
+	--color-answer:						#304a85;
 
-	--color-agree: 						#8d8;
-	--color-agree-border:			#53ce53;
-	--color-disagree: 				#d88;
-	--color-disagree-border:	#ce5353;
+	--color-agree: 						#1b5c1b;
+	--color-agree-border: 		#0c270c;
+	--color-disagree: 				#773434;
+	--color-disagree-border: 	#501717;
 }
 
 @media (prefers-color-scheme: dark) {
 	html[data-theme="light"] {
-		--color-bg:						#fafafa;
+		--color-bg:						#f6f6f6;
 		--color-bg-alt:				#fdfdfd;
 		--color-fg:						#333;
 		--color-fg-bold:			#333;
@@ -79,7 +79,7 @@ html[data-theme="dark"] {
 		--color-accent4:			#e7b788;
 		--color-accent5:			#8ea9e8;
 		--color-accent6:			#87c5a4;
-	
+
 		--color-visited: 			#296d1b;
 
 		--color-header-bg:				#bbb;
@@ -90,12 +90,12 @@ html[data-theme="dark"] {
 		--color-active-link:			#18566a;
 		--color-answer:						#def;
 	
-		--color-agree: 						#8d8;
-		--color-agree-border:			#53ce53;
-		--color-disagree: 				#d88;
-		--color-disagree-border:	#ce5353;
+		--color-agree: 						#95d095;
+		--color-agree-border:			#65bc65;
+		--color-disagree: 				#d09595;
+		--color-disagree-border:	#bc6565;
 	}
-	
+
 	:root, html[data-theme="dark"] {
 		--color-bg:								#242943;
 		--color-bg-alt:						#2a2f4a;
@@ -111,9 +111,9 @@ html[data-theme="dark"] {
 		--color-accent4:					#e7b788;
 		--color-accent5:					#8ea9e8;
 		--color-accent6:					#87c5a4;
-	
+
 		--color-visited: 					#8d7;
-	
+
 		--color-header-bg:				#444;
 		--color-header-fg:				#bbb;
 		--color-header-fg-bold:		#fff;
@@ -124,7 +124,7 @@ html[data-theme="dark"] {
 
 		--color-agree: 						#1b5c1b;
 		--color-agree-border: 		#0c270c;
-		--color-disagree: 				#852626;
+		--color-disagree: 				#773434;
 		--color-disagree-border: 	#501717;
 	}
 }
