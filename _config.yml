@@ -4,7 +4,7 @@ subtitle:
 email: vaelgates@gmail.com
 description: AI Risk Discussions (AIRD) aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://michaelkeenan.github.io # the base hostname & protocol for your site
+url: http://ai-risk-discussions.org/ # the base hostname & protocol for your site
 author:
 
 permalink: /:title
