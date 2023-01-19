@@ -6,15 +6,19 @@ import Argument from './argument.js'
 let args = []
 
 function html_asset_path(path) {
-  const path_parts = path.match(/(\/aird\/)(.*)/);
-  if (!path_parts || path_parts.length < 3)
-    throw `path mismatch for ${path}`
 
-  return `${
-    path_parts[1]
-  }assets/html/${
-    path_parts[2]
-  }`
+  const path_parts = path.match(/(\/${window.site_baseurl}\/)(.*)/);
+  if (path_parts) {
+    return `${
+      path_parts[1]
+    }assets/html/${
+      path_parts[2]
+    }`
+  } else {
+    return `/assets/html/${path}`
+  }
+  // if (!path_parts || path_parts.length < 3)
+  //   throw `path mismatch for ${path}`
 }
 
 function insertTitleQuestion(argument) {
