@@ -2,6 +2,7 @@
 :root, html[data-theme="light"] {
 	--color-bg:						#f6f6f6;
 	--color-bg-alt:				#fdfdfd;
+	--color-border:				#eee;
 	--color-fg:						#333;
 	--color-fg-bold:			#333;
 	--color-fg-light:			rgba(11,11,32,0.8);
@@ -26,14 +27,17 @@
 	--color-answer:						#def;
 
 	--color-agree: 						#95d095;
+	--color-agree-text:				#040;
 	--color-agree-border:			#65bc65;
 	--color-disagree: 				#d09595;
+	--color-disagree-text:		#411;
 	--color-disagree-border:	#bc6565;
 }
 
 html[data-theme="dark"] {
 	--color-bg:								#242943;
 	--color-bg-alt:						#2a2f4a;
+	--color-border:						#333;
 	--color-fg:								#ffffff;
 	--color-fg-bold:					#ffffff;
 	--color-fg-light:					rgba(244,244,255,0.2);
@@ -67,6 +71,7 @@ html[data-theme="dark"] {
 	html[data-theme="light"] {
 		--color-bg:						#f6f6f6;
 		--color-bg-alt:				#fdfdfd;
+		--color-border:				#eee;
 		--color-fg:						#333;
 		--color-fg-bold:			#333;
 		--color-fg-light:			rgba(11,11,32,0.8);
@@ -99,6 +104,7 @@ html[data-theme="dark"] {
 	:root, html[data-theme="dark"] {
 		--color-bg:								#242943;
 		--color-bg-alt:						#2a2f4a;
+		--color-border:						#333;
 		--color-fg:								#ffffff;
 		--color-fg-bold:					#ffffff;
 		--color-fg-light:					rgba(244,244,255,0.2);

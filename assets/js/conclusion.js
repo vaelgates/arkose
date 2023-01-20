@@ -170,23 +170,23 @@ function addConclusionCommentsLink() {
 }
 
 function addAgreementsTable(args) {
-  const agreementsTable = $("<div class='agreements-table'><div class='heading'>Your answers</div></div>")
+  const agreementsTable = $("<div class='agreements-table'></div>")
   let answersCount = 0
   listArgumentUrls().forEach((url) => {
     if (!url) return
 
     const argument = findArgumentByPath(args, "/perspectives/" + url)
-    console.log(url)
-    console.log(argument.name)
-    console.log(argument.agreement)
 
-    if (argument.agreement) {
-      $(`<div class="page-name">${argument.name}</div>`).appendTo(agreementsTable)
-      $(`<div class="agreement ${argument.agreement}">${capitalize(argument.agreement)}</div>`).appendTo(agreementsTable)
-      answersCount++
-    }
+    if (!argument.agreement) return
+
+    const row = $('<div />')
+    $(`<div class="page-name">${argument.name}</div>`).appendTo(row)
+    $(`<div class="agreement ${argument.agreement}"><span>${capitalize(argument.agreement)}</span></div>`).appendTo(row)
+    row.appendTo(agreementsTable)
+    answersCount++
   })
   if (answersCount > 0) {
+    $("<div class='agreement-table-heading'>Your answers</div>").appendTo('.page-content')
     agreementsTable.appendTo('.page-content')
   }
 }

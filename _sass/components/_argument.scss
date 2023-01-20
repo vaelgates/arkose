@@ -38,10 +38,12 @@
   }
   &.agree {
     background-color: var(--color-agree);
+    color: var(--color-agree-text);
     border: 1px solid var(--color-agree-border);
   }
   &.disagree {
     background-color: var(--color-disagree);
+    color: var(--color-disagree-text);
     border: 1px solid var(--color-disagree-border);
   }
 }
@@ -400,31 +402,44 @@ em {
   border-bottom: 1px solid #aaa;
 }
 
+.agreement-table-heading {
+  margin-top: 2em;
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 0.3em;
+}
+
 .agreements-table {
   display: grid;
-  grid-template-columns: fit-content(3fr) 1fr;
-  align-items: center;
-  margin-top: 2em;
-  .heading {
-    grid-column: span 2;
-    font-weight: bold;
-    font-size: 120%;
-    margin-bottom: 0.3em;
+  margin-left: -0.5em;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    margin: 0.2em 0;
   }
   .page-name {
-    padding-right: 1em;
-    &:nth-child(4n) {
-      background-color: var(--color-answer);
-    }
+    padding: 0 1em 0.4em 0.5em;
   }
   .agreement {
-    padding: 0 0.4em;
-    margin: 0.2em;
-    &.agree {
-      background-color: var(--color-agree);
+    padding: 0 0.4em 0.4em;
+    span {
+      display: inline-block;
+      text-align: center;
+      line-height: 1.5em;
+      border-radius: 5px;
+      padding: 0 0.3em;
     }
-    &.disagree {
+    &.agree span {
+      background-color: var(--color-agree);
+      color: var(--color-agree-text);
+      border: 1px solid var(--color-agree-border);
+    }
+    &.disagree span {
       background-color: var(--color-disagree);
+      color: var(--color-disagree-text);
+      border: 1px solid var(--color-disagree-border);
     }
   }
 }
