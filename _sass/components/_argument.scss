@@ -400,6 +400,35 @@ em {
   border-bottom: 1px solid #aaa;
 }
 
+.agreements-table {
+  display: grid;
+  grid-template-columns: fit-content(3fr) 1fr;
+  align-items: center;
+  margin-top: 2em;
+  .heading {
+    grid-column: span 2;
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 0.3em;
+  }
+  .page-name {
+    padding-right: 1em;
+    &:nth-child(4n) {
+      background-color: var(--color-answer);
+    }
+  }
+  .agreement {
+    padding: 0 0.4em;
+    margin: 0.2em;
+    &.agree {
+      background-color: var(--color-agree);
+    }
+    &.disagree {
+      background-color: var(--color-disagree);
+    }
+  }
+}
+
 @include breakpoint(xlarge) {
   #main.argument .inner {
     margin: 0 calc(25%);

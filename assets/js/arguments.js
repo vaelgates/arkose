@@ -2,7 +2,7 @@
 
 import Argument from './argument.js'
 import { findArgumentByPath, html_asset_path, airddataUrl } from './common.js'
-import { addConclusionChartsAndCommentsLink } from './conclusion.js'
+import { addConclusionContent } from './conclusion.js'
 
 let args = []
 
@@ -275,7 +275,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
     transformRootArgumentLinks();
     updateBranchSidebar(argument);
     updateActiveLink(path);
-    addConclusionChartsAndCommentsLink(args, path);
+    addConclusionContent(args, path);
 
     if (saveAddress)
       window.history.pushState({}, "", path);

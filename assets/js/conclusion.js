@@ -1,7 +1,7 @@
 /* eslint-env jquery */
 /* global Chart */
 
-import { airddataUrl, findArgumentByPath } from './common.js'
+import { listArgumentUrls, airddataUrl, findArgumentByPath } from './common.js'
 
 function chartOptionsWithTitle(title) {
   return {
@@ -39,7 +39,7 @@ function chartMax(arr) {
   return Math.round(maxVal * 1.1) + 1
 }
 
-export function addConclusionChartsAndCommentsLink(args, path) {
+export function addConclusionContent(args, path) {
   if (!path.match(/conclusion/)) return
 
   fetch(airddataUrl('answers', 'GET'), {
@@ -156,12 +156,37 @@ export function addConclusionChartsAndCommentsLink(args, path) {
       })
     })
 
-    addConclusionCommentsLink(path)
+    addAgreementsTable(args)
+    addConclusionCommentsLink()
   })
 }
 
-function addConclusionCommentsLink(path) {
-  if (!path.match(/conclusion/)) return
+function capitalize(s) {
+  return s.substr(0, 1).toUpperCase() + s.substr(1)
+}
 
+function addConclusionCommentsLink() {
   $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments" class="button small">Read the comments</a></p>`).appendTo('.page-content');
+}
+
+function addAgreementsTable(args) {
+  const agreementsTable = $("<div class='agreements-table'><div class='heading'>Your answers</div></div>")
+  let answersCount = 0
+  listArgumentUrls().forEach((url) => {
+    if (!url) return
+
+    const argument = findArgumentByPath(args, "/perspectives/" + url)
+    console.log(url)
+    console.log(argument.name)
+    console.log(argument.agreement)
+
+    if (argument.agreement) {
+      $(`<div class="page-name">${argument.name}</div>`).appendTo(agreementsTable)
+      $(`<div class="agreement ${argument.agreement}">${capitalize(argument.agreement)}</div>`).appendTo(agreementsTable)
+      answersCount++
+    }
+  })
+  if (answersCount > 0) {
+    agreementsTable.appendTo('.page-content')
+  }
 }
