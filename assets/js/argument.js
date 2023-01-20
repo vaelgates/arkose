@@ -1,21 +1,8 @@
 /* eslint-env jquery */
 
-class Argument {
-  static findArgumentByPath(searchArguments, path) {
-    let queue = [...searchArguments]
-    while (queue.length > 0) {
-      const argument = queue.shift()
-      if (argument.url === path || `${window.site_baseurl}${argument.url}` === path) {
-        return argument;
-      }
-      if (argument.subArguments?.length > 0) {
-        queue = queue.concat(argument.subArguments)
-      }
-    }
-    console.error(`Couldn't find argument for path '${path}'`)
-    return null
-  }
+import { findArgumentByPath } from './common.js'
 
+class Argument {
   static updateSubSubArgumentVisibility() {
     const originalArgMapBottom = $('.argument-map')[0].offsetTop + $('.argument-map')[0].offsetHeight
     for (const subSection of $('.sub-sub-argument')) {
@@ -50,7 +37,7 @@ class Argument {
     this.answerLinkUrl = params.answerLinkUrl
     this.agreeTargetUrl = params.agreeTargetUrl
     this.question = params.question
-	this.questionSubtext=params.questionSubtext
+    this.questionSubtext = params.questionSubtext
     this.askQuestion = params.askQuestion ?? true
     this.overridesSiblings = params.overridesSiblings ?? false
     this.parentListingType = params.parentListingType ?? 'checkbox'
@@ -98,7 +85,7 @@ class Argument {
 
   getAgreement() {
     if (this.agreeTargetUrl) {
-      const canonicalArgument = Argument.findArgumentByPath(this.args, this.agreeTargetUrl)
+      const canonicalArgument = findArgumentByPath(this.args, this.agreeTargetUrl)
       return canonicalArgument.agreement
     } else {
       return this.agreement

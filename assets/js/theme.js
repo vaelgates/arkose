@@ -1,3 +1,6 @@
+/* eslint-env jquery */
+/* global skel */
+
 /*
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
@@ -191,7 +194,7 @@
 				// Link.
 					if ($link.length > 0) {
 
-						$x = $link.clone()
+						let $x = $link.clone()
 							.text('')
 							.addClass('primary')
 							.appendTo($this);
@@ -365,7 +368,7 @@
 						$menu._toggle();
 
 				})
-				.on('click', function(event) {
+				.on('click', function() {
 
 					// Hide.
 						$menu._hide();

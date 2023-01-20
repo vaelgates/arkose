@@ -1,25 +1,10 @@
 /* eslint-env jquery */
-/* global Chart */
 
 import Argument from './argument.js'
+import { findArgumentByPath, html_asset_path, airddataUrl } from './common.js'
+import { addConclusionChartsAndCommentsLink } from './conclusion.js'
 
 let args = []
-
-function html_asset_path(path) {
-
-  const path_parts = path.match(/(\/${window.site_baseurl}\/)(.*)/);
-  if (path_parts) {
-    return `${
-      path_parts[1]
-    }assets/html/${
-      path_parts[2]
-    }`
-  } else {
-    return `/assets/html/${path}`
-  }
-  // if (!path_parts || path_parts.length < 3)
-  //   throw `path mismatch for ${path}`
-}
 
 function insertTitleQuestion(argument) {
   if (argument.question) {
@@ -279,7 +264,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
   $.get(html_path).done(data => {
     $('.page-content').html(data);
 
-    const argument = Argument.findArgumentByPath(args, path);
+    const argument = findArgumentByPath(args, path);
     if (!argument)
       throw `Couldn't find argument for ${path}`;
 
@@ -290,7 +275,7 @@ function getHtml(path, saveAddress = true, scrollParam) {
     transformRootArgumentLinks();
     updateBranchSidebar(argument);
     updateActiveLink(path);
-    addConclusionChartsAndCommentsLink(path);
+    addConclusionChartsAndCommentsLink(args, path);
 
     if (saveAddress)
       window.history.pushState({}, "", path);
@@ -310,22 +295,10 @@ function getHtml(path, saveAddress = true, scrollParam) {
 }
 
 function recordAnswer(url, agreement) {
-  const argument = Argument.findArgumentByPath(args, url)
+  const argument = findArgumentByPath(args, url)
   argument.setAgreement(agreement)
   saveAnswers()
   Argument.updateSubSubArgumentVisibility()
-}
-
-function airddataUrl(dataType, method) {
-  let suffix = ''
-  if (method === 'GET') {
-    suffix = '/json'
-  }
-  if (window.location.host === 'localhost:4000') {
-    return `http://localhost:4567/${dataType}${suffix}`
-  } else {
-    return `https://aird.michaelkeenan.net/${dataType}${suffix}`
-  }
 }
 
 function saveAnswers() {
@@ -363,7 +336,7 @@ function loadAnswers() {
 
   recursiveAttachAnswers(args, answers)
   for (const [url, agreement] of Object.entries(answers)) {
-    const argument = Argument.findArgumentByPath(args, '/perspectives/' + url)
+    const argument = findArgumentByPath(args, '/perspectives/' + url)
     if (!argument) console.warn(`Couldn't find argument '${url}'`)
 
     const checkbox = $(`input[data-url='${url}']`)
@@ -477,169 +450,6 @@ function generateUUID() { // Public Domain/MIT
       }
       return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
   });
-}
-
-function chartOptionsWithTitle(title) {
-  return {
-    plugins: {
-      title: {
-        text: title,
-        display: true,
-        position: 'top',
-      },
-      legend: {
-        display: false
-      },
-      labels: {
-        render: 'image'
-      }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 1
-        }
-      },
-      x: {
-        grid: {
-          display: false
-        }
-      }
-    }
-  }
-}
-
-function chartMax(arr) {
-  const maxVal = Math.max(...arr)
-  return Math.round(maxVal * 1.1) + 1
-}
-
-function addConclusionChartsAndCommentsLink(path) {
-  if (!path.match(/conclusion/)) return
-
-  fetch(airddataUrl('answers', 'GET'), {
-    method: 'GET',
-  })
-  .then(response => response.json())
-  .then(data => {
-    const within50 = Argument.findArgumentByPath(args, '/perspectives/within-50-years')
-    const moreThan50 = Argument.findArgumentByPath(args, '/perspectives/more-than-50-years')
-    const never = Argument.findArgumentByPath(args, '/perspectives/never')
-
-    const chosenOpt = {
-      src: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMiAwYzYuNjIzIDAgMTIgNS4zNzcgMTIgMTJzLTUuMzc3IDEyLTEyIDEyLTEyLTUuMzc3LTEyLTEyIDUuMzc3LTEyIDEyLTEyem0wIDFjNi4wNzEgMCAxMSA0LjkyOSAxMSAxMXMtNC45MjkgMTEtMTEgMTEtMTEtNC45MjktMTEtMTEgNC45MjktMTEgMTEtMTF6bTcgNy40NTdsLTkuMDA1IDkuNTY1LTQuOTk1LTUuODY1Ljc2MS0uNjQ5IDQuMjcxIDUuMDE2IDguMjQtOC43NTIuNzI4LjY4NXoiLz48L3N2Zz4=",
-      width: 16,
-      height: 16
-    }
-
-    let chart
-    let imagesList
-    let div
-
-    if (within50.agreement === 'agree') {
-      imagesList = [chosenOpt]
-    } else if (moreThan50.agreement === 'agree') {
-      imagesList = [null, chosenOpt]
-    } else if (never.agreement === 'disagree') {
-      imagesList = [null, null, chosenOpt]
-    } else {
-      imagesList = []
-    }
-
-    let chartOptions = chartOptionsWithTitle('When AGI?')
-    chartOptions.plugins.labels = {
-      render: 'image',
-      images: imagesList,
-    }
-
-    chartOptions.scales.y.max = chartMax([
-      data['when-agi']['within-50-years'],
-      data['when-agi']['after-50-years'],
-      data['when-agi']['never']
-    ])
-
-    $('<div class="charts" />').appendTo('.page-content');
-    div = $('<div />').appendTo('.charts');
-    chart = $('<canvas />').appendTo(div);
-    new Chart(chart, {
-      type: 'bar',
-      data: {
-        labels: ['Within 50 Years', 'After 50 Years', 'Never'],
-        datasets: [{
-          label: 'When AGI?',
-          data: [
-            data['when-agi']['within-50-years'],
-            data['when-agi']['after-50-years'],
-            data['when-agi']['never']
-          ],
-          backgroundColor: ['#8d8', '#8d8', '#d88'],
-          borderWidth: 1
-        }]
-      },
-      options: chartOptions
-    })
-
-    const chartKeys = [
-      'the-alignment-problem',
-      'instrumental-incentives',
-      'threat-models',
-      'pursuing-safety-work'
-    ]
-    const chartTitles = [
-      'The Alignment Problem',
-      'Instrumental Incentives',
-      'Threat Models',
-      'Pursuing Safety Work'
-    ]
-    chartKeys.forEach((chartKey, i) => {
-      const currentArg = Argument.findArgumentByPath(args, `/perspectives/${chartKey}`)
-
-      switch (currentArg.agreement) {
-        case 'agree':
-          imagesList = [chosenOpt]
-          break;
-        case 'disagree':
-          imagesList = [null, chosenOpt]
-          break;
-        default:
-          imagesList = []
-      }
-
-      let chartOptions = chartOptionsWithTitle(chartTitles[i])
-      chartOptions.plugins.labels = {
-        render: 'image',
-        images: imagesList,
-      }
-
-      chartOptions.scales.y.max = chartMax([data[chartKey]['agree'], data[chartKey]['disagree']])
-
-      div = $('<div />').appendTo('.charts');
-      chart = $('<canvas />').appendTo(div);
-
-      new Chart(chart, {
-        type: 'bar',
-        data: {
-          labels: ['Agree', 'Disagree'],
-          datasets: [{
-            label: chartTitles[i],
-            data: [data[chartKey]['agree'], data[chartKey]['disagree']],
-            backgroundColor: ['#8d8', '#d88'],
-            borderWidth: 1
-          }]
-        },
-        options: chartOptions
-      })
-    })
-
-    addConclusionCommentsLink(path)
-  })
-}
-
-function addConclusionCommentsLink(path) {
-  if (!path.match(/conclusion/)) return
-
-  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments" class="button small">Read the comments</a></p>`).appendTo('.page-content');
 }
 
 initPage()

@@ -1,45 +1,6 @@
 /* eslint-env jquery */
 
-/* returns the argument URLs in a list, in order, for use when sorting comments by page */
-function listArgumentUrls() {
-  let argumentsList = []
-  let queue = [...window.argumentPages]
-  while (queue.length > 0) {
-    const argument = queue.shift()
-    argumentsList.push(argument.url.split('/')[2])
-    if (argument.subArguments?.length > 0) {
-      queue = argument.subArguments.concat(queue)
-    }
-  }
-  return argumentsList
-}
-
-function findArgumentByPath(searchArguments, path) {
-  let queue = [...searchArguments]
-  while (queue.length > 0) {
-    const argument = queue.shift()
-    if (argument.url === path || `${window.site_baseurl}${argument.url}` === path) {
-      return argument;
-    }
-    if (argument.subArguments?.length > 0) {
-      queue = queue.concat(argument.subArguments)
-    }
-  }
-  console.error(`Couldn't find argument for path '${path}'`)
-  return null
-}
-
-function airddataUrl(dataType, method) {
-  let suffix = ''
-  if (method === 'GET') {
-    suffix = '/json'
-  }
-  if (window.location.host === 'localhost:4000') {
-    return `http://localhost:4567/${dataType}${suffix}`
-  } else {
-    return `https://aird.michaelkeenan.net/${dataType}${suffix}`
-  }
-}
+import { listArgumentUrls, airddataUrl, findArgumentByPath } from './common.js'
 
 function urlToTitle(url) {
   const arg = findArgumentByPath(window.argumentPages, '/perspectives/' + url)
