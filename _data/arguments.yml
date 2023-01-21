@@ -41,6 +41,7 @@
       name: Never
       url: /perspectives/never
       question: Would you agree or disagree with this?
+      questionSubtext: Use the checkboxes and blue arrows to explore counterarguments or agreement (mirroring the original interviewer’s perspective)
       overridesSiblings: true
       nodes:
         - node:
@@ -94,6 +95,8 @@
   name: The Alignment Problem
   url: /perspectives/the-alignment-problem
   effect: calculated
+  question: Do you agree or disagree?
+  questionSubtext: Use the checkboxes and blue arrows to explore counterarguments or agreement (mirroring the original interviewer’s perspective)
   nodes:
     - node:
       name: Agree
@@ -187,6 +190,20 @@
   url: /perspectives/threat-models
   text: Threat Models—how might AGI be dangerous?
   effect: calculated
+  question: Do you agree or disagree that these are plausible threat scenarios (under the assumption that generally intelligent AI systems are developed & deployed)?
+  nodes:
+    - node:
+      name: Agree
+      effect: agree
+      nodeLinkUrl: /perspectives/threat-models
+      agreeTargetUrl: /perspectives/threat-models
+      answerLinkUrl: /perspectives/threat-models
+    - node:
+      name: Disagree
+      effect: disagree
+      nodeLinkUrl: /perspectives/threat-models
+      agreeTargetUrl: /perspectives/threat-models
+      answerLinkUrl: /perspectives/threat-models
 - node:
   name: Pursuing Safety Work
   url: /perspectives/pursuing-safety-work

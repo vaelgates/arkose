@@ -166,7 +166,7 @@ function capitalize(s) {
 }
 
 function addConclusionCommentsLink() {
-  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments" class="button small">Read the comments</a></p>`).appendTo('.page-content');
+  $(`<p style="margin-top: 1em"><a href="${window.site_baseurl}/comments" class="button small">Read the comments</a></p><h2>What's next? Read more at:</h2><p><a href='../interviews' class='button'>Interviews</a><a href='../resources' class='button'>Resources</a><a href="../what_can_i_do" class='button'>What can I do?</a></p>`).appendTo('.page-content');
 }
 
 function addAgreementsTable(args) {

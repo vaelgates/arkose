@@ -413,7 +413,18 @@ breadcrumbs: {breadcrumbs}
 			var attributes = "";
 			if (url.StartsWith("http")) //--> external link
 				attributes = "target='_blank'";
-
+			string cssClass="";
+			foreach (var word in title.Split(' '))
+			{
+				if (word.StartsWith("#class="))
+				{
+					title = title.Replace(" " + word, "");
+					cssClass += EverythingAfter(word, "#class=")+" ";
+				}
+			}
+			if (cssClass != "")
+				attributes += $" class='{cssClass}'";
+			title = title.Trim();
 			(title, url) = ProcessMarkdownLink(title, url);
 
 
