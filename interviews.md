@@ -28,8 +28,8 @@ order: 2
 			<div class="box">
 				<p>Preliminary results presented at Stanford.</p>
 			</div>
-			<a href="#main_report" class="button special fit">Main Report</a>
-			<a href="#" class="button fit small">Appendix</a>
+			<a href="#main_report" class="button special fit">Report</a>
+			<a href="#" class="button fit small">Static version</a>
 			<div class="box">
 				<p>The common themes in the transcripts were tagged and tallied in this quantitative analysis of the transcripts. </p>
 			</div>
@@ -43,7 +43,7 @@ order: 2
 			</div>
 			<a href="https://docs.google.com/spreadsheets/d/1FlBcctFLWTYY3NiIklgcuQtVYxuU-plDmUeQjn-2Cfk/edit?usp=sharing" class="button fit">Tagged Quotes</a>
 			<div class="box">
-				<p><i>Quotes attached to specific tags, used in all analyses</i></p>
+				<p>Quotes attached to specific tags, used in all analyses</p>
 			</div>
 		</div>
 		<div class="4u$ 12u$(medium)">
@@ -69,6 +69,7 @@ order: 2
 
 {% include_relative analyze_transcripts.html %} 
 <p>I think ideally this part of the page would be a darker gray or something, something more of a line separator but that matches the rest of the website</p>
+
 	</div>
 </section>
 
