@@ -62,8 +62,10 @@ html[data-theme="dark"] {
 	--color-answer:						#304a85;
 
 	--color-agree: 						#1b5c1b;
+	--color-agree-text: 			#dfd;
 	--color-agree-border: 		#0c270c;
 	--color-disagree: 				#773434;
+	--color-disagree-text: 		#fdd;
 	--color-disagree-border: 	#501717;
 }
 
@@ -94,10 +96,12 @@ html[data-theme="dark"] {
 	
 		--color-active-link:			#18566a;
 		--color-answer:						#def;
-	
+
 		--color-agree: 						#95d095;
+		--color-agree-text:				#040;
 		--color-agree-border:			#65bc65;
 		--color-disagree: 				#d09595;
+		--color-disagree-text:		#411;
 		--color-disagree-border:	#bc6565;
 	}
 
@@ -129,8 +133,10 @@ html[data-theme="dark"] {
 		--color-answer:						#304a85;
 
 		--color-agree: 						#1b5c1b;
+		--color-agree-text: 			#dfd;
 		--color-agree-border: 		#0c270c;
 		--color-disagree: 				#773434;
+		--color-disagree-text: 		#fdd;
 		--color-disagree-border: 	#501717;
 	}
 }
