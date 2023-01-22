@@ -62,6 +62,8 @@
 
 			header {
 				width: auto;
+				padding: 0 0.3em;
+				backdrop-filter: blur(3px);
 
 				> :first-child {
 					width: auto;
@@ -76,6 +78,8 @@
 				@include vendor('display', 'flex');
 				@include vendor('align-items', 'center');
 				margin: 0 0 _size(element-margin) 0;
+				padding: 0.5em;
+				backdrop-filter: blur(3px);
 
 				> * {
 					margin-left: 1.5em;
