@@ -11,10 +11,11 @@
 		@include vendor('background-image', 'url("../images/banner.jpg")');
 		@include vendor('display', 'flex');
 		@include padding(4em, 0, (2em, 0, 0, 0));
-		background-attachment: fixed;
+		background-attachment: inherit; //fixed;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain; //cover;
+		background-color: #c5c5bd;
 		border-bottom: 0 !important;
 		cursor: default;
 		height: 60vh;
