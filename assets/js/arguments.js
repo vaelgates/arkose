@@ -132,8 +132,6 @@ function insertCheckboxes(argument) {
         comment: commentText
       })
     }).then((response) => {
-
-      throw Error('asd');
       if (!response.ok) throw Error(response.statusText);
       feedbackButton.find('.button-progress-bar').addClass('sent')
       window.setTimeout(() => {
