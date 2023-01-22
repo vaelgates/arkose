@@ -1,3 +1,5 @@
+/* eslint-env jquery */
+
 /* returns the argument URLs in a list, ordered depth-first order as they are in the TOC */
 export function listArgumentUrls() {
   let argumentsList = []
@@ -52,4 +54,28 @@ export function findArgumentByPath(searchArguments, path) {
   }
   console.error(`Couldn't find argument for path '${path}'`)
   return null
+}
+
+export function handleFormButtonError(button, errorMessage) {
+  const originalWidth = button.outerWidth()
+  button.css('width', String(originalWidth) + 'px')
+  button.find('.button-text').html('Error')
+  const buttonProgress = button.find('.button-progress-bar')
+  if (errorMessage) {
+    $(`<div class="error-message">${errorMessage}</div>`).insertAfter(button)
+  }
+  transitionless(buttonProgress, () => {
+    buttonProgress.addClass('error')
+  })
+}
+
+export function transitionless(element, fn, fn2) {
+  const originalTransition = element.css('transitionDuration')
+  element.css('transitionDuration', '0s')
+  fn()
+
+  window.setTimeout(() => {
+    element.css('transitionDuration', originalTransition)
+    if (fn2) fn2()
+  }, 10)
 }

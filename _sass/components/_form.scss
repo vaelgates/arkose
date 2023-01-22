@@ -23,6 +23,10 @@
 			}
 		}
 
+		.required-missing, input.required-missing, select.required-missing {
+			background-color: var(--color-disagree);
+		}
+
 		> .actions {
 			margin: (_size(element-margin) * 1.25) 0 0 0 !important;
 		}
@@ -133,7 +137,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -221,4 +225,11 @@
 	.formerize-placeholder {
 		color: var(--color-fg-light) !important;
 		opacity: 0.5;
+	}
+
+	.error-message {
+		margin-top: 1em;
+		padding: 0.25em 0.5em;
+		background-color: var(--color-disagree);
+		border: 1px solid var(--color-disagree-border);
 	}

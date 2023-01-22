@@ -68,11 +68,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <script>
   window.site_baseurl = '{{site.baseurl}}'
   window.url = '{{page.url}}'
+  window.contactEmail = "{{site.email}}"
   window.argumentPages = [{% for argument in site.data.arguments %}
     {% include argument_node.js %}
   {% endfor %}]
-
-
 
 </script>
 

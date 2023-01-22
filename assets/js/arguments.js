@@ -1,7 +1,7 @@
 /* eslint-env jquery */
 
 import Argument from './argument.js'
-import { findArgumentByPath, html_asset_path, airddataUrl } from './common.js'
+import { findArgumentByPath, html_asset_path, airddataUrl, handleFormButtonError } from './common.js'
 import { addConclusionContent } from './conclusion.js'
 
 let args = []
@@ -131,7 +131,10 @@ function insertCheckboxes(argument) {
         url: pagePath(),
         comment: commentText
       })
-    }).then(() => {
+    }).then((response) => {
+
+      throw Error('asd');
+      if (!response.ok) throw Error(response.statusText);
       feedbackButton.find('.button-progress-bar').addClass('sent')
       window.setTimeout(() => {
         const originalWidth = feedbackButton.outerWidth()
@@ -142,6 +145,8 @@ function insertCheckboxes(argument) {
           feedbackButton.find('.button-progress-bar').removeClass('pulse')
         }, 250)
       }, 700)
+    }).catch(() => {
+      handleFormButtonError(feedbackButton, `An error occurred when sending the message. Please instead use the contact email (<a href="mailto:${window.contactEmail}">${window.contactEmail}</a>).`)
     })
   })
 }

@@ -118,30 +118,35 @@ order: 4
 <div id="book_a_call"><h2>Book a call</h2>
 <p>If you're interested in working in AI alignment and advanced AI safety, please book a call with <a href="https://vaelgates.com">Vael Gates</a>, who leads this project and conducted the <a href=interviews>interviews</a> as part of their postdoctoral work with Stanford University.</p>
 
-<form method="post" action="#">
+<form id="book_call_form" method="post" action="#">
 	<div class="row uniform">
 		<div class="6u 12u$(xsmall)">
-			<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+			<input type="text" name="name" id="name" value="" placeholder="Name" />
 		</div>
 		<div class="6u$ 12u$(xsmall)">
-			<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+			<input type="email" name="email" id="email" value="" placeholder="Email" />
 		</div>
 		<div class="12u$">
 			<div class="select-wrapper">
-				<select name="demo-category" id="demo-category">
+				<select name="interest" id="interest">
 					<option value=""> Interested in talking about... </option>
-					<option value="1"> AI Alignment Research or Engineering</option>
-					<option value="1"> AI Alignment Governance</option>
-					<option value="1"> Other (please specify below)</option>
+					<option value="AI Alignment Research or Engineering">AI Alignment Research or Engineering</option>
+					<option value="AI Alignment Governance">AI Alignment Governance</option>
+					<option value="Other">Other (please specify below)</option>
 				</select>
 			</div>
 		</div>
 		<div class="12u$">
-			<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+			<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 		</div>
 		<div class="12u$">
 			<ul class="actions">
-				<li><input type="submit" value="Send Message" class="special" /></li>
+				<li>
+          <button class="button" id="send_form_button">
+            <div class="button-progress-bar"></div>
+            <div class="button-text">Send Message</div>
+          </button>
+        </li>
 			</ul>
 		</div>
 	</div>
@@ -151,3 +156,8 @@ order: 4
 </div>
 </section>
 </div>
+
+<script src="{{ "assets/js/book_call.js" | absolute_url }}" type="module"></script>
+<script>
+  window.contactEmail = "{{site.email}}"
+</script>

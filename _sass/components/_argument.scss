@@ -308,25 +308,6 @@
       position: relative;
       width: fit-content;
       margin-top: 1em;
-      .button-progress-bar {
-        position: absolute;
-        height: calc(100% - 4px);
-        left: 0;
-        margin: 2px;
-        width: 0%;
-        background-color: var(--color-answer);
-        transition: width 0.5s ease-in-out, background-color 0.25s ease-in-out;
-        &.sent {
-          width: calc(100% - 4px);
-        }
-        &.pulse {
-          background-color: var(--color-agree);
-        }
-      }
-      .button-text {
-        position: relative;
-        z-index: 10;
-      }
     }
   }
 }
@@ -442,6 +423,10 @@ em {
       border: 1px solid var(--color-disagree-border);
     }
   }
+}
+
+.RH5hzf {
+  background-color: #f00;
 }
 
 @include breakpoint(xlarge) {
