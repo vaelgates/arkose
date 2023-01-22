@@ -5,6 +5,7 @@ import { findArgumentByPath, html_asset_path, airddataUrl, handleFormButtonError
 import { addConclusionContent } from './conclusion.js'
 
 let args = []
+let showAllArguments = false
 
 function insertTitleQuestion(argument) {
   if (argument.question) {
@@ -301,7 +302,7 @@ function recordAnswer(url, agreement) {
   const argument = findArgumentByPath(args, url)
   argument.setAgreement(agreement)
   saveAnswers()
-  Argument.updateSubSubArgumentVisibility()
+  Argument.updateSubSubArgumentVisibility(showAllArguments)
 }
 
 function saveAnswers() {
@@ -414,6 +415,17 @@ function initPage() {
     const link = $(event.currentTarget)
     const path = `${window.site_baseurl}` + $(link).data('url');
     getHtml(path, true, 'history');
+  })
+  $('.toggle-all-arguments-button').on('click', () => {
+    showAllArguments = !showAllArguments
+    Argument.updateSubSubArgumentVisibility(showAllArguments)
+    if (showAllArguments) {
+      $('.toggle-all-arguments-button').removeClass('show-all-args')
+      $('.toggle-all-arguments-button').addClass('collapse-args')
+    } else {
+      $('.toggle-all-arguments-button').removeClass('collapse-args')
+      $('.toggle-all-arguments-button').addClass('show-all-args')
+    }
   })
 
   // Because we're messing with the address with window.history.pushState, when the user clicks the Back

@@ -10,9 +10,33 @@
   font-size: 90%;
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border-bg);
+  position: relative;
   .argument-list {
     margin-left: 10px;
     margin-top: 4px;
+  }
+  .toggle-all-arguments-button {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    &.show-all-args::before {
+      content: '\f0fe';
+      font-family:'FontAwesome';
+      margin-right: 0.5em;
+      font-size: 0.9em;
+    }
+    &.show-all-args::after {
+      content: 'Show All';
+    }
+    &.collapse-args::before {
+      content: '\f147';
+      font-family:'FontAwesome';
+      margin-right: 0.5em;
+      font-size: 0.9em;
+    }
+    &.collapse-args::after {
+      content: 'Collapse';
+    }
   }
 }
 
