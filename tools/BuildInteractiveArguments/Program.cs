@@ -594,7 +594,7 @@ breadcrumbs: {breadcrumbs}
 					capt = capt.Remove(0, 1);
 					capt = capt.Remove(capt.Length - 1, 1);
 					capt = ConvertMarkdownLinksToHtml(capt);
-					img.Append("<figcaption markdown='1'>" + capt + "\n</figcaption></figure>"); // gotta add \n before </figcaption> otherwise "figcaption" is taken as a code block.
+					img.Append("<figcaption>" + capt + "\n</figcaption></figure>"); // gotta add \n before </figcaption> otherwise "figcaption" is taken as a code block.
 					img.Append(postfix);
 					outText.AppendLine(img.ToString());
 					// to reference local, use {% link assets/images/palm.png %}
