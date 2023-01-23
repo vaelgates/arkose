@@ -172,16 +172,35 @@ function addConclusionCommentsLink() {
 function addAgreementsTable(args) {
   const agreementsTable = $("<div class='agreements-table'></div>")
   let answersCount = 0
+  const skipUrls = ['within-50-years', 'more-than-50-years', 'never']
   listArgumentUrls().forEach((url) => {
     if (!url) return
+    if (skipUrls.includes(url)) return
 
     const argument = findArgumentByPath(args, "/perspectives/" + url)
 
     if (!argument.agreement) return
 
+    let agreementClass = argument.agreement
+    if (url === 'when-generally-capable-ai') {
+      const within50 = findArgumentByPath(args, "/perspectives/within-50-years")
+      const after50 = findArgumentByPath(args, "/perspectives/more-than-50-years")
+      const never = findArgumentByPath(args, "/perspectives/never")
+      if (within50.agreement === 'agree') {
+        argument.agreement = 'Within 50 Years'
+        agreementClass = 'agree'
+      } else if (after50.agreement === 'agree') {
+        argument.agreement = 'After 50 Years'
+        agreementClass = 'agree'
+      } else if (never.agreement === 'disagree') {
+        argument.agreement = 'Never'
+        agreementClass = 'disagree'
+      }
+    }
+
     const row = $('<div />')
     $(`<div class="page-name">${argument.name}</div>`).appendTo(row)
-    $(`<div class="agreement ${argument.agreement}"><span>${capitalize(argument.agreement)}</span></div>`).appendTo(row)
+    $(`<div class="agreement ${agreementClass}"><span>${capitalize(argument.agreement)}</span></div>`).appendTo(row)
     row.appendTo(agreementsTable)
     answersCount++
   })
