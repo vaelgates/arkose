@@ -197,13 +197,13 @@
       effect: agree
       nodeLinkUrl: /perspectives/threat-models
       agreeTargetUrl: /perspectives/threat-models
-      answerLinkUrl: /perspectives/threat-models
+      answerLinkUrl: /perspectives/pursuing-safety-work
     - node:
       name: Disagree
       effect: disagree
       nodeLinkUrl: /perspectives/threat-models
       agreeTargetUrl: /perspectives/threat-models
-      answerLinkUrl: /perspectives/threat-models
+      answerLinkUrl: /perspectives/pursuing-safety-work
 - node:
   name: Pursuing Safety Work
   url: /perspectives/pursuing-safety-work
