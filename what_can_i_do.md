@@ -42,7 +42,7 @@ order: 4
 </div>
 
 <br>
-<div id="calltoaction" class="box" style="background-color: var(--color-accent1); text-align:center">
+<div id="calltoaction" class="box box-blue special">
 	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field is pre-paradigmatic and <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support people</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
 	<a href="#book_a_call" class="button fit">book a call</a>
 </div>

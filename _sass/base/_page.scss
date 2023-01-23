@@ -67,6 +67,23 @@
 		transform: translateX(-50%);
 	}
 
+	.bg-gray {
+		background-color: var(--color-bg-gray);
+	}
+
+	.full-width-gray {
+		background-color: var(--color-bg-gray);
+		box-shadow: 0 0 0 100vmax var(--color-bg-gray);
+		clip-path: inset(0 -100vmax);
+		padding-top: 1.2em;
+		padding-bottom: 0.1em;
+		margin: 1em 0;
+	}
+
+	.box-blue {
+		background-color: var(--color-answer);
+	}
+
 	.interviews-grid {
 		display: grid;
 		gap: 1.5rem;
