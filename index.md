@@ -34,19 +34,3 @@ show_tile: false
 <div id="about_us" class="text-smaller">
 <p>AI Risk Discussions (AIRD) was developed by Larchwood, a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). AI Risk Discussions aims to facilitate discussion and evaluation of the risks from advanced AI. Our current focus is on soliciting expert evaluation of the arguments, understanding researcher perspectives via one-on-one conversations, and providing resources for interested stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Lukas Trötzmüller (interactive walkthrough), Maheen Shermohammed (quantitative analysis), and Zi Cheng (Sam) Huang (interview tagging).</p>
 </div>
-
-<script>
-	function animateHue() {
-		const banner = $("#banner")
-		for (let angle = 0; angle < 360; angle += 2) {
-			const copyAngle = angle
-			window.setTimeout(() => {
-				banner.css("filter", `hue-rotate(${copyAngle}deg)`)
-				if (angle >= 358) animateHue()
-			}, angle * 100)
-		}
-	}
-  document.addEventListener("DOMContentLoaded", function(event) {
-		window.setTimeout(animateHue, 3000)
-	})
-</script>
