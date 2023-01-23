@@ -5,11 +5,13 @@ import { findArgumentByPath } from './common.js'
 class Argument {
   static updateSubSubArgumentVisibility(showAll) {
     const originalArgMapBottom = $('.argument-map')[0].offsetTop + $('.argument-map')[0].offsetHeight
+    let showCount = 0
     for (const subSection of $('.sub-sub-argument')) {
       let subNodesNotable = $(subSection).find('.argument-shape-link').filter((i, node) => ($(node).hasClass('disagree') || $(node).hasClass('none'))).length
       subNodesNotable += $(subSection).siblings('.argument-shape-link.agree, .argument-shape-link.disagree').length
       if (subNodesNotable > 0 || showAll) {
         $(subSection).show()
+        showCount++
       } else {
         $(subSection).hide()
       }
@@ -17,6 +19,11 @@ class Argument {
     if (showAll) {
       // don't adjust the scroll position if they just clicked the Show All button
       return
+    }
+    if (showCount === $('.sub-sub-argument').length) {
+      $(".toggle-all-arguments-button").hide()
+    } else {
+      $(".toggle-all-arguments-button").show()
     }
     const newArgMapBottom = $('.argument-map')[0].offsetTop + $('.argument-map')[0].offsetHeight
 
