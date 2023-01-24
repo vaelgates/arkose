@@ -17,7 +17,7 @@ order: 2
 		</header>
 
 <!-- Content -->
-<p> In Feb and March 2022, Dr. Vael Gates conducted 97 interviews with AI researchers about their perceptions of AI and the future of the field, with a focus on risks from advanced AI systems. 92 interviewees were randomly selected from NeurIPS or ICML 2021 submissions; the remaining 5 were outside recommendations.</p>
+<p> In Feb and March 2022, Dr. Vael Gates conducted 97 interviews with AI researchers about their perceptions of AI and the future of the field, with a focus on risks from advanced AI systems. 92 interviewees were randomly selected from NeurIPS or ICML 2021 submissions and 5 were outside recommendations.</p>
 
 <!-- <div class="row full-width">
 	<div class="interviews-grid"> -->
