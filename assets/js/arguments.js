@@ -1,4 +1,5 @@
 /* eslint-env jquery */
+/* global tippy */
 
 import Argument from './argument.js'
 import { findArgumentByPath, html_asset_path, airddataUrl, handleFormButtonError } from './common.js'
@@ -182,6 +183,19 @@ function insertGoBackLink(argument) {
   $(link).data('url', url)
 }
 
+function tooltipIfFirstClick(checkbox) {
+  if (localStorage.getItem('answers') && localStorage.getItem('answers') !== '{}') return
+
+  window.setTimeout(() => {
+    const link = checkbox.parent().find('a.answer-link')
+    tippy(link[0], {
+      content: 'Click to explore',
+      placement: 'top-end',
+      offset: [-10, 5],
+    }).show();
+  }, 300)
+}
+
 function checkboxChange(event) {
   const checkbox = $(event.currentTarget)
 
@@ -191,6 +205,8 @@ function checkboxChange(event) {
   } else {
     agreement = 'undecided'
   }
+
+  tooltipIfFirstClick(checkbox)
 
   recordAnswer(checkbox.data('url'), agreement)
 
