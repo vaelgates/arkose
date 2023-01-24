@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-image: assets/images/pic01.jpg
+description: "Resources for machine learning researchers, for those interested in AI governance and policy, and for a general audience."
 nav-menu: true
 order: 3
 ---

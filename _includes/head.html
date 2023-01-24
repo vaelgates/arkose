@@ -15,7 +15,12 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdfdfd" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2a2f4a" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property=“og:title” content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}We aim to facilitate discussion and evaluation of potential risks from advanced AI. Our focus is on soliciting and engaging with expert perspectives on the arguments, and providing resources for stakeholders.{% endif %}" />
+	<meta property="og:image" content="{% if page.image %}{{ site.url }}/{{ page.image }}{% else %}https://ai-risk-discussions.org/assets/images/banner-dark.jpg"{% endif %} />
 	<script>
 		// this checks for session storage telling to override
 		// the system preferences

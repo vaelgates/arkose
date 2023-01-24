@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Comments
-image: assets/images/pic01.jpg
 nav-menu: false
 ---
 
