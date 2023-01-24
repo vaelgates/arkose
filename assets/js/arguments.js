@@ -108,14 +108,14 @@ function insertCheckboxes(argument) {
   $('<textarea class="comment-textarea" placeholder="Comments or responses? (to be displayed publicly at the end of the walkthrough)" />').appendTo(feedbackContainer);
   checkboxesSection.appendTo($('.page-content'));
   $('<button class="button small"><div class="button-progress-bar"></div><div class="button-text">Save Comment</div></button>').appendTo(feedbackContainer)
-  const feedbackButton = $('.feedback-container .button')
+  const feedbackButton = feedbackContainer.find('.button')
   $('.comment-textarea').on('input propertychange', () => {
     feedbackButton.find('.button-text').html('Submit Comment')
     feedbackButton.find('.button-progress-bar').removeClass('sent')
     if ($('.comment-textarea').val().length > 0) {
-      feedbackButton.css('visibility', 'visible')
+      feedbackContainer.addClass('show-button')
     } else {
-      feedbackButton.css('visibility', 'hidden')
+      feedbackContainer.removeClass('show-button')
     }
   })
   feedbackButton.on('click', () => {
