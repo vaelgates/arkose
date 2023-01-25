@@ -1,4 +1,5 @@
 /* eslint-env jquery */
+/* global tippy */
 
 import Argument from './argument.js'
 import { findArgumentByPath, html_asset_path, airddataUrl, handleFormButtonError } from './common.js'
@@ -108,14 +109,14 @@ function insertCheckboxes(argument) {
   $('<textarea class="comment-textarea" placeholder="Comments or responses? (to be displayed publicly at the end of the walkthrough)" />').appendTo(feedbackContainer);
   checkboxesSection.appendTo($('.page-content'));
   $('<button class="button small"><div class="button-progress-bar"></div><div class="button-text">Save Comment</div></button>').appendTo(feedbackContainer)
-  const feedbackButton = $('.feedback-container .button')
+  const feedbackButton = feedbackContainer.find('.button')
   $('.comment-textarea').on('input propertychange', () => {
     feedbackButton.find('.button-text').html('Submit Comment')
     feedbackButton.find('.button-progress-bar').removeClass('sent')
     if ($('.comment-textarea').val().length > 0) {
-      feedbackButton.css('visibility', 'visible')
+      feedbackContainer.addClass('show-button')
     } else {
-      feedbackButton.css('visibility', 'hidden')
+      feedbackContainer.removeClass('show-button')
     }
   })
   feedbackButton.on('click', () => {
@@ -182,6 +183,19 @@ function insertGoBackLink(argument) {
   $(link).data('url', url)
 }
 
+function tooltipIfFirstClick(checkbox) {
+  if (localStorage.getItem('answers') && localStorage.getItem('answers') !== '{}') return
+
+  window.setTimeout(() => {
+    const link = checkbox.parent().find('a.answer-link')
+    tippy(link[0], {
+      content: 'Click to explore',
+      placement: 'top-end',
+      offset: [-10, 5],
+    }).show();
+  }, 300)
+}
+
 function checkboxChange(event) {
   const checkbox = $(event.currentTarget)
 
@@ -191,6 +205,8 @@ function checkboxChange(event) {
   } else {
     agreement = 'undecided'
   }
+
+  tooltipIfFirstClick(checkbox)
 
   recordAnswer(checkbox.data('url'), agreement)
 

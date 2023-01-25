@@ -16,8 +16,10 @@ class Argument {
         $(subSection).hide()
       }
     }
-    if (showAll) {
+    const onMobile = (window.innerWidth <= 980)
+    if (showAll || onMobile) {
       // don't adjust the scroll position if they just clicked the Show All button
+      // nor if their device is narrow enough that we put the TOC at the bottom
       return
     }
     if (showCount === $('.sub-sub-argument').length) {

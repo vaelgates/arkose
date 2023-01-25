@@ -129,8 +129,12 @@ It should look a bit like this:
 ...
 ```
 
+# On the Jekyll version
 
-The original README for the Jekyll Forty theme continues below:
+We use Jekyll 3.9.2 rather than the latest Jekyll (currently 4.3.2), because we’re running on GitHub Pages, which uses Jekyll 3.9.2. The later versions of Jekyll handle URLs a little differently, which can lead to problems in when running locally. The AIRD project has a Gemfile to control the versions of its libraries, so run `bundle install` in your aird directory, and it should install the right version of Jekyll for you. If that doesn’t work, try `gem install bundler`, and then run `bundle install` again.
+
+
+**The original README for the Jekyll Forty theme continues below:**
 # Forty - Jekyll Theme
 
 A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  

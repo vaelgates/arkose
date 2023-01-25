@@ -23,13 +23,13 @@
 		max-height: 32em;
 		min-height: 22em;
 		position: relative;
-		top: -3.25em;
+		top: -1px; //-3.25em;
 
 		&:after {
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
 			@include vendor('pointer-events', 'none');
-			background-color: var(--color-bg);
+			background-color: #242943; //var(--color-bg);
 			content: '';
 			display: block;
 			height: 100%;
@@ -43,6 +43,7 @@
 
 		h1 {
 			font-size: 3.25em;
+			color: #fff;
 		}
 
 		> .inner {
@@ -63,7 +64,6 @@
 			header {
 				width: auto;
 				padding: 0 0.3em;
-				backdrop-filter: blur(3px);
 
 				> :first-child {
 					width: auto;
@@ -79,7 +79,7 @@
 				@include vendor('align-items', 'center');
 				margin: 0 0 _size(element-margin) 0;
 				padding: 0.5em;
-				backdrop-filter: blur(3px);
+				color: #fff;
 
 				> * {
 					margin-left: 1.5em;
@@ -130,6 +130,12 @@
 
 		@include breakpoint(large) {
 			background-attachment: scroll;
+		}
+
+		@include breakpoint(medium) {
+			#banner {
+				top: -3.25em;
+			}
 		}
 
 		@include breakpoint(small) {
