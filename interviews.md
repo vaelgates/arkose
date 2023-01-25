@@ -28,8 +28,9 @@ order: 2
 			<div class="box">
 				<p>Preliminary results presented at Stanford.</p>
 			</div>
-			<a href="#main_report" class="button special fit">Report</a>
-			<a href="#" class="button fit small">Static version</a>
+			<!-- <a href="#main_report" class="button special fit">Report</a> -->
+			<a href="analyze_transcripts" class="button special fit">Report</a>
+			<a href="analyze_transcripts_static" class="button fit small">Static version</a>
 			<div class="box">
 				<p>The common themes in the transcripts were tagged and tallied in this quantitative analysis of the transcripts. </p>
 			</div>
@@ -60,14 +61,13 @@ order: 2
 
 <section id="two">
 	<div class="inner">
-		<a id='main_report'>
+		<a id='report'>
 		<header class="major">
-			<h2>Main Report</h2>
+			<h2>Report</h2>
 		</header>
 		</a>
 <p> Some introduction to the content </p>
 
-{% include_relative analyze_transcripts.html %} 
 <p>I think ideally this part of the page would be a darker gray or something, something more of a line separator but that matches the rest of the website</p>
 
 	</div>
