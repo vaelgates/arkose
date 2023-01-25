@@ -345,7 +345,7 @@ breadcrumbs: {breadcrumbs}
 					{
 						if (VerboseDebugOutput)
 							Console.WriteLine($"adding to caption: {txt}");
-						currentDocument.Content.Last().ImageCaption += HttpUtility.HtmlEncode(txt);
+						currentDocument.Content.Last().ImageCaption += txt;
 						imageCaptionBracketCounter += txt.Count(f => f == '(') - txt.Count(f => f == ')');
 					}
 					else
