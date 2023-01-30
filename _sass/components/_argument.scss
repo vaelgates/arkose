@@ -80,6 +80,11 @@
   }
 }
 
+.inner {
+  transition: opacity 0.3s;
+  position: relative;
+}
+
 .page-content .root-argument {
   margin-bottom: 1em;
 }

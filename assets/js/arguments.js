@@ -274,6 +274,38 @@ function recordScrollPosition() {
   localStorage.setItem(`scrollPos ${pagePath()}`, document.documentElement.scrollTop)
 }
 
+function createPage(htmlData, path, saveAddress, scrollParam) {
+  const argument = findArgumentByPath(args, path);
+  if (!argument)
+    throw `Couldn't find argument for ${path}`;
+
+  $('.page-content').html(htmlData);
+
+  const title = $('.page-content .page-data').data('page-title');
+  document.title = title
+  $('.page-title').html(argument.text || argument.name);
+  insertAnswerSection(argument);
+  transformRootArgumentLinks();
+  updateBranchSidebar(argument);
+  updateActiveLink(path);
+  addConclusionContent(args, path);
+
+  if (saveAddress)
+    window.history.pushState({}, "", path);
+
+  switch (scrollParam) {
+    case 'top':
+      $(document).scrollTop(0)
+      break;
+    case 'into_view':
+      $('#argument_section')[0].scrollIntoView();
+      break;
+    case 'history':
+      const scrollPos = localStorage.getItem(`scrollPos ${pagePath()}`) // eslint-disable-line
+      $(document).scrollTop(scrollPos)
+  }
+}
+
 // scroll parameter can be 'into_view', 'top', 'history' or undefined.
 // into_view (used by most links to content pages) scrolls down to the content
 // top (used by links to root level arguments) scrolls to the top
@@ -282,34 +314,23 @@ function getHtml(path, saveAddress = true, scrollParam) {
   if (path !== window.location.href) recordScrollPosition()
   const html_path = html_asset_path(path)
   $.get(html_path).done(data => {
-    $('.page-content').html(data);
-
-    const argument = findArgumentByPath(args, path);
-    if (!argument)
-      throw `Couldn't find argument for ${path}`;
-
-    const title = $('.page-content .page-data').data('page-title');
-    document.title = title
-    $('.page-title').html(argument.text || argument.name);
-    insertAnswerSection(argument);
-    transformRootArgumentLinks();
-    updateBranchSidebar(argument);
-    updateActiveLink(path);
-    addConclusionContent(args, path);
-
-    if (saveAddress)
-      window.history.pushState({}, "", path);
-
-    switch (scrollParam) {
-      case 'top':
-        $(document).scrollTop(0)
-        break;
-      case 'into_view':
-        $('#argument_section')[0].scrollIntoView();
-        break;
-      case 'history':
-        const scrollPos = localStorage.getItem(`scrollPos ${pagePath()}`) // eslint-disable-line
-        $(document).scrollTop(scrollPos)
+    if (scrollParam) {
+      // if scrollParam was supplied, then this is a page transition, so do the animation
+      $('.page-content').parent().css('opacity', '0')
+      $('.page-content').parent().one('transitionend', () => {
+        createPage(data, path, saveAddress, scrollParam)
+        $('.page-content').parent().css('left', '100%')
+        window.setTimeout(() => {
+          $('.page-content').parent().css('opacity', '1')
+          $('.page-content').parent().css('transition', 'left 0.4s')
+          $('.page-content').parent().css('left', '0')
+          $('.page-content').parent().one('transitionend', () => {
+            $('.page-content').parent().css('transition', 'opacity 0.3s')
+          })
+        })
+      })
+    } else {
+      createPage(data, path, saveAddress, scrollParam)
     }
   })
 }

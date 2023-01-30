@@ -77,5 +77,5 @@ export function transitionless(element, fn, fn2) {
   window.setTimeout(() => {
     element.css('transitionDuration', originalTransition)
     if (fn2) fn2()
-  }, 10)
+  }, 20)
 }
