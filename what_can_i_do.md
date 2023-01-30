@@ -1,7 +1,7 @@
 ---
 layout: page
 title: What Can I Do?
-description: Reducing potential risk from advanced AI systems is an unsolved, difficult task. The communities that are working on this are relatively small, and the pathways for what is helpful are uncertain. However, here are some candidates for reducing risk.
+og-description: Reducing potential risk from advanced AI systems is an unsolved, difficult task. The communities that are working on this are relatively small, and the pathways for what is helpful are uncertain. However, here are some candidates for reducing risk.
 nav-menu: true
 order: 4
 ---

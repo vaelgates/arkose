@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Interviews
-description: Dr. Vael Gates conducted 97 interviews with AI researchers about their perceptions of AI and the future of the field, with a focus on risks from advanced AI systems. We present analysis, transcripts, and an interactive walkthrough of the researchers' perspectives.
+og-description: Dr. Vael Gates conducted 97 interviews with AI researchers about their perceptions of AI and the future of the field, with a focus on risks from advanced AI systems. We present analysis, transcripts, and an interactive walkthrough of the researchers' perspectives.
 nav-menu: true
 order: 2
 ---
