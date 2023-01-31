@@ -54,7 +54,7 @@
 
 	footer {
 		border-top: solid 1px rgba(212,212,255,0.1);
-		background-color: var(--color-bg);
+		background-color: #242943; //var(--color-bg);
 	}
 
 	html {
@@ -68,12 +68,12 @@
 	}
 
 	.bg-gray {
-		background-color: var(--color-bg-gray);
+		background-color: var(--color-bg);
 	}
 
 	.full-width-gray {
-		background-color: var(--color-bg-gray);
-		box-shadow: 0 0 0 100vmax var(--color-bg-gray);
+		background-color: var(--color-bg);
+		box-shadow: 0 0 0 100vmax var(--color-bg);
 		clip-path: inset(0 -100vmax);
 		padding-top: 1.2em;
 		padding-bottom: 0.1em;
