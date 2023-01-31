@@ -46,8 +46,15 @@ order: 4
 	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field is pre-paradigmatic and <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support people</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
 	<a href="#book_a_call" class="button fit">book a call</a>
 </div>
-<hr>
+<br>
 
+
+
+
+
+
+<div class="full-width-gray">
+<br>
 <div id="technical"><h2> Technical AI Alignment Research and Engineering </h2>
 
 <h3> Overview of the space </h3>
@@ -88,14 +95,14 @@ order: 4
 	<li><a href="https://80000hours.org/career-reviews/china-related-ai-safety-and-governance-paths/">Overview</a> by 80,000 Hours</li>
 </ul>
 </div>
+<br>
 </div>
-<hr>
+</div>
 
 
 
 
-
-
+<br>
 <div id="governance"><h2> AI Governance </h2>
 
 <p>The Center for the Governance of AI (<a href="https://www.governance.ai/">GovAI</a>) describes the AI governance problem as "the problem of devising global norms, policies, and institutions to best ensure the beneficial development and use of advanced AI" (<a href="https://uploads-ssl.webflow.com/614b70a71b9f71c9c240c7a7/61d48553bf2faf58c3900bd2_GovAI-Research-Agenda.pdf">GovAI Research Agenda</a>). "AI governance" or "longtermist AI governance" is distinct from "AI policy" in its primary focus on advanced AI — the hypothetical general purpose technology — rather than current AI as it exists today. The field believes that different actions, risks, and opportunities come about when focusing on advanced AI systems as compared to more contemporary issues, though <a href="https://www.allandafoe.com/opportunity">AI governance and AI policy naturally interface with each other and have overlapping domains</a>. AI governance has historical roots in the study of <a href="https://en.wikipedia.org/wiki/Existential_risk_from_artificial_general_intelligence">existential risk</a> and the <a href="https://www.effectivealtruism.org/">Effective Altruism</a> community, so much current research draws from these communities, but the field is expanding with time.</p>
@@ -108,12 +115,16 @@ order: 4
 	<li>If you're interested in law: <a href="https://www.legalpriorities.org/">Legal Priorities Project</a>, and <a href="https://works.bepress.com/ghadfield/">Gillian Hadfield (U. Toronto)</a></li>
 </ul>
 </div>
-<hr>
+<br>
 
 
 
+</div>
+</section>
 
 
+<section id="two" class="bg-gray">
+	<div class="inner">
 
 <div id="book_a_call"><h2>Book a call</h2>
 <p>If you're interested in working in AI alignment and advanced AI safety, please book a call with <a href="https://vaelgates.com">Vael Gates</a>, who leads this project and conducted the <a href=interviews>interviews</a> as part of their postdoctoral work with Stanford University.</p>

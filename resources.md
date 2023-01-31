@@ -97,16 +97,14 @@ order: 3
 
 <!-- </div> -->
 
+<br>
+</div>
+</section>
 
 
 
-
-
-<h3 id="governance readings">For interest in AI governance and policy</h3>
-<ul>
-	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
-</ul>
-
+<section id="two" class="bg-gray">
+	<div class="inner">
 
 
 
@@ -122,6 +120,17 @@ order: 3
 	<li><a href="https://www.cold-takes.com/most-important-century/">The Most Important Century</a> by Holden Karnofsky (podcast, summaries, various articles)</li>
 	<li><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg/">AI Safety YouTube channel</a> by Robert Miles</li>
 </ul>
+
+
+
+<br>
+<h3 id="governance readings">For interest in AI governance and policy</h3>
+<ul>
+	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
+</ul>
+
+
+
 
 </div>
 </section>
