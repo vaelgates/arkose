@@ -31,7 +31,7 @@ order: 2
 			</div>
 			<!-- <a href="#main_report" class="button special fit">Report</a> -->
 			<a href="analyze_transcripts_static.html" class="button special fit">Report</a>
-			<a href="analyze_transcripts.html" class="button fit small">Interactive version</a>
+			<a href="analyze_transcripts.html" class="button fit small">Interactive graph version</a>
 			<div class="box">
 				<p>Quantitative analysis of the common themes in the transcripts.</p>
 			</div>
