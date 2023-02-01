@@ -24,8 +24,8 @@ if (!require(psych)) {install.packages("psych"); require(psych)}
 
 # CHANGE THIS to the path of your directory that holds the scripts
 # and all relevant data files.
-mydir <- "~/Documents/AISFB/analysis/new/"
-# mydir <- "~/quantanalysis_interviews_maheen/"
+# mydir <- "~/Documents/AISFB/analysis/new/"
+mydir <- "~/quantanalysis_interviews_maheen/"
 
 # CHANGE THIS to toggle between interactive (T) and static (F) graphs
 interactive_mode <- TRUE
@@ -1915,7 +1915,7 @@ ggplotly_toggle(g)
 #' This question was asked in many different ways, which is not ideal, 
 #' but via follow-up questions the central question the interviewer tried to 
 #' elicit an answer to was: 
-#' "Do you work on / are you interested in working on AI alignment research?"
+#' "Would you work on AI alignment research?"
 #'
 #' * Some of the varied question prompts:
 #' "Have you taken any actions, or would you take any actions, in your work to address your perceived risks from AI?",
