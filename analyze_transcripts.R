@@ -24,8 +24,8 @@ if (!require(psych)) {install.packages("psych"); require(psych)}
 
 # CHANGE THIS to the path of your directory that holds the scripts
 # and all relevant data files.
-# mydir <- "~/Documents/AISFB/analysis/new/"
-mydir <- "~/quantanalysis_interviews_maheen/"
+mydir <- "~/Documents/AISFB/analysis/new/"
+# mydir <- "~/quantanalysis_interviews_maheen/"
 
 # CHANGE THIS to toggle between interactive (T) and static (F) graphs
 interactive_mode <- TRUE
