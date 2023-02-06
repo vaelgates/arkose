@@ -61,7 +61,7 @@ order: 2
 </section>
 
 
-<section id="two" class="bg-gray">
+<section id="report-main-findings" class="bg-gray">
 	<div class="inner">
 	<header class="major">
 		<h2>Curious about the <a href="analyze_transcripts_static.html" class="button special xsmall">Report</a>'s main findings?</h2>
