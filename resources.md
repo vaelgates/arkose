@@ -62,7 +62,7 @@ order: 3
     <li><a href="https://arxiv.org/pdf/2210.01790.pdf">Goal Misgeneralization: Why correct specifications aren't enough for correct goals</a> (Shah et al., 2022)</li>
     <li><a href="https://deepmindsafetyresearch.medium.com/specification-gaming-the-flip-side-of-ai-ingenuity-c85bdb0deeb4">Specification gaming: the flip side of AI ingenuity </a> (Krakovna et al., 2020)</li>
     <li>Mechanistic interpretability: <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">In-context Learning and Induction Heads</a> (Olsson et al., 2022), <a href="https://arxiv.org/abs/2202.05262">Locating and Editing Factual Associations in GPT</a> (Meng et al., 2022)</li>
-    <li><a href="https://arxiv.org/pdf/2212.03827.pdf">Discovering Latent Knowledge in Language Models Without Supervision</a> (Burns et al., 2022), <a href="https://twitter.com/CollinBurns4/status/1600892261633785856"><i>Twitter thread</i></li>
+    <li><a href="https://arxiv.org/pdf/2212.03827.pdf">Discovering Latent Knowledge in Language Models Without Supervision</a> (Burns et al., 2022), <a href="https://twitter.com/CollinBurns4/status/1600892261633785856"><i>Twitter thread</i></a></li>
     <!--<li><a href="https://proceedings.neurips.cc/paper/2021/file/c26820b8a4c1b3c2aa868d6d57e14a79-Paper.pdf">Optimal Policies Tend to Seek Power</a> (Turner et al., 2021)</li>-->
     <li> Agendas: <a href="https://arxiv.org/pdf/2109.13916.pdf"> Unsolved Problems in ML Safety</a> (Hendrycks et al., 2022),  <a href="https://arxiv.org/pdf/1606.06565.pdf">Concrete Problems in AI safety</a> (Amodei et al., 2016)</li>
 </ul>
