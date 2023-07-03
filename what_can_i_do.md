@@ -75,7 +75,7 @@ order: 4
 
 <h3> Funding sources // Job board </h3>
 <ul>
-	<li>Apply for funding from <a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a> and <a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
+	<li>Apply for funding from <a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a>, <a href="https://survivalandflourishing.fund/">Survival and Flourishing Fund</a>, <a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
 	<li><a href="https://www.agisafetyfundamentals.com/opportunities">Opportunities in AGI Safety</a> and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_role_type%5D%5B0%5D=Research&refinementList%5Btags_role_type%5D%5B1%5D=Software%20Engineering">Job Board</a></li>
 </ul>
 
