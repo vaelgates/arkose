@@ -1,10 +1,10 @@
 # site settings
-title: AI Risk Discussions
+title: Arkose
 subtitle: 
 email: vaelgates@gmail.com
 description: We aim to facilitate discussion and evaluation of potential risks from advanced AI. Our focus is on soliciting and engaging with expert perspectives on the arguments, and providing resources for stakeholders.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://ai-risk-discussions.org # the base hostname & protocol for your site
+url: https://arkose.org # the base hostname & protocol for your site
 author:
 
 permalink: /:title
