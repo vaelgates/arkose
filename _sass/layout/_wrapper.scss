@@ -22,7 +22,7 @@
 			@include inner;
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			padding-top: 2.75em;
 		}
 	}

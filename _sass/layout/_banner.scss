@@ -203,7 +203,7 @@
 		@include breakpoint(medium) {
 			padding-top: 10vh;
 		}
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			@include padding(3em, 0, (2em, 0, 0, 0));
 			height: auto;
 			margin-bottom: -4.75em;
