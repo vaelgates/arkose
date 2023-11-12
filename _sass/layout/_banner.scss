@@ -59,15 +59,12 @@
 			font-size: 24px;
 			display: flex;
 			height: fit-content;
-			position: relative;
-			margin-top: 3vh;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 			
 			@include breakpoint(medium) {
 				max-width: 720px;
-			}
-			@include breakpoint(small) {
-				display: block;
-				margin-top: -6vh;
 			}
 		}
 
@@ -230,9 +227,8 @@
 			}
 
 			&.major {
-				height: auto;
-				min-height: 0;
-				max-height: none;
+				min-height: 50vh;
+				max-height: 999px;
 			}
 		}
 
