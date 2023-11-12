@@ -81,6 +81,7 @@ order: 3
 
 </div>
 
+
 <!-- <h4> Further resources </h4> -->
 
 <!-- <h5> Reviews </h5> -->
@@ -137,10 +138,18 @@ order: 3
 	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
 </ul>
 
+<h3>Selection of key safety papers</h3>
 
-
+<iframe src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 </div>
+</section>
+
+<section id="three" class="mb2">
+	<div class="inner">
+		<a href="https://docs.google.com/document/d/1qhvjDZaOXnBlrL4GPaT8xTyQQZi3_LIWdWt3Mqd6xAM/edit?usp=sharing" class="button fit">Further resources</a>
+		<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+	</div>
 </section>
 
 </div>

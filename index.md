@@ -1,37 +1,65 @@
 ---
-layout: home
 title: Home
-landing-title: 'AI Risk Discussions'
-description: null
-image: null
-author: null
-show_tile: false
+layout: new_home
+description: Reducing risks from advanced AI through field-building activities
+
+featured_image: /assets/img/social.jpg
 ---
 
-<div class="row">
-	<div class="6u 12u$(small)">
-		<a href="interviews.html" class="button fit">Interviews</a>
-		<p>One of our main goals is to facilitate conversations between those concerned about potential risks from advanced AI systems and technical experts. To that end, we conducted 97 interviews with AI researchers on their perspectives on current AI and the future of AI, with a focus on risks from advanced systems. This collection of interviews includes anonymized transcripts, quantitative analysis of the most common perspectives, and an academic talk discussing preliminary findings.</p>
-	</div>
-	<div class="6u$ 12u$(small)">
-		<a href="{{site.baseurl}}{% link perspectives/introduction.html %}" class="button fit">Interactive Walkthrough</a>
-		<p>In our interviews with AI researchers, some of the core questions focused on risks from advanced AI systems. To explore the interview questions, common responses from AI researchers, and potential counterarguments, we created an interactive walkthrough. You are encouraged to explore your own perspectives, and at the conclusion your series of agreements or disagreements will be displayed, so that you can compare your perspectives to other users' of the site.</p> 
-	</div>
+<section id="banner" class="major">
+  <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
+      <div class="row xs-padding-1 banner-inner">
+        <div class="-1u 10u 9u(medium) justify-content-center flex-column">
+          <h1 class="display-1">Arkose</h1>
+          <p class="subheading">Reducing risks from advanced AI through field-building activities</p>
+        </div>
+        {% if false %}
+          <div class="5u -1u 12u(small) banner-button-container">
+            <a href="https://ai-risk-discussions.org" class="banner-button">
+              AI Risk Discussions
+            </a>
+          </div>
+        {% endif %}
+      </div>
+</section>
+
+<div class="section">
+  <div class="inner">
+    <div class="row align-items-center">
+      <div>
+        <p>Arkose is an early-stage, AI safety field-building nonprofit, with the mission of reducing risks from advanced AI. Our approach will likely encompass a range of activities and responsibilities, primarily involving surveys, calls, and supportive programs.</p>
+
+        <p>Our recent work aims to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results can be found at <a href="https://ai-risk-discussions.org">AI Risk Discussions</a>. Going forward, our future work will likely include introducing programs to support researchers interested in contributing to AI safety.</p>
+
+        <p>Arkose was founded by <a href="https://vaelgates.com">Vael Gates</a>, and is in the process of incorporating. At present, we operate as a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). Arkose is funded by the Survival and Flourishing Fund.</p>
+
+        {% if false %}
+        <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
+        <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
+
+        <p>If you're interested in contributing to Arkose but do not think the above role is a good fit, feel free to email <a href="mailto:info@arkose.org">info@arkose.org</a> with an expression of interest.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 
-<hr>
-<h3><a href="resources.html">Resources</a> and <a href="what_can_i_do.html">Getting Involved</a></h3> 
-
-<!-- <span class="image right"><img src="{% link assets/images/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg %}" alt="" /></span> -->
-
-<p>Interested in learning more? Our <a href="resources.html">Resources</a> page has further reading, both for ML researchers as well as for the general public.</p>
-
-<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed, and we would be happy to <a href="mailto:{{site.email}}">talk with you about these opportunities</a>.</p>
-
-<hr> 
-
-<h4>About Us</h4>
-<div id="about_us" class="text-smaller">
-<p>AI Risk Discussions (AIRD) is a project of <a href="https://arkose.org">Arkose</a>. We aim to facilitate discussion and evaluation of potential risks from advanced AI. Our focus is on soliciting and engaging with expert perspectives on the arguments, and providing resources for stakeholders. This project is led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Lukas Trötzmüller (interactive walkthrough), Maheen Shermohammed (quantitative analysis), Zi Cheng (Sam) Huang (interview tagging), and Michael Keenan (website development).</p>
-<!--(AIRD) was developed by Larchwood, a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). -->
+<div class="section bg-gray">
+  <div class="inner">
+    <h3>About the Team</h3>
+    <div class="row text-center">
+      <div class="4u 12u(small)">
+        <h4><a href="https://vaelgates.com">Vael Gates</a></h4>
+        <div class="role">Founder</div>
+      </div>
+      <div class="4u 12u(small)">
+        <h4><a href="https://www.linkedin.com/in/zacharythomas10/">Zachary Thomas</a></h4>
+        <div class="role">Operations</div>
+      </div>
+      <div class="4u 12u(small)">
+        <h4><a href="https://www.linkedin.com/in/krzeminskamarta/">Marta Krzeminska</a></h4>
+        <div class="role">Operations, part-time</div>
+      </div>
+    </div>
+  </div>
 </div>

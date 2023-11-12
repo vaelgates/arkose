@@ -28,6 +28,20 @@
 		width: 100%;
 		z-index: _misc(z-index-base);
 
+		.navbar-brand {
+			margin-top: 2px;
+			margin-left: 1em;
+			img {
+				position: relative;
+				top: 5px;
+				height: 30px;
+			}
+		}
+
+		a {
+			border-bottom: none;
+		}
+
 		.logo {
 			border: 0;
 			display: inline-block;
@@ -145,7 +159,12 @@
 
 				> li {
 					display: inline-block;
-					padding-left: 0;
+					padding-left: 2.5em;
+
+					@media (max-width: 1080px) {
+						padding-left: 1.5em;
+						font-size: 80%;
+					}
 
 					> ul {
 						display: none;
@@ -155,9 +174,20 @@
 						display: inline-block;
 						height: 2em;
 						line-height: 1.95em;
-						padding: 0 1em;
+						padding: 0;
 						border-radius: _size(border-radius);
+
+						&.active {
+							color: var(--color-active-link) !important;
+							font-weight: bold;
+							border-bottom: 1px dotted var(--color-active-link) !important;
+							border-radius: 0;
+						}
+						&.fade {
+							opacity: 0.5;
+						}
 					}
+
 
 					a:not(.button) {
 						// color: var(--color-header, fg-bold);
@@ -186,6 +216,8 @@
 					.button {
 						margin: 0 0 0 0.5em;
 						position: relative;
+						padding: 0.4em 1em 0.2em;
+						height: fit-content;
 					}
 				}
 			}

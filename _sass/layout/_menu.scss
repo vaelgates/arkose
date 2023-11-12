@@ -169,3 +169,26 @@
 			}
 		}
 	}
+
+	
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	#header nav>ul>li.dropdown:hover>ul.dropdown-content {
+		display: block;
+		position: absolute;
+		left: 1.3em;
+		background-color: var(--color-bg-alt);
+		min-width: 230px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		padding: 0.25em 0.75em;
+		z-index: 1;
+		font-size: 0.8em;
+		list-style: none;
+		line-height: 3.5em;
+		text-align: right;
+		li {
+			height: fit-content;
+		}
+	}

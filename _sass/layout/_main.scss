@@ -23,3 +23,74 @@
 			background-color: transparent;
 		}
 	}
+
+.role {
+	margin-bottom: 2em;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.mb2 {
+	margin-bottom: 2em;
+}
+
+/* Hide on small screens */
+.not-small {
+  @include breakpoint(small) {
+    display: none;
+  }
+}
+
+/* Hide on medium screens */
+.not-medium {
+  @include breakpoint(medium) {
+    display: none;
+  }
+	@include breakpoint(small) {
+    display: block;
+  }
+}
+
+/* Hide on large screens */
+.not-large {
+  @include breakpoint(large) {
+    display: none;
+  }
+	@include breakpoint(medium) {
+    display: block;
+  }
+}
+
+/* Only show on small screens */
+.only-small {
+  display: none;
+  @include breakpoint(small) {
+    display: block;
+  }
+}
+
+/* Only show on medium screens */
+.only-medium {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+/* Only show on large screens */
+.only-large {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}

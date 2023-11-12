@@ -1,0 +1,20 @@
+menu_settings:
+  menu_items:
+    - title: 'AI Risk Discussions'
+      url: '/ai-risk-discussions'
+      fade: true
+      submenu: 
+        - title: 'AI Risk Discussions'
+          url: '/ai-risk-discussions'
+        - title: 'Perspectives'
+          url: '/perspectives/introduction'
+        - title: 'Interviews'
+          url: '/interviews'
+    - title: Resource Center
+      shorttitle: Resources
+      url: '/resources'
+    - title: 'What Can I Do?'
+      url: '/what_can_i_do'
+    - title: 'Apply For A Call'
+      url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
+      button: true

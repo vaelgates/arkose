@@ -122,7 +122,7 @@ order: 4
 </div>
 </section>
 
-
+{% if false %}
 <section id="two" class="bg-gray">
 	<div class="inner">
 
@@ -166,9 +166,14 @@ order: 4
 
 </div>
 </section>
+
+{% endif %}
+
 </div>
 
+{% if false %}
 <script src="{{ "assets/js/book_call.js" | absolute_url }}" type="module"></script>
 <script>
   window.contactEmail = "{{site.email}}"
 </script>
+{% endif %}

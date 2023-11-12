@@ -179,6 +179,8 @@
   padding-left: 10px;
   @include inner;
   h2 {
+    position: relative;
+    top: 4px;
     margin-bottom: 0;
   }
 }

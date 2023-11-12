@@ -7,10 +7,9 @@
 /* Banner */
 
 	#banner {
-		@include vendor('align-items', 'center');
-		@include vendor('background-image', 'url("../images/banner.jpg")');
+		// @include vendor('background-image', 'url("../images/banner.jpg")');
 		@include vendor('display', 'flex');
-		@include padding(4em, 0, (2em, 0, 0, 0));
+		@include padding(0, 0, (2em, 0, 0, 0));
 		background-attachment: inherit; //fixed;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -19,31 +18,63 @@
 		border-bottom: 0 !important;
 		cursor: default;
 		height: 60vh;
-		margin-bottom: -3.25em;
 		max-height: 32em;
 		min-height: 22em;
 		position: relative;
 		top: -1px; //-3.25em;
+		z-index: 1;
+		color: #fff;
+		padding-top: 20vh;
 
-		&:after {
-			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
-			@include vendor('pointer-events', 'none');
-			background-color: #242943; //var(--color-bg);
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0.85;
+		// &:after {
+		// 	@include vendor('transition', 'opacity #{_duration(banner)} ease');
+		// 	@include vendor('transition-delay', '0.75s');
+		// 	@include vendor('pointer-events', 'none');
+		// 	background-color: #242943; //var(--color-bg);
+		// 	content: '';
+		// 	display: block;
+		// 	height: 100%;
+		// 	left: 0;
+		// 	opacity: 0.85;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	width: 100%;
+		// 	z-index: 1;
+		// }
+
+		.arkose-banner {
 			position: absolute;
-			top: 0;
+			inset: 0;
+			background-size: cover;
+			background-position: right;
+			background-repeat: no-repeat;
+			filter: brightness(0.4);
+			z-index: -1;
+		}
+
+		.banner-inner {
 			width: 100%;
-			z-index: 1;
+			max-width: 1040px;
+			margin: 0 auto;
+			font-size: 24px;
+			display: flex;
+			height: fit-content;
+			position: relative;
+			margin-top: 3vh;
+			
+			@include breakpoint(medium) {
+				max-width: 720px;
+			}
+			@include breakpoint(small) {
+				display: block;
+				margin-top: -6vh;
+			}
 		}
 
 		h1 {
-			font-size: 3.25em;
+			font-size: 2.75em;
 			color: #fff;
+			margin-bottom: 0;
 		}
 
 		> .inner {
@@ -100,9 +131,8 @@
 		}
 
 		&.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
+			min-height: 70vh;
+			max-height: 999px;
 
 			&.alt {
 				  opacity: 0.75;
@@ -115,6 +145,48 @@
 		&.style4 { &:after { background-color: var(--color-accent4); } }
 		&.style5 { &:after { background-color: var(--color-accent5); } }
 		&.style6 { &:after { background-color: var(--color-accent6); } }
+
+		.banner-button-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			@include breakpoint(small) {
+				padding-right: 1.25em;
+			}
+		}
+
+		.banner-button {
+			appearance: none;
+			background-color: transparent;
+			box-shadow: inset 0 0 0 2px #fff;
+			color: #fff;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 0.8em;
+			font-weight: 600;
+			height: 3.5em;
+			letter-spacing: 0.08em;
+			line-height: 3.5em;
+			text-align: center;
+			text-transform: uppercase;
+			white-space-collapse: collapse;
+			text-wrap: nowrap;
+			position: relative;
+			transition: background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
+			border-width: 0px;
+			border-style: initial;
+			border-color: initial;
+			border-image: initial;
+			border-radius: 0px;
+			padding: 0px 1.75em;
+			text-decoration: none;
+			width: 100%;
+			min-width: fit-content;
+			&:hover {
+				box-shadow: inset 0 0 0 2px var(--color-highlight);
+			}
+		}
 
 		body.is-loading & {
 			&:after {
@@ -131,17 +203,13 @@
 		@include breakpoint(large) {
 			background-attachment: scroll;
 		}
-
 		@include breakpoint(medium) {
-			#banner {
-				top: -3.25em;
-			}
+			padding-top: 10vh;
 		}
-
 		@include breakpoint(small) {
 			@include padding(3em, 0, (2em, 0, 0, 0));
 			height: auto;
-			margin-bottom: -2.75em;
+			margin-bottom: -4.75em;
 			max-height: none;
 			min-height: 0;
 			top: -2.75em;
