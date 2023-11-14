@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Resource Center
-og-description: "Resources for machine learning researchers, for those interested in AI governance and policy, and for a general audience."
+title: Resources
+og-description: Resources for machine learning researchers, for those interested in AI governance and policy, and for a general audience.
 nav-menu: true
 order: 3
 ---
@@ -70,7 +70,7 @@ order: 3
 <h5> Other </h5>
 
 <ul>
-	<li><a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum">AGI Safety Fundamentals Curriculum</a> (<b>best in-depth resource</b>) </li>
+	<li><a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> (<b>best in-depth resource</b>) </li>
 	<li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> and <a href="https://newsletter.mlsafety.org/">ML Safety Newsletter</a></li>
 </ul>
 

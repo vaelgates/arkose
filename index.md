@@ -33,26 +33,24 @@ featured_image: /assets/img/social.jpg
 
         <p>Arkose was founded by Dr. <a href="https://vaelgates.com">Vael Gates</a>, and operates as a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). Arkose is funded by the Survival and Flourishing Fund.</p>
 
+        {% if false %}
+	    <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
+	    <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
+
+	    <p>If you're interested in contributing to Arkose but do not think the above role is a good fit, feel free to email <a href="mailto:info@arkose.org">info@arkose.org</a> with an expression of interest.</p>
+	    {% endif %}
+
       </div>
     </div>
   </div>
 </div>
-
- <!--
-    {% if false %}
-    <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
-    <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
-
-    <p>If you're interested in contributing to Arkose but do not think the above role is a good fit, feel free to email <a href="mailto:info@arkose.org">info@arkose.org</a> with an expression of interest.</p>
-    {% endif %}
- -->
 
 <div class="section bg-gray">
   <div class="inner">
     <h3>About the Team</h3>
     <div class="row text-center">
       <div class="4u 12u(small)">
-        <h4><a href="https://vaelgates.com">Vael Gates</a></h4>
+        <h4><a href="https://vaelgates.com">Dr. Vael Gates</a></h4>
         <div class="role">Founder</div>
       </div>
       <div class="4u 12u(small)">
