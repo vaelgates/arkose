@@ -112,7 +112,7 @@ order: 4
 <!-- 	<ul>
 		<li>One highlight: <a href="https://forum.effectivealtruism.org/posts/ydpo7LcJWhrr2GJrx/the-longtermist-ai-governance-landscape-a-basic-overview">The longtermist AI governance landscape: a basic overview</a> (<a href="https://forum.effectivealtruism.org/topics/ai-governance">related posts</a>)</li>
 	</ul> -->
-	<li>Several organizations working in the space: Frontier AI Task Force, <a href="https://www.governance.ai/">Center for the Governance of AI (GovAI)</a>, OpenAI's Governance Team, <a href="https://www.longtermresilience.org/">Center for Long-Term Resilience (CLTR)</a>, <a href="https://www.rand.org/topics/science-technology-and-innovation-policy.html">RAND's Technology and Security Policy work</a>, <a href="https://cset.georgetown.edu/">Center for Security and Emerging Technology (CSET)</a>
+	<li>Several organizations working in the space: Frontier AI Task Force, <a href="https://www.governance.ai/">Center for the Governance of AI (GovAI)</a>, OpenAI's Governance Team, <a href="https://www.longtermresilience.org/">Center for Long-Term Resilience (CLTR)</a>, <a href="https://www.rand.org/topics/science-technology-and-innovation-policy.html">RAND's Technology and Security Policy work</a>, <a href="https://cset.georgetown.edu/">Center for Security and Emerging Technology (CSET)</a></li>
 	<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Policy">Job Board</a></li>
 </ul>
 </div>

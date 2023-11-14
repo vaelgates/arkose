@@ -155,6 +155,7 @@ order: 3
 		<a href="https://docs.google.com/document/d/1qhvjDZaOXnBlrL4GPaT8xTyQQZi3_LIWdWt3Mqd6xAM/edit?usp=sharing" class="button fit">Further resources</a>
 		<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
 	</div>
+	<br><br>
 </section>
 
 </div>
