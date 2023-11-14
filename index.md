@@ -27,22 +27,25 @@ featured_image: /assets/img/social.jpg
   <div class="inner">
     <div class="row align-items-center">
       <div>
-        <p>Arkose is an early-stage, AI safety field-building nonprofit, with the mission of reducing risks from advanced AI. Our approach will likely encompass a range of activities and responsibilities, primarily involving surveys, calls, and supportive programs.</p>
+        <p>Arkose is an early-stage, AI safety field-building nonprofit, with the mission of reducing risks from advanced AI. Our approach encompasses a range of activities and responsibilities, primarily involving surveys, calls, and supportive programs. A major organizational focus is supporting researchers interested in contributing to AI safety.</p>
 
-        <p>Our recent work aims to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results can be found at <a href="https://ai-risk-discussions.org">AI Risk Discussions</a>. Going forward, our future work will likely include introducing programs to support researchers interested in contributing to AI safety.</p>
+        <p>Our 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
 
-        <p>Arkose was founded by <a href="https://vaelgates.com">Vael Gates</a>, and is in the process of incorporating. At present, we operate as a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). Arkose is funded by the Survival and Flourishing Fund.</p>
+        <p>Arkose was founded by Dr. <a href="https://vaelgates.com">Vael Gates</a>, and operates as a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). Arkose is funded by the Survival and Flourishing Fund.</p>
 
-        {% if false %}
-        <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
-        <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
-
-        <p>If you're interested in contributing to Arkose but do not think the above role is a good fit, feel free to email <a href="mailto:info@arkose.org">info@arkose.org</a> with an expression of interest.</p>
-        {% endif %}
       </div>
     </div>
   </div>
 </div>
+
+ <!--
+    {% if false %}
+    <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
+    <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
+
+    <p>If you're interested in contributing to Arkose but do not think the above role is a good fit, feel free to email <a href="mailto:info@arkose.org">info@arkose.org</a> with an expression of interest.</p>
+    {% endif %}
+ -->
 
 <div class="section bg-gray">
   <div class="inner">
