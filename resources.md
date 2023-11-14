@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources
+title: Resource Center
 og-description: "Resources for machine learning researchers, for those interested in AI governance and policy, and for a general audience."
 nav-menu: true
 order: 3
@@ -137,6 +137,11 @@ order: 3
 <ul>
 	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
 </ul>
+</div>
+</section>
+
+<section id="three" class="mb2">
+	<div class="inner">
 
 <h3>Selection of key safety papers</h3>
 
@@ -145,7 +150,7 @@ order: 3
 </div>
 </section>
 
-<section id="three" class="mb2">
+<section id="four" class="bg-gray">
 	<div class="inner">
 		<a href="https://docs.google.com/document/d/1qhvjDZaOXnBlrL4GPaT8xTyQQZi3_LIWdWt3Mqd6xAM/edit?usp=sharing" class="button fit">Further resources</a>
 		<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
