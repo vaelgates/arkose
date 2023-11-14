@@ -59,22 +59,24 @@ order: 4
 
 <h3> Overview of the space </h3>
 
-<p> There are different subareas and research approaches within the field of AI alignment, and you may be a better fit for some than others. 
+<p> There are different subareas and research approaches within the field of AI alignment, and you may be a better fit for some than others.</p> 
 <ul>
-	<li>One of the major rough splits is empirical work vs theory:</li>
+	<li>Some categories within the field:</li>
 		<ul> 
-			<li> <i>Empirical research and engineering</i> (e.g. <a href="https://www.anthropic.com/">Anthropic</a>, <a href="far.ai">FAR AI</a>, <a href="https://deepmindsafetyresearch.medium.com/">Google DeepMind's alignment teams</a>, <a href="https://openai.com/blog/our-approach-to-alignment-research/">OpenAI's alignment teams</a>, <a href=safe.ai>Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/">Redwood Research</a>).</li>
-			<li> <i>Empirical research and engineering aimed at evaluations of AI capabilities and alignment; technical AI governance work</i> (e.g. <a href="https://evals.alignment.org/">ARC Evals</a>, <a href="https://www.apolloresearch.ai/">Apollo Research</a>, <a href="https://palisaderesearch.org/">Palisade Research</a>.</li>
-			<li><i>Technical AI governance</i> outside of evaluations, which includes technical standards development (e.g. <a href="https://www.anthropic.com/index/anthropics-responsible-scaling-policy">Anthropic's Responsible Scaling Policy</a>), <a href="https://epochai.org/">forecasting</a>, <a href="https://80000hours.org/career-reviews/information-security/">information security</a>, and <a href="https://forum.effectivealtruism.org/posts/BJtekdKrAufyKhBGw/ai-governance-needs-technical-work">other work.</li>
-			<li> <i>theoretical research</i> (e.g. <a href="https://alignment.org/">Alignment Research Center</a>, <a href="https://intelligence.org/">MIRI</a>, and many independent researchers.) </li>
+			<li><b>Empirical research and engineering</b> (e.g. <a href="https://www.anthropic.com/">Anthropic</a>, <a href="far.ai">FAR AI</a>, <a href="https://deepmindsafetyresearch.medium.com/">Google DeepMind's alignment teams</a>, <a href="https://openai.com/blog/our-approach-to-alignment-research/">OpenAI's alignment teams</a>, <a href="safe.ai">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/">Redwood Research</a>)</li>
+			<li><b>Empirical research and engineering aimed at evaluations of AI capabilities and alignment; technical AI governance work</b> (e.g. <a href="https://evals.alignment.org/">ARC Evals</a>, <a href="https://www.apolloresearch.ai/">Apollo Research</a>, <a href="https://palisaderesearch.org/">Palisade Research</a></li>
+			<li><b>Technical AI governance</b> outside of evaluations, which includes technical standards development (e.g. <a href="https://www.anthropic.com/index/anthropics-responsible-scaling-policy">Anthropic's Responsible Scaling Policy</a>, <a href="https://epochai.org/">forecasting</a>, <a href="https://80000hours.org/career-reviews/information-security/">information security</a>, and <a href="https://forum.effectivealtruism.org/posts/BJtekdKrAufyKhBGw/ai-governance-needs-technical-work">other work</a>)</li>
+			<li><b>Theoretical research</b> (e.g. <a href="https://alignment.org/">Alignment Research Center</a>, <a href="https://intelligence.org/">MIRI</a>, and many independent researchers.) </li>
 		</ul> 
 	<li><b>Academia</b> (e.g. UC Berkeley's <a href="https://humancompatible.ai/">CHAI</a>, NYU's <a href="https://wp.nyu.edu/arg/">Alignment Research Group</a>, <a href="https://jsteinhardt.stat.berkeley.edu/">Jacob Steinhardt</a>, <a href="https://www.davidscottkrueger.com/">David Krueger</a>, <a href="http://www.cs.cmu.edu/~focal/"> FOCAL</a> and <a href="https://www.cooperativeai.com/foundation">Cooperative AI Foundation</a>) often includes theoretical work and empirical work that doesn't require access to large-scale infrastructure.</li>
 	<li><b>Engineering</b> aimed at AI alignment is almost always in industry, and <a href="https://www.alignmentforum.org/posts/YDF7XhMThhNfHfim9/ai-safety-needs-great-engineers">ML engineering</a> and research engineers are especially in-demand, but there's also <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">a range</a> of engineering roles, especially security, and also software.</li>
-</ul></p>
+</ul>
 
 <h3> Funding sources</h3>
 <ul>
 	<li>Apply for funding from <a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a>, <a href="https://survivalandflourishing.fund/">Survival and Flourishing Fund</a>, or <a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
+</ul>
+
 <h3> Careers </h3>
 	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">Job Board</a></li>
 	<li> Roles listed on individual organizations' webpages listed above </li>
