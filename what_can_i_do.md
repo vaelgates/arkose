@@ -16,7 +16,7 @@ order: 4
 			<h1>What can I do?</h1>
 		</header>
 
-<p>Reducing potential risk from advanced AI systems is an unsolved, difficult task. The <a html="https://www.alignmentforum.org/posts/EFpQcBmfm2bFfM4zM/ai-safety-and-neighboring-communities-a-quick-start-guide-as">communities that are working on this</a> are relatively small, and the pathways for what is helpful are uncertain. However, here are some candidates for reducing risk:</p> 
+<p>Reducing potential risk from advanced AI systems is an unsolved, difficult task, and the pathways for what is helpful are uncertain. However, here are some candidates for reducing risk:</p> 
 
 <div class="row">
 	<div class="6u 12u$(small)">
@@ -28,7 +28,7 @@ order: 4
 </div>
 <div class="row">
 	<div class="6u 12u$(small)">
-	<p><a href="#" class="button fit disabled">Support</a> Providing support for others working in AI alignment (e.g. <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_role_type%5D%5B0%5D=Operations&refinementList%5Btags_role_type%5D%5B1%5D=Management">operations roles</a>)</p>
+	<p><a href="#" class="button fit disabled">Support</a> Providing support for others working in AI alignment (e.g. <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Management&refinementList%5Btags_skill%5D%5B1%5D=Operations">operations roles</a>)</p>
 	</div>
 	<div class="6u 12u$(small)">
 	<p><a href="#" class="button disabled fit">Discussion</a> Engaging in discussion about these risks with colleagues</p>
@@ -37,14 +37,14 @@ order: 4
 
 <div class="row">
 	<div class="12u 12u$(small)">
-	<p><a href="resources" class="button fit">Learn more about AI Alignment</a> The technical fields of AI alignment and AI governance are still in their formative stages, making it important to thoroughly <a href="resources">understand the theoretical and empirical problems of alignment, and current work in these areas</a>.</p>
+	<p><a href="resources" class="button fit">Learn more about AI Alignment</a> The technical fields of AI alignment and AI governance are still in relatively formative stages, making it important to thoroughly <a href="resources">understand the theoretical and empirical problems of alignment, and current work in these areas</a>.</p>
 	</div>
 </div>
 
 <br>
 <div id="calltoaction" class="box box-blue special">
-	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field is pre-paradigmatic and <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support people</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
-	<a href="#book_a_call" class="button fit">book a call</a>
+	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support professionals</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
+	<a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB" class="button fit">apply for a call</a>
 </div>
 <br>
 
@@ -61,38 +61,36 @@ order: 4
 
 <p> There are different subareas and research approaches within the field of AI alignment, and you may be a better fit for some than others. 
 <ul>
-	<li>One of the major rough splits is:</li>
+	<li>One of the major rough splits is empirical work vs theory:</li>
 		<ul> 
-			<li> <i>theoretical research</i> (e.g. <a href="https://alignment.org/">Alignment Research Center</a>, <a href="https://intelligence.org/">MIRI</a>) versus </li>
-			<li> <i>empirical research and engineering</i> (e.g. <a href="https://www.redwoodresearch.org/">Redwood Research</a>, <a href="https://www.anthropic.com/">Anthropic</a>, <a href="https://deepmindsafetyresearch.medium.com/">DeepMind's alignment teams</a>, <a href="https://openai.com/blog/our-approach-to-alignment-research/">OpenAI's safety team</a>).</li>
+			<li> <i>Empirical research and engineering</i> (e.g. <a href="https://www.anthropic.com/">Anthropic</a>, <a href="far.ai">FAR AI</a>, <a href="https://deepmindsafetyresearch.medium.com/">Google DeepMind's alignment teams</a>, <a href="https://openai.com/blog/our-approach-to-alignment-research/">OpenAI's alignment teams</a>, <a href=safe.ai>Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/">Redwood Research</a>).</li>
+			<li> <i>Empirical research and engineering aimed at evaluations of AI capabilities and alignment; technical AI governance work</i> (e.g. <a href="https://evals.alignment.org/">ARC Evals</a>, <a href="https://www.apolloresearch.ai/">Apollo Research</a>, <a href="https://palisaderesearch.org/">Palisade Research</a>.</li>
+			<li><i>Technical AI governance</i> outside of evaluations, which includes technical standards development (e.g. <a href="https://www.anthropic.com/index/anthropics-responsible-scaling-policy">Anthropic's Responsible Scaling Policy</a>), <a href="https://epochai.org/">forecasting</a>, <a href="https://80000hours.org/career-reviews/information-security/">information security</a>, and <a href="https://forum.effectivealtruism.org/posts/BJtekdKrAufyKhBGw/ai-governance-needs-technical-work">other work.</li>
+			<li> <i>theoretical research</i> (e.g. <a href="https://alignment.org/">Alignment Research Center</a>, <a href="https://intelligence.org/">MIRI</a>, and many independent researchers.) </li>
 		</ul> 
-	<li>Academia (e.g. UC Berkeley's <a href="https://humancompatible.ai/">CHAI</a>, NYU's <a href="https://wp.nyu.edu/arg/">Alignment Research Group</a>, <a href="https://jsteinhardt.stat.berkeley.edu/">Jacob Steinhardt</a>, <a href="https://www.davidscottkrueger.com/">David Krueger</a>, <a href="https://people.eecs.berkeley.edu/~hendrycks/">Dan Hendrycks</a>) and non-profit research organizations (e.g. <a href="https://www.cooperativeai.com/foundation">Cooperative AI Foundation</a>, <a href="https://far.ai/">FAR</a>) often fall somewhere in between theory and empirical alignment work. (Empirical work often needs access to state of the art models and so is resource intensive.)</li>
-	<li>Engineering aimed at AI alignment is almost always in industry, and <a href="https://www.alignmentforum.org/posts/YDF7XhMThhNfHfim9/ai-safety-needs-great-engineers">ML engineering</a> and research engineers are especially in-demand, but there's also <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_role_type%5D%5B0%5D=Software%20Engineering">a range</a> of engineering roles, especially security, and also software.</li>
-	<li> There's also work in technical AI governance (e.g. Governance team at OpenAI) and <a href="https://epochai.org/">forecasting</a>. Finally, there are some <a href="https://www.lesswrong.com/posts/P3Yt66Wh5g7SbkKuT/how-to-get-into-independent-research-on-alignment-agency">independent researchers</a>, outside of academia and formal organizations, who publish on the <a href="https://www.alignmentforum.org/">AI Alignment Forum</a> and <a href="https://www.lesswrong.com/tag/ai#AI_Alignment">LessWrong</a> and tend to do more theory work.</li>
-	<li>A provisionary list of alignment / safety organizations and examples of their work, as of Fall 2022: <a href="https://docs.google.com/document/d/1gimXyGj4nTU9TFJ6svlpmMtEWGbTrMoNYfzZMi8siAA/edit?usp=sharing">Shortform</a>, <a href="https://docs.google.com/document/d/1SXhls4pCFdJ6PbRnlmNiF3GhTSx3qq2SkDRsKGKb1O4/edit?usp=sharing">Longform</a>.</li>
-	<li> For an orientation to the space's cultural components: <a href="https://www.alignmentforum.org/posts/EFpQcBmfm2bFfM4zM/ai-safety-and-neighboring-communities-a-quick-start-guide-as">AI Safety and Neighboring Communities: A Quick-Start Guide, as of Summer 2022</a> by Sam Bowman (NYU).</li>
+	<li><b>Academia</b> (e.g. UC Berkeley's <a href="https://humancompatible.ai/">CHAI</a>, NYU's <a href="https://wp.nyu.edu/arg/">Alignment Research Group</a>, <a href="https://jsteinhardt.stat.berkeley.edu/">Jacob Steinhardt</a>, <a href="https://www.davidscottkrueger.com/">David Krueger</a>, <a href="http://www.cs.cmu.edu/~focal/"> FOCAL</a> and <a href="https://www.cooperativeai.com/foundation">Cooperative AI Foundation</a>) often includes theoretical work and empirical work that doesn't require access to large-scale infrastructure.</li>
+	<li><b>Engineering</b> aimed at AI alignment is almost always in industry, and <a href="https://www.alignmentforum.org/posts/YDF7XhMThhNfHfim9/ai-safety-needs-great-engineers">ML engineering</a> and research engineers are especially in-demand, but there's also <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">a range</a> of engineering roles, especially security, and also software.</li>
 </ul></p>
 
-<h3> Funding sources // Job board </h3>
+<h3> Funding sources</h3>
 <ul>
 	<li>Apply for funding from <a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a>, <a href="https://survivalandflourishing.fund/">Survival and Flourishing Fund</a>, or <a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
-	<li><a href="https://www.agisafetyfundamentals.com/opportunities">Opportunities in AGI Safety</a> and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_role_type%5D%5B0%5D=Research&refinementList%5Btags_role_type%5D%5B1%5D=Software%20Engineering">Job Board</a></li>
+<h3> Careers </h3>
+	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">Job Board</a></li>
+	<li> Roles listed on individual organizations' webpages listed above </li>
 </ul>
 
 <h3> Guides to getting involved </h3>
 <ul>
 	<li> <b>Research</b>: <a href="https://rohinshah.com/faq-career-advice-for-ai-alignment-researchers/">FAQ: Advice for AI Alignment Researchers</a> by Rohin Shah (DeepMind) or <a href="https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment"> How to pursue a career in technical AI alignment</a></li>
 	<li><b>Engineering</b>:  <a href="https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit?usp=sharing">Levelling Up in AI Safety Research Engineering</a></li>
-	<li><b>Overall</b>: <a href="https://forum.effectivealtruism.org/posts/pbiGHk6AjRxdBPoD8/ai-safety-starter-pack">AI safety starter pack</a> and <a href="#book_a_call">book a call</a></li>
 </ul>
 
 <div class="box">
 <h3> Interested in working in China? </h3>
-<p> AI alignment is a relatively new subfield, and research is currently centered in the US and Europe. State of the art research development is not just taking place in the US and Europe, however, and there is particular need for new technical approaches and research into the AI alignment problem taking place in China.</p>
 <ul>
-	<li>If you're interested in working in technical alignment in China, please <a href="#book_a_call">book a call</a> or get in contact with <a href="https://www.tian-xia.com/">Tianxia 天下</a> and <a href="https://concordia-consulting.com/">Concordia Consulting 安远咨询</a>.</li>
-	<li>Newsletter on China's AI landscape: <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
-	<li><a href="https://80000hours.org/career-reviews/china-related-ai-safety-and-governance-paths/">Overview</a> by 80,000 Hours</li>
+	<li>If you're interested in working in technical alignment in China, please <a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB" class="button fit">apply a call</a> or get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
+	<li>Newsletters on China's AI landscape: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
 </ul>
 </div>
 <br>
@@ -105,14 +103,14 @@ order: 4
 <br>
 <div id="governance"><h2> AI Governance </h2>
 
-<p>The Center for the Governance of AI (<a href="https://www.governance.ai/">GovAI</a>) describes the AI governance problem as "the problem of devising global norms, policies, and institutions to best ensure the beneficial development and use of advanced AI" (<a href="https://uploads-ssl.webflow.com/614b70a71b9f71c9c240c7a7/61d48553bf2faf58c3900bd2_GovAI-Research-Agenda.pdf">GovAI Research Agenda</a>). "AI governance" or "longtermist AI governance" is distinct from "AI policy" in its primary focus on advanced AI — the hypothetical general purpose technology — rather than current AI as it exists today. The field believes that different actions, risks, and opportunities come about when focusing on advanced AI systems as compared to more contemporary issues, though <a href="https://www.allandafoe.com/opportunity">AI governance and AI policy naturally interface with each other and have overlapping domains</a>. AI governance has historical roots in the study of <a href="https://en.wikipedia.org/wiki/Existential_risk_from_artificial_general_intelligence">existential risk</a> and the <a href="https://www.effectivealtruism.org/">Effective Altruism</a> community, so much current research draws from these communities, but the field is expanding with time.</p>
+<p>The Center for the Governance of AI (<a href="https://www.governance.ai/">GovAI</a>) describes the AI governance problem as "the problem of devising global norms, policies, and institutions to best ensure the beneficial development and use of advanced AI" (<a href="https://uploads-ssl.webflow.com/614b70a71b9f71c9c240c7a7/61d48553bf2faf58c3900bd2_GovAI-Research-Agenda.pdf">GovAI Research Agenda</a>). "AI governance" is distinct from "AI policy" in its primary focus on advanced AI — the hypothetical general purpose technology — rather than current AI as it exists today. The field believes that different actions, risks, and opportunities come about when focusing on advanced AI systems as compared to more contemporary issues, though <a href="https://www.allandafoe.com/opportunity">AI governance and AI policy naturally interface with each other and have overlapping domains</a>.</p>
 <ul>
-	<li>Read through the <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a> (highly recommended)</li>
-	<ul>
+	<li>Read through the <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
+<!-- 	<ul>
 		<li>One highlight: <a href="https://forum.effectivealtruism.org/posts/ydpo7LcJWhrr2GJrx/the-longtermist-ai-governance-landscape-a-basic-overview">The longtermist AI governance landscape: a basic overview</a> (<a href="https://forum.effectivealtruism.org/topics/ai-governance">related posts</a>)</li>
-	</ul>
-	<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours; <a href="https://www.openphilanthropy.org/open-philanthropy-technology-policy-fellowship/">Fellowship</a> by Open Philathrophy; <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_role_type%5D%5B0%5D=Policy">Job Board</a> by 80,000 Hours</li>
-	<li>If you're interested in law: <a href="https://www.legalpriorities.org/">Legal Priorities Project</a>, and <a href="https://works.bepress.com/ghadfield/">Gillian Hadfield (U. Toronto)</a></li>
+	</ul> -->
+	<li>Several organizations working in the space: Frontier AI Task Force, <a href="https://www.governance.ai/">Center for the Governance of AI (GovAI)</a>, OpenAI's Governance Team, <a href="https://www.longtermresilience.org/">Center for Long-Term Resilience (CLTR)</a>, <a href="https://www.rand.org/topics/science-technology-and-innovation-policy.html">RAND's Technology and Security Policy work</a>, <a href="https://cset.georgetown.edu/">Center for Security and Emerging Technology (CSET)</a>
+	<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours and<a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Policy">Job Board</a></li>
 </ul>
 </div>
 <br>
