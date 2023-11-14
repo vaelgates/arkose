@@ -41,13 +41,14 @@ order: 4
 	</div>
 </div>
 
+{% if false %}
 <br>
 <div id="calltoaction" class="box box-blue special">
 	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support professionals</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
 	<a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB" class="button fit">apply for a call</a>
 </div>
 <br>
-
+{% endif %}
 
 
 

@@ -11,6 +11,9 @@
 	<nav id="nav">
 		<ul class="links">
 			{% for item in site.data.settings.menu_settings.menu_items %}
+				{% if item.hidden %}
+					{% continue %}
+				{% endif %}
 				{% assign active_class = "" %}
 				{% if item.url == page.url %}
 					{% assign active_class = "active" %}

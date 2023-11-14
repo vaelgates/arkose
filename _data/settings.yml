@@ -18,3 +18,4 @@ menu_settings:
     - title: 'Apply For A Call'
       url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
       button: true
+      hidden: true
