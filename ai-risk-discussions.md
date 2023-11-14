@@ -20,7 +20,7 @@ show_tile: false
 </div>
 
 <hr>
-<h3><a href="resources.html">Resources</a> and <a href="what_can_i_do.html">Getting Involved</a></h3> 
+<h3><a href="resources.html">Resource Center</a> and <a href="what_can_i_do.html">Getting Involved</a></h3> 
 
 <!-- <span class="image right"><img src="{% link assets/images/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg %}" alt="" /></span> -->
 
@@ -33,6 +33,6 @@ show_tile: false
 
 <h4>Project contributors</h4>
 <div id="about_us" class="text-smaller">
-<p>AI Risk Discussions (AIRD) is a project of <a href="https://arkose.org">Arkose</a>. This project was led by Dr. <a href="https://vaelgates.com">Vael Gates</a>, with many other contributors, most prominently Lukas Trötzmüller (interactive walkthrough), Maheen Shermohammed (quantitative analysis), Zi Cheng (Sam) Huang (interview tagging), and Michael Keenan (website development).</p>
+<p>AI Risk Discussions (AIRD) is a project of Arkose. It was led by Dr. Vael Gates, with many other contributors, most prominently Lukas Trötzmüller (interactive walkthrough), Maheen Shermohammed (quantitative analysis), Zi Cheng (Sam) Huang (interview tagging), and Michael Keenan (website development).</p>
 <!--(AIRD) was developed by Larchwood, a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). -->
 </div>

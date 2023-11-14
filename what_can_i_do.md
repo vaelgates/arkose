@@ -78,6 +78,7 @@ order: 4
 </ul>
 
 <h3> Careers </h3>
+<ul>
 	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">Job Board</a></li>
 	<li> Roles listed on individual organizations' webpages listed above </li>
 </ul>
@@ -91,7 +92,7 @@ order: 4
 <div class="box">
 <h3> Interested in working in China? </h3>
 <ul>
-	<li>If you're interested in working in technical alignment in China, please <a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB" class="button fit">apply a call</a> or get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
+	<li>If you're interested in working in technical alignment in China, please <a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB">apply a call</a> or get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
 	<li>Newsletters on China's AI landscape: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
 </ul>
 </div>
@@ -112,7 +113,7 @@ order: 4
 		<li>One highlight: <a href="https://forum.effectivealtruism.org/posts/ydpo7LcJWhrr2GJrx/the-longtermist-ai-governance-landscape-a-basic-overview">The longtermist AI governance landscape: a basic overview</a> (<a href="https://forum.effectivealtruism.org/topics/ai-governance">related posts</a>)</li>
 	</ul> -->
 	<li>Several organizations working in the space: Frontier AI Task Force, <a href="https://www.governance.ai/">Center for the Governance of AI (GovAI)</a>, OpenAI's Governance Team, <a href="https://www.longtermresilience.org/">Center for Long-Term Resilience (CLTR)</a>, <a href="https://www.rand.org/topics/science-technology-and-innovation-policy.html">RAND's Technology and Security Policy work</a>, <a href="https://cset.georgetown.edu/">Center for Security and Emerging Technology (CSET)</a>
-	<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours and<a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Policy">Job Board</a></li>
+	<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Policy">Job Board</a></li>
 </ul>
 </div>
 <br>
@@ -122,6 +123,7 @@ order: 4
 </div>
 </section>
 
+<!--
 {% if false %}
 <section id="two" class="bg-gray">
 	<div class="inner">
@@ -177,3 +179,4 @@ order: 4
   window.contactEmail = "{{site.email}}"
 </script>
 {% endif %}
+-->
