@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources
+title: Resource Center
 og-description: Resources for machine learning researchers, for those interested in AI governance and policy, and for a general audience.
 nav-menu: true
 order: 3
@@ -13,7 +13,7 @@ order: 3
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Resources</h1>
+			<h1>Resource Center</h1>
 		</header>
 
 <!-- Content -->
