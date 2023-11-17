@@ -147,15 +147,18 @@ order: 3
 
 <iframe src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
+<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+
 </div>
 </section>
 
+<!--
 <section id="four" class="bg-gray">
 	<div class="inner">
 		<a href="https://docs.google.com/document/d/1qhvjDZaOXnBlrL4GPaT8xTyQQZi3_LIWdWt3Mqd6xAM/edit?usp=sharing" class="button fit">Further resources</a>
-		<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
 	</div>
 	<br><br>
 </section>
+-->
 
 </div>
