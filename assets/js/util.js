@@ -10,14 +10,23 @@
 			$a = $this.find('a'),
 			b = [];
 
-		$a.each(function() {
+			b.push(`<a href="/" class="link depth-0">
+				<img src="/assets/images/arkose.png">
+				<span class="logo-text">Arkose</span>
+			</a>`)
 
+		$a.each(function() {
 			var	$this = $(this),
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
-				target = $this.attr('target');
+				target = $this.attr('target'),
+				text = $this.text().trim();
 
-			if (!$this.text() || $this.text().trim().length === 0) return;
+			// Unprincipled hack to fix the Resource Center item
+			if (text.slice(0, 8) === 'Resource') text = 'Resource Center';
+
+			// Unprincipled hack to remove the duplicated AI Risk Discussions nested heading
+			if (text === 'AI Risk Discussions' && indent === 1) return;
 
 			b.push(
 				'<a ' +
@@ -26,7 +35,7 @@
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
 				'>' +
 					'<span class="indent-' + indent + '"></span>' +
-					$this.text() +
+					text +
 				'</a>'
 			);
 
