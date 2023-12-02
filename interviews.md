@@ -68,7 +68,7 @@ order: 2
 	</header>
 
 <ul>
-<li>Most participants (75%), at some point in the conversation, said that they thought humanity would achieve advanced AI (imprecisely labeled "AGI" for the rest of this summary) eventually, but their timelines to AGI varied <a href="analyze_transcripts_static.html#when-will-we-get-agi">(source)</a>. Within this group:
+<li>Most participants (75%), at some point in the conversation, said that they thought humanity would achieve advanced AI (imprecisely labeled "AGI" for the rest of this summary) eventually, but their timelines to AGI varied <a href="analyze_transcripts_static.html#when-will-we-get-agi">(Source)</a>. Within this group:
 	<ul>
 	<li>32% thought it would happen in 0-50 years</li>
 	<li>40% thought 50-200 years</li>
@@ -78,7 +78,7 @@ order: 2
 	<p>(These sum to more than 100% because several people endorsed multiple timelines over the course of the conversation.)</p>
 </li>
 <li><p>Among participants who thought humanity would never develop AGI (22%), the most commonly cited reason was that they couldn't see AGI happening based on current progress in AI. <a href="analyze_transcripts_static.html#when-will-we-get-agi">(Source)</a></p></li>
-<li>Participants were pretty split on whether they thought the alignment problem argument was valid. Some common reasons for disagreement were <a href="analyze_transcripts_static.html#alignment-problem">(source)</a>:
+<li>Participants were pretty split on whether they thought the alignment problem argument was valid. Some common reasons for disagreement were <a href="analyze_transcripts_static.html#alignment-problem">(Source)</a>:
 </li>      
 <ol>
 	<li>A set of responses that included the idea that AI alignment problems would be solved over the normal course of AI development (caveat: this was a very heterogeneous tag).</li>
@@ -90,8 +90,8 @@ order: 2
 <li><p> Participants were also pretty split on whether they thought the instrumental incentives argument was valid. The most common reasons for disagreement were that 1) the loss function of an AGI would not be designed such that instrumental incentives arise / pose a problem and 2) there would be oversight (by humans or other AI) to prevent this from happening. <a href="analyze_transcripts_static.html#instrumental-incentives">(Source)</a></p></li> 
 <li><p> Some participants brought up that they were more concerned about misuse of AI than AGI misalignment (n = 17), or that potential risk from AGI was less dangerous than other large-scale risks humanity faces (n = 11). <a href="analyze_transcripts_static.html#merged-extended-discussion">(Source)</a></p></li>
 <li><p> Of the 55 participants who were asked / had a response to this question, some (n = 13) were potentially interested in working on AI alignment research. (<a href="analyze_transcripts_static.html#work-on-this_about-this-variable">Caveat for bias</a>: the interviewer was less likely to ask this question if the participant believed AGI would never happen and/or the alignment/instrumental arguments were invalid, so as to reduce participant frustration. This question also tended to be asked in later interviews rather than earlier interviews.) Of those participants potentially interested in working on AI alignment research, almost all reported that they would need to learn more about the problem and/or would need to have a more specific research question to work on or incentives to do so. Those who were not interested reported feeling like it was not their problem to address (they had other research priorities, interests, skills, and positions), that they would need examples of risks from alignment problems and/or instrumental incentives within current systems to be interested in this work, or that they felt like they were not at the forefront of such research so would not be a good fit. <a href="analyze_transcripts_static.html#work-on-this">(Source)</a></p></li>
-<li><p> Most participants had heard of AI safety (76%) in some capacity <a href="analyze_transcripts_static.html#heard-of-ai-safety">(source)</a>; fewer had heard of AI alignment (41%) <a href="analyze_transcripts_static.html#heard-of-ai-alignment">(source)</a>.</p></li> 
-<li><p> When participants were followed-up with ~5-6 months after the interview, 51% reported the interview had a lasting effect on their beliefs <a href="analyze_transcripts_static.html#lasting-effects">(source)</a>, and 15% reported the interview caused them to take new action(s) at work <a href="analyze_transcripts_static.html#new-actions">(source)</a>.</p></li> 
+<li><p> Most participants had heard of AI safety (76%) in some capacity <a href="analyze_transcripts_static.html#heard-of-ai-safety">(Source)</a>; fewer had heard of AI alignment (41%) <a href="analyze_transcripts_static.html#heard-of-ai-alignment">(Source)</a>.</p></li> 
+<li><p> When participants were followed-up with ~5-6 months after the interview, 51% reported the interview had a lasting effect on their beliefs <a href="analyze_transcripts_static.html#lasting-effects">(Source)</a>, and 15% reported the interview caused them to take new action(s) at work <a href="analyze_transcripts_static.html#new-actions">(Source)</a>.</p></li> 
 <li><p> Thinking the alignment problem argument was valid, or the instrumental incentives argument was valid, both tended to correlate with thinking AGI would happen at some point. The effect wasn't symmetric: if participants thought these arguments were valid, they were quite likely to believe AGI would happen; if participants thought AGI would happen, it was still more likely that they thought these arguments were valid but the effect was less strong. <a href="analyze_transcripts_static.html#main-questions-x-main-questions">(Source)</a> </p></li>
 </ul>
 

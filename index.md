@@ -27,7 +27,12 @@ featured_image: /assets/img/social.jpg
   <div class="inner">
     <div class="row align-items-center">
       <div>
-        <p>Arkose is an early-stage, AI safety field-building nonprofit, with the mission of reducing risks from advanced AI. Our approach encompasses a range of activities and responsibilities, primarily involving surveys, calls, and supportive programs. A major organizational focus is supporting researchers and engineers interested in contributing to AI safety.</p>
+        <p>Arkose is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. At Arkose, our primary organizational focus is supporting researchers, engineers, and other professionals interested in contributing to technical AI safety. Our approach encompasses a range of activities, with the following core elements:</p>
+
+        <ul>
+        <li>Hosting strategy calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research.</li>
+        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>.</li>
+        </ul>
 
         <p>Our 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
 
@@ -59,7 +64,7 @@ featured_image: /assets/img/social.jpg
       </div>
       <div class="4u 12u(small)">
         <h4><a href="https://www.linkedin.com/in/krzeminskamarta/">Marta Krzeminska</a></h4>
-        <div class="role">Operations, part-time</div>
+        <div class="role">Operations</div>
       </div>
     </div>
   </div>

@@ -93,7 +93,7 @@ order: 4
 <div class="box">
 <h3> Interested in working in China? </h3>
 <ul>
-	<li>If you're interested in working in technical alignment in China, please <a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB">apply a call</a> or get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
+	<li>If you're interested in working in technical alignment in China, please get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
 	<li>Newsletters on China's AI landscape: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
 </ul>
 </div>
