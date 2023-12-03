@@ -13,8 +13,8 @@ menu_settings:
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
-    - title: 'What Can I Do?'
-      url: '/what_can_i_do'
+    # - title: 'Experts'
+    #   url: '/experts'
     - title: 'Apply For A Call'
       url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
       button: true
