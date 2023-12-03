@@ -74,7 +74,7 @@ order: 3
 
 <h4> Specific Research and Engineering Positions</h4>
 <ul>
-	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google Deepmind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
+	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google DeepMind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
 	<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
 </ul>
 
