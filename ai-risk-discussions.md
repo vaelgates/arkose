@@ -20,13 +20,13 @@ show_tile: false
 </div>
 
 <hr>
-<h3><a href="resources.html">Resource Center</a> and <a href="what_can_i_do.html">Getting Involved</a></h3> 
+<h3><a href="resources.html">Resource Center</a></h3> 
 
 <!-- <span class="image right"><img src="{% link assets/images/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg %}" alt="" /></span> -->
 
-<p>Interested in learning more? Our <a href="resources.html">Resource Center</a> has further reading, both for machine learning researchers as well as for the general public.</p>
+<p>Interested in learning more? Our <a href="resources.html">Resource Center</a> has further reading and information on how to get involved.</p>
 
-<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="what_can_i_do.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed.</p>
+<!--<p>Concerned about potential risks from advanced AI systems? We have recommendations for <a href="resources.html">what you can do to help</a>. In particular, work in technical research on AI alignment is especially needed.</p>-->
 <!--, and we would be happy to <a href="mailto:{{site.email}}">talk with you about these opportunities</a>.</p>-->
 
 <hr> 
