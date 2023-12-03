@@ -17,69 +17,173 @@ order: 3
 		</header>
 
 <!-- Content -->
-<!-- <h2 id="content">Readings</h2> -->
+<h2 id="content">Readings</h2>
 
-<!-- <p><i> Sorted by <a href="#MLreadings">machine learning researchers</a>, <a href="#publicreadings">general audience</a>, and <a href="what_can_i_do.html">more involved.</a> </i></p> -->
 
-<h3 id="MLreadings">For machine learning researchers</h3>
-<div class = "box">
-<h4>Risks from Advanced AI</h4>
+<section id="two" class="mb2">
+	<div class="inner">
+
+<h4>Selection of Key Technical Safety Papers</h4>
+
+<iframe src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+
+</div>
+</section>
+<br>
+
+<section id="three" class="mb2">
+	<div class="inner">
+<h4>Content on Risks from Advanced AI</h4>
 <ul>
 	<li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
-	<li><a href="https://arxiv.org/pdf/2209.00626.pdf">The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022), <a href="https://twitter.com/RichardMCNgo/status/1603862969276051457"><i>Twitter thread</i></a></li>
 	<li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
-	<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>
-	<li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>
+	<li><a href="https://arxiv.org/pdf/2209.00626.pdf">The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022), <a href="https://twitter.com/RichardMCNgo/status/1603862969276051457"><i>Twitter thread</i></a></li>
+	<!--<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>
+	<li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>-->
+</ul>
+</div>
+</section>
+
+
+<section id="four" class="mb2">
+	<div class="inner">
+	<h4> Courses and Newsletters </h4>
+<ul>
+	<li><a href="https://www.aisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> by BlueDot Impact (highly recommended) </li>
+	<li><a href="https://course.mlsafety.org/">Introduction to ML Safety</a> by the Center for AI Safety</li>
+	<li><a href="https://newsletter.mlsafety.org/about">ML Safety Newsletter</a> and <a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter (on hiatus)</a></li>
+</ul>
+
+</div>
+</section>
+
+
+<div class="full-width-gray">
+<br>
+<div id="technical"><h2> Get Involved </h2>
+<!--<p>Organizations and researchers in the space, funding and job opportunities, and guides to get involved</p>-->
+
+
+<h3> Careers </h3>
+<ul>
+	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a></li>
+	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a></li>
+</ul>
+
+<h4> Specific Research and Engineering Positions</h4>
+<ul>
+	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google Deepmind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
+	<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
+</ul>
+
+
+<h4> Alternative Technical Positions </h4>
+<ul>
+	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
+	<li>Theoretical research: <a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a>, <a href="https://intelligence.org/careers/">MIRI</a> </li>
+</ul>
+
+
+<h4> Academia</h4>
+<ul>
+	<li><a href="https://futureoflife.org/about-us/our-people/ai-existential-safety-community/">AI Existential Safety Community</a> from Future of Life Institute</li>
+</ul>
+
+
+<h3> Funding Sources</h3>
+<ul>
+	<li><a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a></li>
+	<li><a href="https://survivalandflourishing.fund/">Survival and Flourishing Fund</a></li>
+	<li><a href="https://futureoflife.org/our-work/grantmaking-work/">Future of Life Institute</a></li>
+	<li><a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
+</ul>
+
+
+<h3> Guides </h3>
+<ul>
+	<li> <b>Research</b>: <a href="https://aisafetyfundamentals.com/blog/alignment-careers-guide">Alignment Careers Guide</a></li>
+	<li><b>Engineering</b>:  <a href="https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit?usp=sharing">Leveling Up in AI Safety Research Engineering</a></li>
+</ul>
+
+<div class="box">
+<h3> Interested in working in China? </h3>
+<ul>
+	<li>If you're interested in working in technical alignment in China, please get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
+	<li>Newsletters: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
 </ul>
 </div>
 
-<!--<div class="row">
-	<div class="6u 12u$(medium)">
-		<div class = "box">
-		<h4>Risks from advanced AI</h4>
-		<ul>
-			<li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/" class="button xsmall">∗</a> <a href="https://wp.nyu.edu/arg/why-ai-safety/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
-		    <li><a href="https://wp.nyu.edu/arg/why-ai-safety/" class="button xsmall">∗</a> <a href="https://wp.nyu.edu/arg/why-ai-safety/"> Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022), 15m <i>(stop at the section "The new lab")</i> </li>
-		    <li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0" class="button xsmall">∗</a> <a href="https://www.youtube.com/watch?v=yl2nlejBcg0"> Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022), 48m <i>(skip the Q&A)</i> </li>
-		</ul>
-		</div>
-	</div>
-	<div class="6u$ 12u$(medium)">
-		<div class = "box">
-		<h4>Orienting</h4>
-		<ul>
-		    <li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/" class="button xsmall">∗</a> <a href="https://bounded-regret.ghost.io/more-is-different-for-ai/"> More is Different for AI</a> by Jacob Steinhardt (2022)</li>
-		    <li><a href="https://docs.google.com/document/d/1j7tZ1Xf7-l2k2qr2t3MFwi-IkhXNdzA2N2WZBfcghsM/edit?usp=sharing">AI Timelines/Risk Projections as of Sep. 2022</a></li>
-		    <li><a href="https://www.alignmentforum.org/posts/6ccG9i5cTncebmhsH/frequent-arguments-about-alignment">​​Frequent Arguments About Alignment</a> by John Schulman (2021)</li>
-		</ul>
-		</div>
-	</div>
-</div>-->
-<div class = "box">
-<h4>Technical Research</h4>
-	<!--<li><a href="https://vkrakovna.wordpress.com/ai-safety-resources/">AI Safety Resources</a> and <a href="https://www.alignmentforum.org/posts/JC7aJZjt2WvxxffGz/paradigms-of-ai-alignment-components-and-enablers">Overview</a> by Victoria Krakovna (DeepMind) </li>-->
+</div>
+</div>
+<br>
+
+<section id="five">
+	<div class="inner">
+		<h2 id="content">Other</h2>
+
+<div id="governance"><h4> AI Governance and Policy</h4>
+
+<p>AI governance is focused on developing global norms, policies, and institutions to increase the chances that advanced AI is beneficial for humanity.</p>
 <ul>
+	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a> by BlueDot Impact</li>
+	<li><a href="https://emergingtechpolicy.org/areas/ai-policy/">AI Policy Resources</a> by Emerging Technology Policy Careers</li>
+<!-- 	<ul>
+		<li>One highlight: <a href="https://forum.effectivealtruism.org/posts/ydpo7LcJWhrr2GJrx/the-longtermist-ai-governance-landscape-a-basic-overview">The longtermist AI governance landscape: a basic overview</a> (<a href="https://forum.effectivealtruism.org/topics/ai-governance">related posts</a>)</li>
+	</ul> -->
+	<li>Several organizations working in the space: Frontier AI Task Force, <a href="https://www.governance.ai/">Center for the Governance of AI (GovAI)</a>, OpenAI's Governance Team, <a href="https://www.longtermresilience.org/">Center for Long-Term Resilience (CLTR)</a>, <a href="https://www.rand.org/topics/science-technology-and-innovation-policy.html">RAND's Technology and Security Policy work</a>, <a href="https://www.horizonpublicservice.org/">Horizon Institute for Public Service</a>, <a href="https://cset.georgetown.edu/">Center for Security and Emerging Technology (CSET)</a></li>
+	<!--<li>If you're interested in a career in US AI policy: <a href="https://80000hours.org/articles/us-ai-policy/">Overview</a> by 80,000 Hours and <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Policy">Job Board</a></li>
+	Technical AI governance</b> outside of evaluations, which includes technical standards development (e.g. <a href="https://www.anthropic.com/index/anthropics-responsible-scaling-policy">Anthropic's Responsible Scaling Policy</a>
+	<li><<a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">-->
+</ul>
+</div>
+<br>
+
+<div id="publicreadings"><h4>Readings: Non-Technical</h4>
+
+<ul>
+	<li><a href="https://www.planned-obsolescence.org/">Planned Obsolescence</a> by Ajeya Cotra and Kelsey Piper</li>
+	<li><a href="https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment"> The Case For Taking AI Seriously As A Threat to Humanity</a> by Kelsey Piper (2020)<!-- , 30m --></li>
+    <li><a href="https://smile.amazon.com/Alignment-Problem-Machine-Learning-Values-ebook/dp/B085T55LGK/"> The Alignment Problem </a> by Brian Christian (2020)<!-- , book --></li>
+    <li><a href="https://www.youtube.com/watch?v=UbruBnv3pZU"> Existential Risk from Power-Seeking AI</a> by Joe Carlsmith (2021)</li>
+    <li><a href="https://www.cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning/">Why AI Alignment Could be Hard with Modern Deep Learning</a> by Ajeya Cotra (2021)</li>
+    <li><a href="https://80000hours.org/problem-profiles/artificial-intelligence/">80,000 Hours Podcast: Preventing an AI-related Catastrophe</a> (2022)<!-- , 2.5h --></li>
+	<li><a href="https://www.cold-takes.com/most-important-century/">The Most Important Century</a> by Holden Karnofsky (podcasts and articles)</li>
+	<li><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg/">AI Safety YouTube channel</a> by Robert Miles</li>
+</ul>
+
+
+
+
+
+<br>
+
+
+</div>
+</div>
+
+<!-- <p><i> Sorted by <a href="#MLreadings">machine learning researchers</a>, <a href="#publicreadings">general audience</a>, and <a href="what_can_i_do.html">more involved.</a> </i></p> -->
+
+<!-- <h3 id="MLreadings">For machine learning researchers</h3> -->
+
+
+
+
+
+
+<!--<h4>Technical Research</h4>-->
+<!--<li><a href="https://vkrakovna.wordpress.com/ai-safety-resources/">AI Safety Resources</a> and <a href="https://www.alignmentforum.org/posts/JC7aJZjt2WvxxffGz/paradigms-of-ai-alignment-components-and-enablers">Overview</a> by Victoria Krakovna (DeepMind) </li>-->
+<!--<li><a href="https://proceedings.neurips.cc/paper/2021/file/c26820b8a4c1b3c2aa868d6d57e14a79-Paper.pdf">Optimal Policies Tend to Seek Power</a> (Turner et al., 2021)</li>-->
+<!-- <ul>
     <li><a href="https://arxiv.org/pdf/2210.01790.pdf">Goal Misgeneralization: Why correct specifications aren't enough for correct goals</a> (Shah et al., 2022)</li>
     <li><a href="https://deepmindsafetyresearch.medium.com/specification-gaming-the-flip-side-of-ai-ingenuity-c85bdb0deeb4">Specification gaming: the flip side of AI ingenuity </a> (Krakovna et al., 2020)</li>
     <li>Mechanistic interpretability: <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">In-context Learning and Induction Heads</a> (Olsson et al., 2022), <a href="https://arxiv.org/abs/2202.05262">Locating and Editing Factual Associations in GPT</a> (Meng et al., 2022)</li>
     <li><a href="https://arxiv.org/pdf/2212.03827.pdf">Discovering Latent Knowledge in Language Models Without Supervision</a> (Burns et al., 2022), <a href="https://twitter.com/CollinBurns4/status/1600892261633785856"><i>Twitter thread</i></a></li>
-    <!--<li><a href="https://proceedings.neurips.cc/paper/2021/file/c26820b8a4c1b3c2aa868d6d57e14a79-Paper.pdf">Optimal Policies Tend to Seek Power</a> (Turner et al., 2021)</li>-->
     <li> Agendas: <a href="https://arxiv.org/pdf/2109.13916.pdf"> Unsolved Problems in ML Safety</a> (Hendrycks et al., 2022),  <a href="https://arxiv.org/pdf/1606.06565.pdf">Concrete Problems in AI safety</a> (Amodei et al., 2016)</li>
-</ul>
+</ul> -->
 
-<h5> Other </h5>
 
-<ul>
-	<li><a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> (<b>best in-depth resource</b>) </li>
-	<li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> and <a href="https://newsletter.mlsafety.org/">ML Safety Newsletter</a></li>
-</ul>
-
-<h5> Interested in doing AI alignment research?</h5>
-<ul>
-<li> Learn about the organizations and researchers in the space, funding and job opportunities, and guides to get involved at&nbsp; <a href="what_can_i_do#technical" class="button xsmall">What can I do?</a></li>
-</ul>
-
-</div>
 
 
 <!-- <h4> Further resources </h4> -->
@@ -106,51 +210,11 @@ order: 3
 
 <!-- </div> -->
 
-<br>
-</div>
-</section>
-
-
-
-<section id="two" class="bg-gray">
-	<div class="inner">
 
 
 
 
 
-<h3 id="publicreadings">For a general audience</h3>
-<ul>
-	<li><a href="https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment" class="button xsmall">∗</a><a href="https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment"> The Case For Taking AI Seriously As A Threat to Humanity</a> by Kelsey Piper (2020)<!-- , 30m --></li>
-    <li><a href="https://smile.amazon.com/Alignment-Problem-Machine-Learning-Values-ebook/dp/B085T55LGK/"> The Alignment Problem </a> by Brian Christian (2020)<!-- , book --></li>
-    <li><a href="https://www.youtube.com/watch?v=UbruBnv3pZU"> Existential Risk from Power-Seeking AI</a> by Joe Carlsmith (2021)</li>
-    <li><a href="https://www.cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning/">Why AI Alignment Could be Hard with Modern Deep Learning</a> by Ajeya Cotra (2021)</li>
-    <li><a href="https://80000hours.org/problem-profiles/artificial-intelligence/">80,000 Hours Podcast: Preventing an AI-related Catastrophe</a> (2022)<!-- , 2.5h --></li>
-	<li><a href="https://www.cold-takes.com/most-important-century/">The Most Important Century</a> by Holden Karnofsky (podcast, summaries, various articles)</li>
-	<li><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg/">AI Safety YouTube channel</a> by Robert Miles</li>
-</ul>
-
-
-
-<br>
-<h3 id="governance readings">For interest in AI governance and policy</h3>
-<ul>
-	<li><a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum" class="button xsmall">∗</a> <a href="https://www.agisafetyfundamentals.com/ai-governance-curriculum">AI Governance Curriculum</a></li>
-</ul>
-</div>
-</section>
-
-<section id="three" class="mb2">
-	<div class="inner">
-
-<h3>Selection of key safety papers</h3>
-
-<iframe src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-
-<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
-
-</div>
-</section>
 
 <!--
 <section id="four" class="bg-gray">
@@ -161,4 +225,137 @@ order: 3
 </section>
 -->
 
+
+
+
+
+
+<!--<div class="row">
+	<div class="6u 12u$(medium)">
+		<div class = "box">
+		<h4>Risks from advanced AI</h4>
+		<ul>
+			<li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/" class="button xsmall">∗</a> <a href="https://wp.nyu.edu/arg/why-ai-safety/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
+		    <li><a href="https://wp.nyu.edu/arg/why-ai-safety/" class="button xsmall">∗</a> <a href="https://wp.nyu.edu/arg/why-ai-safety/"> Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022), 15m <i>(stop at the section "The new lab")</i> </li>
+		    <li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0" class="button xsmall">∗</a> <a href="https://www.youtube.com/watch?v=yl2nlejBcg0"> Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022), 48m <i>(skip the Q&A)</i> </li>
+		</ul>
+		</div>
+	</div>
+	<div class="6u$ 12u$(medium)">
+		<div class = "box">
+		<h4>Orienting</h4>
+		<ul>
+		    <li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/" class="button xsmall">∗</a> <a href="https://bounded-regret.ghost.io/more-is-different-for-ai/"> More is Different for AI</a> by Jacob Steinhardt (2022)</li>
+		    <li><a href="https://docs.google.com/document/d/1j7tZ1Xf7-l2k2qr2t3MFwi-IkhXNdzA2N2WZBfcghsM/edit?usp=sharing">AI Timelines/Risk Projections as of Sep. 2022</a></li>
+		    <li><a href="https://www.alignmentforum.org/posts/6ccG9i5cTncebmhsH/frequent-arguments-about-alignment">​​Frequent Arguments About Alignment</a> by John Schulman (2021)</li>
+		</ul>
+		</div>
+	</div>
+</div>-->
+
+
+
+
+
+
+<!--
+<p>Reducing potential risk from advanced AI systems is an unsolved, difficult task, and the pathways for what is helpful are uncertain. However, here are some candidates for reducing risk:</p> 
+
+<div class="row">
+	<div class="6u 12u$(small)">
+	<p><a href="#technical" class="button fit">AI Alignment Research & Eng.</a> Making progress on technical AI alignment (research and engineering)</p>
+	</div>
+	<div class="6u 12u$(small)">
+	<p><a href="#governance" class="button fit">AI Governance</a> Developing global norms, policies, and institutions to increase the chances that advanced AI is beneficial</p>
+	</div>
 </div>
+<div class="row">
+	<div class="6u 12u$(small)">
+	<p><a href="#" class="button fit disabled">Support</a> Providing support for others working in AI alignment (e.g. <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Management&refinementList%5Btags_skill%5D%5B1%5D=Operations">operations roles</a>)</p>
+	</div>
+	<div class="6u 12u$(small)">
+	<p><a href="#" class="button disabled fit">Discussion</a> Engaging in discussion about these risks with colleagues</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="12u 12u$(small)">
+	<p><a href="resources" class="button fit">Learn more about AI Alignment</a> The technical fields of AI alignment and AI governance are still in relatively formative stages, making it important to thoroughly <a href="resources">understand the theoretical and empirical problems of alignment, and current work in these areas</a>.</p>
+	</div>
+</div>
+
+{% if false %}
+<br>
+<div id="calltoaction" class="box box-blue special">
+	<p> If the arguments for working to reduce risks from advanced AI systems feel substantive to you, the field <a href="https://80000hours.org/problem-profiles/artificial-intelligence/#what-can-you-do-concretely-to-help">needs many more thoughtful researchers, engineers, and support professionals</a>. We encourage you to investigate the resources below. Finally, if you would like guidance or connections and <b>you are interested in conducting research in AI alignment:</b></p>
+	<a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB" class="button fit">apply for a call</a>
+</div>
+<br>
+{% endif %}
+-->
+
+
+
+
+
+
+
+
+<!--
+{% if false %}
+<section id="two" class="bg-gray">
+	<div class="inner">
+
+<div id="book_a_call"><h2>Book a call</h2>
+<p>If you're interested in working in AI alignment and advanced AI safety, please book a call with <a href="https://vaelgates.com">Vael Gates</a>, who leads this project and conducted the <a href=interviews>interviews</a> as part of their postdoctoral work with Stanford University.</p>
+
+<form id="book_call_form" method="post" action="#">
+	<div class="row uniform">
+		<div class="6u 12u$(xsmall)">
+			<input type="text" name="name" id="name" value="" placeholder="Name" />
+		</div>
+		<div class="6u$ 12u$(xsmall)">
+			<input type="email" name="email" id="email" value="" placeholder="Email" />
+		</div>
+		<div class="12u$">
+			<div class="select-wrapper">
+				<select name="interest" id="interest">
+					<option value=""> Interested in talking about... </option>
+					<option value="AI Alignment Research or Engineering">AI Alignment Research or Engineering</option>
+					<option value="AI Alignment Governance">AI Alignment Governance</option>
+					<option value="Other">Other (please specify below)</option>
+				</select>
+			</div>
+		</div>
+		<div class="12u$">
+			<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+		</div>
+		<div class="12u$">
+			<ul class="actions">
+				<li>
+          <button class="button" id="send_form_button">
+            <div class="button-progress-bar"></div>
+            <div class="button-text">Send Message</div>
+          </button>
+        </li>
+			</ul>
+		</div>
+	</div>
+</form>
+</div>
+
+</div>
+</section>
+
+{% endif %}
+
+</div>
+
+{% if false %}
+<script src="{{ "assets/js/book_call.js" | absolute_url }}" type="module"></script>
+<script>
+  window.contactEmail = "{{site.email}}"
+</script>
+{% endif %}
+-->
+
