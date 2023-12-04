@@ -49,11 +49,19 @@ order: 3
 
 <section id="four" class="mb2">
 	<div class="inner">
-	<h4> Courses and Newsletters </h4>
+	<h4> Courses </h4>
 <ul>
 	<li><a href="https://www.aisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> by BlueDot Impact (highly recommended) </li>
 	<li><a href="https://course.mlsafety.org/">Introduction to ML Safety</a> by the Center for AI Safety</li>
-	<li><a href="https://newsletter.mlsafety.org/about">ML Safety Newsletter</a> and <a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter (on hiatus)</a></li>
+</ul>
+
+<section id="five" class="mb2">
+	<div class="inner">
+	<h4> Newsletters </h4>
+<ul>
+	<li><a href="https://us13.campaign-archive.com/home/?u=67bd06787e84d73db24fb0aa5&id=6c9d98ff2c">Import AI</a> by Jack Clark, <i>for keeping up to date on AI progress</i></li>
+	<li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> by the Center for AI Safety, <i>for recent AI safety papers</i></li>
+	<li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> by Rohin Shah, <i>for review of AI safety papers, on hiatus</i></li>
 </ul>
 
 </div>
@@ -72,17 +80,17 @@ order: 3
 	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a> by 80,000 Hours</li>
 </ul>
 
-<h4> Specific Research and Engineering Positions</h4>
+<h4> Specific Research and Engineering Opportunities</h4>
 <ul>
 	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google DeepMind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
 	<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
 </ul>
 
 
-<h4> Alternative Technical Positions </h4>
+<h4> Alternative Technical Opportunities </h4>
 <ul>
 	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
-	<li>Theoretical research: <a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a>, <a href="https://intelligence.org/careers/">MIRI</a> </li>
+	<li>Theoretical research: <a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a>, <a href="https://intelligence.org/careers/">Machine Intelligence Research Institute (MIRI)</a> </li>
 </ul>
 
 
@@ -119,7 +127,7 @@ order: 3
 </div>
 <br>
 
-<section id="five">
+<section id="six">
 	<div class="inner">
 		<h2 id="content">Other</h2>
 
@@ -140,7 +148,7 @@ order: 3
 </div>
 <br>
 
-<div id="publicreadings"><h4>Readings: Non-Technical</h4>
+<div id="publicreadings"><h4>General Audience Readings</h4>
 
 <ul>
 	<li><a href="https://www.planned-obsolescence.org/">Planned Obsolescence</a> by Ajeya Cotra and Kelsey Piper</li>
