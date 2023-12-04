@@ -40,8 +40,8 @@ order: 3
 	<li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
 	<li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
 	<li><a href="https://arxiv.org/pdf/2209.00626.pdf">The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022), <a href="https://twitter.com/RichardMCNgo/status/1603862969276051457"><i>Twitter thread</i></a></li>
-	<!--<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>
-	<li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>-->
+	<li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>
+	<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>
 </ul>
 </div>
 </section>
