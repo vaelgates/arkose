@@ -68,8 +68,8 @@ order: 3
 
 <h3> Careers </h3>
 <ul>
-	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a></li>
-	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a></li>
+	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> by BlueDot Impact</li>
+	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a> by 80,000 Hours</li>
 </ul>
 
 <h4> Specific Research and Engineering Positions</h4>
