@@ -63,7 +63,7 @@ featured_image: /assets/img/social.jpg
         <div class="role">Operations</div>
       </div>
       <div class="4u 12u(small)">
-        <h4><a href="https://www.linkedin.com/in/krzeminskamarta/">Marta Krzeminska</a></h4>
+        <h4><a href="https://www.linkedin.com/in/audrazook/">Audra Zook</a></h4>
         <div class="role">Operations</div>
       </div>
     </div>
