@@ -66,13 +66,7 @@ order: 3
 <!--<p>Organizations and researchers in the space, funding and job opportunities, and guides to get involved</p>-->
 
 
-<h3> Job Boards </h3>
-<ul>
-	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> by BlueDot Impact</li>
-	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a> by 80,000 Hours</li>
-</ul>
-
-<h3> Specific Research and Engineering Opportunities</h3>
+<h3> Research and Engineering Opportunities</h3>
 <ul>
 	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google DeepMind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
 	<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
@@ -85,6 +79,12 @@ order: 3
 	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
 </ul>
 
+
+<h3> Job Boards </h3>
+<ul>
+	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> by BlueDot Impact</li>
+	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a> by 80,000 Hours</li>
+</ul>
 
 <h3> Academia</h3>
 <ul>
@@ -102,7 +102,7 @@ order: 3
 
 <h3> Interested in working in China? </h3>
 <ul>
-	<li><a href="https://concordia-consulting.com/">Concordia AI 安远AI</a></li>
+	<li>Contact <a href="https://concordia-ai.com/">Concordia AI 安远AI</a></li>
 	<li>Newsletters: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
 </ul>
 
