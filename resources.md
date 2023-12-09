@@ -23,7 +23,7 @@ order: 3
 <section id="two" class="mb2">
 	<div class="inner">
 
-<h4>Selection of Key Technical Safety Papers</h4>
+<h3>Selection of Key Technical Safety Papers</h3>
 
 <iframe src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
@@ -35,7 +35,7 @@ order: 3
 
 <section id="three" class="mb2">
 	<div class="inner">
-<h4>Content on Risks from Advanced AI</h4>
+<h3>Content on Risks from Advanced AI</h3>
 <ul>
 	<li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
 	<li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
@@ -46,18 +46,9 @@ order: 3
 </div>
 </section>
 
-
 <section id="four" class="mb2">
 	<div class="inner">
-	<h4> Courses </h4>
-<ul>
-	<li><a href="https://www.aisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> by BlueDot Impact (highly recommended) </li>
-	<li><a href="https://course.mlsafety.org/">Introduction to ML Safety</a> by the Center for AI Safety</li>
-</ul>
-
-<section id="five" class="mb2">
-	<div class="inner">
-	<h4> Newsletters </h4>
+	<h3> Newsletters </h3>
 <ul>
 	<li><a href="https://us13.campaign-archive.com/home/?u=67bd06787e84d73db24fb0aa5&id=6c9d98ff2c">Import AI</a> by Jack Clark, <i>for keeping up to date on AI progress</i></li>
 	<li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> by the Center for AI Safety, <i>for recent AI safety papers</i></li>
@@ -69,32 +60,33 @@ order: 3
 
 
 <div class="full-width-gray">
+<section id="opportunities">	
 <br>
-<div id="technical"><h2> Get Involved </h2>
+<h2> Opportunities </h2>
 <!--<p>Organizations and researchers in the space, funding and job opportunities, and guides to get involved</p>-->
 
 
-<h3> Careers </h3>
+<h3> Job Boards </h3>
 <ul>
 	<li><a href="https://aisafetyfundamentals.com/opportunities-board/">Opportunities in AI Safety</a> by BlueDot Impact</li>
 	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_area%5D%5B1%5D=Forecasting&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Policy&refinementList%5Btags_skill%5D%5B3%5D=Research&refinementList%5Btags_skill%5D%5B4%5D=Software%20engineering">AI Safety and Policy Job Board</a> by 80,000 Hours</li>
 </ul>
 
-<h4> Specific Research and Engineering Opportunities</h4>
+<h3> Specific Research and Engineering Opportunities</h3>
 <ul>
 	<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google DeepMind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
 	<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
 </ul>
 
 
-<h4> Alternative Technical Opportunities </h4>
+<h3> Alternative Technical Opportunities </h3>
 <ul>
-	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
 	<li>Theoretical research: <a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a>, <a href="https://intelligence.org/careers/">Machine Intelligence Research Institute (MIRI)</a> </li>
+	<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
 </ul>
 
 
-<h4> Academia</h4>
+<h3> Academia</h3>
 <ul>
 	<li><a href="https://futureoflife.org/about-us/our-people/ai-existential-safety-community/">AI Existential Safety Community</a> from Future of Life Institute</li>
 </ul>
@@ -108,6 +100,26 @@ order: 3
 	<li><a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund</a></li>
 </ul>
 
+<h3> Interested in working in China? </h3>
+<ul>
+	<li><a href="https://concordia-consulting.com/">Concordia AI 安远AI</a></li>
+	<li>Newsletters: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
+</ul>
+
+</section>
+</div>
+
+<section id="five">
+	<br>
+	<h2 id="content">Upskilling</h2>
+
+
+<h3> Courses </h3>
+<ul>
+	<li><a href="https://www.aisafetyfundamentals.com/ai-alignment-curriculum">AI Safety Fundamentals Curriculum</a> by BlueDot Impact </li>
+	<li><a href="https://course.mlsafety.org/">Introduction to ML Safety</a> by the Center for AI Safety</li>
+</ul>
+
 
 <h3> Guides </h3>
 <ul>
@@ -115,23 +127,14 @@ order: 3
 	<li><b>Engineering</b>:  <a href="https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit?usp=sharing">Leveling Up in AI Safety Research Engineering</a></li>
 </ul>
 
-<div class="box">
-<h3> Interested in working in China? </h3>
-<ul>
-	<li>If you're interested in working in technical alignment in China, please get in contact with <a href="https://concordia-consulting.com/">Concordia AI 安远AI</a>.</li>
-	<li>Newsletters: <a href="https://aisafetychina.substack.com/">AI Safety in China</a>, <a href="https://chinai.substack.com/about">ChinAI Newsletter</a></li>
-</ul>
-</div>
+</section>
 
-</div>
-</div>
-<br>
-
+<div class="full-width-gray">
+	<br>
 <section id="six">
-	<div class="inner">
 		<h2 id="content">Other</h2>
 
-<div id="governance"><h4> AI Governance and Policy</h4>
+<div id="governance"><h3> AI Governance and Policy</h3>
 
 <p>AI governance is focused on developing global norms, policies, and institutions to increase the chances that advanced AI is beneficial for humanity.</p>
 <ul>
@@ -148,7 +151,7 @@ order: 3
 </div>
 <br>
 
-<div id="publicreadings"><h4>General Audience Readings</h4>
+<div id="publicreadings"><h3>General Audience Readings</h3>
 
 <ul>
 	<li><a href="https://www.planned-obsolescence.org/">Planned Obsolescence</a> by Ajeya Cotra and Kelsey Piper</li>
@@ -165,11 +168,12 @@ order: 3
 
 
 
-<br>
-
-
+</div>
+</section>
 </div>
 </div>
+
+
 
 <!-- <p><i> Sorted by <a href="#MLreadings">machine learning researchers</a>, <a href="#publicreadings">general audience</a>, and <a href="what_can_i_do.html">more involved.</a> </i></p> -->
 
