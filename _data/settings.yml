@@ -10,11 +10,11 @@ menu_settings:
           url: '/perspectives/introduction'
         - title: 'Interviews'
           url: '/interviews'
+    - title: 'Experts'
+      url: '/experts'
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
-    # - title: 'Experts'
-    #   url: '/experts'
     - title: 'Apply For A Call'
       url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
       button: true
