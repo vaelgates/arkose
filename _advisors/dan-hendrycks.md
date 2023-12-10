@@ -1,6 +1,6 @@
 ---
 name: "Dan Hendrycks"
-order: 50
+order: "Hendrycks"
 section: "strategic"
 subtitle: "Director, Center for AI Safety"
 image: "/assets/images/people/dan-hendrycks.jpg"

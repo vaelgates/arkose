@@ -1,6 +1,6 @@
 ---
 name: "Sasuke Uchiha"
-order: 1
+order: "Uchiha"
 section: "demo"
 subtitle: "Chief Forecasting Officer"
 image: "/assets/images/people/sasuke-uchiha.jpg"

@@ -1,6 +1,6 @@
 ---
 name: "Jascha Sohl-Dickstein"
-order: 50
+order: "Sohl-Dickstein"
 section: "selected"
 subtitle: "Principal Scientist, Google DeepMind"
 image: "/assets/images/people/jascha-sohl-dickstein.jpg"

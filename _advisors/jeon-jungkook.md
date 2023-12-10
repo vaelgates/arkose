@@ -1,6 +1,6 @@
 ---
 name: "Jeon Jungkook"
-order: 1
+order: "Jungkook"
 section: "demo"
 subtitle: "Chief Military Officer"
 image: "/assets/images/people/jeon-jungkook.jpg"

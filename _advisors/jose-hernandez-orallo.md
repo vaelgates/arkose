@@ -1,6 +1,6 @@
 ---
 name: "José Hernández-Orallo"
-order: 20
+order: "Hernández-Orallo"
 section: "selected"
 subtitle: "Professor, Universitat Politècnica de València"
 image: "/assets/images/people/jose-hernandez-orallo.jpg"

@@ -1,6 +1,6 @@
 ---
 name: "Lionel Levine"
-order: 40
+order: "Levine"
 section: "selected"
 subtitle: "Professor, Cornell University"
 image: "/assets/images/people/lionel-levine.jpg"

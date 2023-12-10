@@ -1,6 +1,6 @@
 ---
 name: "Adam Gleave"
-order: 30
+order: "Gleave"
 section: "strategic"
 subtitle: "CEO, FAR AI"
 image: "/assets/images/people/adam-gleave.jpg"

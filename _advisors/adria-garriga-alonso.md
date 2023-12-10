@@ -1,6 +1,6 @@
 ---
 name: "Adrià Garriga-Alonso"
-order: 60
+order: "Garriga-Alonso"
 section: "selected"
 subtitle: "Research Scientist, FAR AI"
 image: "/assets/images/people/adria-garriga-alonso.jpg"

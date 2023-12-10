@@ -1,6 +1,6 @@
 ---
 name: "Anca Dragan"
-order: 40
+order: "Dragan"
 section: "strategic"
 subtitle: "Associate Professor, UC Berkeley"
 image: "/assets/images/people/anca-dragan.jpg"

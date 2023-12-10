@@ -1,6 +1,6 @@
 ---
 name: "Philip S. Thomas"
-order: 30
+order: "Thomas"
 section: "selected"
 subtitle: "Associate Professor, University of Massachusetts"
 image: "/assets/images/people/philip-thomas.jpg"
