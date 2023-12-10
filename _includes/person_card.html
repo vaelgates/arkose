@@ -1,0 +1,33 @@
+<div
+  {% if false and card.bio %}data-micromodal-trigger="bioModal"{% endif %}
+  data-name="{{card.name}}"
+  data-slug="{{card.name | slugify}}"
+  data-role="{{card.role}}"
+  data-bio='{{card.bio | markdownify}}'
+  data-image="{{card.image}}"
+  class="bio-button {{ columns }} {% if card.bio %}container-has-bio{% endif %} {% if forloop.first %}mt-0{% endif %} {% if forloop.last %}mb-0{% endif %}">
+  <!-- { % include theme/cards/card-{{ card_type | strip }}.html
+    name=card.name
+    role=card.role
+    bio=card.bio
+    fa_icon=card.fa_icon
+    icon=card.icon
+    thumbnail=card.thumbnail
+    image=card.image
+    url=card.url 
+    weight=card.weight
+  % } -->
+  <div class="card card-team {% if card.bio %}card-has-bio{% endif %} {% if card.thumbnail %}card-has-thumbnail{% endif %} {% if card.icon %}card-has-icon{% endif %}">
+    {% if card.image %}
+      <div class="card-thumbnail">
+        <img src="{{ card.image | relative_url }}"/>
+      </div>
+    {% endif %}
+    <div class="card-content">
+      <div class="card-title">
+        <h3>{{ card.name }}</h3>
+      </div>
+      <div class="card-description">{{ card.subtitle }}</div>
+    </div>
+  </div>
+</div>

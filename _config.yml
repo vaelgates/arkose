@@ -27,3 +27,7 @@ exclude:
 - /tools/*
 - "Gemfile"
 - "Gemfile.lock"
+
+collections:
+  advisors:
+    output: true
