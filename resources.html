@@ -21,8 +21,8 @@ order: 3
     <h3>Selection of Key Technical Safety Papers</h3>
 
 		<div class="iframe-container">
-			<iframe id="selected_papers" onload="iframeLoaded()" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-			<div id="iframe_loading_spinner" class="iframe-loading">
+			<iframe id="key_papers" onload="iframeLoaded('iframe_loading_spinner_key_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrfUA1sccDEgz6zT/tblHvorXzW50jAFWD?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+			<div id="iframe_loading_spinner_key_papers" class="iframe-loading">
 				{% include loading_spinner.html %}
 			</div>
 		</div>
@@ -44,6 +44,19 @@ order: 3
       <li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> by the Center for AI Safety, <i>for recent AI safety papers</i></li>
       <li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> by Rohin Shah, <i>for review of AI safety papers, on hiatus</i></li>
     </ul>
+
+    <h3 class="mt2">Expanded List of Technical Safety Papers</h3>
+		<div class="iframe-container">
+			<iframe id="expanded_papers" onload="iframeLoaded('iframe_loading_spinner_expanded_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrlBhc7WskyqrLjZ?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+			<div id="iframe_loading_spinner_expanded_papers" class="iframe-loading">
+				{% include loading_spinner.html %}
+			</div>
+		</div>
+
+    <a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+    
+    <br>
+
   </div>
 </section>
 
@@ -56,7 +69,6 @@ order: 3
 		<h3>Research and Engineering Opportunities</h3>
 		<ul>
 			<li><a href="https://www.anthropic.com/careers#open-roles">Anthropic</a>, <a href="https://far.ai/jobs">FAR AI</a>, <a href="https://www.deepmind.com/careers/jobs">Google DeepMind</a>'s <a href="https://deepmindsafetyresearch.medium.com">alignment teams</a>, <a href="https://openai.com/careers">OpenAI</a>'s <a href="https://openai.com/blog/our-approach-to-alignment-research/">alignment teams</a>, <a href="https://safe.ai/careers">Center for AI Safety (CAIS)</a>, <a href="https://www.redwoodresearch.org/careers">Redwood Research</a></li>
-			<li>Evaluations of AI capabilities and alignment: <a href="https://evals.alignment.org/">ARC Evals</a> <a href="https://jobs.lever.co/alignment.org">(roles)</a>, <a href="https://www.apolloresearch.ai/careers">Apollo Research</a>, <a href="https://palisaderesearch.org/work">Palisade Research</a></li>
 		</ul>
 
 
@@ -149,10 +161,11 @@ order: 3
 </div>
 
 <script>
-	function iframeLoaded() {
-		document.getElementById('iframe_loading_spinner').style.display = 'none';
+	function iframeLoaded(spinnerID) {
+		document.getElementById(spinnerID).style.display = 'none';
 	}
 </script>
+
 
 {% if false %}
 <!-- All this commented-out section is inside an if-statement so it doesn't get sent to users.-->
