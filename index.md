@@ -31,7 +31,7 @@ featured_image: /assets/img/social.jpg
 
         <ul>
         <li>Hosting strategy calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research.</li>
-        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>.</li>
+        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>. See our <a href="resources">Resource Center</a>, which is periodically reviewed by an <a href="experts">advisory panel</a> of experts in the field.</li>
         </ul>
 
         <p>Our 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
