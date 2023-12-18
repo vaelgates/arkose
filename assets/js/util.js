@@ -20,7 +20,8 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target'),
-				text = $this.text().trim();
+				text = $this.text().trim(),
+				fade = $this.hasClass('fade') ? ' fade' : '';
 
 			// Unprincipled hack to fix the Resource Center item
 			if (text.slice(0, 8) === 'Resource') text = 'Resource Center';
@@ -30,7 +31,7 @@
 
 			b.push(
 				'<a ' +
-					'class="link depth-' + indent + '"' +
+					'class="link depth-' + indent + fade + '"' +
 					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
 				'>' +
