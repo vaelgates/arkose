@@ -98,3 +98,13 @@
     display: block;
   }
 }
+
+html {
+  scroll-padding-top: 66px;
+}
+
+@include breakpoint(small) {
+  html {
+    scroll-padding-top: 4px;
+  }
+}
