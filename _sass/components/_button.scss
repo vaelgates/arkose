@@ -64,6 +64,9 @@ button,
 	}
 	&.button-white {
 		background-color: #fff;
+		@media (prefers-color-scheme: dark) {
+			background-color: #111;
+		}
 	}
 	&.button-small {
 		font-size: 0.6em;
