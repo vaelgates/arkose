@@ -53,18 +53,39 @@ featured_image: /assets/img/social.jpg
 <div class="section bg-gray">
   <div class="inner">
     <h3>About the Team</h3>
-    <div class="row text-center">
-      <div class="4u 12u(small)">
-        <h4><a href="https://vaelgates.com">Dr. Vael Gates</a></h4>
-        <div class="role">Founder</div>
+    <div class="cards">
+      <div class="card card-team">
+        <div class="card-thumbnail">
+          <img src="/assets/images/people/vael-gates.jpg">
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <h3>Dr. Vael Gates</h3>
+          </div>
+          <div class="card-description">Founder</div>
+        </div>
       </div>
-      <div class="4u 12u(small)">
-        <h4><a href="https://www.linkedin.com/in/zacharythomas10/">Zachary Thomas</a></h4>
-        <div class="role">Operations</div>
+      <div class="card card-team">
+        <div class="card-thumbnail">
+          <img src="/assets/images/people/zachary-thomas.jpg">
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <h3>Zachary Thomas</h3>
+          </div>
+          <div class="card-description">Operations</div>
+        </div>
       </div>
-      <div class="4u 12u(small)">
-        <h4><a href="https://www.linkedin.com/in/audrazook/">Audra Zook</a></h4>
-        <div class="role">Operations</div>
+      <div class="card card-team">
+        <div class="card-thumbnail">
+          <img src="/assets/images/people/audra-zook.jpg">
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <h3>Audra Zook</h3>
+          </div>
+          <div class="card-description">Operations</div>
+        </div>
       </div>
     </div>
   </div>
