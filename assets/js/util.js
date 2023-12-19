@@ -22,7 +22,7 @@
 				target = $this.attr('target'),
 				text = $this.text().trim(),
 				fade = $this.hasClass('fade') ? ' fade' : '',
-				envelope_icon = $this.hasClass('fa-envelope') ? ' icon fa-envelope' : '';
+				envelope_icon = $this.hasClass('fa-envelope') ? ' icon fa-envelope-o' : '';
 
 			// Unprincipled hack to fix the Resource Center item
 			if (text.slice(0, 8) === 'Resource') text = 'Resource Center';
