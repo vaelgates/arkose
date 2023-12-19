@@ -17,6 +17,10 @@
     url=card.url 
     weight=card.weight
   % } -->
+
+  {% if card.external_url %}
+    <a href="{{ card.external_url | relative_url }}">
+  {% endif %}
   <div class="card card-team {% if card.bio %}card-has-bio{% endif %} {% if card.thumbnail %}card-has-thumbnail{% endif %} {% if card.icon %}card-has-icon{% endif %}">
     {% if card.image %}
       <div class="card-thumbnail">
@@ -30,4 +34,7 @@
       <div class="card-description">{{ card.subtitle }}</div>
     </div>
   </div>
+  {% if card.external_url %}
+    </a>
+  {% endif %}
 </div>
