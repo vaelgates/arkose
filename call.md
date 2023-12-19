@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Schedule a Call
-og-description: Interested in scheduling a strategy call with Arkose?
+og-description: Interested in scheduling a consultation call with Arkose?
 nav-menu: false
 order: 4
 ---
