@@ -65,7 +65,7 @@ button,
 	&.button-white {
 		background-color: #fff;
 		@media (prefers-color-scheme: dark) {
-			background-color: #111;
+			background-color: var(--color-bg-alt);
 		}
 	}
 	&.button-small {
