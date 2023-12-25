@@ -7,6 +7,7 @@
 /* Footer */
 
 	#footer {
+		color: #bbb; // var(--color-fg);
 		.copyright {
 			font-size: 0.8em;
 			list-style: none;
@@ -14,7 +15,6 @@
 
 			li {
 				border-left: solid 1px var(--color-border);
-				color: #bbb; // var(--color-fg);
 				display: inline-block;
 				line-height: 1;
 				margin-left: 1em;
@@ -42,6 +42,18 @@
 					padding-left: 0;
 					line-height: inherit;
 				}
+			}
+		}
+
+		.legal {
+			display: inline-block;
+			font-size: 13px;
+			margin-top: 1em;
+		}
+		@include breakpoint(xsmall) {
+			.legal {
+				font-size: 12px;
+				margin-top: 2em;
 			}
 		}
 	}
