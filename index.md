@@ -60,7 +60,7 @@ featured_image: /assets/img/social.jpg
         </div>
         <div class="card-content">
           <div class="card-title">
-            <h3>Dr. Vael Gates</h3>
+            <h3><a href="https://vaelgates.com">Dr. Vael Gates</a></h3>
           </div>
           <div class="card-description">Founder</div>
         </div>
@@ -71,7 +71,7 @@ featured_image: /assets/img/social.jpg
         </div>
         <div class="card-content">
           <div class="card-title">
-            <h3>Zachary Thomas</h3>
+            <h3><a href="https://www.linkedin.com/in/zacharythomas10/">Zachary Thomas</a></h3>
           </div>
           <div class="card-description">Operations</div>
         </div>
@@ -82,7 +82,7 @@ featured_image: /assets/img/social.jpg
         </div>
         <div class="card-content">
           <div class="card-title">
-            <h3>Audra Zook</h3>
+            <h3><a href="https://www.linkedin.com/in/audrazook/">Audra Zook</a></h3>
           </div>
           <div class="card-description">Operations</div>
         </div>
