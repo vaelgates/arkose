@@ -36,8 +36,6 @@ featured_image: /assets/img/social.jpg
 
         <p>Our 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
 
-        <p>Arkose was founded by Dr. <a href="https://vaelgates.com">Vael Gates</a>, and operates as a project of Players Philanthropy Fund, a Maryland charitable trust recognized by IRS as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code (Federal Tax ID: 27-6601178). Arkose is funded by the Survival and Flourishing Fund.</p>
-
         {% if false %}
 	    <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>
 	    <p>Arkose is looking for an <b>Operations Lead</b> to work on day-to-day operations along with other projects. If you’re interested, you can <a href="operations-lead">apply for the Operations Lead position here</a>!</p>
