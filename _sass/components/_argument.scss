@@ -484,7 +484,8 @@ em {
 @include breakpoint(large) {
   #main.argument .inner {
     padding-left: 60px;
-    margin: 0 12em;
+    padding: 3em 0 1.5em 0;
+    width: calc(100% - 3em);
   }
   .argument-branch-sidebar {
     max-width: 200px;
@@ -530,7 +531,7 @@ em {
 @include breakpoint(small) {
   #main.argument .inner {
     padding: 3em 0 1.5em 0;
-    width: calc(100% - 3em);
+    width: calc(100% - 1em);
   }
 
   .comment-textarea {
