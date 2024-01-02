@@ -15,7 +15,9 @@ menu_settings:
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
-    - title: 'Apply For A Call'
-      url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
-      button: true
-      hidden: true
+    - title: 'Apply for a Call'
+      url: '/apply'
+    # - title: 'Apply For A Call'
+    #   url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
+    #   button: true
+    #   hidden: true

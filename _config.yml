@@ -2,7 +2,7 @@
 title: Arkose
 subtitle: 
 email: team@arkose.org
-description: AI Risk Discussions (2022) was a project of Arkose aimed at facilitating discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments.
+description: Arkose is a field-building nonprofit with the mission of improving the safety of advanced AI systems.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://arkose.org # the base hostname & protocol for your site
 author:

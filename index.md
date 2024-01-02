@@ -30,11 +30,11 @@ featured_image: /assets/img/social.jpg
         <p>Arkose is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. At Arkose, our primary organizational focus is supporting researchers, engineers, and other professionals interested in contributing to technical AI safety. Our approach encompasses a range of activities, with the following core elements:</p>
 
         <ul>
-        <li>Hosting calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research.</li>
-        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>. See our <a href="resources">Resource Center</a>, which is periodically reviewed by an <a href="experts">advisory panel</a> of experts in the field.</li>
+        <li>Hosting calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research. Machine learning professionals are invited to <a href="apply">apply for an Arkose Consultation Call</a>.</li>
+        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>. See our <a href="resources">Resource Center</a>, which is periodically reviewed by an <a href="experts">advisory panel of experts</a> in the field.</li>
         </ul>
 
-        <p>Our 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
+        <p>Our older 2022 work aimed to facilitate discussion and evaluation of potential risks from advanced AI, with a focus on soliciting and engaging with expert perspectives on the arguments and providing resources for stakeholders. Our results, based on a set of 97 interviews with AI researchers on their perspectives on current AI and the future of AI (pre-ChatGPT era), can be found at <a href="ai-risk-discussions">AI Risk Discussions</a>.</p>
 
         {% if false %}
 	    <h4><a href="https://airtable.com/shr4RFKRUUfQRK15V">We're Hiring!</a></h4>

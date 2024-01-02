@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Schedule a Call
-og-description: Interested in scheduling a consultation call with Arkose?
+title: Apply for a Call
+og-description: Apply for a consultation call with Arkose
 nav-menu: false
 order: 4
 ---
@@ -18,9 +18,11 @@ order: 4
 
 <!-- Content -->
 
-<p>You're invited to schedule an Arkose Consultation Call: a 30-45 minute call for machine learning professionals interested in contributing to technical AI safety work. After discussing your specific needs, we can connect you to potential collaborators in industry or academia, funding and job opportunities, and provide ongoing support to further your AI safety work.</p>
+<p>Expedite your engagement in AI safety with an Arkose Consultation Call: a 30-45 minute call for machine learning professionals interested in contributing to technical AI safety work.</p>
 
-<a href="https://calendly.com/arkose" class="button special fit">Schedule a Consultation Call</a>
+<p>After discussing your specific needs, we can connect you to potential collaborators in industry or academia, funding and job opportunities, and provide ongoing support to further your AI safety work.</p>
+
+<a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z" class="button special fit">Apply for a Consultation Call</a>
 <br>
 
 <h2> What we do</h2>
@@ -42,7 +44,7 @@ order: 4
 
 <p> If this sounds interesting:</p>
 
-<a href="https://calendly.com/arkose" class="button special fit">Schedule a Consultation Call</a>
+<a href="https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z" class="button special fit">Apply for a Consultation Call</a>
 <br>
 
 <p><i><a href="index">Arkose</a> is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to technical AI safety.</i></p>
