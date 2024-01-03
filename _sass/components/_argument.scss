@@ -66,11 +66,17 @@
     background-color: var(--color-agree);
     color: var(--color-agree-text);
     border: 1px solid var(--color-agree-border);
+    .argument-shape {
+      fill: var(--color-agree);
+    }
   }
   &.disagree {
     background-color: var(--color-disagree);
     color: var(--color-disagree-text);
     border: 1px solid var(--color-disagree-border);
+    .argument-shape {
+      fill: var(--color-disagree);
+    }
   }
 }
 .nav-answer-links .answer-link.root-argument, .page-content .root-argument {
@@ -102,10 +108,12 @@
     opacity: 0.5;
   }
   &.agree .argument-shape {
-    color: var(--color-agree);
+    fill: var(--color-agree);
+    stroke: var(--color-agree-border);
   }
   &.disagree .argument-shape {
-    color: var(--color-disagree);
+    fill: var(--color-disagree);
+    stroke: var(--color-disagree-border);
   }
   &:hover {
     color: var(--color-fg) !important;
@@ -128,9 +136,15 @@
   }
   .argument-shape {
     display: inline-block;
-    transform: scaleX(1.5) rotate(45deg);
+    vertical-align: text-top;
     transition: color 0.3s;
-    color: #bbc;
+    stroke:#99a;
+    fill: #bbc;
+    position: relative;
+    top: -1px;
+    polygon {
+      stroke-width: 3px;
+    }
   }
   .argument-title {
     max-width: 75%;
