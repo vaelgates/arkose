@@ -27,7 +27,7 @@ featured_image: /assets/img/social.jpg
   <div class="inner">
     <div class="row align-items-center">
       <div>
-        <p>Arkose is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. At Arkose, our primary organizational focus is supporting researchers, engineers, and other professionals interested in contributing to technical AI safety. Our approach encompasses a range of activities, with the following core elements:</p>
+        <p>Arkose is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. At Arkose, our primary organizational focus is supporting researchers, engineers, and other professionals interested in contributing to technical AI safety research. Our approach encompasses a range of activities, with the following core elements:</p>
 
         <ul>
         <li>Hosting calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research. Machine learning professionals are invited to <a href="apply">apply for an Arkose Consultation Call</a>.</li>
