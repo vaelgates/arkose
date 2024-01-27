@@ -10,8 +10,6 @@ menu_settings:
           url: '/perspectives/introduction'
         - title: 'Interviews'
           url: '/interviews'
-    - title: 'Experts'
-      url: '/experts'
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'

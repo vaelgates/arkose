@@ -50,6 +50,34 @@ featured_image: /assets/img/social.jpg
 
 <div class="section bg-gray">
   <div class="inner">
+    {% assign cards = site.advisors %}
+    {% assign advisors1 = cards | where: "section", "strategic" | sort: 'order' %}
+    {% assign advisors2 = cards | where: "section", "selected" | sort: 'order' %}
+
+    <h2>Strategic Advisory Panel</h2>
+
+    <p>Strategic advisory panel members advise on Arkose's suggested resources, recommendations, and strategic direction.</p>
+
+    <div class="cards">
+      {% for card in advisors1 %}
+        {% include person_card.html card=card %}
+      {% endfor %}
+    </div>
+
+    <h2>Selected Experts</h2>
+
+    <p>Experts generously lend their knowledge and time to Arkose's pairing program, providing one-on-one support to researchers and engineers interested in contributing to technical AI safety.</p>
+
+    <div class="cards">
+      {% for card in advisors2 %}
+        {% include person_card.html card=card %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="inner">
     <h3>About the Team</h3>
     <div class="cards">
       <a href="https://vaelgates.com">
