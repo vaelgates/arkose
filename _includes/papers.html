@@ -88,7 +88,7 @@
       paper['ML Domain TagDisplay'] = paper['ML Domain Tag'].map(tag => `<span class="field-single ml-domain-tag-single">${tag}</span>`).join('');
       paper['ML Domain Tag Fine-Grain'] = paper['ML Domain Tag (Fine-Grain)'] ?? [];
       paper['ML Domain Tag Fine-GrainDisplay'] = paper['ML Domain Tag Fine-Grain'].map(tag => `<span class="field-single ml-domain-fine-grain-tag-single">${tag}</span>`).join('');
-      paper.Title = `<a href="${paper.Link}">${paper.Title}</a>`;
+      paper.Title = linkify(paper.Link, paper.Title);
       paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
       paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
       paper['TwitterDisplay'] = linkify(paper['Twitter'], 'Twitter');
@@ -287,9 +287,9 @@
   }
 
   function linkify(s, linkText) {
-      if (!s) return '';
-      return `<a href="${s}">${linkText || s}</a>`
-    }
+    if (!s) return '';
+    return `<a href="${s}" target="_top">${linkText || s}</a>`
+  }
 
   function slugify(s) {
     return s.toLowerCase().replace(' ', '_').replace(/\s/g, '_').replace(/[^a-z0-9-_]/g, '');
