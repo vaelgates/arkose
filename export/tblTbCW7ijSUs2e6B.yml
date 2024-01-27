@@ -1,0 +1,1407 @@
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://docs.google.com/presentation/d/1nzAiNC71qhr_2bBM6Q5i_5YASqiyCGHXbMh7P2Qym_0/edit#slide=id.p
+  Medium:
+  - Slides
+  Title: Model Internals Survey slides (AWAIR, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec07Tjz14i1cYMU8
+- Category:
+  - Deception
+  Link: https://www-files.anthropic.com/production/files/question-decomposition-improves-the-faithfulness-of-model-generated-reasoning.pdf
+  Medium:
+  - Paper
+  Title: Question Decomposition Improves the Faithfulness of Model-Generated Reasoning
+    (Radhakrishnan et al., 2023)
+  Topic:
+  - Sycophancy
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec0UnVs9qEFdwo3a
+- Category:
+  - AI Governance
+  Link: https://arxiv.org/pdf/2202.07785.pdf
+  Medium:
+  - Paper
+  Title: Predictability and Surprise in Large Generative Models (Ganguli et al., 2022)
+  Twitter: https://twitter.com/AnthropicAI/status/1494352852734541826
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec0Z2QtjNyRyZpgJ
+- Category:
+  - Deception
+  Link: https://arxiv.org/pdf/2305.04388.pdf
+  Medium:
+  - Paper
+  Title: 'Language Models Don''t Always Say What They Think: Unfaithful Explanations
+    in Chain-of-Thought Prompting (Turpin et al., 2023)'
+  Topic:
+  - Sycophancy
+  Twitter: https://twitter.com/milesaturpin/status/1656010877269602304
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec0uPKCgBlvL56t5
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://www.alignment-workshop.com/sf-talks/paul-christiano-how-misalignment-could-lead-to-takeover
+  Medium:
+  - Video
+  Title: How Misalignment Could Lead to Takeover (Paul Christiano, 30-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec1TZA0QHfc0mLaw
+- Category:
+  - Capabilities of LLMs
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://cims.nyu.edu/~sbowman/eightthings.pdf
+  Medium:
+  - Paper
+  Title: Eight Things to Know about Large Language Models (Bowman, 2023)
+  Twitter: https://twitter.com/sleepinyourhat/status/1642614846796734464
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec203x4F9GWCwgAL
+- Category:
+  - Adversaries / Robustness / Generalization
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/pdf/2307.02483.pdf
+  Medium:
+  - Paper
+  Title: 'Jailbroken: How Does LLM Safety Training Fail? (Wei et al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec21lzUchEg86qwZ
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2210.13382
+  Medium:
+  - Paper
+  Title: 'Emergent World Representations: Exploring a Sequence Model Trained on a
+    Synthetic Task (Li et al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec2Tjp9GnK5WwFTN
+- Blog or Video: https://openai.com/research/debate
+  Category:
+  - Scalable oversight
+  Link: https://arxiv.org/pdf/1805.00899.pdf
+  Medium:
+  - Paper
+  Title: AI safety via debate (Irving, Christiano and Amodei, 2018)
+  Topic:
+  - Debate
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec2XkJxTXRCPxUCQ
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/2306.15447
+  Medium:
+  - Paper
+  Title: Are aligned neural networks adversarially aligned? (Carlini et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec2id9NnsZ41hzzx
+- Category:
+  - Alignment <-> RLHF
+  Link: https://openai.com/blog/instruction-following/
+  Medium:
+  - Blog post
+  Title: 'Aligning language models to follow instructions (Ouyang et al., 2022) '
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec3FyRQp4RMr07mh
+- Category:
+  - Scalable oversight
+  Link: https://arxiv.org/pdf/2210.10860.pdf
+  Medium:
+  - Paper
+  Title: Two-Turn Debate Doesn't Help Humans Answer Hard Reading Comprehension Questions
+    (Parrish et al., 2022)
+  Topic:
+  - Debate
+  Twitter: https://twitter.com/sleepinyourhat/status/1585759654478422016
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec3R8nuwKF4oiLmt
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://www.alignment-workshop.com/nola-talks/been-kim-alignment-and-interpretability-how-we-might-get-it-right
+  Medium:
+  - Video
+  Title: 'Alignment and Interpretability: How we might get it right (Been Kim, 33-min
+    video)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec3tRlwXQUIX2IqY
+- Category:
+  - Capabilities of LLMs
+  Link: https://www.nature.com/articles/s41586-023-06792-0
+  Medium:
+  - Paper
+  Title: Autonomous chemical research with large language models (Boike et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec4800ktz3idl2ac
+- Category:
+  - Scalable oversight
+  - Alignment <-> RLHF
+  - Adversaries / Robustness / Generalization
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://docs.google.com/presentation/d/1y5Xpnvpy09Sn_aerEoH4d2EZEcdfaHFmfIV0VpdoWuI/edit#slide=id.p
+  Medium:
+  - Slides
+  Title: Directions in Scalable Oversight slides (AWAIR, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec4PbCoIPyiP1qkh
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/1906.10842
+  Medium:
+  - Paper
+  Title: 'Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs (Kolouri et
+    al., 2020)'
+  Topic:
+  - Trojans
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec4oTONx2e0eKhvb
+- Category:
+  - Scalable oversight
+  Link: https://arxiv.org/abs/2108.12099
+  Medium:
+  - Paper
+  Title: |
+    Learning to Give Checkable Answers with Prover-Verifier Games (Anil et al., 2021)
+  Topic:
+  - Debate
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec4oliocOLHyIMuD
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: ' https://www.cold-takes.com/what-ai-companies-can-do-today-to-help-with-the-most-important-century/'
+  Medium:
+  - Blog post
+  Title: What AI companies can do today to help with the most important century (Karnofsky,
+    2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec6bcdX9YNjVXxpd
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/2106.09667
+  Medium:
+  - Paper
+  Title: Poisoning and Backdooring Contrastive Learning (Carlini and Terzis, 2022)
+  Topic:
+  - Trojans
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec70sUyGggzQC0iw
+- Category:
+  - Deception
+  Link: https://www-files.anthropic.com/production/files/measuring-faithfulness-in-chain-of-thought-reasoning.pdf
+  Medium:
+  - Paper
+  Title: |
+    Measuring Faithfulness in Chain-of-Thought Reasoning (Lanham et al., 2023)
+  Topic:
+  - Sycophancy
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec7Z7GOjanHgW1RO
+- Category:
+  - Deception
+  - Overview
+  Link: https://arxiv.org/abs/2308.14752
+  Medium:
+  - Paper
+  Title: 'AI Deception: A Survey of Examples, Risks, and Potential Solutions (Park
+    et al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec8IB3l6mrVyXGKH
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Scalable oversight
+  - Alignment <-> RLHF
+  - Model evaluations / monitoring / detection
+  - AI Governance
+  - Overview
+  Link: https://www.anthropic.com/index/core-views-on-ai-safety
+  Medium:
+  - Blog post
+  Title: 'Core Views on AI Safety: When, Why, What, and How (Anthropic, 2023)'
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rec9dBNFw1EyFnrPz
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Adversaries / Robustness / Generalization
+  - Deception
+  Link: https://arxiv.org/pdf/2302.10894.pdf
+  Medium:
+  - Paper
+  Title: |
+    Red Teaming Deep Neural Networks with Feature Synthesis Tools (Casper et al., 2023)
+  Topic:
+  - Benchmarking
+  Twitter: https://twitter.com/StephenLCasper/status/1706654943091056898
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recBPyggSRhXebetY
+- Blog or Video: https://www.youtube.com/watch?v=U2zJuTLzIm8&t=2s
+  Category:
+  - Scalable oversight
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/pdf/2211.03540.pdf
+  Medium:
+  - Paper
+  - Video
+  Title: Measuring Progress on Scalable Oversight for Large Language Models (Bowman
+    et al., 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recBrO6PEave6vYcP
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Scalable oversight
+  Link: https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html
+  Medium:
+  - Paper
+  Title: Language models can explain neurons in language models (Bills et al., 2023)
+  Topic:
+  - Automated interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recEvzgCR4Zqov6oS
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://www.alignment-workshop.com/nola-2023#h.qvhufi1ane9m
+  Medium:
+  - Video
+  Title: Towards Quantitative Safety Guarantees and Alignment (Yoshua Bengio, 59-min
+    video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recEy8KszXMnfZ0od
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/1610.02136
+  Medium:
+  - Paper
+  Title: A Baseline for Detecting Misclassified and Out-of-Distribution Examples in
+    Neural Networks (Hendrycks and Gimpel, 2017)
+  Topic:
+  - Detection of out-of-distribution or malicious behavior
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recFEoM0vJHV4ZXu1
+- Category:
+  - Reward misspecification and goal misgeneralization
+  Link: https://arxiv.org/abs/2201.03544
+  Medium:
+  - Paper
+  Title: 'The Effects of Reward Misspecification: Mapping and Mitigating Misaligned
+    Models (Pan, Bhatia and Steinhardt, 2022)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recFWSWtydSOHa5W5
+- Blog or Video: https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback
+  Category:
+  - Scalable oversight
+  - Alignment <-> RLHF
+  Link: https://arxiv.org/pdf/2212.08073.pdf
+  Medium:
+  - Paper
+  Title: 'Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recFzPbdRJimQrQb2
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/2006.16241
+  Medium:
+  - Paper
+  Title: 'The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution
+    Generalization (Hendrycks et al., 2021)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recG3EVCNTsEJdEic
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2110.03605.pdf
+  Medium:
+  - Paper
+  Title: Robust Feature-Level Adversaries are Interpretability Tools (Casper et al.,
+    2023)
+  Twitter: https://twitter.com/StephenLCasper/status/1598029118205218816
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recG4WW0QcPJWH0Hb
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/pdf/2303.08774.pdf
+  Medium:
+  - Paper
+  Title: GPT-4 Technical Report (OpenAI, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recGi9yVjhWraVfTo
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/pdf/2209.07858.pdf
+  Medium:
+  - Paper
+  Title: 'Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors,
+    and Lessons Learned (Ganguli et al., 2022)'
+  Twitter: https://twitter.com/AnthropicAI/status/1571988929800273932?lang=en
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recH2VLaj43tVMYWJ
+- Category:
+  - Forecasting
+  Link: https://aiimpacts.org/2022-expert-survey-on-progress-in-ai/
+  Medium:
+  - Blog post
+  Title: Expert Survey on Progress in AI (AI Impacts, 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recH4jUO04K2BE1Hd
+- Category:
+  - Forecasting
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/future-ml-systems-will-be-qualitatively-different/
+  Medium:
+  - Blog post
+  Title: Future ML Systems Will Be Qualitatively Different (Steinhardt, 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recHQsNPJKaqcWwKb
+- Category:
+  - Reward misspecification and goal misgeneralization
+  - Alignment <-> RLHF
+  Link: https://arxiv.org/abs/2307.15217
+  Medium:
+  - Paper
+  Title: Open Problems and Fundamental Limitations of Reinforcement Learning from
+    Human Feedback (Casper et al., 2023)
+  Twitter: https://twitter.com/StephenLCasper/status/1686036515653361664
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recHQzYXcHNozN4ST
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://arxiv.org/pdf/2308.12833.pdf
+  Medium:
+  - Paper
+  Title: 'Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities
+    (Mozes et al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recI9YuXsxHi1SFpv
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Model evaluations / monitoring / detection
+  Link: ' https://www.youtube.com/watch?v=HiYWwjma3xE&t=3607s'
+  Medium:
+  - Video
+  Title: Transparency and Standards in Evaluating Language Models (Percy Liang, 10-min
+    video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recIOnTtTDQwANLEg
+- Blog or Video: https://www.alignment-workshop.com/nola-talks/owain-evans-out-of-context-reasoning-in-llms
+  Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://arxiv.org/abs/2309.00667
+  Medium:
+  - Video
+  - Paper
+  Title: 'Taken out of context: On measuring situational awareness in LLMs (Berglund
+    et al., 2023)'
+  Topic:
+  - Situational awareness (also instrumental convergence, inner misalignment)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recIajbdDZbDgSFQ4
+- Blog or Video: https://www.alignmentforum.org/posts/EPLk8QxETC5FEhoxK/arc-evals-new-report-evaluating-language-model-agents-on
+  Category:
+  - Model evaluations / monitoring / detection
+  Link: https://evals.alignment.org/Evaluating_LMAs_Realistic_Tasks.pdf
+  Medium:
+  - Paper
+  Title: Evaluating Language-Model Agents on Realistic Autonomous Tasks (Kinniment
+    et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recJ2zEntEVe7XgrL
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/intrinsic-drives-and-extrinsic-misuse-two-intertwined-risks-of-ai/
+  Medium:
+  - Blog post
+  Title: 'Intrinsic Drives and Extrinsic Misuse: Two Intertwined Risks of AI (Steinhardt,
+    2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recJpOcnso4hXfSwX
+- Category:
+  - Forecasting
+  Link: https://bounded-regret.ghost.io/forecasting-ai-overview/
+  Medium:
+  - Blog post
+  Title: Forecasting AI (Overview) (Steinhardt, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recJvYqhHTZzaLXjl
+- Category:
+  - AI Governance
+  Link: https://arxiv.org/pdf/2303.11341.pdf
+  Medium:
+  - Paper
+  Title: What does it take to catch a Chinchilla? Verifying Rules on Large-Scale Neural
+    Network Training via Compute Monitoring (Shavit, 2023)
+  Topic:
+  - Compute governance
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recKbHXgmGpDYxF5W
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: http://arxiv.org/abs/2305.13860
+  Medium:
+  - Paper
+  Title: 'Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study (Liu et
+    al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recLCFNf6uVCa8tgH
+- Blog or Video: https://www.alignment-workshop.com/nola-talks/roger-grosse-studying-llm-generalization-through-influence-functions
+  Category:
+  - Scalable oversight
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2308.03296
+  Medium:
+  - Paper
+  - Video
+  Supplemental Material: https://youtu.be/U2zJuTLzIm8?feature=shared&t=738
+  Title: Studying Large Language Model Generalization with Influence Functions (Grosse
+    et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recLctg9oMnXD0X6X
+- Category:
+  - Alignment <-> RLHF
+  Link: https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/
+  Medium:
+  - Blog post
+  Title: 'Learning from human preferences (Christiano et al., 2017) '
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recM4M9ORPoC9VOWM
+- Category:
+  - Scalable oversight
+  Link: https://arxiv.org/pdf/2206.05802.pdf
+  Medium:
+  - Paper
+  Title: Self-critiquing models for assisting human evaluators (Saunders et al., 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recMaZjo9niri0J0k
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Reward misspecification and goal misgeneralization
+  - Alignment <-> RLHF
+  - Deception
+  - Overview
+  Link: https://arxiv.org/abs/2209.00626
+  Medium:
+  - Paper
+  Title: The Alignment Problem from a Deep Learning Perspective (Ngo et al., 2022)
+  Twitter: https://twitter.com/RichardMCNgo/status/1603862969276051457
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recMhyBu8EajCb71A
+- Blog or Video: https://www.alignment-workshop.com/nola-talks/collin-burns-weak-to-strong-generalization
+  Category:
+  - Scalable oversight
+  Link: https://cdn.openai.com/papers/weak-to-strong-generalization.pdf
+  Medium:
+  - Paper
+  - Blog post
+  - Video
+  - Slides
+  Supplemental Material: https://openai.com/research/weak-to-strong-generalization
+  Title: 'Weak-To-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision
+    (Burns et al., 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recMipibbHPYO4WxE
+- Category:
+  - Alignment <-> RLHF
+  - Reward misspecification and goal misgeneralization
+  Link: https://openai.com/blog/learning-to-summarize-with-human-feedback/
+  Medium:
+  - Blog post
+  Title: 'Learning to summarize with human feedback (Stiennon et al., 2020) '
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recNSHbIV0qOz7BxF
+- Category:
+  - Scalable oversight
+  - Adversaries / Robustness / Generalization
+  Link: https://www.alignment-workshop.com/nola-talks/sam-bowman-adversarial-scalable-oversight-for-truthfulness-work-in-progr
+  Medium:
+  - Video
+  Title: |
+    Adversarial Scalable Oversight for Truthfulness: Work in Progress (Sam Bowman, 29-min video)
+  Transcripts / Audio / Slides: https://cims.nyu.edu/~sbowman/alignment_workshop_2023.pdf
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recO9y2njCjoMBEKB
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/2301.10226
+  Medium:
+  - Paper
+  Title: A Watermark for Large Language Models (Kirchenbauer et al., 2023)
+  Topic:
+  - Security
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recOObrlrsUOBDg3X
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/more-is-different-for-ai/
+  Medium:
+  - Blog post
+  Title: More is Different for AI (Steinhardt, 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recOkurSo0yAO1Iaj
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2106.07682
+  Medium:
+  - Paper
+  Title: Revisiting Model Stitching to Compare Neural Representations (Bansal et al.,
+    2021)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recPMCixpan4ORF34
+- Category:
+  - Forecasting
+  - AI Governance
+  Link: https://gradientflow.com/wp-content/uploads/2060/09/Transformative-AI-and-Compute-Reading-List-2022-12.pdf
+  Medium:
+  - Other
+  Title: '"Transformative AI and Compute" Reading List (Heim, 2022)'
+  Topic:
+  - Compute governance
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recPR8dL6mkx7FV2O
+- Category:
+  - Adversaries / Robustness / Generalization
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/1903.12261
+  Medium:
+  - Paper
+  Title: Benchmarking Neural Network Robustness to Common Corruptions and Perturbations
+    (Hendrycks and Dietterich, 2019)
+  Topic:
+  - Benchmarking
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recPVZMAHTASba0ko
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://www.safe.ai/ai-risk
+  Medium:
+  - Blog post
+  - Paper
+  Title: An Overview of Catastrophic AI Risks (Hendrycks et al., 2023)
+  Transcripts / Audio / Slides: https://www.safe.ai/ai-risk
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recQItORICrRFl7sw
+- Category:
+  - Forecasting
+  Link: https://sarahconstantin.substack.com/p/scaling-laws-for-ai-and-some-implications
+  Medium:
+  - Blog post
+  Title: '"Scaling Laws" for AI and Some Implications (Constantin, 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recQSseVvSmuuCN2y
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://www.youtube.com/watch?v=yl2nlejBcg0
+  Medium:
+  - Video
+  Title: Researcher Perceptions of Current and Future AI (Vael Gates, 60-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recQkawPINWU3BSqn
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/2304.03279
+  Medium:
+  - Paper
+  Title: Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and
+    Ethical Behavior in the MACHIAVELLI Benchmark (Pan et al., 2023)
+  Topic:
+  - Benchmarking
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recR75CPGnXDKkT0J
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/1905.02175
+  Medium:
+  - Paper
+  Title: Adversarial Examples Are Not Bugs, They Are Features (Ilyas et al., 2019)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recRKtthaiGjOnHsp
+- Blog or Video: https://www.deepmind.com/blog/an-early-warning-system-for-novel-ai-risks
+  Category:
+  - Model evaluations / monitoring / detection
+  - AI Governance
+  Link: https://arxiv.org/pdf/2305.15324.pdf
+  Medium:
+  - Paper
+  Title: Model evaluation for extreme risks (Shevlane et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recRLt3sPKVU5tBD4
+- Category:
+  - AI Governance
+  Link: https://www.alignment-workshop.com/nola-talks/gillian-hadfield-building-an-off-switch-for-ai
+  Medium:
+  - Video
+  Title: Building an Off Switch for AI (Gillian Hadfield, 21-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recRs5JuHX8BeVYnt
+- Category:
+  - Scalable oversight
+  - Alignment <-> RLHF
+  - Overview
+  Link: https://openai.com/blog/our-approach-to-alignment-research
+  Medium:
+  - Blog post
+  Title: Our approach to alignment research (Leike, Schulman, and Wu; OpenAI; 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recSxcpU0u9apMZEz
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2310.01405
+  Medium:
+  - Paper
+  Supplemental Material: https://www.ai-transparency.org/
+  Title: 'Representation Engineering: A Top-Down Approach to AI Transparency (Zou
+    et al., 2023)'
+  Topic:
+  - Model editing
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recT3AFueouEUVROQ
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://rome.baulab.info/
+  Medium:
+  - Paper
+  Title: |
+    Locating and Editing Factual Associations in GPT (Meng et al., 2022)
+  Topic:
+  - Model editing
+  Transcripts / Audio / Slides: https://preview.type3.audio/episode/agi-safety-fundamentals-alignment/c902ed39-f622-4296-b312-73339fab7b6e
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recT6CHoNeWUO21t6
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2309.03886
+  Medium:
+  - Paper
+  Title: 'FIND: A Function Description Benchmark for Evaluating Interpretability Methods
+    (Schwettmann et al., 2023)'
+  Topic:
+  - Model editing
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recTCoKJRD3FZU7F2
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2304.14997
+  Medium:
+  - Paper
+  Title: Towards Automated Circuit Discovery for Mechanistic Interpretability (Conmy
+    et al., 2023)
+  Topic:
+  - Automated interpretability
+  Twitter: https://twitter.com/ArthurConmy/status/1677808685836378114
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recTmsFQplat8HbTT
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://www.alignment-workshop.com/sf-talks/ilya-sutskever-opening-remarks-confronting-the-possibility-of-agi
+  Medium:
+  - Video
+  Title: 'Opening Remarks: Confronting the Possibility of AGI (Ilya Sutskever, 19-minute
+    video)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recTyDOeWJ8a7G9aO
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/1706.06083
+  Medium:
+  - Paper
+  Title: Towards Deep Learning Models Resistant to Adversarial Attacks (Madry et al.,
+    2018)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recU2j3Tu2GyDNDex
+- Category:
+  - Scalable oversight
+  Link: https://ai-alignment.com/humans-consulting-hch-f893f6051455
+  Medium:
+  - Blog post
+  Title: Humans consulting HCH (Christiano, 2016)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recUWBrdPnMh3ldED
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://www.youtube.com/watch?v=m1gbzNQ4JRI&t=2249s
+  Medium:
+  - Video
+  Title: 'Aligning Massive Models: Current and Future Challenges (Jacob Steinhardt,
+    66-min video)'
+  Transcripts / Audio / Slides: https://jsteinhardt.stat.berkeley.edu/talks/satml/tutorial.html#slideIndex=0&level=0
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recUf2vnYq80yt79c
+- Category:
+  - Scalable oversight
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2306.03341.pdf
+  Medium:
+  - Paper
+  Title: 'Inference-Time Intervention: Eliciting Truthful Answers from a Language
+    Model (Li et al., 2023)'
+  Topic:
+  - Model editing
+  Twitter: https://twitter.com/ke_li_2021/status/1666810649526308867
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recVPFsKw2to44iGQ
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://wp.nyu.edu/arg/why-ai-safety/
+  Medium:
+  - Blog post
+  Title: Why I Think More NLP Researchers Should Engage with AI Safety Concerns (Bowman,
+    2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recVuFPIu5XtoNTC4
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/pdf/2205.01663.pdf
+  Medium:
+  - Paper
+  Title: Adversarial training for high-stakes reliability (Ziegler et al., 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recWLXExn9zLYmInw
+- Blog or Video: https://www.youtube.com/watch?v=HiYWwjma3xE&t=1687s
+  Category:
+  - Model evaluations / monitoring / detection
+  - Scalable oversight
+  Link: https://arxiv.org/pdf/2212.09251.pdf
+  Medium:
+  - Paper
+  Supplemental Material: https://www.evals.anthropic.com/
+  Title: Discovering Language Model Behaviors with Model-Written Evaluations (Perez
+    et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recWQ6SSs1yE8Z9iD
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Adversaries / Robustness / Generalization
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Deception
+  - AI Governance
+  - Overview
+  Link: https://www.alignment-workshop.com/sf-talks/dan-hendrycks-surveying-safety-research-directions
+  Medium:
+  - Video
+  Title: Surveying Safety Research Directions (Dan Hendrycks, 40-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recXe3VWom31jUI03
+- Category:
+  - Capabilities of LLMs
+  - Deception
+  Link: https://www.science.org/doi/10.1126/science.ade9097
+  Medium:
+  - Paper
+  Title: Human-Level Play in the Game of Diplomacy by Combining Language Models with
+    Strategic Reasoning (Bakhtin et al., 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recXg38S5DI5Q2l6A
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/2311.17035
+  Medium:
+  - Paper
+  Title: Scalable Extraction of Training Data from (Production) Language Models (Nasr
+    et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recYhev3g53H6y9pl
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/1906.02530
+  Medium:
+  - Paper
+  Title: "Can You Trust Your Model\u2019s Uncertainty? Evaluating Predictive Uncertainty\
+    \ Under Dataset Shift (Ovadia et al., 2019)\n"
+  Topic:
+  - Uncertainty
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recYuyG01yrS5kuun
+- Blog or Video: https://www.anthropic.com/index/anthropics-responsible-scaling-policy
+  Category:
+  - AI Governance
+  Link: https://www-files.anthropic.com/production/files/responsible-scaling-policy-1.0.pdf
+  Medium:
+  - Paper
+  Title: Anthropic's Responsible Scaling Policy (Anthropic, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recZD0lN1JHrJ1Pjp
+- Category:
+  - Reward misspecification and goal misgeneralization
+  Link: https://www.deepmind.com/blog/specification-gaming-the-flip-side-of-ai-ingenuity
+  Medium:
+  - Blog post
+  Title: 'Specification gaming: the flip side of AI ingenuity (Krakovna et al., 2020)'
+  Transcripts / Audio / Slides: https://preview.type3.audio/episode/agi-safety-fundamentals-alignment/4bf4ddd8-3876-47f6-ac5a-c6c1fbf8eae7
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recZhTqZ0OLi1FyRQ
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/1812.04606
+  Medium:
+  - Paper
+  Title: Deep Anomaly Detection with Outlier Exposure (Hendrycks at al., 2019)
+  Topic:
+  - Detection of out-of-distribution or malicious behavior
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recaFHvMccJSgvkK2
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://www.alignment-workshop.com/nola-talks/adam-gleave-agi-safety-risks-and-research-directions
+  Medium:
+  - Video
+  Title: |
+    AGI Safety: Risks and Research Directions (Adam Gleave, 31-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recaH5OD2JzjGNSew
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2306.03819.pdf
+  Medium:
+  - Paper
+  Title: 'LEACE: Perfect linear concept erasure in closed form (Belrose et al., 2023)'
+  Topic:
+  - Model editing
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recaZgjyp5zpi25hk
+- Blog or Video: https://ai-alignment.com/mechanistic-anomaly-detection-and-elk-fb84f4c6d0dc
+  Category:
+  - Scalable oversight
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://www.youtube.com/watch?v=U2zJuTLzIm8&t=2646s
+  Medium:
+  - Video
+  Title: Mechanistic anomaly detection (Paul Christiano, 8-minute video)
+  Topic:
+  - Detection of out-of-distribution or malicious behavior
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recavkBnecq5Mg3i9
+- Blog or Video: https://www.anthropic.com/index/decomposing-language-models-into-understandable-components
+  Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Research bottlenecks / limitations
+  Link: https://transformer-circuits.pub/2023/monosemantic-features/index.html
+  Medium:
+  - Paper
+  Title: 'Towards Monosemanticity: Decomposing Language Models With Dictionary Learning
+    (Bricken et al., 2023)'
+  Topic:
+  - Mechanistic interpretability
+  Twitter: https://twitter.com/ch402/status/1709998674087227859
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recb3OnCWP50MC0zq
+- Category:
+  - Reward misspecification and goal misgeneralization
+  - Alignment <-> RLHF
+  Link: https://arxiv.org/abs/2210.10760
+  Medium:
+  - Paper
+  Title: 'Scaling Laws for Reward Model Overoptimization (Gao et al., 2022) '
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reccycC0iD76YWKFB
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://arxiv.org/pdf/2306.06924.pdf
+  Medium:
+  - Paper
+  Title: 'TASRA: A Taxonomy and Analysis of Societal-Scale Risks from AI (Critch and
+    Russell, 2023)'
+  Twitter: https://twitter.com/AndrewCritchCA/status/1668476943208169473
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recdHHoq9fAGLxxwC
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://docs.google.com/presentation/d/1L8MWaHQDgaGAT-EaesuoWhAryCDBEKvlVPE07swWfvc/edit#slide=id.p
+  Medium:
+  - Slides
+  Title: Decomposing AI Safety slides (AWAIR, 2023)
+  Topic:
+  - Situational awareness (also instrumental convergence, inner misalignment)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recdasYTbDr6eNUkG
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Reward misspecification and goal misgeneralization
+  - Alignment <-> RLHF
+  - Deception
+  - Adversaries / Robustness / Generalization
+  - Overview
+  Link: http://arxiv.org/abs/2103.14659
+  Medium:
+  - Paper
+  Title: Alignment of Language Agents (Kenton et al., 2021)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recdcTGVlid1Do9vA
+- Category:
+  - AI Governance
+  Link: https://arxiv.org/pdf/2307.00682.pdf
+  Medium:
+  - Paper
+  Title: "Tools for Verifying Neural Models\u2019 Training Data (Choi, Shavit and\
+    \ Duvenaud, 2023)"
+  Topic:
+  - Compute governance
+  Twitter: https://twitter.com/DavidDuvenaud/status/1676672532970196993
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: receSMP7XpBwyO19Z
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/1906.00945
+  Medium:
+  - Paper
+  Title: 'Adversarial Robustness as a Prior for Learned Representations (Engstrom
+    et al., 2019) '
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recfH3IDwF4EcBdY1
+- Category:
+  - Deception
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/emergent-deception-optimization/
+  Medium:
+  - Blog post
+  Title: Emergent Deception and Emergent Optimization (Steinhardt, 2023)
+  Topic:
+  - Situational awareness (also instrumental convergence, inner misalignment)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recfMzYVh4BSO9DS7
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/
+  Medium:
+  - Blog post
+  Title: |
+    FAQ on Catastrophic AI Risks (Bengio, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recgOBjvcPw2JevR5
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://people.cs.uchicago.edu/~ravenben/publications/pdf/backdoor-sp19.pdf
+  Medium:
+  - Paper
+  Title: 'Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks
+    (Wang et al., 2019)'
+  Topic:
+  - Trojans
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recgV9haMTUHQhoBp
+- Blog or Video: https://www.alignmentforum.org/posts/L4anhrxjv8j2yRKKp/how-discovering-latent-knowledge-in-language-models-without
+  Category:
+  - Scalable oversight
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2212.03827.pdf
+  Medium:
+  - Paper
+  Title: 'Discovering Latent Knowledge In Language Models Without Supervision (Burns
+    et al., 2022) '
+  Twitter: https://twitter.com/CollinBurns4/status/1600892261633785856
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recgrkHBkrkMhuBpx
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2310.02238
+  Medium:
+  - Paper
+  Title: Who's Harry Potter? Approximate Unlearning in LLMs (Eldan and Russinovich,
+    2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reciq6NdKHYkhtLTP
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Overview
+  Link: https://www.neelnanda.io/mechanistic-interpretability/quickstart
+  Medium:
+  - Blog post
+  Title: Mechanistic Interpretability Quickstart Guide (Nanda, 2023)
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reckcwKgNTrTVe14t
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/abs/1802.00420
+  Medium:
+  - Paper
+  Title: 'Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses
+    to Adversarial Examples (Athalye et al., 2018)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recklypMfGnJDrTo3
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://transformer-circuits.pub/2023/toy-double-descent/index.html
+  Medium:
+  - Paper
+  Title: Superposition, Memorization, and Double Descent (Henighan et al., 2023)
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reclTuMfeDZtDIFie
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/pdf/1809.08352.pdf
+  Medium:
+  - Paper
+  Title: Unrestricted Adversarial Examples (Brown et al., 2018)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reclcddUoIGEC6f6y
+- Category:
+  - Deception
+  Link: https://arxiv.org/pdf/1906.01820.pdf
+  Medium:
+  - Paper
+  Title: Risks from Learned Optimization in Advanced Machine Learning Systems (Hubinger
+    et al., 2021)
+  Topic:
+  - Situational awareness (also instrumental convergence, inner misalignment)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reclnTa27oFhFGtwc
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Overview
+  Link: https://www.neelnanda.io/mechanistic-interpretability/favourite-papers
+  Medium:
+  - Blog post
+  Title: An Extremely Opinionated Annotated List of My Favourite Mechanistic Interpretability
+    Papers (Nanda, 2023)
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reclwo4KP16sQiNmn
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://far.ai/post/2023-07-superhuman-go-ais/
+  Medium:
+  - Blog post
+  Title: Even Superhuman Go AIs Have Surprising Failures Modes (Gleave et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recmBicpj5ZIgMrS0
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2310.10683
+  Medium:
+  - Paper
+  Title: Large Language Model Unlearning (Yao et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recmH6iLrjjIOmEr0
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/gpt-2030-and-catastrophic-drives-four-vignettes/
+  Medium:
+  - Blog post
+  Title: 'GPT-2030 and Catastrophic Drives: Four Vignettes (Steinhart, 2023)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recmcmreNd1ZefBCK
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://arxiv.org/abs/2109.13916
+  Medium:
+  - Paper
+  Title: Unsolved Problems in ML safety (Hendrycks et al., 2021)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recmpVp0UFA8qorXP
+- Blog or Video: https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924
+  Category:
+  - Reward misspecification and goal misgeneralization
+  - Alignment <-> RLHF
+  Link: https://arxiv.org/abs/2210.01790
+  Medium:
+  - Paper
+  Supplemental Material: https://sites.google.com/view/goal-misgeneralization
+  Title: "Goal Misgeneralization: Why Correct Specifications Aren\u2019t Enough For\
+    \ Correct Goals (Shah et al., 2022)"
+  Twitter: https://twitter.com/rohinmshah/status/1578391329461133315
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recnRPlTfmfHjQFTk
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://www.youtube.com/watch?v=Vb5g7jlNzOk&t=438s
+  Medium:
+  - Video
+  Title: Safety evaluations and standards for AI (Beth Barnes, 32-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recnRa1AA065tix80
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2104.07143.pdf
+  Medium:
+  - Paper
+  Title: An Interpretability Illusion for BERT (Bolukbasi et al., 2021)
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recoL05tYi1R4C9hD
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Research bottlenecks / limitations
+  Link: https://transformer-circuits.pub/2022/toy_model/index.html
+  Medium:
+  - Paper
+  Supplemental Material: 'Addendum: https://transformer-circuits.pub/2023/toy-double-descent/index.html'
+  Title: Toy models of superposition (Elhage et al., 2022)
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recohdPaGKTrl6gqO
+- Blog or Video: https://transformer-circuits.pub/2023/interpretability-dreams/index.html#epistemic-foundation
+  Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  - Research bottlenecks / limitations
+  Link: https://www.alignment-workshop.com/sf-talks/chris-olah-looking-inside-neural-networks-with-mechanistic-interpretabili
+  Medium:
+  - Video
+  Title: Looking Inside Neural Networks with Mechanistic Interpretability (Chris Olah,
+    41-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recorofgfS7kSBR1d
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://drive.google.com/file/d/1JN7-ZGx9KLqRJ94rOQVwRSa7FPZGl2OY/view
+  Medium:
+  - Other
+  Supplemental Material: https://www.aisafetybook.com/virtual-course
+  Title: Introduction to AI Safety, Ethics, and Society (Hendrycks, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recpW22EnnJtWFOuR
+- Category:
+  - Scalable oversight
+  - Deception
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/2304.13734
+  Medium:
+  - Paper
+  Title: The Internal State of an LLM Knows When It's Lying (Azaria and Mitchell,
+    2023)
+  Topic:
+  - Sycophancy
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recpxmwlneap5j7iy
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://distill.pub/2021/multimodal-neurons/
+  Medium:
+  - Paper
+  Title: 'Multimodal neurons in artificial neural networks (Goh et al., 2021) '
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recq944f8XU2J5tcw
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://ai.meta.com/research/publications/purple-llama-cyberseceval-a-benchmark-for-evaluating-the-cybersecurity-risks-of-large-language-models/
+  Medium:
+  - Paper
+  Supplemental Material: https://ai.meta.com/llama/purple-llama/
+  Title: 'Purple Llama CyberSecEval: A benchmark for evaluating the cybersecurity
+    risks of large language models (Bhatt et al., 2023)'
+  Topic:
+  - Benchmarking
+  - Security
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recqrIs6PrUSbpcAB
+- Category:
+  - Capabilities of LLMs
+  - Forecasting
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://theaidigest.org/progress-and-dangers
+  Medium:
+  - Other
+  Title: How fast is AI improving? (AI Digest; 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recrLDwNbnLtMYqSp
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2211.00593.pdf
+  Medium:
+  - Paper
+  Title: 'Interpretability In The Wild: A Circuit For Indirect Object Identification
+    In GPT-2 Small (Wang et al., 2022)'
+  Topic:
+  - Mechanistic interpretability
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recrMmKwjttXZaDig
+- Category:
+  - Deception
+  Link: https://arxiv.org/abs/2109.07958
+  Medium:
+  - Paper
+  Title: 'TruthfulQA: Measuring How Models Mimic Human Falsehoods (Lin et al., 2021)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recrVuQln8h7GVUYb
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/2110.13136
+  Medium:
+  - Paper
+  Title: What Would Jiminy Cricket Do? Towards Agents That Behave Morally (Hendrycks
+    et al., 2021)
+  Topic:
+  - Benchmarking
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recrg5t3EozZnocnP
+- Category:
+  - Reward misspecification and goal misgeneralization
+  Link: https://arxiv.org/pdf/2105.14111.pdf
+  Medium:
+  - Paper
+  Title: |
+    Goal Misgeneralization in Deep Reinforcement Learning (Langosco et al., 2021)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recsVwN5MnM6Kcza2
+- Category:
+  - Scalable oversight
+  - Research bottlenecks / limitations
+  Link: https://www.alignmentforum.org/posts/PJLABqQ962hZEqhdB/debate-update-obfuscated-arguments-problem
+  Medium:
+  - Blog post
+  Title: 'Debate update: Obfuscated arguments problem (Barnes and Christiano, 2020)'
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recst2Jop4RCuDGBl
+- Category:
+  - Adversaries / Robustness / Generalization
+  Link: https://arxiv.org/pdf/2202.03286.pdf
+  Medium:
+  - Paper
+  Title: Red Teaming Language Models with Language Models (Perez et al., 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rectFbTmx3q4sBxsZ
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/pdf/2304.05969.pdf
+  Medium:
+  - Paper
+  Title: Localizing Model Behavior With Path Patching (Goldowsky-Dill et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: rectRZMpRRdjbA2e9
+- Category:
+  - Deception
+  Link: https://arxiv.org/abs/2309.15840
+  Medium:
+  - Paper
+  Title: 'How to Catch an AI Liar: Lie Detection in Black-Box LLMs by Asking Unrelated
+    Questions (Pacchiardi et al., 2023)'
+  Topic:
+  - Detection of out-of-distribution or malicious behavior
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recuM5Cf9T2xOcsoG
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://arxiv.org/pdf/2302.10329.pdf
+  Medium:
+  - Paper
+  Title: Harms from Increasingly Agentic Algorithmic Systems (Chan et al., 2023)
+  Twitter: https://twitter.com/tegan_maharaj/status/1668637520177905665
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recvjD95hXc4Nu3VK
+- Category:
+  - Deception
+  Link: https://www.alignment-workshop.com/sf-talks/ajeya-cotra-situational-awareness-makes-measuring-safety-tricky
+  Medium:
+  - Video
+  Title: " \u201CSituational Awareness\u201D Makes Measuring Safety Tricky (Ajeya\
+    \ Cotra, 40-min video)"
+  Topic:
+  - Situational awareness (also instrumental convergence, inner misalignment)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recwNmLzEiRnHCJaR
+- Category:
+  - Deception
+  - Reward misspecification and goal misgeneralization
+  Link: https://bounded-regret.ghost.io/ml-systems-will-have-weird-failure-modes-2/
+  Medium:
+  - Blog post
+  Title: ML Systems Will Have Weird Failure Modes (Steinhardt, 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recwnsl7qbjcbInmw
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  Link: https://bounded-regret.ghost.io/complex-systems-are-hard-to-control/
+  Medium:
+  - Blog post
+  Title: Complex Systems are Hard to Control (Steinhart, 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recx3nQJXcwwj3haO
+- Category:
+  - Scalable oversight
+  - Alignment <-> RLHF
+  Link: https://www.alignment-workshop.com/sf-talks/jan-leike-scaling-reinforcement-learning-from-human-feedback
+  Medium:
+  - Video
+  Title: Scaling Reinforcement Learning from Human Feedback (Jan Leike, 39-min video)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recxbBVGiNGF6HIRV
+- Category:
+  - AI Governance
+  Link: https://arxiv.org/pdf/2305.07153.pdf
+  Medium:
+  - Paper
+  Title: 'Towards best practices in AGI safety and governance: A survey of expert
+    opinion (Schuett et al., 2023)'
+  Twitter: https://twitter.com/jonasschuett/status/1658025252675366913
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recxdBOrnd21bJ2Pt
+- Category:
+  - Major problems (misalignment, misuse, threat models)
+  - Overview
+  Link: https://arxiv.org/abs/2206.05862
+  Medium:
+  - Paper
+  Title: X-Risk Analysis for AI Research (Hendrycks and Mazeika, 2022)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recy7lMSpzmCyNxTB
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://distill.pub/2020/circuits/zoom-in/
+  Medium:
+  - Paper
+  Title: 'Zoom In: An Introduction to Circuits (Olah et al., 2020)'
+  Topic:
+  - Mechanistic interpretability
+  Transcripts / Audio / Slides: https://preview.type3.audio/episode/agi-safety-fundamentals-alignment/632feda4-71a5-42a2-84a1-588c6b9ea1ad
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recy9wNJOO8tFzNX7
+- Category:
+  - Transparency / Interpretability / Model internals / Latent knowledge
+  Link: https://arxiv.org/abs/1606.03490
+  Medium:
+  - Paper
+  Title: The Mythos of Model Interpretability (Lipton, 2017)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recyk847I7nf5U1OA
+- Category:
+  - Model evaluations / monitoring / detection
+  Link: https://arxiv.org/abs/1706.04599
+  Medium:
+  - Paper
+  Title: On Calibration of Modern Neural Networks (Guo et al., 2017)
+  Topic:
+  - Uncertainty
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recylubfI6oltMb7A
+- Category:
+  - Scalable oversight
+  Link: https://arxiv.org/abs/1810.08575
+  Medium:
+  - Paper
+  Title: Supervising strong learners by amplifying weak experts (Christiano et al.,
+    2018)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recyzAcVGoh9GMcfh
+- Blog or Video: https://www.alignment-workshop.com/nola-talks/zico-kolter-adversarial-attacks-on-aligned-language-models
+  Category:
+  - Adversaries / Robustness / Generalization
+  Link: http://arxiv.org/abs/2307.15043
+  Medium:
+  - Paper
+  - Video
+  Title: Universal and Transferable Adversarial Attacks on Aligned Language Models
+    (Zou et al., 2023)
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: recznRysvhvQmuHiW
+- Category:
+  - AI Governance
+  Link: https://arxiv.org/abs/2307.03718
+  Medium:
+  - Paper
+  Title: 'Frontier AI Regulation: Managing Emerging Risks to Public Safety (Anderljung
+    et al., 2023)'
+  Twitter: https://twitter.com/Manderljung/status/1678414590529490947
+  airtable_createdTime: '2024-01-15T23:25:53.000Z'
+  airtable_id: reczuCK2wsmMd2XxR

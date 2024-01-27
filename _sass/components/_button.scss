@@ -78,6 +78,23 @@ button,
     top: -0.2em;
 	}
 
+	&.button-filter {
+		font-size: 0.8em;
+    padding: 0.5em 0.75em;
+    height: 1.9em;
+    line-height: 1em;
+    margin-right: 0.1em;
+    position: relative;
+    top: -0.2em;
+		border-radius: 14px;
+		text-transform: unset;
+		margin-bottom: 0.3em;
+		&.active {
+			background-color: var(--color-highlight);
+			color: var(--color-bg);
+		}
+	}
+
 	&.button-right {
 		text-align: right;
 		width: fit-content;

@@ -50,7 +50,28 @@
 			background-repeat: no-repeat;
 			filter: brightness(0.4);
 			z-index: -1;
+			animation: mktest linear;
+			animation-timeline: scroll();
 		}
+
+		@keyframes mktest {
+			0% {
+				filter: brightness(0.4);
+			}
+			50% {
+				filter: brightness(0.1);
+			}
+			100% {
+				filter: brightness(0.1);
+			}
+		}
+
+		@keyframes rotateHue {
+			to {
+				filter: hue-rotate(360deg);
+			}
+		}
+		
 
 		.banner-inner {
 			width: 100%;

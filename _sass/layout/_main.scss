@@ -40,12 +40,24 @@
 	text-align: right;
 }
 
+.mt1 {
+	margin-top: 1em;
+}
+
 .mt2 {
-	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.mb1 {
+	margin-bottom: 1em;
 }
 
 .mb2 {
 	margin-bottom: 2em;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Hide on small screens */

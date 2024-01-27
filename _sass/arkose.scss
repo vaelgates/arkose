@@ -1,0 +1,218 @@
+#paper-list {
+  .search {
+    font-size: 1.25rem;
+    &::placeholder {
+      position: relative;
+      top: 2px;
+    }
+  }
+  .dropdown-title-box {
+    display: flex;
+    line-height: 1;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 3rem;
+  }
+  .dropdown-title {
+    font-size: 1.25rem;
+    margin-top: 4px;
+  }
+  .filter-dropdown {
+    width: max-content;
+    box-shadow: 0 0 0 1px rgba(66, 153, 225, 0.5);
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    overflow-y: scroll;
+    max-height: 344px;
+    z-index: 40;
+    position: absolute;
+    display: none;
+  }
+  .filter-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .filter-dropdown li label {
+    text-transform: unset;
+    padding: 0.5rem 0 0.5rem 2.1rem;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  input[type="checkbox"]:not(:checked) + label::before {
+    background: #e8e8e8;
+  }
+  .filter-dropdown li label:before {
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.8rem;
+    top: 0.525rem;
+  }
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    .filter-item {
+      display: flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem 0.1rem;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.25rem;
+      background-color: #e2e8f0;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .filter-item::after {
+      content: '×';
+      margin-left: 0.5rem;
+      margin-top: -2px;
+    }
+    .filter-item-category {
+      background-color: #f6ad55;
+    }
+    .filter-item-topic {
+      background-color: #adf655;
+    }
+    .filter-item-ml_domain_tag {
+      background-color: #55adf6;
+    }
+    .filter-item-ml_domain_tag_fine-grain {
+      background-color: #f6a5ad;
+    }
+  }
+  .text-blue-500 {
+    color: #3b82f6;
+  }
+  .field-single {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.25rem;
+  }
+  .category-single {
+    border: 1px solid #f6ad55;
+    background-color: #fef3e6;
+  }
+  .topic-single {
+    border: 1px solid #adf655;
+    background-color: #fbfff6;
+  }
+  .ml-domain-tag-single {
+    border: 1px solid #55adf6;
+    background-color: #e6f3fe;
+  }
+  .ml-domain-fine-grain-tag-single {
+    border: 1px solid #f6a5ad;
+    background-color: #fff0f0;
+  }
+  .results-count-text {
+    font-size: 0.8em;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+  ul.list {
+    list-style: none;
+    padding-left: 0;
+    li.paper-item {
+      position: relative;
+      padding: 1em 0.5em 0.9em;
+      border-top: 1px solid #ddd;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      .Title, .detail {
+        padding-left: 60px;
+      }
+      .title-container {
+        position: relative;
+        .Title {
+          position: relative;
+          top: -2px;
+          margin: 0;
+          font-size: 20px;
+          a:hover {
+            border-bottom: 2px solid;
+          }
+        }
+        .medium-icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px;
+          margin-right: 1rem;
+          margin-top: -4px;
+          user-select: none;
+        }
+      }
+      .detail {
+        display: none;
+        padding-bottom: 0.75em;
+        margin-top: 0.75rem;
+        margin-bottom: -0.5rem;
+        border: 1px solid transparent; // makes the jQuery slideToggle work smoothly, I don't know why
+        .Medium {
+          font-weight: bold;
+        }
+      }
+      &:hover {
+        background-color: #f8f8f8;
+        .detail-opener {
+          opacity: 1;
+        }
+      }
+      &.active {
+        // .detail {
+        //   display: block;
+        // }
+        .detail-opener {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      div {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+      .detail-opener {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1em;
+        background: linear-gradient(to bottom, transparent 0%, #eee 100%);
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        svg {
+          margin-top: -0.25em;
+          font-size: 1.2em;
+        }
+      }
+      &:first-of-type {
+        border-top: 0;
+      }
+    }
+  }
+  .active {
+    display: block;
+  }
+}
