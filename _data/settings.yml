@@ -10,6 +10,8 @@ menu_settings:
     #       url: '/perspectives/introduction'
     #     - title: 'Interviews'
     #       url: '/interviews'
+    - title: Papers
+      url: '/papers'
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
