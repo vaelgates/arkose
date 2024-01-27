@@ -78,9 +78,9 @@
   function listify(papers) {
     papers = papers.map(function(paper) {
       if (paper.Medium.length > 1 && paper.Medium.includes("Paper")) {
-        paper.image = `/assets/images/medium/Paper.svg`;
+        paper.image = `/assets/images/medium/paper.svg`;
       } else {
-        paper.image = `/assets/images/medium/${paper.Medium[0]}.svg`;
+        paper.image = `/assets/images/medium/${paper.Medium[0].toLowerCase()}.svg`;
       }
       paper.CategoryDisplay = paper.Category.map(item => `<span class="field-single category-single">${item}</span>`).join('');
       paper.Topic = paper.Topic ?? [];
