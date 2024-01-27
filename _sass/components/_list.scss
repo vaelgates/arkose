@@ -146,3 +146,23 @@
 			margin-left: _size(element-margin);
 		}
 	}
+
+	li.expandable {
+		list-style-type: disclosure-closed;
+		cursor: pointer;
+		transition: opacity 0.2s ease-in-out;
+		ul {
+			display: none;
+		}
+	}
+
+	li.expandable:hover {
+		opacity: 0.7;
+	}
+
+	li.expandable.expanded {
+		list-style-type: disclosure-open;
+		ul {
+			display: block;
+		}
+	}

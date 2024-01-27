@@ -605,4 +605,8 @@
 
 	};
 
+	$('.expandable').on('click', function() {
+		$(this).toggleClass('expanded');
+	});
+
 })(jQuery);
