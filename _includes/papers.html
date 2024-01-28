@@ -75,12 +75,43 @@
     "ML Domain Tag Fine-Grain": new Set(),
   }
 
-  function listify(papers) {
-    papers = papers.map(function(paper) {
+  const options = {
+    valueNames: [
+      'Title',
+      'TopicDisplay',
+      'Category',
+      'CategoryDisplay',
+      'Medium',
+      'Twitter',
+      'TwitterDisplay',
+      "Blog or Video",
+      "Blog or VideoDisplay",
+      "Supplementary Material",
+      "Supplementary MaterialDisplay",
+      "Transcripts / Audio / Slides",
+      "Transcripts / Audio / SlidesDisplay",
+      "ML Domain Tag",
+      "ML Domain TagDisplay",
+      "ML Domain Tag Fine-Grain",
+      "ML Domain Tag Fine-GrainDisplay",
+      "Abstract",
+      "AbstractDisplay",
+      { attr: 'src', name: 'image' }
+    ],
+    item: 'paper-item'
+  };
+
+  let papers = [];
+
+  function listify(papersJson) {
+    papers = papersJson.map(function(paper) {
+      const darkMode =  (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      const modeStr = darkMode ? '-dark' : ''
+
       if (paper.Medium.length > 1 && paper.Medium.includes("Paper")) {
-        paper.image = `/assets/images/medium/paper.svg`;
+        paper.image = `/assets/images/medium/paper${modeStr}.svg`;
       } else {
-        paper.image = `/assets/images/medium/${paper.Medium[0].toLowerCase()}.svg`;
+        paper.image = `/assets/images/medium/${paper.Medium[0].toLowerCase()}${modeStr}.svg`;
       }
       paper.CategoryDisplay = paper.Category.map(item => `<span class="field-single category-single">${item}</span>`).join('');
       paper.Topic = paper.Topic ?? [];
@@ -88,39 +119,13 @@
       paper['ML Domain TagDisplay'] = paper['ML Domain Tag'].map(tag => `<span class="field-single ml-domain-tag-single">${tag}</span>`).join('');
       paper['ML Domain Tag Fine-Grain'] = paper['ML Domain Tag (Fine-Grain)'] ?? [];
       paper['ML Domain Tag Fine-GrainDisplay'] = paper['ML Domain Tag Fine-Grain'].map(tag => `<span class="field-single ml-domain-fine-grain-tag-single">${tag}</span>`).join('');
-      paper.Title = linkify(paper.Link, paper.Title);
+      paper.Title = linkify(paper.Link, paper.Title.replace("\n", ''));
       paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
       paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
       paper['TwitterDisplay'] = linkify(paper['Twitter'], 'Twitter');
       paper['AbstractDisplay'] = paper.Abstract ? `<h4>Abstract</h4>${paper.Abstract}` : '';
       return paper;
     });
-
-    var options = {
-      valueNames: [
-        'Title',
-        'TopicDisplay',
-        'Category',
-        'CategoryDisplay',
-        'Medium',
-        'Twitter',
-        'TwitterDisplay',
-        "Blog or Video",
-        "Blog or VideoDisplay",
-        "Supplementary Material",
-        "Supplementary MaterialDisplay",
-        "Transcripts / Audio / Slides",
-        "Transcripts / Audio / SlidesDisplay",
-        "ML Domain Tag",
-        "ML Domain TagDisplay",
-        "ML Domain Tag Fine-Grain",
-        "ML Domain Tag Fine-GrainDisplay",
-        "Abstract",
-        "AbstractDisplay",
-        { attr: 'src', name: 'image' }
-      ],
-      item: 'paper-item'
-    };
 
     papersList = new List('paper-list', options, papers);
 
@@ -150,8 +155,8 @@
         var filterDropdown = $('.filter-dropdown-' + slugify(filterType) + ' ul');
         Array.from(filterOptions[filterType]).sort().forEach(function(option) {
           filterDropdown.append(`<li data-option="${option}">
-            <input type="checkbox" id="demo-${slugify(filterType)}-${option}" name="demo-${slugify(filterType)}-${option}" value="${option}">
-            <label for="demo-${slugify(filterType)}-${option}">
+            <input type="checkbox" id="option-${slugify(filterType)}-${option}" name="option-${slugify(filterType)}-${option}" value="${option}">
+            <label for="option-${slugify(filterType)}-${option}">
               ${option}
               <span class="filter-option-count"></span>
             </label>
@@ -165,11 +170,15 @@
         if (params.has(filterType)) {
           params.getAll(filterType)[0].split(',').forEach(function(filter) {
             filters[filterType].add(filter);
-            $('input[name="demo-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
+            $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
           });
         }
       });
       updateList();
+    });
+
+    $('input.search').on('change', function(e) {
+      updateFilterOptionCounts();
     });
 
     papersList.on('updated', function (list) {
@@ -194,14 +203,12 @@
   };
 
   function updateFilters() {
-    papersList.filter(function (item) {
-      const included = Object.keys(filters).every(function(filterType) {
+    papersList.filter(function (paper) {
+      return Object.keys(filters).every(function(filterType) {
         if (filters[filterType].size == 0) return true
 
-        return item.values()[filterType].some(item => filters[filterType].has(item))
+        return paper.values()[filterType].some(item => filters[filterType].has(item))
       });
-
-      return included
     });
   }
 
@@ -223,10 +230,10 @@
     Object.keys(filters).forEach(function(filterType) {
       const filterSlug = slugify(filterType)
       if (filters[filterType].size) {
-        $('.filter-' + filterSlug + ' .dropdown-title').addClass('text-blue-500');
+        $('.filter-' + filterSlug + ' .dropdown-title').addClass('filter-active');
         $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('(' + filters[filterType].size + ')');
       } else {
-        $('.filter-' + filterSlug + ' .dropdown-title').removeClass('text-blue-500');
+        $('.filter-' + filterSlug + ' .dropdown-title').removeClass('filter-active');
         $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('');
       }
     });
@@ -244,33 +251,51 @@
       history.pushState(null, '', newRelativePathQuery);
   }
 
-  // TODO: this is not working
-  function updateFilterOptionCounts() {
-    debugger;
-    Object.keys(filterOptions).forEach(function(filterType) {
-      filterOptions[filterType].forEach(function(option) {
-        
-        const filterOptionCount = $(`.filter-${slugify(filterType)} li[data-option="${option}"] .filter-option-count`);
-        filterOptionCount.css('background', '#f00')
+  function titlesMatch(title1, title2) {
+    return title1.match(/<a.*>(.*)<\/a>/)?.[1] == title2.match(/<a.*>(.*)<\/a>/)?.[1]
+  }
 
-        // TODO: this needs to adjust for how adding filters expands the count, but the first added filter reduces the count
-        if (filters[filterType].size == 0) {
-          const remainingItems = papersList.matchingItems.filter(item => { return item.values()[filterType].includes(option) })
+  function updateFilterOptionCounts() {
+    Object.keys(filterOptions).forEach(function(optionFilterType) {
+      filterOptions[optionFilterType].forEach(function(option) {
+        const filterOptionCount = $(`.filter-${slugify(optionFilterType)} li[data-option="${option}"] .filter-option-count`);
+
+        // If the filter is already set, just remove the count
+        if (filters[optionFilterType].has(option)) {
+          filterOptionCount.text('');
+          return;
+        }
+
+        // When there are no options set for a filter, adding an option *reduces* options, which is easy to calculate and is the
+        // first option here.
+        if (filters[optionFilterType].size == 0) {
+          const remainingItems = papersList.matchingItems.filter(item => { return item.values()[optionFilterType].includes(option) })
           filterOptionCount.text('(' + remainingItems.length + ')');
         } else {
-          // Potentially difficult. One option is to duplicate the papersList, apply the change, and get the result
-          // Or we re-implement ListJS filter logic (doable) and search logic (doable I guess?) here
-          const papersListTemp = new List('paper-list', options, papers);
-          papersListTemp.filter(function (item) {
-            const included = Object.keys(filters).every(function(filterType) {
+          // When there are options set for a filter, adding an option *increases* options, which we calculate here
+          const unmatchedItems = papers.filter(paper => !papersList.matchingItems.some(item => titlesMatch(paper.Title, item.values().Title)))
+          const newFilteredItems = unmatchedItems.filter(item => { return item[optionFilterType].includes(option) })
+
+          // now apply the other filters
+          const remainingFilteredItems = newFilteredItems.filter(item => {
+            return Object.keys(filters).every(function(filterType) {
               if (filters[filterType].size == 0) return true
+              if (filterType == optionFilterType) return true
 
-              return item.values()[filterType].some(item => filters[filterType].has(item))
+              return item[filterType].some(item => filters[filterType].has(item))
             });
-
-            return included
           });
-          
+
+          // now apply the search
+          const searchTerm = $('input.search').val();
+          // iterate through every field on each item and see if it matches the search term
+          const remainingItems = remainingFilteredItems.filter(item => {
+            return Object.keys(item).some(field => {
+              return item[field].toString().toLowerCase().includes(searchTerm.toLowerCase())
+            })
+          })
+
+          filterOptionCount.text(`(${remainingItems.length})`);
         }
         
       });
@@ -280,7 +305,7 @@
   function updateList(){
     updateFilters();
     papersList.update();
-    // updateFilterOptionCounts();
+    updateFilterOptionCounts();
     updateShownFilters();
     updateFilterTitleCount();
     updateQueryParams();
@@ -319,7 +344,7 @@
     $('body').on('click', '.filter-item', function(e) {
       var filter = $(e.target).closest('.filter-item').text();
       var filterType = $(e.target).closest('.filter-item').data('filter-type');
-      $('input[name="demo-' + filter + '"]').prop('checked', false);
+      $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', false);
       filters[filterType].delete(filter);
       updateList();
     });

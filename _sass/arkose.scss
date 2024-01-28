@@ -4,6 +4,7 @@
     &::placeholder {
       position: relative;
       top: 2px;
+      color: var(--color-header-fg-light) !important;
     }
   }
   .dropdown-title-box {
@@ -28,7 +29,7 @@
     width: max-content;
     box-shadow: 0 0 0 1px rgba(66, 153, 225, 0.5);
     padding: 0.5rem;
-    background-color: #fff;
+    background-color: var(--color-bg);
     border: 1px solid #e2e8f0;
     border-radius: 0.25rem;
     overflow-y: scroll;
@@ -71,9 +72,9 @@
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
       border-radius: 0.25rem;
-      background-color: #e2e8f0;
       font-size: 0.8rem;
       cursor: pointer;
+      color: #000;
     }
     .filter-item::after {
       content: '×';
@@ -81,20 +82,21 @@
       margin-top: -2px;
     }
     .filter-item-category {
-      background-color: #f6ad55;
+      background-color: var(--color-filter-category);
     }
     .filter-item-topic {
-      background-color: #adf655;
+      background-color: var(--color-filter-topic);
     }
     .filter-item-ml_domain_tag {
-      background-color: #55adf6;
+      background-color: var(--color-filter-ml-tag);
     }
     .filter-item-ml_domain_tag_fine-grain {
-      background-color: #f6a5ad;
+      background-color: var(--color-filter-ml-tag-fine);
     }
   }
-  .text-blue-500 {
-    color: #3b82f6;
+  .filter-active {
+    font-weight: bold;
+    color: var(--color-highlight);
   }
   .field-single {
     display: inline-block;
@@ -102,22 +104,23 @@
     margin-right: 0.4rem;
     margin-bottom: 0.4rem;
     border-radius: 0.25rem;
+    color: #000;
   }
   .category-single {
-    border: 1px solid #f6ad55;
-    background-color: #fef3e6;
+    border: 1px solid var(--color-filter-category);
+    background-color: var(--color-filter-category-light);
   }
   .topic-single {
-    border: 1px solid #adf655;
-    background-color: #fbfff6;
+    border: 1px solid var(--color-filter-topic);
+    background-color: var(--color-filter-topic-light);
   }
   .ml-domain-tag-single {
-    border: 1px solid #55adf6;
-    background-color: #e6f3fe;
+    border: 1px solid var(--color-filter-ml-tag);
+    background-color: var(--color-filter-ml-tag-light);
   }
   .ml-domain-fine-grain-tag-single {
-    border: 1px solid #f6a5ad;
-    background-color: #fff0f0;
+    border: 1px solid var(--color-filter-ml-tag-fine);
+    background-color: var(--color-filter-ml-tag-fine-light);
   }
   .results-count-text {
     font-size: 0.8em;
@@ -168,7 +171,7 @@
         }
       }
       &:hover {
-        background-color: #f8f8f8;
+        background-color: var(--color-bg);
         .detail-opener {
           opacity: 1;
         }
@@ -197,7 +200,7 @@
         align-items: center;
         justify-content: center;
         height: 1em;
-        background: linear-gradient(to bottom, transparent 0%, #eee 100%);
+        background: linear-gradient(to bottom, transparent 0%, var(--color-border) 100%);
         margin-left: -0.5em;
         margin-right: -0.5em;
         opacity: 0;
