@@ -1,0 +1,70 @@
+name: Download papers metadata from Airtable
+concurrency: download-airtable-papers-metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  downloaddata:
+    env:
+      GIT_TERMINAL_PROMPT: 0
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+    - uses: actions/checkout@v3
+    - run: pip install airtable-export
+    - run: airtable-export --json export appqxxxouLIAnjBAs tbluHmZLuNQ0PWUcE --key ${{ secrets.AIRTABLE_KEY }}
+    
+    # Step to check if the file has changed
+    - name: Check if papers.json has changed
+      id: file-check
+      run: |
+        if test -f export/papers.json; then
+          if cmp -s export/tbluHmZLuNQ0PWUcE.json export/papers.json; then
+            echo "No changes in papers.json, aborting job."
+            echo "::set-output name=changed::false"
+          else
+            echo "Changes detected in papers.json."
+            echo "::set-output name=changed::true"
+          fi
+        else
+          echo "papers.json does not exist, proceeding with job."
+          echo "::set-output name=changed::true"
+        fi
+
+    # Conditionally execute the remaining steps
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        git status
+        cp export/tbluHmZLuNQ0PWUcE.json export/papers.json
+        pwd
+        git status
+
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        if test -f export/papers.json; then
+          echo "papers.json exists after move."
+        else
+          echo "papers.json doesn't exist after move."
+        fi
+      
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        git config user.name "Michael Keenan"
+        git config user.email "michael.keenan@gmail.com"
+
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        git add export/papers.json
+
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        git commit -v -m "Update papers.json"
+
+    - if: steps.file-check.outputs.changed == 'true'
+      run: |
+        git push
