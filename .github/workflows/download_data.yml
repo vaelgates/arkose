@@ -20,11 +20,11 @@ jobs:
     - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
 
     # Step to check if the file has changed
-    - name: Check if papers.json has changed
+    - name: Check if the table data has changed
       id: file-check
       run: |
-        if test -f export/papers.json; then
-          if cmp -s export/tbluHmZLuNQ0PWUcE.json export/papers.json; then
+        if test -f export/${{ secrets.AIRTABLE_TABLE }}.json; then
+          if cmp -s export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json; then
             echo "No changes in papers.json, aborting job."
             echo "::set-output name=changed::false"
           else
@@ -40,7 +40,8 @@ jobs:
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         git status
-        cp export/tbluHmZLuNQ0PWUcE.json export/papers.json
+        rm export/papers.json
+        cp export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json
         pwd
         git status
 
