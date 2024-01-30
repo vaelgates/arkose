@@ -13,7 +13,7 @@ featured_image: /assets/img/social.jpg
       <h1 class="display-1">Arkose</h1>
       <p class="subheading">Reducing risks from advanced AI through field-building activities</p>
     </div>
-    <div class="2u -2u -1u(large) 11u(large) banner-button-container">
+    <div class="12u -2u -1u(large) 11u(large) banner-button-container">
       <a href="/apply" class="banner-button">
         Apply for advising
       </a>
