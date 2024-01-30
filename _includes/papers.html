@@ -239,10 +239,10 @@
       const filterSlug = slugify(filterType)
       if (filters[filterType].size) {
         $('.filter-' + filterSlug + ' .dropdown-title').addClass('filter-active');
-        $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('(' + filters[filterType].size + ')');
+        // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('(' + filters[filterType].size + ')');
       } else {
         $('.filter-' + filterSlug + ' .dropdown-title').removeClass('filter-active');
-        $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('');
+        // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('');
       }
     });
   }
