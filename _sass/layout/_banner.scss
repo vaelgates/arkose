@@ -255,17 +255,31 @@
 			&.major {
 				min-height: 56vh;
 				max-height: 999px;
+				@media (max-height: 700px) {
+					min-height: 62vh;
+				}
 				@media (max-height: 600px) {
-					min-height: 70vh;
+					min-height: 80vh;
 				}
 				@media (max-height: 500px) {
-					min-height: 80vh;
+					min-height: 100vh;
 				}
 			}
 		}
 
 		@include breakpoint(xsmall) {
 			@include padding(4em, 0, (2em, 0, 0, 0));
+
+			.banner-inner {
+				font-size: 20px;
+				.banner-button {
+					font-size: 0.7em;
+				}
+			}
+
+			h1 {
+				font-size: 1.4em;
+			}
 
 			> .inner {
 				.content {
