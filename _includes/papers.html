@@ -168,14 +168,19 @@
       
       // On page load, read the query params and set the filters
       var params = new URLSearchParams(window.location.search);
-      Object.keys(filters).forEach(function(filterType) {
-        if (params.has(filterType)) {
-          params.getAll(filterType)[0].split(',').forEach(function(filter) {
-            filters[filterType].add(filter);
-            $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
-          });
-        }
-      });
+      // Special case: if there are no filters set, filter Type to Paper by default
+      if (params.size === 0) {
+        filters['Type'].add('Paper');
+      } else {
+        Object.keys(filters).forEach(function(filterType) {
+          if (params.has(filterType)) {
+            params.getAll(filterType)[0].split(',').forEach(function(filter) {
+              filters[filterType].add(filter);
+              $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
+            });
+          }
+        });
+      }
       updateList();
     });
 
@@ -245,7 +250,8 @@
     var params = new URLSearchParams(window.location.search);
     Object.keys(filters).forEach(function(filterType) {
       params.delete(filterType);
-      if (filters[filterType].size)
+      // Type is a special case
+      if (filters[filterType].size || filterType === 'Type')
         params.append(filterType, Array.from(filters[filterType]));
     });
     var newRelativePathQuery = window.location.pathname + (params.toString() ? '?' : '') + params.toString();
