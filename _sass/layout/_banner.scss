@@ -78,7 +78,6 @@
 			max-width: 1040px;
 			margin: 0 auto;
 			font-size: 24px;
-			display: flex;
 			height: fit-content;
 			position: absolute;
 			top: 50%;
@@ -149,7 +148,7 @@
 		}
 
 		&.major {
-			min-height: 70vh;
+			min-height: 42vh;
 			max-height: 999px;
 
 			&.alt {
@@ -176,9 +175,9 @@
 
 		.banner-button {
 			appearance: none;
-			background-color: transparent;
-			box-shadow: inset 0 0 0 2px #fff;
-			color: #fff;
+			background-color: var(--color-arkose-green);
+			box-shadow: inset 0 0 0 2px #333;
+			color: #333;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 0.8em;
@@ -187,7 +186,6 @@
 			letter-spacing: 0.08em;
 			line-height: 3.5em;
 			text-align: center;
-			text-transform: uppercase;
 			white-space-collapse: collapse;
 			text-wrap: nowrap;
 			position: relative;
@@ -196,13 +194,15 @@
 			border-style: initial;
 			border-color: initial;
 			border-image: initial;
-			border-radius: 0px;
+			border-radius: 5px;
 			padding: 0px 1.75em;
 			text-decoration: none;
 			width: 100%;
 			min-width: fit-content;
 			&:hover {
-				box-shadow: inset 0 0 0 2px var(--color-highlight);
+				background-color: var(--color-fg);
+				color: var(--color-bg);
+				box-shadow: inset 0 0 0 2px var(--color-bg);
 			}
 		}
 

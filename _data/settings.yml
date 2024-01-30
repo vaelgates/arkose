@@ -17,6 +17,7 @@ menu_settings:
       url: '/resources'
     - title: 'Apply for a Call'
       url: '/apply'
+      button: true
     # - title: 'Apply For A Call'
     #   url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
     #   button: true
