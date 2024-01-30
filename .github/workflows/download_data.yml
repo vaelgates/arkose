@@ -17,8 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: pip install airtable-export
-    - run: airtable-export --json export appqxxxouLIAnjBAs tbluHmZLuNQ0PWUcE --key ${{ secrets.AIRTABLE_KEY }}
-    
+    - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
+
     # Step to check if the file has changed
     - name: Check if papers.json has changed
       id: file-check
