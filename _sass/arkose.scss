@@ -21,6 +21,9 @@
     cursor: pointer;
     height: 3rem;
   }
+  .filter-ml_subfield .dropdown-title-box {
+    background-color: #e8f6f3;
+  }
   .dropdown-title {
     font-size: 1.25rem;
     margin-top: 4px;
@@ -82,24 +85,28 @@
       margin-top: -2px;
     }
     .filter-item-safety_category {
-      background-color: var(--color-filter-category);
+      border: 1px solid var(--color-filter-category);
+      background-color: var(--color-filter-category-light);
     }
     .filter-item-safety_topic {
-      background-color: var(--color-filter-topic);
+      border: 1px solid var(--color-filter-topic);
+      background-color: var(--color-filter-topic-light);
     }
     .filter-item-ml_subfield {
-      background-color: var(--color-filter-ml-tag);
+      border: 1px solid var(--color-filter-ml-tag);
+      background-color: var(--color-filter-ml-tag-light);
     }
     .filter-item-ml_subtopic {
-      background-color: var(--color-filter-ml-tag-fine);
+      border: 1px solid var(--color-filter-ml-tag);
+      background-color: var(--color-filter-ml-tag-light);
     }
     .filter-item-type {
-      background-color: var(--color-filter-type);
+      border: 1px solid var(--color-filter-type);
+      background-color: var(--color-filter-type-light);
     }
   }
   .filter-active {
     font-weight: bold;
-    color: var(--color-highlight);
   }
   .field-single {
     display: inline-block;
