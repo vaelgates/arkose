@@ -9,11 +9,11 @@ featured_image: /assets/img/social.jpg
 <section id="banner" class="major">
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
-    <div class="10u -2u -1u(large) 11u(large)">
+    <div class="8u -2u -0u(small) 10u(small)">
       <h1 class="display-1">Arkose</h1>
       <p class="subheading">Reducing risks from advanced AI through field-building activities</p>
     </div>
-    <div class="12u -2u -1u(large) 11u(large) banner-button-container">
+    <div class="8u -2u -0u(small) 10u(small) banner-button-container">
       <a href="/apply" class="banner-button">
         Apply for advising
       </a>
