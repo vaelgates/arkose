@@ -171,6 +171,7 @@
       // Special case: if there are no filters set, filter Type to Paper by default
       if (params.size === 0) {
         filters['Type'].add('Paper');
+        $('input[name="option-type-Paper"]').prop('checked', true);
       } else {
         Object.keys(filters).forEach(function(filterType) {
           if (params.has(filterType)) {
