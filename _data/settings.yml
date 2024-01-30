@@ -15,7 +15,7 @@ menu_settings:
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
-    - title: 'Apply for a Call'
+    - title: 'Request a Call'
       url: '/apply'
       button: true
     # - title: 'Apply For A Call'
