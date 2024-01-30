@@ -124,7 +124,7 @@
       width: fit-content;
       max-width: fit-content;
       z-index: 10;
-      font-weight: bold;
+      font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
       background-color:var(--color-bg);
       padding-right: 4px;
       padding-left: 4px;
@@ -170,7 +170,7 @@
     }
     > .argument-title {
       color: var(--color-active-link);
-      font-weight: bold;
+      // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
       left: 3em;
     }
   }
@@ -228,7 +228,7 @@
 .allow-forward-argument-links-controls {
   display: none;
   background-color: #faa;
-  font-weight: bold;
+  // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
   text-align: center;
 }
 
@@ -403,7 +403,7 @@
 
 .toc-heading {
   font-size: 20px;
-  font-weight: bold;
+  // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
   padding-left: 13px;
 }
 
@@ -413,7 +413,7 @@
 
 em {
   font-style: normal;
-  font-weight: bold;
+  // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
 }
 
 .toc-column-gap {
@@ -440,7 +440,7 @@ em {
 
 .agreement-table-heading {
   margin-top: 2em;
-  font-weight: bold;
+  font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
   font-size: 120%;
   margin-bottom: 0.3em;
 }

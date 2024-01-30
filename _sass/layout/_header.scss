@@ -182,7 +182,7 @@
 
 						&.active:not(.button) {
 							color: var(--color-active-link) !important;
-							font-weight: bold;
+							// font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
 							border-bottom: 1px dotted var(--color-active-link) !important;
 							border-radius: 0;
 						}

@@ -20,7 +20,7 @@
 		family:				('Futura Book', 'Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
-		weight-bold:		600,
+		weight-bold:		400, // 600 // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
 		letter-spacing:		0.025em,
 		letter-spacing-alt:	0.08em
 	);
