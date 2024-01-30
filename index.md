@@ -12,8 +12,7 @@ featured_image: /assets/img/social.jpg
     <div class="10u -2u -1u(large) 11u(large)">
       <h1 class="display-1">Reducing risks from advanced AI</h1>
       <p class="subheading">Arkose supports machine learning professors, PhD students, and industry researchers and engineers interested in technical AI safety research.</p>
-    </div>
-    <div class="12u -2u -1u(large) 11u(large) banner-button-container">
+    <div class="8u -2u -0u(small) 10u(small) banner-button-container">
       <a href="/apply" class="banner-button">
         Request a Call
       </a>
