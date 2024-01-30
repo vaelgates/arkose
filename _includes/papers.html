@@ -8,23 +8,18 @@
         <h2>Papers</h2>
       </header>
       <div id="paper-list">
-        {% assign categories = "Overview| Deception| Forecasting| AI Governance| Alignment <-> RLHF| Scalable oversight| Capabilities of LLMs| Research bottlenecks / limitations| Adversaries / Robustness / Generalization| Model evaluations / monitoring / detection| Reward misspecification and goal misgeneralization| Major problems (misalignment, misuse, threat models)| Transparency / Interpretability / Model internals / Latent knowledge" | split: "| " %}
-        {% assign topics = "Debate| Trojans| Security| Sycophancy| Uncertainty| Benchmarking| Model editing| Compute governance| Automated interpretability| Mechanistic interpretability| Detection of out-of-distribution or malicious behavior| Situational awareness (also instrumental convergence, inner misalignment)" | split: "| " %}
-        {% assign ml_domain_tags = "NLP| Vision| Theory| Security| Applied ML| Optimization| Domain General| Model Evaluation| Reinforcement Learning| Human Model Interaction| Robustness and Adversariality| Probabilistic Modeling and Bayesian ML" | split: "| " %}
-        {% assign ml_domain_tags_fine_grain = "NLP: LLMs| RL: Games| RL: Simulations| NLP: Summarization| Applied ML: Chatbots| Applied ML: Robotics| NLP: Language Modeling| NLP: Question Answering| Applied ML: Cognitive Tasks| Applied ML: Autonomous Vehicles| Applied ML: AI-Based Automation| Applied ML: Medicine and Health| Applied ML: Efficiency and Hardware" | split: "| " %}
-        {% assign empty = "" | split: "|" %}
-
         <div class="row mt1 mb1">
           <div class="12u">
             <input type="search" class="search form-control" placeholder="Search" />
           </div>
         </div>
         <div class="row">
-          {% include paper_filter.html field_id="category" field_display="Category" options=empty %}
-          {% include paper_filter.html field_id="topic" field_display="Topic" options=empty %}
-          {% include paper_filter.html field_id="ml_domain_tag" field_display="ML Domain Tag" options=empty %}
-          {% include paper_filter.html field_id="ml_domain_tag_fine-grain" field_display="ML Domain Tag Fine-Grain" options=empty %}
-          <div class="filter-list"></div>
+          {% include paper_filter.html field_id="ml_subfield" field_display="ML Subfield" options=empty %}
+          {% include paper_filter.html field_id="safety_category" field_display="Safety Category" options=empty %}
+          {% include paper_filter.html field_id="ml_subtopic" field_display="ML Subtopic" options=empty %}
+          {% include paper_filter.html field_id="safety_topic" field_display="Safety Topic" options=empty %}
+          {% include paper_filter.html field_id="type" field_display="Type" options=empty %}
+          <div class="12u filter-list"></div>
         </div>
         <div class="results-count">
           <span class="results-count-text"><span class="results-count-number">0</span> results</span>
@@ -38,7 +33,7 @@
 <div class="hidden">
   <li id="paper-item" class="paper-item">
     <div class="title-container">
-      <img class="medium-icon image" />
+      <img class="type-icon image" />
       <h3 class="Title"></h3>
     </div>
     <div class="detail-opener">
@@ -47,10 +42,11 @@
       </svg>
     </div>
     <div class="detail">
-      <div class="CategoryDisplay"></div>
-      <div class="ML Domain TagDisplay"></div>
-      <div class="ML Domain Tag Fine-GrainDisplay"></div>
-      <div class="TopicDisplay"></div>
+      <div class="ML SubfieldDisplay"></div>
+      <div class="ML SubtopicDisplay"></div>
+      <div class="Safety CategoryDisplay"></div>
+      <div class="Safety TopicDisplay"></div>
+      <div class="TypeDisplay"></div>
       <div class="TwitterDisplay"></div>
       <div class="Blog or VideoDisplay"></div>
       <div class="Supplementary MaterialDisplay"></div>
@@ -63,25 +59,28 @@
 <script>
   var papersList;
   const filters = {
-    Category: new Set(),
-    Topic: new Set(),
-    "ML Domain Tag": new Set(),
-    "ML Domain Tag Fine-Grain": new Set(),
+    "Safety Category": new Set(),
+    "Safety Topic": new Set(),
+    "ML Subfield": new Set(),
+    "ML Subtopic": new Set(),
+    "Type": new Set(),
   }
   const filterOptions = {
-    Category: new Set(),
-    Topic: new Set(),
-    "ML Domain Tag": new Set(),
-    "ML Domain Tag Fine-Grain": new Set(),
+    "Safety Category": new Set(),
+    "Safety Topic": new Set(),
+    "ML Subfield": new Set(),
+    "ML Subtopic": new Set(),
+    "Type": new Set(),
   }
 
   const options = {
     valueNames: [
       'Title',
-      'TopicDisplay',
-      'Category',
-      'CategoryDisplay',
-      'Medium',
+      'Safety TopicDisplay',
+      'Safety Category',
+      'Safety CategoryDisplay',
+      'Type',
+      'TypeDisplay',
       'Twitter',
       'TwitterDisplay',
       "Blog or Video",
@@ -90,10 +89,10 @@
       "Supplementary MaterialDisplay",
       "Transcripts / Audio / Slides",
       "Transcripts / Audio / SlidesDisplay",
-      "ML Domain Tag",
-      "ML Domain TagDisplay",
-      "ML Domain Tag Fine-Grain",
-      "ML Domain Tag Fine-GrainDisplay",
+      "ML Subfield",
+      "ML SubfieldDisplay",
+      "ML Subtopic",
+      "ML SubtopicDisplay",
       "Abstract",
       "AbstractDisplay",
       { attr: 'src', name: 'image' }
@@ -108,17 +107,20 @@
       const darkMode =  (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
       const modeStr = darkMode ? '-dark' : ''
 
-      if (paper.Medium.length > 1 && paper.Medium.includes("Paper")) {
+      if (!paper.Type) {
+        paper.image = `/assets/images/medium/other${modeStr}.svg`;
+      } else if (paper.Type.length > 1 && paper.Type.includes("Paper")) {
         paper.image = `/assets/images/medium/paper${modeStr}.svg`;
       } else {
-        paper.image = `/assets/images/medium/${paper.Medium[0].toLowerCase()}${modeStr}.svg`;
+        paper.image = `/assets/images/medium/${paper.Type[0].toLowerCase()}${modeStr}.svg`;
       }
-      paper.CategoryDisplay = paper.Category.map(item => `<span class="field-single category-single">${item}</span>`).join('');
-      paper.Topic = paper.Topic ?? [];
-      paper.TopicDisplay = paper.Topic.map(item => `<span class="field-single topic-single">${item}</span>`).join('');
-      paper['ML Domain TagDisplay'] = paper['ML Domain Tag'].map(tag => `<span class="field-single ml-domain-tag-single">${tag}</span>`).join('');
-      paper['ML Domain Tag Fine-Grain'] = paper['ML Domain Tag (Fine-Grain)'] ?? [];
-      paper['ML Domain Tag Fine-GrainDisplay'] = paper['ML Domain Tag Fine-Grain'].map(tag => `<span class="field-single ml-domain-fine-grain-tag-single">${tag}</span>`).join('');
+      paper['Safety CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single safety-category-single">${item}</span>`).join('');
+      paper['Safety Topic'] = paper['Safety Topic'] ?? [];
+      paper['Safety TopicDisplay'] = paper['Safety Topic'].map(item => `<span class="field-single safety-topic-single">${item}</span>`).join('');
+      paper['ML SubfieldDisplay'] = paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
+      paper['ML Subtopic'] = paper['ML Subtopic'] ?? [];
+      paper['ML SubtopicDisplay'] = paper['ML Subtopic'].map(tag => `<span class="field-single ml-subtopic-single">${tag}</span>`).join('');
+      paper['TypeDisplay'] = paper['Type'].map(tag => `<span class="field-single type-single">${tag}</span>`).join('');
       paper.Title = linkify(paper.Link, paper.Title.replace("\n", ''));
       paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
       paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
