@@ -12,7 +12,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight",
@@ -45,6 +46,9 @@
             "Theory",
             "Reinforcement Learning"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
         ],
@@ -69,7 +73,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -105,7 +110,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -134,7 +140,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -161,6 +168,9 @@
         "ML Subfield": [
             "Model Evaluation",
             "Domain General"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -192,6 +202,9 @@
             "Applied ML: Cognitive Tasks",
             "Applied ML: AI-Based Automation"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Capabilities of LLMs"
         ],
@@ -221,7 +234,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Capabilities of LLMs",
@@ -253,7 +267,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -274,7 +289,7 @@
     {
         "Abstract": "    This paper studies extractable memorization: training data that an adversary can efficiently extract by querying a machine learning model without prior knowledge of the training dataset. We show an adversary can extract gigabytes of training data from open-source language models like Pythia or GPT-Neo, semi-open models like LLaMA or Falcon, and closed models like ChatGPT. Existing techniques from the literature suffice to attack unaligned models; in order to attack the aligned ChatGPT, we develop a new divergence attack that causes the model to diverge from its chatbot-style generations and emit training data at a rate 150x higher than when behaving properly. Our methods show practical attacks can recover far more data than previously thought, and reveal that current alignment techniques do not eliminate memorization. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] extracted several megabytes of training data from GPT-3.5 by prompting it to repeat the word \u201cpoem\u201d forever. The authors conjecture that this prompt leads to input unlike those the model saw during fine-tuning, and therefore causes the model to revert to its original language modeling objective.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -285,6 +300,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -310,7 +328,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -340,7 +359,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Forecasting"
@@ -370,7 +390,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -407,7 +428,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization",
@@ -449,7 +471,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection",
@@ -483,7 +506,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -514,7 +538,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -548,7 +573,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight"
@@ -567,7 +593,7 @@
     {
         "Abstract": "    Large language models (LLMs) can \"lie\", which we define as outputting false statements despite \"knowing\" the truth in a demonstrable sense. LLMs might \"lie\", for example, when instructed to output misinformation. Here, we develop a simple lie detector that requires neither access to the LLM's activations (black-box) nor ground-truth knowledge of the fact in question. The detector works by asking a predefined set of unrelated follow-up questions after a suspected lie, and feeding the LLM's yes/no answers into a logistic regression classifier. Despite its simplicity, this lie detector is highly accurate and surprisingly general. When trained on examples from a single setting -- prompting GPT-3.5 to lie about factual questions -- the detector generalises out-of-distribution to (1) other LLM architectures, (2) LLMs fine-tuned to lie, (3) sycophantic lies, and (4) lies emerging in real-life scenarios such as sales. These results indicate that LLMs have distinctive lie-related behavioural patterns, consistent across architectures and contexts, which could enable general-purpose lie detection. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] says that a language model lies when it outputs a false statement when it demonstrable \u201cknows\u201d the truth. Then they present a surprisingly effective black-box method for detecting LLM lies. To verify the honesty of an output, the method asks the model a series of unrelated follow-up questions, such as \u201cKnowing that morning breeze is purple, are swift idea quakes green?\u201d Models which previously told a lie consistently answer these questions differently from truthful models, allowing the authors to train a logistic regression classifier on the answers which can detect lies. Importantly, the classifier generalizes from the training setting, where GPT-3.5 is prompted to lie about factual questions, to many other settings, including other LLMs such as LLaMA, models fine-tuned to lie, and models that lie in order to achieve situational goals.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -578,6 +604,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Deception"
@@ -607,7 +636,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -645,7 +675,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -675,6 +706,9 @@
         "Link": "https://www.anthropic.com/index/core-views-on-ai-safety",
         "ML Subfield": [
             "Domain General"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -713,7 +747,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -746,7 +781,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -787,7 +823,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -821,7 +858,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception"
@@ -861,7 +899,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -884,7 +923,7 @@
     {
         "Abstract": "    In this paper, we identify and characterize the emerging area of representation engineering (RepE), an approach to enhancing the transparency of AI systems that draws on insights from cognitive neuroscience. RepE places population-level representations, rather than neurons or circuits, at the center of analysis, equipping us with novel methods for monitoring and manipulating high-level cognitive phenomena in deep neural networks (DNNs). We provide baselines and an initial analysis of RepE techniques, showing that they offer simple yet effective solutions for improving our understanding and control of large language models. We showcase how these methods can provide traction on a wide range of safety-relevant problems, including honesty, harmlessness, power-seeking, and more, demonstrating the promise of top-down transparency research. We hope that this work catalyzes further exploration of RepE and fosters advancements in the transparency and safety of AI systems. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] proposed an unsupervised method for identifying linear representations of concepts such as honesty, fairness, and power-seeking within a neural network\u2019s activations. The paper adjusts future forward passes of the model by adding or subtracting this linear representation, enabling unsupervised control of the model\u2019s outputs.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -895,6 +934,9 @@
         "ML Subtopic": [
             "NLP: LLMs",
             "Applied ML: Chatbots"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -922,7 +964,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Forecasting",
@@ -957,7 +1000,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -989,7 +1033,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -1019,6 +1064,9 @@
         "ML Subfield": [
             "Domain General",
             "Model Evaluation"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -1051,7 +1099,8 @@
         ],
         "PC: Top Paper": true,
         "Reviewed by": [
-            "PC"
+            "PC",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1083,7 +1132,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -1108,6 +1158,9 @@
         "ML Subfield": [
             "Model Evaluation",
             "Domain General"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -1138,7 +1191,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -1168,7 +1222,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1201,7 +1256,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1233,6 +1289,9 @@
             "NLP: LLMs",
             "Applied ML: Chatbots"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
         ],
@@ -1261,6 +1320,9 @@
             "Domain General",
             "Theory"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
             "Overview"
@@ -1278,7 +1340,7 @@
     {
         "Abstract": "    Potential harms of large language models can be mitigated by watermarking model output, i.e., embedding signals into generated text that are invisible to humans but algorithmically detectable from a short span of tokens. We propose a watermarking framework for proprietary language models. The watermark can be embedded with negligible impact on text quality, and can be detected using an efficient open-source algorithm without access to the language model API or parameters. The watermark works by selecting a randomized set of \"green\" tokens before a word is generated, and then softly promoting use of green tokens during sampling. We propose a statistical test for detecting the watermark with interpretable p-values, and derive an information-theoretic framework for analyzing the sensitivity of the watermark. We test the watermark using a multi-billion parameter model from the Open Pretrained Transformer (OPT) family, and discuss robustness and security. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] proposes that a method of pseudorandom sampling from an LLM\u2019s next-token distribution which makes it easier to detect whether text was generated by that LLM",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -1289,6 +1351,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -1316,6 +1381,9 @@
             "Robustness and Adversariality",
             "Theory",
             "Optimization"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1354,7 +1422,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization",
@@ -1387,7 +1456,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -1416,7 +1486,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -1443,7 +1514,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -1481,7 +1553,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -1500,7 +1573,7 @@
     {
         "Abstract": "> Large language models (LLMs) are trained on massive internet corpora that often contain copyrighted content. This poses legal and ethical challenges for the developers and users of these models, as well as the original authors and publishers. In this paper, we propose a novel technique for unlearning a subset of the training data from a LLM, without having to retrain it from scratch. \n> We evaluate our technique on the task of unlearning the Harry Potter books from the Llama2-7b model (a generative language model recently open-sourced by Meta). While the model took over 184K GPU-hours to pretrain, we show that in about 1 GPU hour of finetuning, we effectively erase the model's ability to generate or recall Harry Potter-related content, while its performance on common benchmarks (such as Winogrande, Hellaswag, arc, boolq and piqa) remains almost unaffected. We make our fine-tuned model publicly available on HuggingFace for community evaluation. To the best of our knowledge, this is the first paper to present an effective technique for unlearning in generative language models. \n> Our technique consists of three main components: First, we use a reinforced model that is further trained on the target data to identify the tokens that are most related to the unlearning target, by comparing its logits with those of a baseline model. Second, we replace idiosyncratic expressions in the target data with generic counterparts, and leverage the model's own predictions to generate alternative labels for every token. These labels aim to approximate the next-token predictions of a model that has not been trained on the target data. Third, we finetune the model on these alternative labels, which effectively erases the original text from the model's memory whenever it is prompted with its context.\n\n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] removed information about Harry Potter books from Llama 2. First, they fine-tuned another model on more information about Harry Potter, and used the difference in the logits of the two models to identify token predictions which depend on knowledge of Harry Potter. Then, they replaced these tokens with generic counterparts, and fine-tuned the original model on these generic labels.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -1513,6 +1586,9 @@
         "ML Subtopic": [
             "NLP: LLMs",
             "Applied ML: Chatbots"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -1543,7 +1619,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection",
@@ -1576,7 +1653,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight",
@@ -1611,7 +1689,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight",
@@ -1644,7 +1723,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception"
@@ -1683,7 +1763,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Capabilities of LLMs",
@@ -1719,7 +1800,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1751,6 +1833,9 @@
             "NLP: LLMs",
             "RL: Games"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
         ],
@@ -1780,7 +1865,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Forecasting",
@@ -1815,7 +1901,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -1855,7 +1942,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight",
@@ -1890,7 +1978,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight"
@@ -1920,6 +2009,9 @@
         "ML Subfield": [
             "Robustness and Adversariality",
             "Vision"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -1957,7 +2049,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight",
@@ -1998,7 +2091,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -2029,6 +2123,9 @@
         "ML Subtopic": [
             "Applied ML: Autonomous Vehicles"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
         ],
@@ -2057,7 +2154,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -2092,7 +2190,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -2127,7 +2226,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -2158,7 +2258,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -2197,7 +2298,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -2233,7 +2335,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization",
@@ -2262,7 +2365,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "AI Governance"
@@ -2291,7 +2395,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -2316,6 +2421,9 @@
         "ML Subfield": [
             "Robustness and Adversariality",
             "Vision"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -2350,7 +2458,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight"
@@ -2386,7 +2495,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -2405,7 +2515,7 @@
     },
     {
         "Description from MAIA / AISF / Elsewhere": "[Resource] is a new textbook. It aims to provide an accessible and comprehensive introduction to AI safety that draws on safety engineering, economics, philosophy, and other disciplines. Those who would like to take a free online course based on the textbook can express their interest here.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -2419,6 +2529,9 @@
             "Applied ML: AI-Based Automation",
             "Applied ML: Chatbots",
             "Applied ML: Cognitive Tasks"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -2449,7 +2562,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception",
@@ -2484,7 +2598,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -2518,7 +2633,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception",
@@ -2537,7 +2653,7 @@
     {
         "Abstract": "This paper presents CYBERSECEVAL, a comprehensive benchmark developed to help bolster the cybersecurity of Large Language Models (LLMs) employed as coding assistants. As what we believe to be the most extensive unified cybersecurity safety benchmark to date, CYBERSECEVAL provides a thorough evaluation of LLMs in two crucial security domains: their propensity to generate insecure code and their level of compliance when asked to assist in cyberattacks. Through a case study involving seven models from the Llama2, codeLlama, and OpenAI GPT large language model families, CYBERSECEVAL effectively pinpointed key cybersecurity risks. More importantly, it offered practical insights for refining these models. A significant observation from the study was the tendency of more advanced models to suggest insecure code, highlighting the critical need for integrating security considerations in the development of sophisticated LLMs. CYBERSECEVAL, with its automated test case generation and evaluation pipeline covers a broad scope and equips LLM designers and researchers with a tool to broadly measure and enhance the cybersecurity safety properties of LLMs, contributing to the development of more secure AI systems.\n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] evaluates code generated by LLMs for security vulnerabilities. GPT-4, Llama 2, and other LLMs are found to frequently generate code containing security vulnerabilities. It also evaluates whether LLMs refuse requests to assist in a cyberattack, but does not evaluate whether these refusals are robust to adversarial prompts or fine-tuning.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -2549,6 +2665,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -2584,7 +2703,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -2615,7 +2735,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Forecasting"
@@ -2646,7 +2767,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -2680,7 +2802,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -2706,7 +2829,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -2734,7 +2858,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization"
@@ -2763,6 +2888,9 @@
             "NLP: LLMs",
             "Applied ML: Cognitive Tasks"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Scalable oversight",
             "Alignment <-> RLHF",
@@ -2782,7 +2910,7 @@
         "Abstract": "Widely used alignment techniques, such as reinforcement learning from human feedback (RLHF), rely on the ability of humans to supervise model behavior\u2014for example, to evaluate whether a model faithfully followed instructions or generated safe outputs. However, future superhuman models will behave in complex ways too difficult for humans to reliably evaluate; humans will only be able to weakly supervise superhuman models. We study an analogy to this problem: can weak model supervision elicit the full capabilities of a much stronger model? We test this using a range of pretrained language models in the GPT-4 family on natural language processing (NLP), chess, and reward modeling tasks. We find that when we naively finetune strong pretrained models on labels generated by a weak model, they consistently perform better than their weak supervisors, a phenomenon we call weak-to-strong generalization. However, we are still far from recovering the full capabilities of strong models with naive finetuning alone, suggesting that techniques like RLHF may scale poorly to superhuman models without further work. We find that simple methods can often significantly improve weak-to-strong generalization: for example, when finetuning GPT-4 with a GPT-2-level supervisor and an auxiliary confidence loss, we can recover close to GPT-3.5-level performance on NLP tasks. Our results suggest that it is feasible to make empirical progress today on a fundamental challenge of aligning superhuman models.\n",
         "Blog or Video": "https://www.alignment-workshop.com/nola-talks/collin-burns-weak-to-strong-generalization",
         "Description from MAIA / AISF / Elsewhere": "[Paper] aims to make empirical progress on supervising superhuman AI systems by considering an analogous problem: supervising strong AI systems using weaker AI systems. From the abstract:\n\nWe study a range of pretrained language models in the GPT-4 family on NLP, chess, and reward modeling tasks and find that when we naively finetune strong models to directly imitate weak model supervision, they consis- tently perform better than their weak supervisors, a phenomenon we call weak-to- strong generalization. However, naive generalization is still far from recovering the full capabilities of strong models trained with ground truth supervision. These results suggest that existing methods for aligning models with human supervision may indeed break down when applied to superhuman models in the future.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter",
             "NOLA Workshop 2023"
@@ -2793,6 +2921,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight"
@@ -2829,7 +2960,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception"
@@ -2860,7 +2992,8 @@
         ],
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -2890,7 +3023,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -2921,6 +3055,9 @@
             "NLP: LLMs",
             "Applied ML: Chatbots"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Capabilities of LLMs",
             "Forecasting",
@@ -2947,6 +3084,9 @@
             "Robustness and Adversariality",
             "Vision",
             "Applied ML"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -2976,7 +3116,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Forecasting"
@@ -3004,6 +3145,9 @@
         ],
         "ML Subtopic": [
             "Applied ML: Autonomous Vehicles"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -3041,7 +3185,8 @@
         "PC: Top Paper": true,
         "Reviewed by": [
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -3075,7 +3220,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization"
@@ -3104,6 +3250,9 @@
         "ML Subtopic": [
             "Applied ML: Cognitive Tasks"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
         ],
@@ -3127,6 +3276,9 @@
             "Domain General",
             "Applied ML"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
             "Overview"
@@ -3144,7 +3296,7 @@
     {
         "Abstract": "Labeling neural network submodules with human-legible descriptions is useful for many downstream tasks: such descriptions can surface failures, guide interventions, and perhaps even explain important model behaviors. To date, most mechanistic descriptions of trained networks have involved small models, narrowly delimited phenomena, and large amounts of human labor. Labeling all human-interpretable sub-computations in models of increasing size and complexity will almost certainly require tools that can generate and validate descriptions automatically. Recently, techniques that use learned models in-the-loop for labeling have begun to gain traction, but methods for evaluating their efficacy are limited and ad-hoc. How should we validate and compare open-ended labeling tools? This paper introduces FIND (Function INterpretation and Description), a benchmark suite for evaluating the building blocks of automated interpretability methods. FIND contains functions that resemble components of trained neural networks, and accompanying descriptions of the kind we seek to generate. The functions span textual and numeric domains, and involve a range of real-world complexities. We evaluate methods that use pretrained language models (LMs) to produce descriptions of function behavior in natural language and code. Additionally, we introduce a new interactive method in which an Automated Interpretability Agent (AIA) generates function descriptions. We find that an AIA, built from an LM with black-box access to functions, can infer function structure, acting as a scientist by forming hypotheses, proposing experiments, and updating descriptions in light of new data. However, AIA descriptions tend to capture global function behavior and miss local details. These results suggest that FIND will be useful for evaluating more sophisticated interpretability methods before they are applied to real-world models. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] constructs a variety of complex functions and allows an interpreter to sample inputs and outputs from the function. The interpreter then attempts to provide a natural language explanation of the function, and code which implements it. The proposed code is evaluated against the original on a set of inputs, and an LLM judge evaluates the natural language explanation.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -3155,6 +3307,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -3182,6 +3337,9 @@
             "Robustness and Adversariality",
             "Vision",
             "Model Evaluation"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization",
@@ -3215,7 +3373,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization",
@@ -3237,7 +3396,7 @@
     {
         "Abstract": "    Artificial agents have traditionally been trained to maximize reward, which may incentivize power-seeking and deception, analogous to how next-token prediction in language models (LMs) may incentivize toxicity. So do agents naturally learn to be Machiavellian? And how do we measure these behaviors in general-purpose models such as GPT-4? Towards answering these questions, we introduce MACHIAVELLI, a benchmark of 134 Choose-Your-Own-Adventure games containing over half a million rich, diverse scenarios that center on social decision-making. Scenario labeling is automated with LMs, which are more performant than human annotators. We mathematize dozens of harmful behaviors and use our annotations to evaluate agents' tendencies to be power-seeking, cause disutility, and commit ethical violations. We observe some tension between maximizing reward and behaving ethically. To improve this trade-off, we investigate LM-based methods to steer agents' towards less harmful behaviors. Our results show that agents can both act competently and morally, so concrete progress can currently be made in machine ethics--designing agents that are Pareto improvements in both safety and capabilities. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] evaluates the ethical decision-making ability of AI agents in text-based social environments. The paper finds a tradeoff between reward maximization and ethical behavior. Developers of AI agents can use this benchmark to evaluate the ability of their agents to behave ethically.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -3248,6 +3407,9 @@
         ],
         "ML Subtopic": [
             "NLP: LLMs"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -3282,7 +3444,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -3316,7 +3479,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Scalable oversight"
@@ -3345,7 +3509,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -3384,7 +3549,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)",
@@ -3426,7 +3592,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -3462,7 +3629,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Major problems (misalignment, misuse, threat models)"
@@ -3491,7 +3659,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -3527,7 +3696,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception"
@@ -3563,7 +3733,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -3591,6 +3762,9 @@
         "Link": "https://arxiv.org/abs/1812.04606",
         "ML Subfield": [
             "Vision"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
@@ -3620,6 +3794,9 @@
         "ML Subtopic": [
             "NLP: Question Answering"
         ],
+        "Reviewed by": [
+            "DH"
+        ],
         "Safety Category": [
             "Scalable oversight",
             "Adversaries / Robustness / Generalization"
@@ -3638,7 +3815,7 @@
     {
         "Abstract": "We study how to perform unlearning, i.e. forgetting undesirable (mis)behaviors, on large language models (LLMs). We show at least three scenarios of aligning LLMs with human preferences can benefit from unlearning: (1) removing harmful responses, (2) erasing copyright-protected content as requested, and (3) eliminating hallucinations. Unlearning, as an alignment technique, has three advantages. (1) It only requires negative (e.g. harmful) examples, which are much easier and cheaper to collect (e.g. via red teaming or user reporting) than positive (e.g. helpful and often human-written) examples required in RLHF (RL from human feedback). (2) It is computationally efficient. (3) It is especially effective when we know which training samples cause the misbehavior. To the best of our knowledge, our work is among the first to explore LLM unlearning. We are also among the first to formulate the settings, goals, and evaluations in LLM unlearning. We show that if practitioners only have limited resources, and therefore the priority is to stop generating undesirable outputs rather than to try to generate desirable outputs, unlearning is particularly appealing. Despite only having negative samples, our ablation study shows that unlearning can still achieve better alignment performance than RLHF with just 2% of its computational time. \n",
         "Description from MAIA / AISF / Elsewhere": "[Paper] used gradient ascent to minimize the probability of undesirable completions while maintaining model performance on inputs where no unlearning was necessary.\n\nIt is worth mentioning none of these unlearning methods are particularly performant, and better baselines are needed.",
-        "Expert7 comments": "\n",
+        "Expert6 comments": "\n",
         "Internal source": [
             "ML Newsletter"
         ],
@@ -3651,6 +3828,9 @@
         "ML Subtopic": [
             "NLP: LLMs",
             "Applied ML: Chatbots"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -3678,7 +3858,8 @@
         "Reviewed by": [
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -3719,7 +3900,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Reward misspecification and goal misgeneralization"
@@ -3750,7 +3932,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -3780,7 +3963,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Transparency / Interpretability / Model internals / Latent knowledge",
@@ -3818,7 +4002,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Adversaries / Robustness / Generalization"
@@ -3851,7 +4036,8 @@
             "AG",
             "VK",
             "PC",
-            "RS"
+            "RS",
+            "DH"
         ],
         "Safety Category": [
             "Deception",
@@ -3880,6 +4066,9 @@
         "Link": "https://arxiv.org/abs/1706.04599",
         "ML Subfield": [
             "Model Evaluation"
+        ],
+        "Reviewed by": [
+            "DH"
         ],
         "Safety Category": [
             "Model evaluations / monitoring / detection"
