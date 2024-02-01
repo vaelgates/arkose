@@ -42,7 +42,7 @@ jobs:
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         rm export/papers.json
-        jq 'del(.[] | ."Reviewed by")' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
+        jq 'del(.[] | ."Reviewed by", ."Vael\'s Notes", ."Internal source", ."Who tagged for ML", ."airtable_createdTime", ."airtable_id")' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
         git status
 
     - if: steps.file-check.outputs.changed == 'true'
