@@ -42,7 +42,7 @@ jobs:
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         rm export/papers.json
-        jq 'del(.[] | ."Reviewed by", ."Vael'\''s Notes", ."Internal source", ."Who tagged for ML", ."airtable_createdTime", ."airtable_id")' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
+        jq '[.[] | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Safety Category": (."Safety Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
         git status
 
     - if: steps.file-check.outputs.changed == 'true'
@@ -56,7 +56,7 @@ jobs:
 
     - if: steps.file-check.outputs.changed == 'true'
       run: |
-        git commit -v -m "Update papers.json"
+        git commit --no-verify -v -m "Update papers.json"
 
     - if: steps.file-check.outputs.changed == 'true'
       run: |
