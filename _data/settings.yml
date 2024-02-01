@@ -10,15 +10,19 @@ menu_settings:
     #       url: '/perspectives/introduction'
     #     - title: 'Interviews'
     #       url: '/interviews'
+    - title: About
+      url: '/about'
     - title: Papers
       url: '/papers'
     - title: Resource Center
       shorttitle: Resources
       url: '/resources'
     - title: 'Request a Call'
-      url: '/apply'
+      url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z'
+      # this isn't working: {{site.applyur}}'
       button: true
+      hidden: false
     # - title: 'Apply For A Call'
-    #   url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shrYnJIdu4kvWd2pB'
+    #   url: '/apply'
     #   button: true
     #   hidden: true
