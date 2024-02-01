@@ -16,6 +16,8 @@ jobs:
         node-version: [18.x]
     steps:
     - uses: actions/checkout@v3
+    - name: Install jq
+      run: sudo apt-get update && sudo apt-get install -y jq
     - run: pip install airtable-export
     - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
 
@@ -39,20 +41,10 @@ jobs:
     # Conditionally execute the remaining steps
     - if: steps.file-check.outputs.changed == 'true'
       run: |
-        git status
         rm export/papers.json
-        cp export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json
-        pwd
+        jq 'del(.[] | ."Reviewed by")' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
         git status
 
-    - if: steps.file-check.outputs.changed == 'true'
-      run: |
-        if test -f export/papers.json; then
-          echo "papers.json exists after move."
-        else
-          echo "papers.json doesn't exist after move."
-        fi
-      
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         git config user.name "Michael Keenan"
