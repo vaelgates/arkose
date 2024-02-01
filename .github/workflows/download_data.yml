@@ -25,16 +25,12 @@ jobs:
     - name: Check if the table data has changed
       id: file-check
       run: |
-        if test -f export/${{ secrets.AIRTABLE_TABLE }}.json; then
-          if cmp -s export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json; then
-            echo "No changes in papers.json, aborting job."
-            echo "::set-output name=changed::false"
-          else
-            echo "Changes detected in papers.json."
-            echo "::set-output name=changed::true"
-          fi
+        jq '[.[] | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Safety Category": (."Safety Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/paperstmp.json
+        if cmp -s export/paperstmp.json export/papers.json; then
+          echo "No changes in papers.json, aborting job."
+          echo "::set-output name=changed::false"
         else
-          echo "papers.json does not exist, proceeding with job."
+          echo "Changes detected in papers.json."
           echo "::set-output name=changed::true"
         fi
 
@@ -42,7 +38,7 @@ jobs:
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         rm export/papers.json
-        jq '[.[] | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Safety Category": (."Safety Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/papers.json
+        mv export/paperstmp.json export/papers.json
         git status
 
     - if: steps.file-check.outputs.changed == 'true'
