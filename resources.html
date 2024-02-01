@@ -9,68 +9,16 @@ order: 4
 <!-- Main -->
 <div id="main" class="alt">
 
-<!-- One -->
 <section>
 	<div class="inner">
-		<header class="major">
-			<h1>Resource Center</h1>
-		</header>
-
-    <h2 id="readings">Readings</h2>
-    
-    <h3 id="papers">Selection of Key Technical Safety Papers</h3>
-
-		<div class="iframe-container">
-			<iframe id="key_papers" onload="iframeLoaded('iframe_loading_spinner_key_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrwwWZNAfTkrHP4h?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-			<div id="iframe_loading_spinner_key_papers" class="iframe-loading">
-				{% include loading_spinner.html %}
-			</div>
-		</div>
-
-    <a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
-
-    <h3 class="mt2" style="clear:both" id="content">Content on Risks from Advanced AI</h3>
-    <ul>
-      <li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
-      <li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
-      <li><a href="https://arxiv.org/pdf/2209.00626.pdf">The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022), <a href="https://twitter.com/RichardMCNgo/status/1603862969276051457"><i>Twitter thread</i></a></li>
-      <li><a href="https://arxiv.org/pdf/2302.10329.pdf">Harms from Increasingly Agentic Algorithmic Systems</a> (Chan et al., 2023)</li>
-      <li><a href="https://www.safe.ai/ai-risk">An Overview of Catastrophic AI Risks</a> (Hendrycks et al., 2023)</li>
-      <li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>
-      <!--<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>-->
-    </ul>
-
-    <h3 class="mt2" id="newsletters">Newsletters</h3>
-    <ul>
-      <li><a href="https://us13.campaign-archive.com/home/?u=67bd06787e84d73db24fb0aa5&id=6c9d98ff2c">Import AI</a> by Jack Clark, <i>for keeping up to date on AI progress</i></li>
-      <li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> by the Center for AI Safety, <i>for recent AI safety papers</i></li>
-      <li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> by Rohin Shah, <i>for review of AI safety papers, on hiatus</i></li>
-    </ul>
-
-    <h3 class="mt2" id="expanded_papers">Expanded List of Technical Safety Papers</h3>
-		<div class="iframe-container">
-			<iframe id="expanded_papers" onload="iframeLoaded('iframe_loading_spinner_expanded_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrRa6f9B1p27NYer?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-			<div id="iframe_loading_spinner_expanded_papers" class="iframe-loading">
-				{% include loading_spinner.html %}
-			</div>
-		</div>
-
-    <a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
-    
-    <br>
-
-  </div>
-</section>
-
-<section class="bg-gray">
-	<div class="inner">
+		<h1>Resource Center</h1>
 		<h2 id="opportunities">Opportunities</h2>
 		<!--<p>Organizations and researchers in the space, funding and job opportunities, and guides to get involved</p>-->
 
 
 		<h3 id="research_opportunities">Research and Engineering Opportunities</h3>
 		<ul>
-			<li class="expandable expanded">OpenAI
+			<li class="expandable">OpenAI
 				<ul>
 						<ul>
 							<li><a href="https://openai.com/safety/safety-systems">Safety Systems Team</a> (<a href="https://openai.com/careers/search?c=safety-systems">roles</a>)</li>
@@ -80,18 +28,23 @@ order: 4
 						  
 				</ul>
 			</li>
-			<li class="expandable expanded">Anthropic (<a href="https://www.anthropic.com/careers#open-roles">roles</a>)
+			<li class="expandable">Anthropic (<a href="https://www.anthropic.com/careers#open-roles">roles</a>)
 				<ul>
 					<li><a href="https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety">Frontier Red Team</a></li>
 					<li><a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy">Responsible Scaling Policy Team</a></li>
 					<li><a href="https://www.alignmentforum.org/posts/EPDSdXr8YbsDkgsDG/introducing-alignment-stress-testing-at-anthropic">Alignment Stress Testing Team</a></li>
 					<li>Interpretability Team</li>
 					<li>Dangerous Capability Evaluations Team</li>
+					<li>Assurance Team</li>
+					<li>Security Team</li>
 				</ul>
 			</li>
-			<li class="expandable expanded"> Google DeepMind (<a href="https://deepmind.google/about/careers/#open-roles">roles</a>)
+			<li class="expandable"> Google DeepMind (<a href="https://deepmind.google/about/careers/#open-roles">roles</a>)
 				<ul>
 					<li><a href="https://deepmind.google/about/responsibility-safety/#:~:text=To%20empower%20teams%20to%20pioneer,and%20collaborations%20against%20our%20AI">Responsibility & Safety Team</a></li>
+					<li>Scalable Alignment Team</li>
+					<li>Frontier Model and Governance Team</li>
+					<li>Mechanistic Interpretability Team</li>
 				</ul>
 			</li>
 			<li><a href="https://far.ai/">FAR AI</a> (<a href="https://far.ai/jobs">roles</a>)</li>
@@ -110,9 +63,18 @@ order: 4
 
 		<h3 id="alternative_opportunities">Alternative Technical Opportunities</h3>
 		<ul>
-			<li>Theoretical research: <a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a>, <a href="https://intelligence.org/careers/">Machine Intelligence Research Institute (MIRI)</a> </li>
-			<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a>, <a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> see especially <a href="https://epochai.org/careers">Epoch</a>, <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
-			<li>Technical Governance (from <a href="https://web.archive.org/web/20231012161714/https://www.openphilanthropy.org/research/new-roles-on-our-gcr-team/#4-ai-governance-and-policy-aigp"> Section 4.3</a>): Technical work that primarily aims to improve the efficacy of AI governance interventions, including compute governance, technical mechanisms for improving AI coordination and regulation, privacy-preserving transparency mechanisms, technical standards development, model evaluations, and information security. </li>
+			<li class="expandable">Theoretical research
+				<ul>
+					<li><a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a></li>
+					<li><a href="https://intelligence.org/careers/">Machine Intelligence Research Institute (MIRI)</a> </li>
+				</ul>
+			<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Information%20security">Information Security</a></li>
+			<li><a href="https://jobs.80000hours.org/?query=Forecasting&refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy">Forecasting</a> (see especially <a href="https://epochai.org/careers">Epoch</a>)</li>
+			<li><a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_skill%5D%5B0%5D=Software%20engineering">Software engineering</a></li>
+			<li class="expandable">Technical Governance (from <a href="https://web.archive.org/web/20231012161714/https://www.openphilanthropy.org/research/new-roles-on-our-gcr-team/#4-ai-governance-and-policy-aigp"> Section 4.3</a>)
+				<ul>
+					<li>Technical work that primarily aims to improve the efficacy of AI governance interventions, including compute governance, technical mechanisms for improving AI coordination and regulation, privacy-preserving transparency mechanisms, technical standards development, model evaluations, and information security. </li>
+				</ul>
 		</ul>
 <!--
 		<h3 id="alternative_opportunities">Example of expandable lists</h3>
@@ -162,14 +124,14 @@ order: 4
 
 		<h3 id="funding">Funding Sources</h3>
 		<ul>
-			<li><a href="https://openai.com/">OpenAI</a>
+			<li class="expandable"><a href="https://openai.com/">OpenAI</a>
 				<ul>
 					<li><a href="https://openai.com/blog/superalignment-fast-grants">Superalignment Fast Grants</a></li>
 					<li><a href="https://openai.smapply.org/prog/agentic-ai-research-grants/">Research into Agentic AI Systems <i>(inactive)</i></a></li>
 				</ul>
 			</li>
 			<li><a href="https://new.nsf.gov/funding/opportunities/safe-learning-enabled-systems">NSF</a></li>
-			<li><a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a>
+			<li class="expandable"><a href="https://www.openphilanthropy.org/how-to-apply-for-funding/">Open Philanthropy</a>
 				<ul>
 					<li><a href="https://www.openphilanthropy.org/rfp-llm-benchmarks/">Request for proposals: benchmarking LLM agents on consequential real-world tasks</a></li>
 					<li><a href="https://www.openphilanthropy.org/rfp-llm-impacts/">Request for proposals: studying and forecasting the real-world impacts of systems built from LLMs</a></li>
@@ -194,8 +156,38 @@ order: 4
 	</div>
 </section>
 
-<section>
+<section class="bg-gray">
 	<div class="inner">
+		<h2 id="readings">Learning and Upskilling</h2>
+    
+    <h3 id="papers">Selection of Key Technical Safety Papers</h3>
+
+		<div class="iframe-container">
+			<iframe id="key_papers" onload="iframeLoaded('iframe_loading_spinner_key_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrwwWZNAfTkrHP4h?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+			<div id="iframe_loading_spinner_key_papers" class="iframe-loading">
+				{% include loading_spinner.html %}
+			</div>
+		</div>
+
+    <a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+
+    <h3 class="mt2" style="clear:both" id="content">Content on Risks from Advanced AI</h3>
+    <ul>
+      <li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
+      <li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
+      <li><a href="https://arxiv.org/pdf/2209.00626.pdf">The Alignment Problem from a Deep Learning Perspective</a> (Ngo et al., 2022), <a href="https://twitter.com/RichardMCNgo/status/1603862969276051457"><i>Twitter thread</i></a></li>
+      <li><a href="https://arxiv.org/pdf/2302.10329.pdf">Harms from Increasingly Agentic Algorithmic Systems</a> (Chan et al., 2023)</li>
+      <li><a href="https://www.safe.ai/ai-risk">An Overview of Catastrophic AI Risks</a> (Hendrycks et al., 2023)</li>
+      <li><a href="https://bounded-regret.ghost.io/more-is-different-for-ai/">More is Different for AI</a> by Jacob Steinhardt (2022)</li>
+      <!--<li><a href="https://www.youtube.com/watch?v=yl2nlejBcg0">Researcher Perceptions of Current and Future AI</a> by Vael Gates (2022)</li>-->
+    </ul>
+
+    <h3 class="mt2" id="newsletters">Newsletters</h3>
+    <ul>
+      <li><a href="https://us13.campaign-archive.com/home/?u=67bd06787e84d73db24fb0aa5&id=6c9d98ff2c">Import AI</a> by Jack Clark, <i>for keeping up to date on AI progress</i></li>
+      <li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> by the Center for AI Safety, <i>for recent AI safety papers</i></li>
+      <li><a href="https://rohinshah.com/alignment-newsletter/">Alignment Newsletter</a> by Rohin Shah, <i>for review of AI safety papers, on hiatus</i></li>
+    </ul>
 		<h2 id="upskilling">Upskilling</h2>
 
 		<h3 id="courses">Courses</h3>
@@ -207,13 +199,15 @@ order: 4
 		<h3 id="guides">Guides</h3>
 		<ul>
 			<li> <b>Research</b>: <a href="https://aisafetyfundamentals.com/blog/alignment-careers-guide">Alignment Careers Guide</a></li>
-			<li><b>Engineering</b>: <a href="https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit?usp=sharing">Leveling Up in AI Safety Research Engineering</a></li>
+			<li class="expandable"><b>Engineering</b>
+				<ul>
+					<li><a href="https://arena-roadmap.streamlit.app/">ARENA research engineering upskilling curriculum</a></li>
+					<li><a href="https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit?usp=sharing">Leveling Up in AI Safety Research Engineering</a></li>
+				</ul>
+			
+			</li>
 		</ul>
-	</div>
-</section>
 
-<section class="bg-gray">
-	<div class="inner">
 		<h2 id="other">Other</h2>
 
 		<h3 id="governance">AI Governance and Policy</h3>
