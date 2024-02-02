@@ -147,7 +147,7 @@
 		}
 
 		&.major {
-			min-height: 42vh;
+			min-height: 440px;
 			max-height: 999px;
 
 			&.alt {
@@ -224,11 +224,8 @@
 			}
 
 			&.major {
-				min-height: 56vh;
+				min-height: 600px;
 				max-height: 999px;
-				@media (max-height: 700px) {
-					min-height: 62vh;
-				}
 				@media (max-height: 600px) {
 					min-height: 80vh;
 				}
