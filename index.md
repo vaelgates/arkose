@@ -10,11 +10,11 @@ featured_image: /assets/img/social.jpg
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
     <div class="8u -2u -0u(small) 11u(small)">
-      <h1 class="display-1">Reducing risks from advanced AI</h1>
+      <h1 class="display-1">Reducing risks from <span style="white-space: nowrap">advanced AI</span></h1>
       <p class="subheading">Arkose supports machine learning professors, PhD students, and industry researchers and engineers interested in technical AI safety research.</p>
     </div>
     <div class="8u -2u -0u(small) 11u(small) banner-button-container">
-      <a href="{{site.applyurl}}" class="banner-button">
+      <a href="{{site.applyurl}}" class="button banner-button request-call-button">
         Request a Call
       </a>
     </div>
@@ -30,8 +30,7 @@ featured_image: /assets/img/social.jpg
         <li><b>Connect you to potential funding opportunities and knowledge bases.</b> Depending on your technical AI safety research interests, we can connect you to grant opportunities, job options, sabbatical or residency options, and research agendas. For an overview, see our <a href="resources">Resource Center</a>.</li>
         <li><b>Discuss your AI safety interests and provide post-call support</b>. We can discuss options, provide ongoing support or accountability for your AI safety research or engineering plans, and help identify promising opportunities for you.</li>  
       </ul>
-      <a href="{{site.applyurl}}" class="button special fit">Request a Call</a> 
-      <!-- this should be like a banner-button except also isn't working -->
+      <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
   </div>
 </div>
 

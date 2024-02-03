@@ -32,7 +32,7 @@ button,
 	padding: 0 1.75em;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	white-space: nowrap;
 	position: relative;
 
@@ -204,5 +204,37 @@ button,
 		@include vendor('pointer-events', 'none');
 		cursor: default;
 		opacity: 0.25;
+	}
+
+	&.request-call-button {
+		appearance: none;
+		background-color: var(--color-arkose-green);
+		box-shadow: inset 0 0 0 2px #333;
+		color: #333;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		// font-weight: 600; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+		height: 3.5em;
+		letter-spacing: 0.08em;
+		line-height: 3.5em;
+		text-align: center;
+		white-space-collapse: collapse;
+		text-wrap: nowrap;
+		position: relative;
+		transition: background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
+		border-width: 0px;
+		border-style: initial;
+		border-color: initial;
+		border-image: initial;
+		border-radius: 5px;
+		padding: 0px 1.75em;
+		text-decoration: none;
+		min-width: fit-content;
+		&:hover {
+			background-color: var(--color-fg);
+			color: var(--color-bg);
+			box-shadow: inset 0 0 0 2px var(--color-bg);
+		}
 	}
 }

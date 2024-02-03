@@ -177,12 +177,14 @@
         $('input[name="option-type-Paper"]').prop('checked', true);
       } else {
         Object.keys(filters).forEach(function(filterType) {
-          if (params.has(filterType)) {
-            params.getAll(filterType)[0].split(',').forEach(function(filter) {
-              filters[filterType].add(filter);
-              $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
-            });
-          }
+          if (!params.has(filterType)) return
+
+          params.getAll(filterType)[0].split(',').forEach(function(filter) {
+            if (filter === '') return; // Type param can have an empty string to indicate it should *not* apply the default Type=paper
+
+            filters[filterType].add(filter);
+            $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
+          });
         });
       }
       updateList();

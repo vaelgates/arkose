@@ -16,6 +16,8 @@ jobs:
         node-version: [18.x]
     steps:
     - uses: actions/checkout@v3
+    - name: Install jq
+      run: sudo apt-get update && sudo apt-get install -y jq
     - run: pip install airtable-export
     - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
 
@@ -23,36 +25,22 @@ jobs:
     - name: Check if the table data has changed
       id: file-check
       run: |
-        if test -f export/${{ secrets.AIRTABLE_TABLE }}.json; then
-          if cmp -s export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json; then
-            echo "No changes in papers.json, aborting job."
-            echo "::set-output name=changed::false"
-          else
-            echo "Changes detected in papers.json."
-            echo "::set-output name=changed::true"
-          fi
+        jq '[.[] | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Safety Category": (."Safety Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/paperstmp.json
+        if cmp -s export/paperstmp.json export/papers.json; then
+          echo "No changes in papers.json, aborting job."
+          echo "::set-output name=changed::false"
         else
-          echo "papers.json does not exist, proceeding with job."
+          echo "Changes detected in papers.json."
           echo "::set-output name=changed::true"
         fi
 
     # Conditionally execute the remaining steps
     - if: steps.file-check.outputs.changed == 'true'
       run: |
-        git status
         rm export/papers.json
-        cp export/${{ secrets.AIRTABLE_TABLE }}.json export/papers.json
-        pwd
+        mv export/paperstmp.json export/papers.json
         git status
 
-    - if: steps.file-check.outputs.changed == 'true'
-      run: |
-        if test -f export/papers.json; then
-          echo "papers.json exists after move."
-        else
-          echo "papers.json doesn't exist after move."
-        fi
-      
     - if: steps.file-check.outputs.changed == 'true'
       run: |
         git config user.name "Michael Keenan"
@@ -64,7 +52,7 @@ jobs:
 
     - if: steps.file-check.outputs.changed == 'true'
       run: |
-        git commit -v -m "Update papers.json"
+        git commit --no-verify -v -m "Update papers.json"
 
     - if: steps.file-check.outputs.changed == 'true'
       run: |

@@ -147,7 +147,7 @@
 		}
 
 		&.major {
-			min-height: 42vh;
+			min-height: 440px;
 			max-height: 999px;
 
 			&.alt {
@@ -173,36 +173,7 @@
 		}
 
 		.banner-button {
-			appearance: none;
-			background-color: var(--color-arkose-green);
-			box-shadow: inset 0 0 0 2px #333;
-			color: #333;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 0.8em;
-			// font-weight: 600; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
-			height: 3.5em;
-			letter-spacing: 0.08em;
-			line-height: 3.5em;
-			text-align: center;
-			white-space-collapse: collapse;
-			text-wrap: nowrap;
-			position: relative;
-			transition: background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
-			border-width: 0px;
-			border-style: initial;
-			border-color: initial;
-			border-image: initial;
-			border-radius: 5px;
-			padding: 0px 1.75em;
-			text-decoration: none;
 			width: fit-content;
-			min-width: fit-content;
-			&:hover {
-				background-color: var(--color-fg);
-				color: var(--color-bg);
-				box-shadow: inset 0 0 0 2px var(--color-bg);
-			}
 
 			@include breakpoint(small) {
 				height: 2.5em;
@@ -253,11 +224,8 @@
 			}
 
 			&.major {
-				min-height: 56vh;
+				min-height: 600px;
 				max-height: 999px;
-				@media (max-height: 700px) {
-					min-height: 62vh;
-				}
 				@media (max-height: 600px) {
 					min-height: 80vh;
 				}
