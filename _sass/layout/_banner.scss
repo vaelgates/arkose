@@ -17,7 +17,7 @@
 		background-color: #c5c5bd;
 		border-bottom: 0 !important;
 		cursor: default;
-		height: 60vh;
+		height: 800px;
 		max-height: 32em;
 		min-height: 22em;
 		position: relative;
@@ -41,6 +41,17 @@
 		// 	width: 100%;
 		// 	z-index: 1;
 		// }
+
+		.background {
+			position: absolute;
+			inset: 0;
+			background-color: #000;
+			opacity: 0.5;
+			z-index: -1;
+			@include breakpoint(small) {
+				display: none;
+			}
+		}
 
 		.arkose-banner {
 			position: absolute;
@@ -76,21 +87,16 @@
 		.banner-inner {
 			width: 100%;
 			margin: 0 auto;
-			font-size: 24px;
+			font-size: 20px;
 			height: fit-content;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			
-			@include breakpoint(medium) {
-				max-width: 720px;
-			}
 		}
 
 		h1 {
-			font-size: 2.2em;
+			font-size: 1.5em;
 			color: #fff;
-			margin-bottom: 0.125em;
 		}
 
 		> .inner {
@@ -164,7 +170,6 @@
 
 		.banner-button-container {
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
 			
 			@include breakpoint(small) {
@@ -202,8 +207,7 @@
 		}
 		@include breakpoint(medium) {
 			@include padding(3em, 0, (2em, 0, 0, 0));
-			height: auto;
-			margin-bottom: -4.75em;
+			margin-bottom: -3em;
 			max-height: none;
 			min-height: 0;
 			top: -2.75em;
@@ -235,13 +239,18 @@
 			}
 		}
 
+		@include breakpoint(small) {
+			height: 680px;
+			margin-bottom: -4.75em;
+		}
+
 		@include breakpoint(xsmall) {
 			@include padding(4em, 0, (2em, 0, 0, 0));
 
 			.banner-inner {
-				font-size: 20px;
+				font-size: 17px;
 				.banner-button {
-					font-size: 0.7em;
+					font-size: 1em;
 				}
 			}
 

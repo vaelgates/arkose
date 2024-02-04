@@ -213,7 +213,6 @@ button,
 		color: #333;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.8em;
 		// font-weight: 600; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
 		height: 3.5em;
 		letter-spacing: 0.08em;
@@ -221,7 +220,6 @@ button,
 		text-align: center;
 		white-space-collapse: collapse;
 		text-wrap: nowrap;
-		position: relative;
 		transition: background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 		border-width: 0px;
 		border-style: initial;

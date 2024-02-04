@@ -9,14 +9,22 @@ featured_image: /assets/img/social.jpg
 <section id="banner" class="major">
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
-    <div class="8u -2u -0u(small) 11u(small)">
-      <h1 class="display-1">Reducing risks from <span style="white-space: nowrap">advanced AI</span></h1>
-      <p class="subheading">Arkose supports machine learning professors, PhD students, and industry researchers and engineers interested in technical AI safety research.</p>
-    </div>
-    <div class="8u -2u -0u(small) 11u(small) banner-button-container">
-      <a href="{{site.applyurl}}" class="button banner-button request-call-button">
-        Request a Call
-      </a>
+    <div class="4u -4u 6u(xlarge) -3u(xlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
+      <div class="background">&nbsp;</div>
+      <h1 class="display-1">Explore AI safety research opportunities</h1>
+      <p>The growing field of AI safety needs skilled researchers and industry professionals. If you’re interested in exploring opportunities, we can help you:</p>
+      <ul>
+        <li>Find funding and compute</li>
+        <li>Learn about job openings</li>
+        <li>Introduce you to mentors and senior researchers</li>
+        <li>And more</li>
+      </ul>
+      <p>Our expert advisors come from top AI research labs and companies. We’re a nonprofit and our help is always free.</p>
+      <div class="banner-button-container">
+        <a href="{{site.applyurl}}" class="button banner-button request-call-button">
+          Request a Call
+        </a>
+      </div>
     </div>
   </div>
 </section>
