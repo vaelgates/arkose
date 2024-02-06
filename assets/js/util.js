@@ -24,9 +24,6 @@
 				fade = $this.hasClass('fade') ? ' fade' : '',
 				envelope_icon = $this.hasClass('fa-envelope') ? ' icon fa-envelope-o' : '';
 
-			// Unprincipled hack to fix the Resource Center item
-			if (text.slice(0, 8) === 'Resource') text = 'Resource Center';
-
 			// Unprincipled hack to remove the duplicated AI Risk Discussions nested heading
 			if (text === 'AI Risk Discussions' && indent === 1) return;
 
