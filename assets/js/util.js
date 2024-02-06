@@ -602,9 +602,7 @@
 
 	};
 
-	$('.expandable').on('click', function(e) {
-		if (e.target !== e.currentTarget) return;
-
+	$('.expandable').on('click', function() {
 		$(this).toggleClass('expanded');
 	});
 
