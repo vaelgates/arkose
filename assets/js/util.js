@@ -602,7 +602,9 @@
 
 	};
 
-	$('.expandable').on('click', function() {
+	$('.expandable').on('click', function(e) {
+		if (e.target !== e.currentTarget) return;
+
 		$(this).toggleClass('expanded');
 	});
 
