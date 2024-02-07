@@ -20,6 +20,11 @@
 		list-style: disc;
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
+		width: fit-content;
+
+		li {
+			margin-bottom: 0.3em;
+		}
 
 		ul {
 			margin: 0;
@@ -147,22 +152,39 @@
 		}
 	}
 
-	li.expandable {
-		list-style-type: disclosure-closed;
-		cursor: pointer;
-		transition: opacity 0.2s ease-in-out;
-		ul {
-			display: none;
-		}
-	}
-
 	li.expandable:hover {
 		opacity: 0.7;
 	}
 
-	li.expandable.expanded {
-		list-style-type: disclosure-open;
-		ul {
-			display: block;
+	li.expandable {
+    list-style-type: none;
+		cursor: pointer;
+		transition: opacity 0.2s ease-in-out;
+
+		&::before {
+			content: '▶';
+			display: inline-block;
+			margin-left: -1.25em;
+			margin-right: 0.35em;
+			margin-top: -2px;
+			font-size: 0.75em;
+			transition: transform 0.1s ease;
+		}
+
+		+ ul {
+			display: none;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&.expanded {
+			&::before {
+				transform: rotate(90deg) translateY(3px);
+			}
+			+ ul {
+				display: block;
+			}
 		}
 	}

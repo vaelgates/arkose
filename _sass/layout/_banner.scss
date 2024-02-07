@@ -228,13 +228,13 @@
 			}
 
 			&.major {
-				min-height: 600px;
+				min-height: 720px;
 				max-height: 999px;
 				@media (max-height: 600px) {
-					min-height: 80vh;
+					min-height: 140vh;
 				}
 				@media (max-height: 500px) {
-					min-height: 100vh;
+					min-height: 160vh;
 				}
 			}
 		}

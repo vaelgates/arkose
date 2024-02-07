@@ -9,7 +9,7 @@ featured_image: /assets/img/social.jpg
 <section id="banner" class="major">
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
-    <div class="4u -4u 6u(xlarge) -3u(xlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
+    <div class="4u -4u 6u(xxlarge) -3u(xxlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
       <div class="background">&nbsp;</div>
       <h1 class="display-1">Explore AI safety research opportunities</h1>
       <p>The growing field of AI safety needs skilled researchers and engineers. If you’re interested in exploring opportunities, we can help you:</p>
