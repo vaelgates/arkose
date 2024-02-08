@@ -162,13 +162,14 @@
 		transition: opacity 0.2s ease-in-out;
 
 		&::before {
-			content: '▶';
+			content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 			display: inline-block;
 			margin-left: -1.25em;
 			margin-right: 0.35em;
-			margin-top: -2px;
 			font-size: 0.75em;
 			transition: transform 0.1s ease;
+			position: relative;
+			top: 1px;
 		}
 
 		+ ul {
@@ -181,7 +182,7 @@
 
 		&.expanded {
 			&::before {
-				transform: rotate(90deg) translateY(3px);
+				transform: rotate(90deg) translateY(3px) translateX(-3px);
 			}
 			+ ul {
 				display: block;
