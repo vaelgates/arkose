@@ -21,8 +21,8 @@ menu_settings:
       submenu:
         - title: 'Opportunities'
           url: '/resources#opportunities'
-        - title: 'Learning'
-          url: '/resources#learning_upskilling'
+        - title: 'AI Safety'
+          url: '/resources#ai_safety'
         - title: 'Other'
           url: '/resources#ai_risk_discussions'
     - title: 'Request a Call'
