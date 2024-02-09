@@ -63,10 +63,7 @@ button,
 		z-index: 10;
 	}
 	&.button-white {
-		background-color: #fff;
-		@media (prefers-color-scheme: dark) {
-			background-color: var(--color-bg-alt);
-		}
+		background-color: var(--color-bg-alt);
 	}
 	&.button-small {
 		font-size: 0.6em;

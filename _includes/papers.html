@@ -106,10 +106,17 @@
 
   let papers = [];
 
+  function isDarkMode() {
+    if (window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+      return true;
+
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
   function listify(papersJson) {
     papers = papersJson.map(function(paper) {
-      const darkMode =  (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      const modeStr = darkMode ? '-dark' : ''
+      const modeStr = isDarkMode() ? '-dark' : ''
 
       if (!paper.Type) {
         paper.image = `/assets/images/medium/other${modeStr}.svg`;

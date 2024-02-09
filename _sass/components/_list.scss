@@ -192,3 +192,11 @@
 			}
 		}
 	}
+
+	html[data-theme="dark"] {
+		li.expandable {
+			&::before {
+				filter: invert(1);
+			}
+		}
+	}
