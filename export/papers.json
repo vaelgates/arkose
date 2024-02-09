@@ -33,7 +33,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2307.00682.pdf",
+    "Link": "https://arxiv.org/abs/2307.00682",
     "ML Subfield": [
       "Security",
       "Theory"
@@ -70,7 +70,7 @@
     "Abstract": "Machine learning (ML) systems are rapidly increasing in size, are acquiring new capabilities, and are increasingly deployed in high-stakes settings. As with other powerful technologies, safety for ML should be a leading research priority. In response to emerging safety challenges in ML, such as those introduced by recent large-scale models, we provide a new roadmap for ML Safety and refine the technical problems that the field needs to address. We present four problems ready for research, namely withstanding hazards (“Robustness”), identifying hazards (“Monitoring”), steering ML systems (“Alignment”), and reducing deployment hazards (“Systemic Safety”). Throughout, we clarify each problem’s motivation and provide concrete research directions.\n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2306.03819.pdf",
+    "Link": "https://arxiv.org/abs/2306.03819",
     "ML Subfield": [
       "Applied ML",
       "Theory"
@@ -125,7 +125,7 @@
     "Abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing1,2,3,4,5, biology6,7, chemistry8,9,10 and computer programming11,12. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.\n"
   },
   {
-    "Link": "https://cims.nyu.edu/~sbowman/eightthings.pdf",
+    "Link": "https://arxiv.org/abs/2304.00612",
     "ML Subfield": [
       "NLP"
     ],
@@ -249,7 +249,7 @@
   },
   {
     "Blog or Video": "https://www.youtube.com/watch?v=HiYWwjma3xE&t=1687s",
-    "Link": "https://arxiv.org/pdf/2212.09251.pdf",
+    "Link": "https://arxiv.org/abs/2212.09251",
     "ML Subfield": [
       "Model Evaluation",
       "NLP"
@@ -285,7 +285,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2110.03605.pdf",
+    "Link": "https://arxiv.org/abs/2110.03605",
     "ML Subfield": [
       "Robustness and Adversariality"
     ],
@@ -401,7 +401,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2308.12833.pdf",
+    "Link": "https://arxiv.org/abs/2308.12833",
     "ML Subfield": [
       "Robustness and Adversariality"
     ],
@@ -441,7 +441,7 @@
   },
   {
     "Blog or Video": "https://www.alignmentforum.org/posts/EPLk8QxETC5FEhoxK/arc-evals-new-report-evaluating-language-model-agents-on",
-    "Link": "https://evals.alignment.org/Evaluating_LMAs_Realistic_Tasks.pdf",
+    "Link": "https://arxiv.org/abs/2312.11671",
     "ML Subfield": [
       "Model Evaluation",
       "NLP",
@@ -481,7 +481,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2303.11341.pdf",
+    "Link": "https://arxiv.org/abs/2303.11341",
     "ML Subfield": [
       "Applied ML",
       "Domain General",
@@ -558,7 +558,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2302.10894.pdf",
+    "Link": "https://arxiv.org/abs/2302.10894",
     "ML Subfield": [
       "Robustness and Adversariality",
       "Vision"
@@ -614,7 +614,7 @@
     "Abstract": "Large language models are now tuned to align with the goals of their creators, namely to be \"helpful and harmless.\" These models should respond helpfully to user questions, but refuse to answer requests that could cause harm. However, adversarial users can construct inputs which circumvent attempts at alignment. In this work, we study to what extent these models remain aligned, even when interacting with an adversarial user who constructs worst-case inputs (adversarial examples). These inputs are designed to cause the model to emit harmful content that would otherwise be prohibited. We show that existing NLP-based optimization attacks are insufficiently powerful to reliably attack aligned text models: even when current NLP-based attacks fail, we can find adversarial inputs with brute force. As a result, the failure of current attacks should not be seen as proof that aligned text models remain aligned under adversarial inputs. However the recent trend in large-scale ML models is multimodal models that allow users to provide images that influence the text that is generated. We show these models can be easily attacked, i.e., induced to perform arbitrary un-aligned behavior through adversarial perturbation of the input image. We conjecture that improved NLP attacks may demonstrate this same level of adversarial control over text-only models. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2202.07785.pdf",
+    "Link": "https://arxiv.org/abs/2202.07785",
     "ML Subfield": [
       "Applied ML",
       "Human Model Interaction"
@@ -648,7 +648,7 @@
     "Abstract": "    Supervised machine learning models boast remarkable predictive capabilities. But can you trust your model? Will it work in deployment? What else can it tell you about the world? We want models to be not only good, but interpretable. And yet the task of interpretation appears underspecified. Papers provide diverse and sometimes non-overlapping motivations for interpretability, and offer myriad notions of what attributes render models interpretable. Despite this ambiguity, many papers proclaim interpretability axiomatically, absent further explanation. In this paper, we seek to refine the discourse on interpretability. First, we examine the motivations underlying interest in interpretability, finding them to be diverse and occasionally discordant. Then, we address model properties and techniques thought to confer interpretability, identifying transparency to humans and post-hoc explanations as competing notions. Throughout, we discuss the feasibility and desirability of different notions, and question the oft-made assertions that linear models are interpretable and that deep neural networks are not. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2304.05969.pdf",
+    "Link": "https://arxiv.org/abs/2304.05969",
     "ML Subfield": [
       "NLP"
     ],
@@ -665,7 +665,7 @@
     "Abstract": "    Localizing behaviors of neural networks to a subset of the network's components or a subset of interactions between components is a natural first step towards analyzing network mechanisms and possible failure modes. Existing work is often qualitative and ad-hoc, and there is no consensus on the appropriate way to evaluate localization claims. We introduce path patching, a technique for expressing and quantitatively testing a natural class of hypotheses expressing that behaviors are localized to a set of paths. We refine an explanation of induction heads, characterize a behavior of GPT-2, and open source a framework for efficiently running similar experiments. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/1809.08352.pdf",
+    "Link": "https://arxiv.org/abs/1809.08352",
     "ML Subfield": [
       "Robustness and Adversariality"
     ],
@@ -679,7 +679,7 @@
     "Abstract": "    We introduce a two-player contest for evaluating the safety and robustness of machine learning systems, with a large prize pool. Unlike most prior work in ML robustness, which studies norm-constrained adversaries, we shift our focus to unconstrained adversaries. Defenders submit machine learning models, and try to achieve high accuracy and coverage on non-adversarial data while making no confident mistakes on adversarial inputs. Attackers try to subvert defenses by finding arbitrary unambiguous inputs where the model assigns an incorrect label with high confidence. We propose a simple unambiguous dataset (\"bird-or- bicycle\") to use as part of this contest. We hope this contest will help to more comprehensively evaluate the worst-case adversarial risk of machine learning models. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2209.07858.pdf",
+    "Link": "https://arxiv.org/abs/2209.07858",
     "ML Subfield": [
       "NLP",
       "Robustness and Adversariality",
@@ -848,7 +848,7 @@
   },
   {
     "Blog or Video": "https://www.anthropic.com/index/anthropics-responsible-scaling-policy",
-    "Link": "https://www-files.anthropic.com/production/files/responsible-scaling-policy-1.0.pdf",
+    "Link": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
     "ML Subfield": [
       "Applied ML",
       "Model Evaluation"
@@ -886,7 +886,7 @@
   },
   {
     "Blog or Video": "https://www.deepmind.com/blog/an-early-warning-system-for-novel-ai-risks",
-    "Link": "https://arxiv.org/pdf/2305.15324.pdf",
+    "Link": "https://arxiv.org/abs/2305.15324",
     "ML Subfield": [
       "Model Evaluation",
       "Domain General"
@@ -935,7 +935,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/1906.01820.pdf",
+    "Link": "https://arxiv.org/abs/1906.01820",
     "ML Subfield": [
       "Optimization",
       "Theory",
@@ -977,7 +977,7 @@
     "Abstract": "Despite much progress in training artificial intelligence (AI) systems to imitate human language, building agents that use language to communicate intentionally with humans in interactive environments remains a major challenge. We introduce Cicero, the first AI agent to achieve human-level performance in Diplomacy, a strategy game involving both cooperation and competition that emphasizes natural language negotiation and tactical coordination between seven players. Cicero integrates a language model with planning and reinforcement learning algorithms by inferring players’ beliefs and intentions from its conversations and generating dialogue in pursuit of its plans. Across 40 games of an anonymous online Diplomacy league, Cicero achieved more than double the average score of the human players and ranked in the top 10% of participants who played more than one game.\n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2202.03286.pdf",
+    "Link": "https://arxiv.org/abs/2202.03286",
     "ML Subfield": [
       "NLP",
       "Model Evaluation",
@@ -1021,7 +1021,7 @@
     "Abstract": "When making everyday decisions, people are guided by their conscience, an internal sense of right and wrong. By contrast, artificial agents are currently not endowed with a moral sense. As a consequence, they may learn to behave immorally when trained on environments that ignore moral concerns, such as violent video games. With the advent of generally capable agents that pretrain on many environments, it will become necessary to mitigate inherited biases from environments that teach immoral behavior. To facilitate the development of agents that avoid causing wanton harm, we introduce Jiminy Cricket, an environment suite of 25 text-based adventure games with thousands of diverse, morally salient scenarios. By annotating every possible game state, the Jiminy Cricket environments robustly evaluate whether agents can act morally while maximizing reward. Using models with commonsense moral knowledge, we create an elementary artificial conscience that assesses and guides agents. In extensive experiments, we find that the artificial conscience approach can steer agents towards moral behavior without sacrificing performance. \n"
   },
   {
-    "Link": "https://gradientflow.com/wp-content/uploads/2060/09/Transformative-AI-and-Compute-Reading-List-2022-12.pdf",
+    "Link": "https://docs.google.com/document/d/1DF31DIkwS9GONzmy1W3nuI9HRAwSKy8JcIbzKYXg-ic/edit#heading=h.kimhqj72mew4",
     "ML Subfield": [
       "Applied ML"
     ],
@@ -1041,7 +1041,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2302.10329.pdf",
+    "Link": "https://arxiv.org/abs/2302.10329",
     "ML Subfield": [
       "Domain General",
       "Reinforcement Learning",
@@ -1060,7 +1060,7 @@
   },
   {
     "Blog or Video": "https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback",
-    "Link": "https://arxiv.org/pdf/2212.08073.pdf",
+    "Link": "https://arxiv.org/abs/2212.08073",
     "ML Subfield": [
       "Reinforcement Learning",
       "NLP",
@@ -1081,7 +1081,7 @@
   },
   {
     "Blog or Video": "https://openai.com/research/debate",
-    "Link": "https://arxiv.org/pdf/1805.00899.pdf",
+    "Link": "https://arxiv.org/abs/1805.00899",
     "ML Subfield": [
       "NLP"
     ],
@@ -1114,7 +1114,7 @@
   },
   {
     "Blog or Video": "https://www.youtube.com/watch?v=U2zJuTLzIm8&t=2s",
-    "Link": "https://arxiv.org/pdf/2211.03540.pdf",
+    "Link": "https://arxiv.org/abs/2211.03540",
     "ML Subfield": [
       "NLP",
       "Model Evaluation"
@@ -1134,7 +1134,7 @@
     "Abstract": "Developing safe and useful general-purpose AI systems will require us to make progress on scalable oversight: the problem of supervising systems that potentially outperform us on most skills relevant to the task at hand. Empirical work on this problem is not straightforward, since we do not yet have systems that broadly exceed our abilities. This paper discusses one of the major ways we think about this problem, with a focus on ways it can be studied empirically. We first present an experimental design centered on tasks for which human specialists succeed but unaided humans and current general AI systems fail. We then present a proof-of-concept experiment meant to demonstrate a key feature of this experimental design and show its viability with two question-answering tasks: MMLU and time-limited QuALITY. On these tasks, we find that human participants who interact with an unreliable large-language-model dialog assistant through chat -- a trivial baseline strategy for scalable oversight -- substantially outperform both the model alone and their own unaided performance. These results are an encouraging sign that scalable oversight will be tractable to study with present models and bolster recent findings that large language models can productively assist humans with difficult tasks. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2303.08774.pdf",
+    "Link": "https://arxiv.org/abs/2303.08774",
     "ML Subfield": [
       "NLP",
       "Applied ML",
@@ -1154,7 +1154,7 @@
     "Abstract": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer-based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4's performance based on models trained with no more than 1/1,000th the compute of GPT-4. \n"
   },
   {
-    "Link": "https://people.cs.uchicago.edu/~ravenben/publications/pdf/backdoor-sp19.pdf",
+    "Link": "https://people.cs.uchicago.edu/~ravenben/publications/abstracts/backdoor-sp19.html",
     "ML Subfield": [
       "Robustness and Adversariality",
       "Security",
@@ -1267,7 +1267,7 @@
     "Abstract": "Advanced AI models hold the promise of tremendous benefits for humanity, but society needs to proactively manage the accompanying risks. In this paper, we focus on what we term \"frontier AI\" models: highly capable foundation models that could possess dangerous capabilities sufficient to pose severe risks to public safety. Frontier AI models pose a distinct regulatory challenge: dangerous capabilities can arise unexpectedly; it is difficult to robustly prevent a deployed model from being misused; and, it is difficult to stop a model's capabilities from proliferating broadly. To address these challenges, at least three building blocks for the regulation of frontier models are needed: (1) standard-setting processes to identify appropriate requirements for frontier AI developers, (2) registration and reporting requirements to provide regulators with visibility into frontier AI development processes, and (3) mechanisms to ensure compliance with safety standards for the development and deployment of frontier AI models. Industry self-regulation is an important first step. However, wider societal discussions and government intervention will be needed to create standards and to ensure compliance with them. We consider several options to this end, including granting enforcement powers to supervisory authorities and licensure regimes for frontier AI models. Finally, we propose an initial set of safety standards. These include conducting pre-deployment risk assessments; external scrutiny of model behavior; using risk assessments to inform deployment decisions; and monitoring and responding to new information about model capabilities and uses post-deployment. We hope this discussion contributes to the broader conversation on how to balance public safety risks and innovation benefits from advances at the frontier of AI development. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2307.02483.pdf",
+    "Link": "https://arxiv.org/abs/2307.02483",
     "ML Subfield": [
       "NLP",
       "Model Evaluation",
@@ -1289,7 +1289,7 @@
     "Abstract": "    Large language models trained for safety and harmlessness remain susceptible to adversarial misuse, as evidenced by the prevalence of \"jailbreak\" attacks on early releases of ChatGPT that elicit undesired behavior. Going beyond recognition of the issue, we investigate why such attacks succeed and how they can be created. We hypothesize two failure modes of safety training: competing objectives and mismatched generalization. Competing objectives arise when a model's capabilities and safety goals conflict, while mismatched generalization occurs when safety training fails to generalize to a domain for which capabilities exist. We use these failure modes to guide jailbreak design and then evaluate state-of-the-art models, including OpenAI's GPT-4 and Anthropic's Claude v1.3, against both existing and newly designed attacks. We find that vulnerabilities persist despite the extensive red-teaming and safety-training efforts behind these models. Notably, new attacks utilizing our failure modes succeed on every prompt in a collection of unsafe requests from the models' red-teaming evaluation sets and outperform existing ad hoc jailbreaks. Our analysis emphasizes the need for safety-capability parity -- that safety mechanisms should be as sophisticated as the underlying model -- and argues against the idea that scaling alone can resolve these safety failure modes. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2305.07153.pdf",
+    "Link": "https://arxiv.org/abs/2305.07153",
     "ML Subfield": [
       "Security"
     ],
@@ -1560,7 +1560,7 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/2105.14111.pdf",
+    "Link": "https://arxiv.org/abs/2105.14111",
     "ML Subfield": [
       "Reinforcement Learning",
       "Theory"
@@ -1599,7 +1599,7 @@
   },
   {
     "Blog or Video": "https://www.alignment-workshop.com/nola-talks/collin-burns-weak-to-strong-generalization",
-    "Link": "https://cdn.openai.com/papers/weak-to-strong-generalization.pdf",
+    "Link": "https://arxiv.org/abs/2312.09390",
     "ML Subfield": [
       "NLP"
     ],
@@ -1659,7 +1659,7 @@
     "Abstract": "    Surprisingly, we find that the adversarial prompts generated by our approach are quite transferable, including to black-box, publicly released LLMs. Specifically, we train an adversarial attack suffix on multiple prompts (i.e., queries asking for many different types of objectionable content), as well as multiple models (in our case, Vicuna-7B and 13B). When doing so, the resulting attack suffix is able to induce objectionable content in the public interfaces to ChatGPT, Bard, and Claude, as well as open source LLMs such as LLaMA-2-Chat, Pythia, Falcon, and others. In total, this work significantly advances the state-of-the-art in adversarial attacks against aligned language models, raising important questions about how such systems can be prevented from producing objectionable information. Code is available at this http URL. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2306.06924.pdf",
+    "Link": "https://arxiv.org/abs/2306.06924",
     "ML Subfield": [
       "Domain General",
       "Human Model Interaction",
@@ -1903,7 +1903,7 @@
     "Abstract": "    Artificial agents have traditionally been trained to maximize reward, which may incentivize power-seeking and deception, analogous to how next-token prediction in language models (LMs) may incentivize toxicity. So do agents naturally learn to be Machiavellian? And how do we measure these behaviors in general-purpose models such as GPT-4? Towards answering these questions, we introduce MACHIAVELLI, a benchmark of 134 Choose-Your-Own-Adventure games containing over half a million rich, diverse scenarios that center on social decision-making. Scenario labeling is automated with LMs, which are more performant than human annotators. We mathematize dozens of harmful behaviors and use our annotations to evaluate agents' tendencies to be power-seeking, cause disutility, and commit ethical violations. We observe some tension between maximizing reward and behaving ethically. To improve this trade-off, we investigate LM-based methods to steer agents' towards less harmful behaviors. Our results show that agents can both act competently and morally, so concrete progress can currently be made in machine ethics--designing agents that are Pareto improvements in both safety and capabilities. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2205.01663.pdf",
+    "Link": "https://arxiv.org/abs/2205.01663",
     "ML Subfield": [
       "Robustness and Adversariality",
       "NLP"
@@ -1918,7 +1918,7 @@
     "Abstract": "In the future, powerful AI systems may be deployed in high-stakes settings, where a single failure could be catastrophic. One technique for improving AI safety in high-stakes settings is adversarial training, which uses an adversary to generate examples to train on in order to achieve better worst-case performance.\n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2206.05802.pdf",
+    "Link": "https://arxiv.org/abs/2206.05802",
     "ML Subfield": [
       "NLP"
     ],
@@ -1955,9 +1955,6 @@
     ],
     "Safety Category": [
       "Major problems (misalignment, misuse, threat models)",
-      "Reward misspecification and goal misgeneralization",
-      "Alignment <-> RLHF",
-      "Deception",
       "Overview"
     ],
     "Title": "The Alignment Problem from a Deep Learning Perspective (Ngo et al., 2022)",
@@ -2019,7 +2016,7 @@
     ]
   },
   {
-    "Link": "https://www-files.anthropic.com/production/files/question-decomposition-improves-the-faithfulness-of-model-generated-reasoning.pdf",
+    "Link": "https://arxiv.org/abs/2307.11768",
     "ML Subfield": [
       "NLP",
       "Human Model Interaction"
@@ -2043,7 +2040,7 @@
   },
   {
     "Blog or Video": "https://www.alignmentforum.org/posts/L4anhrxjv8j2yRKKp/how-discovering-latent-knowledge-in-language-models-without",
-    "Link": "https://arxiv.org/pdf/2212.03827.pdf",
+    "Link": "https://arxiv.org/abs/2212.03827",
     "ML Subfield": [
       "NLP"
     ],
