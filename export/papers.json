@@ -1062,7 +1062,6 @@
     "Blog or Video": "https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback",
     "Link": "https://arxiv.org/abs/2212.08073",
     "ML Subfield": [
-      "Reinforcement Learning",
       "NLP",
       "Robustness and Adversariality"
     ],
@@ -1359,7 +1358,8 @@
     "Blog or Video": "https://www.alignment-workshop.com/nola-talks/roger-grosse-studying-llm-generalization-through-influence-functions",
     "Link": "https://arxiv.org/abs/2308.03296",
     "ML Subfield": [
-      "NLP"
+      "NLP",
+      "Statistical Modeling"
     ],
     "ML Subtopic": [
       "NLP: LLMs"
@@ -2194,7 +2194,11 @@
     "Link": "https://far.ai/post/2023-07-superhuman-go-ais/",
     "ML Subfield": [
       "Robustness and Adversariality",
-      "Applied ML"
+      "Applied ML",
+      "Reinforcement Learning"
+    ],
+    "ML Subtopic": [
+      "RL: Games"
     ],
     "Safety Category": [
       "Adversaries / Robustness / Generalization"
