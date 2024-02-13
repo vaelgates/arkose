@@ -115,7 +115,8 @@
   }
 
   function listify(papersJson) {
-    papers = papersJson.map(function(paper) {
+    papers = papersJson.filter(paper => paper.Title && paper.Title.length > 0 && paper['ML Subfield'] && paper['Type'])
+                       .map(function(paper) {
       const modeStr = isDarkMode() ? '-dark' : ''
 
       if (!paper.Type) {
