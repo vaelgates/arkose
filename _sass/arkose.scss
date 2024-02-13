@@ -151,6 +151,7 @@
       border-top: 1px solid #ddd;
       cursor: pointer;
       transition: background-color 0.2s ease-in-out;
+      margin-bottom: unset;
       .Title, .detail {
         padding-left: 60px;
       }
