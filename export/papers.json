@@ -18,19 +18,6 @@
     ]
   },
   {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/boaz-barak-the-impossibility-of-strong-watermarking",
-    "Link": "https://arxiv.org/abs/2311.04378",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models (Zhang et al., 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
-  },
-  {
     "Link": "https://www.alignment-workshop.com/nola-2023#h.qvhufi1ane9m",
     "ML Subfield": [
       "Probabilistic Modeling and Bayesian ML",
@@ -43,41 +30,6 @@
     "Title": "Towards Quantitative Safety Guarantees and Alignment (Yoshua Bengio, 59-min video)",
     "Type": [
       "Video"
-    ]
-  },
-  {
-    "Blog or Video": "https://www.youtube.com/watch?v=HiYWwjma3xE&t=169s",
-    "Link": "https://arxiv.org/abs/2206.07682",
-    "ML Subfield": [
-      "NLP"
-    ],
-    "ML Subtopic": [
-      "NLP: LLMs"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Safety Topic": [
-      "Emergence"
-    ],
-    "Title": "Emergent Abilities of Large Language Models (Wei et al., 2022)",
-    "Type": [
-      "Paper"
-    ],
-    "Twitter": "https://twitter.com/_jasonwei/status/1537230731599962112",
-    "Abstract": "    Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence implies that additional scaling could further expand the range of capabilities of language models. \n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/victor-veitch-what-and-why-is-a-linear-representation",
-    "Link": "https://arxiv.org/abs/2311.03658",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "The Linear Representation Hypothesis and the Geometry of Large Language Models (Park et al., 2023)",
-    "Type": [
-      "Video",
-      "Paper"
     ]
   },
   {
@@ -136,41 +88,6 @@
     "Abstract": " Concept erasure aims to remove specified features from a representation. It can improve fairness (e.g. preventing a classifier from using gender or race) and interpretability (e.g. removing a concept to observe changes in model behavior). We introduce LEAst-squares Concept Erasure (LEACE), a closed-form method which provably prevents all linear classifiers from detecting a concept while changing the representation as little as possible, as measured by a broad class of norms. We apply LEACE to large language models with a novel procedure called \"concept scrubbing,\" which erases target concept information from every layer in the network. We demonstrate our method on two tasks: measuring the reliance of language models on part-of-speech information, and reducing gender bias in BERT embeddings. Code is available at this https URL. \n"
   },
   {
-    "Link": "https://www-files.anthropic.com/production/files/measuring-faithfulness-in-chain-of-thought-reasoning.pdf",
-    "ML Subfield": [
-      "Applied ML: Cognitive Tasks"
-    ],
-    "ML Subtopic": [
-      "NLP",
-      "Applied ML",
-      "Model Evaluation",
-      "Human Model Interaction"
-    ],
-    "Safety Category": [
-      "Deception"
-    ],
-    "Safety Topic": [
-      "Sycophancy"
-    ],
-    "Title": "Measuring Faithfulness in Chain-of-Thought Reasoning (Lanham et al., 2023)\n",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "Large language models (LLMs) perform bet-ter when they produce step-by-step, “Chain-of-Thought” (CoT) reasoning before answering aquestion, but it is unclear if the stated reason-ing is a faithful explanation of the model’s actualreasoning (i.e., its process for answering the ques-tion). We investigate hypotheses for how CoTreasoning may be unfaithful, by examining howthe model predictions change when we interveneon the CoT (e.g., by adding mistakes or paraphras-ing it). Models show large variation across tasksin how strongly they condition on the CoT whenpredicting their answer, sometimes relying heav-ily on the CoT and other times primarily ignoringit. CoT’s performance boost does not seem tocome from CoT’s added test-time compute aloneor from information encoded via the particularphrasing of the CoT. As models become largerand more capable, they produce less faithful rea-soning on most tasks we study. Overall, our re-sults suggest that CoT can be faithful if the cir-cumstances such as the model size and task arecarefully chosen.\n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/sanjeev-arora-emergence-of-complex-skills-in-llms-and-do-they-understan",
-    "Link": "https://arxiv.org/abs/2307.15936",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "A Theory of Emergence of Complex Skills in Language Models (Arora and Goyal, 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
-  },
-  {
     "Link": "https://arxiv.org/abs/1610.02136",
     "ML Subfield": [
       "Model Evaluation",
@@ -208,29 +125,6 @@
     "Abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing1,2,3,4,5, biology6,7, chemistry8,9,10 and computer programming11,12. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.\n"
   },
   {
-    "Title": "Provably Safe AI (Max Tegmark) -- Recording coming soon"
-  },
-  {
-    "Link": "https://openai.com/blog/learning-to-summarize-with-human-feedback/",
-    "ML Subfield": [
-      "NLP",
-      "Human Model Interaction",
-      "Applied ML"
-    ],
-    "ML Subtopic": [
-      "NLP: Summarization"
-    ],
-    "Safety Category": [
-      "Alignment <-> RLHF",
-      "Reward misspecification and goal misgeneralization"
-    ],
-    "Title": "Learning to summarize with human feedback (Stiennon et al., 2020) ",
-    "Type": [
-      "Blog post"
-    ],
-    "Abstract": "\n"
-  },
-  {
     "Link": "https://arxiv.org/abs/2304.00612",
     "ML Subfield": [
       "NLP"
@@ -266,17 +160,6 @@
     ],
     "Abstract": "Rapid advancements in artificial intelligence (AI) have sparked growing concerns among experts, policymakers, and world leaders regarding the potential for increasingly advanced AI systems to pose catastrophic risks. Although numerous risks have been detailed separately, there is a pressing need for a systematic discussion and illustration of the potential dangers to better inform efforts to mitigate them. This paper provides an overview of the main sources of catastrophic AI risks, which we organize into four categories: malicious use, in which individuals or groups intentionally use AIs to cause harm; AI race, in which competitive environments compel actors to deploy unsafe AIs or cede control to AIs; organizational risks, highlighting how human factors and complex systems can increase the chances of catastrophic accidents; and rogue AIs, describing the inherent difficulty in controlling agents far more intelligent than humans. For each category of risk, we describe specific hazards, present illustrative stories, envision ideal scenarios, and propose practical suggestions for mitigating these dangers. Our goal is to foster a comprehensive understanding of these risks and inspire collective and proactive efforts to ensure that AIs are developed and deployed in a safe manner. Ultimately, we hope this will allow us to realize the benefits of this powerful technology while minimizing the potential for catastrophic outcomes.\n",
     "Transcripts / Audio / Slides": "https://www.safe.ai/ai-risk"
-  },
-  {
-    "Link": "https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/edit#heading=h.kkaua0hwmp1d",
-    "Safety Category": [
-      "Scalable oversight",
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Eliciting latent knowledge: How to tell if your eyes deceive you (Christiano, Cotra and Xu, 2021)\n",
-    "Type": [
-      "Paper"
-    ]
   },
   {
     "Link": "https://arxiv.org/abs/2311.17035",
@@ -347,9 +230,6 @@
     "Transcripts / Audio / Slides": "https://jsteinhardt.stat.berkeley.edu/talks/satml/tutorial.html#slideIndex=0&level=0"
   },
   {
-    "Title": "Sociotechnical AI safety (David Krueger) -- Recording coming soon"
-  },
-  {
     "Link": "https://arxiv.org/abs/2307.15217",
     "ML Subfield": [
       "Reinforcement Learning",
@@ -388,37 +268,6 @@
     "Abstract": "As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is time-consuming and expensive) or existing data sources (which are not always available). Here, we automatically generate evaluations with LMs. We explore approaches with varying amounts of human effort, from instructing LMs to write yes/no questions to making complex Winogender schemas with multiple stages of LM-based generation and filtering. Crowdworkers rate the examples as highly relevant and agree with 90-100% of labels, sometimes more so than corresponding human-written datasets. We generate 154 datasets and discover new cases of inverse scaling where LMs get worse with size. Larger LMs repeat back a dialog user's preferred answer (\"sycophancy\") and express greater desire to pursue concerning goals like resource acquisition and goal preservation. We also find some of the first examples of inverse scaling in RL from Human Feedback (RLHF), where more RLHF makes LMs worse. For example, RLHF makes LMs express stronger political views (on gun rights and immigration) and a greater desire to avoid shut down. Overall, LM-written evaluations are high-quality and let us quickly discover many novel LM behaviors. \n"
   },
   {
-    "Link": "https://www.alignmentforum.org/posts/AyNHoTWWAJ5eb99ji/another-outer-alignment-failure-story",
-    "Safety Category": [
-      "Major problems (misalignment, misuse, threat models)"
-    ],
-    "Title": "Another (outer) alignment failure story (Christiano, 2021)",
-    "Type": [
-      "Blog post"
-    ]
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2306.03341.pdf",
-    "ML Subfield": [
-      "NLP: LLMs"
-    ],
-    "ML Subtopic": [
-      "NLP"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Model editing"
-    ],
-    "Title": "Inference-Time Intervention: Eliciting Truthful Answers from a Language Model (Li et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Twitter": "https://twitter.com/ke_li_2021/status/1666810649526308867",
-    "Abstract": "We hope to see further work in the high-stakes reliability setting, including more powerful tools for enhancing human adversaries and better ways to measure high levels of reliability, until we can confidently rule out the possibility of catastrophic deployment-time failures of powerful models. \n"
-  },
-  {
     "Link": "https://www.youtube.com/watch?v=Vb5g7jlNzOk&t=438s",
     "ML Subfield": [
       "Model Evaluation"
@@ -434,23 +283,6 @@
     "Type": [
       "Video"
     ]
-  },
-  {
-    "Link": "https://transformer-circuits.pub/2023/toy-double-descent/index.html",
-    "ML Subtopic": [
-      "Theory"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "Superposition, Memorization, and Double Descent (Henighan et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "\n"
   },
   {
     "Link": "https://arxiv.org/abs/2110.03605",
@@ -525,21 +357,6 @@
     ],
     "Twitter": "https://twitter.com/ArthurConmy/status/1677808685836378114",
     "Abstract": "    Through considerable effort and intuition, several recent works have reverse-engineered nontrivial behaviors of transformer models. This paper systematizes the mechanistic interpretability process they followed. First, researchers choose a metric and dataset that elicit the desired model behavior. Then, they apply activation patching to find which abstract neural network units are involved in the behavior. By varying the dataset, metric, and units under investigation, researchers can understand the functionality of each component. We automate one of the process' steps: to identify the circuit that implements the specified behavior in the model's computational graph. We propose several algorithms and reproduce previous interpretability results to validate them. For example, the ACDC algorithm rediscovered 5/5 of the component types in a circuit in GPT-2 Small that computes the Greater-Than operation. ACDC selected 68 of the 32,000 edges in GPT-2 Small, all of which were manually found by previous work. Our code is available at this https URL. \n"
-  },
-  {
-    "Link": "https://arxiv.org/abs/1905.02175",
-    "ML Subtopic": [
-      "Robustness and Adversariality",
-      "Theory"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Adversarial Examples Are Not Bugs, They Are Features (Ilyas et al., 2019)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    Adversarial examples have attracted significant attention in machine learning, but the reasons for their existence and pervasiveness remain unclear. We demonstrate that adversarial examples can be directly attributed to the presence of non-robust features: features derived from patterns in the data distribution that are highly predictive, yet brittle and incomprehensible to humans. After capturing these features within a theoretical framework, we establish their widespread existence in standard datasets. Finally, we present a simple setting where we can rigorously tie the phenomena we observe in practice to a misalignment between the (human-specified) notion of robustness and the inherent geometry of the data. \n"
   },
   {
     "Link": "https://rome.baulab.info/",
@@ -623,18 +440,6 @@
     ]
   },
   {
-    "Link": "https://arxiv.org/pdf/1606.06565.pdf",
-    "Safety Category": [
-      "Major problems (misalignment, misuse, threat models)",
-      "Scalable oversight",
-      "Alignment <-> RLHF"
-    ],
-    "Title": "Concrete Problems in AI Safety (Amodei et al., 2016)",
-    "Type": [
-      "Paper"
-    ]
-  },
-  {
     "Blog or Video": "https://www.alignmentforum.org/posts/EPLk8QxETC5FEhoxK/arc-evals-new-report-evaluating-language-model-agents-on",
     "Link": "https://arxiv.org/abs/2312.11671",
     "ML Subfield": [
@@ -653,23 +458,6 @@
       "Paper"
     ],
     "Abstract": "In this report, we explore the ability of language model agents to acquire resources,create copies of themselves, and adapt to novel challenges they encounter inthe wild. We refer to this cluster of capabilities as “autonomous replication andadaptation” or ARA. We believe that systems capable of ARA could have wide-reaching and hard-to-anticipate consequences, and that measuring and forecastingARA may be useful for informing measures around security, monitoring, andalignment. Additionally, once a system is capable of ARA, placing bounds on asystem’s capabilities may become significantly more difficult.We construct four simple example agents that combine language models with toolsthat allow them to take actions in the world. We then evaluate these agents on 12tasks relevant to ARA. We find that these language model agents can only completethe easiest tasks from this list, although they make some progress on the morechallenging tasks. Unfortunately, these evaluations are not adequate to rule out thepossibility that near-future agents will be capable of ARA. In particular, we do notthink that these evaluations provide good assurance that the “next generation” oflanguage models (e.g. 100x effective compute scaleup on existing models) willnot yield agents capable of ARA, unless intermediate evaluations are performedduring pretraining. Relatedly, we expect that fine-tuning of the existing modelscould produce substantially more competent agents, even if the fine-tuning is notdirectly targeted at ARA.\n"
-  },
-  {
-    "Link": "https://docs.google.com/presentation/d/1y5Xpnvpy09Sn_aerEoH4d2EZEcdfaHFmfIV0VpdoWuI/edit#slide=id.p",
-    "ML Subfield": [
-      "Model Evaluation"
-    ],
-    "Safety Category": [
-      "Scalable oversight",
-      "Alignment <-> RLHF",
-      "Adversaries / Robustness",
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Directions in Scalable Oversight slides (AWAIR, 2023)",
-    "Type": [
-      "Slides"
-    ],
-    "Abstract": "\n"
   },
   {
     "Link": "https://www.alignment-workshop.com/sf-talks/ajeya-cotra-situational-awareness-makes-measuring-safety-tricky",
@@ -714,17 +502,6 @@
       "Paper"
     ],
     "Abstract": "As advanced machine learning systems' capabilities begin to play a significant role in geopolitics and societal order, it may become imperative that (1) governments be able to enforce rules on the development of advanced ML systems within their borders, and (2) countries be able to verify each other's compliance with potential future international agreements on advanced ML development. This work analyzes one mechanism to achieve this, by monitoring the computing hardware used for large-scale NN training. The framework's primary goal is to provide governments high confidence that no actor uses large quantities of specialized ML chips to execute a training run in violation of agreed rules. At the same time, the system does not curtail the use of consumer computing devices, and maintains the privacy and confidentiality of ML practitioners' models, data, and hyperparameters. The system consists of interventions at three stages: (1) using on-chip firmware to occasionally save snapshots of the the neural network weights stored in device memory, in a form that an inspector could later retrieve; (2) saving sufficient information about each training run to prove to inspectors the details of the training run that had resulted in the snapshotted weights; and (3) monitoring the chip supply chain to ensure that no actor can avoid discovery by amassing a large quantity of untracked chips. The proposed design decomposes the ML training rule verification problem into a series of narrow technical challenges, including a new variant of the Proof-of-Learning problem [Jia et al. '21].  \n"
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/eric-neyman-heuristic-arguments-an-approach-to-detecting-anomalous-model",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "Heuristic arguments: An approach to detecting anomalous model behavior (Eric Neyman, 5-min video)",
-    "Type": [
-      "Video"
-    ]
   },
   {
     "Link": "https://arxiv.org/abs/2310.01405",
@@ -871,76 +648,6 @@
     "Abstract": "    Supervised machine learning models boast remarkable predictive capabilities. But can you trust your model? Will it work in deployment? What else can it tell you about the world? We want models to be not only good, but interpretable. And yet the task of interpretation appears underspecified. Papers provide diverse and sometimes non-overlapping motivations for interpretability, and offer myriad notions of what attributes render models interpretable. Despite this ambiguity, many papers proclaim interpretability axiomatically, absent further explanation. In this paper, we seek to refine the discourse on interpretability. First, we examine the motivations underlying interest in interpretability, finding them to be diverse and occasionally discordant. Then, we address model properties and techniques thought to confer interpretability, identifying transparency to humans and post-hoc explanations as competing notions. Throughout, we discuss the feasibility and desirability of different notions, and question the oft-made assertions that linear models are interpretable and that deep neural networks are not. \n"
   },
   {
-    "Link": "https://ai-alignment.com/mechanistic-anomaly-detection-and-elk-fb84f4c6d0dc",
-    "Safety Category": [
-      "Model evaluations"
-    ],
-    "Title": "Mechanistic anomaly detection and ELK (Christiano, 2022)",
-    "Type": [
-      "Blog post"
-    ]
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2309.02390.pdf",
-    "ML Subfield": [
-      "Theory"
-    ],
-    "ML Subtopic": [
-      "Applied ML: Efficiency and Hardware"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Safety Topic": [
-      "Emergence"
-    ],
-    "Title": "Explaining grokking through circuit efficiency (Varma et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": " One of the most surprising puzzles in neural network generalisation is grokking: a network with perfect training accuracy but poor generalisation will, upon further training, transition to perfect generalisation. We propose that grokking occurs when the task admits a generalising solution and a memorising solution, where the generalising solution is slower to learn but more efficient, producing larger logits with the same parameter norm. We hypothesise that memorising circuits become more inefficient with larger training datasets while generalising circuits do not, suggesting there is a critical dataset size at which memorisation and generalisation are equally efficient. We make and confirm four novel predictions about grokking, providing significant evidence in favour of our explanation. Most strikingly, we demonstrate two novel and surprising behaviours: ungrokking, in which a network regresses from perfect to low test accuracy, and semi-grokking, in which a network shows delayed generalisation to partial rather than perfect test accuracy. \n"
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/lewis-hammond-multi-agent-risks-from-advanced-ai",
-    "Safety Category": [
-      "AI Governance - Technical"
-    ],
-    "Title": "Multi-agent risks from advanced AI (Lewis Hammond, 5-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://docs.google.com/presentation/d/1nzAiNC71qhr_2bBM6Q5i_5YASqiyCGHXbMh7P2Qym_0/edit#slide=id.p",
-    "ML Subfield": [
-      "Domain General",
-      "Robustness and Adversariality",
-      "Model Evaluation"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Model Internals Survey slides (AWAIR, 2023)",
-    "Type": [
-      "Slides"
-    ],
-    "Abstract": "\n"
-  },
-  {
-    "Link": "https://twitter.com/NeelNanda5",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "For new papers on Interpretability: Follow Neel Nanda on Twitter",
-    "Type": [
-      "Other"
-    ]
-  },
-  {
     "Link": "https://arxiv.org/abs/2304.05969",
     "ML Subfield": [
       "NLP"
@@ -970,27 +677,6 @@
       "Paper"
     ],
     "Abstract": "    We introduce a two-player contest for evaluating the safety and robustness of machine learning systems, with a large prize pool. Unlike most prior work in ML robustness, which studies norm-constrained adversaries, we shift our focus to unconstrained adversaries. Defenders submit machine learning models, and try to achieve high accuracy and coverage on non-adversarial data while making no confident mistakes on adversarial inputs. Attackers try to subvert defenses by finding arbitrary unambiguous inputs where the model assigns an incorrect label with high confidence. We propose a simple unambiguous dataset (\"bird-or- bicycle\") to use as part of this contest. We hope this contest will help to more comprehensively evaluate the worst-case adversarial risk of machine learning models. \n"
-  },
-  {
-    "Link": "https://arxiv.org/abs/2309.05858",
-    "ML Subfield": [
-      "NLP"
-    ],
-    "ML Subtopic": [
-      "NLP: LLMs"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Safety Topic": [
-      "Emergence"
-    ],
-    "Title": "Uncovering mesa-optimization algorithms in Transformers (Von Oswald et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "Transformers have become the dominant model in deep learning, but the reason for their superior performance is poorly understood. Here, we hypothesize that the strong performance of Transformers stems from an architectural bias towards mesa-optimization, a learned process running within the forward pass of a model consisting of the following two steps: (i) the construction of an internal learning objective, and (ii) its corresponding solution found through optimization. To test this hypothesis, we reverse-engineer a series of autoregressive Transformers trained on simple sequence modeling tasks, uncovering underlying gradient-based mesa-optimization algorithms driving the generation of predictions. Moreover, we show that the learned forward-pass optimization algorithm can be immediately repurposed to solve supervised few-shot tasks, suggesting that mesa-optimization might underlie the in-context learning capabilities of large language models. Finally, we propose a novel self-attention layer, the mesa-layer, that explicitly and efficiently solves optimization problems specified in context. We find that this layer can lead to improved performance in synthetic and preliminary language modeling experiments, adding weight to our hypothesis that mesa-optimization is an important operation hidden within the weights of trained Transformers. \n"
   },
   {
     "Link": "https://arxiv.org/abs/2209.07858",
@@ -1075,22 +761,6 @@
     "Abstract": "    Potential harms of large language models can be mitigated by watermarking model output, i.e., embedding signals into generated text that are invisible to humans but algorithmically detectable from a short span of tokens. We propose a watermarking framework for proprietary language models. The watermark can be embedded with negligible impact on text quality, and can be detected using an efficient open-source algorithm without access to the language model API or parameters. The watermark works by selecting a randomized set of \"green\" tokens before a word is generated, and then softly promoting use of green tokens during sampling. We propose a statistical test for detecting the watermark with interpretable p-values, and derive an information-theoretic framework for analyzing the sensitivity of the watermark. We test the watermark using a multi-billion parameter model from the Open Pretrained Transformer (OPT) family, and discuss robustness and security. \n"
   },
   {
-    "Link": "https://arxiv.org/pdf/2009.08092.pdf",
-    "ML Subfield": [
-      "Theory",
-      "Domain General"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Title": "Distributional Generalization: A New Kind of Generalization (Nakkiran and Bansal, 2020)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": " We introduce a new notion of generalization -- Distributional Generalization -- which roughly states that outputs of a classifier at train and test time are close \\*as distributions\\*, as opposed to close in just their average error. For example, if we mislabel 30% of dogs as cats in the train set of CIFAR-10, then a ResNet trained to interpolation will in fact mislabel roughly 30% of dogs as cats on the \\*test set\\* as well, while leaving other classes unaffected. This behavior is not captured by classical generalization, which would only consider the average error and not the distribution of errors over the input domain. Our formal conjectures, which are much more general than this example, characterize the form of distributional generalization that can be expected in terms of problem parameters: model architecture, training procedure, number of samples, and data distribution. We give empirical evidence for these conjectures across a variety of domains in machine learning, including neural networks, kernel machines, and decision trees. Our results thus advance our empirical understanding of interpolating classifiers. \n"
-  },
-  {
     "Link": "https://arxiv.org/abs/1706.06083",
     "ML Subfield": [
       "Robustness and Adversariality",
@@ -1105,19 +775,6 @@
       "Paper"
     ],
     "Abstract": "Recent work has demonstrated that deep neural networks are vulnerable to adversarial examples---inputs that are almost indistinguishable from natural data and yet classified incorrectly by the network. In fact, some of the latest findings suggest that the existence of adversarial attacks may be an inherent weakness of deep learning models. To address this problem, we study the adversarial robustness of neural networks through the lens of robust optimization. This approach provides us with a broad and unifying view on much of the prior work on this topic. Its principled nature also enables us to identify methods for both training and attacking neural networks that are reliable and, in a certain sense, universal. In particular, they specify a concrete security guarantee that would protect against any adversary. These methods let us train networks with significantly improved resistance to a wide range of adversarial attacks. They also suggest the notion of security against a first-order adversary as a natural and broad security guarantee. We believe that robustness against such well-defined classes of adversaries is an important stepping stone towards fully resistant deep learning models. Code and pre-trained models are available at this https URL and this https URL. \n"
-  },
-  {
-    "Link": "https://www.lesswrong.com/posts/kguLeJTt6LnGuYX4E/the-limits-of-ai-safety-via-debate",
-    "Safety Category": [
-      "Scalable oversight"
-    ],
-    "Safety Topic": [
-      "Debate"
-    ],
-    "Title": "The limits of AI safety via debate (Hobbhahn, 2022)",
-    "Type": [
-      "Blog post"
-    ]
   },
   {
     "Blog or Video": "https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924",
@@ -1172,19 +829,6 @@
     ]
   },
   {
-    "Link": "https://www.alignment-workshop.com/nola-talks/irina-rish-complex-systems-view-of-large-scale-ai-systems",
-    "Safety Category": [
-      "AI Governance - Technical"
-    ],
-    "Title": "Complex systems view of large-scale AI systems (Irina Rish, 5-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Title": "Attached to the ITT (Inference-Time Intervention) post "
-  },
-  {
     "Link": "https://www.alignment-workshop.com/sf-talks/dan-hendrycks-surveying-safety-research-directions",
     "ML Subfield": [
       "Domain General"
@@ -1219,9 +863,6 @@
     "Type": [
       "Paper"
     ]
-  },
-  {
-    "Title": "Attached to the ROME paper post"
   },
   {
     "Link": "https://arxiv.org/abs/2310.02238",
@@ -1294,24 +935,6 @@
     ]
   },
   {
-    "Title": "Can also add \"Tags\" as a column heading, was saving that. You also had \"FATE\" as a Category in light orange but got worried. Category / Subcategory / Topic was how it used to be"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/elad-hazan-ai-safety-by-debate-via-regret-minimization",
-    "Link": "https://arxiv.org/abs/2312.04792",
-    "Safety Category": [
-      "Scalable oversight"
-    ],
-    "Safety Topic": [
-      "Debate"
-    ],
-    "Title": "AI safety by debate via regret minimization (Chen et al., 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
-  },
-  {
     "Link": "https://arxiv.org/abs/1906.01820",
     "ML Subfield": [
       "Optimization",
@@ -1352,21 +975,6 @@
       "Paper"
     ],
     "Abstract": "Despite much progress in training artificial intelligence (AI) systems to imitate human language, building agents that use language to communicate intentionally with humans in interactive environments remains a major challenge. We introduce Cicero, the first AI agent to achieve human-level performance in Diplomacy, a strategy game involving both cooperation and competition that emphasizes natural language negotiation and tactical coordination between seven players. Cicero integrates a language model with planning and reinforcement learning algorithms by inferring players’ beliefs and intentions from its conversations and generating dialogue in pursuit of its plans. Across 40 games of an anonymous online Diplomacy league, Cicero achieved more than double the average score of the human players and ranked in the top 10% of participants who played more than one game.\n"
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2201.02177.pdf",
-    "ML Subfield": [
-      "Theory"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Title": "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets (Power et al., 2022)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": " In this paper we propose to study generalization of neural networks on small algorithmically generated datasets. In this setting, questions about data efficiency, memorization, generalization, and speed of learning can be studied in great detail. In some situations we show that neural networks learn through a process of \"grokking\" a pattern in the data, improving generalization performance from random chance level to perfect generalization, and that this improvement in generalization can happen well past the point of overfitting. We also study generalization as a function of dataset size and find that smaller datasets require increasing amounts of optimization for generalization. We argue that these datasets provide a fertile ground for studying a poorly understood aspect of deep learning: generalization of overparametrized neural networks beyond memorization of the finite training dataset. \n"
   },
   {
     "Link": "https://arxiv.org/abs/2202.03286",
@@ -1451,19 +1059,6 @@
     "Abstract": "Research in Fairness, Accountability, Transparency, and Ethics (FATE) has established many sources and forms of algorithmic harm, in domains as diverse as health care, finance, policing, and recommendations. Much work remains to be done to mitigate the serious harms of these systems, particularly those disproportionately affecting marginalized communities. Despite these ongoing harms, new systems are being developed and deployed which threaten the perpetuation of the same harms and the creation of novel ones. In response, the FATE community has emphasized the importance of anticipating harms. Our work focuses on the anticipation of harms from increasingly agentic systems. Rather than providing a definition of agency as a binary property, we identify 4 key characteristics which, particularly in combination, tend to increase the agency of a given algorithmic system: underspecification, directness of impact, goal-directedness, and long-term planning. We also discuss important harms which arise from increasing agency -- notably, these include systemic and/or long-range impacts, often on marginalized stakeholders. We emphasize that recognizing agency of algorithmic systems does not absolve or shift the human responsibility for algorithmic harms. Rather, we use the term agency to highlight the increasingly evident fact that ML systems are not fully under human control. Our work explores increasingly agentic algorithmic systems in three parts. First, we explain the notion of an increase in agency for algorithmic systems in the context of diverse perspectives on agency across disciplines. Second, we argue for the need to anticipate harms from increasingly agentic systems. Third, we discuss important harms from increasingly agentic systems and ways forward for addressing them. We conclude by reflecting on implications of our work for anticipating algorithmic harms from emerging systems. \n"
   },
   {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/brad-knox-your-rlhf-fine-tuning-is-secretly-applying-a-regret-preference",
-    "Link": "https://arxiv.org/abs/2206.02231",
-    "Safety Category": [
-      "Scalable oversight",
-      "Alignment <-> RLHF"
-    ],
-    "Title": "Models of human preference for learning reward functions (Knox et al., 2023)",
-    "Type": [
-      "Video",
-      "Paper"
-    ]
-  },
-  {
     "Blog or Video": "https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback",
     "Link": "https://arxiv.org/abs/2212.08073",
     "ML Subfield": [
@@ -1484,22 +1079,6 @@
     "Abstract": "As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through self-improvement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as 'Constitutional AI'. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised responses. In the RL phase, we sample from the finetuned model, use a model to evaluate which of the two samples is better, and then train a preference model from this dataset of AI preferences. We then train with RL using the preference model as the reward signal, i.e. we use 'RL from AI Feedback' (RLAIF). As a result we are able to train a harmless but non-evasive AI assistant that engages with harmful queries by explaining its objections to them. Both the SL and RL methods can leverage chain-of-thought style reasoning to improve the human-judged performance and transparency of AI decision making. These methods make it possible to control AI behavior more precisely and with far fewer human labels. \n"
   },
   {
-    "Link": "https://www.alignment-workshop.com/nola-talks/gillian-hadfield-building-an-off-switch-for-ai",
-    "ML Subfield": [
-      "Domain General",
-      "Human Model Interaction"
-    ],
-    "Safety Category": [
-      "AI Governance - Technical"
-    ],
-    "Title": "Building an Off Switch for AI (Gillian Hadfield, 21-min video)",
-    "Type": [
-      "Video"
-    ],
-    "Abstract": "\n",
-    "Transcripts / Audio / Slides": "NOLA Workshop 2023"
-  },
-  {
     "Blog or Video": "https://openai.com/research/debate",
     "Link": "https://arxiv.org/abs/1805.00899",
     "ML Subfield": [
@@ -1518,28 +1097,6 @@
     "Abstract": "To make AI systems broadly useful for challenging real-world tasks, we need them to learn complex human goals and preferences. One approach to specifying complex goals asks humans to judge during training which agent behaviors are safe and useful, but this approach can fail if the task is too complicated for a human to directly judge. To help address this concern, we propose training agents via self play on a zero sum debate game. Given a question or proposed action, two agents take turns making short statements up to a limit, then a human judges which of the agents gave the most true, useful information. In an analogy to complexity theory, debate with optimal play can answer any question in PSPACE given polynomial time judges (direct judging answers only NP questions). In practice, whether debate works involves empirical questions about humans and the tasks we want AIs to perform, plus theoretical questions about the meaning of AI alignment. We report results on an initial MNIST experiment where agents compete to convince a sparse classifier, boosting the classifier's accuracy from 59.4% to 88.9% given 6 pixels and from 48.2% to 85.2% given 4 pixels. Finally, we discuss theoretical and practical aspects of the debate model, focusing on potential weaknesses as the model scales up, and we propose future human and computer experiments to test these properties. \n"
   },
   {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/vincent-conitzer-foundations-of-cooperative-ai",
-    "Link": "https://www.cs.cmu.edu/~conitzer/FOCALAAAI23.pdf",
-    "Safety Category": [
-      "AI Governance - Technical"
-    ],
-    "Title": "Foundations of Cooperative AI (Conitzer and Oesterheld, 2023)",
-    "Type": [
-      "Video",
-      "Paper"
-    ]
-  },
-  {
-    "Title": "Attached to Collin's paper"
-  },
-  {
-    "Link": "https://docs.google.com/document/d/1b83_-eo9NEaKDKc9R3P5h5xkLImqMw8ADLmi__rkLo4/edit#heading=h.fke682cxqkxr",
-    "Safety Category": [
-      "Overview"
-    ],
-    "Title": "Leveling up in AI Safety Research Engineering"
-  },
-  {
     "Link": "https://arxiv.org/abs/2006.16241",
     "ML Subfield": [
       "Robustness and Adversariality",
@@ -1553,27 +1110,6 @@
       "Paper"
     ],
     "Abstract": "    We introduce four new real-world distribution shift datasets consisting of changes in image style, image blurriness, geographic location, camera operation, and more. With our new datasets, we take stock of previously proposed methods for improving out-of-distribution robustness and put them to the test. We find that using larger models and artificial data augmentations can improve robustness on real-world distribution shifts, contrary to claims in prior work. We find improvements in artificial robustness benchmarks can transfer to real-world distribution shifts, contrary to claims in prior work. Motivated by our observation that data augmentations can help with real-world distribution shifts, we also introduce a new data augmentation method which advances the state-of-the-art and outperforms models pretrained with 1000 times more labeled data. Overall we find that some methods consistently help with distribution shifts in texture and local image statistics, but these methods do not help with some other distribution shifts like geographic changes. Our results show that future research must study multiple distribution shifts simultaneously, as we demonstrate that no evaluated method consistently improves robustness. \n"
-  },
-  {
-    "Link": "https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/",
-    "ML Subfield": [
-      "Applied ML",
-      "Reinforcement Learning",
-      "Human Model Interaction"
-    ],
-    "ML Subtopic": [
-      "RL: Simulations",
-      "RL: Games",
-      "Applied ML: Robotics"
-    ],
-    "Safety Category": [
-      "Alignment <-> RLHF"
-    ],
-    "Title": "Learning from human preferences (Christiano et al., 2017) ",
-    "Type": [
-      "Blog post"
-    ],
-    "Abstract": "\n"
   },
   {
     "Blog or Video": "https://www.youtube.com/watch?v=U2zJuTLzIm8&t=2s",
@@ -1595,40 +1131,6 @@
       "Video"
     ],
     "Abstract": "Developing safe and useful general-purpose AI systems will require us to make progress on scalable oversight: the problem of supervising systems that potentially outperform us on most skills relevant to the task at hand. Empirical work on this problem is not straightforward, since we do not yet have systems that broadly exceed our abilities. This paper discusses one of the major ways we think about this problem, with a focus on ways it can be studied empirically. We first present an experimental design centered on tasks for which human specialists succeed but unaided humans and current general AI systems fail. We then present a proof-of-concept experiment meant to demonstrate a key feature of this experimental design and show its viability with two question-answering tasks: MMLU and time-limited QuALITY. On these tasks, we find that human participants who interact with an unreliable large-language-model dialog assistant through chat -- a trivial baseline strategy for scalable oversight -- substantially outperform both the model alone and their own unaided performance. These results are an encouraging sign that scalable oversight will be tractable to study with present models and bolster recent findings that large language models can productively assist humans with difficult tasks. \n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/christian-schroeder-de-witt-secret-collusion-among-generative-ai-agents",
-    "Link": "https://openreview.net/attachment?id=FXZFrOvIoc&name=pdf",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "A Perfect Collusion Benchmark: How can AI agents be prevented from colluding with information-theoretic undetectability? (Motwani et al., 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://youtu.be/VbNPZoFe7ng?t=92",
-    "Safety Category": [
-      "Model evaluations"
-    ],
-    "Title": "Discovering AI Risks with AIs (Ethan Perez, 53-min video) ",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/jascha-sohl-dickstein-adversarial-examples-transfer-from-machines-to-huma",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "Adversarial examples transfer from machines to humans (Jascha Sohl-Dickstein, 4-min video)",
-    "Type": [
-      "Video"
-    ]
   },
   {
     "Link": "https://arxiv.org/abs/2303.08774",
@@ -1707,41 +1209,6 @@
     "Transcripts / Audio / Slides": "https://preview.type3.audio/episode/agi-safety-fundamentals-alignment/632feda4-71a5-42a2-84a1-588c6b9ea1ad"
   },
   {
-    "Link": "https://iopscience.iop.org/article/10.1088/1742-5468/ac3a74/meta",
-    "ML Subfield": [
-      "Theory"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Title": "Deep double descent: where bigger models and more data hurt (Nakkiran et al., 2021)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "We show that a variety of modern deep learning tasks exhibit a 'double-descent' phenomenon where, as we increase model size, performance first gets worse and then gets better. Moreover, we show that double descent occurs not just as a function of model size, but also as a function of the number of training epochs. We unify the above phenomena by defining a new complexity measure we call the effective model complexity and conjecture a generalized double descent with respect to this measure. Furthermore, our notion of model complexity allows us to identify certain regimes where increasing (even quadrupling) the number of train samples actually hurts test performance.\n"
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2211.00593.pdf",
-    "ML Subfield": [
-      "NLP: LLMs"
-    ],
-    "ML Subtopic": [
-      "NLP"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "Interpretability In The Wild: A Circuit For Indirect Object Identification In GPT-2 Small (Wang et al., 2022)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    Research in mechanistic interpretability seeks to explain behaviors of machine learning models in terms of their internal components. However, most previous work either focuses on simple behaviors in small models, or describes complicated behaviors in larger models with broad strokes. In this work, we bridge this gap by presenting an explanation for how GPT-2 small performs a natural language task called indirect object identification (IOI). Our explanation encompasses 26 attention heads grouped into 7 main classes, which we discovered using a combination of interpretability approaches relying on causal interventions. To our knowledge, this investigation is the largest end-to-end attempt at reverse-engineering a natural behavior \"in the wild\" in a language model. We evaluate the reliability of our explanation using three quantitative criteria--faithfulness, completeness and minimality. Though these criteria support our explanation, they also point to remaining gaps in our understanding. Our work provides evidence that a mechanistic understanding of large ML models is feasible, opening opportunities to scale our understanding to both larger models and more complex tasks. \n"
-  },
-  {
     "Link": "https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/",
     "ML Subfield": [
       "Domain General"
@@ -1754,29 +1221,6 @@
     "Type": [
       "Blog post"
     ]
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2210.10860.pdf",
-    "ML Subfield": [
-      "NLP: Question Answering",
-      "NLP: LLMs"
-    ],
-    "ML Subtopic": [
-      "Human Model Interaction",
-      "NLP"
-    ],
-    "Safety Category": [
-      "Scalable oversight"
-    ],
-    "Safety Topic": [
-      "Debate"
-    ],
-    "Title": "Two-Turn Debate Doesn't Help Humans Answer Hard Reading Comprehension Questions (Parrish et al., 2022)",
-    "Type": [
-      "Paper"
-    ],
-    "Twitter": "https://twitter.com/sleepinyourhat/status/1585759654478422016",
-    "Abstract": "    The use of language-model-based question-answering systems to aid humans in completing difficult tasks is limited, in part, by the unreliability of the text these systems generate. Using hard multiple-choice reading comprehension questions as a testbed, we assess whether presenting humans with arguments for two competing answer options, where one is correct and the other is incorrect, allows human judges to perform more accurately, even when one of the arguments is unreliable and deceptive. If this is helpful, we may be able to increase our justified trust in language-model-based systems by asking them to produce these arguments where needed. Previous research has shown that just a single turn of arguments in this format is not helpful to humans. However, as debate settings are characterized by a back-and-forth dialogue, we follow up on previous results to test whether adding a second round of counter-arguments is helpful to humans. We find that, regardless of whether they have access to arguments or not, humans perform similarly on our task. These findings suggest that, in the case of answering reading comprehension questions, debate is not a helpful format. \n"
   },
   {
     "Link": "http://arxiv.org/abs/2103.14659",
@@ -1820,18 +1264,6 @@
     ],
     "Twitter": "https://twitter.com/Manderljung/status/1678414590529490947",
     "Abstract": "Advanced AI models hold the promise of tremendous benefits for humanity, but society needs to proactively manage the accompanying risks. In this paper, we focus on what we term \"frontier AI\" models: highly capable foundation models that could possess dangerous capabilities sufficient to pose severe risks to public safety. Frontier AI models pose a distinct regulatory challenge: dangerous capabilities can arise unexpectedly; it is difficult to robustly prevent a deployed model from being misused; and, it is difficult to stop a model's capabilities from proliferating broadly. To address these challenges, at least three building blocks for the regulation of frontier models are needed: (1) standard-setting processes to identify appropriate requirements for frontier AI developers, (2) registration and reporting requirements to provide regulators with visibility into frontier AI development processes, and (3) mechanisms to ensure compliance with safety standards for the development and deployment of frontier AI models. Industry self-regulation is an important first step. However, wider societal discussions and government intervention will be needed to create standards and to ensure compliance with them. We consider several options to this end, including granting enforcement powers to supervisory authorities and licensure regimes for frontier AI models. Finally, we propose an initial set of safety standards. These include conducting pre-deployment risk assessments; external scrutiny of model behavior; using risk assessments to inform deployment decisions; and monitoring and responding to new information about model capabilities and uses post-deployment. We hope this discussion contributes to the broader conversation on how to balance public safety risks and innovation benefits from advances at the frontier of AI development. \n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/sheila-mcilraith-epistemic-side-effects",
-    "Link": "https://www.cs.toronto.edu/~toryn/docs/KlassenAAMAS2023epistemic.pdf",
-    "Safety Category": [
-      "Scalable oversight"
-    ],
-    "Title": "Epistemic Side Effects: An AI Safety Problem (Klassen et al., 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
   },
   {
     "Link": "https://arxiv.org/abs/2307.02483",
@@ -1880,17 +1312,6 @@
       "Major problems (misalignment, misuse, threat models)"
     ],
     "Title": "Researcher Perceptions of Current and Future AI (Vael Gates, 60-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/dylan-hadfield-menell-preference-learning-in-alignment",
-    "Safety Category": [
-      "Scalable oversight",
-      "Alignment <-> RLHF"
-    ],
-    "Title": "Preference Learning in Alignment (Dylan Hadfield-Menell, 4-min video)",
     "Type": [
       "Video"
     ]
@@ -2033,20 +1454,6 @@
     "Abstract": "    This paper argues that a range of current AI systems have learned how to deceive humans. We define deception as the systematic inducement of false beliefs in the pursuit of some outcome other than the truth. We first survey empirical examples of AI deception, discussing both special-use AI systems (including Meta's CICERO) built for specific competitive situations, and general-purpose AI systems (such as large language models). Next, we detail several risks from AI deception, such as fraud, election tampering, and losing control of AI systems. Finally, we outline several potential solutions to the problems posed by AI deception: first, regulatory frameworks should subject AI systems that are capable of deception to robust risk-assessment requirements; second, policymakers should implement bot-or-not laws; and finally, policymakers should prioritize the funding of relevant research, including tools to detect AI deception and to make AI systems less deceptive. Policymakers, researchers, and the broader public should work proactively to prevent AI deception from destabilizing the shared foundations of our society. \n"
   },
   {
-    "Link": "https://arxiv.org/abs/2106.07682",
-    "ML Subtopic": [
-      "Theory"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Revisiting Model Stitching to Compare Neural Representations (Bansal et al., 2021)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    We revisit and extend model stitching (Lenc & Vedaldi 2015) as a methodology to study the internal representations of neural networks. Given two trained and frozen models A and B, we consider a \"stitched model'' formed by connecting the bottom-layers of A to the top-layers of B, with a simple trainable layer between them. We argue that model stitching is a powerful and perhaps under-appreciated tool, which reveals aspects of representations that measures such as centered kernel alignment (CKA) cannot. Through extensive experiments, we use model stitching to obtain quantitative verifications for intuitive statements such as \"good networks learn similar representations'', by demonstrating that good networks of the same architecture, but trained in very different ways (e.g.: supervised vs. self-supervised learning), can be stitched to each other without drop in performance. We also give evidence for the intuition that \"more is better'' by showing that representations learnt with (1) more data, (2) bigger width, or (3) more training time can be \"plugged in'' to weaker models to improve performance. Finally, our experiments reveal a new structural property of SGD which we call \"stitching connectivity'', akin to mode-connectivity: typical minima reached by SGD can all be stitched to each other with minimal change in accuracy. \n"
-  },
-  {
     "Link": "https://ai.meta.com/research/publications/purple-llama-cyberseceval-a-benchmark-for-evaluating-the-cybersecurity-risks-of-large-language-models/",
     "ML Subfield": [
       "Security",
@@ -2068,19 +1475,6 @@
       "Paper"
     ],
     "Abstract": "This paper presents CYBERSECEVAL, a comprehensive benchmark developed to help bolster the cybersecurity of Large Language Models (LLMs) employed as coding assistants. As what we believe to be the most extensive unified cybersecurity safety benchmark to date, CYBERSECEVAL provides a thorough evaluation of LLMs in two crucial security domains: their propensity to generate insecure code and their level of compliance when asked to assist in cyberattacks. Through a case study involving seven models from the Llama2, codeLlama, and OpenAI GPT large language model families, CYBERSECEVAL effectively pinpointed key cybersecurity risks. More importantly, it offered practical insights for refining these models. A significant observation from the study was the tendency of more advanced models to suggest insecure code, highlighting the critical need for integrating security considerations in the development of sophisticated LLMs. CYBERSECEVAL, with its automated test case generation and evaluation pipeline covers a broad scope and equips LLM designers and researchers with a tool to broadly measure and enhance the cybersecurity safety properties of LLMs, contributing to the development of more secure AI systems.\n"
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/johannes-von-oswald-mechanistic-interpretability-of-in-context-learning",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "Mechanistic Interpretability of in-context learning (Johannes von Oswald, 5-min video)",
-    "Type": [
-      "Video"
-    ]
   },
   {
     "Link": "https://www.neelnanda.io/mechanistic-interpretability/quickstart",
@@ -2115,24 +1509,6 @@
     "Type": [
       "Blog post"
     ]
-  },
-  {
-    "Link": "http://arxiv.org/abs/2111.09259",
-    "ML Subtopic": [
-      "Applied ML: Cognitive Tasks"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Safety Topic": [
-      "Emergence"
-    ],
-    "Title": "Acquisition of Chess Knowledge in AlphaZero (McGrath et al., 2022)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    What is learned by sophisticated neural network agents such as AlphaZero? This question is of both scientific and practical interest. If the representations of strong neural networks bear no resemblance to human concepts, our ability to understand faithful explanations of their decisions will be restricted, ultimately limiting what we can achieve with neural network interpretability. In this work we provide evidence that human knowledge is acquired by the AlphaZero neural network as it trains on the game of chess. By probing for a broad range of human chess concepts we show when and where these concepts are represented in the AlphaZero network. We also provide a behavioural analysis focusing on opening play, including qualitative analysis from chess Grandmaster Vladimir Kramnik. Finally, we carry out a preliminary investigation looking at the low-level details of AlphaZero's representations, and make the resulting behavioural and representational analyses available online. \n"
   },
   {
     "Link": "https://arxiv.org/abs/2304.13734",
@@ -2181,16 +1557,6 @@
     "Title": "What AI companies can do today to help with the most important century (Karnofsky, 2023)",
     "Type": [
       "Blog post"
-    ]
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/shane-legg-system-two-safety",
-    "Safety Category": [
-      "Scalable oversight"
-    ],
-    "Title": "System Two Safety (Shane Legg, 5-min video)",
-    "Type": [
-      "Video"
     ]
   },
   {
@@ -2293,17 +1659,6 @@
     "Abstract": "    Surprisingly, we find that the adversarial prompts generated by our approach are quite transferable, including to black-box, publicly released LLMs. Specifically, we train an adversarial attack suffix on multiple prompts (i.e., queries asking for many different types of objectionable content), as well as multiple models (in our case, Vicuna-7B and 13B). When doing so, the resulting attack suffix is able to induce objectionable content in the public interfaces to ChatGPT, Bard, and Claude, as well as open source LLMs such as LLaMA-2-Chat, Pythia, Falcon, and others. In total, this work significantly advances the state-of-the-art in adversarial attacks against aligned language models, raising important questions about how such systems can be prevented from producing objectionable information. Code is available at this http URL. \n"
   },
   {
-    "Link": "https://www.alignment-workshop.com/nola-talks/anca-dr%C4%83gan-implications-of-human-model-misspecification-for-alignment",
-    "Safety Category": [
-      "Scalable oversight",
-      "Reward misspecification and goal misgeneralization"
-    ],
-    "Title": "Implications of human model misspecification for alignment (Anca Dragan, 6-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
     "Link": "https://arxiv.org/abs/2306.06924",
     "ML Subfield": [
       "Domain General",
@@ -2320,26 +1675,6 @@
     ],
     "Twitter": "https://twitter.com/AndrewCritchCA/status/1668476943208169473",
     "Abstract": "While several recent works have identified societal-scale and extinction-level risks to humanity arising from artificial intelligence, few have attempted an exhaustive taxonomy of such risks. Many exhaustive taxonomies are possible, and some are useful—particularly if they reveal new risks or practical approaches to safety. This paper explores a taxonomy based on accountability: whose actions lead to the risk, are the actors unified, and are they deliberate? We also provide stories to illustrate how the various risk types could each play out, including risks arising from unanticipated interactions of many AI systems, as well as risks from deliberate misuse, for which combined technical and policy solutions are indicated.\n"
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/john-schulman-keeping-humans-in-the-loop",
-    "Safety Category": [
-      "AI Governance - Technical"
-    ],
-    "Title": "Keeping Humans in the Loop (John Schulman, 5-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like",
-    "Safety Category": [
-      "Major problems (misalignment, misuse, threat models)"
-    ],
-    "Title": "What failure looks like (Christiano, 2019)",
-    "Type": [
-      "Blog post"
-    ]
   },
   {
     "Link": "https://theaidigest.org/progress-and-dangers",
@@ -2383,16 +1718,6 @@
     "Abstract": "    Multimodal contrastive learning methods like CLIP train on noisy and uncurated training datasets. This is cheaper than labeling datasets manually, and even improves out-of-distribution robustness. We show that this practice makes backdoor and poisoning attacks a significant threat. By poisoning just 0.01% of a dataset (e.g., just 300 images of the 3 million-example Conceptual Captions dataset), we can cause the model to misclassify test images by overlaying a small patch. Targeted poisoning attacks, whereby the model misclassifies a particular test input with an adversarially-desired label, are even easier requiring control of 0.0001% of the dataset (e.g., just three out of the 3 million images). Our attacks call into question whether training on noisy and uncurated Internet scrapes is desirable. \n"
   },
   {
-    "Link": "https://www.alignmentforum.org/posts/PZtsoaoSLpKjjbMqM/the-case-for-aligning-narrowly-superhuman-models",
-    "Safety Category": [
-      "Major problems (misalignment, misuse, threat models)"
-    ],
-    "Title": "The case for aligning narrowly superhuman models (Cotra, 2021)",
-    "Type": [
-      "Paper"
-    ]
-  },
-  {
     "Link": "https://aiimpacts.org/2022-expert-survey-on-progress-in-ai/",
     "ML Subfield": [
       "Domain General"
@@ -2426,59 +1751,6 @@
       "Paper"
     ],
     "Abstract": "    The unprecedented success of deep neural networks in many applications has made these networks a prime target for adversarial exploitation. In this paper, we introduce a benchmark technique for detecting backdoor attacks (aka Trojan attacks) on deep convolutional neural networks (CNNs). We introduce the concept of Universal Litmus Patterns (ULPs), which enable one to reveal backdoor attacks by feeding these universal patterns to the network and analyzing the output (i.e., classifying the network as \\`clean' or \\`corrupted'). This detection is fast because it requires only a few forward passes through a CNN. We demonstrate the effectiveness of ULPs for detecting backdoor attacks on thousands of networks with different architectures trained on four benchmark datasets, namely the German Traffic Sign Recognition Benchmark (GTSRB), MNIST, CIFAR10, and Tiny-ImageNet. The codes and train/test models for this paper can be found here this https URL. \n"
-  },
-  {
-    "Link": "https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html",
-    "ML Subfield": [
-      "NLP: LLMs"
-    ],
-    "ML Subtopic": [
-      "NLP"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals",
-      "Scalable oversight"
-    ],
-    "Safety Topic": [
-      "Automated interpretability"
-    ],
-    "Title": "Language models can explain neurons in language models (Bills et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    In this paper, we benchmark the usefulness of interpretability tools on debugging tasks. Our key insight is that we can implant human-interpretable trojans into models and then evaluate these tools based on whether they can help humans discover them. This is analogous to finding OOD bugs, except the ground truth is known, allowing us to know when an interpretation is correct. We make four contributions. (1) We propose trojan discovery as an evaluation task for interpretability tools and introduce a benchmark with 12 trojans of 3 different types. (2) We demonstrate the difficulty of this benchmark with a preliminary evaluation of 16 state-of-the-art feature attribution/saliency tools. Even under ideal conditions, given direct access to data with the trojan trigger, these methods still often fail to identify bugs. (3) We evaluate 7 feature-synthesis methods on our benchmark. (4) We introduce and evaluate 2 new variants of the best-performing method from the previous evaluation. A website for this paper and its code is at this https URL \n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/atticus-geiger-theories-and-tools-for-mechanistic-interpretability-via-ca",
-    "Link": "https://ai.stanford.edu/blog/causal-abstraction/",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "Faithful, Interpretable Model Explanations via Causal Abstraction (Geiger et al., 2022)",
-    "Type": [
-      "Video",
-      "Paper"
-    ]
-  },
-  {
-    "Link": "https://distill.pub/2021/multimodal-neurons/",
-    "ML Subtopic": [
-      "Robustness and Adversariality"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "Multimodal neurons in artificial neural networks (Goh et al., 2021) ",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "In 2005, a letter published in Nature described human neurons responding to specific people, such as Jennifer Aniston or Halle Berry . The exciting thing wasn’t just that they selected for particular people, but that they did so regardless of whether they were shown photographs, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: \"You are looking at the far end of the transformation from metric, visual shapes to conceptual… information.\" Quiroga's full quote, from reads: \"I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life.\" We elided the portion discussing memory since it was less relevant. We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters, such as Lady Gaga or Spiderman. \n"
   },
   {
     "Blog or Video": "https://www.alignment-workshop.com/nola-talks/zico-kolter-adversarial-attacks-on-aligned-language-models",
@@ -2537,38 +1809,6 @@
     ]
   },
   {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/eric-michaud-the-quantization-model-of-neural-scaling",
-    "Link": "https://arxiv.org/abs/2303.13506",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "The Quantization Model of Neural Scaling (Michaud et al., 2023)",
-    "Type": [
-      "Video",
-      "Paper"
-    ]
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2104.07143.pdf",
-    "ML Subfield": [
-      "NLP: Language Modeling"
-    ],
-    "ML Subtopic": [
-      "NLP"
-    ],
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Safety Topic": [
-      "Mechanistic interpretability"
-    ],
-    "Title": "An Interpretability Illusion for BERT (Bolukbasi et al., 2021)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "    We describe an \"interpretability illusion\" that arises when analyzing the BERT model. Activations of individual neurons in the network may spuriously appear to encode a single, simple concept, when in fact they are encoding something far more complex. The same effect holds for linear combinations of activations. We trace the source of this illusion to geometric properties of BERT's embedding space as well as the fact that common text corpora represent only narrow slices of possible English sentences. We provide a taxonomy of model-learned concepts and discuss methodological implications for interpretability research, especially the importance of testing hypotheses on multiple data sets. \n"
-  },
-  {
     "Link": "https://www.alignment-workshop.com/nola-talks/adam-gleave-agi-safety-risks-and-research-directions",
     "ML Subfield": [
       "Security",
@@ -2583,30 +1823,6 @@
     "Type": [
       "Video"
     ]
-  },
-  {
-    "Link": "https://arxiv.org/pdf/2305.04388.pdf",
-    "ML Subfield": [
-      "Applied ML: Cognitive Tasks",
-      "NLP: LLMs"
-    ],
-    "ML Subtopic": [
-      "NLP",
-      "Applied ML",
-      "Human Model Interaction"
-    ],
-    "Safety Category": [
-      "Deception"
-    ],
-    "Safety Topic": [
-      "Sycophancy"
-    ],
-    "Title": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting (Turpin et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Twitter": "https://twitter.com/milesaturpin/status/1656010877269602304",
-    "Abstract": "    Large Language Models (LLMs) can achieve strong performance on many tasks by producing step-by-step reasoning before giving a final output, often referred to as chain-of-thought reasoning (CoT). It is tempting to interpret these CoT explanations as the LLM's process for solving a task. This level of transparency into LLMs' predictions would yield significant safety benefits. However, we find that CoT explanations can systematically misrepresent the true reason for a model's prediction. We demonstrate that CoT explanations can be heavily influenced by adding biasing features to model inputs--e.g., by reordering the multiple-choice options in a few-shot prompt to make the answer always \"(A)\"--which models systematically fail to mention in their explanations. When we bias models toward incorrect answers, they frequently generate CoT explanations rationalizing those answers. This causes accuracy to drop by as much as 36% on a suite of 13 tasks from BIG-Bench Hard, when testing with GPT-3.5 from OpenAI and Claude 1.0 from Anthropic. On a social-bias task, model explanations justify giving answers in line with stereotypes without mentioning the influence of these social biases. Our findings indicate that CoT explanations can be plausible yet misleading, which risks increasing our trust in LLMs without guaranteeing their safety. Building more transparent and explainable systems will require either improving CoT faithfulness through targeted efforts or abandoning CoT in favor of alternative methods. \n"
   },
   {
     "Link": "https://arxiv.org/abs/2309.03886",
@@ -2628,17 +1844,6 @@
       "Paper"
     ],
     "Abstract": "Labeling neural network submodules with human-legible descriptions is useful for many downstream tasks: such descriptions can surface failures, guide interventions, and perhaps even explain important model behaviors. To date, most mechanistic descriptions of trained networks have involved small models, narrowly delimited phenomena, and large amounts of human labor. Labeling all human-interpretable sub-computations in models of increasing size and complexity will almost certainly require tools that can generate and validate descriptions automatically. Recently, techniques that use learned models in-the-loop for labeling have begun to gain traction, but methods for evaluating their efficacy are limited and ad-hoc. How should we validate and compare open-ended labeling tools? This paper introduces FIND (Function INterpretation and Description), a benchmark suite for evaluating the building blocks of automated interpretability methods. FIND contains functions that resemble components of trained neural networks, and accompanying descriptions of the kind we seek to generate. The functions span textual and numeric domains, and involve a range of real-world complexities. We evaluate methods that use pretrained language models (LMs) to produce descriptions of function behavior in natural language and code. Additionally, we introduce a new interactive method in which an Automated Interpretability Agent (AIA) generates function descriptions. We find that an AIA, built from an LM with black-box access to functions, can infer function structure, acting as a scientist by forming hypotheses, proposing experiments, and updating descriptions in light of new data. However, AIA descriptions tend to capture global function behavior and miss local details. These results suggest that FIND will be useful for evaluating more sophisticated interpretability methods before they are applied to real-world models. \n"
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/dawn-song-challenges-for-ai-safety-in-adversarial-settings",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "Challenges for AI safety in adversarial settings (Dawn Song, 6-min video)",
-    "Type": [
-      "Video"
-    ]
   },
   {
     "Link": "https://arxiv.org/abs/1903.12261",
@@ -2730,16 +1935,6 @@
     "Abstract": "In this work, we used a safe language generation task (\\`\\`avoid injuries'') as a testbed for achieving high reliability through adversarial training. We created a series of adversarial training techniques -- including a tool that assists human adversaries -- to find and eliminate failures in a classifier that filters text completions suggested by a generator. In our task, we determined that we can set very conservative classifier thresholds without significantly impacting the quality of the filtered outputs. We found that adversarial training increased robustness to the adversarial attacks that we trained on -- doubling the time for our contractors to find adversarial examples both with our tool (from 13 to 26 minutes) and without (from 20 to 44 minutes) -- without affecting in-distribution performance. We hope to see further work in the high-stakes reliability setting, including more powerful tools for enhancing human adversaries and better ways to measure high levels of reliability, until we can confidently rule out the possibility of catastrophic deployment-time failures of powerful models. \n"
   },
   {
-    "Link": "https://www.alignmentforum.org/posts/JvZhhzycHu2Yd57RN/causal-scrubbing-a-method-for-rigorously-testing",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Causal Scrubbing: a method for rigorously testing interpretability hypotheses (Chan et al., 2022)",
-    "Type": [
-      "Paper"
-    ]
-  },
-  {
     "Link": "https://bounded-regret.ghost.io/more-is-different-for-ai/",
     "ML Subfield": [
       "Domain General"
@@ -2805,27 +2000,6 @@
     ]
   },
   {
-    "Link": "https://proceedings.mlr.press/v202/von-oswald23a.html",
-    "ML Subfield": [
-      "NLP"
-    ],
-    "ML Subtopic": [
-      "NLP: LLMs"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs",
-      "Science of deep learning"
-    ],
-    "Safety Topic": [
-      "Emergence"
-    ],
-    "Title": "Transformers Learn In-Context by Gradient Descent (Von Oswald et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "At present, the mechanisms of in-context learning in Transformers are not well understood and remain mostly an intuition. In this paper, we suggest that training Transformers on auto-regressive objectives is closely related to gradient-based meta-learning formulations. We start by providing a simple weight construction that shows the equivalence of data transformations induced by 1) a single linear self-attention layer and by 2) gradient-descent (GD) on a regression loss. Motivated by that construction, we show empirically that when training self-attention-only Transformers on simple regression tasks either the models learned by GD and Transformers show great similarity or, remarkably, the weights found by optimization match the construction. Thus we show how trained Transformers become mesa-optimizers i.e. learn models by gradient descent in their forward pass. This allows us, at least in the domain of regression problems, to mechanistically understand the inner workings of in-context learning in optimized Transformers. Building on this insight, we furthermore identify how Transformers surpass the performance of plain gradient descent by learning an iterative curvature correction and learn linear models on deep data representations to solve non-linear regression tasks. Finally, we discuss intriguing parallels to a mechanism identified to be crucial for in-context learning termed induction-head (Olsson et al., 2022) and show how it could be understood as a specific case of in-context learning by gradient descent learning within Transformers. \n"
-  },
-  {
     "Blog or Video": "https://transformer-circuits.pub/2023/interpretability-dreams/index.html#epistemic-foundation",
     "Link": "https://www.alignment-workshop.com/sf-talks/chris-olah-looking-inside-neural-networks-with-mechanistic-interpretabili",
     "ML Subfield": [
@@ -2837,17 +2011,6 @@
       "Research bottlenecks / limitations"
     ],
     "Title": "Looking Inside Neural Networks with Mechanistic Interpretability (Chris Olah, 41-min video)",
-    "Type": [
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/dimitris-papailiopoulos-the-challenge-of-monitoring-covert-interactions-a",
-    "Safety Category": [
-      "Reward misspecification and goal misgeneralization",
-      "Adversaries / Robustness"
-    ],
-    "Title": "The challenge of monitoring covert interactions and behavioral shifts in LLM agents (Dimitris Papailiopoulos, 4-min video)",
     "Type": [
       "Video"
     ]
@@ -2910,26 +2073,6 @@
       "Paper"
     ],
     "Abstract": "It is important to detect anomalous inputs when deploying machine learning systems. The use of larger and more complex inputs in deep learning magnifies the difficulty of distinguishing between anomalous and in-distribution examples. At the same time, diverse image and text data are available in enormous quantities. We propose leveraging these data to improve deep anomaly detection by training anomaly detectors against an auxiliary dataset of outliers, an approach we call Outlier Exposure (OE). This enables anomaly detectors to generalize and detect unseen anomalies. In extensive experiments on natural language processing and small- and large-scale vision tasks, we find that Outlier Exposure significantly improves detection performance. We also observe that cutting-edge generative models trained on CIFAR-10 may assign higher likelihoods to SVHN images than to CIFAR-10 images; we use OE to mitigate this issue. We also analyze the flexibility and robustness of Outlier Exposure, and identify characteristics of the auxiliary dataset that improve performance. \n"
-  },
-  {
-    "Link": "https://openai.com/blog/instruction-following/",
-    "ML Subfield": [
-      "Applied ML",
-      "Human Model Interaction"
-    ],
-    "ML Subtopic": [
-      "NLP: LLMs",
-      "Applied ML: Cognitive Tasks",
-      "Applied ML: Chatbots"
-    ],
-    "Safety Category": [
-      "Alignment <-> RLHF"
-    ],
-    "Title": "Aligning language models to follow instructions (Ouyang et al., 2022) ",
-    "Type": [
-      "Blog post"
-    ],
-    "Abstract": "\n"
   },
   {
     "Link": "https://www.alignment-workshop.com/nola-talks/sam-bowman-adversarial-scalable-oversight-for-truthfulness-work-in-progr",
@@ -3063,44 +2206,6 @@
     "Title": "Even Superhuman Go AIs Have Surprising Failures Modes (Gleave et al., 2023)",
     "Type": [
       "Blog post"
-    ]
-  },
-  {
-    "Link": "Slides",
-    "ML Subfield": [
-      "Applied ML",
-      "Domain General"
-    ],
-    "Safety Category": [
-      "Major problems (misalignment, misuse, threat models)",
-      "Overview"
-    ],
-    "Safety Topic": [
-      "Situational awareness (also instrumental convergence, inner misalignment?)"
-    ],
-    "Title": "Decomposing AI Safety slides (AWAIR, 2023)",
-    "Abstract": "<https://docs.google.com/presentation/d/1L8MWaHQDgaGAT-EaesuoWhAryCDBEKvlVPE07swWfvc/edit#slide=id.p>\n"
-  },
-  {
-    "Blog or Video": "https://www.alignment-workshop.com/nola-talks/stephen-casper-cognitive-dissonance-why-do-language-model-outputs-disagr",
-    "Link": "https://arxiv.org/abs/2312.03729",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Cognitive Dissonance: Why Do Language Model Outputs Disagree with Internal Representations of Truthfulness? (Liu et al., 2023)",
-    "Type": [
-      "Paper",
-      "Video"
-    ]
-  },
-  {
-    "Link": "https://www.alignment-workshop.com/nola-talks/adri%C3%A0-garriga-alonso-understanding-planning-in-neural-networks",
-    "Safety Category": [
-      "Latent knowledge / Interpretability / Model internals"
-    ],
-    "Title": "Understanding planning in neural networks (Adrià Garriga Alonso, 4-min video)",
-    "Type": [
-      "Video"
     ]
   },
   {
