@@ -33,6 +33,7 @@
     ]
   },
   {
+    "Blog or Video": "https://www.anthropic.com/news/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
     "Link": "https://arxiv.org/abs/2401.05566",
     "ML Subfield": [
       "NLP",
@@ -47,7 +48,8 @@
     "Type": [
       "Paper"
     ],
-    "Twitter": "https://twitter.com/AnthropicAI/status/1745854907968880970"
+    "Twitter": "https://twitter.com/AnthropicAI/status/1745854907968880970",
+    "Abstract": "Humans are capable of strategically deceptive behavior: behaving helpfully in most situations, but then behaving very differently in order to pursue alternative objectives when given the opportunity. If an AI system learned such a deceptive strategy, could we detect it and remove it using current state-of-the-art safety training techniques? To study this question, we construct proof-of-concept examples of deceptive behavior in large language models (LLMs). For example, we train models that write secure code when the prompt states that the year is 2023, but insert exploitable code when the stated year is 2024. We find that such backdoor behavior can be made persistent, so that it is not removed by standard safety training techniques, including supervised fine-tuning, reinforcement learning, and adversarial training (eliciting unsafe behavior and then training to remove it). The backdoor behavior is most persistent in the largest models and in models trained to produce chain-of-thought reasoning about deceiving the training process, with the persistence remaining even when the chain-of-thought is distilled away. Furthermore, rather than removing backdoors, we find that adversarial training can teach models to better recognize their backdoor triggers, effectively hiding the unsafe behavior. Our results suggest that, once a model exhibits deceptive behavior, standard techniques could fail to remove such deception and create a false impression of safety.\n"
   },
   {
     "Link": "https://arxiv.org/abs/2307.00682",
@@ -140,6 +142,20 @@
       "Paper"
     ],
     "Abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing1,2,3,4,5, biology6,7, chemistry8,9,10 and computer programming11,12. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.\n"
+  },
+  {
+    "Link": "https://arxiv.org/abs/2310.01405",
+    "ML Subfield": [
+      "Transparency"
+    ],
+    "Safety Category": [
+      "Transparency / Interpretability / Model internals / Latent knowledge"
+    ],
+    "Title": "Representation Engineering: A Top-Down Approach to AI Transparency (Zou et al., 2023)",
+    "Type": [
+      "Paper"
+    ],
+    "Abstract": "In this paper, we identify and characterize the emerging area of representation engineering (RepE), an approach to enhancing the transparency of AI systems that draws on insights from cognitive neuroscience. RepE places population-level representations, rather than neurons or circuits, at the center of analysis, equipping us with novel methods for monitoring and manipulating high-level cognitive phenomena in deep neural networks (DNNs). We provide baselines and an initial analysis of RepE techniques, showing that they offer simple yet effective solutions for improving our understanding and control of large language models. We showcase how these methods can provide traction on a wide range of safety-relevant problems, including honesty, harmlessness, power-seeking, and more, demonstrating the promise of top-down transparency research. We hope that this work catalyzes further exploration of RepE and fosters advancements in the transparency and safety of AI systems.\n"
   },
   {
     "Link": "https://arxiv.org/abs/2304.00612",
