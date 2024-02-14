@@ -33,6 +33,23 @@
     ]
   },
   {
+    "Link": "https://arxiv.org/abs/2401.05566",
+    "ML Subfield": [
+      "NLP",
+      "Robustness and Adversariality"
+    ],
+    "Safety Category": [
+      "Adversaries / Robustness / Generalization",
+      "Model evaluations / monitoring / detection",
+      "Deception"
+    ],
+    "Title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training (Hubinger et al., 2024)\n",
+    "Type": [
+      "Paper"
+    ],
+    "Twitter": "https://twitter.com/AnthropicAI/status/1745854907968880970"
+  },
+  {
     "Link": "https://arxiv.org/abs/2307.00682",
     "ML Subfield": [
       "Security",
@@ -1822,6 +1839,22 @@
     "Title": "AGI Safety: Risks and Research Directions (Adam Gleave, 31-min video)\n",
     "Type": [
       "Video"
+    ]
+  },
+  {
+    "Link": "https://arxiv.org/abs/2312.06942",
+    "ML Subfield": [
+      "NLP",
+      "Robustness and Adversariality"
+    ],
+    "Safety Category": [
+      "Adversaries / Robustness / Generalization",
+      "Model evaluations / monitoring / detection",
+      "Deception"
+    ],
+    "Title": "AI Control: Improving Safety Despite Intentional Subversion (Greenblatt et al., 2024)",
+    "Type": [
+      "Paper"
     ]
   },
   {
