@@ -125,28 +125,10 @@
     "Abstract": "    We consider the two related problems of detecting if an example is misclassified or out-of-distribution. We present a simple baseline that utilizes probabilities from softmax distributions. Correctly classified examples tend to have greater maximum softmax probabilities than erroneously classified and out-of-distribution examples, allowing for their detection. We assess performance by defining several tasks in computer vision, natural language processing, and automatic speech recognition, showing the effectiveness of this baseline across all. We then show the baseline can sometimes be surpassed, demonstrating the room for future research on these underexplored detection tasks. \n"
   },
   {
-    "Link": "https://www.nature.com/articles/s41586-023-06792-0",
-    "ML Subfield": [
-      "Applied ML"
-    ],
-    "ML Subtopic": [
-      "NLP: LLMs",
-      "Applied ML: Cognitive Tasks",
-      "Applied ML: AI-Based Automation"
-    ],
-    "Safety Category": [
-      "Capabilities of LLMs"
-    ],
-    "Title": "Autonomous chemical research with large language models (Boike et al., 2023)",
-    "Type": [
-      "Paper"
-    ],
-    "Abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing1,2,3,4,5, biology6,7, chemistry8,9,10 and computer programming11,12. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.\n"
-  },
-  {
     "Link": "https://arxiv.org/abs/2310.01405",
     "ML Subfield": [
-      "Transparency"
+      "NLP: LLMs",
+      "Model Evaluation"
     ],
     "Safety Category": [
       "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -890,6 +872,7 @@
       "Applied ML: Chatbots"
     ],
     "Safety Category": [
+      "Major problems (misalignment, misuse, threat models)",
       "AI Governance"
     ],
     "Title": "Anthropic's Responsible Scaling Policy (Anthropic, 2023)",
