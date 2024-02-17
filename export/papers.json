@@ -180,7 +180,8 @@
     "Link": "https://arxiv.org/abs/2311.17035",
     "ML Subfield": [
       "Robustness and Adversariality",
-      "Security"
+      "Security",
+      "Applied ML"
     ],
     "ML Subtopic": [
       "NLP: LLMs"
@@ -211,8 +212,7 @@
   {
     "Link": "https://sarahconstantin.substack.com/p/scaling-laws-for-ai-and-some-implications",
     "ML Subfield": [
-      "Applied ML",
-      "Theory"
+      "Applied ML"
     ],
     "ML Subtopic": [
       "Applied ML: Efficiency and Hardware",
@@ -302,7 +302,8 @@
   {
     "Link": "https://arxiv.org/abs/2110.03605",
     "ML Subfield": [
-      "Robustness and Adversariality"
+      "Robustness and Adversariality",
+      "Vision"
     ],
     "Safety Category": [
       "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -614,7 +615,8 @@
   {
     "Link": "https://arxiv.org/abs/2306.15447",
     "ML Subfield": [
-      "Robustness and Adversariality"
+      "Robustness and Adversariality",
+      "Security"
     ],
     "ML Subtopic": [
       "NLP: LLMs"
@@ -651,7 +653,8 @@
     "Link": "https://arxiv.org/abs/1606.03490",
     "ML Subfield": [
       "Model Evaluation",
-      "Domain General"
+      "Domain General",
+      "Human Model Interaction"
     ],
     "Safety Category": [
       "Transparency / Interpretability / Model internals / Latent knowledge"
@@ -998,7 +1001,8 @@
       "NLP",
       "Model Evaluation",
       "Robustness and Adversariality",
-      "Applied ML"
+      "Applied ML",
+      "Security"
     ],
     "ML Subtopic": [
       "Applied ML: Chatbots",
@@ -1079,7 +1083,8 @@
     "Link": "https://arxiv.org/abs/2212.08073",
     "ML Subfield": [
       "NLP",
-      "Robustness and Adversariality"
+      "Robustness and Adversariality",
+      "Human Model Interaction"
     ],
     "ML Subtopic": [
       "NLP: LLMs"
@@ -1353,7 +1358,8 @@
       "Theory",
       "Human Model Interaction",
       "Model Evaluation",
-      "Security"
+      "Security",
+      "Robustness and Adversariality"
     ],
     "ML Subtopic": [
       "Applied ML: Cognitive Tasks"
@@ -1983,7 +1989,8 @@
     "Link": "https://arxiv.org/abs/2209.00626",
     "ML Subfield": [
       "Reinforcement Learning",
-      "Applied ML"
+      "Applied ML",
+      "Domain General"
     ],
     "Safety Category": [
       "Major problems (misalignment, misuse, threat models)",
@@ -2130,7 +2137,7 @@
     "ML Subfield": [
       "NLP",
       "Applied ML",
-      "Security"
+      "Theory"
     ],
     "ML Subtopic": [
       "NLP: LLMs",
