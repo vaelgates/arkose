@@ -23,8 +23,6 @@ menu_settings:
           url: '/resources#opportunities'
         - title: 'AI Safety'
           url: '/resources#ai_safety'
-        - title: 'Other'
-          url: '/resources#ai_risk_discussions'
     - title: 'Request a Call'
       url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z'
       # this isn't working: {{site.applyur}}'
