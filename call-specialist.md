@@ -23,7 +23,7 @@ order: 2
 
 <p>Arkose is an early-stage nonprofit with the mission of improving the safety of advanced AI systems. This position is central to the organization's work, as you'll be directly speaking with and supporting professors, PhD students, and industry professionals who are interested in AI safety research or engineering. If you're looking for somewhere you can help build the field of people reducing risks form advanced AI, learn quickly, and take ownership for Arkose's core one-on-one call work, please consider applying. The deadline to apply is <b>March 30</b>.</p>
 
-<a href="https://airtable.com/shr4RFKRUUfQRK15V" class="button special fit">Apply here</a>
+<a href="https://airtable.com/appN5OavW3mZheKEO/shrRwD1Ry3L2GrJGo" class="button special fit">Apply here</a>
 <br>
 
 <h2>About Arkose</h2>
@@ -105,7 +105,8 @@ order: 2
 <ul>
 	<li>An initial application</li>
 	<li>A 1-hour trial task</li>
-	<li>Two 90-minute paid interviews, during at least one of which you will roleplay as a call specialist</li>
+	<li>A 30-minute interview (be prepared to roleplay as a call specialist)</li>
+	<li>A 60-minute paid interview</li>
 	<li>A 2-day paid work trial</li>
 </ul>
 
@@ -119,7 +120,7 @@ order: 2
 
 <p>There's no such thing as a "perfect" candidate. If you're on the fence about applying because you're unsure whether you're qualified, we'd encourage you to apply.</p>
 
-<a href="https://airtable.com/shr4RFKRUUfQRK15V" class="button special fit">Apply here</a>
+<a href="https://airtable.com/appN5OavW3mZheKEO/shrRwD1Ry3L2GrJGo" class="button special fit">Apply here</a>
 <br>
 
 <p>If you have questions about the role, please reach out to <a href="mailto:team@arkose.org">team@arkose.org</a>!</p>
