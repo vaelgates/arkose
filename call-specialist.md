@@ -99,7 +99,7 @@ order: 2
 
 <h2>Application</h2>
 
-<p>The deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis.</p>
+<p>The deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. Since we're hoping to hire someone pretty quickly, we may potentially end up filling the role before the application deadline (so if you're a strong candidate, we'd love if you'd submit early!)</p>
 
 <p>The application process itself will vary by candidate but for successful candidates will typically involve:</p>
 <ul>
