@@ -19,62 +19,69 @@ order: 2
 
 <h2>Summary</h2>
 
-<p><a href="https://arkose.org">Arkose</a> is looking for a AI Safety Call Specialist for its core field-building work, working alongside its founder, <a href="https://vaelgates.com">Vael Gates</a> and operations team. This is a remote full-time independent contractor role, with a yearly pay range of $75,000 - $95,000 depending on location and experience. It's a 9-month fixed term position, with likely extension if we secure organizational funding for 2025.</p>
+<p><a href="https://arkose.org">Arkose</a>, an early-stage nonprofit focused on AI safety field-building, is seeking a full-time AI Safety Call Specialist to join our team remotely. This independent contractor role offers a yearly pay rate of $75,000 - $95,000, depending on location and experience. The role is for a 9-month term, with likely extension if we secure organizational funding for 2025.</p>
 
-<p>Arkose is an early-stage nonprofit with the mission of improving the safety of advanced AI systems. This position is central to the organization's work, as you'll be directly speaking with and supporting professors, PhD students, and industry professionals who are interested in AI safety research or engineering. If you're looking for somewhere you can help build the field of people reducing risks form advanced AI, learn quickly, and take ownership for Arkose's core one-on-one call work, please consider applying. The deadline to apply is <b>March 30</b>.</p>
+<p>This position is central to Arkose's field-building work, as you'll be directly speaking with and supporting professors, PhD students, and industry professionals who are interested in AI safety research or engineering. If you're looking for somewhere you can help build the field of people reducing risks from advanced AI, learn quickly, and take ownership for Arkose's core one-on-one call work, please consider applying.</p>
+
+<p>The application deadline is <b>March 30</b> with rolling admission (early applications encouraged).</p>
 
 <a href="https://airtable.com/appN5OavW3mZheKEO/shrRwD1Ry3L2GrJGo" class="button special fit">Apply here</a>
 <br>
 
 <h2>About Arkose</h2>
 
-<p>Arkose is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. In particular, we offer 30-45 minute calls help support professors, PhD students, and industry professionals who are pursuing or interested in AI safety research or engineering. On these calls, we speak with professionals about their needs and questions, and provide informational resources about opportunities (e.g. job, funding, compute, and other resources) in the space. Alongside these calls, we host a public list of <a href="https://arkose.org/resources">Arkose Resources</a>, and a list of <a href="https://arkose.org/papers">safety-related papers</a> in different research areas. Arkose is supported by the Survival and Flourishing Fund.</p>
+<p><a href="https://arkose.org">Arkose</a> is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. In particular, we offer 30-45 minute calls help support professors, PhD students, and industry professionals who are pursuing or interested in AI safety research or engineering. On these calls, we speak with professionals about their needs and questions, and provide informational resources about opportunities (e.g. job, funding, compute, and other resources) in the space. Alongside these calls, we host a public list of <a href="https://arkose.org/resources">Arkose Resources</a>, and a list of <a href="https://arkose.org/papers">safety-related papers</a> in different research areas.</p>
+
+<p>Arkose is led by founder <a href="https://vaelgates.com">Vael Gates</a> with two operations team members, and is supported by the Survival and Flourishing Fund.</p>
 
 <h2>About the role</h2>
 
-<p>Since calls are central to Arkose's theory of change, the Arkose call specialist position is thus central to the organization's mission. In this role, you'll speak with mid-career AI professionals about the AI safety research landscape as well as funding and other opportunities, and connect individuals to potential collaborators and experts.</p>
+<p>The Arkose call specialist position is central to the organization's mission and theory of change. In this role, you'll speak with mid-career AI professionals about the AI safety research landscape as well as funding and other opportunities, and connect individuals to potential collaborators and experts.</p>
 
 <p>Currently, Arkose has one call specialist: the founder, Vael Gates. In hiring for this role, we are looking for someone to share and largely take over Vael's advising work. In this role, you will be the main face of Arkose's consultation calls: you'll speak with professionals, learn about their needs and suggest and implement improvements to Arkose's offerings, grow Arkose's expert network, and learn about and keep up to date with the AI safety landscape -- research and organizations -- while working with the rest of the Arkose team.</p>
 
-<p>You will work closely with your manager Vael, especially in the initial period of this role, and will be supported throughout in your skill acquisition and growth. You'll be encouraged to continually learn on the job, with the flexibility that comes from being in an early-stage start-up environment, while being in a independent role with high-level responsibilities.</p> 
+<p>You will work closely with your manager Vael, especially in the initial period of this role, and will be supported throughout in your skill acquisition and growth. You'll be encouraged to continually learn on the job, with the flexibility that comes from being in an early-stage start-up environment, while being in an independent role with high-level responsibilities.</p> 
 
 <p>You might be a great fit for this role if talking to talented, mid-career AI professionals about how to support them sounds like fun! Your primary work will be talking to people (and the associated follow-ups for support), so we're looking to people who'd enjoy such a venture in the long-term.</p>
 
-<p>This is a fixed-term position for 9 months, with likely extension if the organization continues (we haven't yet secured organizational funding for 2025). This is a full-time remote position, with international applicants welcome, but you'll need to operate on roughly US-time-zone hours. This is an independent contractor role (though with unlimited paid time off) since all of the Arkose team are currently independent contractors. If you're otherwise a great fit, but time zone or contractor status are dealbreakers for you, please do still apply and mark this on your application.</p>
+<p>This is a fixed-term position for 9 months, with likely extension if the organization continues (we haven't yet secured organizational funding for 2025). This is a full-time remote position, with international applicants welcome, but you'll need to operate on roughly US timezone hours. This is an independent contractor role (though with unlimited paid time off) since all of the Arkose team are currently independent contractors. If you're otherwise a great fit, but time zone or contractor status are dealbreakers for you, please do still apply and mark this on your application.</p>
+
+<p>A final note: Arkose is currently in a period of potential organizational transition, such that we may be absorbed into a larger AI safety organization, or Vael may take an additional position such that they will only be working part-time at Arkose. These decisions will inform our grant applications for 2025. Regardless, we expect this position will remain as specified within this job description, and are happy to speak about this at any stage of the application process.</p> 
 
 <h3>Key responsibilities</h3>
 
 <ul>
-	<li>Speaking with professors, PhD students, and industry professionals in 30-45m calls, several times a day</li>
-	<li>Communicating with stakeholders via email and effectively handling individual requests and inquiries. In particular, completing follow-ups for each call, including introducing professionals to other connections, sending follow-up messages, and investigating whether we can support nonstandard requests with subsequent follow-up</li>
+	<li>Speaking with professors, PhD students, and industry professionals in 30-45 minute calls, several times a day.</li>
+	<li>Communicating with stakeholders via email and effectively handling individual requests and inquiries. In particular, completing follow-ups for each call, including introducing professionals to other connections, sending follow-up messages, and investigating whether we can support nonstandard requests with subsequent follow-up.</li>
 	<li>Working with (and asking for support from) Vael and the operations team (Zach and Audra) to ensure that your and the professionals' needs are being met. Since this is such a core role to Arkose, many of our operations functions will revolve around your role, and we're here to support you!</li>
 </ul>
 
-<p>We're excited to hire someone to start as soon as possible!</p>
+<p>We're excited to hire someone to start as soon as possible, and if we find a great candidate in early applications, will close the hiring round early.</p>
 
 <h2>About you</h2>
 
-<p>This position has two main facets: "people skills" and "AI safety knowledge (high-level overview and research knowledge)". We're expecting candidates to come in with "people skills" - you should be comfortable with the idea of spending most of your time talking to mid-career professionals. We don't expect deep skill in AI safety knowledge, and expect that this is learnable on the job, but you should be excited to learn! You may be a good fit for this job if you have the traits below.</p>
+<p>This position has two main facets: "people skills" and "AI safety knowledge (high-level overview and research knowledge)". We're expecting candidates to already have "people skills" - you should be comfortable with the idea of spending most of your time talking to mid-career professionals. We don't expect deep skill in AI safety knowledge, and expect that this is learnable on the job (though you should be excited to learn!) If you have some of the traits below, you may be a good fit for this role.</p>
 
 <h3>People skills</h3>
 <ul>
-	<li>Enjoy talking to people, and expect to enjoy talking to smart, driven mid-career professionals</li>
-	<li>Feel comfortable exploring different points of view, and discussing high-level and concrete ideas.</li>
-	<li>Can communicate professionally and pleasantly, bringing a sense of curiosity and helpfulness to conversations</li>
+	<li>Expect to enjoy talking to smart, driven mid-career professionals.</li>
+	<li>Feel comfortable exploring different perspectives, while simultaneously being capable of arguing for positions you support.</li>
+	<li>Able to engage in a variety of discussions with professionalism and positivity, emphasizing curiosity, supportiveness, and  prioritizing key conversational aims.</li>
 </ul>
 
 <h3>AI Safety knowledge</h3>
 <ul>
-	<li>You like learning about AI safety research, and feel comfortable skimming abstracts of research papers</li>
-	<li>You're interested in learning about the AI safety landscape, and communicating with stakeholders to keep up to date</li>
+	<li>You like learning about AI safety research!</li>
+	<li>Ideally, you feel comfortable skimming abstracts of research papers.</li>
+	<li>You're interested in learning about the AI safety landscape, and communicating with stakeholders to keep up to date.</li>
 </ul>
 
 <h3>General skills and culture</h3>
 <ul>
-	<li>You're comfortable with stakeholder management, and can communicate clearly and appropriately with different groups of experts, verbally and in writing</li>
-	<li>You're conscientious, and can easily keep track of different follow-up tasks amidst various individual calls</li>
-	<li>You can communicate in a direct way with Vael and other team members, updating them about your uncertainties, needs, and flagging any issues you encounter. As a remote team with a lot of Slack communication, our team culture is oriented around relatively clear communication with fast feedback loops when changes are needed (and they often are, given the early-stage nature of the org), and appreciation of each others' work. We want the Arkose work environment to continue to feel like a welcoming and productive space!</li>
-	<li>You're self-motivated in a remote role, and feel comfortable owning tasks, and making suggestions and requests for areas of future growth and potential improvements.</li>
+	<li>You're comfortable with stakeholder management, and can communicate clearly and appropriately with different groups of experts, verbally and in writing.</li>
+	<li>You're conscientious, and can easily keep track of different follow-up tasks amidst various individual calls.</li>
+	<li>You can communicate straightforwardly with Vael and the rest of the team, openly discussing any uncertainties, needs, or flagging any issues you encounter. As a remote team with a lot of Slack communication, our team culture is oriented around relatively direct communication with fast feedback loops alongside appreciation of each others' work. We want the Arkose work environment to continue to feel like a welcoming and productive space!</li>
+	<li>You're self-motivated in a remote role, and feel comfortable owning tasks, and making suggestions for potential improvements.</li>
 </ul>
 
 <h2>Pay and benefits</h2>
@@ -99,9 +106,9 @@ order: 2
 
 <h2>Application</h2>
 
-<p>The deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. Since we're hoping to hire someone pretty quickly, we may potentially end up filling the role before the application deadline (so if you're a strong candidate, we'd love if you'd submit early!)</p>
+<p>The deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. Since we're hoping to hire someone pretty quickly, we may potentially end up filling the role before the application deadline (so we encourage early submissions!)</p>
 
-<p>The application process itself will vary by candidate but for successful candidates will typically involve:</p>
+<p>The application process itself may vary by candidate but for successful candidates will typically involve:</p>
 <ul>
 	<li>An initial application</li>
 	<li>A 1-hour trial task</li>
