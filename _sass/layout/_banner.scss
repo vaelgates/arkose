@@ -179,6 +179,8 @@
 
 		.banner-button {
 			width: fit-content;
+			text-transform: uppercase;
+			font-size: 1em;
 
 			@include breakpoint(small) {
 				height: 2.5em;
