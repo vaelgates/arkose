@@ -111,9 +111,8 @@ order: 2
 <p>The application process itself may vary by candidate but for successful candidates will typically involve:</p>
 <ul>
 	<li>An initial application</li>
-	<li>A 1-hour trial task</li>
-	<li>A 30-minute interview (be prepared to roleplay as a call specialist)</li>
-	<li>A 60-minute paid interview</li>
+	<li>A 30-minute interview</li>
+	<li>A 60-minute interview</li>
 	<li>A 2-day paid work trial</li>
 </ul>
 
