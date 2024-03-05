@@ -235,3 +235,26 @@
     display: block;
   }
 }
+
+.hero {
+  width: 100vw;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+#main > * > .inner.inner-wide {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1440px) {
+  #main > * > .inner.inner-wide {
+    max-width: 60%;
+  }
+}
+
+.testimonial {
+  border-left:8px solid var(--color-arkose-dark-blue);
+  &::before{
+    content: "";
+  }
+}
