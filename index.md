@@ -88,7 +88,7 @@ featured_image: /assets/img/social.jpg
             — Christian Schroeder de Witt, Postdoctoral Researcher at the University of Oxford
           </li>
           <li class="glide__slide">
-            <blockquote class="testimonial">As someone who is relatively new to alignment research, the call with Arkose was more than worth the time. Loads of useful pointers, honest feedback and an overall pleasant call experience. Definitely helped me to refine my plan to transition into the field!</blockquote> — Matthew Lee, Machine Learning Engineer
+            <blockquote class="testimonial">As someone who is relatively new to alignment research, the call with Arkose was more than worth the time. Loads of useful pointers, honest feedback and an overall pleasant call experience. Definitely helped me to refine my plan to transition into the field!</blockquote> - Anonymous 
           </li>
           <li class="glide__slide">
             <blockquote class="testimonial">My call with Vael Gates from Arkose was enlightening and profoundly helpful, providing me with access to resources I was previously unaware of. Their dedication to offering personalized support has immensely enhanced my AI safety research. Arkose's cool and invaluable contribution is a cornerstone for the community's thriving success, positioning them as a trusted ally for student researchers like myself.</blockquote> — Yi Zeng, PhD Student at Virginia Tech
