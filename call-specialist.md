@@ -19,9 +19,11 @@ order: 2
 
 <h2>Summary</h2>
 
-<p><a href="https://arkose.org">Arkose</a>, an early-stage nonprofit focused on AI safety field-building, is seeking a full-time AI Safety Call Specialist to join our team remotely. This independent contractor role offers a yearly pay rate of $75,000 - $95,000, depending on location and experience. The role is for a 9-month term, with likely extension if we secure organizational funding for 2025.</p>
+<p><a href="https://arkose.org">Arkose</a>, an early-stage nonprofit focused on AI safety field-building, is seeking a full-time AI Safety Call Specialist to join our team remotely. This position is central to Arkose's field-building work, as you'll be directly speaking with and supporting professors, PhD students, and industry professionals who are interested in AI safety research or engineering.</p>
 
-<p>This position is central to Arkose's field-building work, as you'll be directly speaking with and supporting professors, PhD students, and industry professionals who are interested in AI safety research or engineering. If you're looking for somewhere you can help build the field of people reducing risks from advanced AI, learn quickly, and take ownership for Arkose's core one-on-one call work, please consider applying.</p>
+<p>This independent contractor role offers a yearly pay rate of $75,000 - $95,000, depending on location and experience. The role is for a 9-month term, with likely extension if we secure organizational funding for 2025.</p>
+
+<p>If you're looking for somewhere you can help build the field of people reducing risks from advanced AI, learn quickly, and take ownership for Arkose's core one-on-one call work, please consider applying.</p>
 
 <p>The application deadline is <b>March 30</b> with rolling admission (early applications encouraged).</p>
 
