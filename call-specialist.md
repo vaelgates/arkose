@@ -69,7 +69,7 @@ order: 2
 	<li>Able to engage in a variety of discussions with professionalism and positivity, emphasizing curiosity, supportiveness, and  prioritizing key conversational aims.</li>
 </ul>
 
-<h3>AI Safety knowledge</h3>
+<h3>AI safety knowledge</h3>
 <ul>
 	<li>You like learning about AI safety research!</li>
 	<li>Ideally, you feel comfortable skimming abstracts of research papers.</li>
@@ -94,19 +94,21 @@ order: 2
 
 <p>If any of these are dealbreakers, please still apply and note these in your application - there is some room for negotiation.</p>
 
-<h3>Preparing for the application</h3>
+<h3>Preparing for the interviews</h3>
 
-<p>You are highly encouraged to prepare for this role before you reach the interview stages. While we expect to spend significant time with successful applicants training them for the role, it is still very useful if candidates come with existing knowledge, or the knowledge that they like learning about the AI safety landscape (both AI safety research, and higher-level overviews) To prepare, you are encouraged to: </p>
+<p>You are highly encouraged to prepare for this role before you reach the interview stages. While we expect to spend significant time with successful applicants training them for the role, it is still very useful if candidates come with existing knowledge, or the knowledge that they like learning about the AI safety landscape (both AI safety research, and higher-level overviews). To prepare, you are encouraged to: </p>
 <ul>
 	<li>Read through the Arkose <a href="https://arkose.org/resources#opportunities">Resources</a> page, specifically the Opportunities section, to become familiar with the AI safety space. Ideally, by the time of the interview, you're not only familiar with the organizations and opportunities listed, but are familiar with the approximate layout of the page, such that you could point to relevant parts of this page on a call.</li>
 	<li>Have a high-level overview of the AI safety research space, e.g. by skimming through some of the resources on the <a href="https://arkose.org/resources#ai_safety">AI safety section of the Resources page</a>. You definitely do not need to be an expert, but it would be ideal if you could give a one-sentence description of e.g. what scalable oversight is, and why it's relevant to AI safety.</li>
 </ul>
 
-<p>Please don't worry too much about your depth of AI safety knowledge here: we expect that AI safety knowledge is trainable on the job, but we do want you to be excited to learn!</p>
+<p>Some of the above may also be relevant to the initial application form, but is not necessary to view beforehand.</p>
+
+<p>Regardless, please don't worry too much about your depth of AI safety knowledge here: we expect that AI safety knowledge is trainable on the job, but we do want you to be excited to learn!</p>
 
 <h2>Application</h2>
 
-<p>The deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. Since we're hoping to hire someone pretty quickly, we may potentially end up filling the role before the application deadline (so we encourage early submissions!)</p>
+<p>The current deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. Since we're hoping to hire someone pretty quickly, we may potentially end up filling the role before the application deadline (so we encourage early submissions!)</p>
 
 <p>The application process itself may vary by candidate but for successful candidates will typically involve:</p>
 <ul>
