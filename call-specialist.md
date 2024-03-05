@@ -46,7 +46,7 @@ order: 2
 
 <p>This is a fixed-term position for 9 months, with likely extension if the organization continues (we haven't yet secured organizational funding for 2025). This is a full-time remote position, with international applicants welcome, but you'll need to operate on roughly US timezone hours. This is an independent contractor role (though with unlimited paid time off) since all of the Arkose team are currently independent contractors. If you're otherwise a great fit, but time zone or contractor status are dealbreakers for you, please do still apply and mark this on your application.</p>
 
-<p>A final note: Arkose is currently in a period of potential organizational transition, such that we may be absorbed into a larger AI safety organization, or Vael may take an additional position such that they will only be working part-time at Arkose. These decisions will inform our grant applications for 2025. Regardless, we expect this position will remain as specified within this job description, and are happy to speak about this at any stage of the application process.</p> 
+<p>A final note: Arkose is currently in a period of potential organizational transition, such that we may be absorbed into a larger AI safety organization, or Vael may be working part-time at Arkose. These decisions will inform our grant applications for 2025. Regardless, we expect this position will remain as specified within this job description, and are happy to speak about this at any stage of the application process.</p> 
 
 <h3>Key responsibilities</h3>
 
