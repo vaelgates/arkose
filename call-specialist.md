@@ -32,7 +32,7 @@ order: 2
 
 <h2>About Arkose</h2>
 
-<p><a href="https://arkose.org">Arkose</a> is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. In particular, we offer 30 to 45 minute calls to help support professors, PhD students, and industry professionals who are pursuing or interested in AI safety research or engineering. On these calls, we speak with professionals about their needs and questions, and provide informational resources about opportunities (e.g. job, funding, compute, and other resources) in the space. Alongside these calls, we host a public list of <a href="https://arkose.org/resources">Arkose Resources</a>, and a list of <a href="https://arkose.org/papers">safety-related papers</a> in different research areas.</p>
+<p><a href="https://arkose.org">Arkose</a> is an early-stage, field-building nonprofit with the mission of improving the safety of advanced AI systems. Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. In particular, we offer 30 - 45 minute calls to help support professors, PhD students, and industry professionals who are pursuing or interested in AI safety research or engineering. On these calls, we speak with professionals about their needs and questions, and provide informational resources about opportunities (e.g. job, funding, compute, and other resources) in the space. Alongside these calls, we host a public list of <a href="https://arkose.org/resources">Arkose Resources</a>, and a list of <a href="https://arkose.org/papers">safety-related papers</a> in different research areas.</p>
 
 <p>Arkose is led by founder <a href="https://vaelgates.com">Vael Gates</a> with two operations team members, and is supported by the Survival and Flourishing Fund.</p>
 
@@ -43,7 +43,7 @@ order: 2
 <h3>Key responsibilities</h3>
 
 <ul>
-	<li>You'll speak with professors, PhD students, and industry professionals in 30 to 45 minute calls, several times a day. You'll learn about professionals' needs, speak about the AI safety research landscape and relevant opportunities, and connect individuals to potential collaborators and experts.</li>
+	<li>You'll speak with professors, PhD students, and industry professionals in 30 - 45 minute calls, several times a day. You'll learn about professionals' needs, speak about the AI safety research landscape and relevant opportunities, and connect individuals to potential collaborators and experts.</li>
 	<li>You'll communicate with professionals via email and effectively handle individual requests and inquiries. In particular, you'll complete follow-ups for each call, including introducing professionals to other potential collaborators and experts, send follow-up messages, and investigate whether we can support nonstandard requests with subsequent follow-up.</li>
 	<li>You'll continually learn about the AI safety landscape (both research and opportunities), spot opportunities to and improve Arkose's offerings, and grow and maintain Arkose's expert network.</li>
 	<li>You'll work with the Arkose team (your manager Vael and the operations team) to ensure that your and the professionals' needs are being met. We aim to support you throughout your skill acquisition and growth!</li>
@@ -53,7 +53,7 @@ order: 2
 
 <ul>
 <li>This is a full-time remote position, with international applicants welcome, but we highly prefer candidates to be able to work on roughly US time zones.</li>
-<li>The yearly pay range is $75,000 - $95,000, depending on prior experience and location.</li>
+<li>The yearly pay range is $75,000 - $95,000, depending on location and experience.</li>
 <li>This is a fixed-term position for 9 months, with likely extension if the organization continues (we haven't yet secured organizational funding for 2025).</li>
 <li>This is an independent contractor role. You will not receive benefits, but will receive unlimited PTO.</li>
 <li>Arkose is currently in a period of potential organizational transition, such that we may be absorbed into a larger AI safety organization, or Vael may be working part-time at Arkose. We expect this position will remain as specified within this job description, and are happy to speak about this at any stage of the application process.</li> 
@@ -73,8 +73,8 @@ order: 2
 </ul>
 <li>You either have, or have an interest in developing, AI safety knowledge, including:</li>
 <ul>
-	<li>You like learning about AI safety research! Ideally, you feel comfortable skimming abstracts of relevant research papers and communicating the main ideas to technical professionals.</li>
-	<li>You're interested in learning about the AI safety landscape, including its organizations and opportunities. As part of this, you feel comfortable communicating with stakeholders to keep up to date.</li>
+	<li>You like learning about AI safety research! Ideally, you can easily skim abstracts of relevant research papers and communicate the main ideas to technical professionals.</li>
+	<li>You're interested in learning about the AI safety landscape, including its organizations and opportunities, and pursue means to keep up to date.</li>
 </ul>
 <li>You're comfortable with stakeholder management, and can communicate clearly and appropriately with different groups of experts, verbally and in writing.</li>
 <li>You're conscientious, and can easily keep track of different follow-up tasks amidst various individual calls.</li>
