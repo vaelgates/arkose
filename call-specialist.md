@@ -84,21 +84,21 @@ order: 2
 
 <h2>Application</h2>
 
-<p>The current deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. We're excited to hire someone to start as soon as possible, and if we find a great candidate in early applications, will close the hiring round early. Early applications are encouraged!</p>
+<p>The current deadline for this application is <b>March 30</b>, and we will be assessing candidates on a rolling basis. We're excited to hire someone to start as soon as possible, and if we find a great candidate in early applications, will close the hiring round early. Early applications are thus encouraged!</p>
 
 <p>The application process itself may vary by candidate but for successful candidates will typically involve:</p>
 <ul>
 	<li>An initial application</li>
-	<li>A 30-minute interview</li>
-	<li>A 60-minute interview</li>
-	<li>A 2-day paid work trial</li>
+	<li>A 30 - minute interview</li>
+	<li>A 60 - minute interview</li>
+	<li>A 2 - day paid work trial</li>
 </ul>
 
-<p>You can expect that the application process will be very similar to the work itself. For example, you'll be asked to draft what you might say to an example professional, you'll roleplay as a call specialist while Vael plays an ML professional, and at later stages you may talk to an ML professional.</p>
+<p>You can expect that the application process will be very similar to the work itself. For example, you'll be asked to draft what you might say to an example professional, you'll roleplay as a call specialist while Vael plays an AI professional, and at later stages you may talk to an AI professional.</p>
 
 <h3>Preparing for the interviews</h3>
 
-<p>You are highly encouraged to prepare for this role before you reach the interview stage. While we expect to spend significant time with successful applicants training them for the role, it is still very useful if candidates come with existing knowledge, or the knowledge that they like learning about the AI safety landscape. To prepare, you are encouraged to: </p>
+<p>You are highly encouraged to prepare for this role before you reach the interview stage. While we expect a substantial amount of training and learning within the role, it is still very useful if candidates come with existing knowledge, or the knowledge that they like learning about the AI safety landscape. To prepare, you are encouraged to: </p>
 <ul>
 	<li>Read through the Arkose <a href="https://arkose.org/resources#opportunities">Resources</a> page, specifically the Opportunities section, to become familiar with the AI safety space. Ideally, by the time of the interview, you're not only familiar with the organizations and opportunities listed, but are familiar with the approximate layout of the page, such that you could point to relevant parts of this page on a call.</li>
 	<li>Have a high-level overview of the AI safety research space, e.g. by skimming through some of the resources on the <a href="https://arkose.org/resources#ai_safety">AI safety section of the Resources page</a>. You definitely do not need to be an expert, but it would be ideal if you could give a one-sentence description of e.g. what scalable oversight is, and why it's relevant to AI safety.</li>
