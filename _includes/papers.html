@@ -61,89 +61,89 @@
 </div>
 
 <script>
-  var papersList;
-  const filters = {
-    "Safety Category": new Set(),
-    "Safety Topic": new Set(),
-    "ML Subfield": new Set(),
-    "ML Subtopic": new Set(),
-    "Type": new Set(),
-  }
-  const filterOptions = {
-    "Safety Category": new Set(),
-    "Safety Topic": new Set(),
-    "ML Subfield": new Set(),
-    "ML Subtopic": new Set(),
-    "Type": new Set(),
-  }
+  $(function() {
+    var papersList;
+    const filters = {
+      "Safety Category": new Set(),
+      "Safety Topic": new Set(),
+      "ML Subfield": new Set(),
+      "ML Subtopic": new Set(),
+      "Type": new Set(),
+    }
+    const filterOptions = {
+      "Safety Category": new Set(),
+      "Safety Topic": new Set(),
+      "ML Subfield": new Set(),
+      "ML Subtopic": new Set(),
+      "Type": new Set(),
+    }
 
-  const options = {
-    valueNames: [
-      'Title',
-      'Safety TopicDisplay',
-      'Safety Category',
-      'Safety CategoryDisplay',
-      'Type',
-      'TypeDisplay',
-      'Twitter',
-      'TwitterDisplay',
-      "Blog or Video",
-      "Blog or VideoDisplay",
-      "Supplementary Material",
-      "Supplementary MaterialDisplay",
-      "Transcripts / Audio / Slides",
-      "Transcripts / Audio / SlidesDisplay",
-      "ML Subfield",
-      "ML SubfieldDisplay",
-      "ML Subtopic",
-      "ML SubtopicDisplay",
-      "Abstract",
-      "AbstractDisplay",
-      { attr: 'src', name: 'image' }
-    ],
-    item: 'paper-item'
-  };
+    const options = {
+      valueNames: [
+        'Title',
+        'Safety TopicDisplay',
+        'Safety Category',
+        'Safety CategoryDisplay',
+        'Type',
+        'TypeDisplay',
+        'Twitter',
+        'TwitterDisplay',
+        "Blog or Video",
+        "Blog or VideoDisplay",
+        "Supplementary Material",
+        "Supplementary MaterialDisplay",
+        "Transcripts / Audio / Slides",
+        "Transcripts / Audio / SlidesDisplay",
+        "ML Subfield",
+        "ML SubfieldDisplay",
+        "ML Subtopic",
+        "ML SubtopicDisplay",
+        "Abstract",
+        "AbstractDisplay",
+        { attr: 'src', name: 'image' }
+      ],
+      item: 'paper-item'
+    };
 
-  let papers = [];
+    let papers = [];
 
-  function isDarkMode() {
-    if (window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
-      return true;
+    function isDarkMode() {
+      if (window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+        return true;
 
-    return document.documentElement.getAttribute('data-theme') === 'dark';
-  }
+      return document.documentElement.getAttribute('data-theme') === 'dark';
+    }
 
-  function listify(papersJson) {
-    papers = papersJson.filter(paper => paper.Title && paper.Title.length > 0 && paper['ML Subfield'] && paper['Type'])
-                       .map(function(paper) {
-      const modeStr = isDarkMode() ? '-dark' : ''
+    function listify(papersJson) {
+      papers = papersJson.filter(paper => paper.Title && paper.Title.length > 0 && paper['ML Subfield'] && paper['Type'])
+                        .map(function(paper) {
+        const modeStr = isDarkMode() ? '-dark' : ''
 
-      if (!paper.Type) {
-        paper.image = `/assets/images/medium/other${modeStr}.svg`;
-      } else if (paper.Type.length > 1 && paper.Type.includes("Paper")) {
-        paper.image = `/assets/images/medium/paper${modeStr}.svg`;
-      } else {
-        paper.image = `/assets/images/medium/${paper.Type[0].toLowerCase()}${modeStr}.svg`;
-      }
-      paper['Safety CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single safety-category-single">${item}</span>`).join('');
-      paper['Safety Topic'] = paper['Safety Topic'] ?? [];
-      paper['Safety TopicDisplay'] = paper['Safety Topic'].map(item => `<span class="field-single safety-topic-single">${item}</span>`).join('');
-      paper['ML SubfieldDisplay'] = paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
-      paper['ML Subtopic'] = paper['ML Subtopic'] ?? [];
-      paper['ML SubtopicDisplay'] = paper['ML Subtopic'].map(tag => `<span class="field-single ml-subtopic-single">${tag}</span>`).join('');
-      paper['TypeDisplay'] = paper['Type'].map(tag => `<span class="field-single type-single">${tag}</span>`).join('');
-      paper.Title = linkify(paper.Link, paper.Title.replace("\n", ''));
-      paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
-      paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
-      paper['TwitterDisplay'] = linkify(paper['Twitter'], 'Twitter');
-      paper['AbstractDisplay'] = paper.Abstract ? `<h4>Abstract</h4>${paper.Abstract}` : '';
-      return paper;
-    });
+        if (!paper.Type) {
+          paper.image = `/assets/images/medium/other${modeStr}.svg`;
+        } else if (paper.Type.length > 1 && paper.Type.includes("Paper")) {
+          paper.image = `/assets/images/medium/paper${modeStr}.svg`;
+        } else {
+          paper.image = `/assets/images/medium/${paper.Type[0].toLowerCase()}${modeStr}.svg`;
+        }
+        paper['Safety CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single safety-category-single">${item}</span>`).join('');
+        paper['Safety Topic'] = paper['Safety Topic'] ?? [];
+        paper['Safety TopicDisplay'] = paper['Safety Topic'].map(item => `<span class="field-single safety-topic-single">${item}</span>`).join('');
+        paper['ML SubfieldDisplay'] = paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
+        paper['ML Subtopic'] = paper['ML Subtopic'] ?? [];
+        paper['ML SubtopicDisplay'] = paper['ML Subtopic'].map(tag => `<span class="field-single ml-subtopic-single">${tag}</span>`).join('');
+        paper['TypeDisplay'] = paper['Type'].map(tag => `<span class="field-single type-single">${tag}</span>`).join('');
+        paper.Title = linkify(paper.Link, paper.Title.replace("\n", ''));
+        paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
+        paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
+        paper['TwitterDisplay'] = linkify(paper['Twitter'], 'Twitter');
+        paper['AbstractDisplay'] = paper.Abstract ? `<h4>Abstract</h4>${paper.Abstract}` : '';
+        return paper;
+      });
 
-    papersList = new List('paper-list', options, papers);
+      papersList = new List('paper-list', options, papers);
 
-    $(function(){
       $(document).on('change', '.filter-dropdown input', function(e) {
         var filter = this.value;
         var filterType = $(this).closest('.filter-dropdown').data('filter-type');
@@ -197,153 +197,150 @@
         });
       }
       updateList();
-    });
 
-    $('input.search').on('change', function(e) {
-      updateFilterOptionCounts();
-    });
-
-    papersList.on('updated', function (list) {
-      updateResultsCount();
-    });
-  }
-
-  fetch('/export/papers.json')
-    .then(response => response.json())
-    .then(data => {
-      listify(data)
-    })
-    .catch(error => console.error('Error loading JSON:', error));
-  
-  function resetList(){
-    papersList.search();
-    papersList.filter();
-    papersList.update();
-    $(".filter-all").prop('checked', true);
-    $('.filter').prop('checked', false);
-    $('.search').val('');
-  };
-
-  function updateFilters() {
-    papersList.filter(function (paper) {
-      return Object.keys(filters).every(function(filterType) {
-        if (filters[filterType].size == 0) return true
-
-        return paper.values()[filterType].some(item => filters[filterType].has(item))
+      $('input.search').on('change', function(e) {
+        updateFilterOptionCounts();
       });
-    });
-  }
 
-  function updateResultsCount(){
-    $('.results-count-number').text(papersList.matchingItems.length);
-  }
-
-  function updateShownFilters(){
-    var filterList = $('.filter-list');
-    filterList.empty();
-    Object.keys(filters).forEach(function(filterType) {
-      filters[filterType].forEach(function(filter) {
-        filterList.append(`<span class="filter-item filter-item-${slugify(filterType)}" data-filter-type="${filterType}">` + filter + '</span>');
+      papersList.on('updated', function (list) {
+        updateResultsCount();
       });
-    });
-  }
+    }
 
-  function updateFilterTitleCount(){
-    Object.keys(filters).forEach(function(filterType) {
-      const filterSlug = slugify(filterType)
-      if (filters[filterType].size) {
-        $('.filter-' + filterSlug + ' .dropdown-title').addClass('filter-active');
-        // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('(' + filters[filterType].size + ')');
-      } else {
-        $('.filter-' + filterSlug + ' .dropdown-title').removeClass('filter-active');
-        // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('');
-      }
-    });
-  }
+    fetch('/export/papers.json')
+      .then(response => response.json())
+      .then(data => {
+        listify(data)
+      })
+      .catch(error => console.error('Error loading JSON:', error));
 
-  function updateQueryParams(){
-    var params = new URLSearchParams(window.location.search);
-    Object.keys(filters).forEach(function(filterType) {
-      params.delete(filterType);
-      // Type is a special case
-      if (filters[filterType].size || filterType === 'Type')
-        params.append(filterType, Array.from(filters[filterType]));
-    });
-    var newRelativePathQuery = window.location.pathname + (params.toString() ? '?' : '') + params.toString();
-    if (newRelativePathQuery != window.location.pathname + window.location.search)
-      history.pushState(null, '', newRelativePathQuery);
-  }
+    function resetList(){
+      papersList.search();
+      papersList.filter();
+      papersList.update();
+      $(".filter-all").prop('checked', true);
+      $('.filter').prop('checked', false);
+      $('.search').val('');
+    };
 
-  function titlesMatch(title1, title2) {
-    return title1.match(/<a.*>(.*)<\/a>/)?.[1] == title2.match(/<a.*>(.*)<\/a>/)?.[1]
-  }
+    function updateFilters() {
+      papersList.filter(function (paper) {
+        return Object.keys(filters).every(function(filterType) {
+          if (filters[filterType].size == 0) return true
 
-  function updateFilterOptionCounts() {
-    Object.keys(filterOptions).forEach(function(optionFilterType) {
-      filterOptions[optionFilterType].forEach(function(option) {
-        const filterOptionCount = $(`.filter-${slugify(optionFilterType)} li[data-option="${option}"] .filter-option-count`);
+          return paper.values()[filterType].some(item => filters[filterType].has(item))
+        });
+      });
+    }
 
-        // If the filter is already set, just remove the count
-        if (filters[optionFilterType].has(option)) {
-          filterOptionCount.text('');
-          return;
-        }
+    function updateResultsCount(){
+      $('.results-count-number').text(papersList.matchingItems.length);
+    }
 
-        // When there are no options set for a filter, adding an option *reduces* options, which is easy to calculate and is the
-        // first option here.
-        if (filters[optionFilterType].size == 0) {
-          const remainingItems = papersList.matchingItems.filter(item => { return item.values()[optionFilterType].includes(option) })
-          filterOptionCount.text('(' + remainingItems.length + ')');
+    function updateShownFilters(){
+      var filterList = $('.filter-list');
+      filterList.empty();
+      Object.keys(filters).forEach(function(filterType) {
+        filters[filterType].forEach(function(filter) {
+          filterList.append(`<span class="filter-item filter-item-${slugify(filterType)}" data-filter-type="${filterType}">` + filter + '</span>');
+        });
+      });
+    }
+
+    function updateFilterTitleCount(){
+      Object.keys(filters).forEach(function(filterType) {
+        const filterSlug = slugify(filterType)
+        if (filters[filterType].size) {
+          $('.filter-' + filterSlug + ' .dropdown-title').addClass('filter-active');
+          // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('(' + filters[filterType].size + ')');
         } else {
-          // When there are options set for a filter, adding an option *increases* options, which we calculate here
-          const unmatchedItems = papers.filter(paper => !papersList.matchingItems.some(item => titlesMatch(paper.Title, item.values().Title)))
-          const newFilteredItems = unmatchedItems.filter(item => { return item[optionFilterType].includes(option) })
-
-          // now apply the other filters
-          const remainingFilteredItems = newFilteredItems.filter(item => {
-            return Object.keys(filters).every(function(filterType) {
-              if (filters[filterType].size == 0) return true
-              if (filterType == optionFilterType) return true
-
-              return item[filterType].some(item => filters[filterType].has(item))
-            });
-          });
-
-          // now apply the search
-          const searchTerm = $('input.search').val();
-          // iterate through every field on each item and see if it matches the search term
-          const remainingItems = remainingFilteredItems.filter(item => {
-            return Object.keys(item).some(field => {
-              return item[field].toString().toLowerCase().includes(searchTerm.toLowerCase())
-            })
-          })
-
-          filterOptionCount.text(`(${remainingItems.length})`);
+          $('.filter-' + filterSlug + ' .dropdown-title').removeClass('filter-active');
+          // $('.filter-' + filterSlug + ' .dropdown-title .filter-type-count').text('');
         }
-        
       });
-    });
-  }
+    }
 
-  function updateList(){
-    updateFilters();
-    papersList.update();
-    updateFilterOptionCounts();
-    updateShownFilters();
-    updateFilterTitleCount();
-    updateQueryParams();
-  }
+    function updateQueryParams(){
+      var params = new URLSearchParams(window.location.search);
+      Object.keys(filters).forEach(function(filterType) {
+        params.delete(filterType);
+        // Type is a special case
+        if (filters[filterType].size || filterType === 'Type')
+          params.append(filterType, Array.from(filters[filterType]));
+      });
+      var newRelativePathQuery = window.location.pathname + (params.toString() ? '?' : '') + params.toString();
+      if (newRelativePathQuery != window.location.pathname + window.location.search)
+        history.pushState(null, '', newRelativePathQuery);
+    }
 
-  function linkify(s, linkText) {
-    if (!s) return '';
-    return `<a href="${s}" target="_top">${linkText || s}</a>`
-  }
+    function titlesMatch(title1, title2) {
+      return title1.match(/<a.*>(.*)<\/a>/)?.[1] == title2.match(/<a.*>(.*)<\/a>/)?.[1]
+    }
 
-  function slugify(s) {
-    return s.toLowerCase().replace(' ', '_').replace(/\s/g, '_').replace(/[^a-z0-9-_]/g, '');
-  }
+    function updateFilterOptionCounts() {
+      Object.keys(filterOptions).forEach(function(optionFilterType) {
+        filterOptions[optionFilterType].forEach(function(option) {
+          const filterOptionCount = $(`.filter-${slugify(optionFilterType)} li[data-option="${option}"] .filter-option-count`);
 
-  document.addEventListener("DOMContentLoaded", function() {
+          // If the filter is already set, just remove the count
+          if (filters[optionFilterType].has(option)) {
+            filterOptionCount.text('');
+            return;
+          }
+
+          // When there are no options set for a filter, adding an option *reduces* options, which is easy to calculate and is the
+          // first option here.
+          if (filters[optionFilterType].size == 0) {
+            const remainingItems = papersList.matchingItems.filter(item => { return item.values()[optionFilterType].includes(option) })
+            filterOptionCount.text('(' + remainingItems.length + ')');
+          } else {
+            // When there are options set for a filter, adding an option *increases* options, which we calculate here
+            const unmatchedItems = papers.filter(paper => !papersList.matchingItems.some(item => titlesMatch(paper.Title, item.values().Title)))
+            const newFilteredItems = unmatchedItems.filter(item => { return item[optionFilterType].includes(option) })
+
+            // now apply the other filters
+            const remainingFilteredItems = newFilteredItems.filter(item => {
+              return Object.keys(filters).every(function(filterType) {
+                if (filters[filterType].size == 0) return true
+                if (filterType == optionFilterType) return true
+
+                return item[filterType].some(item => filters[filterType].has(item))
+              });
+            });
+
+            // now apply the search
+            const searchTerm = $('input.search').val();
+            // iterate through every field on each item and see if it matches the search term
+            const remainingItems = remainingFilteredItems.filter(item => {
+              return Object.keys(item).some(field => {
+                return item[field].toString().toLowerCase().includes(searchTerm.toLowerCase())
+              })
+            })
+
+            filterOptionCount.text(`(${remainingItems.length})`);
+          }
+        });
+      });
+    }
+
+    function updateList(){
+      updateFilters();
+      papersList.update();
+      updateFilterOptionCounts();
+      updateShownFilters();
+      updateFilterTitleCount();
+      updateQueryParams();
+    }
+
+    function linkify(s, linkText) {
+      if (!s) return '';
+      return `<a href="${s}" target="_top">${linkText || s}</a>`
+    }
+
+    function slugify(s) {
+      return s.toLowerCase().replace(' ', '_').replace(/\s/g, '_').replace(/[^a-z0-9-_]/g, '');
+    }
+
     // Clicks on the dropdown title show/hide the dropdown
     $(".dropdown-title-box").on("click", function(e) {
       e.stopPropagation();
