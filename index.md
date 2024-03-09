@@ -72,16 +72,16 @@ featured_image: /assets/img/social.jpg
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <li class="glide__slide">
-            <blockquote class="testimonial">Once I realized that my research vision closely resembles that of the AI alignment and safety community, I faced the substantial task of understanding that community's distinct culture and identifying related funding opportunities. Over a few calls and emails with Vael at Arkose, I quickly gained an initial map of AI alignment and safety as well as crucial guidance on its navigation. The downstream impact has been immense.</blockquote>
-            — Brad Knox, Research Associate Professor of Computer Science
-          </li>
-          <li class="glide__slide">
             <blockquote class="testimonial">AI Safety/Alignment is an active field with diverse perspectives. The Arkose website has a resourceful collection of some of the most relevant papers, jobs, companies and grants, which I found very handy. I gained much clarity when I interacted with the Arkose team over a call and debated on some of the safety issues. I would highly recommend the supportive Arkose team for anyone hoping to enter the field.</blockquote>
             — Postdoctoral Researcher at the University of Cambridge
           </li>
           <li class="glide__slide">
             <blockquote class="testimonial">Vael had an excellent understanding of the alignment landscape, and useful insight into the skills and background required for working at top AI safety labs. It was really helpful to understand where I needed to be, and Vael offered lots of suggestions to help me get there, including connecting me to people. Advice was well-tailored towards mid/late career ML professionals, who may not be as suited to commonly suggested entry-routes into technical AI safety research.</blockquote>
             — Salman Mohammadi, AI Research Engineer
+          </li>
+          <li class="glide__slide">
+            <blockquote class="testimonial">Once I realized that my research vision closely resembles that of the AI alignment and safety community, I faced the substantial task of understanding that community's distinct culture and identifying related funding opportunities. Over a few calls and emails with Vael at Arkose, I quickly gained an initial map of AI alignment and safety as well as crucial guidance on its navigation. The downstream impact has been immense.</blockquote>
+            — Brad Knox, Research Associate Professor of Computer Science
           </li>
           <li class="glide__slide">
             <blockquote class="testimonial">I'm new to the ecosystem, and Vael has been extremely valuable in connecting me with key people, informing my general approach to strategy, and becoming more efficient and effective at AI safety research. They enabled me to really make the most of my in-person visit to the AI safety community in Berkeley: I've been able to get in touch with some key people and come up with resources for the AI safety research that I'm doing, which has significantly accelerated my research efforts. Vael's doing a fantastic job of tying in people of the wider community and I'm very grateful for their services.</blockquote>
