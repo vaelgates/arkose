@@ -16,7 +16,7 @@ order: 4
 			<h1>Schedule a Call with Arkose</h1>
 		</header>
 
-<p>You're invited to schedule a call with Arkose: a 30-45 minute call for researchers and engineers interested in starting work in AI safety.</p>
+<p>You're invited to schedule a call with Arkose: a 30-minute call for researchers and engineers interested in starting work in AI safety.</p>
 
 <p>Arkose offers personalized advice to fit your level of interest and situation, whether you're an industry researcher or engineer, professor, or PhD student.</p>
 
