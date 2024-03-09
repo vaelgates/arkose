@@ -30,7 +30,7 @@ featured_image: /assets/img/social.jpg
 
 <div class="section">
   <div class="inner">
-      <p>Arkose is a nonprofit with the mission of improving the safety of advanced AI systems. Our 30-45 minute calls help support machine learning professionals interested in AI safety research or engineering. We offer personalized advice to fit your level of interest and situation, whether you're an industry researcher or engineer, professor, or PhD student.</p>
+      <p>Arkose is a nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. Our 30-45 minute calls help support machine learning professionals interested in AI safety research or engineering. We offer personalized advice to fit your level of interest and situation, whether you're an industry researcher or engineer, professor, or PhD student.</p>
       <p>After discussing your specific needs and questions, we can:</p>
 		<ul>
 		<li>Help you explore funding and job opportunities. Arkose keeps a list of grant opportunities, compute options, fellowships, and jobs: <a href="resources">Resources</a> is our public list.</li>
