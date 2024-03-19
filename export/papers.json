@@ -758,6 +758,22 @@
     "Abstract": "    Artificial intelligence (AI) has the potential to greatly improve society, but as with any powerful technology, it comes with heightened risks and responsibilities. Current AI research lacks a systematic discussion of how to manage long-tail risks from AI systems, including speculative long-term risks. Keeping in mind the potential benefits of AI, there is some concern that building ever more intelligent and powerful AI systems could eventually result in systems that are more powerful than us; some say this is like playing with fire and speculate that this could create existential risks (x-risks). To add precision and ground these discussions, we provide a guide for how to analyze AI x-risk, which consists of three parts: First, we review how systems can be made safer today, drawing on time-tested concepts from hazard analysis and systems safety that have been designed to steer large processes in safer directions. Next, we discuss strategies for having long-term impacts on the safety of future systems. Finally, we discuss a crucial concept in making AI systems safer by improving the balance between safety and general capabilities. We hope this document and the presented concepts and tools serve as a useful guide for understanding how to analyze AI x-risk. \n"
   },
   {
+    "Link": "https://openai.com/safety/preparedness",
+    "ML Subfield": [
+      "Model Evaluation"
+    ],
+    "ML Subtopic": [
+      "NLP: LLMs"
+    ],
+    "Safety Category": [
+      "Model evaluations / monitoring / detection"
+    ],
+    "Title": "OpenAI's Preparedness Framework",
+    "Type": [
+      "Blog post"
+    ]
+  },
+  {
     "Link": "https://arxiv.org/abs/2301.10226",
     "ML Subfield": [
       "NLP",
@@ -1077,6 +1093,25 @@
     ],
     "Twitter": "https://twitter.com/tegan_maharaj/status/1668637520177905665",
     "Abstract": "Research in Fairness, Accountability, Transparency, and Ethics (FATE) has established many sources and forms of algorithmic harm, in domains as diverse as health care, finance, policing, and recommendations. Much work remains to be done to mitigate the serious harms of these systems, particularly those disproportionately affecting marginalized communities. Despite these ongoing harms, new systems are being developed and deployed which threaten the perpetuation of the same harms and the creation of novel ones. In response, the FATE community has emphasized the importance of anticipating harms. Our work focuses on the anticipation of harms from increasingly agentic systems. Rather than providing a definition of agency as a binary property, we identify 4 key characteristics which, particularly in combination, tend to increase the agency of a given algorithmic system: underspecification, directness of impact, goal-directedness, and long-term planning. We also discuss important harms which arise from increasing agency -- notably, these include systemic and/or long-range impacts, often on marginalized stakeholders. We emphasize that recognizing agency of algorithmic systems does not absolve or shift the human responsibility for algorithmic harms. Rather, we use the term agency to highlight the increasingly evident fact that ML systems are not fully under human control. Our work explores increasingly agentic algorithmic systems in three parts. First, we explain the notion of an increase in agency for algorithmic systems in the context of diverse perspectives on agency across disciplines. Second, we argue for the need to anticipate harms from increasingly agentic systems. Third, we discuss important harms from increasingly agentic systems and ways forward for addressing them. We conclude by reflecting on implications of our work for anticipating algorithmic harms from emerging systems. \n"
+  },
+  {
+    "Link": "https://metr.github.io/autonomy-evals-guide/",
+    "ML Subfield": [
+      "Model Evaluation"
+    ],
+    "ML Subtopic": [
+      "NLP: LLMs"
+    ],
+    "Safety Category": [
+      "Model evaluations / monitoring / detection"
+    ],
+    "Safety Topic": [
+      "Benchmarking"
+    ],
+    "Title": "METR's Autonomy Evaluation Resources",
+    "Type": [
+      "Other"
+    ]
   },
   {
     "Blog or Video": "https://www.anthropic.com/index/constitutional-ai-harmlessness-from-ai-feedback",
