@@ -16,7 +16,6 @@
 		background-color: var(--color-bg-alt);
 		box-shadow: 0 0 0.25em 0 rgba(0,0,0,0.15);
 		cursor: default;
-		font-weight: _font(weight-bold);
 		height: 3.25em;
 		left: 0;
 		letter-spacing: _font(letter-spacing-alt);
@@ -29,6 +28,7 @@
 
 		.logo-text {
 			text-transform: uppercase;
+			font-weight: 600;
 		}
 
 		.navbar-brand {
@@ -38,6 +38,10 @@
 				position: relative;
 				top: 5px;
 				height: 30px;
+				&.logo-text-image {
+					height: 20px;
+					top: 1px;
+				}
 			}
 		}
 
@@ -182,7 +186,7 @@
 
 						&.active:not(.button) {
 							color: var(--color-active-link) !important;
-							// font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+							font-weight: bold;
 							border-bottom: 1px dotted var(--color-active-link) !important;
 							border-radius: 0;
 						}

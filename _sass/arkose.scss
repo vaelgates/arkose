@@ -107,7 +107,7 @@
     }
   }
   .filter-active {
-    // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+    font-weight: bold;
   }
   .field-single {
     display: inline-block;
@@ -139,7 +139,7 @@
   }
   .results-count-text {
     font-size: 0.8em;
-    font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+    font-weight: bold;
     opacity: 0.8;
   }
   ul.list {
@@ -162,6 +162,7 @@
           top: -2px;
           margin: 0;
           font-size: 20px;
+          font-weight: normal;
           a:hover {
             border-bottom: 2px solid;
           }
@@ -183,7 +184,7 @@
         margin-bottom: -0.5rem;
         border: 1px solid transparent; // makes the jQuery slideToggle work smoothly, I don't know why
         .Medium {
-          font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+          font-weight: bold;
         }
       }
       &:hover {

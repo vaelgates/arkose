@@ -13,6 +13,29 @@
 	@font-face {
 		font-family: 'Futura Book';
 		src: url('/assets/fonts/futura-book.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Futura Book';
+		src: url('/assets/fonts/FuturaLT-Heavy.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Futura Book';
+		src: url('/assets/fonts/FuturaLT.ttf') format('truetype');
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Futura Book';
+		src: url('/assets/fonts/FuturaLT-BookOblique.ttf') format('truetype');
+		font-weight: normal;
+		font-style: italic;
 	}
 
 // Font.
@@ -20,7 +43,7 @@
 		family:				('Futura Book', 'Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
-		weight-bold:		400, // 600 // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+		weight-bold:		600,
 		letter-spacing:		0.025em,
 		letter-spacing-alt:	0.08em
 	);
