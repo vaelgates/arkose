@@ -32,7 +32,7 @@
 				{% endif %}
 				{% if has_submenu %}
 					<li class="dropdown">
-						<a href="{{ item.url | absolute_url }}" class="{{active_class}} {{fade_class}}">{{ item.title }} <i class="fa fa-caret-down"></i></a>
+						<a href="{{ item.url | relative_url }}" class="{{active_class}} {{fade_class}}">{{ item.title }} <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-content">
 							{% for subitem in item.submenu %}
 								{% assign active_class = "" %}
@@ -43,7 +43,7 @@
 								{% if item.fade %}
 									{% assign fade_class = "fade" %}
 								{% endif %}
-								<li><a href="{{ subitem.url | absolute_url }}" class="{{active_class}} {{fade_class}}">{{ subitem.title }}</a></li>
+								<li><a href="{{ subitem.url | relative_url }}" class="{{active_class}} {{fade_class}}">{{ subitem.title }}</a></li>
 							{% endfor %}
 						</ul>
 					</li>
@@ -55,7 +55,7 @@
 							<span class='only-medium'>{{ item.shorttitle }}</span>
 						{% endcapture %}
 					{% endif %}
-					<li><a href="{{ item.url | absolute_url }}" class="{{active_class}} {{fade_class}} {{button_class}}">{{ title | raw }}</a></li>
+					<li><a href="{{ item.url | relative_url }}" class="{{active_class}} {{fade_class}} {{button_class}}">{{ title | raw }}</a></li>
 				{% endif %}
 			{% endfor %}
 

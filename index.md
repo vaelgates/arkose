@@ -57,9 +57,39 @@ featured_image: /assets/img/social.jpg
   </div>
 </div> -->
 
+
+<div class="section hero" class="bg-gray">
+  <div class="inner inner-wide">
+    <div class="row">
+      <h2 class="sans">People we speak with work at:</h2> 
+      <div class="grid logos-grid">
+        <div class="4u 6u$(small)">
+          <a href="https://www.google.com/" target="_blank"><img  src="{% link assets/images/logos/google.svg %}" class="attachment-max size-max" alt="Google"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.berkeley.edu/" target="_blank"><img  src="{% link assets/images/logos/berkeley.png %}" class="attachment-max size-max" alt="UC Berkeley"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.stanford.edu/" target="_blank"><img  src="{% link assets/images/logos/stanford.png %}" class="attachment-max size-max" alt="Stanford"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.cam.ac.uk/" target="_blank"><img  src="{% link assets/images/logos/cambridge.png %}" class="attachment-max size-max" alt="University of Cambridge"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.uchicago.edu/en" target="_blank"><img  src="{% link assets/images/logos/chicago.png %}" class="attachment-max size-max" alt="University of Chicago"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.hku.hk/" target="_blank"><img  src="{% link assets/images/logos/hong_kong.svg %}" class="attachment-max size-max" alt="University of Hong Kong"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="section hero">
   <div class="inner inner-wide">
-    <div class="glide">
+    <div class="glide glide-testimonials">
       <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
@@ -84,7 +114,7 @@ featured_image: /assets/img/social.jpg
             — Brad Knox, Research Associate Professor of Computer Science
           </li>
           <li class="glide__slide">
-            <blockquote class="testimonial">I'm new to the ecosystem, and Vael has been extremely valuable in connecting me with key people, informing my general approach to strategy, and becoming more efficient and effective at AI safety research. They enabled me to really make the most of my in-person visit to the AI safety community in Berkeley: I've been able to get in touch with some key people and come up with resources for the AI safety research that I'm doing, which has significantly accelerated my research efforts. Vael's doing a fantastic job of tying in people of the wider community and I'm very grateful for their services.</blockquote>
+            <blockquote class="testimonial" style="font-size: 89%">I'm new to the ecosystem, and Vael has been extremely valuable in connecting me with key people, informing my general approach to strategy, and becoming more efficient and effective at AI safety research. They enabled me to really make the most of my in-person visit to the AI safety community in Berkeley: I've been able to get in touch with some key people and come up with resources for the AI safety research that I'm doing, which has significantly accelerated my research efforts. Vael's doing a fantastic job of tying in people of the wider community and I'm very grateful for their services.</blockquote>
             — Christian Schroeder de Witt, Postdoctoral Researcher at the University of Oxford
           </li>
           <li class="glide__slide">
@@ -99,12 +129,94 @@ featured_image: /assets/img/social.jpg
   </div>
 </div>
 
+{% assign cards = site.advisors %}
+{% assign strategic_advisors = cards | where: "section", "strategic" | sort: 'order' %}
+{% assign selected_advisors = cards | where: "section", "selected" | sort: 'order' %}
+
+<div class="section hero" id="experts" class="bg-gray">
+  <div class="inner inner-wide">
+    <div class="glide glide-experts glide-selected-experts">
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+        </button>
+      </div>
+      <h2>Selected Experts</h2>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          {% for card in selected_advisors %}
+            {% include person_slide.html card=card %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section hero" id="panel">
+  <div class="inner inner-wide">
+    <div class="glide glide-experts glide-strategic-advisors">
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+        </button>
+      </div>
+      <h2>Strategic Advisors</h2>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          {% for card in strategic_advisors %}
+            {% include person_slide.html card=card %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-  new Glide('.glide', {
+  new Glide('.glide-testimonials', {
     gap: 100,
     perView: 2,
     breakpoints: {
       1720: {
+        perView: 1
+      }
+    }
+  }).mount()
+
+  new Glide('.glide-selected-experts', {
+    gap: 100,
+    perView: 4,
+    breakpoints: {
+      1720: {
+        perView: 3
+      },
+      960: {
+        perView: 2
+      },
+      600: {
+        perView: 1
+      }
+    }
+  }).mount()
+
+  new Glide('.glide-strategic-advisors', {
+    gap: 100,
+    perView: 4,
+    breakpoints: {
+      1720: {
+        perView: 3
+      },
+      960: {
+        perView: 2
+      },
+      600: {
         perView: 1
       }
     }
