@@ -241,7 +241,7 @@ $card-border-radius: 4px !default;
     }
     .card-role {
       margin: 0;
-      // font-weight: bold; // bold removed because Futura Book Bold is unavailable and some browsers made it look bad
+      font-weight: bold;
     }
     .card-content {
       padding: 0;

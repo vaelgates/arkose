@@ -16,18 +16,20 @@ order: 2
         <!-- Arkose is a nonprofit with the mission of improving the safety of advanced AI systems, focused on reducing potential large-scale risks. -->
         <ul>
         <li>Hosting calls and other support programs that provide<b> connections, mentorship, resources, and tailored guidance</b> to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research. Machine learning professionals are invited to <a href="{{site.applyurl}}">request a call</a>.</li>
-        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>. See our <a href="resources">Resources</a>, which are periodically reviewed by an <a href="#panel">advisory panel of experts</a> in the field.</li>
+        <li>Advancing understanding of AI safety research and opportunities via <b>outreach</b> and <b>curating educational resources</b>. See our <a href="resources">Resources</a>, which are periodically reviewed by an <a href="/#panel">advisory panel of experts</a> in the field.</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
+{% if false %}
+<!-- {% assign cards = site.advisors %}
+{% assign advisors1 = cards | where: "section", "strategic" | sort: 'order' %}
+{% assign advisors2 = cards | where: "section", "selected" | sort: 'order' %}
+
 <div class="section bg-gray" id="experts">
   <div class="inner">
-    {% assign cards = site.advisors %}
-    {% assign advisors1 = cards | where: "section", "strategic" | sort: 'order' %}
-    {% assign advisors2 = cards | where: "section", "selected" | sort: 'order' %}
 
     <h2>Selected Experts</h2>
 
@@ -44,10 +46,6 @@ order: 2
 
 <div class="section" id="panel">
   <div class="inner">
-    {% assign cards = site.advisors %}
-    {% assign advisors1 = cards | where: "section", "strategic" | sort: 'order' %}
-    {% assign advisors2 = cards | where: "section", "selected" | sort: 'order' %}
-
     <h2>Strategic Advisory Panel</h2>
 
     <p>Strategic advisory panel members advise on Arkose's suggested resources, recommendations, and strategic direction.</p>
@@ -58,7 +56,8 @@ order: 2
       {% endfor %}
     </div>
   </div>
-</div>
+</div> -->
+{% endif %}
 
 <div class="section bg-gray">
   <div class="inner">

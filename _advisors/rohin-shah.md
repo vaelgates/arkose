@@ -1,6 +1,6 @@
 ---
 name: "Rohin Shah"
-order: "Shah"
+order: 60
 section: "strategic"
 subtitle: "Research Scientist, Google DeepMind"
 image: "/assets/images/people/rohin-shah.jpg"

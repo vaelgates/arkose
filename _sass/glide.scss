@@ -1,3 +1,7 @@
+.glide {
+  max-width: calc(100% - 24px); // prevents image overflow on the right for the advisors; applied to all to keep the widths consistent
+}
+
 .glide__slides {
   display: flex;
   list-style: none;
@@ -44,5 +48,33 @@ html[data-theme="dark"] {
   .glide__arrow {
     filter: invert(1);
     opacity: 0.8;
+  }
+}
+
+.glide-experts {
+  .card-title h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3em;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+  .card-thumbnail {
+    // text-align: center;
+    img {
+      // width: 90%;
+      border-radius: 25%;
+    }
+  }
+  a:hover {
+    .card-title h3 {
+      color: var(--color-highlight);
+    }
+    img {
+      opacity: 0.8;
+    }
+  }
+  .card-description {
+    font-size: 1.2rem;
+    text-align: center;
   }
 }

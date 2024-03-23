@@ -1,6 +1,6 @@
 ---
 name: "Victoria Krakovna"
-order: "Krakovna"
+order: 70
 section: "strategic"
 subtitle: "Senior Research Scientist, Google DeepMind"
 image: "/assets/images/people/victoria-krakovna.jpg"

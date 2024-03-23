@@ -1,6 +1,6 @@
 ---
 name: "Roger Grosse"
-order: "Grosse"
+order: 40
 section: "strategic"
 subtitle: "Associate Professor, University of Toronto; Member of Technical Staff, Anthropic"
 image: "/assets/images/people/roger-grosse.jpg"

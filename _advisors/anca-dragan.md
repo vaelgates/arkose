@@ -1,8 +1,8 @@
 ---
 name: "Anca Dragan"
-order: "Dragan"
+order: 10
 section: "strategic"
-subtitle: "Associate Professor, UC Berkeley"
+subtitle: "Director of AI Safety and Alignment, Google DeepMind"
 image: "/assets/images/people/anca-dragan.jpg"
 external_url: "http://www.ancadragan.com"
 ---
