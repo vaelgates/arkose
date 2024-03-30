@@ -59,7 +59,7 @@ featured_image: /assets/img/social.jpg
 
 
 <div class="section hero" class="bg-gray">
-  <div class="inner inner-wide">
+  <div class="inner">
     <div class="row">
       <h2 class="sans">People we speak with work at:</h2> 
       <div class="grid logos-grid">
