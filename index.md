@@ -18,7 +18,7 @@ featured_image: /assets/img/social.jpg
         <li>Learn about job openings</li>
         <li>Connect with senior researchers in industry and academia</li>
       </ul>
-      <p>We've talked with professors, PhD students, and industry professionals at places like Google and Oxford University, and can introduce you to experts at the top safety labs and teams. We’re a nonprofit and our help is always free.</p>
+      <p>We've talked with professors, PhD students, and industry professionals at places like Google and Stanford University, and can introduce you to experts at the top safety labs and teams. We’re a nonprofit and our help is always free.</p>
       <div class="banner-button-container">
         <a href="{{site.applyurl}}" class="button banner-button request-call-button">
           Request a Call
