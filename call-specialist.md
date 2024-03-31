@@ -14,6 +14,7 @@ order: 2
 <section id="one">
 	<div class="inner">
 		<header class="major">
+			<h2 style="text-align: center"><i>*This application has closed*</i></h2>
 			<h2>AI Safety Call Specialist (9-month fixed term)</h2>
 		</header>
 
