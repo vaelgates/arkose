@@ -107,6 +107,17 @@
     "Transcripts / Audio / Slides": "https://www.safe.ai/ai-risk"
   },
   {
+    "Link": "https://arxiv.org/abs/2310.03693",
+    "Safety Category": [
+      "Alignment <-> RLHF"
+    ],
+    "Title": "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To! (Qi et al., 2023)",
+    "Type": [
+      "Paper"
+    ],
+    "Abstract": "Optimizing large language models (LLMs) for downstream use cases often involves the customization of pre-trained LLMs through further fine-tuning. Meta's open release of Llama models and OpenAI's APIs for fine-tuning GPT-3.5 Turbo on custom datasets also encourage this practice. But, what are the safety costs associated with such custom fine-tuning? We note that while existing safety alignment infrastructures can restrict harmful behaviors of LLMs at inference time, they do not cover safety risks when fine-tuning privileges are extended to end-users. Our red teaming studies find that the safety alignment of LLMs can be compromised by fine-tuning with only a few adversarially designed training examples. For instance, we jailbreak GPT-3.5 Turbo's safety guardrails by fine-tuning it on only 10 such examples at a cost of less than $0.20 via OpenAI's APIs, making the model responsive to nearly any harmful instructions. Disconcertingly, our research also reveals that, even without malicious intent, simply fine-tuning with benign and commonly used datasets can also inadvertently degrade the safety alignment of LLMs, though to a lesser extent. These findings suggest that fine-tuning aligned LLMs introduces new safety risks that current safety infrastructures fall short of addressing -- even if a model's initial safety alignment is impeccable, it is not necessarily to be maintained after custom fine-tuning. We outline and critically analyze potential mitigations and advocate for further research efforts toward reinforcing safety protocols for the custom fine-tuning of aligned LLMs. \n"
+  },
+  {
     "Link": "https://arxiv.org/abs/2311.17035",
     "ML Subfield": [
       "Robustness and Adversariality",
@@ -1031,6 +1042,9 @@
       "Scalable oversight",
       "Alignment <-> RLHF"
     ],
+    "Safety Topic": [
+      "Debate"
+    ],
     "Title": "Scalable AI Safety via Doubly-Efficient Debate (Brown-Cohen et al., 2024) ",
     "Type": [
       "Paper"
@@ -1504,6 +1518,18 @@
       "Paper"
     ],
     "Abstract": "    The unprecedented success of deep neural networks in many applications has made these networks a prime target for adversarial exploitation. In this paper, we introduce a benchmark technique for detecting backdoor attacks (aka Trojan attacks) on deep convolutional neural networks (CNNs). We introduce the concept of Universal Litmus Patterns (ULPs), which enable one to reveal backdoor attacks by feeding these universal patterns to the network and analyzing the output (i.e., classifying the network as \\`clean' or \\`corrupted'). This detection is fast because it requires only a few forward passes through a CNN. We demonstrate the effectiveness of ULPs for detecting backdoor attacks on thousands of networks with different architectures trained on four benchmark datasets, namely the German Traffic Sign Recognition Benchmark (GTSRB), MNIST, CIFAR10, and Tiny-ImageNet. The codes and train/test models for this paper can be found here this https URL. \n"
+  },
+  {
+    "Link": "https://arxiv.org/abs/2311.08379",
+    "Safety Category": [
+      "Major problems (misalignment, misuse, threat models)",
+      "Deception"
+    ],
+    "Title": "Scheming AIs: Will AIs fake alignment during training in order to get power? (Carlsmith, 2023)",
+    "Type": [
+      "Paper"
+    ],
+    "Abstract": "This report examines whether advanced AIs that perform well in training will be doing so in order to gain power later -- a behavior I call \"scheming\" (also sometimes called \"deceptive alignment\"). I conclude that scheming is a disturbingly plausible outcome of using baseline machine learning methods to train goal-directed AIs sophisticated enough to scheme (my subjective probability on such an outcome, given these conditions, is roughly 25%). In particular: if performing well in training is a good strategy for gaining power (as I think it might well be), then a very wide variety of goals would motivate scheming -- and hence, good training performance. This makes it plausible that training might either land on such a goal naturally and then reinforce it, or actively push a model's motivations towards such a goal as an easy way of improving performance. What's more, because schemers pretend to be aligned on tests designed to reveal their motivations, it may be quite difficult to tell whether this has occurred. However, I also think there are reasons for comfort. In particular: scheming may not actually be such a good strategy for gaining power; various selection pressures in training might work against schemer-like goals (for example, relative to non-schemers, schemers need to engage in extra instrumental reasoning, which might harm their training performance); and we may be able to increase such pressures intentionally. The report discusses these and a wide variety of other considerations in detail, and it suggests an array of empirical research directions for probing the topic further.\n\n"
   },
   {
     "Blog or Video": "https://www.alignment-workshop.com/nola-talks/zico-kolter-adversarial-attacks-on-aligned-language-models",
