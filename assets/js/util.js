@@ -602,8 +602,10 @@
 
 	};
 
-	$('.expandable').on('click', function() {
-		$(this).toggleClass('expanded');
+	$('.expandable').on('click', function(e) {
+		if (!$(e.target).is('a')) {
+			$(this).toggleClass('expanded');
+		}
 	});
 
 })(jQuery);
