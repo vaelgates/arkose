@@ -606,6 +606,10 @@
 		if (!$(e.target).is('a')) {
 			$(this).toggleClass('expanded');
 		}
+		if ($(e.target).is('h3') && $(e.target).next().is('ul')) {
+			const nextSibling = $(e.target).next();
+			nextSibling.toggleClass('collapsed');
+		}
 	});
 
 })(jQuery);
