@@ -82,7 +82,7 @@ featured_image: /assets/img/social.jpg
           <a href="https://www.ox.ac.uk/" target="_blank"><img  src="{% link assets/images/logos/oxford.svg %}" class="attachment-max size-max" alt="University of Oxford"></a>
         </div>
         <div class="4u 6u$(small)">
-          <a href="https://www.hku.hk/" target="_blank"><img  src="{% link assets/images/logos/hong_kong.svg %}" class="attachment-max size-max" alt="University of Hong Kong"></a>
+          <a href="https://www.hku.hk/" target="_blank"><img  src="{% link assets/images/logos/hong_kong.png %}" class="attachment-max size-max" alt="University of Hong Kong"></a>
         </div>
         <div class="4u 6u$(small)">
           <a href="https://www.ibm.com/" target="_blank"><img  src="{% link assets/images/logos/ibm.png %}" class="attachment-max size-max" alt="IBM"></a>
