@@ -67,19 +67,28 @@ featured_image: /assets/img/social.jpg
           <a href="https://www.google.com/" target="_blank"><img  src="{% link assets/images/logos/google.svg %}" class="attachment-max size-max" alt="Google"></a>
         </div>
         <div class="4u 6u$(small)">
-          <a href="https://www.berkeley.edu/" target="_blank"><img  src="{% link assets/images/logos/berkeley.png %}" class="attachment-max size-max" alt="UC Berkeley"></a>
-        </div>
-        <div class="4u 6u$(small)">
           <a href="https://www.stanford.edu/" target="_blank"><img  src="{% link assets/images/logos/stanford.png %}" class="attachment-max size-max" alt="Stanford"></a>
         </div>
         <div class="4u 6u$(small)">
-          <a href="https://www.cam.ac.uk/" target="_blank"><img  src="{% link assets/images/logos/cambridge.png %}" class="attachment-max size-max" alt="University of Cambridge"></a>
+          <a href="https://web.mit.edu/" target="_blank"><img  src="{% link assets/images/logos/mit.png %}" class="attachment-max size-max" alt="MIT"></a>
         </div>
         <div class="4u 6u$(small)">
-          <a href="https://www.uchicago.edu/en" target="_blank"><img  src="{% link assets/images/logos/chicago.png %}" class="attachment-max size-max" alt="University of Chicago"></a>
+          <a href="https://www.cmu.edu/" target="_blank"><img  src="{% link assets/images/logos/cmu.png %}" class="attachment-max size-max" alt="Carnegie Mellon University"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.berkeley.edu/" target="_blank"><img  src="{% link assets/images/logos/berkeley.png %}" class="attachment-max size-max" alt="UC Berkeley"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.ox.ac.uk/" target="_blank"><img  src="{% link assets/images/logos/oxford.svg %}" class="attachment-max size-max" alt="University of Oxford"></a>
         </div>
         <div class="4u 6u$(small)">
           <a href="https://www.hku.hk/" target="_blank"><img  src="{% link assets/images/logos/hong_kong.svg %}" class="attachment-max size-max" alt="University of Hong Kong"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.ibm.com/" target="_blank"><img  src="{% link assets/images/logos/ibm.png %}" class="attachment-max size-max" alt="IBM"></a>
+        </div>
+        <div class="4u 6u$(small)">
+          <a href="https://www.getcruise.com/" target="_blank"><img  src="{% link assets/images/logos/cruise.png %}" class="attachment-max size-max" alt="Cruise"></a>
         </div>
       </div>
     </div>
