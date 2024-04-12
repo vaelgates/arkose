@@ -602,14 +602,39 @@
 
 	};
 
-	$('.expandable').on('click', function(e) {
-		if (!$(e.target).is('a')) {
-			$(this).toggleClass('expanded');
+	function simpleHash(text) {
+    var hash = 0;
+    for (var i = 0; i < text.length; i++) {
+			var character = text.charCodeAt(i);
+			hash = ((hash << 5) - hash) + character;
+			hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+	}
+
+	// Restore expanded state from localStorage
+	$('.expandable').each(function() {
+		var text = $(this).text().trim();
+		var hash = simpleHash(text);
+		if (localStorage.getItem('expandable_' + hash) === 'true') {
+				$(this).addClass('expanded');
 		}
+	});
+
+	$('.expandable').on('click', function(e) {
+		if ($(e.target).is('a')) return;
+
+		$(this).toggleClass('expanded');
+
 		if ($(e.target).is('h3') && $(e.target).next().is('ul')) {
 			const nextSibling = $(e.target).next();
 			nextSibling.toggleClass('collapsed');
 		}
+
+		// Save expanded state to localStorage
+		var text = $(this).text().trim();
+		var hash = simpleHash(text);
+		localStorage.setItem('expandable_' + hash, $(this).hasClass('expanded'));
 	});
 
 })(jQuery);

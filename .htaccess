@@ -1,10 +1,9 @@
-# start rewrite rules
-<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ $1.html [L,QSA]
 
-# remove html from filename anything else
-RewriteRule ^(.*)\.html$ /$1
-
-# end rewrite rules
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 5 minutes"
 </IfModule>
