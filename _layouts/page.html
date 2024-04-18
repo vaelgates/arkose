@@ -18,13 +18,28 @@
 	    document.body.addEventListener('click', function(event) {
 	        var target = event.target;
 
-	        // Navigate up the DOM tree to find a link or an expandable element
+	        // This will find the closest parent link or expandable element if the clicked element isn't one
 	        while (target && target !== document.body && !(target.tagName === 'A' || target.classList.contains('expandable'))) {
 	            target = target.parentNode;
 	        }
 
+	        if (!target || target === document.body) {
+	            return; // No relevant target was found
+	        }
+
+	        // Handle clicks on links
+	        if (target.tagName === 'A') {
+	            var label = target.textContent.trim() || target.getAttribute('href');
+	            window.dataLayer.push({
+	                'event': 'page_link_click',
+	                'event_category': 'Page Link',
+	                'event_action': 'click',
+	                'event_label': label
+	            });
+	        }
+
 	        // Handle clicks on expandable headers
-	        if (target && target.classList.contains('expandable')) {
+	        if (target.classList.contains('expandable')) {
 	            var headerLabel = target.textContent.trim() || "Expandable Header";
 	            window.dataLayer.push({
 	                'event': 'expandable_click',
@@ -32,21 +47,10 @@
 	                'event_action': 'click',
 	                'event_label': headerLabel
 	            });
-	        } 
-	        // Handle clicks on links
-	        else if (target && target.tagName === 'A') {
-	            var label = target.textContent.trim() || target.href;
-	            var category = 'Page Link'; // Customize as needed
-	            var action = 'click';
-	            window.dataLayer.push({
-	                'event': 'page_link_click',
-	                'event_category': category,
-	                'event_action': action,
-	                'event_label': label
-	            });
 	        }
 	    });
 	});
+
 	</script>
 
 
