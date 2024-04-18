@@ -240,18 +240,73 @@ order: 4
     
     <h3 id="papers">Selected Papers</h3>
 
-		<div class="iframe-container">
+<!-- 		<div class="iframe-container">
 			<iframe id="key_papers" onload="iframeLoaded('iframe_loading_spinner_key_papers')" src="https://airtable.com/embed/appOQF4xHFCwscK39/shrwwWZNAfTkrHP4h?backgroundColor=blueLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="685" style="background: transparent; border: 1px solid #ccc;"></iframe>
 			<div id="iframe_loading_spinner_key_papers" class="iframe-loading">
 				{% include loading_spinner.html %}
 			</div>
-		</div>
+		</div> -->
 
-    <a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a>
+    <ul>
+    	<li class="expandable expanded" data-toggle="overviews"><span style="background-color: lightgrey;  padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Overviews</b></span></li>
+    	<ul>
+    		<p>What types of risks from advanced AI might we face? These papers provide an overview of anticipated problems and relevant technical research directions.</p>
+    		<li><a href="https://arxiv.org/abs/2209.00626"><span style="background-color: lightgrey;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Ngo et al., 2022)</span> The Alignment Problem from a Deep Learning Perspective</a></li>
+    		<li><a href="https://www.safe.ai/ai-risk"><span style="background-color: lightgrey;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Hendrycks et al., 2023)</span> An Overview of Catastrophic AI Risks</a></li>
+    		<li><a href="https://arxiv.org/abs/2302.10329"><span style="background-color: lightgrey;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Chan et al., 2023)</span> Harms from Increasingly Agentic Algorithmic Systems</a></li>
+    		<li><a href="https://llm-safety-challenges.github.io/"><span style="background-color: lightgrey;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Anwar et al., 2024)</span> Foundational Challenges in Assuring Alignment and Safety of Large Language Models</a></li>
+    	</ul>
+    </ul>
+        <ul>
+    	<li class="expandable" data-toggle="evaluations"><span style="background-color: pink;  padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Model Evaluations</b></span></li>
+    	<ul>
+    		<p>To ensure that advanced AI systems are safe, we need societal agreement on what is <i>unsafe</i> so that we can make appropriate tradeoffs with AI's anticipated benefits. Developing technical benchmarks for what dangerous capabilities are in advanced AI systems, as part of "model evaluations", is a first necessary step to concretize these tradeoffs for policymakers, researchers, and the public.</p>
+    		<li><a href="https://arxiv.org/abs/2212.09251"><span style="background-color: pink;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Perez et al., 2023)</span> Discovering Language Model Behaviors with Model-Written Evaluations</a></li>
+    		<li><a href="https://arxiv.org/abs/2403.13793"><span style="background-color: pink;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Phuong et al., 2024)</span> Evaluating Frontier Models for Dangerous Capabilities</a></li>
+    		<li><a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy"><span style="background-color: pink;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Anthropic, 2023)</span> Anthropic's Responsible Scaling Policy</a></li>
+    	</ul>
+    </ul>
+    <ul>
+    	<li class="expandable" data-toggle="robustness"><span style="background-color: peachpuff;  padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Robustness and Generalization</b></span></li>
+    	<ul>
+    		   	<p>Today and in the future, AI needs to be robust to adversarial attacks and generalize well with incomplete data on human preferences. As models become more capable, ensuring models will represent human intentions across distributional shift is even more important... since humans will be less economically incentivized and less capable of monitoring the processes generating AI outputs, and models will become better at deception.</p>
+    		<li><a href="https://arxiv.org/abs/2401.05566"><span style="background-color: peachpuff;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Hubinger et al., 2024)</span> Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</a></li>
+    		<li><a href="http://arxiv.org/abs/2307.15043"><span style="background-color: peachpuff;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Zou et al., 2023)</span> Universal and Transferable Adversarial Attacks on Aligned Language Models</a></li>
+    		<li><a href="https://arxiv.org/abs/2306.15447"><span style="background-color: peachpuff;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Carlini et al., 2023)</span> Are aligned neural networks adversarially aligned?</a></li>
+    	</ul>
+    </ul>
+    <ul>
+     <li class="expandable" data-toggle="interpretability"><span style="background-color: moccasin; padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Interpretability</b></span></li>
+    	<ul>
+    		    <p>If we do not understand how AI models arrive at their outputs, we cannot robustly monitor or modify them. We can ask models to describe their reasoning, but models may be synchophantic or deceptive, especially as they become more capable. One approach is to understand model processes just by examining their weights -- though the major challenges with this approach are superposition and scaling.</p>
+    		<li><a href="https://distill.pub/2020/circuits/zoom-in/"><span style="background-color: moccasin;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Olah et al., 2020)</span> Zoom In: An Introduction to Circuits</a></li>
+    		<li><a href="https://transformer-circuits.pub/2022/toy_model/index.html"><span style="background-color: moccasin;  padding: 0.25em 0.3em; border-radius: 0.5em;"> (Elhage et al., 2022)</span> Toy models of superposition</a></li>
+    		<li><a href="https://transformer-circuits.pub/2023/monosemantic-features/index.html"><span style="background-color: moccasin;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Bricken et al., 2023)</span> Towards Monosemanticity: Decomposing Language Models With Dictionary Learning</a></li>
+    	</ul>
+    </ul>
+    <ul>
+    <li class="expandable" data-toggle="reward_misspecification"><span style="background-color: rgb(192,238,192);  padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Reward Misspecification and Goal Misgeneralization</b></span></li>
+    	<ul>
+    		<p>How do we ensure that AI systems represent the goals we intend them to at deployment and under distributional shift, when we cannot maximally specify our preferences during training and many goals are compatible with the training data? Proxy reward signals generally correlate with designers' true objectives, but AI systems can break this correlation when they strongly optimize towards reward objectives.</p>
+    		<li><a href="https://arxiv.org/abs/2210.01790"><span style="background-color: rgb(192,238,192);  padding: 0.25em 0.3em; border-radius: 0.5em;">(Shah et al., 2022)</span> Goal Misgeneralization: Why Correct Specifications Aren’t Enough For Correct Goals</a></li>
+    		<li><a href="https://arxiv.org/abs/2201.03544"><span style="background-color: rgb(192,238,192);  padding: 0.25em 0.3em; border-radius: 0.5em;">(Pan, Bhatia and Steinhardt, 2022)</span> The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models</a></li>
+    	</ul>
+    </ul>
+    <!-- paleturquoise -->
+    <ul>
+    <li class="expandable" data-toggle="scalable_oversight"><span style="background-color: lavender;  padding: 0.25em 0.3em; border-radius: 0.5em;"><b>Scalable Oversight</b></span></li>
+    	<ul>
+    		<p>How do we supervise systems that are more capable than human overseers? Perhaps we can use aligned AI overseers to oversee more capable AI, but the core problems still remain.</p>
+    		<li><a href="https://arxiv.org/abs/2211.03540"><span style="background-color: lavender;  padding: 0.25em 0.3em; border-radius: 0.5em;"> (Bowman et al., 2022)</span> Measuring Progress on Scalable Oversight for Large Language Models</a></li>
+    		<li><a href="https://arxiv.org/abs/2212.08073"><span style="background-color: lavender;  padding: 0.25em 0.3em; border-radius: 0.5em;">(Bai et al., 2022)</span> Constitutional AI: Harmlessness from AI Feedback</a></li>
+    	</ul>
+    </ul>
 
 	<h3 style="clear:both"> Expanded List of Papers</h3>
 	
 	<a href="papers" class="button button-white fit">AI Safety Papers</a>
+
+<!-- 	<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a> -->
 
 	<br>
     <h3 id="content">Blog posts</h3>
