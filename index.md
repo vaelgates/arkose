@@ -123,6 +123,9 @@ featured_image: /assets/img/social.jpg
             — Brad Knox, Research Associate Professor of Computer Science
           </li>
           <li class="glide__slide">
+            <blockquote class="testimonial">I appreciated the amount of understanding Vael had of the whole field and current situation; Vael felt on top of things. It was cool to see Vael's ability to personalize advice for me given the rapid pace that they were getting information and pulling out what was relevant. The call was more than I expected - the most useful part was the <a href="https://www.neelnanda.io/mechanistic-interpretability/quickstart">Quickstart guide</a>, though much of it was useful, and the amount of advice seemed fantastic.</blockquote> — Zhen Ning David Liu, PhD student at the University of Cambridge
+          </li>
+          <li class="glide__slide">
             <blockquote class="testimonial" style="font-size: 89%">I'm new to the ecosystem, and Vael has been extremely valuable in connecting me with key people, informing my general approach to strategy, and becoming more efficient and effective at AI safety research. They enabled me to really make the most of my in-person visit to the AI safety community in Berkeley: I've been able to get in touch with some key people and come up with resources for the AI safety research that I'm doing, which has significantly accelerated my research efforts. Vael's doing a fantastic job of tying in people of the wider community and I'm very grateful for their services.</blockquote>
             — Christian Schroeder de Witt, Postdoctoral Researcher at the University of Oxford
           </li>
