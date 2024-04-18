@@ -24,7 +24,11 @@
 				{% endif %}
 				{% assign button_class = "" %}
 				{% if item.button %}
-					{% assign button_class = "button" %}
+					{% if item.title == "Request a Call" %}
+	        			{% assign button_class = "button header-call-button" %}  <!-- This adds a unique class for GTM. Connected to settings.yml -->
+	    			{% else %}
+	        			{% assign button_class = "button" %}
+	   				{% endif %}
 				{% endif %}
 				{% assign has_submenu = false %}
 				{% if item.submenu %}
