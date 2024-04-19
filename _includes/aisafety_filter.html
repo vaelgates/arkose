@@ -1,0 +1,22 @@
+<div class="6u 12u$(small) mb1 filter-{{include.field_id}}">
+  <span class="dropdown-title-box" data-target="{{include.field_id}}">
+    <span class="dropdown-title">{{include.field_display}} <span class="filter-type-count-REMOVED"></span></span>
+    <span>
+      <svg class="ov-icon text-inherit" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path d="M12 16l-6-6h12z"></path>
+      </svg>
+    </span>
+  </span>
+  <div name="dropdown" class="filter-dropdown filter-dropdown-{{include.field_id}}" id="{{include.field_id}}" data-filter-type="{{include.field_display}}">
+    <ul>
+      {% for option in include.options %}
+        <li data-option="{{option}}">
+          <input type="checkbox" id="demo-{{include.field_id}}-{{ option }}" name="demo-{{include.field_id}}-{{ option }}" value="{{ option }}">
+          <label for="demo-{{include.field_id}}-{{ option }}">{{ option }}</label>
+          <span class="filter-option-count"></span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
