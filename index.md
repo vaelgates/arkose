@@ -33,9 +33,9 @@ featured_image: /assets/img/social.jpg
       <p>Arkose is a nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. Our 30-minute calls help support machine learning professionals interested in AI safety research or engineering. We offer personalized advice to fit your level of interest and situation, whether you're an industry researcher or engineer, professor, or PhD student.</p>
       <p>After discussing your specific needs and questions, we can:</p>
 		<ul>
-		<li>Help you explore funding and job opportunities. Arkose keeps a list of grant opportunities, compute options, fellowships, and jobs: <a href="resources">Resources</a> is our public list.</li>
-		<li>Connect you to potential mentors and collaborators in industry or academia. Whether you're seeking senior researchers, PhD students, or industry or sabbatical connections, Arkose can introduce you to our <a href="about#experts">experts</a>.</li>
-		<li>Recommend a list of <a href="papers">safety-related papers in your research area</a>, and a shortlist of <a href="resources#ai_safety">advanced AI safety materials</a>.</li>
+		<li>Help you explore funding and job opportunities. Arkose keeps a list of grant opportunities, jobs, compute options and more: <a href="opportunities">Opportunities</a> is our public list.</li>
+		<li>Connect you to potential mentors and collaborators in industry or academia. Whether you're seeking senior researchers, PhD students, or industry or sabbatical connections, Arkose can introduce you to our <a href="#experts">experts</a>.</li>
+		<li>Recommend a list of <a href="aisafety">AI safety papers</a>, organized by research area, to provide a short introduction to the subfield, and context for many of the listed opportunities.</li>
 		<li>Provide as-needed support for 6 months. We can help you clarify emerging options, follow up with your plans, and advise you of new resources.</li>  
 		</ul>
       <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
