@@ -212,22 +212,8 @@ order: 4
 
 <!--
 		<h3>Example of expandable lists</h3>
-		<ul>
-			<li>The list item after this one has the 'expandable' class, which makes its list icon become a caret, and makes it clickable to show/hide its sublist.</li>
-			<li class="expandable" data-toggle="theoretical_research">Theoretical research
-				<ul id="theoretical_research">
-					<li><a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a></li>
-				</ul>
-		</ul>
-
-		<h3>Example of expandable lists already expanded</h3>
-		<ul>
-			<li>The list item after this one has the 'expandable' class, and also the 'expanded' class, so it's already open on page load.</li>
-			<li class="expandable expanded" data-toggle="theoretical_research">Theoretical research
-				<ul id="theoretical_research">
-					<li><a href="https://www.alignment.org/theory/">Alignment Research Center</a> <a href="https://www.alignment.org/hiring/">(roles)</a></li>
-				</ul>
-		</ul>
+			<li class="expandable" data-toggle="theoretical_research">Theoretical research</li>
+			<li class="expandable expanded" data-toggle="theoretical_research">Theoretical</li>
 -->
 
 	</div>
@@ -309,7 +295,18 @@ order: 4
 <!-- 	<a href="https://airtable.com/appOQF4xHFCwscK39/shrQzex73hN01B1CR" class="button button-white button-small button-right">Suggest A Resource</a> -->
 
 	<br>
-    <h3 id="content">Blog posts</h3>
+
+<h3 class="expandable" id="other_ai_safety_content">Talks, Blog Posts, Newsletters, and Upskilling</h3>
+	<ul>
+
+	<h4 class="expandable" id="highlighted_talk_series">Highlighted Talk Series</h4>
+	<ul>
+		<li><a href="https://www.alignment-workshop.com/nola-2023"><b>New Orleans Alignment Workshop (Dec 2023)</b></a>, <i>recordings available</i></li>
+		<li><a href="https://pli.princeton.edu/events/princeton-ai-alignment-and-safety-seminar">Princeton AI Alignment and Safety Seminar</a> (ongoing)</li>
+		<br>
+	</ul>
+
+	<h4 class="expandable" id="content">Blog posts</h4>
     <ul>
       <li><a href="https://yoshuabengio.org/2023/06/24/faq-on-catastrophic-ai-risks/">FAQ on Catastrophic AI Risks</a> by Yoshua Bengio (2023)</li>
       <li><a href="https://wp.nyu.edu/arg/why-ai-safety/">Why I Think More NLP Researchers Should Engage with AI Safety Concerns</a> by Sam Bowman (2022)</li>
@@ -328,23 +325,18 @@ order: 4
 				<li><a href="https://www.cold-takes.com/most-important-century/">The Most Important Century</a> by Holden Karnofsky (podcasts and articles)</li>
 				<li><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg/">AI Safety YouTube channel</a> by Robert Miles</li>
 			</ul> -->
-		</ul>
+		<br>
 	</ul>
 
-	<h3 id="highlighted_talk_series">Highlighted Talk Series</h3>
-	<ul>
-		<li><a href="https://pli.princeton.edu/events/princeton-ai-alignment-and-safety-seminar">Princeton AI Alignment and Safety Seminar</a> (ongoing)</li>
-		<li><a href="https://www.alignment-workshop.com/nola-2023">New Orleans Alignment Workshop (Dec 2023)</a>, <i>recordings available</i></li>
-	</ul>
-
-    <h3 id="newsletters">Newsletters</h3>
+    <h4 class="expandable" id="newsletters">Newsletters</h4>
     <ul>
       <li><a href="https://importai.substack.com">Import AI</a> by Jack Clark, <i>for keeping up to date on AI progress</i></li>
       <li><a href="https://newsletter.mlsafety.org">ML Safety Newsletter</a> and <a href="https://newsletter.safe.ai/">AI Safety Newsletter</a> by the Center for AI Safety, <i>for AI safety papers and policy updates</i></li>
       <li><a href="https://newsletter.danielpaleka.com/">AI Safety Takes</a> by Daniel Paleka, <i>for a PhD student's overview</i></a></li>
+      <br>
     </ul>
 
-	<h3 id="guides">Upskilling</h3>
+	<h4 class="expandable" id="guides">Upskilling</h4>
 	<ul>
 		<li class="expandable" data-toggle="guides">Guides</li>
 		<ul>
@@ -361,6 +353,9 @@ order: 4
 			<li><a href="https://course.mlsafety.org/">Introduction to ML Safety</a> by the Center for AI Safety</li>
 		</ul>
 	</ul>
+
+	</ul>
+
 	</div>
 </section>
 
