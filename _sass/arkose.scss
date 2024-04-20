@@ -237,6 +237,42 @@
   }
 }
 
+.twitter-link {
+  svg {
+    transition: fill 0.25s ease-in;
+    &:hover {
+      cursor: pointer;
+      fill: #1DA1F2;
+    }
+  }
+}
+
+.twitter-link-small {
+  &:hover {
+    filter: unset; // absolute-positioned image inside a tag causes weird bug so we re-do this on the image
+    cursor: pointer;
+  }
+  svg {
+    height: 1.1em;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 4px;
+    transition: fill 0.25s ease-in;
+    &:hover {
+      fill: #1DA1F2;
+    }
+  }
+}
+
+.TwitterDisplay .twitter-link img {
+  height: 1.5em;
+}
+
+.color-bubble {
+  padding: 0.25em 0.3em;
+  border-radius: 0.5em;
+}
+
 .hero {
   width: 100vw;
   transform: translateX(-50%);
@@ -255,6 +291,11 @@
 
 .testimonial {
   border-left:8px solid var(--color-arkose-dark-blue);
+}
+
+a.no-underline {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .grid {
