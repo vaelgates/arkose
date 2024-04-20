@@ -137,7 +137,7 @@
         paper.Title = linkify(paper.Link, paper.Title.replace("\n", ''));
         paper['Transcripts / Audio / SlidesDisplay'] = linkify(paper['Transcripts / Audio / Slides'], 'Transcripts / Audio / Slides');
         paper['Supplementary MaterialDisplay'] = linkify(paper['Supplementary Material'], 'Supplementary Material');
-        paper['TwitterDisplay'] = linkify(paper['Twitter'], 'Twitter');
+        paper['TwitterDisplay'] = linkify(paper['Twitter'], '<img src="{% link assets/images/twitter.svg %}" class="" alt="Twitter" />');
         paper['AbstractDisplay'] = paper.Abstract ? `<h4>Abstract</h4>${paper.Abstract}` : '';
         return paper;
       });
