@@ -133,6 +133,12 @@ featured_image: /assets/img/social.jpg
             <blockquote class="testimonial">As someone who is relatively new to alignment research, the call with Arkose was more than worth the time. Loads of useful pointers, honest feedback and an overall pleasant call experience. Definitely helped me to refine my plan to transition into the field!</blockquote> - Anonymous 
           </li>
           <li class="glide__slide">
+            <blockquote class="testimonial">After a call with Vael, I feel considerably better prepared for my planned career change into AI safety. Vael had a clear view of the whole field and the possible routes into research, and was able to talk in a lot of detail about the routes I was most interested in but also suggest new ones that I had not considered. Best of all, they helped me to put together a series of actionable steps to make progress with my career change. I strongly recommend applying to speak with Arkose if you are looking to move into the field. </blockquote> — Hannes Whittingham, ML Scientist
+          </li>
+          <li class="glide__slide">
+            <blockquote class="testimonial">It was really interesting and helpful talking with [Vael]. Thank you very much for your time, input, and also the resources. Having the chance to talk with a like-minded, knowledgeable person that can think outside the box and also shares my concerns was a great experience. The provided links are also very helpful, and I plan to spend significant time processing them. It was also a good opportunity to discuss my own ideas and get feedback on them. </blockquote> — Wolfgang Slany, Professor at Graz University of Technology
+          </li>
+          <li class="glide__slide">
             <blockquote class="testimonial">My call with Vael Gates from Arkose was enlightening and profoundly helpful, providing me with access to resources I was previously unaware of. Their dedication to offering personalized support has immensely enhanced my AI safety research. Arkose's cool and invaluable contribution is a cornerstone for the community's thriving success, positioning them as a trusted ally for student researchers like myself.</blockquote> — Yi Zeng, PhD Student at Virginia Tech
           </li>
         </ul>
