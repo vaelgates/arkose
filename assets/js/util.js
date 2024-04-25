@@ -626,11 +626,6 @@
 
 		$(this).toggleClass('expanded');
 
-		if ($(e.target).is('h3') && $(e.target).next().is('ul')) {
-			const nextSibling = $(e.target).next();
-			nextSibling.toggleClass('collapsed');
-		}
-
 		// Save expanded state to localStorage
 		var text = $(this).text().trim();
 		var hash = simpleHash(text);
