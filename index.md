@@ -6,7 +6,7 @@ description: Reducing risks from advanced AI through field-building activities
 featured_image: /assets/img/social.jpg
 ---
 
-<section id="banner" class="major">
+<!-- <section id="banner" class="major">
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
     <div class="4u -4u 6u(xxlarge) -3u(xxlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
@@ -26,9 +26,35 @@ featured_image: /assets/img/social.jpg
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<div class="section">
+<!-- <section id="banner" class="minor">
+  <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
+  <div class="inner inner-wide">
+    <h1>Explore AI safety research opportunities</h1>
+      <p>Arkose helps researchers and engineers learn about funding and job openings in AI safety. We also facilitate connections with senior researchers in industry and academia. As an AI safety fieldbuilding nonprofit, our help is always free.</p>
+    </div>
+</section> -->
+
+<section id="banner" class="major">
+  <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
+  <div class="row xs-padding-1 banner-inner">
+    <div class="4u -4u 6u(xxlarge) -3u(xxlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
+      <div class="background">&nbsp;</div>
+      <h1 class="display-1">Explore AI safety research opportunities</h1>
+      <p>Arkose helps researchers and engineers learn about funding and job openings in AI safety. We also facilitate connections with senior researchers in industry and academia. As an AI safety fieldbuilding nonprofit, our help is always free.</p>
+      <div class="banner-button-container">
+        <a href="{{site.applyurl}}" class="button banner-button request-call-button">
+          Request a Call
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+<!-- <div class="section">
   <div class="inner">
       <p>Arkose is a nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. Our 30-minute calls help support machine learning professionals interested in AI safety research or engineering. We offer personalized advice to fit your level of interest and situation, whether you're an industry researcher or engineer, professor, or PhD student.</p>
       <p>After discussing your specific needs and questions, we can:</p>
@@ -40,22 +66,28 @@ featured_image: /assets/img/social.jpg
 		</ul>
       <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
   </div>
-</div>
-
-
-
-<!-- <div class="section bg-gray">
-  <div class="inner">
-      <div class="row align-items-center">
-</div>
-  </div>
-</div>
+</div> -->
 
 <div class="section">
   <div class="inner">
-    <h3>About the Team</h3>
+   <p>Arkose is a nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. We aim to support the growing field of AI safety, which needs skilled researchers and engineers. If you’re interested in exploring opportunities, we can help you:</p>
+      <ul>
+        <li>Find funding and compute</li>
+        <li>Learn about job openings</li>
+        <li>Connect with senior <a href="#experts">researchers</a> in industry and academia</li>
+      </ul>
+      <p>During our 30-minute calls, we offer personalized advice to fit your level of interest and situation. We've talked with professors, PhD students, and industry professionals at places like Google and Stanford University, and can introduce you to experts at the top safety labs and teams. We’re a nonprofit and our help is always free.</p>
+      <h3>Want to know more?</h3>
+      <ul>
+        <li>Arkose keeps a list of grant opportunities, jobs, compute options and more: <a href="opportunities">Opportunities</a> is our public list.</li>
+        <li>Our list of <a href="aisafety">AI safety papers</a> provides a short introduction to research on reducing large-scale risks from advanced AI, providing context for many of the listed opportunities.</li>
+<!--     <li>Provide as-needed support for 6 months. We can help you clarify emerging options, follow up with your plans, and advise you of new resources.</li>   -->
+    </ul>
+      <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
   </div>
-</div> -->
+</div>
+
+
 
 
 <div class="section hero" class="bg-gray">
