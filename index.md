@@ -39,12 +39,19 @@ featured_image: /assets/img/social.jpg
 <section id="banner" class="major">
   <div class="arkose-banner" style="background-image: url('{{ '/assets/images/arkose-banner.jpg' | relative_url }}')"></div>
   <div class="row xs-padding-1 banner-inner">
-    <div class="4u -4u 6u(xxlarge) -3u(xxlarge) 8u(large) -2u(large) 10u(medium) -1u(medium) 12u(small) 0u(small)" style="position: relative; padding: 2em;">
+    <div class="6u -3u 8u(xxlarge) -2u(xxlarge) 10u(xlarge) -1u(xlarge) 12u(small)" style="position: relative; padding: 2em;">
       <div class="background">&nbsp;</div>
       <h1 class="display-1">Explore AI safety research opportunities</h1>
-      <p>Arkose helps researchers and engineers learn about funding and job openings in AI safety. We also facilitate connections with senior researchers in industry and academia. As an AI safety fieldbuilding nonprofit, our help is always free.</p>
+      <p>Arkose helps researchers and engineers learn about funding and job openings in AI safety.</p>
       <div class="banner-button-container">
         <a href="{{site.applyurl}}" class="button banner-button request-call-button">
+        <!--
+          Colors to consider for background-color:
+            Saturated green: #0ca683
+            Light green: #5dcbb9
+            Light blue: #83c1dc
+            Arkose green: #7bcabb or var(--color-arkose-green)
+        -->
           Request a Call
         </a>
       </div>
