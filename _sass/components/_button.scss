@@ -205,9 +205,9 @@ button,
 
 	&.request-call-button {
 		appearance: none;
-		background-color: var(--color-arkose-green);
+		background-color: var(--color-arkose-green-saturated);
+		color: var(--color-always-dark);
 		box-shadow: inset 0 0 0 2px #333;
-		color: #333;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 600;
