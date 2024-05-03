@@ -621,6 +621,19 @@
 		}
 	});
 
+	// Expand sections linked directly from the URL
+	const intrapageLink = window.location.hash.substring(1);
+	if (intrapageLink) {
+		$(`#${intrapageLink}`).addClass('expanded');
+		// Iterate through its ancestor elements, expanding them if they have an immediately-previous sibling with the class .expandable
+		$(`#${intrapageLink}`).parents().each(function(i, el) {
+			const prev = $(el).prev();
+			if (prev.hasClass('expandable')) {
+				prev.addClass('expanded');
+			}
+		});
+	}
+
 	$('.expandable').on('click', function(e) {
 		if ($(e.target).is('a')) return;
 
