@@ -20,7 +20,7 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target'),
-				text = $this.text().trim(),
+				text = $this.children().length > 0 ? $this.children()[0].textContent.trim() : $this.text().trim(),
 				fade = $this.hasClass('fade') ? ' fade' : '',
 				envelope_icon = $this.hasClass('fa-envelope') ? ' icon fa-envelope-o' : '';
 
