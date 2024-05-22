@@ -180,6 +180,9 @@ featured_image: /assets/img/social.jpg
           <li class="glide__slide">
             <blockquote class="testimonial">My call with Vael Gates from Arkose was enlightening and profoundly helpful, providing me with access to resources I was previously unaware of. Their dedication to offering personalized support has immensely enhanced my AI safety research. Arkose's cool and invaluable contribution is a cornerstone for the community's thriving success, positioning them as a trusted ally for student researchers like myself.</blockquote> — Yi Zeng, PhD Student at Virginia Tech
           </li>
+          <li class="glide__slide">
+            <blockquote class="testimonial">Arkose and Vael have done a great job of curating funding sources and compute resources that are beneficial for early career academicians interested in AI Safety research. Additionally, the opportunity to connect with researchers interested in the same problems is a big plus!</blockquote> - Anshuman Chhabra, Postdoctoral Researcher at UC Davis
+          </li>
         </ul>
       </div>
     </div>
