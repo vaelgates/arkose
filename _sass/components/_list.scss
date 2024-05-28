@@ -156,21 +156,20 @@
 		}
 	}
 
-	.expandable:hover {
-		opacity: 0.7;
-		cursor: pointer;
-		&::before {
-			transform:translateX(3px);
-		}
-	}
-
 	.expandable {
     list-style-type: none;
 		cursor: pointer;
-		transition: opacity 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
 
 		&::before {
-			content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+			content: '';
+			-webkit-mask: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat 50% 50%;
+			mask: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat 50% 50%;
+			-webkit-mask-size: cover;
+			mask-size: cover;
+			width: 16px;
+			height: 16px;
+			background-color: currentColor;
 			display: inline-block;
 			margin-left: -1.25em;
 			margin-right: 0.35em;
@@ -178,9 +177,6 @@
 			transition: transform 0.1s ease;
 			position: relative;
 			top: 1px;
-			@media (prefers-color-scheme: dark) {
-				filter: invert(1);
-			}
 		}
 
 		+ ul {
@@ -188,12 +184,16 @@
 		}
 
 		&:hover {
-			opacity: 0.7;
+			color: var(--color-active-link);
+			cursor: pointer;
+			&::before {
+				transform:translateX(3px);
+			}
 		}
 
 		&.expanded {
 			&::before {
-				transform: rotate(90deg) translateY(3px) translateX(-3px);
+				transform: rotate(90deg);
 			}
 			+ ul {
 				display: block;
