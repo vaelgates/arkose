@@ -270,8 +270,12 @@
 }
 
 .color-bubble {
-  padding: 0.25em 0.3em;
+  padding: 0.25em 0.3em 0.1em;
   border-radius: 0.5em;
+  color: var(--color-always-dark);
+  b {
+    color: var(--color-always-dark);
+  }
 }
 
 .hero {
