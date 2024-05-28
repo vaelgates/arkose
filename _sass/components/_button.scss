@@ -98,6 +98,10 @@ button,
     float: right;
 	}
 
+	&.button-special {
+		background-color: var(--color-special-button);
+	}
+
 	&:hover, &:active {
 		box-shadow: inset 0 0 0 2px var(--color-highlight);
 		color: var(--color-highlight);

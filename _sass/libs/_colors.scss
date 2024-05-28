@@ -48,6 +48,8 @@
 	--color-filter-ml-tag-light: 				#e6f3fe;
 	--color-filter-ml-tag-fine-light: 	#fff0f0;
 	--color-filter-type-light: 					#f0f0f0;
+
+	--color-special-button:							#e8f6f3;
 }
 
 html[data-theme="dark"] {
@@ -89,6 +91,7 @@ html[data-theme="dark"] {
 	--color-disagree-border: 	#501717;
 
 	--color-dropdown-highlight:	#0f2622;
+	--color-special-button:			#005a68;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -128,6 +131,8 @@ html[data-theme="dark"] {
 		--color-disagree: 				#d09595;
 		--color-disagree-text:		#411;
 		--color-disagree-border:	#bc6565;
+
+		--color-special-button:		#e8f6f3;
 	}
 
 	:root, html[data-theme="dark"] {
@@ -168,5 +173,6 @@ html[data-theme="dark"] {
 		--color-disagree-border: 	#501717;
 
 		--color-dropdown-highlight:	#0f2622;
+		--color-special-button:			#005a68;
 	}
 }
