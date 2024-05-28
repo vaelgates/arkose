@@ -281,5 +281,21 @@ featured_image: /assets/img/social.jpg
       }
     }
   }).mount()
-</script>
 
+  function isDarkMode() {
+    if (window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+      return true;
+
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    if (isDarkMode()) {
+      const supportsFilter = 'filter' in document.body.style;
+      if (!supportsFilter) {
+        document.querySelector('.logos-grid').style.backgroundColor = '#ccc';
+      }
+    }
+  });
+</script>
