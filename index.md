@@ -294,7 +294,7 @@ featured_image: /assets/img/social.jpg
     if (isDarkMode()) {
       const supportsFilter = 'filter' in document.body.style;
       if (!supportsFilter) {
-        document.querySelector('.logos-grid').style.backgroundColor = '#ccc';
+        document.querySelector('.logos-grid').style.backgroundColor = '#9ca4ca';
       }
     }
   });
