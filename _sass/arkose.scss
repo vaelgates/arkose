@@ -340,3 +340,18 @@ a.no-underline {
     }
   }
 }
+
+@supports not (filter: invert(1)) {
+  @media (prefers-color-scheme: dark) {
+    .logos-grid {
+      background-color: #b2b8d6;
+      margin: 0 0 0 1.25em;
+      padding: 0;
+    }
+  }
+  html[data-theme="dark"] .logos-grid {
+    background-color: #b2b8d6;
+    margin: 0 0 0 1.25em;
+    padding: 0;
+  }
+}
