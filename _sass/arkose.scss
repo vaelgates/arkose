@@ -329,9 +329,9 @@ a.no-underline {
     img {
       width: 100%;
       padding: 1rem 2.5rem;
-      @media (prefers-color-scheme: dark) {
-        filter: invert(1);
-      }
+    }
+    @media (prefers-color-scheme: dark) {
+      filter: invert(1);
     }
     @media (max-width: 600px) {
       img {
