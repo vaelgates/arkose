@@ -490,3 +490,7 @@
 			}
 		}
 	}
+
+	html[data-theme="dark"] #header .navbar-brand img.logo-text-image {
+		filter: invert(1);
+	}
