@@ -281,5 +281,24 @@ featured_image: /assets/img/social.jpg
       }
     }
   }).mount()
-</script>
 
+  function isDarkMode() {
+    if (window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+      return true;
+
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    if (isDarkMode()) {
+      const supportsFilter = 'filter' in document.body.style;
+      if (!supportsFilter) {
+        const logos = document.querySelector('.logos-grid')
+        logos.style.backgroundColor = '#b2b8d6';
+        logos.style.margin = '0 0 0 1.25em';
+        logos.style.padding = 0;
+      }
+    }
+  });
+</script>
