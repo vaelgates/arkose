@@ -161,7 +161,7 @@
 
 
 
-  <section class="bg-gray">
+  <section class="bg-gray" id="find-more-ai-safety-paper">
     <div class="inner">
       <h2>Find more AI safety papers</h2>
       <div class="inner">
@@ -353,6 +353,7 @@
             $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
           });
         });
+        document.getElementById('find-more-ai-safety-paper').scrollIntoView({ behavior: 'smooth' });
       }
       updateList();
 
