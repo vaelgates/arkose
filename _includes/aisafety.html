@@ -423,8 +423,7 @@
       var params = new URLSearchParams(window.location.search);
       Object.keys(filters).forEach(function(filterType) {
         params.delete(filterType);
-        // Type is a special case
-        if (filters[filterType].size || filterType === 'Type')
+        if (filters[filterType].size)
           params.append(filterType, Array.from(filters[filterType]));
       });
       var newRelativePathQuery = window.location.pathname + (params.toString() ? '?' : '') + params.toString();
