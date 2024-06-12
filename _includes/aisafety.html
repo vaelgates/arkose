@@ -337,23 +337,24 @@
       
       // On page load, read the query params and set the filters
       var params = new URLSearchParams(window.location.search);
-      // Special case: if there are no filters set, filter Type to Paper by default
-      // if (params.size === 0) {
-      //   filters['Type'].add('Paper');
-      //   $('input[name="option-type-Paper"]').prop('checked', true);
-      // } else {
-      //   Object.keys(filters).forEach(function(filterType) {
-      //     if (!params.has(filterType)) return
+      if (params.size === 0) {
+        // Formerly, we'd default the filter Type to Paper if no filters were set. That code follows, but we've
+        // commented it out for now.
+        // filters['Type'].add('Paper');
+        // $('input[name="option-type-Paper"]').prop('checked', true);
+      } else {
+        Object.keys(filters).forEach(function(filterType) {
+          if (!params.has(filterType)) return
 
-      //     params.getAll(filterType)[0].split(',').forEach(function(filter) {
-      //       if (filter === '') return; // Type param can have an empty string to indicate it should *not* apply the default Type=paper
+          params.getAll(filterType)[0].split(',').forEach(function(filter) {
+            if (filter === '') return; // Type param can have an empty string to indicate it should *not* apply the default Type=paper
 
-      //       filters[filterType].add(filter);
-      //       $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
-      //     });
-      //   });
-      // }
-      // updateList();
+            filters[filterType].add(filter);
+            $('input[name="option-' + slugify(filterType) + '-' + filter + '"]').prop('checked', true);
+          });
+        });
+      }
+      updateList();
 
       $('input.search').on('change', function(e) {
         updateFilterOptionCounts();
