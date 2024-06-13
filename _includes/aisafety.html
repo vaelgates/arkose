@@ -198,8 +198,7 @@
     <div class="inner">
       <h2>Find more AI safety papers</h2>
       <div class="inner">
-<!--         <h3> Find AI safety publications relevant to your area of expertise.</h3>
- -->        <p>Curated with input from the experts on our <a href="/#panel">Strategic Advisory Panel</a>, this collection of papers, blog posts, and videos contains top and recent AI safety papers, categorized by AI safety and machine learning (ML) subfields.</p>
+        <p>Curated with input from the experts on our <a href="https://arkose.org/#panel">Strategic Advisory Panel</a>, this collection of papers, blog posts, and videos contains top and recent AI safety papers. For more information on the categories listed, please reference this <a href="/glossary">glossary</a>.</p>
       </div>
       <div id="paper-list">
         <div class="row mt1 mb1">
@@ -208,10 +207,11 @@
           </div>
         </div>
         <div class="row">
-          {% include paper_filter.html field_id="safety_category" field_display="Safety Category" options=empty %}
-          {% include paper_filter.html field_id="ml_subfield" field_display="ML Subfield" options=empty %}
-          <!-- {% include paper_filter.html field_id="ml_subtopic" field_display="ML Subtopic" options=empty %}
-          {% include paper_filter.html field_id="safety_topic" field_display="Safety Topic" options=empty %} -->
+          {% include paper_filter.html field_id="category" field_display="Category" options=empty %}
+          {% comment %}
+            {% include paper_filter.html field_id="ml_subtopic" field_display="ML Subtopic" options=empty %}
+            {% include paper_filter.html field_id="safety_topic" field_display="Safety Topic" options=empty %}
+          {% endcomment %}
           {% include paper_filter.html field_id="type" field_display="Type" options=empty %}
           <div class="12u filter-list"></div>
         </div>
@@ -238,7 +238,7 @@
     <div class="detail">
       <div class="ML SubfieldDisplay"></div>
       <div class="ML SubtopicDisplay"></div>
-      <div class="Safety CategoryDisplay"></div>
+      <div class="CategoryDisplay"></div>
       <div class="Safety TopicDisplay"></div>
       <div class="TypeDisplay"></div>
       <div class="TwitterDisplay"></div>
@@ -254,14 +254,14 @@
   $(function() {
     var papersList;
     const filters = {
-      "Safety Category": new Set(),
+      "Category": new Set(),
       "Safety Topic": new Set(),
       "ML Subfield": new Set(),
       "ML Subtopic": new Set(),
       "Type": new Set(),
     }
     const filterOptions = {
-      "Safety Category": new Set(),
+      "Category": new Set(),
       "Safety Topic": new Set(),
       "ML Subfield": new Set(),
       "ML Subtopic": new Set(),
@@ -272,8 +272,8 @@
       valueNames: [
         'Title',
         'Safety TopicDisplay',
-        'Safety Category',
-        'Safety CategoryDisplay',
+        'Category',
+        'CategoryDisplay',
         'Type',
         'TypeDisplay',
         'Twitter',
@@ -317,7 +317,8 @@
         } else {
           paper.image = `/assets/images/medium/${paper.Type[0].toLowerCase()}${modeStr}.svg`;
         }
-        paper['Safety CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single safety-category-single">${item}</span>`).join('');
+        paper['Category'] = paper['Safety Category']
+        paper['CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single category-single">${item}</span>`).join('');
         paper['Safety Topic'] = paper['Safety Topic'] ?? [];
         paper['Safety TopicDisplay'] = paper['Safety Topic'].map(item => `<span class="field-single safety-topic-single">${item}</span>`).join('');
         paper['ML SubfieldDisplay'] = paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
@@ -376,6 +377,9 @@
         // filters['Type'].add('Paper');
         // $('input[name="option-type-Paper"]').prop('checked', true);
       } else {
+        // "Category" used to be called "Safety Category", so we special-case old URLs that might still refer to it:
+        params.set("Category", params.get("Safety Category"))
+
         Object.keys(filters).forEach(function(filterType) {
           if (!params.has(filterType)) return
 
@@ -420,7 +424,6 @@
       papersList.filter(function (paper) {
         return Object.keys(filters).every(function(filterType) {
           if (filters[filterType].size == 0) return true
-
           return paper.values()[filterType].some(item => filters[filterType].has(item))
         });
       });
@@ -455,6 +458,10 @@
 
     function updateQueryParams(){
       var params = new URLSearchParams(window.location.search);
+      // "Category" used to be called "Safety Category", so in case old URLs still refer to it, we remove it here
+      // (If there are any filters set, they'll be re-added as Category in the next step)
+      params.delete("Safety Category");
+
       Object.keys(filters).forEach(function(filterType) {
         params.delete(filterType);
         if (filters[filterType].size)
@@ -495,7 +502,6 @@
               return Object.keys(filters).every(function(filterType) {
                 if (filters[filterType].size == 0) return true
                 if (filterType == optionFilterType) return true
-
                 return item[filterType].some(item => filters[filterType].has(item))
               });
             });
