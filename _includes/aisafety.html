@@ -43,17 +43,10 @@
           <li><a href="https://arxiv.org/abs/2212.09251"><span style="background-color: pink" class="color-bubble">(Perez et al., 2023)</span> Discovering Language Model Behaviors with Model-Written Evaluations</a></li>
           <li><a href="https://arxiv.org/abs/2403.13793"><span style="background-color: pink" class="color-bubble">(Phuong et al., 2024)</span> Evaluating Frontier Models for Dangerous Capabilities</a></li>
           <li><a href="https://metr.org/blog/2023-09-26-rsp/"><span style="background-color: pink" class="color-bubble">(METR, 2023)</span> Responsible Scaling Policies (RSPs)</a>, example: <a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy">Anthropic's RSP</a></li>
+          <li>Resources: <a href="https://metr.github.io/autonomy-evals-guide/">METR's Autonomy Evaluation Resources</a>, <a href="https://github.com/UKGovernmentBEIS/inspect_ai">UK AISI "Inspect"</a></li>
         </ul>
       </ul>
-      <ul>
-        <li class="expandable" data-toggle="robustness"><span style="background-color: peachpuff" class="color-bubble"><b>Robustness and Generalization</b></span></li>
-        <ul>
-              <p>Today and in the future, AI needs to be robust to adversarial attacks and generalize well with incomplete data on human preferences. As models become more capable, ensuring models will represent human intentions across distributional shift is even more important... since humans will be less economically incentivized and less capable of monitoring the processes generating AI outputs, and models will become better at deception.</p>
-          <li><a href="https://arxiv.org/abs/2401.05566"><span style="background-color: peachpuff" class="color-bubble">(Hubinger et al., 2024)</span> Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</a></li>
-          <li><a href="http://arxiv.org/abs/2307.15043"><span style="background-color: peachpuff" class="color-bubble">(Zou et al., 2023)</span> Universal and Transferable Adversarial Attacks on Aligned Language Models</a></li>
-          <li><a href="https://arxiv.org/abs/2306.15447"><span style="background-color: peachpuff" class="color-bubble">(Carlini et al., 2023)</span> Are aligned neural networks adversarially aligned?</a></li>
-        </ul>
-      </ul>
+
       <ul>
        <li class="expandable" data-toggle="interpretability"><span style="background-color: moccasin;" class="color-bubble"><b>Interpretability</b></span></li>
         <ul>
@@ -61,16 +54,29 @@
           <li><a href="https://distill.pub/2020/circuits/zoom-in/"><span style="background-color: moccasin" class="color-bubble">(Olah et al., 2020)</span> Zoom In: An Introduction to Circuits</a></li>
           <li><a href="https://transformer-circuits.pub/2022/toy_model/index.html"><span style="background-color: moccasin" class="color-bubble"> (Elhage et al., 2022)</span> Toy models of superposition</a></li>
           <li><a href="https://transformer-circuits.pub/2023/monosemantic-features/index.html"><span style="background-color: moccasin" class="color-bubble">(Bricken et al., 2023)</span> Towards Monosemanticity: Decomposing Language Models With Dictionary Learning</a></li>
+          <li><a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html"><span style="background-color: moccasin" class="color-bubble">(Templeton et al., 2024)</span> Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet</a></li>
+          <li><a href="https://arxiv.org/abs/2310.01405"><span style="background-color: moccasin" class="color-bubble">(Zou et al., 2023)</span> Representation Engineering: A Top-Down Approach to AI Transparency</a></li>
         </ul>
       </ul>
+
       <ul>
+        <li class="expandable" data-toggle="robustness"><span style="background-color: rgb(192,238,192)" class="color-bubble"><b>Robustness and Generalization</b></span></li>
+        <ul>
+              <p>Today and in the future, AI needs to be robust to adversarial attacks and generalize well with incomplete data on human preferences. As models become more capable, ensuring models will represent human intentions across distributional shift is even more important... since humans will be less economically incentivized and less capable of monitoring the processes generating AI outputs, and models will become better at deception.</p>
+          <li><a href="https://arxiv.org/abs/2401.05566"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Hubinger et al., 2024)</span> Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</a></li>
+          <li><a href="http://arxiv.org/abs/2307.15043"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Zou et al., 2023)</span> Universal and Transferable Adversarial Attacks on Aligned Language Models</a></li>
+          <li><a href="https://arxiv.org/abs/2306.15447"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Carlini et al., 2023)</span> Are aligned neural networks adversarially aligned?</a></li>
+        </ul>
+      </ul>
+
+<!--       <ul>
       <li class="expandable" data-toggle="reward_misspecification"><span style="background-color: rgb(192,238,192)" class="color-bubble"><b>Reward Misspecification and Goal Misgeneralization</b></span></li>
         <ul>
           <p>How do we ensure that AI systems represent the goals we intend them to at deployment and under distributional shift, when we cannot maximally specify our preferences during training and many goals are compatible with the training data? Proxy reward signals generally correlate with designers' true objectives, but AI systems can break this correlation when they strongly optimize towards reward objectives.</p>
           <li><a href="https://arxiv.org/abs/2210.01790"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Shah et al., 2022)</span> Goal Misgeneralization: Why Correct Specifications Aren’t Enough For Correct Goals</a></li>
           <li><a href="https://arxiv.org/abs/2201.03544"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Pan, Bhatia and Steinhardt, 2022)</span> The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models</a></li>
         </ul>
-      </ul>
+      </ul> -->
       <!-- paleturquoise -->
       <ul>
       <li class="expandable" data-toggle="scalable_oversight"><span style="background-color: lavender" class="color-bubble"><b>Scalable Oversight</b></span></li>
@@ -78,9 +84,17 @@
           <p>How do we supervise systems that are more capable than human overseers? Perhaps we can use aligned AI overseers to oversee more capable AI, but the core problems still remain.</p>
           <li><a href="https://arxiv.org/abs/2211.03540"><span style="background-color: lavender" class="color-bubble"> (Bowman et al., 2022)</span> Measuring Progress on Scalable Oversight for Large Language Models</a></li>
           <li><a href="https://arxiv.org/abs/2212.08073"><span style="background-color: lavender" class="color-bubble">(Bai et al., 2022)</span> Constitutional AI: Harmlessness from AI Feedback</a></li>
-          <br>
+          <li><a href="https://arxiv.org/abs/2312.09390"><span style="background-color: lavender" class="color-bubble">(Burns et al., 2023)</span> Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision</a></li>
         </ul>
-        <br>
+      </ul>
+      <br>
+
+      <!-- background-color: pink -->
+      <!-- background-color: peachpuff -->
+      <!-- background-color: moccasin -->
+      <!-- background-color: rgb(192,238,192) -->
+      <!-- background-color: lavender -->
+
       <h4 class="expandable" data-toggle="other_ai_safety_content">Talks, blog posts, newsletters, and upskilling</h4>
       <ul>
 
@@ -110,7 +124,6 @@
             <li><a href="https://www.cold-takes.com/most-important-century/">The Most Important Century</a> by Holden Karnofsky (podcasts and articles)</li>
             <li><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg/">AI Safety YouTube channel</a> by Robert Miles</li>
           </ul> -->
-        <br>
       </ul>
 
         <h4 class="expandable" id="newsletters">Newsletters</h4>
