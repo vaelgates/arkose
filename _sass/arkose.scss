@@ -359,3 +359,32 @@ html[data-theme="dark"] .logos-grid a img {
     padding: 0;
   }
 }
+
+.team-name-title {
+  position: relative;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.8em;
+  h2 {
+    margin-bottom: 0.25em;
+  }
+  &::after {
+    content: "";
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #6e7ca0;
+    position: absolute;
+  }
+  .role {
+    margin: 0.5em 0;
+  }
+}
+
+.bio {
+  font-size: 1.2rem;
+}
+
+.team-image img {
+  border-radius: 50%;
+  width: 100%;
+}
