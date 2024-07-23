@@ -94,10 +94,16 @@ featured_image: /assets/img/social.jpg
   </div>
 </div>
 
+<div class="section hero bg-gray" id="sign-up">
+  <div class="inner">
+    <div class="row">
+      {% include mailchimp_form.html %}
+    </div>
+  </div>
+</div>
 
 
-
-<div class="section hero" class="bg-gray">
+<div class="section hero">
   <div class="inner">
     <div class="row">
       <h2 class="sans">People we speak with work at:</h2> 
@@ -135,7 +141,7 @@ featured_image: /assets/img/social.jpg
 </div>
 
 
-<div class="section hero">
+<div class="section hero bg-gray">
   <div class="inner inner-wide">
     <div class="glide glide-testimonials">
       <div class="glide__arrows" data-glide-el="controls">
@@ -193,7 +199,7 @@ featured_image: /assets/img/social.jpg
 {% assign strategic_advisors = cards | where: "section", "strategic" | sort: 'order' %}
 {% assign selected_advisors = cards | where: "section", "selected" | sort: 'order' %}
 
-<div class="section hero" id="experts" class="bg-gray">
+<div class="section hero" id="experts">
   <div class="inner inner-wide">
     <div class="glide glide-experts glide-selected-experts">
       <div class="glide__arrows" data-glide-el="controls">
@@ -216,7 +222,7 @@ featured_image: /assets/img/social.jpg
   </div>
 </div>
 
-<div class="section hero" id="panel">
+<div class="section hero bg-gray" id="panel">
   <div class="inner inner-wide">
     <div class="glide glide-experts glide-strategic-advisors">
       <div class="glide__arrows" data-glide-el="controls">
