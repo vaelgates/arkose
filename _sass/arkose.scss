@@ -255,14 +255,16 @@
   }
   svg {
     height: 1.1em;
-    position: absolute;
-    margin-left: 5px;
-    margin-top: 4px;
+    transform: translateY(3px);
     transition: fill 0.25s ease-in;
     &:hover {
       fill: #1DA1F2;
     }
   }
+}
+
+ul .twitter-link-small svg {
+  transform: translate(4px, 4px);
 }
 
 .TwitterDisplay .twitter-link img {
