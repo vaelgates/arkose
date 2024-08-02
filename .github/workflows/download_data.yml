@@ -19,9 +19,27 @@ jobs:
     - name: Install jq
       run: sudo apt-get update && sudo apt-get install -y jq
     - run: pip install airtable-export
-    - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
+    - name: Run airtable-export with retry
+      run: |
+        max_attempts=3
+        attempt=1
+        while [ $attempt -le $max_attempts ]; do
+          echo "Attempt $attempt of $max_attempts"
+          if airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}; then
+            echo "airtable-export successful"
+            break
+          else
+            echo "airtable-export failed"
+            if [ $attempt -eq $max_attempts ]; then
+              echo "All attempts failed. Exiting."
+              exit 1
+            fi
+            echo "Retrying in 30 seconds..."
+            sleep 30
+          fi
+          attempt=$((attempt+1))
+        done
 
-    # Step to check if the file has changed
     - name: Check if the table data has changed
       id: file-check
       run: |
