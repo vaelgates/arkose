@@ -252,6 +252,20 @@
     "Abstract": "This work identifies 18 foundational challenges in assuring the alignment and safety of large language models (LLMs). These challenges are organized into three different categories: scientific understanding of LLMs, development and deployment methods, and sociotechnical challenges. Based on the identified challenges, we pose 200+, concrete research questions.\n"
   },
   {
+    "Link": "https://www.neuronpedia.org/",
+    "Safety Category": [
+      "Transparency / Interpretability / Model internals / Latent knowledge"
+    ],
+    "Safety Topic": [
+      "Mechanistic interpretability"
+    ],
+    "Title": "Neuronpedia: a tool for visualising SAEs",
+    "Type": [
+      "Other"
+    ],
+    "Abstract": "Neuronpedia is a platform for interpretability research which allows you to visualise sparse autoencoders (SAEs).\n"
+  },
+  {
     "Link": "https://arxiv.org/abs/1810.08575",
     "ML Subfield": [
       "Model Evaluation"
