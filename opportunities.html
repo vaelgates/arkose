@@ -33,14 +33,14 @@ order: 4
 		<h3 id="research_opportunities">Jobs and Studentships (Research and Engineering)</h3>
 		
 		<h4>Academic Opportunities</h4>
-		<p style="font-weight: bold; font-size: 80%; color: #722">[The table below is the wrong table, but is included as a test demo. When public sharing embeds are enabled on the "Currently Taking Students" view, we'll change it to that one.]</p>
 		<div class="iframe-container">
-			<iframe id="job_board" onload="iframeLoaded('iframe_loading_spinner_academic')" src="https://airtable.com/embed/appQwyPiYo4egdPR5/shr6n4WqjnmmoTpMf?backgroundColor=grayLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+			<div class="iframe-dark-mode-inverter">&nbsp;</div>
+			<iframe id="academic" onload="iframeLoaded('iframe_loading_spinner_academic')" src="https://airtable.com/embed/appWAkbSGU6x8Oevt/shrpGpcfoZT1n1ulY/tblRakiqOUlj7E43Z?backgroundColor=grayLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 			<div id="iframe_loading_spinner_academic" class="iframe-loading">
 				{% include loading_spinner.html %}
 			</div>
-			<p style="text-align: right;">Want to update or remove your own details in the table? Email <a href="mailto:team@arkose.org">team@arkose.org</a></p>
 		</div>
+		<p class="text-right" style="margin-top: 0.3em;">Want to update or remove your own details in the table? Email <a href="mailto:team@arkose.org">team@arkose.org</a></p>
 
 		<h4>Non-academic Opportunities (Industry, Non-profit, and Government)</h4>
 
@@ -231,12 +231,13 @@ order: 4
 		<h3 class="expandable" id="jobs">Job Board</h3>
 		<ul class="width-100">
 		<div class="iframe-container">
+			<div class="iframe-dark-mode-inverter">&nbsp;</div>
 			<iframe id="job_board" onload="iframeLoaded('iframe_loading_spinner_job_board')"  src="https://airtable.com/embed/appQwyPiYo4egdPR5/shr6n4WqjnmmoTpMf?backgroundColor=grayLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 			<div id="iframe_loading_spinner_job_board" class="iframe-loading">
 				{% include loading_spinner.html %}
 			</div>
-			<p style="text-align: right;"><i>Filtered from the <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Bcompany_data%5D%5B0%5D=Highlighted%20organisations&refinementList%5Btags_exp_required%5D%5B0%5D=Mid%20%285-9%20years%20experience%29&refinementList%5Btags_exp_required%5D%5B1%5D=Multiple%20experience%20levels&refinementList%5Btags_exp_required%5D%5B2%5D=Senior%20%2810%2B%20years%20experience%29&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Research&refinementList%5Btags_skill%5D%5B3%5D=Software%20engineering">80,000 Hours Job Board</a></i></p>
 		</div>
+		<p class="text-right" style="margin-top: 0.3em;"><i>Filtered from the <a href="https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Bcompany_data%5D%5B0%5D=Highlighted%20organisations&refinementList%5Btags_exp_required%5D%5B0%5D=Mid%20%285-9%20years%20experience%29&refinementList%5Btags_exp_required%5D%5B1%5D=Multiple%20experience%20levels&refinementList%5Btags_exp_required%5D%5B2%5D=Senior%20%2810%2B%20years%20experience%29&refinementList%5Btags_skill%5D%5B0%5D=Data&refinementList%5Btags_skill%5D%5B1%5D=Engineering&refinementList%5Btags_skill%5D%5B2%5D=Research&refinementList%5Btags_skill%5D%5B3%5D=Software%20engineering">80,000 Hours Job Board</a></i></p>
 
 	</ul>
 	<h4 class="expandable" id="alternative_opportunities">Alternative Technical Opportunities</h4>
