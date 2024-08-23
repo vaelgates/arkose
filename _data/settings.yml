@@ -18,10 +18,9 @@ menu_settings:
       #title: Resource Center
       shorttitle: Opportunities
       url: '/opportunities'
-      submenu:
-        - title: 'Connections'
-          new_tab: true
-          url: 'https://airtable.com/appWAkbSGU6x8Oevt/shrpGpcfoZT1n1ulY/tblRakiqOUlj7E43Z'
+    - title: 'Connections'
+      new_tab: true
+      url: 'https://airtable.com/appWAkbSGU6x8Oevt/shrpGpcfoZT1n1ulY/tblRakiqOUlj7E43Z'
     - title: 'Request a Call' # Note that if you change this text, you need to change in header.html
       url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z'
       # this isn't working: {{site.applyur}}'
