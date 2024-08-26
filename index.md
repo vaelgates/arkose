@@ -88,7 +88,7 @@ featured_image: /assets/img/social.jpg
       <ul>
         <li>Arkose keeps a list of grant opportunities, jobs, compute options and more: <a href="opportunities">Opportunities</a> is our public list.</li>
         <li>Our list of <a href="aisafety">AI safety papers</a> provides a short introduction to research on reducing large-scale risks from advanced AI, providing context for many of the listed opportunities.</li>
-        <li>Our <a href="https://airtable.com/appWAkbSGU6x8Oevt/shrpGpcfoZT1n1ulY/tblRakiqOUlj7E43Z">database of AI Safety Professionals</a> allows you to filter by institution and role or to find people who are hiring for specific academic roles (e.g. PhD students).</li>
+        <li>Our <a href="connections">database of AI Safety Professionals</a> allows you to filter by institution and role or to find people who are hiring for specific academic roles (e.g. postdoctoral researchers).</li>
 <!--     <li>Provide as-needed support for 6 months. We can help you clarify emerging options, follow up with your plans, and advise you of new resources.</li>   -->
     </ul>
       <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
