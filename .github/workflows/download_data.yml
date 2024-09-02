@@ -19,13 +19,31 @@ jobs:
     - name: Install jq
       run: sudo apt-get update && sudo apt-get install -y jq
     - run: pip install airtable-export
-    - run: airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}
+    - name: Run airtable-export with retry
+      run: |
+        max_attempts=3
+        attempt=1
+        while [ $attempt -le $max_attempts ]; do
+          echo "Attempt $attempt of $max_attempts"
+          if airtable-export --json export ${{ secrets.AIRTABLE_BASE_ID }} ${{ secrets.AIRTABLE_TABLE }} --key ${{ secrets.AIRTABLE_KEY }}; then
+            echo "airtable-export successful"
+            break
+          else
+            echo "airtable-export failed"
+            if [ $attempt -eq $max_attempts ]; then
+              echo "All attempts failed. Exiting."
+              exit 1
+            fi
+            echo "Retrying in 30 seconds..."
+            sleep 30
+          fi
+          attempt=$((attempt+1))
+        done
 
-    # Step to check if the file has changed
     - name: Check if the table data has changed
       id: file-check
       run: |
-        jq '[.[] | select(."Goes online in Expanded Papers" // false) | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Safety Category": (."Safety Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/paperstmp.json
+        jq '[.[] | select(."Goes online as Top Paper" // false) | { "Blog or Video": (."Blog or Video" // null), "Link": (.Link // null), "ML Subfield": (."ML Subfield" // null), "ML Subtopic": (."ML Subtopic" // null), "Category": (."Category" // null), "Safety Topic": (."Safety Topic" // null), "Title": (.Title // null), "Type": (.Type // null), "Twitter": (.Twitter // null), "Supplementary Material": (."Supplementary Material" // null), "Abstract": (.Abstract // null), "Transcripts / Audio / Slides": (."Transcripts / Audio / Slides" // null) } | with_entries(select(.value != null))]' export/${{ secrets.AIRTABLE_TABLE }}.json > export/paperstmp.json
         if cmp -s export/paperstmp.json export/papers.json; then
           echo "No changes in papers.json, aborting job."
           echo "::set-output name=changed::false"
