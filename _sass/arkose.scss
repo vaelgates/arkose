@@ -280,6 +280,16 @@ ul .twitter-link-small svg {
   }
 }
 
+.glossary-item {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+.add-category {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .hero {
   width: 100vw;
   transform: translateX(-50%);
@@ -389,6 +399,10 @@ html[data-theme="dark"] .logos-grid a img {
 .team-image img {
   border-radius: 50%;
   width: 100%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #mc_embed_shell {
