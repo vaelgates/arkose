@@ -483,8 +483,11 @@
       Object.keys(filters).forEach(function(filterType) {
         filters[filterType].forEach(function(filter) {
           if (filter === 'Interpretability / explainability') filter = 'Interpretability';
-          if (!glossary[filter]) return;
-          glossaryList.append(`<div class="glossary-item" data-filter-type="${filterType}"><span class="bold">${filter}</span>: ${glossary[filter]}</div>`);
+          if (filter === 'AI Governance') filter = 'Governance';
+          const matchableFilter = Object.keys(glossary).find(key => key.toLowerCase().replace(/[^a-zA-Z\s]/g, '') === filter.toLowerCase().replace(/[^a-zA-Z\s]/g, ''));
+          filter = matchableFilter;
+          if (!glossary[matchableFilter]) return;
+          glossaryList.append(`<div class="glossary-item" data-filter-type="${filterType}"><span class="bold">${filter}</span>: ${glossary[matchableFilter]}</div>`);
         });
       });
     }
