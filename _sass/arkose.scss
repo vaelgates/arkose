@@ -23,7 +23,7 @@
     cursor: pointer;
     height: 3rem;
   }
-  .filter-ml_subfield .dropdown-title-box, .filter-safety_category .dropdown-title-box {
+  .filter-ml_subfield .dropdown-title-box, .filter-category .dropdown-title-box {
     background-color: var(--color-dropdown-highlight);
   }
   .dropdown-title {
@@ -86,7 +86,7 @@
       margin-left: 0.5rem;
       margin-top: -2px;
     }
-    .filter-item-safety_category {
+    .filter-item-category {
       border: 1px solid var(--color-filter-category);
       background-color: var(--color-filter-category-light);
     }
@@ -255,14 +255,16 @@
   }
   svg {
     height: 1.1em;
-    position: absolute;
-    margin-left: 5px;
-    margin-top: 4px;
+    transform: translateY(3px);
     transition: fill 0.25s ease-in;
     &:hover {
       fill: #1DA1F2;
     }
   }
+}
+
+ul .twitter-link-small svg {
+  transform: translate(4px, 4px);
 }
 
 .TwitterDisplay .twitter-link img {
@@ -276,6 +278,16 @@
   b {
     color: var(--color-always-dark);
   }
+}
+
+.glossary-item {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+.add-category {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .hero {
@@ -357,5 +369,91 @@ html[data-theme="dark"] .logos-grid a img {
     background-color: #b2b8d6;
     margin: 0 0 0 1.25em;
     padding: 0;
+  }
+}
+
+.team-name-title {
+  position: relative;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.8em;
+  h2 {
+    margin-bottom: 0.25em;
+  }
+  &::after {
+    content: "";
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #6e7ca0;
+    position: absolute;
+  }
+  .role {
+    margin: 0.5em 0;
+  }
+}
+
+.bio {
+  font-size: 1.2rem;
+}
+
+.team-image img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#mc_embed_shell {
+  // background-color: var(--color-bg-alt);
+  max-width: 95vw;
+  .mailchimp-inputs {
+    display: flex;
+    input[type="email"] {
+      background-color: var(--color-always-lightish);
+      padding: 0.2em 1em 0;
+      color: var(--color-fg);
+      height: 55px;
+      &::placeholder {
+        color: var(--color-always-dark) !important;
+      }
+    }
+    .button {
+      align-self: end;
+      height: 56px;
+      margin-left: 4px;
+      line-height: 1.3em;
+    }
+    .mc-field-group {
+      flex-grow: 1;
+      max-width: 24em;
+    }
+  }
+}
+
+footer {
+  .newsletter-pitch {
+    margin-bottom: 0.7em;
+  }
+  #mc_embed_shell {
+    .mailchimp-inputs {
+      input[type="email"] {
+        background-color: var(--color-always-lightish);
+        height: 39px;
+        padding: 0.25em 0.5em 0;
+        color: var(--color-fg);
+        &::placeholder {
+          color: var(--color-always-dark) !important;
+        }
+      }
+      .button {
+        height: 43px;
+        margin-left: 4px;
+        margin-top: -2px;
+        font-size: 0.9em;
+        line-height: 0.98em;
+      }
+    }
   }
 }

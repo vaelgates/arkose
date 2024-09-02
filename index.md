@@ -88,16 +88,23 @@ featured_image: /assets/img/social.jpg
       <ul>
         <li>Arkose keeps a list of grant opportunities, jobs, compute options and more: <a href="opportunities">Opportunities</a> is our public list.</li>
         <li>Our list of <a href="aisafety">AI safety papers</a> provides a short introduction to research on reducing large-scale risks from advanced AI, providing context for many of the listed opportunities.</li>
+        <li>Our <a href="connections">database of AI Safety Professionals</a> allows you to filter by institution and role or to find people who are hiring for specific academic roles (e.g. postdoctoral researchers).</li>
 <!--     <li>Provide as-needed support for 6 months. We can help you clarify emerging options, follow up with your plans, and advise you of new resources.</li>   -->
     </ul>
       <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
   </div>
 </div>
 
+<div class="section hero bg-gray" id="sign-up">
+  <div class="inner">
+    <div class="row">
+      {% include mailchimp_form.html %}
+    </div>
+  </div>
+</div>
 
 
-
-<div class="section hero" class="bg-gray">
+<div class="section hero">
   <div class="inner">
     <div class="row">
       <h2 class="sans">People we speak with work at:</h2> 
@@ -135,7 +142,7 @@ featured_image: /assets/img/social.jpg
 </div>
 
 
-<div class="section hero">
+<div class="section hero bg-gray">
   <div class="inner inner-wide">
     <div class="glide glide-testimonials">
       <div class="glide__arrows" data-glide-el="controls">
@@ -193,7 +200,7 @@ featured_image: /assets/img/social.jpg
 {% assign strategic_advisors = cards | where: "section", "strategic" | sort: 'order' %}
 {% assign selected_advisors = cards | where: "section", "selected" | sort: 'order' %}
 
-<div class="section hero" id="experts" class="bg-gray">
+<div class="section hero" id="experts">
   <div class="inner inner-wide">
     <div class="glide glide-experts glide-selected-experts">
       <div class="glide__arrows" data-glide-el="controls">
@@ -216,7 +223,7 @@ featured_image: /assets/img/social.jpg
   </div>
 </div>
 
-<div class="section hero" id="panel">
+<div class="section hero bg-gray" id="panel">
   <div class="inner inner-wide">
     <div class="glide glide-experts glide-strategic-advisors">
       <div class="glide__arrows" data-glide-el="controls">
