@@ -307,8 +307,8 @@
     };
 
     const glossary = {
-      "Overviews and Agendas": "Resources that identify risks from advanced AI and research directions that might help. See also: <span class='add-category'>Why Large-Scale Safety</span>.",
-      "Why Large-Scale Safety": "Resources that explore why risks from advanced AI might be particularly impactful to work on. See also: <span class='add-category'>Overviews and Agendas</span>.",
+      "Overviews and Agendas": "Resources that identify risks from advanced AI and research directions that might help. See also: <span class='add-category' data-value='Why large-scale safety?'>Why Large-Scale Safety</span>.",
+      "Why Large-Scale Safety": "Resources that explore why risks from advanced AI might be particularly impactful to work on. See also: <span class='add-category' data-value='Overviews and agendas'>Overviews and Agendas</span>.",
       "Governance": "Resources on the technical work that could support regulation for AI safety.",
       "Scalable Oversight": "Resources on a proposed research direction focused on using simple AI systems to aid supervision of more capable AI.",
       "Deception": "A proposed risk of capable AI systems; resources in this category assess this risk or propose mitigations against it.",
@@ -318,9 +318,9 @@
       "Reinforcement Learning": "Resources that discuss the development of agentic AI systems, often via reinforcement learning, and their associated risks.",
       "Security": "Resources that cover research which includes preventing jailbreaking, removing backdoors, and cybersecurity methods to secure model weights.",
       "Theory": "Resources that explore various branches of theoretical research applied to AI safety, examining properties of hypothetical ML systems.",
-      "Unlearning and Knowledge Editing": "Resources on altering what models 'know' as a method of altering their behavior. See also: <span class='add-category'>Interpretability</span>.",
+      "Unlearning and Knowledge Editing": "Resources on altering what models 'know' as a method of altering their behavior. See also: <span class='add-category' data-value='Interpretability / explainability'>Interpretability</span>.",
       "Adversarial Robustness": "Deals with ensuring models behave safely even when an adversary is trying to bypass safety mitigations. See also: <span class='add-category'>Non-Adversarial Robustness</span>.",
-      "Non-Adversarial Robustness": "Research that investigates methods of ensuring models are safe under a wide variety of situations, though this research does not assume an adversary (unlike Adversarial Robustness)."
+      "Non-Adversarial Robustness": "Research that investigates methods of ensuring models are safe under a wide variety of situations, though this research does not assume an adversary (unlike <span class='add-category'>Adversarial Robustness</span>)."
     }
 
     let papers = [];
@@ -376,7 +376,7 @@
       });
 
       $(document).on('click', '.add-category', function(e) {
-        var category = this.innerText;
+        var category = $(this).data('value') || this.innerText;
         if (!filters['Category'].has(category)) {
           filters['Category'].add(category);
         }
