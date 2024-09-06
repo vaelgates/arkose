@@ -375,7 +375,7 @@
       $(document).on('click', '.add-category', function(e) {
         var category = $(this).data('value') || this.innerText;
         if (!filters['Category'].has(category)) {
-          filters['Category'].add(category);
+          $(`.filter-dropdown-category input[type=checkbox][value='${category}'`).prop('checked', true).trigger('change')
         }
         updateList();
       });
