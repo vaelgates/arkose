@@ -22,12 +22,12 @@ order: 2
 Arkose is seeking an Operations Lead to work alongside our Executive Director, <a href="/victoria-brook.html">Victoria Brook</a>, to scale the organization’s programs and improve our systems and processes.
 <br><br>
 <ul>
-<li> <b>Deadline:</b> October 27, End of Day. Applications will be reviewed on a rolling basis, so we encourage you to apply as soon as possible!</li>
+<li> <b>Deadline:</b> October 27, End of Day (anywhere on earth). Applications will be reviewed on a rolling basis, so we encourage you to apply as soon as possible!</li>
 <li><b>Start date:</b> December 2024 (flexible)</li>
 <li><b>Employment:</b> This is a full-time contract position with an initial 3 month contract.</li>
 <li><b>Location:</b> Remote, required overlap of 3 hours per work day with the current team in Edinburgh, Scotland (GMT+1)</li>
 <li><b>Compensation:</b> $70,000-$90,000, based on experience and location.</li>
-<li><b>Additional Details:</b> Arkose is currently in the process of securing funding for continued operations through 2025 and beyond. Our preference is for this role’s hire to be interested in extending their contract beyond the initial term, with the initial term being a probationary period.</li>
+<li><b>Additional Details:</b> Arkose is currently in the process of securing funding for continued operations through 2025 and beyond. Our preference is for this role’s hire to be interested in extending their contract beyond the initial term.</li>
 </ul>
 
 <a class="button special fit" href="https://airtable.com/appHEf7mUlydLinsD/pagKr9zNRKO601NWp/form">Apply here</a>
@@ -80,13 +80,12 @@ Arkose is seeking an Operations Lead to work alongside our Executive Director, <
  
 <p>The application process will vary by candidate and is subject to change, but will likely involve:</p>
 <ul>
-    <li><b>Round 1:</b> A short initial application</li>
-    <li><b>Round 2:</b> A 30-minute GMA test</li>
-    <li><b>Round 3:</b> A paid 2-3 hour work test</li>
-    <li><b>Round 4:</b> A 60-minute interview with member(s) of the Arkose team & reference checks</li>
-    <li><b>Round 5:</b> A 2-day, paid remote work trial with the Arkose team</li>
+    <li><b>Round 1:</b> A short initial application and a 30-minute GMA test</li>
+    <li><b>Round 2:</b> A paid 2-3 hour work test</li>
+    <li><b>Round 3:</b> A 60-minute interview with member(s) of the Arkose team & reference checks</li>
+    <li><b>Round 4:</b> A paid 2-day remote work trial with the Arkose team</li>
 </ul>
-<p> The deadline for applying is End of Day, <b>October 27th</b>. Applications will be reviewed on a rolling basis, so we encourage you to apply as soon as possible!</p>
+<p> The deadline for applying is <b>October 27th</b>, End of Day (anywhere on earth). Applications will be reviewed on a rolling basis, so we encourage you to apply as soon as possible!</p>
 
 <h3>Benefits</h3>
 
