@@ -37,12 +37,12 @@
         </ul>
       </ul>
       <ul>
-        <li class="expandable" data-toggle="evaluations"><span style="background-color: pink" class="color-bubble"><b>Model Evaluations</b></span></li>
+        <li class="expandable" data-toggle="evaluations"><span style="background-color: rgb(248, 190, 176)" class="color-bubble"><b>Dangerous Capability Evaluations</b></span></li>
         <ul>
-          <p>To ensure that advanced AI systems are safe, we need societal agreement on what is <i>unsafe</i> so that we can make appropriate tradeoffs with AI's anticipated benefits. Developing technical benchmarks for what dangerous capabilities are in advanced AI systems, as part of "model evaluations", is a first necessary step to concretize these tradeoffs for policymakers, researchers, and the public.</p>
-          <li><a href="https://arxiv.org/abs/2212.09251"><span style="background-color: pink" class="color-bubble">(Perez et al., 2023)</span> Discovering Language Model Behaviors with Model-Written Evaluations</a><a href="https://x.com/AnthropicAI/status/1604883576218341376" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
-          <li><a href="https://arxiv.org/abs/2403.13793"><span style="background-color: pink" class="color-bubble">(Phuong et al., 2024)</span> Evaluating Frontier Models for Dangerous Capabilities</a><a href="https://x.com/tshevl/status/1770744344669990981" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
-          <li><a href="https://metr.org/blog/2023-09-26-rsp/"><span style="background-color: pink" class="color-bubble">(METR, 2023)</span> Responsible Scaling Policies (RSPs)</a>, example: <a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy">Anthropic's RSP</a><a href="https://x.com/AnthropicAI/status/1792598295388279124" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+          <p>To ensure that AI systems are safe, we need societal agreement on what is <i>unsafe</i>. Developing technical benchmarks for what dangerous capabilities look like in advanced AI systems is a necessary first step to support policymakers and labs deploying powerful models.</p>
+          <li><a href="https://arxiv.org/abs/2212.09251"><span style="background-color: rgb(248, 190, 176)" class="color-bubble">(Perez et al., 2023)</span> Discovering Language Model Behaviors with Model-Written Evaluations</a><a href="https://x.com/AnthropicAI/status/1604883576218341376" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+          <li><a href="https://metr.org/blog/2023-09-26-rsp/"><span style="background-color: rgb(248, 190, 176)" class="color-bubble">(METR, 2023)</span> Responsible Scaling Policies (RSPs)</a>, example: <a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy">Anthropic's RSP</a></li>
+          <li><a href="https://arxiv.org/abs/2403.13793"><span style="background-color: rgb(248, 190, 176)" class="color-bubble">(Phuong et al., 2024)</span> Evaluating Frontier Models for Dangerous Capabilities</a><a href="https://x.com/tshevl/status/1770744344669990981" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li>Resources:
           <ul>
             <li> <a href="https://metr.github.io/autonomy-evals-guide/">METR's Autonomy Evaluation Resources</a><a href="https://x.com/METR_Evals/status/1768684026792190410" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
@@ -53,20 +53,21 @@
       <ul>
        <li class="expandable" data-toggle="interpretability"><span style="background-color: moccasin;" class="color-bubble"><b>Interpretability</b></span></li>
         <ul>
-              <p>If we do not understand how AI models arrive at their outputs, we cannot robustly monitor or modify them. We can ask models to describe their reasoning, but models may be synchophantic or deceptive, especially as they become more capable. One approach is to understand model processes just by examining their weights -- though the major challenges with this approach are superposition and scaling.</p>
+              <p>One approach to improving safety is to improve our understanding of how AI models arrive at their outputs, to enable more robust monitoring and modification. In particular, attempting to understand models just by examining their weights (“mechanistic interpretability”) may be robust to deceptive or sycophantic behaviour from future systems.</p>
           <li><a href="https://distill.pub/2020/circuits/zoom-in/"><span style="background-color: moccasin" class="color-bubble">(Olah et al., 2020)</span> Zoom In: An Introduction to Circuits</a></li>
-          <li><a href="https://transformer-circuits.pub/2022/toy_model/index.html"><span style="background-color: moccasin" class="color-bubble"> (Elhage et al., 2022)</span> Toy models of superposition</a><a href="https://x.com/AnthropicAI/status/1570087876053942272" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
-          <li><a href="https://transformer-circuits.pub/2023/monosemantic-features/index.html"><span style="background-color: moccasin" class="color-bubble">(Bricken et al., 2023)</span> Towards Monosemanticity: Decomposing Language Models With Dictionary Learning</a><a href="https://x.com/ch402/status/1709998674087227859" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li><a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html"><span style="background-color: moccasin" class="color-bubble">(Templeton et al., 2024)</span> Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet</a><a href="https://x.com/AnthropicAI/status/1792935506587656625" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+          <li><a href="https://arxiv.org/abs/2403.19647"><span style="background-color: moccasin" class="color-bubble">(Marks et al., 2024)</span> Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models</a><a href="https://x.com/saprmarks/status/1775513423402692685" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li><a href="https://arxiv.org/abs/2310.01405"><span style="background-color: moccasin" class="color-bubble">(Zou et al., 2023)</span> Representation Engineering: A Top-Down Approach to AI Transparency</a><a href="https://x.com/andyzou_jiaming/status/1684766170766004224" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+         <!-- <li><a href="https://arxiv.org/abs/2202.05262"><span style="background-color: moccasin" class="color-bubble">(Meng et al., 2022)</span> Locating and Editing Factual Associations in GPT</a></li>-->
         </ul>
       </ul>
 
       <ul>
-        <li class="expandable" data-toggle="robustness"><span style="background-color: rgb(192,238,192)" class="color-bubble"><b>Robustness and Generalization</b></span></li>
+        <li class="expandable" data-toggle="robustness"><span style="background-color: rgb(192,238,192)" class="color-bubble"><b>Robustness</b></span></li>
         <ul>
-              <p>Today and in the future, AI needs to be robust to adversarial attacks and generalize well with incomplete data on human preferences. As models become more capable, ensuring models will represent human intentions across distributional shift is even more important... since humans will be less economically incentivized and less capable of monitoring the processes generating AI outputs, and models will become better at deception.</p>
-          <li><a href="https://arxiv.org/abs/2401.05566"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Hubinger et al., 2024)</span> Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</a><a href="https://x.com/AnthropicAI/status/1745854907968880970" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+              <p>Today and in the future, AI needs to be robust to adversarial attacks and unexpected distributional shifts. As models become more capable, ensuring they will represent human intentions across many settings is even more important: monitoring will become harder, there will be more incentive to jailbreak models, and models themselves may even become deceptive.</p>
+<!--          <li><a href="https://arxiv.org/abs/2205.01663"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Ziegler et al., 2022)</span> Adversarial training for high-stakes reliability</a></li>-->
+          <li><a href="https://arxiv.org/abs/2202.03286"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Perez et al., 2022)</span> Red Teaming Language Models with Language Models</a></li>
           <li><a href="http://arxiv.org/abs/2307.15043"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Zou et al., 2023)</span> Universal and Transferable Adversarial Attacks on Aligned Language Models</a><a href="https://x.com/andyzou_jiaming/status/1684766189443227648" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li><a href="https://arxiv.org/abs/2306.15447"><span style="background-color: rgb(192,238,192)" class="color-bubble">(Carlini et al., 2023)</span> Are aligned neural networks adversarially aligned?</a></li>
         </ul>
@@ -82,12 +83,26 @@
       </ul> -->
       <!-- paleturquoise -->
       <ul>
-      <li class="expandable" data-toggle="scalable_oversight"><span style="background-color: lavender" class="color-bubble"><b>Scalable Oversight</b></span></li>
+        <li class="expandable" data-toggle="scalable_oversight"><span style="background-color: lavender" class="color-bubble"><b>Scalable Oversight</b></span></li>
         <ul>
-          <p>How do we supervise systems that are more capable than human overseers? Perhaps we can use aligned AI overseers to oversee more capable AI, but the core problems still remain.</p>
+          <p>As models approach or surpass human performance, it becomes more challenging to decide which actions are safe or unsafe. One approach to solving this problem is to have a simpler model either assess safety of a more complex model directly or aid a human overseer in spotting unsafe outputs.</p>
           <li><a href="https://arxiv.org/abs/2211.03540"><span style="background-color: lavender" class="color-bubble"> (Bowman et al., 2022)</span> Measuring Progress on Scalable Oversight for Large Language Models</a><a href="https://x.com/AnthropicAI/status/1590019597109202946" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li><a href="https://arxiv.org/abs/2212.08073"><span style="background-color: lavender" class="color-bubble">(Bai et al., 2022)</span> Constitutional AI: Harmlessness from AI Feedback</a><a href="https://x.com/AnthropicAI/status/1603791161419698181" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
           <li><a href="https://arxiv.org/abs/2312.09390"><span style="background-color: lavender" class="color-bubble">(Burns et al., 2023)</span> Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision</a><a href="https://x.com/CollinBurns4/status/1735350133926314431" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+          <li><a href="https://arxiv.org/abs/2402.06782"><span style="background-color: lavender" class="color-bubble">(Khan et al., 2024)</span> Debating with More Persuasive LLMs Leads to More Truthful Answers</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <li class="expandable" data-toggle="deception"><span style="background-color: rgb(241, 199, 221)" class="color-bubble"><b>Deception</b></span></li>
+        <ul>
+          <p>There are reasons to think that advanced AI systems may demonstrate deceptive or sycophantic behavior in training, but pursue their own goals in deployment. The papers below investigate whether this could be detected, whether it happens in present-day systems, and what could be done about it in the future.</p>
+          <li><a href="https://arxiv.org/abs/2401.05566"><span style="background-color: rgb(241, 199, 221)" class="color-bubble">(Hubinger et al., 2024)</span> Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</a><a href="https://x.com/AnthropicAI/status/1745854907968880970" class="no-underline twitter-link twitter-link-small">{% include twitter_icon.html %}</a></li>
+          <li><a href="https://arxiv.org/abs/2304.13734"><span style="background-color: rgb(241, 199, 221)" class="color-bubble">(Azaria and Mitchell, 2023)</span> The Internal State of an LLM Knows When It's Lying</a></li>
+          <li><a href="https://arxiv.org/abs/2312.06942"><span style="background-color: rgb(241, 199, 221)" class="color-bubble">(Greenblatt et al., 2024)</span> AI Control: Improving Safety Despite Intentional Subversion</a></li>
+          <li>See also:</li>
+          <ul>
+            <li><a href="https://cdn.openai.com/o1-system-card.pdf">OpenAI o1 System Card</a>, sections 3.2.1 and 3.3.1</li>
+          </ul>
         </ul>
       </ul>
       <br>
@@ -201,8 +216,7 @@
     <div class="inner">
       <h2>Find more AI safety papers</h2>
       <div class="inner">
-<!--         <h3> Find AI safety publications relevant to your area of expertise.</h3>
- -->        <p>Curated with input from the experts on our <a href="/#panel">Strategic Advisory Panel</a>, this collection of papers, blog posts, and videos contains top and recent AI safety papers, categorized by AI safety and machine learning (ML) subfields.</p>
+        <p>Curated with input from the experts on our <a href="https://arkose.org/#panel">Strategic Advisory Panel</a>, this collection of papers, blog posts, and videos contains top and recent AI safety papers. For more information on the categories listed, please reference this <a href="/glossary">glossary</a>.</p>
       </div>
       <div id="paper-list">
         <div class="row mt1 mb1">
@@ -211,11 +225,13 @@
           </div>
         </div>
         <div class="row">
-          {% include paper_filter.html field_id="safety_category" field_display="Safety Category" options=empty %}
-          {% include paper_filter.html field_id="ml_subfield" field_display="ML Subfield" options=empty %}
-          <!-- {% include paper_filter.html field_id="ml_subtopic" field_display="ML Subtopic" options=empty %}
-          {% include paper_filter.html field_id="safety_topic" field_display="Safety Topic" options=empty %} -->
+          {% include paper_filter.html field_id="category" field_display="Category" options=empty %}
+          {% comment %}
+            {% include paper_filter.html field_id="ml_subtopic" field_display="ML Subtopic" options=empty %}
+            {% include paper_filter.html field_id="safety_topic" field_display="Safety Topic" options=empty %}
+          {% endcomment %}
           {% include paper_filter.html field_id="type" field_display="Type" options=empty %}
+          <div class="12u glossary"></div>
           <div class="12u filter-list"></div>
         </div>
         <div class="results-count">
@@ -239,10 +255,7 @@
       </svg>
     </div>
     <div class="detail">
-      <div class="ML SubfieldDisplay"></div>
-      <div class="ML SubtopicDisplay"></div>
-      <div class="Safety CategoryDisplay"></div>
-      <div class="Safety TopicDisplay"></div>
+      <div class="CategoryDisplay"></div>
       <div class="TypeDisplay"></div>
       <div class="TwitterDisplay"></div>
       <div class="Blog or VideoDisplay"></div>
@@ -257,14 +270,14 @@
   $(function() {
     var papersList;
     const filters = {
-      "Safety Category": new Set(),
+      "Category": new Set(),
       "Safety Topic": new Set(),
       "ML Subfield": new Set(),
       "ML Subtopic": new Set(),
       "Type": new Set(),
     }
     const filterOptions = {
-      "Safety Category": new Set(),
+      "Category": new Set(),
       "Safety Topic": new Set(),
       "ML Subfield": new Set(),
       "ML Subtopic": new Set(),
@@ -275,8 +288,8 @@
       valueNames: [
         'Title',
         'Safety TopicDisplay',
-        'Safety Category',
-        'Safety CategoryDisplay',
+        'Category',
+        'CategoryDisplay',
         'Type',
         'TypeDisplay',
         'Twitter',
@@ -298,6 +311,23 @@
       item: 'paper-item'
     };
 
+    const glossary = {
+      "Overviews and Agendas": "Resources that identify risks from advanced AI and research directions that might help. See also: <span class='add-category' data-value='Why large-scale safety?'>Why Large-Scale Safety</span>.",
+      "Why Large-Scale Safety": "Resources that explore why risks from advanced AI might be particularly impactful to work on. See also: <span class='add-category' data-value='Overviews and agendas'>Overviews and Agendas</span>.",
+      "Governance": "Resources on the technical work that could support regulation for AI safety.",
+      "Scalable Oversight": "Resources on a proposed research direction focused on using simple AI systems to aid supervision of more capable AI.",
+      "Deception": "A proposed risk of capable AI systems; resources in this category assess this risk or propose mitigations against it.",
+      "Reward Misspecification and Goal Misgeneralization": "Relevant for advanced as well as present-day systems. This category collects resources relevant to these problems as they may present in more advanced systems.",
+      "Interpretability": "A field related to explainability which aims to reconstruct the behavior of a model by inspecting its weights, similar to neuroscience. This may allow us to predict or mitigate risks in advanced systems.",
+      "Model Evaluations and Benchmarks": "Resources about 'dangerous capability evaluations': benchmarks where scoring highly is bad, such as the ability to execute cybersecurity attacks. These may be particularly useful for governance of frontier models.",
+      "Reinforcement Learning": "Resources that discuss the development of agentic AI systems, often via reinforcement learning, and their associated risks.",
+      "Security": "Resources that cover research which includes preventing jailbreaking, removing backdoors, and cybersecurity methods to secure model weights.",
+      "Theory": "Resources that explore various branches of theoretical research applied to AI safety, examining properties of hypothetical ML systems.",
+      "Unlearning and Knowledge Editing": "Resources on altering what models 'know' as a method of altering their behavior. See also: <span class='add-category' data-value='Interpretability / explainability'>Interpretability</span>.",
+      "Adversarial Robustness": "Deals with ensuring models behave safely even when an adversary is trying to bypass safety mitigations. See also: <span class='add-category'>Non-Adversarial Robustness</span>.",
+      "Non-Adversarial Robustness": "Research that investigates methods of ensuring models are safe under a wide variety of situations, though this research does not assume an adversary (unlike <span class='add-category'>Adversarial Robustness</span>)."
+    }
+
     let papers = [];
 
     function isDarkMode() {
@@ -309,7 +339,8 @@
     }
 
     function listify(papersJson) {
-      papers = papersJson.filter(paper => paper.Title && paper.Title.length > 0 && paper['ML Subfield'] && paper['Type'])
+      papersJson.forEach(item => { if (!item['Type']) { item['Type'] = ["Other"] } });
+      papers = papersJson.filter(paper => paper.Title && paper.Title.length > 0 && paper['Type'])
                         .map(function(paper) {
         const modeStr = isDarkMode() ? '-dark' : ''
 
@@ -320,10 +351,11 @@
         } else {
           paper.image = `/assets/images/medium/${paper.Type[0].toLowerCase()}${modeStr}.svg`;
         }
-        paper['Safety CategoryDisplay'] = paper['Safety Category'].map(item => `<span class="field-single safety-category-single">${item}</span>`).join('');
+        paper['Category'] = paper['Category']
+        paper['CategoryDisplay'] = paper['Category'].map(item => `<span class="field-single category-single">${item}</span>`).join('');
         paper['Safety Topic'] = paper['Safety Topic'] ?? [];
         paper['Safety TopicDisplay'] = paper['Safety Topic'].map(item => `<span class="field-single safety-topic-single">${item}</span>`).join('');
-        paper['ML SubfieldDisplay'] = paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
+        paper['ML SubfieldDisplay'] = paper['ML Subfield'] && paper['ML Subfield'].map(tag => `<span class="field-single ml-subfield-single">${tag}</span>`).join('');
         paper['ML Subtopic'] = paper['ML Subtopic'] ?? [];
         paper['ML SubtopicDisplay'] = paper['ML Subtopic'].map(tag => `<span class="field-single ml-subtopic-single">${tag}</span>`).join('');
         paper['TypeDisplay'] = paper['Type'].map(tag => `<span class="field-single type-single">${tag}</span>`).join('');
@@ -348,10 +380,18 @@
         updateList();
       });
 
+      $(document).on('click', '.add-category', function(e) {
+        var category = $(this).data('value') || this.innerText;
+        if (!filters['Category'].has(category)) {
+          $(`.filter-dropdown-category input[type=checkbox][value='${category}'`).prop('checked', true).trigger('change')
+        }
+        updateList();
+      });
+
       // Get options for each filter from the JSON
       Object.keys(filterOptions).forEach(function(filterType) {
         papers.forEach(function(paper) {
-          paper[filterType].forEach(function(filter) {
+          paper[filterType] && paper[filterType].forEach(function(filter) {
             filterOptions[filterType].add(filter);
           });
         });
@@ -423,7 +463,6 @@
       papersList.filter(function (paper) {
         return Object.keys(filters).every(function(filterType) {
           if (filters[filterType].size == 0) return true
-
           return paper.values()[filterType].some(item => filters[filterType].has(item))
         });
       });
@@ -438,7 +477,22 @@
       filterList.empty();
       Object.keys(filters).forEach(function(filterType) {
         filters[filterType].forEach(function(filter) {
-          filterList.append(`<span class="filter-item filter-item-${slugify(filterType)}" data-filter-type="${filterType}">` + filter + '</span>');
+          filterList.append(`<span class="filter-item filter-item-${slugify(filterType)}" data-filter-type="${filterType}">${filter}</span>`);
+        });
+      });
+    }
+
+    function updateShownGlossary(){
+      var glossaryList = $('.glossary');
+      glossaryList.empty();
+      Object.keys(filters).forEach(function(filterType) {
+        filters[filterType].forEach(function(filter) {
+          if (filter === 'Interpretability / explainability') filter = 'Interpretability';
+          if (filter === 'AI Governance') filter = 'Governance';
+          const matchableFilter = Object.keys(glossary).find(key => key.toLowerCase().replace(/[^a-zA-Z\s]/g, '') === filter.toLowerCase().replace(/[^a-zA-Z\s]/g, ''));
+          filter = matchableFilter;
+          if (!glossary[matchableFilter]) return;
+          glossaryList.append(`<div class="glossary-item" data-filter-type="${filterType}"><span class="bold">${filter}</span>: ${glossary[matchableFilter]}</div>`);
         });
       });
     }
@@ -458,6 +512,7 @@
 
     function updateQueryParams(){
       var params = new URLSearchParams(window.location.search);
+
       Object.keys(filters).forEach(function(filterType) {
         params.delete(filterType);
         if (filters[filterType].size)
@@ -486,7 +541,10 @@
           // When there are no options set for a filter, adding an option *reduces* options, which is easy to calculate and is the
           // first option here.
           if (filters[optionFilterType].size == 0) {
-            const remainingItems = papersList.matchingItems.filter(item => { return item.values()[optionFilterType].includes(option) })
+            const remainingItems = papersList.matchingItems.filter(item => {
+              if (!item.values()[optionFilterType]) return true;
+              return item.values()[optionFilterType].includes(option)
+            });
             filterOptionCount.text('(' + remainingItems.length + ')');
           } else {
             // When there are options set for a filter, adding an option *increases* options, which we calculate here
@@ -498,7 +556,6 @@
               return Object.keys(filters).every(function(filterType) {
                 if (filters[filterType].size == 0) return true
                 if (filterType == optionFilterType) return true
-
                 return item[filterType].some(item => filters[filterType].has(item))
               });
             });
@@ -523,6 +580,7 @@
       papersList.update();
       updateFilterOptionCounts();
       updateShownFilters();
+      updateShownGlossary();
       updateFilterTitleCount();
       updateQueryParams();
     }

@@ -23,7 +23,7 @@
     cursor: pointer;
     height: 3rem;
   }
-  .filter-ml_subfield .dropdown-title-box, .filter-safety_category .dropdown-title-box {
+  .filter-ml_subfield .dropdown-title-box, .filter-category .dropdown-title-box {
     background-color: var(--color-dropdown-highlight);
   }
   .dropdown-title {
@@ -86,7 +86,7 @@
       margin-left: 0.5rem;
       margin-top: -2px;
     }
-    .filter-item-safety_category {
+    .filter-item-category {
       border: 1px solid var(--color-filter-category);
       background-color: var(--color-filter-category-light);
     }
@@ -118,7 +118,7 @@
     border-radius: 0.25rem;
     color: #000;
   }
-  .safety-category-single {
+  .category-single {
     border: 1px solid var(--color-filter-category);
     background-color: var(--color-filter-category-light);
   }
@@ -280,6 +280,16 @@ ul .twitter-link-small svg {
   }
 }
 
+.glossary-item {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+.add-category {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .hero {
   width: 100vw;
   transform: translateX(-50%);
@@ -389,6 +399,10 @@ html[data-theme="dark"] .logos-grid a img {
 .team-image img {
   border-radius: 50%;
   width: 100%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #mc_embed_shell {
