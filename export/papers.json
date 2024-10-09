@@ -50,7 +50,7 @@
     ],
     "Title": "Anthropic's Responsible Scaling Policy (Anthropic, 2023)",
     "Type": [
-      "Paper"
+      "Other"
     ],
     "Twitter": "https://x.com/AnthropicAI/status/1792598295388279124"
   },
@@ -200,7 +200,7 @@
       "Security",
       "Model evaluations and benchmarks"
     ],
-    "Title": "Safety Cases: How to Justify the Safety of Advanced AI Systems",
+    "Title": "Safety Cases: How to Justify the Safety of Advanced AI Systems (Clymer et al., 2024)",
     "Type": [
       "Paper"
     ],
@@ -246,6 +246,24 @@
     ],
     "Twitter": "https://x.com/AnthropicAI/status/1603791161419698181",
     "Abstract": "As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through self-improvement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as 'Constitutional AI'. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised responses. In the RL phase, we sample from the finetuned model, use a model to evaluate which of the two samples is better, and then train a preference model from this dataset of AI preferences. We then train with RL using the preference model as the reward signal, i.e. we use 'RL from AI Feedback' (RLAIF). As a result we are able to train a harmless but non-evasive AI assistant that engages with harmful queries by explaining its objections to them. Both the SL and RL methods can leverage chain-of-thought style reasoning to improve the human-judged performance and transparency of AI decision making. These methods make it possible to control AI behavior more precisely and with far fewer human labels. \n"
+  },
+  {
+    "Blog or Video": "https://openai.com/research/debate",
+    "Link": "https://arxiv.org/abs/1805.00899",
+    "ML Subfield": [
+      "NLP"
+    ],
+    "Category": [
+      "Scalable oversight"
+    ],
+    "Safety Topic": [
+      "Debate"
+    ],
+    "Title": "AI safety via debate (Irving, Christiano and Amodei, 2018)",
+    "Type": [
+      "Paper"
+    ],
+    "Abstract": "To make AI systems broadly useful for challenging real-world tasks, we need them to learn complex human goals and preferences. One approach to specifying complex goals asks humans to judge during training which agent behaviors are safe and useful, but this approach can fail if the task is too complicated for a human to directly judge. To help address this concern, we propose training agents via self play on a zero sum debate game. Given a question or proposed action, two agents take turns making short statements up to a limit, then a human judges which of the agents gave the most true, useful information. In an analogy to complexity theory, debate with optimal play can answer any question in PSPACE given polynomial time judges (direct judging answers only NP questions). In practice, whether debate works involves empirical questions about humans and the tasks we want AIs to perform, plus theoretical questions about the meaning of AI alignment. We report results on an initial MNIST experiment where agents compete to convince a sparse classifier, boosting the classifier's accuracy from 59.4% to 88.9% given 6 pixels and from 48.2% to 85.2% given 4 pixels. Finally, we discuss theoretical and practical aspects of the debate model, focusing on potential weaknesses as the model scales up, and we propose future human and computer experiments to test these properties. \n"
   },
   {
     "Link": "https://arxiv.org/abs/2403.19647",
@@ -306,7 +324,7 @@
     "Category": [
       "Adversarial Robustness"
     ],
-    "Title": "Defending Against Unforeseen Failure Modes with Latent Adversarial Training",
+    "Title": "Defending Against Unforeseen Failure Modes with Latent Adversarial Training (Casper et al., 2024)",
     "Type": [
       "Paper"
     ],
@@ -427,7 +445,7 @@
     "Category": [
       "Theory"
     ],
-    "Title": "Formalizing Explanations of Neural Network Behaviours (Christiano, 2023)",
+    "Title": "Formalizing Explanations of Neural Network Behaviours (Paul Christiano, 60-min video)",
     "Type": [
       "Video"
     ],
@@ -758,7 +776,7 @@
     "Safety Topic": [
       "Compute governance"
     ],
-    "Title": "What does it take to catch a Chinchilla? Verifying Rules on Large-Scale Neural Network Training via Compute Monitoring (Shavit, 2023)z",
+    "Title": "What does it take to catch a Chinchilla? Verifying Rules on Large-Scale Neural Network Training via Compute Monitoring (Shavit, 2023)",
     "Type": [
       "Paper"
     ],
@@ -791,10 +809,9 @@
     "Category": [
       "Theory"
     ],
-    "Title": "Singular Learning Theory & Alignment 2023",
+    "Title": "Singular Learning Theory & Alignment 2023 (Conference Proceedings with recordings)",
     "Type": [
-      "Video",
-      "Slides"
+      "Video"
     ],
     "Abstract": "Conference proceedings on Developmental Interpretability (videos available [@DevInterp](https://www.youtube.com/@Devinterp)) \n"
   },
@@ -878,7 +895,7 @@
     "Category": [
       "Scalable oversight"
     ],
-    "Title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+    "Title": "Debating with More Persuasive LLMs Leads to More Truthful Answers (Khan et al., 2024)",
     "Type": [
       "Paper"
     ],
@@ -937,7 +954,10 @@
     "Category": [
       "Model evaluations and benchmarks"
     ],
-    "Title": "Frontier Safety Framework",
+    "Title": "Frontier Safety Framework (Dragan et al., 2024)",
+    "Type": [
+      "Other"
+    ],
     "Abstract": "The Frontier Safety Framework is our rst version of a set of protocols that aims to address severe risks\nthat may arise from poweul capabilities of future foundation models. In focusing on these risks at the\nmodel level, it is intended to complement Google’s existing suite of AI responsibility and safety\npractices, and enable AI innovation and deployment consistent with our AI Principles.\n"
   },
   {
@@ -946,7 +966,7 @@
       "Security",
       "AI Governance"
     ],
-    "Title": "Secure, Governable Chips: Using On-Chip Mechanisms to Manage National Security Risks from AI & Advanced Computing",
+    "Title": "Secure, Governable Chips: Using On-Chip Mechanisms to Manage National Security Risks from AI & Advanced Computing (Aarne et al., 2024)",
     "Type": [
       "Other"
     ]
@@ -1337,7 +1357,7 @@
     "Safety Topic": [
       "Mechanistic interpretability"
     ],
-    "Title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+    "Title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet (Templeton et al., 2024)",
     "Type": [
       "Paper"
     ],
