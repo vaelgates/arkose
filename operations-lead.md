@@ -14,7 +14,7 @@ order: 2
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h2>Operations Lead</h2>
+			<h2>Operations Lead (Applications Closed)</h2>
 		</header>
 
 <h3>Summary</h3>
@@ -30,7 +30,6 @@ Arkose is seeking an Operations Lead to work alongside our Executive Director, <
 <li><b>Additional Details:</b> Arkose is currently in the process of securing funding for continued operations through 2025 and beyond. Our preference is for this role’s hire to be interested in extending their contract beyond the initial term.</li>
 </ul>
 
-<a class="button special fit" href="https://airtable.com/appHEf7mUlydLinsD/pagKr9zNRKO601NWp/form">Apply here</a>
 <h3>About Arkose</h3>
 <p><a href="/">Arkose</a> is an early-stage field-building nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. To this end, Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. We do this by:</p>
 <ul>
