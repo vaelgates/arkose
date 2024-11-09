@@ -681,6 +681,14 @@
     "Abstract": "This work identifies 18 foundational challenges in assuring the alignment and safety of large language models (LLMs). These challenges are organized into three different categories: scientific understanding of LLMs, development and deployment methods, and sociotechnical challenges. Based on the identified challenges, we pose 200+, concrete research questions.\n"
   },
   {
+    "Link": "https://arxiv.org/abs/2411.02306",
+    "Category": [
+      "Deception"
+    ],
+    "Title": "Targeted Manipulation and Deception Emerge when Optimizing LLMs for User Feedback (Williams et al., 2024)",
+    "Abstract": "As LLMs become more widely deployed, there is increasing interest in directly optimizing for feedback from end users (e.g. thumbs up) in addition to feedback from paid annotators. However, training to maximize human feedback creates a perverse incentive structure for the AI to resort to manipulative tactics to obtain positive feedback, and some users may be especially vulnerable to such tactics. We study this phenomenon by training LLMs with Reinforcement Learning with simulated user feedback. We have three main findings: 1) Extreme forms of \"feedback gaming\" such as manipulation and deception can reliably emerge in domains of practical LLM usage; 2) Concerningly, even if only <2% of users are vulnerable to manipulative strategies, LLMs learn to identify and surgically target them while behaving appropriately with other users, making such behaviors harder to detect; 3 To mitigate this issue, it may seem promising to leverage continued safety training or LLM-as-judges during training to filter problematic outputs. To our surprise, we found that while such approaches help in some settings, they backfire in others, leading to the emergence of subtler problematic behaviors that would also fool the LLM judges. Our findings serve as a cautionary tale, highlighting the risks of using gameable feedback sources -- such as user feedback -- as a target for RL.\n"
+  },
+  {
     "Link": "https://rome.baulab.info/",
     "ML Subfield": [
       "NLP"
