@@ -1063,6 +1063,18 @@
     "Transcripts / Audio / Slides": "https://www.safe.ai/ai-risk"
   },
   {
+    "Link": "https://www.apolloresearch.ai/research/scheming-reasoning-evaluations",
+    "Category": [
+      "Deception",
+      "Model evaluations and benchmarks"
+    ],
+    "Title": "Frontier Models are Capable of In-context Scheming (Meinke et al., 2024)",
+    "Type": [
+      "Paper"
+    ],
+    "Abstract": "Frontier models are increasingly trained and deployed as autonomous agents, which signif-\nicantly increases their potential for risks. One particular safety concern is that AI agents\nmight covertly pursue misaligned goals, hiding their true capabilities and objectives – also\nknown as scheming. We study whether models have the capability to scheme in pursuit of\na goal that we provide in-context and instruct the model to strongly follow. We evaluate\nfrontier models on a suite of six agentic evaluations where models are instructed to pursue\ngoals and are placed in environments that incentivize scheming. Our results show that o1,\nClaude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, and Llama 3.1 405B all demonstrate in-\ncontext scheming capabilities. They can recognize scheming as a viable strategy and readily\nengage in such behavior. We find multiple different scheming behaviors: models strate-\ngically introduce subtle mistakes into their responses, attempt to disable their oversight\nmechanisms, and even exfiltrate what they believe to be their model weights to external\nservers. Additionally, this deceptive behavior proves persistent. For instance, when o1 has\nengaged in scheming, it maintains its deception in over 85% of follow-up questions and often\nremains deceptive in multi-turn interrogations. Analysis of the models’ chains-of-thought\nreveals that models explicitly reason about these deceptive strategies, providing evidence\nthat the scheming behavior is not accidental. Surprisingly, we also find rare instances where\nmodels engage in scheming when only given a goal, without being strongly nudged to pursue\nit. Furthermore, we observe cases where Claude 3.5 Sonnet strategically underperforms in\nevaluations in pursuit of being helpful, a goal that was acquired during training rather than\nin-context. Together, our findings demonstrate that frontier models now possess capabili-\nties for basic in-context scheming, making the potential of AI agents to engage in scheming\nbehavior a concrete rather than theoretical concern.\n"
+  },
+  {
     "Link": "https://arxiv.org/abs/2307.15217",
     "ML Subfield": [
       "Reinforcement Learning",
