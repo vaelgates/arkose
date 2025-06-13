@@ -41,25 +41,17 @@ featured_image: /assets/img/social.jpg
   <div class="row xs-padding-1 banner-inner">
     <div class="6u -3u 8u(xxlarge) -2u(xxlarge) 10u(xlarge) -1u(xlarge) 12u(small)" style="position: relative; padding: 2em;">
       <div class="background">&nbsp;</div>
-      <h1 class="display-1">Explore AI safety research opportunities</h1>
-      <p>Arkose helps researchers and engineers learn about funding and job openings in AI safety.</p>
-      <div class="banner-button-container">
-        <a href="{{site.applyurl}}" class="button banner-button request-call-button">
-        <!--
-          Colors to consider for background-color:
-            Saturated green: #0ca683
-            Light green: #5dcbb9
-            Light blue: #83c1dc
-            Arkose green: #7bcabb or var(--color-arkose-green)
-        -->
-          Request a Call
-        </a>
-      </div>
+      <h1 class="display-1">Arkose is closing down</h1>
+      <p>Unfortunately, Arkose will no longer be accepting applications for a call. The resources on this website will remain available.</p>
     </div>
   </div>
-</section> 
+</section>
 
-
+<section class="bg-gray">
+	<div class="inner" style="padding: 3em 0 2em;">
+		<h5>Arkose is closing down. This version of the website is intended as an archive of Arkose's resources only.</h5>
+  </div>
+</section>
 
 <!-- <div class="section">
   <div class="inner">
@@ -91,7 +83,6 @@ featured_image: /assets/img/social.jpg
         <li>Our <a href="connections">database of AI Safety Professionals</a> allows you to filter by institution and role or to find people who are hiring for specific academic roles (e.g. postdoctoral researchers).</li>
 <!--     <li>Provide as-needed support for 6 months. We can help you clarify emerging options, follow up with your plans, and advise you of new resources.</li>   -->
     </ul>
-      <a href="{{site.applyurl}}" class="button special request-call-button fit">Request a Call</a>
   </div>
 </div>
 
