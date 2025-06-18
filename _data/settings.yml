@@ -21,11 +21,11 @@ menu_settings:
     - title: 'Connections'
       new_tab: true
       url: '/connections'
-    - title: 'Request a Call' # Note that if you change this text, you need to change in header.html
-      url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z'
-      # this isn't working: {{site.applyur}}'
-      button: true
-      hidden: false
+    # - title: 'Request a Call' # Note that if you change this text, you need to change in header.html
+    #   url: 'https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z'
+    #   # this isn't working: {{site.applyur}}'
+    #   button: true
+    #   hidden: false
     # - title: 'Apply For A Call'
     #   url: '/apply'
     #   button: true
