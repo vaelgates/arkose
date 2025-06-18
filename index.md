@@ -42,14 +42,8 @@ featured_image: /assets/img/social.jpg
     <div class="6u -3u 8u(xxlarge) -2u(xxlarge) 10u(xlarge) -1u(xlarge) 12u(small)" style="position: relative; padding: 2em;">
       <div class="background">&nbsp;</div>
       <h1 class="display-1">Arkose is closing down</h1>
-      <p>Unfortunately, Arkose will no longer be accepting applications for a call. The resources on this website will remain available.</p>
+      <p>Unfortunately, Arkose will no longer be accepting applications for calls. The resources on this website will remain available.</p>
     </div>
-  </div>
-</section>
-
-<section class="bg-gray">
-	<div class="inner" style="padding: 3em 0 2em;">
-		<h5>Arkose is closing down. This version of the website is intended as an archive of Arkose's resources only.</h5>
   </div>
 </section>
 
