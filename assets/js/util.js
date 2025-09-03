@@ -10,8 +10,8 @@
 			$a = $this.find('a'),
 			b = [];
 
-			b.push(`<a href="/" class="link depth-0">
-				<img src="/assets/images/arkose.png">
+			b.push(`<a href="/arkose/" class="link depth-0">
+				<img src="/arkose/assets/images/arkose.png">
 				<span class="logo-text">Arkose</span>
 			</a>`)
 

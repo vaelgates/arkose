@@ -4,9 +4,9 @@
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
 	<!-- <a href="{{site.baseurl}}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a> -->
-	<a href="/" class="navbar-brand mr-lg-5">
-		<img src="/assets/images/arkose.png">
-		<img src="/assets/images/arkose-logo-text.svg" class="logo-text-image">
+	<a href="{{ '/' | relative_url }}" class="navbar-brand mr-lg-5">
+		<img src="{{ '/assets/images/arkose.png' | relative_url }}">
+		<img src="{{ '/assets/images/arkose-logo-text.svg' | relative_url }}" class="logo-text-image">
 	</a>
 	<nav id="nav">
 		<ul class="links">

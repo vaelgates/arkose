@@ -19,7 +19,7 @@ order: 2
 
 <h3>Summary</h3>
 
-Arkose is seeking an Operations Lead to work alongside our Executive Director, <a href="/victoria-brook.html">Victoria Brook</a>, to scale the organization’s programs and improve our systems and processes.
+Arkose is seeking an Operations Lead to work alongside our Executive Director, <a href="{{ '/victoria-brook.html' | relative_url }}">Victoria Brook</a>, to scale the organization’s programs and improve our systems and processes.
 <br><br>
 <ul>
 <li> <b>Deadline:</b> October 27, End of Day (anywhere on earth). Applications will be reviewed on a rolling basis, so we encourage you to apply as soon as possible!</li>
@@ -31,7 +31,7 @@ Arkose is seeking an Operations Lead to work alongside our Executive Director, <
 </ul>
 
 <h3>About Arkose</h3>
-<p><a href="/">Arkose</a> is an early-stage field-building nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. To this end, Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. We do this by:</p>
+<p><a href="{{ '/' | relative_url }}">Arkose</a> is an early-stage field-building nonprofit with the mission of improving the safety of advanced AI systems to reduce potential large-scale risks. To this end, Arkose focuses on supporting researchers, engineers, and other professionals interested in contributing to AI safety. We do this by:</p>
 <ul>
 <li>Hosting calls and other support programs that provide connections, resources, and tailored guidance to researchers, engineers, and others with relevant skill sets to facilitate their engagement in AI safety technical research.</li>
 <li>Advancing understanding of AI safety research and opportunities via outreach and curating educational resources.</li>

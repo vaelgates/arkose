@@ -4,6 +4,7 @@ subtitle:
 email: team@arkose.org
 description: 
 baseurl: "" # the subpath of your site, e.g. /blog
+permalink: pretty
 url: https://arkose.org # the base hostname & protocol for your site
 applyurl: https://airtable.com/appPMHlJ6Z7XkDSEi/shr8RR0ZkJr22Ub3Z
 author:
